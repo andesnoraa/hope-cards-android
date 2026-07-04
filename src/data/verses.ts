@@ -1,4 +1,4 @@
-import type { Verse } from "../types/bible";
+import type { Verse } from "../types/verse";
 
 export const verses: Verse[] = [
   {
