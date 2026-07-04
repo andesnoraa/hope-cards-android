@@ -1,25 +1,46 @@
 export const Typography = {
-  title: {
-    fontSize: 38,
-    fontWeight: "700" as const,
+  hero: {
+    fontFamily: "Poppins_700Bold",
+    fontSize: 56,
+    lineHeight: 62,
   },
 
   heading: {
-    fontSize: 24,
-    fontWeight: "700" as const,
+    fontFamily: "Poppins_600SemiBold",
+    fontSize: 30,
+    lineHeight: 36,
+  },
+
+  subtitle: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 20,
+    lineHeight: 28,
   },
 
   body: {
-    fontSize: 20,
-    lineHeight: 34,
+    fontFamily: "Poppins_400Regular",
+    fontSize: 18,
+    lineHeight: 28,
+  },
+
+  verse: {
+    fontFamily: "SourceSerif4_400Regular",
+    fontSize: 30,
+    lineHeight: 48,
   },
 
   reference: {
-    fontSize: 20,
-    fontWeight: "700" as const,
+    fontFamily: "Poppins_700Bold",
+    fontSize: 26,
   },
 
-  small: {
-    fontSize: 15,
+  caption: {
+    fontFamily: "Poppins_400Regular",
+    fontSize: 16,
+  },
+
+  button: {
+    fontFamily: "Poppins_600SemiBold",
+    fontSize: 20,
   },
 };
