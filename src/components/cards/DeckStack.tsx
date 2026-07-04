@@ -1,24 +1,25 @@
 import { StyleSheet, View } from "react-native";
 
-import DeckCard from "./DeckCard";
+import CardBack from "./CardBack";
+import StackCard from "./StackCard";
 
 export default function DeckStack() {
   return (
     <View style={styles.container}>
       <View style={[styles.card, styles.card4]}>
-        <DeckCard />
+        <StackCard />
       </View>
 
       <View style={[styles.card, styles.card3]}>
-        <DeckCard />
+        <StackCard />
       </View>
 
       <View style={[styles.card, styles.card2]}>
-        <DeckCard />
+        <StackCard />
       </View>
 
       <View style={[styles.card, styles.card1]}>
-        <DeckCard />
+        <CardBack />
       </View>
     </View>
   );
@@ -37,7 +38,6 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
 
-  // Bottom card
   card4: {
     transform: [
       { translateX: -9 },
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
 
-  // Third card
   card3: {
     transform: [
       { translateX: -6 },
@@ -57,7 +56,6 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
 
-  // Second card
   card2: {
     transform: [
       { translateX: -3 },
@@ -67,7 +65,6 @@ const styles = StyleSheet.create({
     zIndex: 3,
   },
 
-  // Top card
   card1: {
     transform: [
       { translateX: 0 },

@@ -1,16 +1,12 @@
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import Deck from "../components/cards/Deck";
+import DrawCard from "../components/cards/DrawCard";
 
 export default function HomeScreen() {
-  function drawCard() {
-    console.log("Draw card");
-  }
-
   return (
     <SafeAreaView style={styles.container}>
-      <Deck onPress={drawCard} />
+      <DrawCard />
     </SafeAreaView>
   );
 }

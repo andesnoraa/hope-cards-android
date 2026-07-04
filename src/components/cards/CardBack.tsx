@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function DeckCard() {
+export default function CardBack() {
   return (
     <View style={styles.card}>
       <View style={styles.innerBorder} />
