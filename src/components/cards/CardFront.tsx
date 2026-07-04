@@ -1,27 +1,70 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import { Colors } from "../../theme/colors";
-import { Spacing } from "../../theme/spacing";
-import { Typography } from "../../theme/typography";
 import type { Verse } from "../../types/verse";
 
 type Props = {
   verse: Verse;
 };
 
+function getVerseStyle(text: string) {
+  const length = text.length;
+
+  if (length <= 70) {
+    return {
+      fontSize: 24,
+      lineHeight: 34,
+    };
+  }
+
+  if (length <= 120) {
+    return {
+      fontSize: 22,
+      lineHeight: 32,
+    };
+  }
+
+  if (length <= 180) {
+    return {
+      fontSize: 20,
+      lineHeight: 30,
+    };
+  }
+
+  return {
+    fontSize: 18,
+    lineHeight: 28,
+  };
+}
+
 export default function CardFront({ verse }: Props) {
+  const verseStyle = getVerseStyle(verse.fullVerse);
+
   return (
     <View style={styles.card}>
-      <Text style={styles.category}>{verse.category}</Text>
+      <View style={styles.innerBorder} />
 
-      <View style={styles.divider} />
+      <View style={styles.content}>
+        <View style={styles.header}>
+          <Text style={styles.category}>{verse.category}</Text>
 
-      <Text style={styles.verse}>{verse.fullVerse}</Text>
+          <View style={styles.divider} />
+        </View>
 
-      <View style={styles.footer}>
-        <Text style={styles.reference}>{verse.reference}</Text>
+        <View style={styles.verseContainer}>
+          <Text style={[styles.verse, verseStyle]}>
+            {verse.fullVerse}
+          </Text>
+        </View>
 
-        <Text style={styles.translation}>{verse.translation}</Text>
+        <View style={styles.footer}>
+          <Text style={styles.reference}>
+            {verse.reference}
+          </Text>
+
+          <Text style={styles.translation}>
+            {verse.translation}
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -29,84 +72,125 @@ export default function CardFront({ verse }: Props) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: Colors.surface,
+    width: 345,
+    height: 500,
 
-    borderRadius: 30,
+    backgroundColor: "#F8F6F2",
 
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: 36,
+    borderRadius: 34,
 
-    marginVertical: Spacing.lg,
+    borderWidth: 1.5,
+    borderColor: "#C5A24C",
 
     shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 18,
+    shadowOpacity: 0.12,
+    shadowRadius: 42,
     shadowOffset: {
       width: 0,
-      height: 8,
+      height: 24,
     },
 
-    elevation: 5,
+    elevation: 18,
+  },
+
+  innerBorder: {
+    position: "absolute",
+
+    top: 12,
+    left: 12,
+    right: 12,
+    bottom: 12,
+
+    borderRadius: 26,
+
+    borderWidth: 1,
+
+    borderColor: "rgba(197,162,76,0.45)",
+  },
+
+  content: {
+    flex: 1,
+
+    paddingHorizontal: 28,
+    paddingTop: 30,
+    paddingBottom: 24,
+  },
+
+  header: {
+    alignItems: "center",
   },
 
   category: {
-    ...Typography.body,
+    color: "#C5A24C",
 
-    textAlign: "center",
-
-    color: "#B8860B",
+    fontSize: 16,
 
     fontWeight: "600",
 
-    letterSpacing: 1,
+    letterSpacing: 2,
+
+    textTransform: "uppercase",
   },
 
   divider: {
-    alignSelf: "center",
-
     width: 70,
-
-    height: 2,
+    height: 3,
 
     borderRadius: 2,
 
     backgroundColor: "#D4AF37",
 
-    marginTop: Spacing.sm,
-    marginBottom: Spacing.xl,
+    marginTop: 10,
+  },
+
+  verseContainer: {
+    flex: 1,
+
+    justifyContent: "center",
+    alignItems: "center",
+
+    paddingVertical: 18,
   },
 
   verse: {
-    ...Typography.body,
+    flex: 1,
+
+    color: "#273043",
 
     textAlign: "center",
 
-    fontSize: 26,
+    fontFamily: "CormorantGaramond-Regular",
 
-    lineHeight: 40,
+    fontWeight: "400",
 
-    color: Colors.text,
+    letterSpacing: 0.2,
+
+    paddingHorizontal: 8,
+
+    textAlignVertical: "center",
   },
 
   footer: {
-    marginTop: 40,
-
     alignItems: "center",
+
+    paddingBottom: 6,
   },
 
   reference: {
-    ...Typography.reference,
+    fontSize: 22,
 
-    fontSize: 24,
+    fontWeight: "700",
 
-    color: Colors.text,
+    color: "#273043",
   },
 
   translation: {
-    marginTop: Spacing.sm,
+    marginTop: 6,
 
-    color: Colors.textSecondary,
+    fontSize: 16,
 
-    letterSpacing: 1,
+    color: "#7A8292",
+
+    letterSpacing: 1.5,
   },
 });
