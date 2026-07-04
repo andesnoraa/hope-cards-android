@@ -1,67 +1,79 @@
-import { Pressable, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import DeckCard from "./DeckCard";
 
-type Props = {
-  onPress: () => void;
-};
-
-export default function DeckStack({ onPress }: Props) {
+export default function DeckStack() {
   return (
-    <Pressable onPress={onPress} style={styles.container}>
-      <View style={[styles.layer, styles.layer4]}>
+    <View style={styles.container}>
+      <View style={[styles.card, styles.card4]}>
         <DeckCard />
       </View>
 
-      <View style={[styles.layer, styles.layer3]}>
+      <View style={[styles.card, styles.card3]}>
         <DeckCard />
       </View>
 
-      <View style={[styles.layer, styles.layer2]}>
+      <View style={[styles.card, styles.card2]}>
         <DeckCard />
       </View>
 
-      <View style={styles.layer}>
+      <View style={[styles.card, styles.card1]}>
         <DeckCard />
       </View>
-    </Pressable>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: 360,
-    height: 520,
+    width: 355,
+    height: 510,
 
-    justifyContent: "center",
     alignItems: "center",
+    justifyContent: "center",
   },
 
-  layer: {
+  card: {
     position: "absolute",
   },
 
-  layer2: {
+  // Bottom card
+  card4: {
     transform: [
-      { translateX: -10 },
+      { translateX: -9 },
       { translateY: -10 },
+      { rotate: "-3deg" },
+    ],
+    zIndex: 1,
+  },
+
+  // Third card
+  card3: {
+    transform: [
+      { translateX: -6 },
+      { translateY: -6 },
       { rotate: "-2deg" },
     ],
+    zIndex: 2,
   },
 
-  layer3: {
+  // Second card
+  card2: {
     transform: [
-      { translateX: -20 },
-      { translateY: -18 },
-      { rotate: "-4deg" },
+      { translateX: -3 },
+      { translateY: -3 },
+      { rotate: "-1deg" },
     ],
+    zIndex: 3,
   },
 
-  layer4: {
+  // Top card
+  card1: {
     transform: [
-      { translateX: -30 },
-      { translateY: -26 },
-      { rotate: "-6deg" },
+      { translateX: 0 },
+      { translateY: 0 },
+      { rotate: "0.5deg" },
     ],
+    zIndex: 4,
   },
 });

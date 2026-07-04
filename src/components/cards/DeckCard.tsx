@@ -5,9 +5,9 @@ export default function DeckCard() {
     <View style={styles.card}>
       <View style={styles.innerBorder} />
 
-      <Text style={styles.logo}>🍃</Text>
+      <Text style={styles.cross}>✝</Text>
 
-      <Text style={styles.title}>Hope</Text>
+      <Text style={styles.title}>HOPE</Text>
 
       <Text style={styles.subtitle}>CARDS</Text>
     </View>
@@ -16,25 +16,25 @@ export default function DeckCard() {
 
 const styles = StyleSheet.create({
   card: {
-    width: 320,
-    height: 470,
+    width: 345,
+    height: 500,
 
-    backgroundColor: "#203A7A",
+    backgroundColor: "#1A2747",
 
-    borderRadius: 36,
+    borderRadius: 34,
 
     justifyContent: "center",
     alignItems: "center",
 
-    borderWidth: 2,
-    borderColor: "#C9A227",
+    borderWidth: 1.5,
+    borderColor: "#C5A24C",
 
     shadowColor: "#000",
-    shadowOpacity: 0.28,
-    shadowRadius: 28,
+    shadowOpacity: 0.12,
+    shadowRadius: 42,
     shadowOffset: {
       width: 0,
-      height: 18,
+      height: 24,
     },
 
     elevation: 18,
@@ -43,42 +43,51 @@ const styles = StyleSheet.create({
   innerBorder: {
     position: "absolute",
 
-    top: 14,
-    left: 14,
-    right: 14,
-    bottom: 14,
+    top: 12,
+    left: 12,
+    right: 12,
+    bottom: 12,
 
-    borderRadius: 28,
+    borderRadius: 26,
 
-    borderWidth: 1.5,
+    borderWidth: 1,
 
-    borderColor: "rgba(201,162,39,0.55)",
+    borderColor: "rgba(197,162,76,0.45)",
   },
 
-  logo: {
-    fontSize: 54,
-    marginBottom: 18,
-  },
-
-  title: {
-    color: "#FFFFFF",
-
+  cross: {
     fontSize: 56,
-
-    fontWeight: "800",
-
-    letterSpacing: -1,
-  },
-
-  subtitle: {
-    marginTop: 12,
 
     color: "#D4AF37",
 
-    fontSize: 24,
+    marginBottom: 26,
 
-    letterSpacing: 10,
+    fontFamily: "CormorantGaramond-Bold",
+  },
+
+  title: {
+    color: "#F8F6F2",
+
+    fontFamily: "CormorantGaramond-Bold",
+
+    fontSize: 60,
+
+    letterSpacing: 2,
+
+    textAlign: "center",
+  },
+
+  subtitle: {
+    marginTop: 10,
+
+    color: "#C5A24C",
+
+    fontSize: 18,
+
+    letterSpacing: 14,
 
     fontWeight: "600",
+
+    textAlign: "center",
   },
 });
