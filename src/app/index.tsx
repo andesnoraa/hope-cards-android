@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import AppHeader from "../components/layout/AppHeader";
 
 import PrimaryButton from "../components/buttons/PrimaryButton";
-import VerseCard from "../components/VerseCard";
+import AnimatedHopeCard from "../components/cards/AnimatedHopeCard";
 import { verses } from "../data/verses";
 
 export default function HomeScreen() {
@@ -21,14 +22,14 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Hope Cards</Text>
+      <AppHeader />
 
       <PrimaryButton
         title="Draw Another Card"
         onPress={drawHopeCard}
       />
 
-      <VerseCard verse={currentVerse} />
+      <AnimatedHopeCard verse={currentVerse} />
     </SafeAreaView>
   );
 }
