@@ -1,7 +1,22 @@
 import { Stack, useLocalSearchParams } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { useEffect, useState } from "react";
+
+import {
+    ScrollView,
+    Share,
+    StyleSheet,
+    Text,
+    View,
+} from "react-native";
 
 import { verses } from "../../data/verses";
+
+import ActionButton from "../../components/common/ActionButton";
+
+import {
+    isFavorite,
+    toggleFavorite,
+} from "../../services/favorites";
 
 export default function VerseScreen() {
     const { id } = useLocalSearchParams();
@@ -9,6 +24,40 @@ export default function VerseScreen() {
     const verse = verses.find(
         (v) => v.id === Number(id)
     );
+
+    const [favorite, setFavorite] = useState(false);
+
+    useEffect(() => {
+        async function loadFavorite() {
+            if (!verse) return;
+
+            const saved = await isFavorite(verse.id);
+
+            setFavorite(saved);
+        }
+
+        loadFavorite();
+    }, [verse]);
+
+    async function handleToggleFavorite() {
+        if (!verse) return;
+
+        const saved = await toggleFavorite(verse.id);
+
+        setFavorite(saved);
+    }
+
+    async function handleShare() {
+        if (!verse) return;
+
+        await Share.share({
+            message:
+                `${verse.fullVerse}\n\n` +
+                `— ${verse.reference} (${verse.translation})\n\n` +
+                `Shared from Hope Cards ❤️\n\n` +
+                `https://play.google.com/store/apps/details?id=com.hopecards.app`,
+        });
+    }
 
     if (!verse) {
         return (
@@ -36,15 +85,62 @@ export default function VerseScreen() {
                 }}
             />
 
-            <View style={styles.container}>
-                <Text style={styles.title}>
+            <ScrollView
+                style={styles.container}
+                contentContainerStyle={styles.content}
+            >
+                <Text style={styles.category}>
+                    {verse.category.toUpperCase()}
+                </Text>
+
+                <View style={styles.divider} />
+
+                <Text style={styles.reference}>
                     {verse.reference}
                 </Text>
 
-                <Text style={styles.subtitle}>
+                <Text style={styles.verse}>
                     {verse.fullVerse}
                 </Text>
-            </View>
+
+                <View style={styles.actions}>
+                    <ActionButton
+                        icon={
+                            favorite
+                                ? "heart"
+                                : "heart-outline"
+                        }
+                        label={
+                            favorite
+                                ? "Saved"
+                                : "Save"
+                        }
+                        color={
+                            favorite
+                                ? "#C0392B"
+                                : "#C5A24C"
+                        }
+                        onPress={handleToggleFavorite}
+                    />
+
+                    <ActionButton
+                        icon="share-outline"
+                        label="Share"
+                        color="#C5A24C"
+                        onPress={handleShare}
+                    />
+                </View>
+
+                <View style={styles.infoCard}>
+                    <Text style={styles.infoLabel}>
+                        Translation
+                    </Text>
+
+                    <Text style={styles.infoValue}>
+                        {verse.translation}
+                    </Text>
+                </View>
+            </ScrollView>
         </>
     );
 }
@@ -53,23 +149,102 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#F8F6F2",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: 24,
     },
 
-    title: {
+    content: {
+        paddingHorizontal: 28,
+        paddingTop: 20,
+        paddingBottom: 60,
+        alignItems: "center",
+    },
+
+    category: {
+        fontSize: 16,
+        fontWeight: "600",
+        color: "#C5A24C",
+        letterSpacing: 3,
+    },
+
+    divider: {
+        width: 70,
+        height: 3,
+        borderRadius: 2,
+        backgroundColor: "#D4AF37",
+        marginTop: 12,
+        marginBottom: 26,
+    },
+
+    reference: {
         fontSize: 30,
         fontWeight: "700",
         color: "#1A2747",
         textAlign: "center",
-        marginBottom: 20,
     },
 
-    subtitle: {
-        fontSize: 20,
-        color: "#444",
+    verse: {
+        marginTop: 34,
+
+        fontSize: 24,
+        lineHeight: 42,
+
+        color: "#273043",
+
         textAlign: "center",
-        lineHeight: 32,
+
+        fontFamily: "SourceSerif4_400Regular",
+    },
+
+    actions: {
+        flexDirection: "row",
+
+        justifyContent: "center",
+
+        alignItems: "center",
+
+        gap: 12,
+
+        marginTop: 34,
+
+        marginBottom: 10,
+    },
+
+    infoCard: {
+        width: "100%",
+
+        backgroundColor: "#FFFFFF",
+
+        borderRadius: 18,
+
+        padding: 20,
+
+        borderWidth: 1,
+
+        borderColor: "#E6D7A7",
+    },
+
+    infoLabel: {
+        color: "#888",
+
+        fontSize: 14,
+
+        marginBottom: 6,
+    },
+
+    infoValue: {
+        color: "#1A2747",
+
+        fontSize: 18,
+
+        fontWeight: "600",
+    },
+
+    title: {
+        fontSize: 28,
+
+        fontWeight: "700",
+
+        color: "#1A2747",
+
+        textAlign: "center",
     },
 });
