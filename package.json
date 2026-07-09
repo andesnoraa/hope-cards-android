@@ -6,6 +6,7 @@
     "@expo-google-fonts/poppins": "^0.4.1",
     "@expo-google-fonts/source-serif-4": "^0.4.1",
     "@expo/ui": "~57.0.3",
+    "@react-navigation/drawer": "^7.12.8",
     "expo": "~57.0.2",
     "expo-constants": "~57.0.3",
     "expo-device": "~57.0.0",

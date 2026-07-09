@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import DrawCard from "../components/cards/DrawCard";
+import DrawCard from "../../components/cards/DrawCard";
 
 export default function HomeScreen() {
   return (
