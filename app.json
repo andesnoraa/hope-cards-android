@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Hope Cards",
-    "slug": "hope-cards",
+    "slug": "hope-cards-android",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
