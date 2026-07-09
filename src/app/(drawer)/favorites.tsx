@@ -1,42 +1,112 @@
-import { StyleSheet, Text, View } from "react-native";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
-type Props = {
-  title: string;
-};
+import FavoriteCard from "../../components/favorites/FavoriteCard";
 
-function PlaceholderScreen({ title }: Props) {
+import {
+  getFavoriteVerses,
+} from "../../services/favorites";
+
+import type { Verse } from "../../types/verse";
+
+export default function FavoritesScreen() {
+  const [favorites, setFavorites] = useState<Verse[]>([]);
+
+  useFocusEffect(
+    useCallback(() => {
+      async function loadFavorites() {
+        const saved =
+          await getFavoriteVerses();
+
+        setFavorites(saved);
+      }
+
+      loadFavorites();
+    }, [])
+  );
+
+  if (favorites.length === 0) {
+    return (
+      <View style={styles.emptyContainer}>
+        <Text style={styles.emptyIcon}>
+          ❤️
+        </Text>
+
+        <Text style={styles.emptyTitle}>
+          No Favorites Yet
+        </Text>
+
+        <Text style={styles.emptySubtitle}>
+          Save verses you love and they'll
+          appear here.
+        </Text>
+      </View>
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-
-      <Text style={styles.subtitle}>
-        Coming Soon
-      </Text>
-    </View>
+    <FlatList
+      data={favorites}
+      keyExtractor={(item) =>
+        item.id.toString()
+      }
+      contentContainerStyle={styles.list}
+      renderItem={({ item }) => (
+        <FavoriteCard
+          verse={item}
+          onPress={() => { }}
+        />
+      )}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  list: {
+    padding: 20,
+    backgroundColor: "#F8F6F2",
+    flexGrow: 1,
+  },
+
+  emptyContainer: {
     flex: 1,
+
+    backgroundColor: "#F8F6F2",
+
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F8F6F2",
+
+    paddingHorizontal: 40,
   },
 
-  title: {
+  emptyIcon: {
+    fontSize: 48,
+    marginBottom: 20,
+  },
+
+  emptyTitle: {
     fontSize: 28,
+
     fontWeight: "700",
+
     color: "#1A2747",
+
+    marginBottom: 12,
   },
 
-  subtitle: {
-    marginTop: 12,
+  emptySubtitle: {
+    textAlign: "center",
+
     fontSize: 18,
-    color: "#666",
+
+    color: "#777",
+
+    lineHeight: 28,
   },
 });
-
-export default function Screen() {
-  return <PlaceholderScreen title="Favorites" />;
-}

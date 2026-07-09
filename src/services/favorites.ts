@@ -1,5 +1,8 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import { verses } from "../data/verses";
+import type { Verse } from "../types/verse";
+
 const FAVORITES_KEY = "hope_cards_favorites";
 
 /**
@@ -88,4 +91,15 @@ export async function toggleFavorite(
   await saveFavorite(verseId);
 
   return true;
+}
+
+/**
+ * Returns all saved verses.
+ */
+export async function getFavoriteVerses(): Promise<Verse[]> {
+  const favoriteIds = await getFavorites();
+
+  return verses.filter((verse) =>
+    favoriteIds.includes(verse.id)
+  );
 }
