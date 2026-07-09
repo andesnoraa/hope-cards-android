@@ -28,10 +28,37 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    />
+    <Stack>
+      <Stack.Screen
+        name="(drawer)"
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="verse/[id]"
+        options={{
+          title: "Verse",
+
+          headerShown: true,
+
+          headerLargeTitle: false,
+
+          headerTintColor: "#1A2747",
+
+          headerTitleStyle: {
+            color: "#1A2747",
+            fontWeight: "600",
+          },
+
+          headerStyle: {
+            backgroundColor: "#F8F6F2",
+          },
+
+          headerShadowVisible: true,
+        }}
+      />
+    </Stack>
   );
 }

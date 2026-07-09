@@ -7,7 +7,7 @@ import Animated, {
 import type { Verse } from "../../types/verse";
 
 import CardBack from "./CardBack";
-import CardFront from "./CardFront";
+import CardView from "./CardView";
 import StackCard from "./StackCard";
 
 type Props = {
@@ -81,7 +81,7 @@ export default function DeckStack({
             frontStyle,
           ]}
         >
-          <CardFront
+          <CardView
             verse={verse}
             favorite={favorite}
             onToggleFavorite={onToggleFavorite}

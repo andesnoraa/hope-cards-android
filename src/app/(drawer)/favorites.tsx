@@ -1,4 +1,4 @@
-import { useFocusEffect } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import {
   FlatList,
@@ -60,7 +60,9 @@ export default function FavoritesScreen() {
       renderItem={({ item }) => (
         <FavoriteCard
           verse={item}
-          onPress={() => { }}
+          onPress={() =>
+            router.push(`/verse/${item.id}`)
+          }
         />
       )}
     />
