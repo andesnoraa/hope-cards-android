@@ -1,3 +1,4 @@
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Drawer } from "expo-router/drawer";
 
 export default function DrawerLayout() {
@@ -8,8 +9,16 @@ export default function DrawerLayout() {
 
         headerTitle: "Hope Cards",
 
+        headerStyle: {
+          backgroundColor: "#F7F5F1",
+        },
+
+        headerTintColor: "#1A2747",
+
         drawerActiveTintColor: "#C5A24C",
         drawerInactiveTintColor: "#273043",
+
+        drawerActiveBackgroundColor: "#F4EEDC",
 
         drawerLabelStyle: {
           fontSize: 16,
@@ -20,56 +29,105 @@ export default function DrawerLayout() {
       <Drawer.Screen
         name="index"
         options={{
-          drawerLabel: "🏠 Home",
-          title: "Home",
+          title: "Hope Cards",
+          drawerLabel: "Home",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="home-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
 
       <Drawer.Screen
         name="favorites"
         options={{
-          drawerLabel: "❤️ Favorites",
           title: "Favorites",
+          drawerLabel: "Favorites",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="heart-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
 
       <Drawer.Screen
         name="daily"
         options={{
-          drawerLabel: "☀ Daily Verse",
           title: "Daily Verse",
+          drawerLabel: "Daily Verse",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="sunny-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
 
       <Drawer.Screen
         name="premium"
         options={{
-          drawerLabel: "👑 Premium",
           title: "Premium",
+          drawerLabel: "Premium",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="diamond-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
 
       <Drawer.Screen
         name="settings"
         options={{
-          drawerLabel: "⚙️ Settings",
           title: "Settings",
+          drawerLabel: "Settings",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="settings-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
 
       <Drawer.Screen
         name="about"
         options={{
-          drawerLabel: "ℹ️ About",
           title: "About",
+          drawerLabel: "About",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="information-circle-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
 
       <Drawer.Screen
         name="privacy"
         options={{
-          drawerLabel: "📜 Privacy Policy",
           title: "Privacy Policy",
+          drawerLabel: "Privacy Policy",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons
+              name="shield-checkmark-outline"
+              color={color}
+              size={size}
+            />
+          ),
         }}
       />
     </Drawer>
