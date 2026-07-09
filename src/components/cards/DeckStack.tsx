@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import type { SharedValue } from "react-native-reanimated";
 import Animated, {
-  useAnimatedStyle
+  useAnimatedStyle,
 } from "react-native-reanimated";
 
 import type { Verse } from "../../types/verse";
@@ -14,12 +14,17 @@ type Props = {
   animatedStyle: any;
   rotateY: SharedValue<number>;
   verse: Verse;
+
+  favorite: boolean;
+  onToggleFavorite: () => void;
 };
 
 export default function DeckStack({
   animatedStyle,
   rotateY,
   verse,
+  favorite,
+  onToggleFavorite,
 }: Props) {
   const backStyle = useAnimatedStyle(() => ({
     transform: [
@@ -74,7 +79,11 @@ export default function DeckStack({
             frontStyle,
           ]}
         >
-          <CardFront verse={verse} />
+          <CardFront
+            verse={verse}
+            favorite={favorite}
+            onToggleFavorite={onToggleFavorite}
+          />
         </Animated.View>
       </Animated.View>
     </View>

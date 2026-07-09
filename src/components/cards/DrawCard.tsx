@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Pressable,
   StyleSheet,
@@ -15,6 +15,11 @@ import Animated, {
 import { verses } from "../../data/verses";
 import DeckStack from "./DeckStack";
 
+import {
+  isFavorite,
+  toggleFavorite,
+} from "../../services/favorites";
+
 const CARD_SPRING = {
   damping: 28,
   stiffness: 170,
@@ -29,6 +34,7 @@ const BUTTON_SPRING = {
 export default function DrawCard() {
   const [currentVerse, setCurrentVerse] = useState(verses[0]);
   const [showingVerse, setShowingVerse] = useState(false);
+  const [favorite, setFavorite] = useState(false);
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -36,6 +42,15 @@ export default function DrawCard() {
   const scale = useSharedValue(1);
 
   const buttonScale = useSharedValue(1);
+
+  useEffect(() => {
+    async function loadFavorite() {
+      const saved = await isFavorite(currentVerse.id);
+      setFavorite(saved);
+    }
+
+    loadFavorite();
+  }, [currentVerse]);
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
@@ -84,6 +99,11 @@ export default function DrawCard() {
     setShowingVerse(true);
   }
 
+  async function handleToggleFavorite() {
+    const saved = await toggleFavorite(currentVerse.id);
+    setFavorite(saved);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.deckContainer}>
@@ -92,6 +112,10 @@ export default function DrawCard() {
             animatedStyle={animatedStyle}
             rotateY={rotateY}
             verse={currentVerse}
+
+            // We'll use these in the next step
+            favorite={favorite}
+            onToggleFavorite={handleToggleFavorite}
           />
         </Pressable>
       </View>
@@ -99,10 +123,16 @@ export default function DrawCard() {
       <Pressable
         onPress={drawCard}
         onPressIn={() => {
-          buttonScale.value = withSpring(0.96, BUTTON_SPRING);
+          buttonScale.value = withSpring(
+            0.96,
+            BUTTON_SPRING
+          );
         }}
         onPressOut={() => {
-          buttonScale.value = withSpring(1, BUTTON_SPRING);
+          buttonScale.value = withSpring(
+            1,
+            BUTTON_SPRING
+          );
         }}
       >
         <Animated.View
@@ -136,12 +166,17 @@ const styles = StyleSheet.create({
   button: {
     width: 260,
     height: 56,
+
     backgroundColor: "#1A2747",
+
     borderRadius: 28,
+
     borderWidth: 2,
     borderColor: "#C5A24C",
+
     justifyContent: "center",
     alignItems: "center",
+
     shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 10,
@@ -149,13 +184,16 @@ const styles = StyleSheet.create({
       width: 0,
       height: 4,
     },
+
     elevation: 6,
   },
 
   buttonText: {
     color: "#FFFFFF",
+
     fontSize: 18,
     fontWeight: "600",
+
     letterSpacing: 0.5,
   },
 });

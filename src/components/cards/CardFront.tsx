@@ -2,8 +2,12 @@ import { StyleSheet, Text, View } from "react-native";
 
 import type { Verse } from "../../types/verse";
 
+import ActionButton from "../common/ActionButton";
+
 type Props = {
   verse: Verse;
+  favorite: boolean;
+  onToggleFavorite: () => void;
 };
 
 function getVerseStyle(text: string) {
@@ -36,7 +40,11 @@ function getVerseStyle(text: string) {
   };
 }
 
-export default function CardFront({ verse }: Props) {
+export default function CardFront({
+  verse,
+  favorite,
+  onToggleFavorite,
+}: Props) {
   const verseStyle = getVerseStyle(verse.fullVerse);
 
   return (
@@ -45,7 +53,9 @@ export default function CardFront({ verse }: Props) {
 
       <View style={styles.content}>
         <View style={styles.header}>
-          <Text style={styles.category}>{verse.category}</Text>
+          <Text style={styles.category}>
+            {verse.category}
+          </Text>
 
           <View style={styles.divider} />
         </View>
@@ -54,6 +64,33 @@ export default function CardFront({ verse }: Props) {
           <Text style={[styles.verse, verseStyle]}>
             {verse.fullVerse}
           </Text>
+        </View>
+
+        <View style={styles.actions}>
+          <ActionButton
+            icon={
+              favorite
+                ? "heart"
+                : "heart-outline"
+            }
+            label={
+              favorite
+                ? "Saved"
+                : "Save"
+            }
+            color={
+              favorite
+                ? "#C0392B"
+                : "#273043"
+            }
+            onPress={onToggleFavorite}
+          />
+
+          <ActionButton
+            icon="share-outline"
+            label="Share"
+            onPress={() => { }}
+          />
         </View>
 
         <View style={styles.footer}>
@@ -168,6 +205,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
 
     textAlignVertical: "center",
+  },
+
+  actions: {
+    flexDirection: "row",
+
+    justifyContent: "space-between",
+
+    alignItems: "center",
+
+    marginBottom: 18,
   },
 
   footer: {
