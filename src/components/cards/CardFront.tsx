@@ -81,7 +81,7 @@ export default function CardFront({
             color={
               favorite
                 ? "#C0392B"
-                : "#273043"
+                : "#C5A24C"
             }
             onPress={onToggleFavorite}
           />
@@ -210,9 +210,11 @@ const styles = StyleSheet.create({
   actions: {
     flexDirection: "row",
 
-    justifyContent: "space-between",
+    justifyContent: "center",
 
     alignItems: "center",
+
+    gap: 12,
 
     marginBottom: 18,
   },
