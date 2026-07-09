@@ -1,92 +1,104 @@
-import { Pressable, StyleSheet, Text } from "react-native";
+import {
+    Pressable,
+    StyleSheet,
+    Text,
+    View,
+} from "react-native";
+
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 import type { Verse } from "../../types/verse";
 
 type Props = {
-    verse: Verse;
-    onPress: () => void;
+  verse: Verse;
+  onPress: () => void;
 };
 
 export default function FavoriteCard({
-    verse,
-    onPress,
+  verse,
+  onPress,
 }: Props) {
-    return (
-        <Pressable
-            style={styles.card}
-            onPress={onPress}
-        >
-            <Text style={styles.category}>
-                {verse.category}
-            </Text>
+  return (
+    <Pressable
+      style={styles.container}
+      onPress={onPress}
+    >
+      <Text style={styles.category}>
+        {verse.category.toUpperCase()}
+      </Text>
 
-            <Text
-                style={styles.verse}
-                numberOfLines={3}
-            >
-                {verse.fullVerse}
-            </Text>
+      <Text
+        style={styles.verse}
+        numberOfLines={2}
+      >
+        {verse.fullVerse}
+      </Text>
 
-            <Text style={styles.reference}>
-                {verse.reference}
-            </Text>
-        </Pressable>
-    );
+      <View style={styles.footer}>
+        <Text style={styles.reference}>
+          {verse.reference}
+        </Text>
+
+        <Ionicons
+          name="chevron-forward"
+          size={18}
+          color="#9AA0AA"
+        />
+      </View>
+
+      <View style={styles.divider} />
+    </Pressable>
+  );
 }
 
 const styles = StyleSheet.create({
-    card: {
-        backgroundColor: "#F8F6F2",
+  container: {
+    paddingVertical: 22,
+  },
 
-        borderRadius: 22,
+  category: {
+    color: "#C5A24C",
 
-        borderWidth: 1.5,
-        borderColor: "#C5A24C",
+    fontSize: 13,
 
-        padding: 20,
+    fontWeight: "700",
 
-        marginBottom: 16,
+    letterSpacing: 2.5,
 
-        shadowColor: "#000",
-        shadowOpacity: 0.08,
-        shadowRadius: 8,
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
+    marginBottom: 10,
+  },
 
-        elevation: 3,
-    },
+  verse: {
+    color: "#273043",
 
-    category: {
-        color: "#C5A24C",
+    fontSize: 19,
 
-        fontSize: 14,
+    lineHeight: 30,
 
-        fontWeight: "700",
+    marginBottom: 18,
+  },
 
-        letterSpacing: 2,
+  footer: {
+    flexDirection: "row",
 
-        textTransform: "uppercase",
+    justifyContent: "space-between",
 
-        marginBottom: 12,
-    },
+    alignItems: "center",
 
-    verse: {
-        color: "#273043",
+    marginBottom: 18,
+  },
 
-        fontSize: 18,
+  reference: {
+    color: "#1A2747",
 
-        lineHeight: 28,
+    fontSize: 18,
 
-        marginBottom: 18,
-    },
+    fontWeight: "700",
+  },
 
-    reference: {
-        color: "#273043",
+  divider: {
+    height: StyleSheet.hairlineWidth,
 
-        fontSize: 18,
-
-        fontWeight: "700",
-    },
+    backgroundColor: "#DDD8CC",
+  },
 });

@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import {
@@ -34,17 +35,19 @@ export default function FavoritesScreen() {
   if (favorites.length === 0) {
     return (
       <View style={styles.emptyContainer}>
-        <Text style={styles.emptyIcon}>
-          ❤️
-        </Text>
+        <Ionicons
+          name="heart"
+          size={72}
+          color="#D83A2E"
+          style={styles.emptyIcon}
+        />
 
         <Text style={styles.emptyTitle}>
           No Favorites Yet
         </Text>
 
         <Text style={styles.emptySubtitle}>
-          Save verses you love and they'll
-          appear here.
+          Save verses you love and they'll appear here.
         </Text>
       </View>
     );
@@ -57,6 +60,7 @@ export default function FavoritesScreen() {
         item.id.toString()
       }
       contentContainerStyle={styles.list}
+      showsVerticalScrollIndicator={false}
       renderItem={({ item }) => (
         <FavoriteCard
           verse={item}
@@ -71,9 +75,11 @@ export default function FavoritesScreen() {
 
 const styles = StyleSheet.create({
   list: {
-    padding: 20,
-    backgroundColor: "#F8F6F2",
     flexGrow: 1,
+
+    padding: 20,
+
+    backgroundColor: "#F8F6F2",
   },
 
   emptyContainer: {
@@ -82,33 +88,40 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F6F2",
 
     justifyContent: "center",
+
     alignItems: "center",
 
-    paddingHorizontal: 40,
+    paddingHorizontal: 50,
+
+    // Move the empty state slightly upward
+    paddingBottom: 140,
   },
 
   emptyIcon: {
-    fontSize: 48,
-    marginBottom: 20,
+    marginBottom: 24,
   },
 
   emptyTitle: {
-    fontSize: 28,
+    fontSize: 34,
 
     fontWeight: "700",
 
     color: "#1A2747",
 
-    marginBottom: 12,
+    textAlign: "center",
+
+    marginBottom: 18,
   },
 
   emptySubtitle: {
     textAlign: "center",
 
-    fontSize: 18,
+    fontSize: 20,
 
     color: "#777",
 
-    lineHeight: 28,
+    lineHeight: 34,
+
+    maxWidth: 320,
   },
 });
