@@ -5,14 +5,26 @@ import {
   Text,
   View,
 } from "react-native";
-import {
+import Animated, {
   useAnimatedStyle,
   useSharedValue,
+  withDelay,
   withSpring,
 } from "react-native-reanimated";
 
 import { verses } from "../../data/verses";
 import DeckStack from "./DeckStack";
+
+const CARD_SPRING = {
+  damping: 28,
+  stiffness: 170,
+  mass: 1,
+};
+
+const BUTTON_SPRING = {
+  damping: 14,
+  stiffness: 260,
+};
 
 export default function DrawCard() {
   const [currentVerse, setCurrentVerse] = useState(verses[0]);
@@ -23,6 +35,8 @@ export default function DrawCard() {
   const rotateY = useSharedValue(0);
   const scale = useSharedValue(1);
 
+  const buttonScale = useSharedValue(1);
+
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
       { translateX: translateX.value },
@@ -31,21 +45,22 @@ export default function DrawCard() {
     ],
   }));
 
-  function drawCard() {
-    // Return card to deck
-    if (showingVerse) {
-      rotateY.value = withSpring(0);
+  const buttonAnimatedStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: buttonScale.value }],
+  }));
 
-      translateX.value = withSpring(0);
-      translateY.value = withSpring(0);
-      scale.value = withSpring(1);
+  function drawCard() {
+    if (showingVerse) {
+      rotateY.value = withSpring(0, CARD_SPRING);
+
+      translateX.value = withSpring(0, CARD_SPRING);
+      translateY.value = withSpring(0, CARD_SPRING);
+      scale.value = withSpring(1, CARD_SPRING);
 
       setShowingVerse(false);
-
       return;
     }
 
-    // Pick a new verse
     let nextVerse = currentVerse;
 
     while (nextVerse.id === currentVerse.id) {
@@ -55,13 +70,16 @@ export default function DrawCard() {
 
     setCurrentVerse(nextVerse);
 
-    // Lift animation
-    translateX.value = withSpring(20);
-    translateY.value = withSpring(-25);
-    scale.value = withSpring(1.03);
+    // Gentle lift (straight up)
+    translateX.value = withSpring(0, CARD_SPRING);
+    translateY.value = withSpring(-20, CARD_SPRING);
+    scale.value = withSpring(1.02, CARD_SPRING);
 
-    // Flip to front
-    rotateY.value = withSpring(180);
+    // Small pause before flipping
+    rotateY.value = withDelay(
+      120,
+      withSpring(180, CARD_SPRING)
+    );
 
     setShowingVerse(true);
   }
@@ -79,14 +97,26 @@ export default function DrawCard() {
       </View>
 
       <Pressable
-        style={styles.button}
         onPress={drawCard}
+        onPressIn={() => {
+          buttonScale.value = withSpring(0.96, BUTTON_SPRING);
+        }}
+        onPressOut={() => {
+          buttonScale.value = withSpring(1, BUTTON_SPRING);
+        }}
       >
-        <Text style={styles.buttonText}>
-          {showingVerse
-            ? "Return to Deck"
-            : "Draw a Card"}
-        </Text>
+        <Animated.View
+          style={[
+            styles.button,
+            buttonAnimatedStyle,
+          ]}
+        >
+          <Text style={styles.buttonText}>
+            {showingVerse
+              ? "Return to Deck"
+              : "Draw a Card"}
+          </Text>
+        </Animated.View>
       </Pressable>
     </View>
   );
@@ -106,17 +136,12 @@ const styles = StyleSheet.create({
   button: {
     width: 260,
     height: 56,
-
     backgroundColor: "#1A2747",
-
     borderRadius: 28,
-
     borderWidth: 2,
     borderColor: "#C5A24C",
-
     justifyContent: "center",
     alignItems: "center",
-
     shadowColor: "#000",
     shadowOpacity: 0.15,
     shadowRadius: 10,
@@ -124,16 +149,13 @@ const styles = StyleSheet.create({
       width: 0,
       height: 4,
     },
-
     elevation: 6,
   },
 
   buttonText: {
     color: "#FFFFFF",
-
     fontSize: 18,
     fontWeight: "600",
-
     letterSpacing: 0.5,
   },
 });
