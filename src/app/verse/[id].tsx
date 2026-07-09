@@ -19,232 +19,229 @@ import {
 } from "../../services/favorites";
 
 export default function VerseScreen() {
-    const { id } = useLocalSearchParams();
+  const { id } = useLocalSearchParams();
 
-    const verse = verses.find(
-        (v) => v.id === Number(id)
-    );
+  const verse = verses.find(
+    (v) => v.id === Number(id)
+  );
 
-    const [favorite, setFavorite] = useState(false);
+  const [favorite, setFavorite] = useState(false);
 
-    useEffect(() => {
-        async function loadFavorite() {
-            if (!verse) return;
+  useEffect(() => {
+    async function loadFavorite() {
+      if (!verse) return;
 
-            const saved = await isFavorite(verse.id);
+      const saved = await isFavorite(verse.id);
 
-            setFavorite(saved);
-        }
-
-        loadFavorite();
-    }, [verse]);
-
-    async function handleToggleFavorite() {
-        if (!verse) return;
-
-        const saved = await toggleFavorite(verse.id);
-
-        setFavorite(saved);
+      setFavorite(saved);
     }
 
-    async function handleShare() {
-        if (!verse) return;
+    loadFavorite();
+  }, [verse]);
 
-        await Share.share({
-            message:
-                `${verse.fullVerse}\n\n` +
-                `— ${verse.reference} (${verse.translation})\n\n` +
-                `Shared from Hope Cards ❤️\n\n` +
-                `https://play.google.com/store/apps/details?id=com.hopecards.app`,
-        });
-    }
+  async function handleToggleFavorite() {
+    if (!verse) return;
 
-    if (!verse) {
-        return (
-            <>
-                <Stack.Screen
-                    options={{
-                        title: "Verse",
-                    }}
-                />
+    const saved = await toggleFavorite(verse.id);
 
-                <View style={styles.container}>
-                    <Text style={styles.title}>
-                        Verse not found
-                    </Text>
-                </View>
-            </>
-        );
-    }
+    setFavorite(saved);
+  }
 
+  async function handleShare() {
+    if (!verse) return;
+
+    await Share.share({
+      message:
+        `${verse.fullVerse}\n\n` +
+        `— ${verse.reference} (${verse.translation})\n\n` +
+        `Shared from Hope Cards ❤️\n\n` +
+        `https://play.google.com/store/apps/details?id=com.hopecards.app`,
+    });
+  }
+
+  if (!verse) {
     return (
-        <>
-            <Stack.Screen
-                options={{
-                    title: "Verse",
-                }}
-            />
+      <>
+        <Stack.Screen
+          options={{
+            title: "Verse",
+          }}
+        />
 
-            <ScrollView
-                style={styles.container}
-                contentContainerStyle={styles.content}
-            >
-                <Text style={styles.category}>
-                    {verse.category.toUpperCase()}
-                </Text>
-
-                <View style={styles.divider} />
-
-                <Text style={styles.reference}>
-                    {verse.reference}
-                </Text>
-
-                <Text style={styles.verse}>
-                    {verse.fullVerse}
-                </Text>
-
-                <View style={styles.actions}>
-                    <ActionButton
-                        icon={
-                            favorite
-                                ? "heart"
-                                : "heart-outline"
-                        }
-                        label={
-                            favorite
-                                ? "Saved"
-                                : "Save"
-                        }
-                        color={
-                            favorite
-                                ? "#C0392B"
-                                : "#C5A24C"
-                        }
-                        onPress={handleToggleFavorite}
-                    />
-
-                    <ActionButton
-                        icon="share-outline"
-                        label="Share"
-                        color="#C5A24C"
-                        onPress={handleShare}
-                    />
-                </View>
-
-                <View style={styles.infoCard}>
-                    <Text style={styles.infoLabel}>
-                        Translation
-                    </Text>
-
-                    <Text style={styles.infoValue}>
-                        {verse.translation}
-                    </Text>
-                </View>
-            </ScrollView>
-        </>
+        <View style={styles.container}>
+          <Text style={styles.title}>
+            Verse not found
+          </Text>
+        </View>
+      </>
     );
+  }
+
+  return (
+    <>
+      <Stack.Screen
+        options={{
+          title: "Verse",
+        }}
+      />
+
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.content}
+      >
+        <Text style={styles.category}>
+          {verse.category.toUpperCase()}
+        </Text>
+
+        <View style={styles.divider} />
+
+        <Text style={styles.reference}>
+          {verse.reference}
+        </Text>
+
+        <Text style={styles.verse}>
+          {verse.fullVerse}
+        </Text>
+
+        <View style={styles.actions}>
+          <ActionButton
+            icon={
+              favorite
+                ? "heart"
+                : "heart-outline"
+            }
+            label={
+              favorite
+                ? "Saved"
+                : "Save"
+            }
+            color={
+              favorite
+                ? "#C0392B"
+                : "#C5A24C"
+            }
+            onPress={handleToggleFavorite}
+          />
+
+          <ActionButton
+            icon="share-outline"
+            label="Share"
+            color="#C5A24C"
+            onPress={handleShare}
+          />
+        </View>
+
+        <View style={styles.translationSection}>
+          <Text style={styles.translationLabel}>
+            Translation
+          </Text>
+
+          <Text style={styles.translationText}>
+            {verse.translation}
+          </Text>
+        </View>
+      </ScrollView>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#F8F6F2",
-    },
+  container: {
+    flex: 1,
+    backgroundColor: "#F8F6F2",
+  },
 
-    content: {
-        paddingHorizontal: 28,
-        paddingTop: 20,
-        paddingBottom: 60,
-        alignItems: "center",
-    },
+  content: {
+    paddingHorizontal: 28,
+    paddingTop: 20,
+    paddingBottom: 60,
+    alignItems: "center",
+  },
 
-    category: {
-        fontSize: 16,
-        fontWeight: "600",
-        color: "#C5A24C",
-        letterSpacing: 3,
-    },
+  category: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#C5A24C",
+    letterSpacing: 3,
+  },
 
-    divider: {
-        width: 70,
-        height: 3,
-        borderRadius: 2,
-        backgroundColor: "#D4AF37",
-        marginTop: 12,
-        marginBottom: 26,
-    },
+  divider: {
+    width: 70,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: "#D4AF37",
+    marginTop: 12,
+    marginBottom: 26,
+  },
 
-    reference: {
-        fontSize: 30,
-        fontWeight: "700",
-        color: "#1A2747",
-        textAlign: "center",
-    },
+  reference: {
+    fontSize: 30,
+    fontWeight: "700",
+    color: "#1A2747",
+    textAlign: "center",
+  },
 
-    verse: {
-        marginTop: 34,
+  verse: {
+    marginTop: 34,
 
-        fontSize: 24,
-        lineHeight: 42,
+    fontSize: 24,
+    lineHeight: 42,
 
-        color: "#273043",
+    color: "#273043",
 
-        textAlign: "center",
+    textAlign: "center",
 
-        fontFamily: "SourceSerif4_400Regular",
-    },
+    fontFamily: "SourceSerif4_400Regular",
+  },
 
-    actions: {
-        flexDirection: "row",
+  actions: {
+    flexDirection: "row",
 
-        justifyContent: "center",
+    justifyContent: "center",
 
-        alignItems: "center",
+    alignItems: "center",
 
-        gap: 12,
+    gap: 12,
 
-        marginTop: 34,
+    marginTop: 34,
 
-        marginBottom: 10,
-    },
+    marginBottom: 12,
+  },
 
-    infoCard: {
-        width: "100%",
+  translationSection: {
+    marginTop: 42,
+    alignItems: "center",
+  },
 
-        backgroundColor: "#FFFFFF",
+  translationLabel: {
+    fontSize: 13,
 
-        borderRadius: 18,
+    color: "#8A8A8A",
 
-        padding: 20,
+    letterSpacing: 1.5,
 
-        borderWidth: 1,
+    textTransform: "uppercase",
 
-        borderColor: "#E6D7A7",
-    },
+    marginBottom: 8,
+  },
 
-    infoLabel: {
-        color: "#888",
+  translationText: {
+    fontSize: 18,
 
-        fontSize: 14,
+    fontWeight: "600",
 
-        marginBottom: 6,
-    },
+    color: "#1A2747",
 
-    infoValue: {
-        color: "#1A2747",
+    textAlign: "center",
+  },
 
-        fontSize: 18,
+  title: {
+    fontSize: 28,
 
-        fontWeight: "600",
-    },
+    fontWeight: "700",
 
-    title: {
-        fontSize: 28,
+    color: "#1A2747",
 
-        fontWeight: "700",
-
-        color: "#1A2747",
-
-        textAlign: "center",
-    },
+    textAlign: "center",
+  },
 });
