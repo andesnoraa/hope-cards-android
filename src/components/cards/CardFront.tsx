@@ -8,6 +8,7 @@ type Props = {
   verse: Verse;
   favorite: boolean;
   onToggleFavorite: () => void;
+  onShare: () => void;
 };
 
 function getVerseStyle(text: string) {
@@ -44,6 +45,7 @@ export default function CardFront({
   verse,
   favorite,
   onToggleFavorite,
+  onShare,
 }: Props) {
   const verseStyle = getVerseStyle(verse.fullVerse);
 
@@ -89,7 +91,8 @@ export default function CardFront({
           <ActionButton
             icon="share-outline"
             label="Share"
-            onPress={() => { }}
+            color="#C5A24C"
+            onPress={onShare}
           />
         </View>
 

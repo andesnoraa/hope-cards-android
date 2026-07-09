@@ -17,6 +17,7 @@ type Props = {
 
   favorite: boolean;
   onToggleFavorite: () => void;
+  onShare: () => void;
 };
 
 export default function DeckStack({
@@ -25,6 +26,7 @@ export default function DeckStack({
   verse,
   favorite,
   onToggleFavorite,
+  onShare,
 }: Props) {
   const backStyle = useAnimatedStyle(() => ({
     transform: [
@@ -83,6 +85,7 @@ export default function DeckStack({
             verse={verse}
             favorite={favorite}
             onToggleFavorite={onToggleFavorite}
+            onShare={onShare}
           />
         </Animated.View>
       </Animated.View>

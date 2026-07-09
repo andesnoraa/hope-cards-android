@@ -20,6 +20,8 @@ import {
   toggleFavorite,
 } from "../../services/favorites";
 
+import { shareVerse } from "../../services/share";
+
 const CARD_SPRING = {
   damping: 28,
   stiffness: 170,
@@ -85,12 +87,10 @@ export default function DrawCard() {
 
     setCurrentVerse(nextVerse);
 
-    // Gentle lift (straight up)
     translateX.value = withSpring(0, CARD_SPRING);
     translateY.value = withSpring(-20, CARD_SPRING);
     scale.value = withSpring(1.02, CARD_SPRING);
 
-    // Small pause before flipping
     rotateY.value = withDelay(
       120,
       withSpring(180, CARD_SPRING)
@@ -104,6 +104,10 @@ export default function DrawCard() {
     setFavorite(saved);
   }
 
+  async function handleShare() {
+    await shareVerse(currentVerse);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.deckContainer}>
@@ -112,10 +116,9 @@ export default function DrawCard() {
             animatedStyle={animatedStyle}
             rotateY={rotateY}
             verse={currentVerse}
-
-            // We'll use these in the next step
             favorite={favorite}
             onToggleFavorite={handleToggleFavorite}
+            onShare={handleShare}
           />
         </Pressable>
       </View>
