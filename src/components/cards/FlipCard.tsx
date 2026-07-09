@@ -7,60 +7,60 @@ import CardBack from "./CardBack";
 import CardFront from "./CardFront";
 
 type Props = {
-  animatedStyle: any;
-  showFront: boolean;
-  verse: Verse;
+    animatedStyle: any;
+    showFront: boolean;
+    verse: Verse;
 };
 
 export default function FlipCard({
-  animatedStyle,
-  showFront,
-  verse,
+    animatedStyle,
+    showFront,
+    verse,
 }: Props) {
-  return (
-    <Animated.View style={[styles.container, animatedStyle]}>
-      <Animated.View
-        pointerEvents="none"
-        style={[
-          styles.face,
-          {
-            opacity: showFront ? 0 : 1,
-          },
-        ]}
-      >
-        <CardBack />
-      </Animated.View>
+    return (
+        <Animated.View style={[styles.container, animatedStyle]}>
+            <Animated.View
+                pointerEvents="none"
+                style={[
+                    styles.face,
+                    {
+                        opacity: showFront ? 0 : 1,
+                    },
+                ]}
+            >
+                <CardBack />
+            </Animated.View>
 
-      <Animated.View
-        pointerEvents="none"
-        style={[
-          styles.face,
-          {
-            opacity: showFront ? 1 : 0,
-          },
-        ]}
-      >
-        <CardFront verse={verse} />
-      </Animated.View>
-    </Animated.View>
-  );
+            <Animated.View
+                pointerEvents="none"
+                style={[
+                    styles.face,
+                    {
+                        opacity: showFront ? 1 : 0,
+                    },
+                ]}
+            >
+                <CardFront verse={verse} />
+            </Animated.View>
+        </Animated.View>
+    );
 }
 
 const styles = StyleSheet.create({
-container: {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: 355,
-  height: 510,
-  justifyContent: "center",
-  alignItems: "center",
-  zIndex: 10,
-},
+    container: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: 355,
+        height: 510,
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 10,
+    },
 
-face: {
-  width: 345,
-  height: 500,
-  position: "absolute",
-},
+    face: {
+        width: 345,
+        height: 500,
+        position: "absolute",
+    },
 });

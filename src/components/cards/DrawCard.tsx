@@ -3,8 +3,7 @@ import { Pressable } from "react-native";
 import {
   useAnimatedStyle,
   useSharedValue,
-  withSequence,
-  withSpring,
+  withSpring
 } from "react-native-reanimated";
 
 import { verses } from "../../data/verses";
@@ -12,6 +11,7 @@ import DeckStack from "./DeckStack";
 
 export default function DrawCard() {
   const [currentVerse, setCurrentVerse] = useState(verses[0]);
+  const [showingVerse, setShowingVerse] = useState(false);
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -23,12 +23,23 @@ export default function DrawCard() {
     transform: [
       { translateX: translateX.value },
       { translateY: translateY.value },
-      { rotateZ: `${rotateZ.value}deg` },
       { scale: scale.value },
     ],
   }));
 
   function drawCard() {
+    if (showingVerse) {
+      rotateY.value = withSpring(0);
+
+      translateX.value = withSpring(0);
+      translateY.value = withSpring(0);
+      scale.value = withSpring(1);
+
+      setShowingVerse(false);
+
+      return;
+    }
+
     let nextVerse = currentVerse;
 
     while (nextVerse.id === currentVerse.id) {
@@ -40,13 +51,12 @@ export default function DrawCard() {
 
     translateX.value = withSpring(20);
     translateY.value = withSpring(-25);
-    rotateZ.value = withSpring(8);
+    // rotateZ.value = withSpring(8);
     scale.value = withSpring(1.03);
 
-    rotateY.value = withSequence(
-      withSpring(180),
-      withSpring(0)
-    );
+    rotateY.value = withSpring(180);
+
+    setShowingVerse(true);
   }
 
   return (

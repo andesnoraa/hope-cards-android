@@ -1,8 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import type { SharedValue } from "react-native-reanimated";
 import Animated, {
-  interpolate,
-  useAnimatedStyle,
+  useAnimatedStyle
 } from "react-native-reanimated";
 
 import type { Verse } from "../../types/verse";
@@ -23,30 +22,19 @@ export default function DeckStack({
   verse,
 }: Props) {
   const backStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(
-      rotateY.value,
-      [0, 89, 90],
-      [1, 1, 0]
-    ),
+    transform: [
+      { perspective: 1200 },
+      { rotateY: `${rotateY.value}deg` },
+    ],
+    backfaceVisibility: "hidden",
   }));
 
   const frontStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(
-      rotateY.value,
-      [90, 91, 180],
-      [0, 1, 1]
-    ),
-  }));
-
-  const flipStyle = useAnimatedStyle(() => ({
     transform: [
-      {
-        perspective: 1200,
-      },
-      {
-        rotateY: `${rotateY.value}deg`,
-      },
+      { perspective: 1200 },
+      { rotateY: `${rotateY.value + 180}deg` },
     ],
+    backfaceVisibility: "hidden",
   }));
 
   return (
@@ -68,7 +56,6 @@ export default function DeckStack({
           styles.card,
           styles.card1,
           animatedStyle,
-          flipStyle,
         ]}
       >
         <Animated.View
@@ -147,11 +134,5 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
 
-  frontFace: {
-    transform: [
-      {
-        rotateY: "180deg",
-      },
-    ],
-  },
+  frontFace: {},
 });
