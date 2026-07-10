@@ -26,6 +26,12 @@ import {
   toggleFavorite,
 } from "../../services/favorites";
 
+import {
+  lightImpact,
+  selection,
+  success,
+} from "../../services/haptics";
+
 import { getSettings } from "../../services/settings";
 
 import { shareVerse } from "../../services/share";
@@ -42,9 +48,13 @@ const BUTTON_SPRING = {
 };
 
 export default function DrawCard() {
-  const [currentVerse, setCurrentVerse] = useState(verses[0]);
-  const [showingVerse, setShowingVerse] = useState(false);
-  const [favorite, setFavorite] = useState(false);
+  const [currentVerse, setCurrentVerse] = useState(
+    verses[0]
+  );
+  const [showingVerse, setShowingVerse] =
+    useState(false);
+  const [favorite, setFavorite] =
+    useState(false);
   const [showDrawButton, setShowDrawButton] =
     useState(true);
 
@@ -57,7 +67,9 @@ export default function DrawCard() {
 
   useEffect(() => {
     async function loadFavorite() {
-      const saved = await isFavorite(currentVerse.id);
+      const saved = await isFavorite(
+        currentVerse.id
+      );
       setFavorite(saved);
     }
 
@@ -67,7 +79,8 @@ export default function DrawCard() {
   useFocusEffect(
     useCallback(() => {
       async function loadSettings() {
-        const settings = await getSettings();
+        const settings =
+          await getSettings();
 
         setShowDrawButton(
           settings.showDrawButton
@@ -78,34 +91,44 @@ export default function DrawCard() {
     }, [])
   );
 
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      { translateX: translateX.value },
-      { translateY: translateY.value },
-      { scale: scale.value },
-    ],
-  }));
+  const animatedStyle =
+    useAnimatedStyle(() => ({
+      transform: [
+        { translateX: translateX.value },
+        { translateY: translateY.value },
+        { scale: scale.value },
+      ],
+    }));
 
-  const buttonAnimatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      { translateY: -16 },
-      { scale: buttonScale.value },
-    ],
-  }));
+  const buttonAnimatedStyle =
+    useAnimatedStyle(() => ({
+      transform: [
+        { translateY: -16 },
+        { scale: buttonScale.value },
+      ],
+    }));
 
-  function drawCard() {
+  async function drawCard() {
     if (showingVerse) {
-      rotateY.value = withSpring(0, CARD_SPRING);
+      rotateY.value = withSpring(
+        0,
+        CARD_SPRING
+      );
 
       translateX.value = withSpring(
         0,
         CARD_SPRING
       );
+
       translateY.value = withSpring(
         0,
         CARD_SPRING
       );
-      scale.value = withSpring(1, CARD_SPRING);
+
+      scale.value = withSpring(
+        1,
+        CARD_SPRING
+      );
 
       setShowingVerse(false);
       return;
@@ -113,11 +136,14 @@ export default function DrawCard() {
 
     let nextVerse = currentVerse;
 
-    while (nextVerse.id === currentVerse.id) {
+    while (
+      nextVerse.id === currentVerse.id
+    ) {
       nextVerse =
         verses[
         Math.floor(
-          Math.random() * verses.length
+          Math.random() *
+          verses.length
         )
         ];
     }
@@ -128,10 +154,12 @@ export default function DrawCard() {
       0,
       CARD_SPRING
     );
+
     translateY.value = withSpring(
       -20,
       CARD_SPRING
     );
+
     scale.value = withSpring(
       1.02,
       CARD_SPRING
@@ -139,18 +167,30 @@ export default function DrawCard() {
 
     rotateY.value = withDelay(
       120,
-      withSpring(180, CARD_SPRING)
+      withSpring(
+        180,
+        CARD_SPRING
+      )
     );
+
+    await lightImpact();
 
     setShowingVerse(true);
   }
 
   async function handleToggleFavorite() {
-    const saved = await toggleFavorite(
-      currentVerse.id
-    );
+    const saved =
+      await toggleFavorite(
+        currentVerse.id
+      );
 
     setFavorite(saved);
+
+    if (saved) {
+      await success();
+    } else {
+      await selection();
+    }
   }
 
   async function handleShare() {
@@ -164,6 +204,7 @@ export default function DrawCard() {
           <DeckStack
             animatedStyle={animatedStyle}
             rotateY={rotateY}
+            showingVerse={showingVerse}
             verse={currentVerse}
             favorite={favorite}
             onToggleFavorite={
@@ -178,16 +219,18 @@ export default function DrawCard() {
         <Pressable
           onPress={drawCard}
           onPressIn={() => {
-            buttonScale.value = withSpring(
-              0.96,
-              BUTTON_SPRING
-            );
+            buttonScale.value =
+              withSpring(
+                0.96,
+                BUTTON_SPRING
+              );
           }}
           onPressOut={() => {
-            buttonScale.value = withSpring(
-              1,
-              BUTTON_SPRING
-            );
+            buttonScale.value =
+              withSpring(
+                1,
+                BUTTON_SPRING
+              );
           }}
         >
           <Animated.View
@@ -196,7 +239,9 @@ export default function DrawCard() {
               buttonAnimatedStyle,
             ]}
           >
-            <Text style={styles.buttonText}>
+            <Text
+              style={styles.buttonText}
+            >
               {showingVerse
                 ? "Return to Deck"
                 : "Draw a Card"}

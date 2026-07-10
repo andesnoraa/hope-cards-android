@@ -8,30 +8,50 @@ import {
 
 import {
   getSettings,
-  setShowDrawButton,
+  updateSettings,
 } from "../../services/settings";
 
 export default function SettingsScreen() {
-  const [showDrawButton, setShowButton] =
+  const [showDrawButton, setShowDrawButton] =
+    useState(true);
+
+  const [enableHaptics, setEnableHaptics] =
     useState(true);
 
   useEffect(() => {
     async function loadSettings() {
       const settings = await getSettings();
-      setShowButton(
+
+      setShowDrawButton(
         settings.showDrawButton
+      );
+
+      setEnableHaptics(
+        settings.enableHaptics
       );
     }
 
     loadSettings();
   }, []);
 
-  async function handleToggle(
+  async function toggleDrawButton(
     value: boolean
   ) {
-    setShowButton(value);
+    setShowDrawButton(value);
 
-    await setShowDrawButton(value);
+    await updateSettings({
+      showDrawButton: value,
+    });
+  }
+
+  async function toggleHaptics(
+    value: boolean
+  ) {
+    setEnableHaptics(value);
+
+    await updateSettings({
+      enableHaptics: value,
+    });
   }
 
   return (
@@ -54,7 +74,39 @@ export default function SettingsScreen() {
 
         <Switch
           value={showDrawButton}
-          onValueChange={handleToggle}
+          onValueChange={toggleDrawButton}
+          trackColor={{
+            false: "#D9D9D9",
+            true: "#D4AF37",
+          }}
+          thumbColor="#FFFFFF"
+        />
+      </View>
+
+      <Text
+        style={[
+          styles.section,
+          { marginTop: 32 },
+        ]}
+      >
+        Interaction
+      </Text>
+
+      <View style={styles.settingCard}>
+        <View style={styles.textContainer}>
+          <Text style={styles.settingTitle}>
+            Haptic Feedback
+          </Text>
+
+          <Text style={styles.settingSubtitle}>
+            Vibrate slightly when drawing
+            cards and saving favorites.
+          </Text>
+        </View>
+
+        <Switch
+          value={enableHaptics}
+          onValueChange={toggleHaptics}
           trackColor={{
             false: "#D9D9D9",
             true: "#D4AF37",

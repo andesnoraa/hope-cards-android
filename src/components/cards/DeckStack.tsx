@@ -13,6 +13,7 @@ import StackCard from "./StackCard";
 type Props = {
   animatedStyle: any;
   rotateY: SharedValue<number>;
+  showingVerse: boolean;
   verse: Verse;
 
   favorite: boolean;
@@ -23,6 +24,7 @@ type Props = {
 export default function DeckStack({
   animatedStyle,
   rotateY,
+  showingVerse,
   verse,
   favorite,
   onToggleFavorite,
@@ -66,6 +68,9 @@ export default function DeckStack({
         ]}
       >
         <Animated.View
+          pointerEvents={
+            showingVerse ? "none" : "auto"
+          }
           style={[
             styles.face,
             backStyle,
@@ -75,6 +80,9 @@ export default function DeckStack({
         </Animated.View>
 
         <Animated.View
+          pointerEvents={
+            showingVerse ? "auto" : "none"
+          }
           style={[
             styles.face,
             styles.frontFace,
@@ -141,6 +149,7 @@ const styles = StyleSheet.create({
     ],
     zIndex: 1,
   },
+
   face: {
     width: 345,
     height: 500,

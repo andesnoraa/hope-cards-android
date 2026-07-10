@@ -4,10 +4,12 @@ const SETTINGS_KEY = "hope_cards_settings";
 
 export type AppSettings = {
     showDrawButton: boolean;
+    enableHaptics: boolean;
 };
 
 const DEFAULT_SETTINGS: AppSettings = {
     showDrawButton: true,
+    enableHaptics: true,
 };
 
 export async function getSettings(): Promise<AppSettings> {
@@ -36,12 +38,17 @@ export async function saveSettings(
     );
 }
 
-export async function setShowDrawButton(
-    value: boolean
+export async function updateSettings(
+    updates: Partial<AppSettings>
 ) {
     const settings = await getSettings();
 
-    settings.showDrawButton = value;
+    const newSettings = {
+        ...settings,
+        ...updates,
+    };
 
-    await saveSettings(settings);
+    await saveSettings(newSettings);
+
+    return newSettings;
 }
