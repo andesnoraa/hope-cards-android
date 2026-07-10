@@ -2,27 +2,28 @@ import { Stack, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 
 import {
-    ScrollView,
-    Share,
-    StyleSheet,
-    Text,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 import Animated, {
-    FadeIn,
+  FadeIn,
 } from "react-native-reanimated";
-
-import {
-    getVerseById,
-} from "../../services/verseService";
 
 import ActionButton from "../../components/common/ActionButton";
 
 import {
-    isFavorite,
-    toggleFavorite,
+  isFavorite,
+  toggleFavorite,
 } from "../../services/favorites";
+
+import { shareVerse } from "../../services/share";
+
+import {
+  getVerseById,
+} from "../../services/verseService";
 
 export default function VerseScreen() {
   const { id } = useLocalSearchParams();
@@ -59,13 +60,7 @@ export default function VerseScreen() {
   async function handleShare() {
     if (!verse) return;
 
-    await Share.share({
-      message:
-        `${verse.verse}\n\n` +
-        `— ${verse.reference} (${verse.translation})\n\n` +
-        `Shared from Hope Cards ❤️\n\n` +
-        `https://play.google.com/store/apps/details?id=com.hopecards.app`,
-    });
+    await shareVerse(verse);
   }
 
   if (!verse) {
@@ -189,102 +184,70 @@ const styles = StyleSheet.create({
 
   category: {
     fontSize: 16,
-
     fontWeight: "600",
-
     color: "#C5A24C",
-
     letterSpacing: 3,
-
     marginBottom: 10,
   },
 
   divider: {
     width: 80,
-
     height: 3,
-
     borderRadius: 2,
-
     backgroundColor: "#D4AF37",
-
     marginBottom: 26,
   },
 
   reference: {
     fontSize: 30,
-
     fontWeight: "700",
-
     color: "#1A2747",
-
     textAlign: "center",
   },
 
   verse: {
     marginTop: 34,
-
     fontSize: 23,
-
     lineHeight: 44,
-
     color: "#273043",
-
     textAlign: "center",
-
     fontFamily:
       "SourceSerif4_400Regular",
   },
 
   actions: {
     flexDirection: "row",
-
     justifyContent: "center",
-
     alignItems: "center",
-
     gap: 12,
-
     marginTop: 28,
-
     marginBottom: 18,
   },
 
   translationSection: {
     marginTop: 34,
-
     alignItems: "center",
   },
 
   translationLabel: {
     fontSize: 13,
-
     color: "#8A8A8A",
-
     letterSpacing: 1.5,
-
     textTransform: "uppercase",
-
     marginBottom: 8,
   },
 
   translationText: {
     fontSize: 18,
-
     fontWeight: "600",
-
     color: "#1A2747",
-
     textAlign: "center",
   },
 
   title: {
     fontSize: 28,
-
     fontWeight: "700",
-
     color: "#1A2747",
-
     textAlign: "center",
   },
 });

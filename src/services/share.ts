@@ -11,7 +11,7 @@ export async function shareVerse(
 
       message: `${verse.verse}
 
-— ${verse.reference} (${verse.translation})
+— ${verse.reference} • ${verse.translation}
 
 Shared from Hope Cards ❤️
 
