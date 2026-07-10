@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
     borderColor: "#C5A24C",
 
     shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 24,
+    shadowOpacity: 0.06,
+    shadowRadius: 16,
     shadowOffset: {
       width: 0,
-      height: 12,
+      height: 8,
     },
 
-    elevation: 10,
+    elevation: 7,
   },
 });

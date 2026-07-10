@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
     borderColor: "#C5A24C",
 
     shadowColor: "#000",
-    shadowOpacity: 0.12,
-    shadowRadius: 42,
+    shadowOpacity: 0.08,
+    shadowRadius: 20,
     shadowOffset: {
       width: 0,
-      height: 24,
+      height: 10,
     },
 
-    elevation: 18,
+    elevation: 8,
   },
 
   innerBorder: {
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
   },
 
   cross: {
-    fontSize: 56,
+    fontSize: 62,
 
     color: "#D4AF37",
 
-    marginBottom: 26,
+    marginBottom: 16,
 
     fontFamily: "CormorantGaramond-Bold",
   },
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
 
     fontFamily: "CormorantGaramond-Bold",
 
-    fontSize: 60,
+    fontSize: 68,
 
     letterSpacing: 2,
 
@@ -78,11 +78,11 @@ const styles = StyleSheet.create({
   },
 
   subtitle: {
-    marginTop: 10,
+    marginTop: 4,
 
     color: "#C5A24C",
 
-    fontSize: 18,
+    fontSize: 20,
 
     letterSpacing: 14,
 

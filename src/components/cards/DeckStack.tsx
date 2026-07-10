@@ -99,6 +99,8 @@ const styles = StyleSheet.create({
     height: 510,
     justifyContent: "center",
     alignItems: "center",
+
+    transform: [{ translateX: 4 }],
   },
 
   card: {
@@ -115,31 +117,30 @@ const styles = StyleSheet.create({
 
   card2: {
     transform: [
-      { translateX: -3 },
-      { translateY: -3 },
-      { rotate: "-1deg" },
+      { translateX: -2 },
+      { translateY: -2 },
+      { rotate: "-0.6deg" },
     ],
     zIndex: 3,
   },
 
   card3: {
     transform: [
-      { translateX: -6 },
-      { translateY: -6 },
-      { rotate: "-2deg" },
+      { translateX: -4 },
+      { translateY: -5 },
+      { rotate: "-1.2deg" },
     ],
     zIndex: 2,
   },
 
   card4: {
     transform: [
-      { translateX: -9 },
-      { translateY: -10 },
-      { rotate: "-3deg" },
+      { translateX: -5 },
+      { translateY: -8 },
+      { rotate: "-1.8deg" },
     ],
     zIndex: 1,
   },
-
   face: {
     width: 345,
     height: 500,

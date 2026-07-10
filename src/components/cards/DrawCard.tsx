@@ -63,7 +63,10 @@ export default function DrawCard() {
   }));
 
   const buttonAnimatedStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: buttonScale.value }],
+    transform: [
+      { translateY: -16 }, // <-- Moves ONLY the button up
+      { scale: buttonScale.value },
+    ],
   }));
 
   function drawCard() {
@@ -163,11 +166,11 @@ const styles = StyleSheet.create({
   },
 
   deckContainer: {
-    marginBottom: 80,
+    marginBottom: 64,
   },
 
   button: {
-    width: 260,
+    width: 270,
     height: 56,
 
     backgroundColor: "#1A2747",
@@ -181,14 +184,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
 
     shadowColor: "#000",
-    shadowOpacity: 0.15,
-    shadowRadius: 10,
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 3,
     },
 
-    elevation: 6,
+    elevation: 5,
   },
 
   buttonText: {
