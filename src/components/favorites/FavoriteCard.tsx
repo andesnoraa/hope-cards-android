@@ -1,8 +1,8 @@
 import {
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -31,7 +31,7 @@ export default function FavoriteCard({
         style={styles.verse}
         numberOfLines={2}
       >
-        {verse.fullVerse}
+        {verse.verse}
       </Text>
 
       <View style={styles.footer}>
@@ -58,47 +58,34 @@ const styles = StyleSheet.create({
 
   category: {
     color: "#C5A24C",
-
     fontSize: 13,
-
     fontWeight: "700",
-
     letterSpacing: 2.5,
-
     marginBottom: 10,
   },
 
   verse: {
     color: "#273043",
-
     fontSize: 19,
-
     lineHeight: 30,
-
     marginBottom: 18,
   },
 
   footer: {
     flexDirection: "row",
-
     justifyContent: "space-between",
-
     alignItems: "center",
-
     marginBottom: 18,
   },
 
   reference: {
     color: "#1A2747",
-
     fontSize: 18,
-
     fontWeight: "700",
   },
 
   divider: {
     height: StyleSheet.hairlineWidth,
-
     backgroundColor: "#DDD8CC",
   },
 });

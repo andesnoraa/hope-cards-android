@@ -9,7 +9,7 @@ export async function shareVerse(
     await Share.share({
       title: verse.reference,
 
-      message: `${verse.fullVerse}
+      message: `${verse.verse}
 
 — ${verse.reference} (${verse.translation})
 

@@ -47,7 +47,7 @@ export default function CardFront({
   onToggleFavorite,
   onShare,
 }: Props) {
-  const verseStyle = getVerseStyle(verse.fullVerse);
+  const verseStyle = getVerseStyle(verse.verse);
 
   return (
     <View style={styles.card}>
@@ -64,7 +64,7 @@ export default function CardFront({
 
         <View style={styles.verseContainer}>
           <Text style={[styles.verse, verseStyle]}>
-            {verse.fullVerse}
+            {verse.verse}
           </Text>
         </View>
 

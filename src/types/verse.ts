@@ -1,7 +1,7 @@
 export interface Verse {
-  id: number;
+  id: string;
   category: string;
-  fullVerse: string;
+  verse: string;
   reference: string;
   translation: string;
   tags: string[];

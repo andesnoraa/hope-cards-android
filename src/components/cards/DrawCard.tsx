@@ -18,8 +18,11 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 
-import { verses } from "../../data/verses";
 import DeckStack from "./DeckStack";
+
+import {
+  getRandomVerse,
+} from "../../services/verseService";
 
 import {
   isFavorite,
@@ -48,13 +51,15 @@ const BUTTON_SPRING = {
 };
 
 export default function DrawCard() {
-  const [currentVerse, setCurrentVerse] = useState(
-    verses[0]
-  );
+  const [currentVerse, setCurrentVerse] =
+    useState(() => getRandomVerse());
+
   const [showingVerse, setShowingVerse] =
     useState(false);
+
   const [favorite, setFavorite] =
     useState(false);
+
   const [showDrawButton, setShowDrawButton] =
     useState(true);
 
@@ -70,6 +75,7 @@ export default function DrawCard() {
       const saved = await isFavorite(
         currentVerse.id
       );
+
       setFavorite(saved);
     }
 
@@ -134,19 +140,9 @@ export default function DrawCard() {
       return;
     }
 
-    let nextVerse = currentVerse;
-
-    while (
-      nextVerse.id === currentVerse.id
-    ) {
-      nextVerse =
-        verses[
-        Math.floor(
-          Math.random() *
-          verses.length
-        )
-        ];
-    }
+    const nextVerse = getRandomVerse(
+      currentVerse.id
+    );
 
     setCurrentVerse(nextVerse);
 

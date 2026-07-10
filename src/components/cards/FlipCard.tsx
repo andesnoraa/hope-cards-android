@@ -10,15 +10,23 @@ type Props = {
     animatedStyle: any;
     showFront: boolean;
     verse: Verse;
+    favorite: boolean;
+    onToggleFavorite: () => void;
+    onShare: () => void;
 };
 
 export default function FlipCard({
     animatedStyle,
     showFront,
     verse,
+    favorite,
+    onToggleFavorite,
+    onShare,
 }: Props) {
     return (
-        <Animated.View style={[styles.container, animatedStyle]}>
+        <Animated.View
+            style={[styles.container, animatedStyle]}
+        >
             <Animated.View
                 pointerEvents="none"
                 style={[
@@ -40,7 +48,12 @@ export default function FlipCard({
                     },
                 ]}
             >
-                <CardFront verse={verse} />
+                <CardFront
+                    verse={verse}
+                    favorite={favorite}
+                    onToggleFavorite={onToggleFavorite}
+                    onShare={onShare}
+                />
             </Animated.View>
         </Animated.View>
     );
