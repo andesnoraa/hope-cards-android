@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
+import { useFocusEffect } from "expo-router";
+import {
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import {
   Pressable,
   StyleSheet,
   Text,
   View,
 } from "react-native";
+
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -19,6 +25,8 @@ import {
   isFavorite,
   toggleFavorite,
 } from "../../services/favorites";
+
+import { getSettings } from "../../services/settings";
 
 import { shareVerse } from "../../services/share";
 
@@ -37,6 +45,8 @@ export default function DrawCard() {
   const [currentVerse, setCurrentVerse] = useState(verses[0]);
   const [showingVerse, setShowingVerse] = useState(false);
   const [favorite, setFavorite] = useState(false);
+  const [showDrawButton, setShowDrawButton] =
+    useState(true);
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -54,6 +64,20 @@ export default function DrawCard() {
     loadFavorite();
   }, [currentVerse]);
 
+  useFocusEffect(
+    useCallback(() => {
+      async function loadSettings() {
+        const settings = await getSettings();
+
+        setShowDrawButton(
+          settings.showDrawButton
+        );
+      }
+
+      loadSettings();
+    }, [])
+  );
+
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
       { translateX: translateX.value },
@@ -64,7 +88,7 @@ export default function DrawCard() {
 
   const buttonAnimatedStyle = useAnimatedStyle(() => ({
     transform: [
-      { translateY: -16 }, // <-- Moves ONLY the button up
+      { translateY: -16 },
       { scale: buttonScale.value },
     ],
   }));
@@ -73,8 +97,14 @@ export default function DrawCard() {
     if (showingVerse) {
       rotateY.value = withSpring(0, CARD_SPRING);
 
-      translateX.value = withSpring(0, CARD_SPRING);
-      translateY.value = withSpring(0, CARD_SPRING);
+      translateX.value = withSpring(
+        0,
+        CARD_SPRING
+      );
+      translateY.value = withSpring(
+        0,
+        CARD_SPRING
+      );
       scale.value = withSpring(1, CARD_SPRING);
 
       setShowingVerse(false);
@@ -85,14 +115,27 @@ export default function DrawCard() {
 
     while (nextVerse.id === currentVerse.id) {
       nextVerse =
-        verses[Math.floor(Math.random() * verses.length)];
+        verses[
+        Math.floor(
+          Math.random() * verses.length
+        )
+        ];
     }
 
     setCurrentVerse(nextVerse);
 
-    translateX.value = withSpring(0, CARD_SPRING);
-    translateY.value = withSpring(-20, CARD_SPRING);
-    scale.value = withSpring(1.02, CARD_SPRING);
+    translateX.value = withSpring(
+      0,
+      CARD_SPRING
+    );
+    translateY.value = withSpring(
+      -20,
+      CARD_SPRING
+    );
+    scale.value = withSpring(
+      1.02,
+      CARD_SPRING
+    );
 
     rotateY.value = withDelay(
       120,
@@ -103,7 +146,10 @@ export default function DrawCard() {
   }
 
   async function handleToggleFavorite() {
-    const saved = await toggleFavorite(currentVerse.id);
+    const saved = await toggleFavorite(
+      currentVerse.id
+    );
+
     setFavorite(saved);
   }
 
@@ -120,40 +166,44 @@ export default function DrawCard() {
             rotateY={rotateY}
             verse={currentVerse}
             favorite={favorite}
-            onToggleFavorite={handleToggleFavorite}
+            onToggleFavorite={
+              handleToggleFavorite
+            }
             onShare={handleShare}
           />
         </Pressable>
       </View>
 
-      <Pressable
-        onPress={drawCard}
-        onPressIn={() => {
-          buttonScale.value = withSpring(
-            0.96,
-            BUTTON_SPRING
-          );
-        }}
-        onPressOut={() => {
-          buttonScale.value = withSpring(
-            1,
-            BUTTON_SPRING
-          );
-        }}
-      >
-        <Animated.View
-          style={[
-            styles.button,
-            buttonAnimatedStyle,
-          ]}
+      {showDrawButton && (
+        <Pressable
+          onPress={drawCard}
+          onPressIn={() => {
+            buttonScale.value = withSpring(
+              0.96,
+              BUTTON_SPRING
+            );
+          }}
+          onPressOut={() => {
+            buttonScale.value = withSpring(
+              1,
+              BUTTON_SPRING
+            );
+          }}
         >
-          <Text style={styles.buttonText}>
-            {showingVerse
-              ? "Return to Deck"
-              : "Draw a Card"}
-          </Text>
-        </Animated.View>
-      </Pressable>
+          <Animated.View
+            style={[
+              styles.button,
+              buttonAnimatedStyle,
+            ]}
+          >
+            <Text style={styles.buttonText}>
+              {showingVerse
+                ? "Return to Deck"
+                : "Draw a Card"}
+            </Text>
+          </Animated.View>
+        </Pressable>
+      )}
     </View>
   );
 }
