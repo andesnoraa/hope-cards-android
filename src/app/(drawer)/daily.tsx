@@ -24,6 +24,7 @@ import {
 
 import {
   isFavorite,
+  subscribeToFavorites,
   toggleFavorite,
 } from "../../services/favorites";
 
@@ -87,6 +88,24 @@ export default function DailyHopeScreen() {
 
     load();
   }, []);
+
+  useEffect(() => {
+    if (!verse) {
+      return;
+    }
+
+    const unsubscribe =
+      subscribeToFavorites(async () => {
+        const saved =
+          await isFavorite(
+            verse.id
+          );
+
+        setFavorite(saved);
+      });
+
+    return unsubscribe;
+  }, [verse]);
 
   async function handleFavorite() {
     if (!verse) return;

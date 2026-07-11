@@ -26,6 +26,7 @@ import {
 
 import {
   isFavorite,
+  subscribeToFavorites,
   toggleFavorite,
 } from "../../services/favorites";
 
@@ -80,6 +81,20 @@ export default function DrawCard() {
     }
 
     loadFavorite();
+  }, [currentVerse]);
+
+  useEffect(() => {
+    const unsubscribe =
+      subscribeToFavorites(async () => {
+        const saved =
+          await isFavorite(
+            currentVerse.id
+          );
+
+        setFavorite(saved);
+      });
+
+    return unsubscribe;
   }, [currentVerse]);
 
   useFocusEffect(

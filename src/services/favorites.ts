@@ -8,6 +8,24 @@ import type { Verse } from "../types/verse";
 
 const FAVORITES_KEY = "hope_cards_favorites";
 
+type FavoritesListener = () => void;
+
+const listeners = new Set<FavoritesListener>();
+
+function notifyFavoritesChanged() {
+  listeners.forEach((listener) => listener());
+}
+
+export function subscribeToFavorites(
+  listener: FavoritesListener
+) {
+  listeners.add(listener);
+
+  return () => {
+    listeners.delete(listener);
+  };
+}
+
 /**
  * Returns all favorite verse IDs.
  */
@@ -44,6 +62,8 @@ export async function saveFavorite(
         FAVORITES_KEY,
         JSON.stringify(favorites)
       );
+
+      notifyFavoritesChanged();
     }
   } catch (error) {
     console.error(
@@ -70,6 +90,8 @@ export async function removeFavorite(
       FAVORITES_KEY,
       JSON.stringify(updated)
     );
+
+    notifyFavoritesChanged();
   } catch (error) {
     console.error(
       "Failed to remove favorite:",
