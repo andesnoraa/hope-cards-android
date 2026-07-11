@@ -28,6 +28,7 @@ export function formatRelativeDate(
         {
             hour: "numeric",
             minute: "2-digit",
+            hour12: true,
         }
     ).format(date);
 
@@ -46,11 +47,14 @@ export function formatRelativeDate(
     }
 
     const formattedDate =
-        new Intl.DateTimeFormat("en-GB", {
-            day: "numeric",
-            month: "short",
-            year: "numeric",
-        }).format(date);
+        new Intl.DateTimeFormat(
+            "en-GB",
+            {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+            }
+        ).format(date);
 
     return `${formattedDate} • ${time}`;
 }
