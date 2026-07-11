@@ -32,6 +32,8 @@ import { shareVerse } from "../../services/share";
 
 import {
   lightImpact,
+  selection,
+  success,
 } from "../../services/haptics";
 
 import type { Verse } from "../../types/verse";
@@ -116,6 +118,12 @@ export default function DailyHopeScreen() {
       );
 
     setFavorite(saved);
+
+    if (saved) {
+      await success();
+    } else {
+      await selection();
+    }
   }
 
   async function handleShare() {

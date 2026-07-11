@@ -25,6 +25,11 @@ import {
   getVerseById,
 } from "../../services/verseService";
 
+import {
+  selection,
+  success,
+} from "../../services/haptics";
+
 export default function VerseScreen() {
   const { id } = useLocalSearchParams();
 
@@ -55,6 +60,12 @@ export default function VerseScreen() {
     );
 
     setFavorite(saved);
+
+    if (saved) {
+      await success();
+    } else {
+      await selection();
+    }
   }
 
   async function handleShare() {
