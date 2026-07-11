@@ -6,9 +6,14 @@ import ActionButton from "../common/ActionButton";
 
 type Props = {
   verse: Verse;
-  favorite: boolean;
-  onToggleFavorite: () => void;
-  onShare: () => void;
+
+  favorite?: boolean;
+
+  onToggleFavorite?: () => void;
+
+  onShare?: () => void;
+
+  showActions?: boolean;
 };
 
 function getVerseStyle(text: string) {
@@ -43,9 +48,10 @@ function getVerseStyle(text: string) {
 
 export default function CardFront({
   verse,
-  favorite,
+  favorite = false,
   onToggleFavorite,
   onShare,
+  showActions = true,
 }: Props) {
   const verseStyle = getVerseStyle(verse.verse);
 
@@ -63,38 +69,45 @@ export default function CardFront({
         </View>
 
         <View style={styles.verseContainer}>
-          <Text style={[styles.verse, verseStyle]}>
+          <Text
+            style={[
+              styles.verse,
+              verseStyle,
+            ]}
+          >
             {verse.verse}
           </Text>
         </View>
 
-        <View style={styles.actions}>
-          <ActionButton
-            icon={
-              favorite
-                ? "heart"
-                : "heart-outline"
-            }
-            label={
-              favorite
-                ? "Saved"
-                : "Save"
-            }
-            color={
-              favorite
-                ? "#C0392B"
-                : "#C5A24C"
-            }
-            onPress={onToggleFavorite}
-          />
+        {showActions && (
+          <View style={styles.actions}>
+            <ActionButton
+              icon={
+                favorite
+                  ? "heart"
+                  : "heart-outline"
+              }
+              label={
+                favorite
+                  ? "Saved"
+                  : "Save"
+              }
+              color={
+                favorite
+                  ? "#C0392B"
+                  : "#C5A24C"
+              }
+              onPress={onToggleFavorite!}
+            />
 
-          <ActionButton
-            icon="share-outline"
-            label="Share"
-            color="#C5A24C"
-            onPress={onShare}
-          />
-        </View>
+            <ActionButton
+              icon="share-outline"
+              label="Share"
+              color="#C5A24C"
+              onPress={onShare!}
+            />
+          </View>
+        )}
 
         <View style={styles.footer}>
           <Text style={styles.reference}>
@@ -145,7 +158,8 @@ const styles = StyleSheet.create({
 
     borderWidth: 1,
 
-    borderColor: "rgba(197,162,76,0.45)",
+    borderColor:
+      "rgba(197,162,76,0.45)",
   },
 
   content: {
@@ -199,7 +213,8 @@ const styles = StyleSheet.create({
 
     textAlign: "center",
 
-    fontFamily: "CormorantGaramond-Regular",
+    fontFamily:
+      "CormorantGaramond-Regular",
 
     fontWeight: "400",
 

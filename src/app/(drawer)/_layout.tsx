@@ -42,25 +42,10 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="favorites"
-        options={{
-          title: "Favorites",
-          drawerLabel: "Favorites",
-          drawerIcon: ({ color, size }) => (
-            <Ionicons
-              name="heart-outline"
-              color={color}
-              size={size}
-            />
-          ),
-        }}
-      />
-
-      <Drawer.Screen
         name="daily"
         options={{
-          title: "Daily Verse",
-          drawerLabel: "Daily Verse",
+          title: "Daily Hope",
+          drawerLabel: "Daily Hope",
           drawerIcon: ({ color, size }) => (
             <Ionicons
               name="sunny-outline"
@@ -72,13 +57,13 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="premium"
+        name="favorites"
         options={{
-          title: "Premium",
-          drawerLabel: "Premium",
+          title: "Favorites",
+          drawerLabel: "Favorites",
           drawerIcon: ({ color, size }) => (
             <Ionicons
-              name="diamond-outline"
+              name="heart-outline"
               color={color}
               size={size}
             />
