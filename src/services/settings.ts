@@ -14,7 +14,9 @@ const DEFAULT_SETTINGS: AppSettings = {
 
 export async function getSettings(): Promise<AppSettings> {
     try {
-        const json = await AsyncStorage.getItem(SETTINGS_KEY);
+        const json = await AsyncStorage.getItem(
+            SETTINGS_KEY
+        );
 
         if (!json) {
             return DEFAULT_SETTINGS;
@@ -36,6 +38,16 @@ export async function saveSettings(
         SETTINGS_KEY,
         JSON.stringify(settings)
     );
+}
+
+/**
+ * Replaces all settings.
+ * Used when restoring a backup.
+ */
+export async function replaceSettings(
+    settings: AppSettings
+): Promise<void> {
+    await saveSettings(settings);
 }
 
 export async function updateSettings(

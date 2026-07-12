@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import {
+  loadBackup,
   shareBackup,
 } from "../../services/backup";
 
@@ -18,6 +19,10 @@ import {
   BackupInfo,
   getBackupInfo,
 } from "../../services/backupInfo";
+
+import {
+  restoreBackup,
+} from "../../services/restore";
 
 import {
   getSettings,
@@ -94,6 +99,82 @@ export default function SettingsScreen() {
       Alert.alert(
         "Backup Failed",
         "Unable to create the backup."
+      );
+    }
+  }
+  async function handleRestore() {
+    try {
+      const backup =
+        await loadBackup();
+
+      if (!backup) {
+        return;
+      }
+
+      Alert.alert(
+        "Restore Backup",
+        `Restore this backup?
+
+Created:
+${formatRelativeDate(
+          backup.createdAt
+        )}
+
+Favorites:
+${backup.favorites.length}
+
+Your current favorites and settings will be replaced.`,
+        [
+          {
+            text: "Cancel",
+            style: "cancel",
+          },
+          {
+            text: "Restore",
+            style: "destructive",
+            onPress: async () => {
+              try {
+                await restoreBackup(
+                  backup
+                );
+
+                const settings =
+                  await getSettings();
+
+                setShowDrawButton(
+                  settings.showDrawButton
+                );
+
+                setEnableHaptics(
+                  settings.enableHaptics
+                );
+
+                Alert.alert(
+                  "Restore Complete",
+                  "Your backup has been restored successfully."
+                );
+              } catch (error) {
+                console.error(
+                  error
+                );
+
+                Alert.alert(
+                  "Restore Failed",
+                  "Unable to restore the backup."
+                );
+              }
+            },
+          },
+        ]
+      );
+    } catch (error) {
+      console.error(error);
+
+      Alert.alert(
+        "Restore Failed",
+        error instanceof Error
+          ? error.message
+          : "Unable to restore the selected backup."
       );
     }
   }
@@ -178,7 +259,7 @@ export default function SettingsScreen() {
                   }{" "}
                   favorite
                   {backupInfo.favoriteCount ===
-                  1
+                    1
                     ? ""
                     : "s"}{" "}
                   backed up
@@ -203,12 +284,7 @@ export default function SettingsScreen() {
 
       <Pressable
         style={styles.settingCard}
-        onPress={() =>
-          Alert.alert(
-            "Coming Soon",
-            "Restore will be available soon."
-          )
-        }
+        onPress={handleRestore}
         android_ripple={{
           color: "#F3E8C5",
         }}

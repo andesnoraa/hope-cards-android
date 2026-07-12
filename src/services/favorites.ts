@@ -47,6 +47,28 @@ export async function getFavorites(): Promise<string[]> {
 }
 
 /**
+ * Replaces all favorites.
+ * Used when restoring a backup.
+ */
+export async function replaceFavorites(
+  favorites: string[]
+): Promise<void> {
+  try {
+    await AsyncStorage.setItem(
+      FAVORITES_KEY,
+      JSON.stringify(favorites)
+    );
+
+    notifyFavoritesChanged();
+  } catch (error) {
+    console.error(
+      "Failed to restore favorites:",
+      error
+    );
+  }
+}
+
+/**
  * Saves a favorite verse.
  */
 export async function saveFavorite(

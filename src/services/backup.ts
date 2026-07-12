@@ -1,3 +1,4 @@
+import * as DocumentPicker from "expo-document-picker";
 import * as Sharing from "expo-sharing";
 
 import {
@@ -143,4 +144,158 @@ export async function shareBackup(): Promise<void> {
                 "public.json",
         }
     );
+}
+
+/**
+ * Opens the native file picker and
+ * returns the selected backup file.
+ */
+export async function pickBackupFile():
+    Promise<DocumentPicker.DocumentPickerAsset | null> {
+    const result =
+        await DocumentPicker.getDocumentAsync({
+            type: "*/*",
+            copyToCacheDirectory: true,
+            multiple: false,
+        });
+
+    if (result.canceled) {
+        return null;
+    }
+
+    return result.assets[0];
+}
+/**
+ * Reads and parses a selected
+ * backup file.
+ */
+export async function readBackupFile(
+    asset: DocumentPicker.DocumentPickerAsset
+): Promise<BackupData> {
+
+    const file = new File(asset.uri);
+
+    const json =
+        await file.text();
+
+    return JSON.parse(
+        json
+    ) as BackupData;
+}
+
+/**
+ * Validates the structure of a
+ * Hope Cards backup.
+ */
+export function validateBackup(
+    backup: unknown
+): backup is BackupData {
+    if (
+        typeof backup !== "object" ||
+        backup === null
+    ) {
+        return false;
+    }
+
+    const data =
+        backup as Partial<BackupData>;
+
+    if (data.version !== 1) {
+        return false;
+    }
+
+    if (
+        typeof data.createdAt !==
+        "string"
+    ) {
+        return false;
+    }
+
+    if (
+        !Array.isArray(
+            data.favorites
+        )
+    ) {
+        return false;
+    }
+
+    if (
+        typeof data.settings !==
+        "object" ||
+        data.settings === null
+    ) {
+        return false;
+    }
+
+    if (
+        typeof data.settings
+            .showDrawButton !==
+        "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        typeof data.settings
+            .enableHaptics !==
+        "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        typeof data.settings
+            .preferredTranslation !==
+        "string"
+    ) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Opens a backup file, reads it and
+ * validates its contents.
+ *
+ * Returns:
+ * - BackupData when successful
+ * - null if the user cancelled
+ *
+ * Throws:
+ * - Error if the selected file is invalid
+ */
+export async function loadBackup():
+    Promise<BackupData | null> {
+    const asset =
+        await pickBackupFile();
+
+    if (!asset) {
+        return null;
+    }
+
+    try {
+        const backup =
+            await readBackupFile(asset);
+
+        if (
+            !validateBackup(backup)
+        ) {
+            throw new Error(
+                "Invalid backup file."
+            );
+        }
+
+        return backup;
+    } catch (error) {
+        console.error(error);
+
+        if (error instanceof Error) {
+            throw error;
+        }
+
+        throw new Error(
+            "Unable to read the backup file."
+        );
+    }
 }
