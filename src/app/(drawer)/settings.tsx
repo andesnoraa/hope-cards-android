@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   Alert,
   Pressable,
+  ScrollView,
   StyleSheet,
   Switch,
   Text,
@@ -180,12 +181,51 @@ Your current favorites and settings will be replaced.`,
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.section}>
-        Appearance
-      </Text>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={
+        styles.contentContainer
+      }
+      showsVerticalScrollIndicator={
+        false
+      }
+    >
+      <View style={styles.header}>
+        <Text style={styles.title}>
+          Settings
+        </Text>
 
-      <View style={styles.settingCard}>
+        <Text style={styles.subtitle}>
+          Customize your Hope Cards
+          experience.
+        </Text>
+      </View>
+
+      <View style={styles.sectionHeader}>
+        <View style={styles.sectionIcon}>
+          <Ionicons
+            name="color-palette-outline"
+            size={18}
+            color="#FFFFFF"
+          />
+        </View>
+
+        <Text style={styles.sectionLabel}>
+          Appearance
+        </Text>
+
+        <View style={styles.sectionLine} />
+      </View>
+
+      <View style={styles.settingRow}>
+        <View style={styles.settingIcon}>
+          <Ionicons
+            name="eye-outline"
+            size={24}
+            color="#D4AF37"
+          />
+        </View>
+
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Show "Draw a Card" Button
@@ -208,134 +248,156 @@ Your current favorites and settings will be replaced.`,
         />
       </View>
 
-      <Text
+      <View style={styles.divider} />
+
+      <View
         style={[
-          styles.section,
-          { marginTop: 32 },
+          styles.sectionHeader,
+          { marginTop: 36 },
         ]}
       >
-        Backup & Restore
-      </Text>
+        <View style={styles.sectionIcon}>
+          <Ionicons
+            name="cloud-upload-outline"
+            size={18}
+            color="#FFFFFF"
+          />
+        </View>
 
+        <Text style={styles.sectionLabel}>
+          Backup & Restore
+        </Text>
+
+        <View style={styles.sectionLine} />
+      </View>
       <Pressable
-        style={styles.settingCard}
+        style={styles.settingRow}
         onPress={handleBackup}
         android_ripple={{
           color: "#F3E8C5",
         }}
       >
-        <View style={styles.actionRow}>
+        <View style={styles.settingIcon}>
           <Ionicons
             name="save-outline"
             size={24}
-            color="#C5A24C"
-            style={styles.actionIcon}
-          />
-
-          <View style={styles.textContainer}>
-            <Text style={styles.settingTitle}>
-              Backup Data
-            </Text>
-
-            {backupInfo ? (
-              <>
-                <Text
-                  style={styles.settingSubtitle}
-                >
-                  Last backup
-                </Text>
-
-                <Text style={styles.backupDate}>
-                  {formatRelativeDate(
-                    backupInfo.createdAt
-                  )}
-                </Text>
-
-                <Text
-                  style={styles.backupCount}
-                >
-                  {
-                    backupInfo.favoriteCount
-                  }{" "}
-                  favorite
-                  {backupInfo.favoriteCount ===
-                    1
-                    ? ""
-                    : "s"}{" "}
-                  backed up
-                </Text>
-              </>
-            ) : (
-              <Text
-                style={styles.settingSubtitle}
-              >
-                No backups created yet.
-              </Text>
-            )}
-          </View>
-
-          <Ionicons
-            name="chevron-forward"
-            size={22}
-            color="#8C93A3"
+            color="#D4AF37"
           />
         </View>
+
+        <View style={styles.textContainer}>
+          <Text style={styles.settingTitle}>
+            Backup Data
+          </Text>
+
+          {backupInfo ? (
+            <>
+              <Text style={styles.settingSubtitle}>
+                Last backup
+              </Text>
+
+              <Text style={styles.backupDate}>
+                {formatRelativeDate(
+                  backupInfo.createdAt
+                )}
+              </Text>
+
+              <Text style={styles.backupCount}>
+                {backupInfo.favoriteCount}{" "}
+                favorite
+                {backupInfo.favoriteCount === 1
+                  ? ""
+                  : "s"}{" "}
+                backed up
+              </Text>
+            </>
+          ) : (
+            <Text style={styles.settingSubtitle}>
+              No backups created yet.
+            </Text>
+          )}
+        </View>
+
+        <Ionicons
+          name="chevron-forward"
+          size={22}
+          color="#8C93A3"
+        />
       </Pressable>
 
+      <View style={styles.divider} />
+
       <Pressable
-        style={styles.settingCard}
+        style={styles.settingRow}
         onPress={handleRestore}
         android_ripple={{
           color: "#F3E8C5",
         }}
       >
-        <View style={styles.actionRow}>
+        <View style={styles.settingIcon}>
           <Ionicons
             name="folder-open-outline"
             size={24}
-            color="#C5A24C"
-            style={styles.actionIcon}
-          />
-
-          <View style={styles.textContainer}>
-            <Text style={styles.settingTitle}>
-              Restore Data
-            </Text>
-
-            <Text
-              style={styles.settingSubtitle}
-            >
-              Restore your data from a
-              backup file.
-            </Text>
-          </View>
-
-          <Ionicons
-            name="chevron-forward"
-            size={22}
-            color="#8C93A3"
+            color="#D4AF37"
           />
         </View>
+
+        <View style={styles.textContainer}>
+          <Text style={styles.settingTitle}>
+            Restore Data
+          </Text>
+
+          <Text style={styles.settingSubtitle}>
+            Restore your data from a backup
+            file.
+          </Text>
+        </View>
+
+        <Ionicons
+          name="chevron-forward"
+          size={22}
+          color="#8C93A3"
+        />
       </Pressable>
 
-      <Text
+      <View style={styles.divider} />
+
+      <View
         style={[
-          styles.section,
-          { marginTop: 32 },
+          styles.sectionHeader,
+          { marginTop: 36 },
         ]}
       >
-        Interaction
-      </Text>
+        <View style={styles.sectionIcon}>
+          <Ionicons
+            name="hand-left-outline"
+            size={18}
+            color="#FFFFFF"
+          />
+        </View>
 
-      <View style={styles.settingCard}>
+        <Text style={styles.sectionLabel}>
+          Interaction
+        </Text>
+
+        <View style={styles.sectionLine} />
+      </View>
+
+      <View style={styles.settingRow}>
+        <View style={styles.settingIcon}>
+          <Ionicons
+            name="phone-portrait-outline"
+            size={24}
+            color="#D4AF37"
+          />
+        </View>
+
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Haptic Feedback
           </Text>
 
-          <Text
-            style={styles.settingSubtitle}
-          >
+          <Text style={styles.settingSubtitle}>
             Vibrate slightly when drawing
             cards and saving favorites.
           </Text>
@@ -351,7 +413,7 @@ Your current favorites and settings will be replaced.`,
           thumbColor="#FFFFFF"
         />
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -359,7 +421,48 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F8F6F2",
-    padding: 20,
+  },
+
+  contentContainer: {
+    padding: 24,
+    paddingBottom: 40,
+  },
+
+  header: {
+    marginBottom: 36,
+  },
+
+  title: {
+    fontSize: 34,
+    fontWeight: "700",
+    color: "#1A2747",
+  },
+
+  subtitle: {
+    marginTop: 8,
+    fontSize: 16,
+    lineHeight: 24,
+    color: "#777777",
+  },
+
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 12,
+  },
+
+  sectionLabel: {
+    marginLeft: 10,
+    fontSize: 16,
+    fontWeight: "700",
+    color: "#C5A24C",
+  },
+
+  sectionLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: "#ECE8DF",
+    marginLeft: 12,
   },
 
   section: {
@@ -368,33 +471,39 @@ const styles = StyleSheet.create({
     color: "#C5A24C",
     letterSpacing: 1.5,
     textTransform: "uppercase",
-    marginBottom: 16,
+    marginBottom: 18,
   },
 
-  settingCard: {
-    backgroundColor: "#FFFFFF",
+  sectionIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "#D4AF37",
 
-    borderRadius: 18,
-
-    padding: 18,
-
-    flexDirection: "row",
-
-    justifyContent: "space-between",
-
+    justifyContent: "center",
     alignItems: "center",
 
     shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowRadius: 8,
+    shadowOpacity: 0.12,
+    shadowRadius: 6,
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 3,
     },
 
-    elevation: 2,
+    elevation: 4,
+  },
 
-    marginBottom: 16,
+  settingRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 18,
+  },
+
+  divider: {
+    height: 1,
+    backgroundColor: "#E7E2D8",
+    marginLeft: 0,
   },
 
   textContainer: {
@@ -412,7 +521,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
     fontSize: 14,
     lineHeight: 20,
-    color: "#777",
+    color: "#777777",
   },
 
   backupDate: {
@@ -428,13 +537,30 @@ const styles = StyleSheet.create({
     color: "#8C93A3",
   },
 
-  actionRow: {
-    flex: 1,
-    flexDirection: "row",
+  settingIcon: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+
+    backgroundColor: "#FFFFFF",
+
+    justifyContent: "center",
     alignItems: "center",
+
+    marginRight: 18,
+
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+
+    elevation: 3,
   },
 
-  actionIcon: {
-    marginRight: 16,
+  leadingIcon: {
+    marginRight: 18,
   },
 });
