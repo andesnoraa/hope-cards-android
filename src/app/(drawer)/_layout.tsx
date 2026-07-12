@@ -12,9 +12,7 @@ export default function DrawerLayout() {
         headerTitleStyle: {
           fontSize: 24,
           fontWeight: "700",
-
           color: "#1A2747",
-
           letterSpacing: 0.3,
         },
 
@@ -32,12 +30,10 @@ export default function DrawerLayout() {
 
         drawerStyle: {
           backgroundColor: "#F8F6F2",
-
           width: 305,
         },
 
         drawerActiveTintColor: "#C89B3C",
-
         drawerInactiveTintColor: "#273043",
 
         drawerActiveBackgroundColor: "#F5EAC8",
@@ -45,18 +41,14 @@ export default function DrawerLayout() {
         drawerItemStyle: {
           marginHorizontal: 12,
           marginVertical: 6,
-
           borderRadius: 12,
-
           paddingHorizontal: 8,
         },
 
         drawerLabelStyle: {
           fontSize: 16,
           fontWeight: "600",
-
           marginLeft: -2,
-
           letterSpacing: 0.2,
         },
       }}
@@ -66,7 +58,7 @@ export default function DrawerLayout() {
         options={{
           title: "Hope Cards",
           drawerLabel: "Home",
-          drawerIcon: ({ color, size }) => (
+          drawerIcon: ({ color }) => (
             <Ionicons
               name="home-outline"
               color={color}
@@ -81,7 +73,7 @@ export default function DrawerLayout() {
         options={{
           title: "Daily Hope",
           drawerLabel: "Daily Hope",
-          drawerIcon: ({ color, size }) => (
+          drawerIcon: ({ color }) => (
             <Ionicons
               name="sunny-outline"
               color={color}
@@ -96,7 +88,7 @@ export default function DrawerLayout() {
         options={{
           title: "Favorites",
           drawerLabel: "Favorites",
-          drawerIcon: ({ color, size }) => (
+          drawerIcon: ({ color }) => (
             <Ionicons
               name="heart-outline"
               color={color}
@@ -111,7 +103,7 @@ export default function DrawerLayout() {
         options={{
           title: "Settings",
           drawerLabel: "Settings",
-          drawerIcon: ({ color, size }) => (
+          drawerIcon: ({ color }) => (
             <Ionicons
               name="settings-outline"
               color={color}
@@ -126,7 +118,7 @@ export default function DrawerLayout() {
         options={{
           title: "About",
           drawerLabel: "About",
-          drawerIcon: ({ color, size }) => (
+          drawerIcon: ({ color }) => (
             <Ionicons
               name="information-circle-outline"
               color={color}
@@ -141,9 +133,24 @@ export default function DrawerLayout() {
         options={{
           title: "Privacy Policy",
           drawerLabel: "Privacy Policy",
-          drawerIcon: ({ color, size }) => (
+          drawerIcon: ({ color }) => (
             <Ionicons
               name="shield-checkmark-outline"
+              color={color}
+              size={24}
+            />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
+        name="premium"
+        options={{
+          title: "Premium",
+          drawerLabel: "Premium",
+          drawerIcon: ({ color }) => (
+            <Ionicons
+              name="diamond-outline"
               color={color}
               size={24}
             />
