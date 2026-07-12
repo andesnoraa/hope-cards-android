@@ -42,10 +42,10 @@ export function getRandomVerse(
   do {
     verse =
       verseList[
-        Math.floor(
-          Math.random() *
-            verseList.length
-        )
+      Math.floor(
+        Math.random() *
+        verseList.length
+      )
       ];
   } while (
     excludeId &&

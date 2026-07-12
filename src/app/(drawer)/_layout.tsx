@@ -9,20 +9,55 @@ export default function DrawerLayout() {
 
         headerTitle: "Hope Cards",
 
-        headerStyle: {
-          backgroundColor: "#F7F5F1",
+        headerTitleStyle: {
+          fontSize: 24,
+          fontWeight: "700",
+
+          color: "#1A2747",
+
+          letterSpacing: 0.3,
         },
+
+        headerStyle: {
+          backgroundColor: "#F8F6F2",
+        },
+
+        headerShadowVisible: false,
 
         headerTintColor: "#1A2747",
 
-        drawerActiveTintColor: "#C5A24C",
+        sceneStyle: {
+          backgroundColor: "#F8F6F2",
+        },
+
+        drawerStyle: {
+          backgroundColor: "#F8F6F2",
+
+          width: 305,
+        },
+
+        drawerActiveTintColor: "#C89B3C",
+
         drawerInactiveTintColor: "#273043",
 
-        drawerActiveBackgroundColor: "#F4EEDC",
+        drawerActiveBackgroundColor: "#F5EAC8",
+
+        drawerItemStyle: {
+          marginHorizontal: 12,
+          marginVertical: 6,
+
+          borderRadius: 12,
+
+          paddingHorizontal: 8,
+        },
 
         drawerLabelStyle: {
           fontSize: 16,
           fontWeight: "600",
+
+          marginLeft: -2,
+
+          letterSpacing: 0.2,
         },
       }}
     >
@@ -35,7 +70,7 @@ export default function DrawerLayout() {
             <Ionicons
               name="home-outline"
               color={color}
-              size={size}
+              size={24}
             />
           ),
         }}
@@ -50,7 +85,7 @@ export default function DrawerLayout() {
             <Ionicons
               name="sunny-outline"
               color={color}
-              size={size}
+              size={24}
             />
           ),
         }}
@@ -65,7 +100,7 @@ export default function DrawerLayout() {
             <Ionicons
               name="heart-outline"
               color={color}
-              size={size}
+              size={24}
             />
           ),
         }}
@@ -80,7 +115,7 @@ export default function DrawerLayout() {
             <Ionicons
               name="settings-outline"
               color={color}
-              size={size}
+              size={24}
             />
           ),
         }}
@@ -95,7 +130,7 @@ export default function DrawerLayout() {
             <Ionicons
               name="information-circle-outline"
               color={color}
-              size={size}
+              size={24}
             />
           ),
         }}
@@ -110,7 +145,7 @@ export default function DrawerLayout() {
             <Ionicons
               name="shield-checkmark-outline"
               color={color}
-              size={size}
+              size={24}
             />
           ),
         }}
