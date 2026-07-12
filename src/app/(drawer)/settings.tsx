@@ -221,8 +221,8 @@ Your current favorites and settings will be replaced.`,
         <View style={styles.settingIcon}>
           <Ionicons
             name="eye-outline"
-            size={24}
-            color="#D4AF37"
+            size={21}
+            color="#C89B3C"
           />
         </View>
 
@@ -280,8 +280,8 @@ Your current favorites and settings will be replaced.`,
         <View style={styles.settingIcon}>
           <Ionicons
             name="save-outline"
-            size={24}
-            color="#D4AF37"
+            size={21}
+            color="#C89B3C"
           />
         </View>
 
@@ -337,8 +337,8 @@ Your current favorites and settings will be replaced.`,
         <View style={styles.settingIcon}>
           <Ionicons
             name="folder-open-outline"
-            size={24}
-            color="#D4AF37"
+            size={21}
+            color="#C89B3C"
           />
         </View>
 
@@ -387,8 +387,8 @@ Your current favorites and settings will be replaced.`,
         <View style={styles.settingIcon}>
           <Ionicons
             name="phone-portrait-outline"
-            size={24}
-            color="#D4AF37"
+            size={21}
+            color="#C89B3C"
           />
         </View>
 
@@ -439,30 +439,32 @@ const styles = StyleSheet.create({
   },
 
   subtitle: {
-    marginTop: 8,
+    marginTop: 12,
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 28,
     color: "#777777",
   },
 
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 12,
+    marginBottom: 18,
   },
 
   sectionLabel: {
-    marginLeft: 10,
-    fontSize: 16,
-    fontWeight: "700",
-    color: "#C5A24C",
+    marginLeft: 14,
+    fontSize: 15,
+    fontWeight: "600",
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
+    color: "#C89B3C",
   },
 
   sectionLine: {
     flex: 1,
     height: 1,
-    backgroundColor: "#ECE8DF",
-    marginLeft: 12,
+    backgroundColor: "#E7D7B2",
+    marginLeft: 18,
   },
 
   section: {
@@ -475,23 +477,24 @@ const styles = StyleSheet.create({
   },
 
   sectionIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "#D4AF37",
+    width: 42,
+    height: 42,
+    borderRadius: 21,
+
+    backgroundColor: "#D2A63A",
 
     justifyContent: "center",
     alignItems: "center",
 
     shadowColor: "#000",
-    shadowOpacity: 0.12,
-    shadowRadius: 6,
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
     shadowOffset: {
       width: 0,
       height: 3,
     },
 
-    elevation: 4,
+    elevation: 3,
   },
 
   settingRow: {
@@ -538,23 +541,23 @@ const styles = StyleSheet.create({
   },
 
   settingIcon: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
 
     backgroundColor: "#FFFFFF",
 
     justifyContent: "center",
     alignItems: "center",
 
-    marginRight: 18,
+    marginRight: 20,
 
     shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 4,
     },
 
     elevation: 3,
