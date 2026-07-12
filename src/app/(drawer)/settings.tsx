@@ -204,7 +204,7 @@ Your current favorites and settings will be replaced.`,
       <View style={styles.sectionHeader}>
         <View style={styles.sectionIcon}>
           <Ionicons
-            name="color-palette-outline"
+            name="sparkles-outline"
             size={18}
             color="#FFFFFF"
           />
