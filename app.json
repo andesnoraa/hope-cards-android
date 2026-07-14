@@ -31,6 +31,12 @@
           "imageWidth": 76
         }
       ],
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "daily-hope"
+        }
+      ],
       "expo-sharing"
     ],
     "experiments": {

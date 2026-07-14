@@ -56,7 +56,11 @@ export async function createBackup(): Promise<BackupData> {
         favorites,
 
         settings: {
-            ...settings,
+            showDrawButton:
+                settings.showDrawButton,
+
+            enableHaptics:
+                settings.enableHaptics,
 
             // Default for now.
             // This will become the user's

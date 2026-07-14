@@ -1,6 +1,11 @@
-import { Stack } from "expo-router";
+import {
+  router,
+  Stack,
+  useRootNavigationState,
+} from "expo-router";
 
 import { useFonts } from "expo-font";
+import { useEffect } from "react";
 
 import {
   Poppins_400Regular,
@@ -13,7 +18,49 @@ import {
   SourceSerif4_600SemiBold,
 } from "@expo-google-fonts/source-serif-4";
 
+import {
+  registerDailyHopeNotificationHandler,
+  syncDailyHopeReminderSchedule,
+} from "../services/dailyHopeNotifications";
+
+function useNotificationObserver(
+  enabled: boolean
+) {
+  useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+
+    let cleanup: (() => void) | undefined;
+    let mounted = true;
+
+    registerDailyHopeNotificationHandler(
+      () => {
+        requestAnimationFrame(() => {
+          router.replace("/daily");
+        });
+      }
+    )
+      .then((nextCleanup) => {
+        if (mounted) {
+          cleanup = nextCleanup;
+        } else {
+          nextCleanup();
+        }
+      })
+      .catch(console.error);
+
+    return () => {
+      mounted = false;
+      cleanup?.();
+    };
+  }, [enabled]);
+}
+
 export default function RootLayout() {
+  const rootNavigationState =
+    useRootNavigationState();
+
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_600SemiBold,
@@ -22,6 +69,22 @@ export default function RootLayout() {
     SourceSerif4_400Regular,
     SourceSerif4_600SemiBold,
   });
+
+  const navigationReady =
+    fontsLoaded &&
+    Boolean(rootNavigationState?.key);
+
+  useNotificationObserver(navigationReady);
+
+  useEffect(() => {
+    if (!navigationReady) {
+      return;
+    }
+
+    syncDailyHopeReminderSchedule().catch(
+      console.error
+    );
+  }, [navigationReady]);
 
   if (!fontsLoaded) {
     return null;

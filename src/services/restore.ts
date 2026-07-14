@@ -7,6 +7,7 @@ import {
 } from "./favorites";
 
 import {
+    DEFAULT_SETTINGS,
     replaceSettings,
 } from "./settings";
 
@@ -21,6 +22,8 @@ export async function restoreBackup(
     );
 
     await replaceSettings({
+        ...DEFAULT_SETTINGS,
+
         showDrawButton:
             backup.settings.showDrawButton,
 

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import {
   Alert,
+  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -15,6 +16,13 @@ import {
   loadBackup,
   shareBackup,
 } from "../../services/backup";
+
+import {
+  disableDailyHopeReminder,
+  enableDailyHopeReminder,
+  formatReminderTime,
+  updateDailyHopeReminderTime,
+} from "../../services/dailyHopeNotifications";
 
 import {
   BackupInfo,
@@ -41,6 +49,39 @@ export default function SettingsScreen() {
   const [enableHaptics, setEnableHaptics] =
     useState(true);
 
+  const [
+    dailyHopeReminderEnabled,
+    setDailyHopeReminderEnabled,
+  ] = useState(false);
+
+  const [
+    dailyHopeReminderHour,
+    setDailyHopeReminderHour,
+  ] = useState(8);
+
+  const [
+    dailyHopeReminderMinute,
+    setDailyHopeReminderMinute,
+  ] = useState(0);
+
+  const [
+    timePickerVisible,
+    setTimePickerVisible,
+  ] = useState(false);
+
+  const [pickerHour, setPickerHour] =
+    useState(8);
+
+  const [
+    pickerMinute,
+    setPickerMinute,
+  ] = useState(0);
+
+  const [
+    pickerPeriod,
+    setPickerPeriod,
+  ] = useState<"AM" | "PM">("AM");
+
   const [backupInfo, setBackupInfo] =
     useState<BackupInfo | null>(null);
 
@@ -55,6 +96,18 @@ export default function SettingsScreen() {
 
       setEnableHaptics(
         settings.enableHaptics
+      );
+
+      setDailyHopeReminderEnabled(
+        settings.dailyHopeReminderEnabled
+      );
+
+      setDailyHopeReminderHour(
+        settings.dailyHopeReminderHour
+      );
+
+      setDailyHopeReminderMinute(
+        settings.dailyHopeReminderMinute
       );
 
       const info =
@@ -83,6 +136,133 @@ export default function SettingsScreen() {
 
     await updateSettings({
       enableHaptics: value,
+    });
+  }
+
+  async function toggleDailyHopeReminder(
+    value: boolean
+  ) {
+    setDailyHopeReminderEnabled(value);
+
+    if (!value) {
+      await disableDailyHopeReminder();
+      return;
+    }
+
+    const status =
+      await enableDailyHopeReminder({
+        hour: dailyHopeReminderHour,
+        minute: dailyHopeReminderMinute,
+      });
+
+    if (status !== "granted") {
+      setDailyHopeReminderEnabled(false);
+
+      Alert.alert(
+        "Notifications Off",
+        status === "unsupported"
+          ? "Daily reminders require a development build on Android. They are not available in Expo Go."
+          : "Allow notifications in system settings to receive Daily Hope reminders."
+      );
+    }
+  }
+
+  function getHourForPicker(hour: number) {
+    const hour12 = hour % 12;
+    return hour12 === 0 ? 12 : hour12;
+  }
+
+  function getPeriodForPicker(hour: number) {
+    return hour >= 12 ? "PM" : "AM";
+  }
+
+  function getHourFromPicker() {
+    if (pickerPeriod === "AM") {
+      return pickerHour === 12
+        ? 0
+        : pickerHour;
+    }
+
+    return pickerHour === 12
+      ? 12
+      : pickerHour + 12;
+  }
+
+  function openReminderTimePicker() {
+    setPickerHour(
+      getHourForPicker(
+        dailyHopeReminderHour
+      )
+    );
+
+    setPickerMinute(
+      dailyHopeReminderMinute
+    );
+
+    setPickerPeriod(
+      getPeriodForPicker(
+        dailyHopeReminderHour
+      )
+    );
+
+    setTimePickerVisible(true);
+  }
+
+  function adjustPickerHour(
+    amount: number
+  ) {
+    setPickerHour((current) => {
+      const next =
+        ((current - 1 + amount + 12) %
+          12) +
+        1;
+
+      return next;
+    });
+  }
+
+  function adjustPickerMinute(
+    amount: number
+  ) {
+    setPickerMinute((current) => {
+      return (
+        (current + amount + 60) % 60
+      );
+    });
+  }
+
+  async function saveReminderTime() {
+    const hour = getHourFromPicker();
+    const minute = pickerMinute;
+
+    setDailyHopeReminderHour(hour);
+    setDailyHopeReminderMinute(minute);
+    setTimePickerVisible(false);
+
+    if (dailyHopeReminderEnabled) {
+      const status =
+        await updateDailyHopeReminderTime({
+          hour,
+          minute,
+        });
+
+      if (status !== "granted") {
+        setDailyHopeReminderEnabled(false);
+
+        Alert.alert(
+          "Notifications Off",
+          status === "unsupported"
+            ? "Daily reminders require a development build on Android. They are not available in Expo Go."
+            : "Allow notifications in system settings to receive Daily Hope reminders."
+        );
+      }
+
+      return;
+    }
+
+    await updateSettings({
+      dailyHopeReminderHour: hour,
+      dailyHopeReminderMinute: minute,
     });
   }
 
@@ -150,6 +330,21 @@ Your current favorites and settings will be replaced.`,
                   settings.enableHaptics
                 );
 
+                setDailyHopeReminderEnabled(
+                  settings
+                    .dailyHopeReminderEnabled
+                );
+
+                setDailyHopeReminderHour(
+                  settings
+                    .dailyHopeReminderHour
+                );
+
+                setDailyHopeReminderMinute(
+                  settings
+                    .dailyHopeReminderMinute
+                );
+
                 Alert.alert(
                   "Restore Complete",
                   "Your backup has been restored successfully."
@@ -181,7 +376,8 @@ Your current favorites and settings will be replaced.`,
   }
 
   return (
-    <ScrollView
+    <>
+      <ScrollView
       style={styles.container}
       contentContainerStyle={
         styles.contentContainer
@@ -247,6 +443,99 @@ Your current favorites and settings will be replaced.`,
           thumbColor="#FFFFFF"
         />
       </View>
+
+      <View style={styles.divider} />
+
+      <View
+        style={[
+          styles.sectionHeader,
+          { marginTop: 36 },
+        ]}
+      >
+        <View style={styles.sectionIcon}>
+          <Ionicons
+            name="notifications-outline"
+            size={18}
+            color="#FFFFFF"
+          />
+        </View>
+
+        <Text style={styles.sectionLabel}>
+          Daily Hope
+        </Text>
+
+        <View style={styles.sectionLine} />
+      </View>
+
+      <View style={styles.settingRow}>
+        <View style={styles.settingIcon}>
+          <Ionicons
+            name="sunny-outline"
+            size={21}
+            color="#C89B3C"
+          />
+        </View>
+
+        <View style={styles.textContainer}>
+          <Text style={styles.settingTitle}>
+            Daily Reminder
+          </Text>
+
+          <Text style={styles.settingSubtitle}>
+            Receive a gentle reminder to
+            open today's hope.
+          </Text>
+        </View>
+
+        <Switch
+          value={dailyHopeReminderEnabled}
+          onValueChange={
+            toggleDailyHopeReminder
+          }
+          trackColor={{
+            false: "#D9D9D9",
+            true: "#D4AF37",
+          }}
+          thumbColor="#FFFFFF"
+        />
+      </View>
+
+      <View style={styles.divider} />
+
+      <Pressable
+        style={styles.settingRow}
+        onPress={openReminderTimePicker}
+        android_ripple={{
+          color: "#F3E8C5",
+        }}
+      >
+        <View style={styles.settingIcon}>
+          <Ionicons
+            name="time-outline"
+            size={21}
+            color="#C89B3C"
+          />
+        </View>
+
+        <View style={styles.textContainer}>
+          <Text style={styles.settingTitle}>
+            Reminder Time
+          </Text>
+
+          <Text style={styles.settingSubtitle}>
+            {formatReminderTime(
+              dailyHopeReminderHour,
+              dailyHopeReminderMinute
+            )}
+          </Text>
+        </View>
+
+        <Ionicons
+          name="chevron-forward"
+          size={22}
+          color="#8C93A3"
+        />
+      </Pressable>
 
       <View style={styles.divider} />
 
@@ -413,7 +702,175 @@ Your current favorites and settings will be replaced.`,
           thumbColor="#FFFFFF"
         />
       </View>
-    </ScrollView>
+
+      </ScrollView>
+
+      <Modal
+        transparent
+        visible={timePickerVisible}
+        animationType="fade"
+        onRequestClose={() => {
+          setTimePickerVisible(false);
+        }}
+      >
+        <View style={styles.modalBackdrop}>
+          <View style={styles.timePickerCard}>
+            <View style={styles.modalHeader}>
+              <Text style={styles.modalTitle}>
+                Reminder Time
+              </Text>
+
+              <Pressable
+                style={styles.iconButton}
+                onPress={() => {
+                  setTimePickerVisible(false);
+                }}
+                hitSlop={8}
+              >
+                <Ionicons
+                  name="close"
+                  size={22}
+                  color="#1A2747"
+                />
+              </Pressable>
+            </View>
+
+            <View style={styles.timePickerBody}>
+              <View style={styles.timeUnit}>
+                <Pressable
+                  style={styles.stepButton}
+                  onPress={() =>
+                    adjustPickerHour(1)
+                  }
+                >
+                  <Ionicons
+                    name="chevron-up"
+                    size={24}
+                    color="#C89B3C"
+                  />
+                </Pressable>
+
+                <Text style={styles.timeValue}>
+                  {String(pickerHour).padStart(
+                    2,
+                    "0"
+                  )}
+                </Text>
+
+                <Pressable
+                  style={styles.stepButton}
+                  onPress={() =>
+                    adjustPickerHour(-1)
+                  }
+                >
+                  <Ionicons
+                    name="chevron-down"
+                    size={24}
+                    color="#C89B3C"
+                  />
+                </Pressable>
+              </View>
+
+              <Text style={styles.timeColon}>
+                :
+              </Text>
+
+              <View style={styles.timeUnit}>
+                <Pressable
+                  style={styles.stepButton}
+                  onPress={() =>
+                    adjustPickerMinute(1)
+                  }
+                >
+                  <Ionicons
+                    name="chevron-up"
+                    size={24}
+                    color="#C89B3C"
+                  />
+                </Pressable>
+
+                <Text style={styles.timeValue}>
+                  {String(
+                    pickerMinute
+                  ).padStart(2, "0")}
+                </Text>
+
+                <Pressable
+                  style={styles.stepButton}
+                  onPress={() =>
+                    adjustPickerMinute(-1)
+                  }
+                >
+                  <Ionicons
+                    name="chevron-down"
+                    size={24}
+                    color="#C89B3C"
+                  />
+                </Pressable>
+              </View>
+
+              <View style={styles.periodControl}>
+                {(["AM", "PM"] as const).map(
+                  (period) => (
+                    <Pressable
+                      key={period}
+                      style={[
+                        styles.periodButton,
+                        pickerPeriod ===
+                          period &&
+                          styles.periodButtonActive,
+                      ]}
+                      onPress={() => {
+                        setPickerPeriod(
+                          period
+                        );
+                      }}
+                    >
+                      <Text
+                        style={[
+                          styles.periodText,
+                          pickerPeriod ===
+                            period &&
+                            styles.periodTextActive,
+                        ]}
+                      >
+                        {period}
+                      </Text>
+                    </Pressable>
+                  )
+                )}
+              </View>
+            </View>
+
+            <View style={styles.modalActions}>
+              <Pressable
+                style={styles.secondaryButton}
+                onPress={() => {
+                  setTimePickerVisible(false);
+                }}
+              >
+                <Text
+                  style={styles.secondaryButtonText}
+                >
+                  Cancel
+                </Text>
+              </Pressable>
+
+              <Pressable
+                style={styles.primaryButton}
+                onPress={saveReminderTime}
+              >
+                <Text
+                  style={styles.primaryButtonText}
+                >
+                  Save
+                </Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
+    </>
   );
 }
 
@@ -565,5 +1022,141 @@ const styles = StyleSheet.create({
 
   leadingIcon: {
     marginRight: 18,
+  },
+
+  modalBackdrop: {
+    flex: 1,
+    justifyContent: "center",
+    padding: 24,
+    backgroundColor:
+      "rgba(26, 39, 71, 0.42)",
+  },
+
+  timePickerCard: {
+    borderRadius: 8,
+    backgroundColor: "#FFFFFF",
+    padding: 22,
+  },
+
+  modalHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 18,
+  },
+
+  modalTitle: {
+    fontSize: 24,
+    fontWeight: "700",
+    color: "#1A2747",
+  },
+
+  iconButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#F8F6F2",
+  },
+
+  timePickerBody: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+    paddingVertical: 10,
+  },
+
+  timeUnit: {
+    alignItems: "center",
+    gap: 8,
+  },
+
+  stepButton: {
+    width: 48,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  timeValue: {
+    minWidth: 72,
+    textAlign: "center",
+    fontSize: 42,
+    fontWeight: "700",
+    color: "#1A2747",
+    fontVariant: ["tabular-nums"],
+  },
+
+  timeColon: {
+    marginTop: -2,
+    fontSize: 38,
+    fontWeight: "700",
+    color: "#C89B3C",
+  },
+
+  periodControl: {
+    width: 64,
+    gap: 8,
+  },
+
+  periodButton: {
+    height: 42,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#F8F6F2",
+  },
+
+  periodButtonActive: {
+    backgroundColor: "#1A2747",
+  },
+
+  periodText: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#7A8292",
+  },
+
+  periodTextActive: {
+    color: "#FFFFFF",
+  },
+
+  modalActions: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: 12,
+    marginTop: 24,
+  },
+
+  secondaryButton: {
+    minWidth: 92,
+    height: 46,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#F8F6F2",
+  },
+
+  secondaryButtonText: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "#1A2747",
+  },
+
+  primaryButton: {
+    minWidth: 92,
+    height: 46,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#C89B3C",
+  },
+
+  primaryButtonText: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "#FFFFFF",
   },
 });

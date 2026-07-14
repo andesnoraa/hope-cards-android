@@ -5,11 +5,17 @@ const SETTINGS_KEY = "hope_cards_settings";
 export type AppSettings = {
     showDrawButton: boolean;
     enableHaptics: boolean;
+    dailyHopeReminderEnabled: boolean;
+    dailyHopeReminderHour: number;
+    dailyHopeReminderMinute: number;
 };
 
-const DEFAULT_SETTINGS: AppSettings = {
+export const DEFAULT_SETTINGS: AppSettings = {
     showDrawButton: true,
     enableHaptics: true,
+    dailyHopeReminderEnabled: false,
+    dailyHopeReminderHour: 8,
+    dailyHopeReminderMinute: 0,
 };
 
 export async function getSettings(): Promise<AppSettings> {
