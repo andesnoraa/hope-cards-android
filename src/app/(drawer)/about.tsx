@@ -41,17 +41,26 @@ export default function AboutScreen() {
         </Text>
 
         <Text style={styles.item}>
+          • Read a fresh Daily Hope verse
+          each day
+        </Text>
+
+        <Text style={styles.item}>
+          • Set daily reminder times
+        </Text>
+
+        <Text style={styles.item}>
           • Share verses with family and
           friends
         </Text>
 
         <Text style={styles.item}>
-          • Haptic feedback
+          • Backup and restore your saved
+          data
         </Text>
 
         <Text style={styles.item}>
-          • Multiple Bible translations
-          (coming soon)
+          • Gentle haptic feedback
         </Text>
 
         <Text style={styles.item}>
