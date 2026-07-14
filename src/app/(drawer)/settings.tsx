@@ -384,10 +384,8 @@ export default function SettingsScreen() {
 
   async function handleBackup() {
     try {
-      await shareBackup();
-
       const info =
-        await getBackupInfo();
+        await shareBackup();
 
       setBackupInfo(info);
     } catch (error) {
@@ -459,6 +457,10 @@ Your current favorites and settings will be replaced.`,
                 setDailyHopeReminderMinute(
                   settings
                     .dailyHopeReminderMinute
+                );
+
+                setThemeName(
+                  settings.themeName
                 );
 
                 Alert.alert(

@@ -15,6 +15,7 @@ import {
 } from "./settings";
 
 import {
+    type BackupInfo,
     saveBackupInfo,
 } from "./backupInfo";
 
@@ -47,6 +48,11 @@ export interface BackupData {
         preferredTranslation: string;
     };
 }
+
+type BackupExport = {
+    file: File;
+    info: BackupInfo;
+};
 
 /**
  * Creates a backup object containing
@@ -88,9 +94,9 @@ export async function createBackup(): Promise<BackupData> {
 
 /**
  * Creates a backup file in the
- * app's cache directory.
+ * app's documents directory.
  */
-export async function exportBackup(): Promise<File> {
+export async function exportBackup(): Promise<BackupExport> {
     const backup =
         await createBackup();
 
@@ -106,17 +112,28 @@ export async function exportBackup(): Promise<File> {
             .split("T")[0];
 
     const file = new File(
-        Paths.cache,
+        Paths.document,
         `hope-cards-backup-${today}.json`
     );
 
-    if (!file.exists) {
-        file.create();
-    }
+    file.create({
+        overwrite: true,
+    });
 
     file.write(json);
 
-    await saveBackupInfo({
+    const fileInfo = file.info();
+
+    if (
+        !fileInfo.exists ||
+        !fileInfo.size
+    ) {
+        throw new Error(
+            "Backup file was not created."
+        );
+    }
+
+    const info: BackupInfo = {
         createdAt:
             backup.createdAt,
 
@@ -128,19 +145,19 @@ export async function exportBackup(): Promise<File> {
 
         favoriteCount:
             backup.favorites.length,
-    });
+    };
 
-    return file;
+    return {
+        file,
+        info,
+    };
 }
 
 /**
  * Creates a backup file and opens
  * the native Share dialog.
  */
-export async function shareBackup(): Promise<void> {
-    const file =
-        await exportBackup();
-
+export async function shareBackup(): Promise<BackupInfo> {
     const available =
         await Sharing.isAvailableAsync();
 
@@ -149,6 +166,11 @@ export async function shareBackup(): Promise<void> {
             "Sharing is not available on this device."
         );
     }
+
+    const {
+        file,
+        info,
+    } = await exportBackup();
 
     await Sharing.shareAsync(
         file.uri,
@@ -163,6 +185,10 @@ export async function shareBackup(): Promise<void> {
                 "public.json",
         }
     );
+
+    await saveBackupInfo(info);
+
+    return info;
 }
 
 /**
