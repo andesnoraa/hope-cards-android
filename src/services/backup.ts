@@ -26,6 +26,7 @@ const THEME_NAMES: AppThemeName[] = [
     "classic",
     "serenity",
     "stillWater",
+    "midnight",
 ];
 
 export interface BackupData {

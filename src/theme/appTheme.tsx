@@ -14,7 +14,8 @@ import {
 export type AppThemeName =
   | "classic"
   | "serenity"
-  | "stillWater";
+  | "stillWater"
+  | "midnight";
 
 export type AppTheme = {
   name: AppThemeName;
@@ -33,8 +34,13 @@ export type AppTheme = {
   divider: string;
   cardFront: string;
   cardBack: string;
+  cardBackText: string;
+  cardBackAccent: string;
   cardText: string;
   cardMuted: string;
+  buttonBackground: string;
+  buttonBorder: string;
+  buttonText: string;
   danger: string;
   shadow: string;
   white: string;
@@ -63,8 +69,13 @@ export const THEMES: Record<
     divider: "#E7E2D8",
     cardFront: "#F8F6F2",
     cardBack: "#1A2747",
+    cardBackText: "#F8F6F2",
+    cardBackAccent: "#C89B3C",
     cardText: "#273043",
     cardMuted: "#7A8292",
+    buttonBackground: "#1A2747",
+    buttonBorder: "#C89B3C",
+    buttonText: "#FFFFFF",
     danger: "#C0392B",
     shadow: "#000",
     white: "#FFFFFF",
@@ -74,23 +85,28 @@ export const THEMES: Record<
 
   serenity: {
     name: "serenity",
-    label: "Serenity",
-    description: "Sage, ivory, and quiet green.",
-    background: "#F4F7F1",
-    homeBackground: "#F1F5EE",
+    label: "Sage",
+    description: "Deep sage with fresh green.",
+    background: "#F6F8F3",
+    homeBackground: "#F3F7F0",
     surface: "#FFFFFF",
     text: "#20312B",
     textSecondary: "#6F7D73",
     textTertiary: "#879589",
     primary: "#20312B",
-    accent: "#5F8D75",
-    accentSoft: "#DDEBDD",
-    accentLine: "#C9DACD",
-    divider: "#D7E0D8",
-    cardFront: "#FAFCF7",
-    cardBack: "#29463A",
+    accent: "#6FA083",
+    accentSoft: "#E1EEE3",
+    accentLine: "#BFD6C7",
+    divider: "#DCE5DB",
+    cardFront: "#FBFCF8",
+    cardBack: "#285443",
+    cardBackText: "#FFFDF4",
+    cardBackAccent: "#8FC3A3",
     cardText: "#20312B",
     cardMuted: "#6F7D73",
+    buttonBackground: "#285443",
+    buttonBorder: "#8FC3A3",
+    buttonText: "#FFFFFF",
     danger: "#B84A4A",
     shadow: "#000",
     white: "#FFFFFF",
@@ -101,27 +117,63 @@ export const THEMES: Record<
   stillWater: {
     name: "stillWater",
     label: "Still Water",
-    description: "Mist blue, slate, and pearl.",
-    background: "#F2F6F8",
-    homeBackground: "#EEF4F7",
+    description: "Deep teal with clear blue.",
+    background: "#F4F8FA",
+    homeBackground: "#F0F6F9",
     surface: "#FFFFFF",
     text: "#1F2D3A",
     textSecondary: "#6B7A86",
     textTertiary: "#8A98A3",
     primary: "#1F2D3A",
-    accent: "#4E7D96",
-    accentSoft: "#D8E8EF",
-    accentLine: "#C6D9E2",
+    accent: "#5F9EC1",
+    accentSoft: "#DDEEF6",
+    accentLine: "#BBD8E7",
     divider: "#D6E0E5",
-    cardFront: "#F8FBFC",
-    cardBack: "#263E4B",
+    cardFront: "#FAFCFD",
+    cardBack: "#234D63",
+    cardBackText: "#F8FCFD",
+    cardBackAccent: "#83C3E2",
     cardText: "#1F2D3A",
     cardMuted: "#6B7A86",
+    buttonBackground: "#234D63",
+    buttonBorder: "#83C3E2",
+    buttonText: "#FFFFFF",
     danger: "#B84A4A",
     shadow: "#000",
     white: "#FFFFFF",
     switchOff: "#D2DADE",
     drawerActiveBackground: "#D8E8EF",
+  },
+
+  midnight: {
+    name: "midnight",
+    label: "Midnight",
+    description: "Black cards with antique gold.",
+    background: "#F7F4EE",
+    homeBackground: "#F3EFE7",
+    surface: "#FFFFFF",
+    text: "#1B1A18",
+    textSecondary: "#726B61",
+    textTertiary: "#91887B",
+    primary: "#1B1A18",
+    accent: "#B98F3B",
+    accentSoft: "#EFE2C5",
+    accentLine: "#D9C28D",
+    divider: "#E5DED2",
+    cardFront: "#FBF8F1",
+    cardBack: "#121212",
+    cardBackText: "#F7F1E5",
+    cardBackAccent: "#C9A24F",
+    cardText: "#25221D",
+    cardMuted: "#7A7165",
+    buttonBackground: "#121212",
+    buttonBorder: "#C9A24F",
+    buttonText: "#FFFFFF",
+    danger: "#B84A4A",
+    shadow: "#000",
+    white: "#FFFFFF",
+    switchOff: "#D7D1C7",
+    drawerActiveBackground: "#EFE2C5",
   },
 };
 

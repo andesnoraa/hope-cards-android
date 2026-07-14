@@ -11,7 +11,8 @@ export default function CardBack() {
         {
           backgroundColor:
             theme.cardBack,
-          borderColor: theme.accent,
+          borderColor:
+            theme.cardBackAccent,
           shadowColor: theme.shadow,
         },
       ]}
@@ -21,7 +22,7 @@ export default function CardBack() {
           styles.innerBorder,
           {
             borderColor:
-              theme.accentLine,
+              theme.cardBackAccent,
           },
         ]}
       />
@@ -29,7 +30,10 @@ export default function CardBack() {
       <Text
         style={[
           styles.cross,
-          { color: theme.accent },
+          {
+            color:
+              theme.cardBackAccent,
+          },
         ]}
       >
         ✝
@@ -40,7 +44,7 @@ export default function CardBack() {
           styles.title,
           {
             color:
-              theme.background,
+              theme.cardBackText,
           },
         ]}
       >
@@ -50,7 +54,10 @@ export default function CardBack() {
       <Text
         style={[
           styles.subtitle,
-          { color: theme.accent },
+          {
+            color:
+              theme.cardBackAccent,
+          },
         ]}
       >
         CARDS

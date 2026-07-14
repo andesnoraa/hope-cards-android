@@ -252,9 +252,9 @@ export default function DrawCard() {
               styles.button,
               {
                 backgroundColor:
-                  theme.primary,
+                  theme.buttonBackground,
                 borderColor:
-                  theme.accent,
+                  theme.buttonBorder,
                 shadowColor:
                   theme.shadow,
               },
@@ -265,7 +265,8 @@ export default function DrawCard() {
               style={[
                 styles.buttonText,
                 {
-                  color: theme.white,
+                  color:
+                    theme.buttonText,
                 },
               ]}
             >

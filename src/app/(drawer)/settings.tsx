@@ -571,52 +571,6 @@ Your current favorites and settings will be replaced.`,
         />
       </View>
 
-      <View style={styles.settingRow}>
-        <View style={styles.textContainer}>
-          <Text
-            style={[
-              styles.settingTitle,
-              { color: theme.text },
-            ]}
-          >
-            Draw Button
-          </Text>
-
-          <Text
-            style={[
-              styles.settingSubtitle,
-              {
-                color:
-                  theme.textSecondary,
-              },
-            ]}
-          >
-            Show a button for drawing cards,
-            or tap the deck instead.
-          </Text>
-        </View>
-
-        <Switch
-          value={showDrawButton}
-          onValueChange={toggleDrawButton}
-          trackColor={{
-            false: theme.switchOff,
-            true: theme.accent,
-          }}
-          thumbColor={theme.white}
-        />
-      </View>
-
-      <View
-        style={[
-          styles.divider,
-          {
-            backgroundColor:
-              theme.divider,
-          },
-        ]}
-      />
-
       <Pressable
         style={styles.settingRow}
         onPress={chooseTheme}
@@ -653,7 +607,10 @@ Your current favorites and settings will be replaced.`,
               styles.themeSwatch,
               {
                 backgroundColor:
-                  selectedTheme.accent,
+                  selectedTheme.cardBack,
+                borderColor:
+                  selectedTheme
+                    .cardBackAccent,
               },
             ]}
           />
@@ -665,6 +622,52 @@ Your current favorites and settings will be replaced.`,
           />
         </View>
       </Pressable>
+
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
+
+      <View style={styles.settingRow}>
+        <View style={styles.textContainer}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
+            Draw Button
+          </Text>
+
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            Show a button for drawing cards,
+            or tap the deck instead.
+          </Text>
+        </View>
+
+        <Switch
+          value={showDrawButton}
+          onValueChange={toggleDrawButton}
+          trackColor={{
+            false: theme.switchOff,
+            true: theme.accent,
+          }}
+          thumbColor={theme.white}
+        />
+      </View>
 
       <View
         style={[
@@ -836,6 +839,96 @@ Your current favorites and settings will be replaced.`,
           ]}
         >
           <Ionicons
+            name="hand-left-outline"
+            size={18}
+            color={theme.white}
+          />
+        </View>
+
+        <Text
+          style={[
+            styles.sectionLabel,
+            { color: theme.accent },
+          ]}
+        >
+          Interaction
+        </Text>
+
+        <View
+          style={[
+            styles.sectionLine,
+            {
+              backgroundColor:
+                theme.accentLine,
+            },
+          ]}
+        />
+      </View>
+
+      <View style={styles.settingRow}>
+        <View style={styles.textContainer}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
+            Haptic Feedback
+          </Text>
+
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            Vibrate slightly when drawing
+            cards and saving favorites.
+          </Text>
+        </View>
+
+        <Switch
+          value={enableHaptics}
+          onValueChange={toggleHaptics}
+          trackColor={{
+            false: theme.switchOff,
+            true: theme.accent,
+          }}
+          thumbColor={theme.white}
+        />
+      </View>
+
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
+
+      <View
+        style={[
+          styles.sectionHeader,
+          { marginTop: 30 },
+        ]}
+      >
+        <View
+          style={[
+            styles.sectionIcon,
+            {
+              backgroundColor:
+                theme.accent,
+              shadowColor:
+                theme.shadow,
+            },
+          ]}
+        >
+          <Ionicons
             name="cloud-upload-outline"
             size={18}
             color={theme.white}
@@ -861,6 +954,7 @@ Your current favorites and settings will be replaced.`,
           ]}
         />
       </View>
+
       <Pressable
         style={styles.settingRow}
         onPress={handleBackup}
@@ -989,96 +1083,6 @@ Your current favorites and settings will be replaced.`,
           color={theme.textTertiary}
         />
       </Pressable>
-
-      <View
-        style={[
-          styles.divider,
-          {
-            backgroundColor:
-              theme.divider,
-          },
-        ]}
-      />
-
-      <View
-        style={[
-          styles.sectionHeader,
-          { marginTop: 30 },
-        ]}
-      >
-        <View
-          style={[
-            styles.sectionIcon,
-            {
-              backgroundColor:
-                theme.accent,
-              shadowColor:
-                theme.shadow,
-            },
-          ]}
-        >
-          <Ionicons
-            name="hand-left-outline"
-            size={18}
-            color={theme.white}
-          />
-        </View>
-
-        <Text
-          style={[
-            styles.sectionLabel,
-            { color: theme.accent },
-          ]}
-        >
-          Interaction
-        </Text>
-
-        <View
-          style={[
-            styles.sectionLine,
-            {
-              backgroundColor:
-                theme.accentLine,
-            },
-          ]}
-        />
-      </View>
-
-      <View style={styles.settingRow}>
-        <View style={styles.textContainer}>
-          <Text
-            style={[
-              styles.settingTitle,
-              { color: theme.text },
-            ]}
-          >
-            Haptic Feedback
-          </Text>
-
-          <Text
-            style={[
-              styles.settingSubtitle,
-              {
-                color:
-                  theme.textSecondary,
-              },
-            ]}
-          >
-            Vibrate slightly when drawing
-            cards and saving favorites.
-          </Text>
-        </View>
-
-        <Switch
-          value={enableHaptics}
-          onValueChange={toggleHaptics}
-          trackColor={{
-            false: theme.switchOff,
-            true: theme.accent,
-          }}
-          thumbColor={theme.white}
-        />
-      </View>
 
       </ScrollView>
 
@@ -1634,6 +1638,7 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     borderRadius: 14,
+    borderWidth: 2,
   },
 
   themePickerCard: {

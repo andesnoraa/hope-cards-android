@@ -11,7 +11,8 @@ export default function StackCard() {
         {
           backgroundColor:
             theme.cardBack,
-          borderColor: theme.accent,
+          borderColor:
+            theme.cardBackAccent,
           shadowColor: theme.shadow,
         },
       ]}
