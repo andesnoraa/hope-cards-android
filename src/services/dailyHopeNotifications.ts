@@ -35,7 +35,7 @@ export function formatReminderTime(
 ): string {
     const hour12 = hour % 12 || 12;
     const period =
-        hour >= 12 ? "PM" : "AM";
+        hour >= 12 ? "pm" : "am";
 
     return `${hour12}:${String(minute).padStart(2, "0")} ${period}`;
 }

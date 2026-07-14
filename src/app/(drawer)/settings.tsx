@@ -456,14 +456,14 @@ Your current favorites and settings will be replaced.`,
   return (
     <>
       <ScrollView
-      style={styles.container}
-      contentContainerStyle={
-        styles.contentContainer
-      }
-      showsVerticalScrollIndicator={
-        false
-      }
-    >
+        style={styles.container}
+        contentContainerStyle={
+          styles.contentContainer
+        }
+        showsVerticalScrollIndicator={
+          false
+        }
+      >
       <View style={styles.header}>
         <Text style={styles.title}>
           Settings
@@ -492,14 +492,6 @@ Your current favorites and settings will be replaced.`,
       </View>
 
       <View style={styles.settingRow}>
-        <View style={styles.settingIcon}>
-          <Ionicons
-            name="eye-outline"
-            size={21}
-            color="#C89B3C"
-          />
-        </View>
-
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Draw Button
@@ -527,7 +519,7 @@ Your current favorites and settings will be replaced.`,
       <View
         style={[
           styles.sectionHeader,
-          { marginTop: 36 },
+          { marginTop: 30 },
         ]}
       >
         <View style={styles.sectionIcon}>
@@ -546,14 +538,6 @@ Your current favorites and settings will be replaced.`,
       </View>
 
       <View style={styles.settingRow}>
-        <View style={styles.settingIcon}>
-          <Ionicons
-            name="sunny-outline"
-            size={21}
-            color="#C89B3C"
-          />
-        </View>
-
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Daily Reminder
@@ -587,14 +571,6 @@ Your current favorites and settings will be replaced.`,
           color: "#F3E8C5",
         }}
       >
-        <View style={styles.settingIcon}>
-          <Ionicons
-            name="time-outline"
-            size={21}
-            color="#C89B3C"
-          />
-        </View>
-
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Reminder Time
@@ -620,7 +596,7 @@ Your current favorites and settings will be replaced.`,
       <View
         style={[
           styles.sectionHeader,
-          { marginTop: 36 },
+          { marginTop: 30 },
         ]}
       >
         <View style={styles.sectionIcon}>
@@ -644,14 +620,6 @@ Your current favorites and settings will be replaced.`,
           color: "#F3E8C5",
         }}
       >
-        <View style={styles.settingIcon}>
-          <Ionicons
-            name="save-outline"
-            size={21}
-            color="#C89B3C"
-          />
-        </View>
-
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Backup Data
@@ -701,14 +669,6 @@ Your current favorites and settings will be replaced.`,
           color: "#F3E8C5",
         }}
       >
-        <View style={styles.settingIcon}>
-          <Ionicons
-            name="folder-open-outline"
-            size={21}
-            color="#C89B3C"
-          />
-        </View>
-
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Restore Data
@@ -732,7 +692,7 @@ Your current favorites and settings will be replaced.`,
       <View
         style={[
           styles.sectionHeader,
-          { marginTop: 36 },
+          { marginTop: 30 },
         ]}
       >
         <View style={styles.sectionIcon}>
@@ -751,14 +711,6 @@ Your current favorites and settings will be replaced.`,
       </View>
 
       <View style={styles.settingRow}>
-        <View style={styles.settingIcon}>
-          <Ionicons
-            name="phone-portrait-outline"
-            size={21}
-            color="#C89B3C"
-          />
-        </View>
-
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
             Haptic Feedback
@@ -998,7 +950,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 18,
+    marginBottom: 10,
   },
 
   sectionLabel: {
@@ -1050,18 +1002,20 @@ const styles = StyleSheet.create({
   settingRow: {
     flexDirection: "row",
     alignItems: "center",
-    paddingVertical: 18,
+    minHeight: 70,
+    marginLeft: 56,
+    paddingVertical: 14,
   },
 
   divider: {
     height: 1,
     backgroundColor: "#E7E2D8",
-    marginLeft: 0,
+    marginLeft: 56,
   },
 
   textContainer: {
     flex: 1,
-    marginRight: 16,
+    marginRight: 18,
   },
 
   settingTitle: {
@@ -1088,33 +1042,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontSize: 13,
     color: "#8C93A3",
-  },
-
-  settingIcon: {
-    width: 46,
-    height: 46,
-    borderRadius: 23,
-
-    backgroundColor: "#FFFFFF",
-
-    justifyContent: "center",
-    alignItems: "center",
-
-    marginRight: 20,
-
-    shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowRadius: 10,
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-
-    elevation: 3,
-  },
-
-  leadingIcon: {
-    marginRight: 18,
   },
 
   modalBackdrop: {
