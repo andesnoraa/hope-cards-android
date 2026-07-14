@@ -604,18 +604,27 @@ Your current favorites and settings will be replaced.`,
         </View>
 
         <View style={styles.themePreview}>
-          <View
-            style={[
-              styles.themeSwatch,
-              {
-                backgroundColor:
-                  selectedTheme.cardBack,
-                borderColor:
-                  selectedTheme
-                    .cardBackAccent,
-              },
-            ]}
-          />
+          <View style={styles.themePalettePreview}>
+            {[
+              selectedTheme.background,
+              selectedTheme.cardBack,
+              selectedTheme.accent,
+            ].map((color, index) => (
+              <View
+                key={`${selectedTheme.name}-${color}-${index}`}
+                style={[
+                  styles.themePalettePreviewDot,
+                  index > 0 &&
+                    styles.themePalettePreviewOverlap,
+                  {
+                    backgroundColor: color,
+                    borderColor:
+                      theme.background,
+                  },
+                ]}
+              />
+            ))}
+          </View>
 
           <Ionicons
             name="chevron-forward"
@@ -1636,11 +1645,21 @@ const styles = StyleSheet.create({
     gap: 10,
   },
 
-  themeSwatch: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
+  themePalettePreview: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingLeft: 4,
+  },
+
+  themePalettePreviewDot: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
     borderWidth: 2,
+  },
+
+  themePalettePreviewOverlap: {
+    marginLeft: -7,
   },
 
   themePickerCard: {
