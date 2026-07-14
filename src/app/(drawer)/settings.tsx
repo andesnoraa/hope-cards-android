@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Switch,
   Text,
+  TextInput,
   View,
 } from "react-native";
 
@@ -69,13 +70,15 @@ export default function SettingsScreen() {
     setTimePickerVisible,
   ] = useState(false);
 
-  const [pickerHour, setPickerHour] =
-    useState(8);
+  const [
+    pickerHourInput,
+    setPickerHourInput,
+  ] = useState("08");
 
   const [
-    pickerMinute,
-    setPickerMinute,
-  ] = useState(0);
+    pickerMinuteInput,
+    setPickerMinuteInput,
+  ] = useState("00");
 
   const [
     pickerPeriod,
@@ -176,7 +179,72 @@ export default function SettingsScreen() {
     return hour >= 12 ? "PM" : "AM";
   }
 
+  function sanitizeTimeInput(
+    value: string
+  ) {
+    return value
+      .replace(/[^0-9]/g, "")
+      .slice(0, 2);
+  }
+
+  function formatTimePart(value: number) {
+    return String(value).padStart(2, "0");
+  }
+
+  function getPickerHour() {
+    const parsed = Number.parseInt(
+      pickerHourInput,
+      10
+    );
+
+    if (Number.isNaN(parsed)) {
+      return 12;
+    }
+
+    return Math.min(
+      Math.max(parsed, 1),
+      12
+    );
+  }
+
+  function getPickerMinute() {
+    const parsed = Number.parseInt(
+      pickerMinuteInput,
+      10
+    );
+
+    if (Number.isNaN(parsed)) {
+      return 0;
+    }
+
+    return Math.min(
+      Math.max(parsed, 0),
+      59
+    );
+  }
+
+  function normalizePickerInputs() {
+    const hour = getPickerHour();
+    const minute = getPickerMinute();
+
+    setPickerHourInput(
+      formatTimePart(hour)
+    );
+
+    setPickerMinuteInput(
+      formatTimePart(minute)
+    );
+
+    return {
+      hour,
+      minute,
+    };
+  }
+
   function getHourFromPicker() {
+    const pickerHour =
+      getPickerHour();
+
     if (pickerPeriod === "AM") {
       return pickerHour === 12
         ? 0
@@ -189,14 +257,18 @@ export default function SettingsScreen() {
   }
 
   function openReminderTimePicker() {
-    setPickerHour(
-      getHourForPicker(
-        dailyHopeReminderHour
+    setPickerHourInput(
+      formatTimePart(
+        getHourForPicker(
+          dailyHopeReminderHour
+        )
       )
     );
 
-    setPickerMinute(
-      dailyHopeReminderMinute
+    setPickerMinuteInput(
+      formatTimePart(
+        dailyHopeReminderMinute
+      )
     );
 
     setPickerPeriod(
@@ -211,29 +283,35 @@ export default function SettingsScreen() {
   function adjustPickerHour(
     amount: number
   ) {
-    setPickerHour((current) => {
-      const next =
-        ((current - 1 + amount + 12) %
-          12) +
-        1;
+    const current = getPickerHour();
+    const next =
+      ((current - 1 + amount + 12) %
+        12) +
+      1;
 
-      return next;
-    });
+    setPickerHourInput(
+      formatTimePart(next)
+    );
   }
 
   function adjustPickerMinute(
     amount: number
   ) {
-    setPickerMinute((current) => {
-      return (
-        (current + amount + 60) % 60
-      );
-    });
+    const current = getPickerMinute();
+    const next =
+      (current + amount + 60) % 60;
+
+    setPickerMinuteInput(
+      formatTimePart(next)
+    );
   }
 
   async function saveReminderTime() {
+    const normalized =
+      normalizePickerInputs();
+
     const hour = getHourFromPicker();
-    const minute = pickerMinute;
+    const minute = normalized.minute;
 
     setDailyHopeReminderHour(hour);
     setDailyHopeReminderMinute(minute);
@@ -424,12 +502,12 @@ Your current favorites and settings will be replaced.`,
 
         <View style={styles.textContainer}>
           <Text style={styles.settingTitle}>
-            Show "Draw a Card" Button
+            Draw Button
           </Text>
 
           <Text style={styles.settingSubtitle}>
-            Hide the button and draw cards by
-            tapping the deck.
+            Show a button for drawing cards,
+            or tap the deck instead.
           </Text>
         </View>
 
@@ -750,12 +828,19 @@ Your current favorites and settings will be replaced.`,
                   />
                 </Pressable>
 
-                <Text style={styles.timeValue}>
-                  {String(pickerHour).padStart(
-                    2,
-                    "0"
-                  )}
-                </Text>
+                <TextInput
+                  value={pickerHourInput}
+                  onChangeText={(value) => {
+                    setPickerHourInput(
+                      sanitizeTimeInput(value)
+                    );
+                  }}
+                  onBlur={normalizePickerInputs}
+                  keyboardType="number-pad"
+                  maxLength={2}
+                  selectTextOnFocus
+                  style={styles.timeInput}
+                />
 
                 <Pressable
                   style={styles.stepButton}
@@ -789,11 +874,19 @@ Your current favorites and settings will be replaced.`,
                   />
                 </Pressable>
 
-                <Text style={styles.timeValue}>
-                  {String(
-                    pickerMinute
-                  ).padStart(2, "0")}
-                </Text>
+                <TextInput
+                  value={pickerMinuteInput}
+                  onChangeText={(value) => {
+                    setPickerMinuteInput(
+                      sanitizeTimeInput(value)
+                    );
+                  }}
+                  onBlur={normalizePickerInputs}
+                  keyboardType="number-pad"
+                  maxLength={2}
+                  selectTextOnFocus
+                  style={styles.timeInput}
+                />
 
                 <Pressable
                   style={styles.stepButton}
@@ -1080,13 +1173,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  timeValue: {
+  timeInput: {
     minWidth: 72,
+    height: 62,
     textAlign: "center",
     fontSize: 42,
     fontWeight: "700",
     color: "#1A2747",
     fontVariant: ["tabular-nums"],
+    borderRadius: 8,
+    backgroundColor: "#F8F6F2",
+    paddingHorizontal: 8,
   },
 
   timeColon: {

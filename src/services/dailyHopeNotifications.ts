@@ -33,16 +33,11 @@ export function formatReminderTime(
     hour: number,
     minute: number
 ): string {
-    const date = new Date();
-    date.setHours(hour, minute, 0, 0);
+    const hour12 = hour % 12 || 12;
+    const period =
+        hour >= 12 ? "PM" : "AM";
 
-    return new Intl.DateTimeFormat(
-        undefined,
-        {
-            hour: "numeric",
-            minute: "2-digit",
-        }
-    ).format(date);
+    return `${hour12}:${String(minute).padStart(2, "0")} ${period}`;
 }
 
 function isAndroidExpoGo(): boolean {
