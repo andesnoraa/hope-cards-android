@@ -6,8 +6,11 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { useAppTheme } from "../../theme/appTheme";
 
 export default function PrivacyPolicyScreen() {
+  const { theme } = useAppTheme();
+
   function openPrivacyPolicy() {
     Linking.openURL(
       "https://hope-cards-web.vercel.app/privacy"
@@ -16,19 +19,42 @@ export default function PrivacyPolicyScreen() {
 
   return (
     <ScrollView
-      style={styles.container}
+      style={[
+        styles.container,
+        {
+          backgroundColor:
+            theme.background,
+        },
+      ]}
       contentContainerStyle={styles.content}
       showsVerticalScrollIndicator={false}
     >
-      <Text style={styles.title}>
+      <Text
+        style={[
+          styles.title,
+          { color: theme.text },
+        ]}
+      >
         Privacy Policy
       </Text>
 
-      <Text style={styles.updated}>
+      <Text
+        style={[
+          styles.updated,
+          {
+            color: theme.textSecondary,
+          },
+        ]}
+      >
         Last updated: July 2026
       </Text>
 
-      <Text style={styles.description}>
+      <Text
+        style={[
+          styles.description,
+          { color: theme.cardText },
+        ]}
+      >
         Hope Cards respects your privacy.
         We are committed to protecting your
         personal information and providing
@@ -36,11 +62,16 @@ export default function PrivacyPolicyScreen() {
       </Text>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Information We Collect
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           Hope Cards does not collect,
           store, or transmit personal
           information such as your name,
@@ -51,11 +82,16 @@ export default function PrivacyPolicyScreen() {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Local Storage
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           Favorites and app preferences,
           including settings such as haptic
           feedback and the Draw Card button,
@@ -67,11 +103,16 @@ export default function PrivacyPolicyScreen() {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Sharing Bible Verses
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           When you choose to share a Bible
           verse, Hope Cards uses your
           device's built-in sharing menu.
@@ -83,11 +124,16 @@ export default function PrivacyPolicyScreen() {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Third-Party Services
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           Hope Cards does not use
           advertising services, analytics
           platforms, or third-party SDKs
@@ -97,11 +143,16 @@ export default function PrivacyPolicyScreen() {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Children's Privacy
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           Hope Cards is suitable for users
           of all ages and does not
           knowingly collect personal
@@ -111,11 +162,16 @@ export default function PrivacyPolicyScreen() {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Changes to This Privacy Policy
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           We may update this Privacy Policy
           from time to time. Any changes
           will be posted on this page and
@@ -124,11 +180,16 @@ export default function PrivacyPolicyScreen() {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Privacy Policy Website
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           A copy of this Privacy Policy is
           also available on our website:
         </Text>
@@ -137,18 +198,28 @@ export default function PrivacyPolicyScreen() {
           onPress={openPrivacyPolicy}
           activeOpacity={0.7}
         >
-          <Text style={styles.link}>
+          <Text
+            style={[
+              styles.link,
+              { color: theme.accent },
+            ]}
+          >
             https://hope-cards-web.vercel.app/privacy
           </Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
           Contact
         </Text>
 
-        <Text style={styles.body}>
+        <Text style={[styles.body, { color: theme.cardText }]}>
           If you have any questions about
           this Privacy Policy, please visit
           our website or contact the
@@ -157,7 +228,12 @@ export default function PrivacyPolicyScreen() {
         </Text>
       </View>
 
-      <Text style={styles.footer}>
+      <Text
+        style={[
+          styles.footer,
+          { color: theme.textTertiary },
+        ]}
+      >
         © 2026 Hope Cards. All rights
         reserved.
       </Text>
@@ -168,7 +244,6 @@ export default function PrivacyPolicyScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F8F6F2",
   },
 
   content: {
@@ -179,20 +254,17 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 34,
     fontWeight: "700",
-    color: "#1A2747",
   },
 
   updated: {
     marginTop: 6,
     fontSize: 16,
-    color: "#777",
   },
 
   description: {
     marginTop: 24,
     fontSize: 18,
     lineHeight: 30,
-    color: "#333",
   },
 
   section: {
@@ -202,21 +274,18 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 22,
     fontWeight: "700",
-    color: "#1A2747",
     marginBottom: 14,
   },
 
   body: {
     fontSize: 17,
     lineHeight: 28,
-    color: "#333",
   },
 
   link: {
     marginTop: 12,
     fontSize: 17,
     fontWeight: "600",
-    color: "#208AEF",
     textDecorationLine: "underline",
   },
 
@@ -224,6 +293,5 @@ const styles = StyleSheet.create({
     marginTop: 48,
     textAlign: "center",
     fontSize: 15,
-    color: "#999",
   },
 });

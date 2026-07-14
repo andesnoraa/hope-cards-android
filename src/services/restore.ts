@@ -29,5 +29,9 @@ export async function restoreBackup(
 
         enableHaptics:
             backup.settings.enableHaptics,
+
+        themeName:
+            backup.settings.themeName ??
+            DEFAULT_SETTINGS.themeName,
     });
 }

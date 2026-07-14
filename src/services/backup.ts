@@ -18,6 +18,16 @@ import {
     saveBackupInfo,
 } from "./backupInfo";
 
+import type {
+    AppThemeName,
+} from "../theme/appTheme";
+
+const THEME_NAMES: AppThemeName[] = [
+    "classic",
+    "serenity",
+    "stillWater",
+];
+
 export interface BackupData {
     version: 1;
 
@@ -28,6 +38,7 @@ export interface BackupData {
     settings: {
         showDrawButton: boolean;
         enableHaptics: boolean;
+        themeName?: AppThemeName;
 
         /**
          * Reserved for future versions.
@@ -61,6 +72,9 @@ export async function createBackup(): Promise<BackupData> {
 
             enableHaptics:
                 settings.enableHaptics,
+
+            themeName:
+                settings.themeName,
 
             // Default for now.
             // This will become the user's
@@ -243,6 +257,18 @@ export function validateBackup(
         typeof data.settings
             .enableHaptics !==
         "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        data.settings.themeName !==
+            undefined &&
+        !(
+            THEME_NAMES as string[]
+        ).includes(
+            data.settings.themeName
+        )
     ) {
         return false;
     }

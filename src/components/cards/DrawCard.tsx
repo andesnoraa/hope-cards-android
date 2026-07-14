@@ -39,6 +39,7 @@ import {
 import { getSettings } from "../../services/settings";
 
 import { shareVerse } from "../../services/share";
+import { useAppTheme } from "../../theme/appTheme";
 
 const CARD_SPRING = {
   damping: 28,
@@ -52,6 +53,8 @@ const BUTTON_SPRING = {
 };
 
 export default function DrawCard() {
+  const { theme } = useAppTheme();
+
   const [currentVerse, setCurrentVerse] =
     useState(() => getRandomVerse());
 
@@ -247,11 +250,24 @@ export default function DrawCard() {
           <Animated.View
             style={[
               styles.button,
+              {
+                backgroundColor:
+                  theme.primary,
+                borderColor:
+                  theme.accent,
+                shadowColor:
+                  theme.shadow,
+              },
               buttonAnimatedStyle,
             ]}
           >
             <Text
-              style={styles.buttonText}
+              style={[
+                styles.buttonText,
+                {
+                  color: theme.white,
+                },
+              ]}
             >
               {showingVerse
                 ? "Return to Deck"
@@ -279,17 +295,13 @@ const styles = StyleSheet.create({
     width: 270,
     height: 56,
 
-    backgroundColor: "#1A2747",
-
     borderRadius: 12,
 
     borderWidth: 2,
-    borderColor: "#C5A24C",
 
     justifyContent: "center",
     alignItems: "center",
 
-    shadowColor: "#000",
     shadowOpacity: 0.12,
     shadowRadius: 8,
     shadowOffset: {
@@ -301,8 +313,6 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#FFFFFF",
-
     fontSize: 18,
     fontWeight: "600",
 

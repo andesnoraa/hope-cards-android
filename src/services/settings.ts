@@ -1,5 +1,9 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import type {
+    AppThemeName,
+} from "../theme/appTheme";
+
 const SETTINGS_KEY = "hope_cards_settings";
 
 export type AppSettings = {
@@ -8,6 +12,7 @@ export type AppSettings = {
     dailyHopeReminderEnabled: boolean;
     dailyHopeReminderHour: number;
     dailyHopeReminderMinute: number;
+    themeName: AppThemeName;
 };
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -16,6 +21,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
     dailyHopeReminderEnabled: false,
     dailyHopeReminderHour: 8,
     dailyHopeReminderMinute: 0,
+    themeName: "classic",
 };
 
 export async function getSettings(): Promise<AppSettings> {

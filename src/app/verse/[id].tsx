@@ -29,8 +29,10 @@ import {
   selection,
   success,
 } from "../../services/haptics";
+import { useAppTheme } from "../../theme/appTheme";
 
 export default function VerseScreen() {
+  const { theme } = useAppTheme();
   const { id } = useLocalSearchParams();
 
   const verse = getVerseById(id as string);
@@ -83,8 +85,21 @@ export default function VerseScreen() {
           }}
         />
 
-        <View style={styles.container}>
-          <Text style={styles.title}>
+        <View
+          style={[
+            styles.container,
+            {
+              backgroundColor:
+                theme.background,
+            },
+          ]}
+        >
+          <Text
+            style={[
+              styles.title,
+              { color: theme.text },
+            ]}
+          >
             Verse not found
           </Text>
         </View>
@@ -101,24 +116,53 @@ export default function VerseScreen() {
       />
 
       <ScrollView
-        style={styles.container}
+        style={[
+          styles.container,
+          {
+            backgroundColor:
+              theme.background,
+          },
+        ]}
         contentContainerStyle={styles.content}
       >
         <Animated.View
           entering={FadeIn.duration(300)}
           style={styles.contentWrapper}
         >
-          <Text style={styles.category}>
+          <Text
+            style={[
+              styles.category,
+              { color: theme.accent },
+            ]}
+          >
             {verse.category.toUpperCase()}
           </Text>
 
-          <View style={styles.divider} />
+          <View
+            style={[
+              styles.divider,
+              {
+                backgroundColor:
+                  theme.accent,
+              },
+            ]}
+          />
 
-          <Text style={styles.reference}>
+          <Text
+            style={[
+              styles.reference,
+              { color: theme.text },
+            ]}
+          >
             {verse.reference}
           </Text>
 
-          <Text style={styles.verse}>
+          <Text
+            style={[
+              styles.verse,
+              { color: theme.cardText },
+            ]}
+          >
             {verse.verse}
           </Text>
 
@@ -136,8 +180,8 @@ export default function VerseScreen() {
               }
               color={
                 favorite
-                  ? "#C0392B"
-                  : "#C5A24C"
+                  ? theme.danger
+                  : theme.accent
               }
               onPress={handleToggleFavorite}
             />
@@ -145,7 +189,7 @@ export default function VerseScreen() {
             <ActionButton
               icon="share-outline"
               label="Share"
-              color="#C5A24C"
+              color={theme.accent}
               onPress={handleShare}
             />
           </View>
@@ -154,17 +198,22 @@ export default function VerseScreen() {
             style={styles.translationSection}
           >
             <Text
-              style={
-                styles.translationLabel
-              }
+              style={[
+                styles.translationLabel,
+                {
+                  color:
+                    theme.textTertiary,
+                },
+              ]}
             >
               Translation
             </Text>
 
             <Text
-              style={
-                styles.translationText
-              }
+              style={[
+                styles.translationText,
+                { color: theme.text },
+              ]}
             >
               {verse.translation}
             </Text>
@@ -178,7 +227,6 @@ export default function VerseScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F8F6F2",
   },
 
   content: {
@@ -196,7 +244,6 @@ const styles = StyleSheet.create({
   category: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#C5A24C",
     letterSpacing: 3,
     marginBottom: 10,
   },
@@ -205,14 +252,12 @@ const styles = StyleSheet.create({
     width: 80,
     height: 3,
     borderRadius: 2,
-    backgroundColor: "#D4AF37",
     marginBottom: 26,
   },
 
   reference: {
     fontSize: 30,
     fontWeight: "700",
-    color: "#1A2747",
     textAlign: "center",
   },
 
@@ -220,7 +265,6 @@ const styles = StyleSheet.create({
     marginTop: 34,
     fontSize: 23,
     lineHeight: 44,
-    color: "#273043",
     textAlign: "center",
     fontFamily:
       "SourceSerif4_400Regular",
@@ -242,7 +286,6 @@ const styles = StyleSheet.create({
 
   translationLabel: {
     fontSize: 13,
-    color: "#8A8A8A",
     letterSpacing: 1.5,
     textTransform: "uppercase",
     marginBottom: 8,
@@ -251,14 +294,12 @@ const styles = StyleSheet.create({
   translationText: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#1A2747",
     textAlign: "center",
   },
 
   title: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#1A2747",
     textAlign: "center",
   },
 });

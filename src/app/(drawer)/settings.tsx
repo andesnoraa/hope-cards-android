@@ -40,10 +40,22 @@ import {
 } from "../../services/settings";
 
 import {
+  THEME_OPTIONS,
+  useAppTheme,
+  type AppThemeName,
+} from "../../theme/appTheme";
+
+import {
   formatRelativeDate,
 } from "../../utils/formatDate";
 
 export default function SettingsScreen() {
+  const {
+    theme,
+    themeName,
+    setThemeName,
+  } = useAppTheme();
+
   const [showDrawButton, setShowDrawButton] =
     useState(true);
 
@@ -71,6 +83,11 @@ export default function SettingsScreen() {
   ] = useState(false);
 
   const [
+    themePickerVisible,
+    setThemePickerVisible,
+  ] = useState(false);
+
+  const [
     pickerHourInput,
     setPickerHourInput,
   ] = useState("08");
@@ -87,6 +104,12 @@ export default function SettingsScreen() {
 
   const [backupInfo, setBackupInfo] =
     useState<BackupInfo | null>(null);
+
+  const selectedTheme =
+    THEME_OPTIONS.find(
+      (option) =>
+        option.name === themeName
+    ) ?? THEME_OPTIONS[0];
 
   useEffect(() => {
     async function loadSettings() {
@@ -139,6 +162,21 @@ export default function SettingsScreen() {
 
     await updateSettings({
       enableHaptics: value,
+    });
+  }
+
+  function chooseTheme() {
+    setThemePickerVisible(true);
+  }
+
+  async function selectTheme(
+    nextTheme: AppThemeName
+  ) {
+    setThemeName(nextTheme);
+    setThemePickerVisible(false);
+
+    await updateSettings({
+      themeName: nextTheme,
     });
   }
 
@@ -456,7 +494,13 @@ Your current favorites and settings will be replaced.`,
   return (
     <>
       <ScrollView
-        style={styles.container}
+        style={[
+          styles.container,
+          {
+            backgroundColor:
+              theme.background,
+          },
+        ]}
         contentContainerStyle={
           styles.contentContainer
         }
@@ -465,39 +509,88 @@ Your current favorites and settings will be replaced.`,
         }
       >
       <View style={styles.header}>
-        <Text style={styles.title}>
+        <Text
+          style={[
+            styles.title,
+            { color: theme.text },
+          ]}
+        >
           Settings
         </Text>
 
-        <Text style={styles.subtitle}>
+        <Text
+          style={[
+            styles.subtitle,
+            {
+              color:
+                theme.textSecondary,
+            },
+          ]}
+        >
           Customize your Hope Cards
           experience.
         </Text>
       </View>
 
       <View style={styles.sectionHeader}>
-        <View style={styles.sectionIcon}>
+        <View
+          style={[
+            styles.sectionIcon,
+            {
+              backgroundColor:
+                theme.accent,
+              shadowColor:
+                theme.shadow,
+            },
+          ]}
+        >
           <Ionicons
             name="sparkles-outline"
             size={18}
-            color="#FFFFFF"
+            color={theme.white}
           />
         </View>
 
-        <Text style={styles.sectionLabel}>
+        <Text
+          style={[
+            styles.sectionLabel,
+            { color: theme.accent },
+          ]}
+        >
           Appearance
         </Text>
 
-        <View style={styles.sectionLine} />
+        <View
+          style={[
+            styles.sectionLine,
+            {
+              backgroundColor:
+                theme.accentLine,
+            },
+          ]}
+        />
       </View>
 
       <View style={styles.settingRow}>
         <View style={styles.textContainer}>
-          <Text style={styles.settingTitle}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
             Draw Button
           </Text>
 
-          <Text style={styles.settingSubtitle}>
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
             Show a button for drawing cards,
             or tap the deck instead.
           </Text>
@@ -507,14 +600,81 @@ Your current favorites and settings will be replaced.`,
           value={showDrawButton}
           onValueChange={toggleDrawButton}
           trackColor={{
-            false: "#D9D9D9",
-            true: "#D4AF37",
+            false: theme.switchOff,
+            true: theme.accent,
           }}
-          thumbColor="#FFFFFF"
+          thumbColor={theme.white}
         />
       </View>
 
-      <View style={styles.divider} />
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
+
+      <Pressable
+        style={styles.settingRow}
+        onPress={chooseTheme}
+        android_ripple={{
+          color: theme.accentSoft,
+        }}
+      >
+        <View style={styles.textContainer}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
+            Theme
+          </Text>
+
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            {selectedTheme.label}
+          </Text>
+        </View>
+
+        <View style={styles.themePreview}>
+          <View
+            style={[
+              styles.themeSwatch,
+              {
+                backgroundColor:
+                  selectedTheme.accent,
+              },
+            ]}
+          />
+
+          <Ionicons
+            name="chevron-forward"
+            size={22}
+            color={theme.textTertiary}
+          />
+        </View>
+      </Pressable>
+
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
 
       <View
         style={[
@@ -522,28 +682,64 @@ Your current favorites and settings will be replaced.`,
           { marginTop: 30 },
         ]}
       >
-        <View style={styles.sectionIcon}>
+        <View
+          style={[
+            styles.sectionIcon,
+            {
+              backgroundColor:
+                theme.accent,
+              shadowColor:
+                theme.shadow,
+            },
+          ]}
+        >
           <Ionicons
             name="notifications-outline"
             size={18}
-            color="#FFFFFF"
+            color={theme.white}
           />
         </View>
 
-        <Text style={styles.sectionLabel}>
+        <Text
+          style={[
+            styles.sectionLabel,
+            { color: theme.accent },
+          ]}
+        >
           Daily Hope
         </Text>
 
-        <View style={styles.sectionLine} />
+        <View
+          style={[
+            styles.sectionLine,
+            {
+              backgroundColor:
+                theme.accentLine,
+            },
+          ]}
+        />
       </View>
 
       <View style={styles.settingRow}>
         <View style={styles.textContainer}>
-          <Text style={styles.settingTitle}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
             Daily Reminder
           </Text>
 
-          <Text style={styles.settingSubtitle}>
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
             Receive a gentle reminder to
             open today's hope.
           </Text>
@@ -555,28 +751,49 @@ Your current favorites and settings will be replaced.`,
             toggleDailyHopeReminder
           }
           trackColor={{
-            false: "#D9D9D9",
-            true: "#D4AF37",
+            false: theme.switchOff,
+            true: theme.accent,
           }}
-          thumbColor="#FFFFFF"
+          thumbColor={theme.white}
         />
       </View>
 
-      <View style={styles.divider} />
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
 
       <Pressable
         style={styles.settingRow}
         onPress={openReminderTimePicker}
         android_ripple={{
-          color: "#F3E8C5",
+          color: theme.accentSoft,
         }}
       >
         <View style={styles.textContainer}>
-          <Text style={styles.settingTitle}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
             Reminder Time
           </Text>
 
-          <Text style={styles.settingSubtitle}>
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
             {formatReminderTime(
               dailyHopeReminderHour,
               dailyHopeReminderMinute
@@ -587,11 +804,19 @@ Your current favorites and settings will be replaced.`,
         <Ionicons
           name="chevron-forward"
           size={22}
-          color="#8C93A3"
+          color={theme.textTertiary}
         />
       </Pressable>
 
-      <View style={styles.divider} />
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
 
       <View
         style={[
@@ -599,45 +824,94 @@ Your current favorites and settings will be replaced.`,
           { marginTop: 30 },
         ]}
       >
-        <View style={styles.sectionIcon}>
+        <View
+          style={[
+            styles.sectionIcon,
+            {
+              backgroundColor:
+                theme.accent,
+              shadowColor:
+                theme.shadow,
+            },
+          ]}
+        >
           <Ionicons
             name="cloud-upload-outline"
             size={18}
-            color="#FFFFFF"
+            color={theme.white}
           />
         </View>
 
-        <Text style={styles.sectionLabel}>
+        <Text
+          style={[
+            styles.sectionLabel,
+            { color: theme.accent },
+          ]}
+        >
           Backup & Restore
         </Text>
 
-        <View style={styles.sectionLine} />
+        <View
+          style={[
+            styles.sectionLine,
+            {
+              backgroundColor:
+                theme.accentLine,
+            },
+          ]}
+        />
       </View>
       <Pressable
         style={styles.settingRow}
         onPress={handleBackup}
         android_ripple={{
-          color: "#F3E8C5",
+          color: theme.accentSoft,
         }}
       >
         <View style={styles.textContainer}>
-          <Text style={styles.settingTitle}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
             Backup Data
           </Text>
 
           {backupInfo ? (
             <>
-              <Text style={styles.settingSubtitle}>
+              <Text
+                style={[
+                  styles.settingSubtitle,
+                  {
+                    color:
+                      theme.textSecondary,
+                  },
+                ]}
+              >
                 Last backup
               </Text>
 
-              <Text style={styles.backupDate}>
+              <Text
+                style={[
+                  styles.backupDate,
+                  { color: theme.text },
+                ]}
+              >
                 {formatRelativeDate(
                   backupInfo.createdAt
                 )}
               </Text>
 
-              <Text style={styles.backupCount}>
+              <Text
+                style={[
+                  styles.backupCount,
+                  {
+                    color:
+                      theme.textTertiary,
+                  },
+                ]}
+              >
                 {backupInfo.favoriteCount}{" "}
                 favorite
                 {backupInfo.favoriteCount === 1
@@ -647,7 +921,15 @@ Your current favorites and settings will be replaced.`,
               </Text>
             </>
           ) : (
-            <Text style={styles.settingSubtitle}>
+            <Text
+              style={[
+                styles.settingSubtitle,
+                {
+                  color:
+                    theme.textSecondary,
+                },
+              ]}
+            >
               No backups created yet.
             </Text>
           )}
@@ -656,25 +938,46 @@ Your current favorites and settings will be replaced.`,
         <Ionicons
           name="chevron-forward"
           size={22}
-          color="#8C93A3"
+          color={theme.textTertiary}
         />
       </Pressable>
 
-      <View style={styles.divider} />
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
 
       <Pressable
         style={styles.settingRow}
         onPress={handleRestore}
         android_ripple={{
-          color: "#F3E8C5",
+          color: theme.accentSoft,
         }}
       >
         <View style={styles.textContainer}>
-          <Text style={styles.settingTitle}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
             Restore Data
           </Text>
 
-          <Text style={styles.settingSubtitle}>
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
             Restore your data from a backup
             file.
           </Text>
@@ -683,11 +986,19 @@ Your current favorites and settings will be replaced.`,
         <Ionicons
           name="chevron-forward"
           size={22}
-          color="#8C93A3"
+          color={theme.textTertiary}
         />
       </Pressable>
 
-      <View style={styles.divider} />
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
 
       <View
         style={[
@@ -695,28 +1006,64 @@ Your current favorites and settings will be replaced.`,
           { marginTop: 30 },
         ]}
       >
-        <View style={styles.sectionIcon}>
+        <View
+          style={[
+            styles.sectionIcon,
+            {
+              backgroundColor:
+                theme.accent,
+              shadowColor:
+                theme.shadow,
+            },
+          ]}
+        >
           <Ionicons
             name="hand-left-outline"
             size={18}
-            color="#FFFFFF"
+            color={theme.white}
           />
         </View>
 
-        <Text style={styles.sectionLabel}>
+        <Text
+          style={[
+            styles.sectionLabel,
+            { color: theme.accent },
+          ]}
+        >
           Interaction
         </Text>
 
-        <View style={styles.sectionLine} />
+        <View
+          style={[
+            styles.sectionLine,
+            {
+              backgroundColor:
+                theme.accentLine,
+            },
+          ]}
+        />
       </View>
 
       <View style={styles.settingRow}>
         <View style={styles.textContainer}>
-          <Text style={styles.settingTitle}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
             Haptic Feedback
           </Text>
 
-          <Text style={styles.settingSubtitle}>
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
             Vibrate slightly when drawing
             cards and saving favorites.
           </Text>
@@ -726,14 +1073,180 @@ Your current favorites and settings will be replaced.`,
           value={enableHaptics}
           onValueChange={toggleHaptics}
           trackColor={{
-            false: "#D9D9D9",
-            true: "#D4AF37",
+            false: theme.switchOff,
+            true: theme.accent,
           }}
-          thumbColor="#FFFFFF"
+          thumbColor={theme.white}
         />
       </View>
 
       </ScrollView>
+
+      <Modal
+        transparent
+        visible={themePickerVisible}
+        animationType="fade"
+        onRequestClose={() => {
+          setThemePickerVisible(false);
+        }}
+      >
+        <View style={styles.modalBackdrop}>
+          <View
+            style={[
+              styles.themePickerCard,
+              {
+                backgroundColor:
+                  theme.surface,
+              },
+            ]}
+          >
+            <View style={styles.modalHeader}>
+              <View style={styles.themeModalCopy}>
+                <Text
+                  style={[
+                    styles.modalTitle,
+                    { color: theme.text },
+                  ]}
+                >
+                  Theme
+                </Text>
+
+                <Text
+                  style={[
+                    styles.modalSubtitle,
+                    {
+                      color:
+                        theme.textSecondary,
+                    },
+                  ]}
+                >
+                  Choose a color scheme.
+                </Text>
+              </View>
+
+              <Pressable
+                style={[
+                  styles.iconButton,
+                  {
+                    backgroundColor:
+                      theme.accentSoft,
+                  },
+                ]}
+                onPress={() => {
+                  setThemePickerVisible(false);
+                }}
+                hitSlop={8}
+              >
+                <Ionicons
+                  name="close"
+                  size={22}
+                  color={theme.text}
+                />
+              </Pressable>
+            </View>
+
+            <View style={styles.themeOptionList}>
+              {THEME_OPTIONS.map((option) => {
+                const selected =
+                  option.name === themeName;
+
+                return (
+                  <Pressable
+                    key={option.name}
+                    style={[
+                      styles.themeOptionCard,
+                      {
+                        backgroundColor:
+                          option.background,
+                        borderColor: selected
+                          ? option.accent
+                          : option.divider,
+                      },
+                    ]}
+                    onPress={() =>
+                      selectTheme(option.name)
+                    }
+                  >
+                    <View
+                      style={
+                        styles.themeOptionHeader
+                      }
+                    >
+                      <View
+                        style={
+                          styles.themePalette
+                        }
+                      >
+                        {[
+                          option.text,
+                          option.accent,
+                          option.cardBack,
+                        ].map((color, index) => (
+                          <View
+                            key={`${option.name}-${color}-${index}`}
+                            style={[
+                              styles.themePaletteDot,
+                              {
+                                backgroundColor:
+                                  color,
+                              },
+                            ]}
+                          />
+                        ))}
+                      </View>
+
+                      <View
+                        style={[
+                          styles.themeCheck,
+                          {
+                            borderColor:
+                              selected
+                                ? option.accent
+                                : option.divider,
+                            backgroundColor:
+                              selected
+                                ? option.accent
+                                : option.surface,
+                          },
+                        ]}
+                      >
+                        {selected ? (
+                          <Ionicons
+                            name="checkmark"
+                            size={16}
+                            color={option.white}
+                          />
+                        ) : null}
+                      </View>
+                    </View>
+
+                    <Text
+                      style={[
+                        styles.themeOptionTitle,
+                        { color: option.text },
+                      ]}
+                    >
+                      {option.label}
+                    </Text>
+
+                    <Text
+                      style={[
+                        styles.themeOptionDescription,
+                        {
+                          color:
+                            option.textSecondary,
+                        },
+                      ]}
+                    >
+                      {option.description}
+                    </Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+          </View>
+        </View>
+      </Modal>
 
       <Modal
         transparent
@@ -744,14 +1257,33 @@ Your current favorites and settings will be replaced.`,
         }}
       >
         <View style={styles.modalBackdrop}>
-          <View style={styles.timePickerCard}>
+          <View
+            style={[
+              styles.timePickerCard,
+              {
+                backgroundColor:
+                  theme.surface,
+              },
+            ]}
+          >
             <View style={styles.modalHeader}>
-              <Text style={styles.modalTitle}>
+              <Text
+                style={[
+                  styles.modalTitle,
+                  { color: theme.text },
+                ]}
+              >
                 Reminder Time
               </Text>
 
               <Pressable
-                style={styles.iconButton}
+                style={[
+                  styles.iconButton,
+                  {
+                    backgroundColor:
+                      theme.accentSoft,
+                  },
+                ]}
                 onPress={() => {
                   setTimePickerVisible(false);
                 }}
@@ -760,7 +1292,7 @@ Your current favorites and settings will be replaced.`,
                 <Ionicons
                   name="close"
                   size={22}
-                  color="#1A2747"
+                  color={theme.text}
                 />
               </Pressable>
             </View>
@@ -776,7 +1308,7 @@ Your current favorites and settings will be replaced.`,
                   <Ionicons
                     name="chevron-up"
                     size={24}
-                    color="#C89B3C"
+                    color={theme.accent}
                   />
                 </Pressable>
 
@@ -791,7 +1323,14 @@ Your current favorites and settings will be replaced.`,
                   keyboardType="number-pad"
                   maxLength={2}
                   selectTextOnFocus
-                  style={styles.timeInput}
+                  style={[
+                    styles.timeInput,
+                    {
+                      color: theme.text,
+                      backgroundColor:
+                        theme.background,
+                    },
+                  ]}
                 />
 
                 <Pressable
@@ -803,12 +1342,17 @@ Your current favorites and settings will be replaced.`,
                   <Ionicons
                     name="chevron-down"
                     size={24}
-                    color="#C89B3C"
+                    color={theme.accent}
                   />
                 </Pressable>
               </View>
 
-              <Text style={styles.timeColon}>
+              <Text
+                style={[
+                  styles.timeColon,
+                  { color: theme.accent },
+                ]}
+              >
                 :
               </Text>
 
@@ -822,7 +1366,7 @@ Your current favorites and settings will be replaced.`,
                   <Ionicons
                     name="chevron-up"
                     size={24}
-                    color="#C89B3C"
+                    color={theme.accent}
                   />
                 </Pressable>
 
@@ -837,7 +1381,14 @@ Your current favorites and settings will be replaced.`,
                   keyboardType="number-pad"
                   maxLength={2}
                   selectTextOnFocus
-                  style={styles.timeInput}
+                  style={[
+                    styles.timeInput,
+                    {
+                      color: theme.text,
+                      backgroundColor:
+                        theme.background,
+                    },
+                  ]}
                 />
 
                 <Pressable
@@ -849,7 +1400,7 @@ Your current favorites and settings will be replaced.`,
                   <Ionicons
                     name="chevron-down"
                     size={24}
-                    color="#C89B3C"
+                    color={theme.accent}
                   />
                 </Pressable>
               </View>
@@ -861,9 +1412,16 @@ Your current favorites and settings will be replaced.`,
                       key={period}
                       style={[
                         styles.periodButton,
+                        {
+                          backgroundColor:
+                            theme.background,
+                        },
                         pickerPeriod ===
                           period &&
-                          styles.periodButtonActive,
+                          {
+                            backgroundColor:
+                              theme.text,
+                          },
                       ]}
                       onPress={() => {
                         setPickerPeriod(
@@ -874,9 +1432,16 @@ Your current favorites and settings will be replaced.`,
                       <Text
                         style={[
                           styles.periodText,
+                          {
+                            color:
+                              theme.cardMuted,
+                          },
                           pickerPeriod ===
                             period &&
-                            styles.periodTextActive,
+                            {
+                              color:
+                                theme.white,
+                            },
                         ]}
                       >
                         {period}
@@ -889,20 +1454,35 @@ Your current favorites and settings will be replaced.`,
 
             <View style={styles.modalActions}>
               <Pressable
-                style={styles.secondaryButton}
+                style={[
+                  styles.secondaryButton,
+                  {
+                    backgroundColor:
+                      theme.background,
+                  },
+                ]}
                 onPress={() => {
                   setTimePickerVisible(false);
                 }}
               >
                 <Text
-                  style={styles.secondaryButtonText}
+                  style={[
+                    styles.secondaryButtonText,
+                    { color: theme.text },
+                  ]}
                 >
                   Cancel
                 </Text>
               </Pressable>
 
               <Pressable
-                style={styles.primaryButton}
+                style={[
+                  styles.primaryButton,
+                  {
+                    backgroundColor:
+                      theme.accent,
+                  },
+                ]}
                 onPress={saveReminderTime}
               >
                 <Text
@@ -1044,6 +1624,85 @@ const styles = StyleSheet.create({
     color: "#8C93A3",
   },
 
+  themePreview: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+
+  themeSwatch: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+  },
+
+  themePickerCard: {
+    borderRadius: 8,
+    padding: 22,
+  },
+
+  themeModalCopy: {
+    flex: 1,
+    marginRight: 18,
+  },
+
+  modalSubtitle: {
+    marginTop: 6,
+    fontSize: 16,
+    lineHeight: 22,
+  },
+
+  themeOptionList: {
+    gap: 12,
+  },
+
+  themeOptionCard: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 16,
+  },
+
+  themeOptionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 12,
+  },
+
+  themePalette: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  themePaletteDot: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    marginRight: -6,
+    borderWidth: 2,
+    borderColor: "#FFFFFF",
+  },
+
+  themeCheck: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  themeOptionTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+  },
+
+  themeOptionDescription: {
+    marginTop: 4,
+    fontSize: 14,
+    lineHeight: 20,
+  },
+
   modalBackdrop: {
     flex: 1,
     justifyContent: "center",
@@ -1133,18 +1792,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F6F2",
   },
 
-  periodButtonActive: {
-    backgroundColor: "#1A2747",
-  },
-
   periodText: {
     fontSize: 15,
     fontWeight: "700",
     color: "#7A8292",
-  },
-
-  periodTextActive: {
-    color: "#FFFFFF",
   },
 
   modalActions: {

@@ -1,15 +1,40 @@
 import { StyleSheet, Text, View } from "react-native";
+import { useAppTheme } from "../../theme/appTheme";
 
 type Props = {
   title: string;
 };
 
 function PlaceholderScreen({ title }: Props) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+  const { theme } = useAppTheme();
 
-      <Text style={styles.subtitle}>
+  return (
+    <View
+      style={[
+        styles.container,
+        {
+          backgroundColor:
+            theme.background,
+        },
+      ]}
+    >
+      <Text
+        style={[
+          styles.title,
+          { color: theme.text },
+        ]}
+      >
+        {title}
+      </Text>
+
+      <Text
+        style={[
+          styles.subtitle,
+          {
+            color: theme.textSecondary,
+          },
+        ]}
+      >
         Coming Soon
       </Text>
     </View>
@@ -21,19 +46,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F8F6F2",
   },
 
   title: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#1A2747",
   },
 
   subtitle: {
     marginTop: 12,
     fontSize: 18,
-    color: "#666",
   },
 });
 

@@ -1,15 +1,60 @@
 import { StyleSheet, Text, View } from "react-native";
+import { useAppTheme } from "../../theme/appTheme";
 
 export default function CardBack() {
+  const { theme } = useAppTheme();
+
   return (
-    <View style={styles.card}>
-      <View style={styles.innerBorder} />
+    <View
+      style={[
+        styles.card,
+        {
+          backgroundColor:
+            theme.cardBack,
+          borderColor: theme.accent,
+          shadowColor: theme.shadow,
+        },
+      ]}
+    >
+      <View
+        style={[
+          styles.innerBorder,
+          {
+            borderColor:
+              theme.accentLine,
+          },
+        ]}
+      />
 
-      <Text style={styles.cross}>✝</Text>
+      <Text
+        style={[
+          styles.cross,
+          { color: theme.accent },
+        ]}
+      >
+        ✝
+      </Text>
 
-      <Text style={styles.title}>HOPE</Text>
+      <Text
+        style={[
+          styles.title,
+          {
+            color:
+              theme.background,
+          },
+        ]}
+      >
+        HOPE
+      </Text>
 
-      <Text style={styles.subtitle}>CARDS</Text>
+      <Text
+        style={[
+          styles.subtitle,
+          { color: theme.accent },
+        ]}
+      >
+        CARDS
+      </Text>
     </View>
   );
 }
@@ -19,17 +64,12 @@ const styles = StyleSheet.create({
     width: 345,
     height: 500,
 
-    backgroundColor: "#1A2747",
-
     borderRadius: 34,
 
     justifyContent: "center",
     alignItems: "center",
 
     borderWidth: 1.5,
-    borderColor: "#C5A24C",
-
-    shadowColor: "#000",
     shadowOpacity: 0.08,
     shadowRadius: 20,
     shadowOffset: {
@@ -52,13 +92,10 @@ const styles = StyleSheet.create({
 
     borderWidth: 1,
 
-    borderColor: "rgba(197,162,76,0.45)",
   },
 
   cross: {
     fontSize: 62,
-
-    color: "#D4AF37",
 
     marginBottom: 16,
 
@@ -66,8 +103,6 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: "#F8F6F2",
-
     fontFamily: "CormorantGaramond-Bold",
 
     fontSize: 68,
@@ -79,8 +114,6 @@ const styles = StyleSheet.create({
 
   subtitle: {
     marginTop: 4,
-
-    color: "#C5A24C",
 
     fontSize: 20,
 

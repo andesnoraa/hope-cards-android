@@ -8,6 +8,7 @@ import {
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import type { Verse } from "../../types/verse";
+import { useAppTheme } from "../../theme/appTheme";
 
 type Props = {
   verse: Verse;
@@ -18,35 +19,58 @@ export default function FavoriteCard({
   verse,
   onPress,
 }: Props) {
+  const { theme } = useAppTheme();
+
   return (
     <Pressable
       style={styles.container}
       onPress={onPress}
     >
-      <Text style={styles.category}>
+      <Text
+        style={[
+          styles.category,
+          { color: theme.accent },
+        ]}
+      >
         {verse.category.toUpperCase()}
       </Text>
 
       <Text
-        style={styles.verse}
+        style={[
+          styles.verse,
+          { color: theme.cardText },
+        ]}
         numberOfLines={2}
       >
         {verse.verse}
       </Text>
 
       <View style={styles.footer}>
-        <Text style={styles.reference}>
+        <Text
+          style={[
+            styles.reference,
+            { color: theme.text },
+          ]}
+        >
           {verse.reference}
         </Text>
 
         <Ionicons
           name="chevron-forward"
           size={18}
-          color="#9AA0AA"
+          color={theme.textTertiary}
         />
       </View>
 
-      <View style={styles.divider} />
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
     </Pressable>
   );
 }
@@ -57,7 +81,6 @@ const styles = StyleSheet.create({
   },
 
   category: {
-    color: "#C5A24C",
     fontSize: 13,
     fontWeight: "700",
     letterSpacing: 2.5,
@@ -65,7 +88,6 @@ const styles = StyleSheet.create({
   },
 
   verse: {
-    color: "#273043",
     fontSize: 19,
     lineHeight: 30,
     marginBottom: 18,
@@ -79,13 +101,11 @@ const styles = StyleSheet.create({
   },
 
   reference: {
-    color: "#1A2747",
     fontSize: 18,
     fontWeight: "700",
   },
 
   divider: {
     height: StyleSheet.hairlineWidth,
-    backgroundColor: "#DDD8CC",
   },
 });

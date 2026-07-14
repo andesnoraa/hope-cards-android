@@ -1,7 +1,13 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Drawer from "expo-router/drawer";
 
+import {
+  useAppTheme,
+} from "../../theme/appTheme";
+
 export default function DrawerLayout() {
+  const { theme } = useAppTheme();
+
   return (
     <Drawer
       screenOptions={{
@@ -12,31 +18,33 @@ export default function DrawerLayout() {
         headerTitleStyle: {
           fontSize: 24,
           fontWeight: "700",
-          color: "#1A2747",
+          color: theme.text,
           letterSpacing: 0.3,
         },
 
         headerStyle: {
-          backgroundColor: "#F8F6F2",
+          backgroundColor: theme.background,
         },
 
         headerShadowVisible: false,
 
-        headerTintColor: "#1A2747",
+        headerTintColor: theme.text,
 
         sceneStyle: {
-          backgroundColor: "#F8F6F2",
+          backgroundColor: theme.background,
         },
 
         drawerStyle: {
-          backgroundColor: "#F8F6F2",
+          backgroundColor: theme.background,
           width: 305,
         },
 
-        drawerActiveTintColor: "#C89B3C",
-        drawerInactiveTintColor: "#273043",
+        drawerActiveTintColor: theme.accent,
+        drawerInactiveTintColor:
+          theme.cardText,
 
-        drawerActiveBackgroundColor: "#F5EAC8",
+        drawerActiveBackgroundColor:
+          theme.drawerActiveBackground,
 
         drawerItemStyle: {
           marginHorizontal: 12,

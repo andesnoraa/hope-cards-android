@@ -15,8 +15,11 @@ import {
 } from "../../services/favorites";
 
 import type { Verse } from "../../types/verse";
+import { useAppTheme } from "../../theme/appTheme";
 
 export default function FavoritesScreen() {
+  const { theme } = useAppTheme();
+
   const [favorites, setFavorites] = useState<Verse[]>([]);
 
   useFocusEffect(
@@ -34,19 +37,40 @@ export default function FavoritesScreen() {
 
   if (favorites.length === 0) {
     return (
-      <View style={styles.emptyContainer}>
+      <View
+        style={[
+          styles.emptyContainer,
+          {
+            backgroundColor:
+              theme.background,
+          },
+        ]}
+      >
         <Ionicons
           name="heart"
           size={72}
-          color="#D83A2E"
+          color={theme.danger}
           style={styles.emptyIcon}
         />
 
-        <Text style={styles.emptyTitle}>
+        <Text
+          style={[
+            styles.emptyTitle,
+            { color: theme.text },
+          ]}
+        >
           No Favorites Yet
         </Text>
 
-        <Text style={styles.emptySubtitle}>
+        <Text
+          style={[
+            styles.emptySubtitle,
+            {
+              color:
+                theme.textSecondary,
+            },
+          ]}
+        >
           Save verses you love and they'll appear here.
         </Text>
       </View>
@@ -60,6 +84,10 @@ export default function FavoritesScreen() {
         item.id.toString()
       }
       contentContainerStyle={styles.list}
+      style={{
+        backgroundColor:
+          theme.background,
+      }}
       showsVerticalScrollIndicator={false}
       renderItem={({ item }) => (
         <FavoriteCard
@@ -79,13 +107,10 @@ const styles = StyleSheet.create({
 
     padding: 20,
 
-    backgroundColor: "#F8F6F2",
   },
 
   emptyContainer: {
     flex: 1,
-
-    backgroundColor: "#F8F6F2",
 
     justifyContent: "center",
 
@@ -106,8 +131,6 @@ const styles = StyleSheet.create({
 
     fontWeight: "700",
 
-    color: "#1A2747",
-
     textAlign: "center",
 
     marginBottom: 18,
@@ -117,8 +140,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
 
     fontSize: 20,
-
-    color: "#777",
 
     lineHeight: 34,
 

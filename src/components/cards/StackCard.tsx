@@ -1,7 +1,22 @@
 import { StyleSheet, View } from "react-native";
+import { useAppTheme } from "../../theme/appTheme";
 
 export default function StackCard() {
-  return <View style={styles.card} />;
+  const { theme } = useAppTheme();
+
+  return (
+    <View
+      style={[
+        styles.card,
+        {
+          backgroundColor:
+            theme.cardBack,
+          borderColor: theme.accent,
+          shadowColor: theme.shadow,
+        },
+      ]}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
@@ -9,14 +24,9 @@ const styles = StyleSheet.create({
     width: 345,
     height: 500,
 
-    backgroundColor: "#1A2747",
-
     borderRadius: 34,
 
     borderWidth: 1.5,
-    borderColor: "#C5A24C",
-
-    shadowColor: "#000",
     shadowOpacity: 0.06,
     shadowRadius: 16,
     shadowOffset: {

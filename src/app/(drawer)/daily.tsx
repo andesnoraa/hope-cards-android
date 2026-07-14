@@ -37,8 +37,11 @@ import {
 } from "../../services/haptics";
 
 import type { Verse } from "../../types/verse";
+import { useAppTheme } from "../../theme/appTheme";
 
 export default function DailyHopeScreen() {
+  const { theme } = useAppTheme();
+
   const [verse, setVerse] =
     useState<Verse | null>(null);
 
@@ -138,7 +141,13 @@ export default function DailyHopeScreen() {
 
   return (
     <ScrollView
-      style={styles.container}
+      style={[
+        styles.container,
+        {
+          backgroundColor:
+            theme.background,
+        },
+      ]}
       contentContainerStyle={
         styles.content
       }
@@ -148,7 +157,12 @@ export default function DailyHopeScreen() {
         entering={FadeIn.duration(600)}
         style={styles.header}
       >
-        <Text style={styles.title}>
+        <Text
+          style={[
+            styles.title,
+            { color: theme.text },
+          ]}
+        >
           Today's Hope
         </Text>
 
@@ -156,7 +170,13 @@ export default function DailyHopeScreen() {
           entering={FadeIn.delay(300).duration(
             600
           )}
-          style={styles.date}
+          style={[
+            styles.date,
+            {
+              color:
+                theme.textSecondary,
+            },
+          ]}
         >
           {today}
         </Animated.Text>
@@ -168,13 +188,31 @@ export default function DailyHopeScreen() {
         )}
         style={styles.verseContainer}
       >
-        <Text style={styles.reference}>
+        <Text
+          style={[
+            styles.reference,
+            { color: theme.text },
+          ]}
+        >
           {verse.reference}
         </Text>
 
-        <View style={styles.separator} />
+        <View
+          style={[
+            styles.separator,
+            {
+              backgroundColor:
+                theme.accent,
+            },
+          ]}
+        />
 
-        <Text style={styles.verse}>
+        <Text
+          style={[
+            styles.verse,
+            { color: theme.cardText },
+          ]}
+        >
           {verse.verse}
         </Text>
       </Animated.View>
@@ -198,8 +236,8 @@ export default function DailyHopeScreen() {
           }
           color={
             favorite
-              ? "#C0392B"
-              : "#C5A24C"
+              ? theme.danger
+              : theme.accent
           }
           onPress={handleFavorite}
         />
@@ -207,7 +245,7 @@ export default function DailyHopeScreen() {
         <ActionButton
           icon="share-outline"
           label="Share"
-          color="#C5A24C"
+          color={theme.accent}
           onPress={handleShare}
         />
       </Animated.View>
@@ -216,7 +254,12 @@ export default function DailyHopeScreen() {
         entering={FadeIn.delay(2100).duration(
           600
         )}
-        style={styles.translation}
+        style={[
+          styles.translation,
+          {
+            color: theme.textTertiary,
+          },
+        ]}
       >
         {verse.translation}
       </Animated.Text>
@@ -227,7 +270,6 @@ export default function DailyHopeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F8F6F2",
   },
 
   content: {
@@ -245,13 +287,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     fontWeight: "700",
-    color: "#1A2747",
   },
 
   date: {
     marginTop: 8,
     fontSize: 16,
-    color: "#7A8292",
     letterSpacing: 0.4,
   },
 
@@ -264,7 +304,6 @@ const styles = StyleSheet.create({
   reference: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#1A2747",
     textAlign: "center",
     marginBottom: 14,
   },
@@ -273,7 +312,6 @@ const styles = StyleSheet.create({
     width: 56,
     height: 2,
     borderRadius: 2,
-    backgroundColor: "#D4AF37",
     opacity: 0.75,
     marginBottom: 36,
   },
@@ -282,7 +320,6 @@ const styles = StyleSheet.create({
     fontSize: 22,
     lineHeight: 52,
     textAlign: "center",
-    color: "#273043",
     fontFamily:
       "CormorantGaramond-Regular",
   },
@@ -298,7 +335,6 @@ const styles = StyleSheet.create({
   translation: {
     marginTop: 48,
     fontSize: 14,
-    color: "#8C93A3",
     textAlign: "center",
     letterSpacing: 0.5,
   },

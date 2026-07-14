@@ -23,6 +23,11 @@ import {
   syncDailyHopeReminderSchedule,
 } from "../services/dailyHopeNotifications";
 
+import {
+  AppThemeProvider,
+  useAppTheme,
+} from "../theme/appTheme";
+
 function useNotificationObserver(
   enabled: boolean
 ) {
@@ -57,7 +62,9 @@ function useNotificationObserver(
   }, [enabled]);
 }
 
-export default function RootLayout() {
+function RootStack() {
+  const { theme } = useAppTheme();
+
   const rootNavigationState =
     useRootNavigationState();
 
@@ -108,20 +115,29 @@ export default function RootLayout() {
 
           headerLargeTitle: false,
 
-          headerTintColor: "#1A2747",
+          headerTintColor: theme.text,
 
           headerTitleStyle: {
-            color: "#1A2747",
+            color: theme.text,
             fontWeight: "600",
           },
 
           headerStyle: {
-            backgroundColor: "#F8F6F2",
+            backgroundColor:
+              theme.background,
           },
 
           headerShadowVisible: true,
         }}
       />
     </Stack>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <AppThemeProvider>
+      <RootStack />
+    </AppThemeProvider>
   );
 }
