@@ -57,7 +57,7 @@ export default function DrawerLayout() {
         name="index"
         options={{
           title: "Hope Cards",
-          drawerLabel: "Home",
+          drawerLabel: "Hope Cards",
           drawerIcon: ({ color }) => (
             <Ionicons
               name="home-outline"
