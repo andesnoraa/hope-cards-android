@@ -49,8 +49,8 @@ const BENEFITS = [
   },
 ] as const;
 
-const PREMIUM_YELLOW = "#FFE13D";
-const PREMIUM_BORDER = "#D7B600";
+const PREMIUM_YELLOW = "#FFD93D";
+const PREMIUM_BORDER = "#D0A800";
 
 type Notice = {
   title: string;
@@ -189,7 +189,7 @@ export default function PremiumScreen() {
               { color: theme.text },
             ]}
           >
-            Unlock more from Hope Cards
+            Make Hope Cards a daily habit
           </Text>
 
           <Text
@@ -201,21 +201,22 @@ export default function PremiumScreen() {
               },
             ]}
           >
-            Daily verses, reminders, themes,
-            and backups for your practice.
+            Daily Hope, reminders, themes,
+            and backup tools in one simple
+            upgrade.
           </Text>
         </View>
 
         <View
           style={[
             styles.compareCard,
-              {
-                backgroundColor:
-                  theme.surface,
-                borderColor:
-                  theme.accentLine,
-              },
-            ]}
+            {
+              backgroundColor:
+                theme.surface,
+              borderColor:
+                theme.accentLine,
+            },
+          ]}
         >
           <View style={styles.compareHeader}>
             <View style={styles.benefitColumn} />
@@ -318,20 +319,20 @@ export default function PremiumScreen() {
               styles.activeBanner,
               {
                 backgroundColor:
-                  theme.accentSoft,
+                  theme.text,
               },
             ]}
           >
             <Ionicons
               name="checkmark-circle"
               size={20}
-              color={theme.accent}
+              color={PREMIUM_YELLOW}
             />
 
             <Text
               style={[
                 styles.activeText,
-                { color: theme.text },
+                { color: theme.white },
               ]}
             >
               Premium is active
@@ -370,10 +371,16 @@ export default function PremiumScreen() {
           ]}
           onPress={handleRestore}
         >
+          <Ionicons
+            name="refresh-outline"
+            size={17}
+            color={theme.textSecondary}
+          />
+
           <Text
             style={[
               styles.restoreButtonText,
-              { color: theme.accent },
+              { color: theme.textSecondary },
             ]}
           >
             Restore Subscription
@@ -515,9 +522,10 @@ const styles = StyleSheet.create({
     borderRadius: 27,
     flexDirection: "row",
     gap: 8,
+    alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: 18,
+    paddingHorizontal: 26,
   },
 
   activeText: {
@@ -527,6 +535,9 @@ const styles = StyleSheet.create({
 
   restoreButton: {
     alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 7,
     paddingVertical: 4,
     paddingHorizontal: 18,
   },
