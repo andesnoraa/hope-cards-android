@@ -1,64 +1,545 @@
-import { StyleSheet, Text, View } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { useFocusEffect } from "expo-router";
+import {
+  useCallback,
+  useState,
+} from "react";
+
+import {
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+
+import PremiumNoticeModal from "../../components/premium/PremiumNoticeModal";
+import {
+  getPremiumStatus,
+  restorePremium,
+  unlockPremium,
+} from "../../services/premium";
 import { useAppTheme } from "../../theme/appTheme";
 
-type Props = {
+const BENEFITS = [
+  {
+    title: "Draw encouraging Hope Cards",
+    free: true,
+    premium: true,
+  },
+  {
+    title: "Read a fresh Daily Hope verse",
+    free: false,
+    premium: true,
+  },
+  {
+    title: "Schedule verse reminders",
+    free: false,
+    premium: true,
+  },
+  {
+    title: "Unlock premium themes",
+    free: false,
+    premium: true,
+  },
+  {
+    title: "Backup and restore saved data",
+    free: false,
+    premium: true,
+  },
+] as const;
+
+const PREMIUM_YELLOW = "#FFE13D";
+const PREMIUM_BORDER = "#D7B600";
+
+type Notice = {
   title: string;
+  message: string;
+  icon: keyof typeof Ionicons.glyphMap;
 };
 
-function PlaceholderScreen({ title }: Props) {
+function PlanMark({
+  active,
+  premium,
+}: {
+  active: boolean;
+  premium?: boolean;
+}) {
   const { theme } = useAppTheme();
 
-  return (
-    <View
-      style={[
-        styles.container,
-        {
-          backgroundColor:
-            theme.background,
-        },
-      ]}
-    >
+  if (!active) {
+    return (
       <Text
         style={[
-          styles.title,
-          { color: theme.text },
-        ]}
-      >
-        {title}
-      </Text>
-
-      <Text
-        style={[
-          styles.subtitle,
+          styles.emptyMark,
           {
-            color: theme.textSecondary,
+            color: premium
+              ? "#111111"
+              : theme.textTertiary,
           },
         ]}
       >
-        Coming Soon
+        -
       </Text>
-    </View>
+    );
+  }
+
+  return (
+    <Ionicons
+      name={
+        premium
+          ? "star"
+          : "checkmark-circle"
+      }
+      size={premium ? 18 : 20}
+      color={
+        premium
+          ? "#111111"
+          : theme.accent
+      }
+    />
+  );
+}
+
+export default function PremiumScreen() {
+  const { theme } = useAppTheme();
+  const [isPremium, setIsPremium] =
+    useState(false);
+  const [notice, setNotice] =
+    useState<Notice | null>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
+
+      async function load() {
+        const status =
+          await getPremiumStatus();
+
+        if (mounted) {
+          setIsPremium(
+            status.isPremium
+          );
+        }
+      }
+
+      load();
+
+      return () => {
+        mounted = false;
+      };
+    }, [])
+  );
+
+  async function handleUnlock() {
+    const status =
+      await unlockPremium();
+
+    setIsPremium(status.isPremium);
+
+    setNotice({
+      title: "Subscription Active",
+      message:
+        "Hope Cards Premium is active. Daily Hope, reminders, backup tools, and premium themes are now unlocked.",
+      icon: "checkmark-circle-outline",
+    });
+  }
+
+  async function handleRestore() {
+    const status =
+      await restorePremium();
+
+    setIsPremium(status.isPremium);
+
+    setNotice(
+      status.isPremium
+        ? {
+            title: "Subscription Restored",
+            message:
+              "Your Hope Cards Premium subscription is active on this device.",
+            icon: "refresh-circle-outline",
+          }
+        : {
+            title: "Nothing to Restore",
+            message:
+              "No active Hope Cards Premium subscription was found on this device.",
+            icon: "information-circle-outline",
+          }
+    );
+  }
+
+  return (
+    <>
+      <ScrollView
+        style={[
+          styles.container,
+          {
+            backgroundColor:
+              theme.background,
+          },
+        ]}
+        contentContainerStyle={styles.content}
+        contentInsetAdjustmentBehavior="automatic"
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.intro}>
+          <Text
+            style={[
+              styles.title,
+              { color: theme.text },
+            ]}
+          >
+            Unlock more from Hope Cards
+          </Text>
+
+          <Text
+            style={[
+              styles.subtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            Daily verses, reminders, themes,
+            and backups for your practice.
+          </Text>
+        </View>
+
+        <View
+          style={[
+            styles.compareCard,
+              {
+                backgroundColor:
+                  theme.surface,
+                borderColor:
+                  theme.accentLine,
+              },
+            ]}
+        >
+          <View style={styles.compareHeader}>
+            <View style={styles.benefitColumn} />
+
+            <View style={styles.freeColumn}>
+              <Text
+                style={[
+                  styles.planTitle,
+                  { color: theme.text },
+                ]}
+              >
+                Free
+              </Text>
+            </View>
+
+            <View
+              style={[
+                styles.premiumColumn,
+                {
+                  backgroundColor:
+                    PREMIUM_YELLOW,
+                },
+              ]}
+            >
+              <Text
+                style={[
+                  styles.planTitle,
+                  { color: "#111111" },
+                ]}
+              >
+                Premium
+              </Text>
+            </View>
+          </View>
+
+          {BENEFITS.map((benefit) => (
+            <View
+              key={benefit.title}
+              style={styles.compareRow}
+            >
+              <View
+                style={[
+                  styles.benefitColumn,
+                  styles.benefitCell,
+                  {
+                    borderColor:
+                      theme.accentLine,
+                  },
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.benefitText,
+                    { color: theme.text },
+                  ]}
+                >
+                  {benefit.title}
+                </Text>
+              </View>
+
+              <View
+                style={[
+                  styles.freeColumn,
+                  styles.markCell,
+                  {
+                    borderColor:
+                      theme.accentLine,
+                  },
+                ]}
+              >
+                <PlanMark
+                  active={benefit.free}
+                />
+              </View>
+
+              <View
+                style={[
+                  styles.premiumColumn,
+                  styles.markCell,
+                  {
+                    backgroundColor:
+                      PREMIUM_YELLOW,
+                    borderColor:
+                      PREMIUM_BORDER,
+                  },
+                ]}
+              >
+                <PlanMark
+                  active={benefit.premium}
+                  premium
+                />
+              </View>
+            </View>
+          ))}
+        </View>
+
+        {isPremium ? (
+          <View
+            style={[
+              styles.activeBanner,
+              {
+                backgroundColor:
+                  theme.accentSoft,
+              },
+            ]}
+          >
+            <Ionicons
+              name="checkmark-circle"
+              size={20}
+              color={theme.accent}
+            />
+
+            <Text
+              style={[
+                styles.activeText,
+                { color: theme.text },
+              ]}
+            >
+              Premium is active
+            </Text>
+          </View>
+        ) : (
+          <Pressable
+            style={({ pressed }) => [
+              styles.subscribeButton,
+              {
+                backgroundColor:
+                  PREMIUM_YELLOW,
+                opacity: pressed ? 0.78 : 1,
+              },
+            ]}
+            onPress={handleUnlock}
+          >
+            <Text
+              style={styles.subscribeButtonText}
+            >
+              Start Premium
+            </Text>
+
+            <Ionicons
+              name="arrow-forward"
+              size={21}
+              color="#111111"
+            />
+          </Pressable>
+        )}
+
+        <Pressable
+          style={({ pressed }) => [
+            styles.restoreButton,
+            { opacity: pressed ? 0.65 : 1 },
+          ]}
+          onPress={handleRestore}
+        >
+          <Text
+            style={[
+              styles.restoreButtonText,
+              { color: theme.accent },
+            ]}
+          >
+            Restore Subscription
+          </Text>
+        </Pressable>
+
+        <Text
+          style={[
+            styles.note,
+            { color: theme.textTertiary },
+          ]}
+        >
+          Price and billing details will be
+          shown by Google Play before purchase.
+        </Text>
+      </ScrollView>
+
+      <PremiumNoticeModal
+        visible={notice !== null}
+        title={notice?.title ?? ""}
+        message={notice?.message ?? ""}
+        icon={notice?.icon}
+        primaryLabel="Done"
+        onPrimary={() => setNotice(null)}
+      />
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+  },
+
+  content: {
+    paddingHorizontal: 24,
+    paddingTop: 16,
+    paddingBottom: 42,
+    gap: 16,
+  },
+
+  intro: {
     alignItems: "center",
+    paddingHorizontal: 6,
   },
 
   title: {
-    fontSize: 28,
+    fontSize: 25,
+    lineHeight: 31,
     fontWeight: "700",
+    textAlign: "center",
   },
 
   subtitle: {
-    marginTop: 12,
+    marginTop: 8,
+    fontSize: 14,
+    lineHeight: 21,
+    textAlign: "center",
+  },
+
+  compareCard: {
+    borderWidth: 1,
+    borderRadius: 30,
+    overflow: "hidden",
+  },
+
+  compareHeader: {
+    minHeight: 54,
+    flexDirection: "row",
+  },
+
+  compareRow: {
+    minHeight: 64,
+    flexDirection: "row",
+  },
+
+  benefitColumn: {
+    flex: 1,
+  },
+
+  freeColumn: {
+    width: 58,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  premiumColumn: {
+    width: 82,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  planTitle: {
+    fontSize: 13,
+    fontWeight: "700",
+  },
+
+  benefitCell: {
+    borderTopWidth: 1,
+    justifyContent: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+  },
+
+  benefitText: {
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: "600",
+  },
+
+  markCell: {
+    borderTopWidth: 1,
+  },
+
+  emptyMark: {
     fontSize: 18,
+    fontWeight: "700",
+  },
+
+  subscribeButton: {
+    minHeight: 54,
+    borderRadius: 27,
+    flexDirection: "row",
+    gap: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 18,
+  },
+
+  subscribeButtonText: {
+    color: "#111111",
+    fontSize: 16,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+
+  activeBanner: {
+    minHeight: 54,
+    borderRadius: 27,
+    flexDirection: "row",
+    gap: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 18,
+  },
+
+  activeText: {
+    fontSize: 16,
+    fontWeight: "700",
+  },
+
+  restoreButton: {
+    alignSelf: "center",
+    paddingVertical: 4,
+    paddingHorizontal: 18,
+  },
+
+  restoreButtonText: {
+    fontSize: 15,
+    fontWeight: "700",
+  },
+
+  note: {
+    marginTop: -8,
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: "center",
   },
 });
-
-export default function Screen() {
-  return <PlaceholderScreen title="Premium" />;
-}

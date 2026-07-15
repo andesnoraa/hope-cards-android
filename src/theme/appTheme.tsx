@@ -10,6 +10,10 @@ import {
 import {
   getSettings,
 } from "../services/settings";
+import {
+  getPremiumStatus,
+  isPremiumTheme,
+} from "../services/premium";
 
 export type AppThemeName =
   | "classic"
@@ -206,8 +210,18 @@ export function AppThemeProvider({
       const settings =
         await getSettings();
 
-      if (settings.themeName in THEMES) {
-        setThemeName(settings.themeName);
+      const premiumStatus =
+        await getPremiumStatus();
+
+      const savedTheme =
+        settings.themeName;
+
+      if (
+        savedTheme in THEMES &&
+        (!isPremiumTheme(savedTheme) ||
+          premiumStatus.isPremium)
+      ) {
+        setThemeName(savedTheme);
       } else {
         setThemeName("classic");
       }

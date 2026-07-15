@@ -1,5 +1,12 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useEffect, useState } from "react";
+import {
+  router,
+  useFocusEffect,
+} from "expo-router";
+import {
+  useCallback,
+  useState,
+} from "react";
 
 import {
   Alert,
@@ -12,6 +19,8 @@ import {
   TextInput,
   View,
 } from "react-native";
+
+import PremiumNoticeModal from "../../components/premium/PremiumNoticeModal";
 
 import {
   loadBackup,
@@ -38,6 +47,10 @@ import {
   getSettings,
   updateSettings,
 } from "../../services/settings";
+import {
+  getPremiumStatus,
+  isPremiumTheme,
+} from "../../services/premium";
 
 import {
   THEME_OPTIONS,
@@ -105,45 +118,107 @@ export default function SettingsScreen() {
   const [backupInfo, setBackupInfo] =
     useState<BackupInfo | null>(null);
 
+  const [isPremium, setIsPremium] =
+    useState(false);
+
+  const [
+    premiumPrompt,
+    setPremiumPrompt,
+  ] = useState<string | null>(null);
+
   const selectedTheme =
     THEME_OPTIONS.find(
       (option) =>
         option.name === themeName
     ) ?? THEME_OPTIONS[0];
 
-  useEffect(() => {
-    async function loadSettings() {
-      const settings =
-        await getSettings();
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
 
-      setShowDrawButton(
-        settings.showDrawButton
-      );
+      async function loadSettings() {
+        const premiumStatus =
+          await getPremiumStatus();
 
-      setEnableHaptics(
-        settings.enableHaptics
-      );
+        const settings =
+          await getSettings();
 
-      setDailyHopeReminderEnabled(
-        settings.dailyHopeReminderEnabled
-      );
+        if (!mounted) {
+          return;
+        }
 
-      setDailyHopeReminderHour(
-        settings.dailyHopeReminderHour
-      );
+        setIsPremium(
+          premiumStatus.isPremium
+        );
 
-      setDailyHopeReminderMinute(
-        settings.dailyHopeReminderMinute
-      );
+        setShowDrawButton(
+          settings.showDrawButton
+        );
 
-      const info =
-        await getBackupInfo();
+        setEnableHaptics(
+          settings.enableHaptics
+        );
 
-      setBackupInfo(info);
-    }
+        setDailyHopeReminderEnabled(
+          premiumStatus.isPremium
+            ? settings.dailyHopeReminderEnabled
+            : false
+        );
 
-    loadSettings();
-  }, []);
+        setDailyHopeReminderHour(
+          settings.dailyHopeReminderHour
+        );
+
+        setDailyHopeReminderMinute(
+          settings.dailyHopeReminderMinute
+        );
+
+        const info =
+          await getBackupInfo();
+
+        setBackupInfo(info);
+
+        if (!premiumStatus.isPremium) {
+          if (
+            settings
+              .dailyHopeReminderEnabled
+          ) {
+            await disableDailyHopeReminder();
+            await updateSettings({
+              dailyHopeReminderEnabled:
+                false,
+            });
+          }
+
+          if (
+            isPremiumTheme(
+              settings.themeName
+            )
+          ) {
+            setThemeName("classic");
+
+            await updateSettings({
+              themeName: "classic",
+              dailyHopeReminderEnabled:
+                false,
+            });
+          }
+        }
+      }
+
+      loadSettings();
+
+      return () => {
+        mounted = false;
+      };
+    }, [setThemeName])
+  );
+
+  function openPremiumPrompt(
+    feature: string
+  ) {
+    setPremiumPrompt(feature);
+  }
 
   async function toggleDrawButton(
     value: boolean
@@ -172,6 +247,16 @@ export default function SettingsScreen() {
   async function selectTheme(
     nextTheme: AppThemeName
   ) {
+    if (
+      isPremiumTheme(nextTheme) &&
+      !isPremium
+    ) {
+      openPremiumPrompt(
+        "Premium themes"
+      );
+      return;
+    }
+
     setThemeName(nextTheme);
     setThemePickerVisible(false);
 
@@ -183,6 +268,13 @@ export default function SettingsScreen() {
   async function toggleDailyHopeReminder(
     value: boolean
   ) {
+    if (!isPremium) {
+      openPremiumPrompt(
+        "Daily reminders"
+      );
+      return;
+    }
+
     setDailyHopeReminderEnabled(value);
 
     if (!value) {
@@ -295,6 +387,13 @@ export default function SettingsScreen() {
   }
 
   function openReminderTimePicker() {
+    if (!isPremium) {
+      openPremiumPrompt(
+        "Reminder scheduling"
+      );
+      return;
+    }
+
     setPickerHourInput(
       formatTimePart(
         getHourForPicker(
@@ -383,6 +482,13 @@ export default function SettingsScreen() {
   }
 
   async function handleBackup() {
+    if (!isPremium) {
+      openPremiumPrompt(
+        "Backup and restore"
+      );
+      return;
+    }
+
     try {
       const info =
         await shareBackup();
@@ -398,6 +504,13 @@ export default function SettingsScreen() {
     }
   }
   async function handleRestore() {
+    if (!isPremium) {
+      openPremiumPrompt(
+        "Backup and restore"
+      );
+      return;
+    }
+
     try {
       const backup =
         await loadBackup();
@@ -734,7 +847,16 @@ Your current favorites and settings will be replaced.`,
         />
       </View>
 
-      <View style={styles.settingRow}>
+      <Pressable
+        style={styles.settingRow}
+        onPress={() => {
+          if (!isPremium) {
+            openPremiumPrompt(
+              "Daily reminders"
+            );
+          }
+        }}
+      >
         <View style={styles.textContainer}>
           <Text
             style={[
@@ -754,23 +876,28 @@ Your current favorites and settings will be replaced.`,
               },
             ]}
           >
-            Receive a gentle reminder to
-            open today's hope.
+            {isPremium
+              ? "Receive a gentle reminder to open today's hope."
+              : "Premium: receive daily verse reminders."}
           </Text>
         </View>
 
         <Switch
-          value={dailyHopeReminderEnabled}
+          value={
+            isPremium &&
+            dailyHopeReminderEnabled
+          }
           onValueChange={
             toggleDailyHopeReminder
           }
+          disabled={!isPremium}
           trackColor={{
             false: theme.switchOff,
             true: theme.accent,
           }}
           thumbColor={theme.white}
         />
-      </View>
+      </Pressable>
 
       <View
         style={[
@@ -812,11 +939,18 @@ Your current favorites and settings will be replaced.`,
               dailyHopeReminderHour,
               dailyHopeReminderMinute
             )}
+            {!isPremium
+              ? " • Premium"
+              : ""}
           </Text>
         </View>
 
         <Ionicons
-          name="chevron-forward"
+          name={
+            isPremium
+              ? "chevron-forward"
+              : "lock-closed-outline"
+          }
           size={22}
           color={theme.textTertiary}
         />
@@ -1035,13 +1169,19 @@ Your current favorites and settings will be replaced.`,
                 },
               ]}
             >
-              No backups created yet.
+              {isPremium
+                ? "No backups created yet."
+                : "Premium: create a backup file."}
             </Text>
           )}
         </View>
 
         <Ionicons
-          name="chevron-forward"
+          name={
+            isPremium
+              ? "chevron-forward"
+              : "lock-closed-outline"
+          }
           size={22}
           color={theme.textTertiary}
         />
@@ -1083,13 +1223,18 @@ Your current favorites and settings will be replaced.`,
               },
             ]}
           >
-            Restore your data from a backup
-            file.
+            {isPremium
+              ? "Restore your data from a backup file."
+              : "Premium: restore favorites and settings."}
           </Text>
         </View>
 
         <Ionicons
-          name="chevron-forward"
+          name={
+            isPremium
+              ? "chevron-forward"
+              : "lock-closed-outline"
+          }
           size={22}
           color={theme.textTertiary}
         />
@@ -1164,6 +1309,10 @@ Your current favorites and settings will be replaced.`,
               {THEME_OPTIONS.map((option) => {
                 const selected =
                   option.name === themeName;
+                const locked =
+                  isPremiumTheme(
+                    option.name
+                  ) && !isPremium;
 
                 return (
                   <Pressable
@@ -1176,6 +1325,9 @@ Your current favorites and settings will be replaced.`,
                         borderColor: selected
                           ? option.accent
                           : option.divider,
+                        opacity: locked
+                          ? 0.72
+                          : 1,
                       },
                     ]}
                     onPress={() =>
@@ -1215,7 +1367,7 @@ Your current favorites and settings will be replaced.`,
                           styles.themeCheck,
                           {
                             borderColor:
-                              selected
+                              selected || locked
                                 ? option.accent
                                 : option.divider,
                             backgroundColor:
@@ -1225,7 +1377,13 @@ Your current favorites and settings will be replaced.`,
                           },
                         ]}
                       >
-                        {selected ? (
+                        {locked ? (
+                          <Ionicons
+                            name="lock-closed-outline"
+                            size={14}
+                            color={option.accent}
+                          />
+                        ) : selected ? (
                           <Ionicons
                             name="checkmark"
                             size={16}
@@ -1243,6 +1401,20 @@ Your current favorites and settings will be replaced.`,
                     >
                       {option.label}
                     </Text>
+
+                    {locked ? (
+                      <Text
+                        style={[
+                          styles.themePremiumLabel,
+                          {
+                            color:
+                              option.accent,
+                          },
+                        ]}
+                      >
+                        Premium
+                      </Text>
+                    ) : null}
 
                     <Text
                       style={[
@@ -1510,6 +1682,26 @@ Your current favorites and settings will be replaced.`,
           </View>
         </View>
       </Modal>
+
+      <PremiumNoticeModal
+        visible={premiumPrompt !== null}
+        title="Premium Subscription"
+        message={
+          premiumPrompt
+            ? `${premiumPrompt} is included with Hope Cards Premium for $2.99/month.`
+            : ""
+        }
+        icon="lock-closed-outline"
+        secondaryLabel="Not Now"
+        onSecondary={() => {
+          setPremiumPrompt(null);
+        }}
+        primaryLabel="View Subscription"
+        onPrimary={() => {
+          setPremiumPrompt(null);
+          router.push("/premium");
+        }}
+      />
     </>
   );
 }
@@ -1721,6 +1913,14 @@ const styles = StyleSheet.create({
   themeOptionTitle: {
     fontSize: 18,
     fontWeight: "700",
+  },
+
+  themePremiumLabel: {
+    marginTop: 4,
+    fontSize: 12,
+    fontWeight: "700",
+    letterSpacing: 1.2,
+    textTransform: "uppercase",
   },
 
   themeOptionDescription: {
