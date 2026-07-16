@@ -732,7 +732,7 @@ Your current favorites and settings will be replaced.`,
                   {
                     backgroundColor: color,
                     borderColor:
-                      theme.background,
+                      selectedTheme.divider,
                   },
                 ]}
               />
