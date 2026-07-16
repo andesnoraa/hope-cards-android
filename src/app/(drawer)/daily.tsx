@@ -20,6 +20,10 @@ import Animated, {
 } from "react-native-reanimated";
 
 import ActionButton from "../../components/common/ActionButton";
+import {
+  REGULAR_CTA_HEIGHT,
+  REGULAR_CTA_RADIUS,
+} from "../../components/common/buttonStyles";
 
 import {
   getDailyHope,
@@ -495,8 +499,8 @@ const styles = StyleSheet.create({
 
   lockedButton: {
     width: "100%",
-    height: 56,
-    borderRadius: 14,
+    height: REGULAR_CTA_HEIGHT,
+    borderRadius: REGULAR_CTA_RADIUS,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",

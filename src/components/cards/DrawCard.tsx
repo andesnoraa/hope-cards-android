@@ -40,6 +40,10 @@ import { getSettings } from "../../services/settings";
 
 import { shareVerse } from "../../services/share";
 import { useAppTheme } from "../../theme/appTheme";
+import {
+  REGULAR_CTA_HEIGHT,
+  REGULAR_CTA_RADIUS,
+} from "../common/buttonStyles";
 
 const CARD_SPRING = {
   damping: 28,
@@ -127,7 +131,7 @@ export default function DrawCard() {
   const buttonAnimatedStyle =
     useAnimatedStyle(() => ({
       transform: [
-        { translateY: -16 },
+        { translateY: -32 },
         { scale: buttonScale.value },
       ],
     }));
@@ -294,9 +298,9 @@ const styles = StyleSheet.create({
 
   button: {
     width: 270,
-    height: 56,
+    height: REGULAR_CTA_HEIGHT,
 
-    borderRadius: 12,
+    borderRadius: REGULAR_CTA_RADIUS,
 
     borderWidth: 2,
 
