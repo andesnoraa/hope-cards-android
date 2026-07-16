@@ -1719,7 +1719,7 @@ Your current favorites and settings will be replaced.`,
         title="Premium Subscription"
         message={
           premiumPrompt
-            ? `${premiumPrompt} is included with Hope Cards Premium for $2.99/month.`
+            ? `${premiumPrompt} is included with Hope Cards Premium.`
             : ""
         }
         icon="lock-closed-outline"

@@ -189,7 +189,7 @@ export default function PremiumScreen() {
               { color: theme.text },
             ]}
           >
-            Make Hope Cards a daily habit
+            Make hope part of every day
           </Text>
 
           <Text
@@ -201,7 +201,7 @@ export default function PremiumScreen() {
               },
             ]}
           >
-            Daily Hope, reminders, themes,
+            Daily verses, reminders, themes,
             and backup tools in one simple
             upgrade.
           </Text>
