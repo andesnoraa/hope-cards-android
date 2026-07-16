@@ -25,6 +25,8 @@ import type {
 
 const THEME_NAMES: AppThemeName[] = [
     "classic",
+    "roseDawn",
+    "oliveGrove",
     "serenity",
     "stillWater",
     "midnight",

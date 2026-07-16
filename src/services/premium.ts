@@ -5,6 +5,8 @@ import type { AppThemeName } from "../theme/appTheme";
 const PREMIUM_KEY = "hope_cards_premium";
 
 export const PREMIUM_THEME_NAMES: AppThemeName[] = [
+  "roseDawn",
+  "oliveGrove",
   "serenity",
   "stillWater",
   "midnight",

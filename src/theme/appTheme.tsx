@@ -17,6 +17,8 @@ import {
 
 export type AppThemeName =
   | "classic"
+  | "roseDawn"
+  | "oliveGrove"
   | "serenity"
   | "stillWater"
   | "midnight";
@@ -85,6 +87,68 @@ export const THEMES: Record<
     white: "#FFFFFF",
     switchOff: "#D9D9D9",
     drawerActiveBackground: "#F5EAC8",
+  },
+
+  roseDawn: {
+    name: "roseDawn",
+    label: "Rose Dawn",
+    description: "Soft rose, plum, and champagne.",
+    background: "#FAF3F1",
+    homeBackground: "#F8EFEC",
+    surface: "#FFFFFF",
+    text: "#35213A",
+    textSecondary: "#7F6D75",
+    textTertiary: "#9B8B92",
+    primary: "#35213A",
+    accent: "#B96F73",
+    accentSoft: "#F3DCDD",
+    accentLine: "#E5BFC0",
+    divider: "#E9DAD7",
+    cardFront: "#FFF9F6",
+    cardBack: "#6E2E42",
+    cardBackText: "#FFF8F3",
+    cardBackAccent: "#E2A67F",
+    cardText: "#34293A",
+    cardMuted: "#82717B",
+    buttonBackground: "#6E2E42",
+    buttonBorder: "#E2A67F",
+    buttonText: "#FFFFFF",
+    danger: "#B84A4A",
+    shadow: "#000",
+    white: "#FFFFFF",
+    switchOff: "#DDD0CE",
+    drawerActiveBackground: "#F3DCDD",
+  },
+
+  oliveGrove: {
+    name: "oliveGrove",
+    label: "Olive Grove",
+    description: "Deep olive, linen, and brass.",
+    background: "#F5F4EA",
+    homeBackground: "#F1F1E4",
+    surface: "#FFFFFF",
+    text: "#263126",
+    textSecondary: "#6F7464",
+    textTertiary: "#8C917F",
+    primary: "#263126",
+    accent: "#8C7A33",
+    accentSoft: "#E8E2C3",
+    accentLine: "#CDC28C",
+    divider: "#DFDDCD",
+    cardFront: "#FCFAF0",
+    cardBack: "#35482F",
+    cardBackText: "#FFFDF0",
+    cardBackAccent: "#C4A64B",
+    cardText: "#283024",
+    cardMuted: "#6F7464",
+    buttonBackground: "#35482F",
+    buttonBorder: "#C4A64B",
+    buttonText: "#FFFFFF",
+    danger: "#B84A4A",
+    shadow: "#000",
+    white: "#FFFFFF",
+    switchOff: "#D8D8CB",
+    drawerActiveBackground: "#E8E2C3",
   },
 
   serenity: {

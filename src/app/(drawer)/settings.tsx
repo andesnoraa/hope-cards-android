@@ -1305,7 +1305,13 @@ Your current favorites and settings will be replaced.`,
               </Pressable>
             </View>
 
-            <View style={styles.themeOptionList}>
+            <ScrollView
+              style={styles.themeOptionScroller}
+              contentContainerStyle={
+                styles.themeOptionList
+              }
+              showsVerticalScrollIndicator={false}
+            >
               {THEME_OPTIONS.map((option) => {
                 const selected =
                   option.name === themeName;
@@ -1363,74 +1369,99 @@ Your current favorites and settings will be replaced.`,
                       </View>
 
                       <View
-                        style={[
-                          styles.themeCheck,
-                          {
-                            borderColor:
-                              selected || locked
-                                ? option.accent
-                                : option.divider,
-                            backgroundColor:
-                              selected
-                                ? option.accent
-                                : option.surface,
-                          },
-                        ]}
+                        style={
+                          styles.themeOptionText
+                        }
                       >
-                        {locked ? (
-                          <Ionicons
-                            name="lock-closed-outline"
-                            size={14}
-                            color={option.accent}
-                          />
-                        ) : selected ? (
-                          <Ionicons
-                            name="checkmark"
-                            size={16}
-                            color={option.white}
-                          />
-                        ) : null}
+                        <View
+                          style={
+                            styles.themeOptionTitleRow
+                          }
+                        >
+                          <Text
+                            style={[
+                              styles.themeOptionTitle,
+                              {
+                                color:
+                                  option.text,
+                              },
+                            ]}
+                          >
+                            {option.label}
+                          </Text>
+
+                          {locked ? (
+                            <View
+                              style={[
+                                styles.themePremiumBadge,
+                                {
+                                  backgroundColor:
+                                    option.accentSoft,
+                                },
+                              ]}
+                            >
+                              <Text
+                                style={[
+                                  styles.themePremiumLabel,
+                                  {
+                                    color:
+                                      option.accent,
+                                  },
+                                ]}
+                              >
+                                Premium
+                              </Text>
+                            </View>
+                          ) : null}
+                        </View>
+
+                        <Text
+                          style={[
+                            styles.themeOptionDescription,
+                            {
+                              color:
+                                option.textSecondary,
+                            },
+                          ]}
+                        >
+                          {option.description}
+                        </Text>
                       </View>
                     </View>
 
-                    <Text
+                    <View
                       style={[
-                        styles.themeOptionTitle,
-                        { color: option.text },
-                      ]}
-                    >
-                      {option.label}
-                    </Text>
-
-                    {locked ? (
-                      <Text
-                        style={[
-                          styles.themePremiumLabel,
-                          {
-                            color:
-                              option.accent,
-                          },
-                        ]}
-                      >
-                        Premium
-                      </Text>
-                    ) : null}
-
-                    <Text
-                      style={[
-                        styles.themeOptionDescription,
+                        styles.themeCheck,
                         {
-                          color:
-                            option.textSecondary,
+                          borderColor:
+                            selected || locked
+                              ? option.accent
+                              : option.divider,
+                          backgroundColor:
+                            selected
+                              ? option.accent
+                              : option.surface,
                         },
                       ]}
                     >
-                      {option.description}
-                    </Text>
+                      {locked ? (
+                        <Ionicons
+                          name="lock-closed-outline"
+                          size={14}
+                          color={option.accent}
+                        />
+                      ) : selected ? (
+                        <Ionicons
+                          name="checkmark"
+                          size={16}
+                          color={option.white}
+                        />
+                      ) : null}
+                    </View>
                   </Pressable>
                 );
               })}
-            </View>
+            </ScrollView>
           </View>
         </View>
       </Modal>
@@ -1855,8 +1886,10 @@ const styles = StyleSheet.create({
   },
 
   themePickerCard: {
+    width: "100%",
+    maxHeight: "86%",
     borderRadius: 8,
-    padding: 22,
+    padding: 18,
   },
 
   themeModalCopy: {
@@ -1870,21 +1903,26 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 
+  themeOptionScroller: {
+    marginTop: 6,
+  },
+
   themeOptionList: {
-    gap: 12,
+    gap: 10,
+    paddingBottom: 4,
   },
 
   themeOptionCard: {
     borderWidth: 1,
     borderRadius: 8,
-    padding: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 14,
   },
 
   themeOptionHeader: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: 12,
+    gap: 14,
   },
 
   themePalette: {
@@ -1908,23 +1946,39 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",
+    marginLeft: "auto",
+  },
+
+  themeOptionText: {
+    flex: 1,
+    minWidth: 0,
+  },
+
+  themeOptionTitleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
   },
 
   themeOptionTitle: {
-    fontSize: 18,
+    flexShrink: 1,
+    fontSize: 17,
     fontWeight: "700",
+  },
+
+  themePremiumBadge: {
+    borderRadius: 999,
+    paddingVertical: 3,
+    paddingHorizontal: 8,
   },
 
   themePremiumLabel: {
-    marginTop: 4,
     fontSize: 12,
     fontWeight: "700",
-    letterSpacing: 1.2,
-    textTransform: "uppercase",
   },
 
   themeOptionDescription: {
-    marginTop: 4,
+    marginTop: 3,
     fontSize: 14,
     lineHeight: 20,
   },
@@ -1932,7 +1986,8 @@ const styles = StyleSheet.create({
   modalBackdrop: {
     flex: 1,
     justifyContent: "center",
-    padding: 24,
+    paddingHorizontal: 24,
+    paddingVertical: 38,
     backgroundColor:
       "rgba(26, 39, 71, 0.42)",
   },
