@@ -4,6 +4,7 @@ import type { Verse } from "../../types/verse";
 import { useAppTheme } from "../../theme/appTheme";
 
 import ActionButton from "../common/ActionButton";
+import { CARD_HEIGHT, CARD_WIDTH } from "./cardDimensions";
 
 type Props = {
   verse: Verse;
@@ -174,8 +175,8 @@ export default function CardFront({
 
 const styles = StyleSheet.create({
   card: {
-    width: 345,
-    height: 500,
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT,
 
     borderRadius: 34,
 

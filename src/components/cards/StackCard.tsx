@@ -1,5 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { useAppTheme } from "../../theme/appTheme";
+import { CARD_HEIGHT, CARD_WIDTH } from "./cardDimensions";
 
 export default function StackCard() {
   const { theme } = useAppTheme();
@@ -22,8 +23,8 @@ export default function StackCard() {
 
 const styles = StyleSheet.create({
   card: {
-    width: 345,
-    height: 500,
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT,
 
     borderRadius: 34,
 

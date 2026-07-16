@@ -5,6 +5,12 @@ import type { Verse } from "../../types/verse";
 
 import CardBack from "./CardBack";
 import CardFront from "./CardFront";
+import {
+    CARD_HEIGHT,
+    CARD_STACK_HEIGHT,
+    CARD_STACK_WIDTH,
+    CARD_WIDTH,
+} from "./cardDimensions";
 
 type Props = {
     animatedStyle: any;
@@ -64,16 +70,16 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 0,
         left: 0,
-        width: 355,
-        height: 510,
+        width: CARD_STACK_WIDTH,
+        height: CARD_STACK_HEIGHT,
         justifyContent: "center",
         alignItems: "center",
         zIndex: 10,
     },
 
     face: {
-        width: 345,
-        height: 500,
+        width: CARD_WIDTH,
+        height: CARD_HEIGHT,
         position: "absolute",
     },
 });

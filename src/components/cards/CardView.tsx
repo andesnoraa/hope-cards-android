@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import type { Verse } from "../../types/verse";
 
 import CardFront from "./CardFront";
+import { CARD_HEIGHT, CARD_WIDTH } from "./cardDimensions";
 
 type Props = {
   verse: Verse;
@@ -31,8 +32,8 @@ export default function CardView({
 
 const styles = StyleSheet.create({
   container: {
-    width: 345,
-    height: 500,
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
   },

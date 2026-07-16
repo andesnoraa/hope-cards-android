@@ -9,6 +9,12 @@ import type { Verse } from "../../types/verse";
 import CardBack from "./CardBack";
 import CardView from "./CardView";
 import StackCard from "./StackCard";
+import {
+  CARD_HEIGHT,
+  CARD_STACK_HEIGHT,
+  CARD_STACK_WIDTH,
+  CARD_WIDTH,
+} from "./cardDimensions";
 
 type Props = {
   animatedStyle: any;
@@ -103,8 +109,8 @@ export default function DeckStack({
 
 const styles = StyleSheet.create({
   container: {
-    width: 355,
-    height: 510,
+    width: CARD_STACK_WIDTH,
+    height: CARD_STACK_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
 
@@ -116,8 +122,8 @@ const styles = StyleSheet.create({
   },
 
   card1: {
-    width: 345,
-    height: 500,
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
     zIndex: 4,
@@ -151,8 +157,8 @@ const styles = StyleSheet.create({
   },
 
   face: {
-    width: 345,
-    height: 500,
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT,
     position: "absolute",
   },
 
