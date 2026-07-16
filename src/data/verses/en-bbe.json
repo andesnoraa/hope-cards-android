@@ -1,480 +1,4551 @@
 [
-    {
-        "id": "john-3-16",
-        "category": "Love",
-        "verse": "For God had such love for the world that he gave his only Son, so that whoever has faith in him may not come to destruction but have eternal life.",
-        "reference": "John 3:16",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "love",
-            "salvation",
-            "eternal-life"
-        ]
-    },
-    {
-        "id": "matthew-11-28",
-        "category": "Comfort",
-        "verse": "Come to me, all you who are troubled and weighted down with care, and I will give you rest.",
-        "reference": "Matthew 11:28",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "comfort",
-            "rest",
-            "jesus"
-        ]
-    },
-    {
-        "id": "john-14-27",
-        "category": "Peace",
-        "verse": "Peace I leave with you; my peace I give to you: not as the world gives, do I give to you. Let not your heart be troubled, and let it have no fear.",
-        "reference": "John 14:27",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "peace",
-            "comfort",
-            "fear"
-        ]
-    },
-    {
-        "id": "isaiah-41-10",
-        "category": "Hope",
-        "verse": "Have no fear, for I am with you; be not overcome with trouble, for I am your God; I will give you strength; yes, I will be your helper; yes, my true right hand will be your support.",
-        "reference": "Isaiah 41:10",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "strength",
-            "comfort"
-        ]
-    },
-    {
-        "id": "philippians-4-13",
-        "category": "Strength",
-        "verse": "I am able to do all things through him who gives me strength.",
-        "reference": "Philippians 4:13",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "strength",
-            "faith",
-            "confidence"
-        ]
-    },
-    {
-        "id": "philippians-4-6",
-        "category": "Prayer",
-        "verse": "Have no cares; but in everything with prayer and praise put your requests before God.",
-        "reference": "Philippians 4:6",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "prayer",
-            "anxiety",
-            "peace"
-        ]
-    },
-    {
-        "id": "romans-8-28",
-        "category": "Hope",
-        "verse": "And we are conscious that all things are working together for good to those who have love for God, and have been marked out by his purpose.",
-        "reference": "Romans 8:28",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "purpose",
-            "faith"
-        ]
-    },
-    {
-        "id": "proverbs-3-5-6",
-        "category": "Trust",
-        "verse": "Put all your hope in God and have no trust in the wisdom of your own mind. In all your ways give ear to him, and he will make straight your footsteps.",
-        "reference": "Proverbs 3:5-6",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "trust",
-            "wisdom",
-            "guidance"
-        ]
-    },
-    {
-        "id": "psalm-46-1",
-        "category": "Peace",
-        "verse": "God is our safe place and our strength, ever ready to help in times of trouble.",
-        "reference": "Psalm 46:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "peace",
-            "refuge",
-            "help"
-        ]
-    },
-    {
-        "id": "joshua-1-9",
-        "category": "Courage",
-        "verse": "Have I not given you your orders? Be strong and take heart; have no fear and do not be troubled, for the Lord your God is with you wherever you go.",
-        "reference": "Joshua 1:9",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "courage",
-            "strength",
-            "presence"
-        ]
-    },
-    {
-        "id": "isaiah-40-31",
-        "category": "Strength",
-        "verse": "But those who are waiting for the Lord will have new strength; their wings will be like those of an eagle: running, they will not be tired, and walking, they will have no weariness.",
-        "reference": "Isaiah 40:31",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "strength",
-            "hope",
-            "endurance"
-        ]
-    },
-    {
-        "id": "psalm-34-18",
-        "category": "Comfort",
-        "verse": "The Lord is near the broken-hearted; he is the saviour of those whose spirits are crushed down.",
-        "reference": "Psalm 34:18",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "comfort",
-            "healing",
-            "hope"
-        ]
-    },
-    {
-        "id": "psalm-55-22",
-        "category": "Trust",
-        "verse": "Put your troubles on the Lord, and he will be your support; he will not let the upright man be moved.",
-        "reference": "Psalm 55:22",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "trust",
-            "comfort",
-            "burden"
-        ]
-    },
-    {
-        "id": "jeremiah-29-11",
-        "category": "Hope",
-        "verse": "For I am conscious of my thoughts about you, says the Lord, thoughts of peace and not of evil, to give you hope at the end.",
-        "reference": "Jeremiah 29:11",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "future",
-            "promise"
-        ]
-    },
-    {
-        "id": "2-corinthians-5-7",
-        "category": "Faith",
-        "verse": "For our life is guided by faith, not by sight.",
-        "reference": "2 Corinthians 5:7",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "faith",
-            "trust",
-            "walk"
-        ]
-    },
-    {
-        "id": "2-corinthians-12-9",
-        "category": "Grace",
-        "verse": "And he said to me, My grace is enough for you, for my power is made complete in what is feeble.",
-        "reference": "2 Corinthians 12:9",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "grace",
-            "strength",
-            "weakness"
-        ]
-    },
-    {
-        "id": "1-peter-5-7",
-        "category": "Trust",
-        "verse": "Putting all your troubles on him, for he takes care of you.",
-        "reference": "1 Peter 5:7",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "trust",
-            "care",
-            "comfort"
-        ]
-    },
-    {
-        "id": "1-john-4-19",
-        "category": "Love",
-        "verse": "Our love is because he first had love for us.",
-        "reference": "1 John 4:19",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "love",
-            "grace"
-        ]
-    },
-    {
-        "id": "romans-8-38-39",
-        "category": "Hope",
-        "verse": "For I am certain that not death, or life, or angels, or principalities, or things present, or things to come, or powers, or height, or depth, or any other living thing, will be able to make us separate from the love of God which is ours in Christ Jesus our Lord.",
-        "reference": "Romans 8:38-39",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "love",
-            "assurance"
-        ]
-    },
-    {
-        "id": "revelation-21-4",
-        "category": "Hope",
-        "verse": "And he will make all their grief come to an end; and there will be no more death or sorrow or crying or pain; for the first things have come to an end.",
-        "reference": "Revelation 21:4",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "heaven",
-            "comfort"
-        ]
-    },
-    {
-        "id": "isaiah-26-3",
-        "category": "Peace",
-        "verse": "The man whose heart is unmoved you will keep in peace, because his hope is in you.",
-        "reference": "Isaiah 26:3",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "peace",
-            "trust",
-            "faith"
-        ]
-    },
-    {
-        "id": "psalm-23-1",
-        "category": "Hope",
-        "verse": "The Lord is my keeper; I will have need of nothing.",
-        "reference": "Psalm 23:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "shepherd",
-            "provision"
-        ]
-    },
-    {
-        "id": "psalm-23-4",
-        "category": "Comfort",
-        "verse": "Yes, though I go through the valley of the shadow of death, I will have no fear of evil; for you are with me; your rod and your support give me comfort.",
-        "reference": "Psalm 23:4",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "comfort",
-            "fear",
-            "presence"
-        ]
-    },
-    {
-        "id": "psalm-37-5",
-        "category": "Trust",
-        "verse": "Put your way into the hands of the Lord; have faith in him and he will do it.",
-        "reference": "Psalm 37:5",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "trust",
-            "guidance",
-            "faith"
-        ]
-    },
-    {
-        "id": "psalm-37-4",
-        "category": "Joy",
-        "verse": "So take your delight in the Lord, and he will give you your heart's desires.",
-        "reference": "Psalm 37:4",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "joy",
-            "trust",
-            "delight"
-        ]
-    },
-    {
-        "id": "psalm-27-1",
-        "category": "Strength",
-        "verse": "The Lord is my light and my salvation; whom will I go in fear of? The Lord is the strength of my life; before whom will I be without hope?",
-        "reference": "Psalm 27:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "strength",
-            "courage",
-            "fear"
-        ]
-    },
-    {
-        "id": "jeremiah-33-3",
-        "category": "Prayer",
-        "verse": "Give ear to my cry and I will give you an answer, and let you see great things and secret things of which you had no knowledge.",
-        "reference": "Jeremiah 33:3",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "prayer",
-            "promise",
-            "guidance"
-        ]
-    },
-    {
-        "id": "james-1-5",
-        "category": "Wisdom",
-        "verse": "But if any man is in need of wisdom, let him make his request to God, who gives freely to all without bitter words, and it will be given to him.",
-        "reference": "James 1:5",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "wisdom",
-            "prayer",
-            "guidance"
-        ]
-    },
-    {
-        "id": "hebrews-4-16",
-        "category": "Grace",
-        "verse": "Then let us come with a good heart to the throne of grace, that we may have mercy and get grace in time of need.",
-        "reference": "Hebrews 4:16",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "grace",
-            "prayer",
-            "mercy"
-        ]
-    },
-    {
-        "id": "hebrews-13-5",
-        "category": "Hope",
-        "verse": "Be free from the love of money, resting satisfied with such things as you have; for he has said, I will never go from you or give you up.",
-        "reference": "Hebrews 13:5",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "presence",
-            "promise"
-        ]
-    },
-    {
-        "id": "hebrews-11-1",
-        "category": "Faith",
-        "verse": "Now faith is the substance of things hoped for, and the sign that the things not seen are true.",
-        "reference": "Hebrews 11:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "faith",
-            "hope",
-            "confidence"
-        ]
-    },
-    {
-        "id": "1-john-3-1",
-        "category": "Love",
-        "verse": "See what great love the Father has given to us, naming us children of God; and such we are.",
-        "reference": "1 John 3:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "love",
-            "identity",
-            "children-of-god"
-        ]
-    },
-    {
-        "id": "john-16-33",
-        "category": "Hope",
-        "verse": "I have said these things to you so that you may have peace in me. In the world you have trouble: but take heart! I have overcome the world.",
-        "reference": "John 16:33",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "peace",
-            "victory"
-        ]
-    },
-    {
-        "id": "john-14-1",
-        "category": "Peace",
-        "verse": "Let not your heart be troubled: have faith in God and have faith in me.",
-        "reference": "John 14:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "peace",
-            "faith",
-            "comfort"
-        ]
-    },
-    {
-        "id": "john-10-10",
-        "category": "Life",
-        "verse": "I have come so that they may have life, and may have it in greater measure.",
-        "reference": "John 10:10",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "life",
-            "hope",
-            "jesus"
-        ]
-    },
-    {
-        "id": "romans-8-31",
-        "category": "Hope",
-        "verse": "If God is for us, who is against us?",
-        "reference": "Romans 8:31",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "hope",
-            "confidence",
-            "victory"
-        ]
-    },
-    {
-        "id": "romans-8-1",
-        "category": "Freedom",
-        "verse": "For this cause those who are in Christ Jesus will not be judged as sinners.",
-        "reference": "Romans 8:1",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "grace",
-            "forgiveness",
-            "freedom"
-        ]
-    },
-    {
-        "id": "1-thessalonians-5-17",
-        "category": "Prayer",
-        "verse": "Keep on with your prayers.",
-        "reference": "1 Thessalonians 5:17",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "prayer",
-            "devotion"
-        ]
-    },
-    {
-        "id": "philippians-4-4",
-        "category": "Joy",
-        "verse": "Be glad in the Lord at all times: again I say, Be glad.",
-        "reference": "Philippians 4:4",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "joy",
-            "praise",
-            "faith"
-        ]
-    },
-    {
-        "id": "philippians-4-7",
-        "category": "Peace",
-        "verse": "And the peace of God, which is deeper than all knowledge, will keep your hearts and minds in Christ Jesus.",
-        "reference": "Philippians 4:7",
-        "translation": "Bible in Basic English (BBE)",
-        "tags": [
-            "peace",
-            "heart",
-            "prayer"
-        ]
-    }
+  {
+    "id": "john-3-16",
+    "category": "Love",
+    "verse": "For God had such love for the world that he gave his only Son, so that whoever has faith in him may not come to destruction but have eternal life.",
+    "reference": "John 3:16",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "salvation",
+      "eternal-life"
+    ]
+  },
+  {
+    "id": "matthew-11-28",
+    "category": "Comfort",
+    "verse": "Come to me, all you who are troubled and weighted down with care, and I will give you rest.",
+    "reference": "Matthew 11:28",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "rest",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-14-27",
+    "category": "Peace",
+    "verse": "Peace I leave with you; my peace I give to you: not as the world gives, do I give to you. Let not your heart be troubled, and let it have no fear.",
+    "reference": "John 14:27",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "comfort",
+      "fear"
+    ]
+  },
+  {
+    "id": "isaiah-41-10",
+    "category": "Hope",
+    "verse": "Have no fear, for I am with you; be not overcome with trouble, for I am your God; I will give you strength; yes, I will be your helper; yes, my true right hand will be your support.",
+    "reference": "Isaiah 41:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "strength",
+      "comfort"
+    ]
+  },
+  {
+    "id": "philippians-4-13",
+    "category": "Strength",
+    "verse": "I am able to do all things through him who gives me strength.",
+    "reference": "Philippians 4:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "faith",
+      "confidence"
+    ]
+  },
+  {
+    "id": "philippians-4-6",
+    "category": "Prayer",
+    "verse": "Have no cares; but in everything with prayer and praise put your requests before God.",
+    "reference": "Philippians 4:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "anxiety",
+      "peace"
+    ]
+  },
+  {
+    "id": "romans-8-28",
+    "category": "Hope",
+    "verse": "And we are conscious that all things are working together for good to those who have love for God, and have been marked out by his purpose.",
+    "reference": "Romans 8:28",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "purpose",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-5-6",
+    "category": "Trust",
+    "verse": "Put all your hope in God and have no trust in the wisdom of your own mind. In all your ways give ear to him, and he will make straight your footsteps.",
+    "reference": "Proverbs 3:5-6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "wisdom",
+      "guidance"
+    ]
+  },
+  {
+    "id": "psalm-46-1",
+    "category": "Peace",
+    "verse": "God is our safe place and our strength, ever ready to help in times of trouble.",
+    "reference": "Psalm 46:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "refuge",
+      "help"
+    ]
+  },
+  {
+    "id": "joshua-1-9",
+    "category": "Courage",
+    "verse": "Have I not given you your orders? Be strong and take heart; have no fear and do not be troubled, for the Lord your God is with you wherever you go.",
+    "reference": "Joshua 1:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-40-31",
+    "category": "Strength",
+    "verse": "But those who are waiting for the Lord will have new strength; their wings will be like those of an eagle: running, they will not be tired, and walking, they will have no weariness.",
+    "reference": "Isaiah 40:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "hope",
+      "endurance"
+    ]
+  },
+  {
+    "id": "psalm-34-18",
+    "category": "Comfort",
+    "verse": "The Lord is near the broken-hearted; he is the saviour of those whose spirits are crushed down.",
+    "reference": "Psalm 34:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "healing",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-55-22",
+    "category": "Trust",
+    "verse": "Put your troubles on the Lord, and he will be your support; he will not let the upright man be moved.",
+    "reference": "Psalm 55:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "comfort",
+      "burden"
+    ]
+  },
+  {
+    "id": "jeremiah-29-11",
+    "category": "Hope",
+    "verse": "For I am conscious of my thoughts about you, says the Lord, thoughts of peace and not of evil, to give you hope at the end.",
+    "reference": "Jeremiah 29:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "future",
+      "promise"
+    ]
+  },
+  {
+    "id": "2-corinthians-5-7",
+    "category": "Faith",
+    "verse": "For our life is guided by faith, not by sight.",
+    "reference": "2 Corinthians 5:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "trust",
+      "walk"
+    ]
+  },
+  {
+    "id": "2-corinthians-12-9",
+    "category": "Grace",
+    "verse": "And he said to me, My grace is enough for you, for my power is made complete in what is feeble.",
+    "reference": "2 Corinthians 12:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "strength",
+      "weakness"
+    ]
+  },
+  {
+    "id": "1-peter-5-7",
+    "category": "Trust",
+    "verse": "Putting all your troubles on him, for he takes care of you.",
+    "reference": "1 Peter 5:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "care",
+      "comfort"
+    ]
+  },
+  {
+    "id": "1-john-4-19",
+    "category": "Love",
+    "verse": "Our love is because he first had love for us.",
+    "reference": "1 John 4:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "grace"
+    ]
+  },
+  {
+    "id": "romans-8-38-39",
+    "category": "Hope",
+    "verse": "For I am certain that not death, or life, or angels, or principalities, or things present, or things to come, or powers, or height, or depth, or any other living thing, will be able to make us separate from the love of God which is ours in Christ Jesus our Lord.",
+    "reference": "Romans 8:38-39",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "love",
+      "assurance"
+    ]
+  },
+  {
+    "id": "revelation-21-4",
+    "category": "Hope",
+    "verse": "And he will make all their grief come to an end; and there will be no more death or sorrow or crying or pain; for the first things have come to an end.",
+    "reference": "Revelation 21:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "heaven",
+      "comfort"
+    ]
+  },
+  {
+    "id": "isaiah-26-3",
+    "category": "Peace",
+    "verse": "The man whose heart is unmoved you will keep in peace, because his hope is in you.",
+    "reference": "Isaiah 26:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "trust",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-23-1",
+    "category": "Hope",
+    "verse": "The Lord is my keeper; I will have need of nothing.",
+    "reference": "Psalm 23:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "shepherd",
+      "provision"
+    ]
+  },
+  {
+    "id": "psalm-23-4",
+    "category": "Comfort",
+    "verse": "Yes, though I go through the valley of the shadow of death, I will have no fear of evil; for you are with me; your rod and your support give me comfort.",
+    "reference": "Psalm 23:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "fear",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-37-5",
+    "category": "Trust",
+    "verse": "Put your way into the hands of the Lord; have faith in him and he will do it.",
+    "reference": "Psalm 37:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "guidance",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-37-4",
+    "category": "Joy",
+    "verse": "So take your delight in the Lord, and he will give you your heart's desires.",
+    "reference": "Psalm 37:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "trust",
+      "delight"
+    ]
+  },
+  {
+    "id": "psalm-27-1",
+    "category": "Strength",
+    "verse": "The Lord is my light and my salvation; whom will I go in fear of? The Lord is the strength of my life; before whom will I be without hope?",
+    "reference": "Psalm 27:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "courage",
+      "fear"
+    ]
+  },
+  {
+    "id": "jeremiah-33-3",
+    "category": "Prayer",
+    "verse": "Give ear to my cry and I will give you an answer, and let you see great things and secret things of which you had no knowledge.",
+    "reference": "Jeremiah 33:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "promise",
+      "guidance"
+    ]
+  },
+  {
+    "id": "james-1-5",
+    "category": "Wisdom",
+    "verse": "But if any man is in need of wisdom, let him make his request to God, who gives freely to all without bitter words, and it will be given to him.",
+    "reference": "James 1:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "prayer",
+      "guidance"
+    ]
+  },
+  {
+    "id": "hebrews-4-16",
+    "category": "Grace",
+    "verse": "Then let us come with a good heart to the throne of grace, that we may have mercy and get grace in time of need.",
+    "reference": "Hebrews 4:16",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "prayer",
+      "mercy"
+    ]
+  },
+  {
+    "id": "hebrews-13-5",
+    "category": "Hope",
+    "verse": "Be free from the love of money, resting satisfied with such things as you have; for he has said, I will never go from you or give you up.",
+    "reference": "Hebrews 13:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "hebrews-11-1",
+    "category": "Faith",
+    "verse": "Now faith is the substance of things hoped for, and the sign that the things not seen are true.",
+    "reference": "Hebrews 11:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "hope",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-john-3-1",
+    "category": "Love",
+    "verse": "See what great love the Father has given to us, naming us children of God; and such we are.",
+    "reference": "1 John 3:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "identity",
+      "children-of-god"
+    ]
+  },
+  {
+    "id": "john-16-33",
+    "category": "Hope",
+    "verse": "I have said these things to you so that you may have peace in me. In the world you have trouble: but take heart! I have overcome the world.",
+    "reference": "John 16:33",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "peace",
+      "victory"
+    ]
+  },
+  {
+    "id": "john-14-1",
+    "category": "Peace",
+    "verse": "Let not your heart be troubled: have faith in God and have faith in me.",
+    "reference": "John 14:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "faith",
+      "comfort"
+    ]
+  },
+  {
+    "id": "john-10-10",
+    "category": "Life",
+    "verse": "I have come so that they may have life, and may have it in greater measure.",
+    "reference": "John 10:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "life",
+      "hope",
+      "jesus"
+    ]
+  },
+  {
+    "id": "romans-8-31",
+    "category": "Hope",
+    "verse": "If God is for us, who is against us?",
+    "reference": "Romans 8:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "confidence",
+      "victory"
+    ]
+  },
+  {
+    "id": "romans-8-1",
+    "category": "Freedom",
+    "verse": "For this cause those who are in Christ Jesus will not be judged as sinners.",
+    "reference": "Romans 8:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "freedom"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-17",
+    "category": "Prayer",
+    "verse": "Keep on with your prayers.",
+    "reference": "1 Thessalonians 5:17",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "devotion"
+    ]
+  },
+  {
+    "id": "philippians-4-4",
+    "category": "Joy",
+    "verse": "Be glad in the Lord at all times: again I say, Be glad.",
+    "reference": "Philippians 4:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "praise",
+      "faith"
+    ]
+  },
+  {
+    "id": "philippians-4-7",
+    "category": "Peace",
+    "verse": "And the peace of God, which is deeper than all knowledge, will keep your hearts and minds in Christ Jesus.",
+    "reference": "Philippians 4:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "heart",
+      "prayer"
+    ]
+  },
+  {
+    "id": "genesis-28-15",
+    "category": "Comfort",
+    "verse": "And truly, I will be with you, and will keep you wherever you go, guiding you back again to this land; and I will not give you up till I have done what I have said to you.",
+    "reference": "Genesis 28:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "exodus-14-14",
+    "category": "Peace",
+    "verse": "The Lord will make war for you, you have only to keep quiet.",
+    "reference": "Exodus 14:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "trust",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-6",
+    "category": "Courage",
+    "verse": "Be strong and take heart, and have no fear of them: for it is the Lord your God who is going with you; he will not take away his help from you.",
+    "reference": "Deuteronomy 31:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-8",
+    "category": "Courage",
+    "verse": "It is the Lord who goes before you; he will be with you, he will not take away his help from you or give you up: so have no fear.",
+    "reference": "Deuteronomy 31:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "guidance",
+      "fear"
+    ]
+  },
+  {
+    "id": "psalm-4-8",
+    "category": "Peace",
+    "verse": "I will take my rest on my bed in peace, because you only, Lord, keep me safe.",
+    "reference": "Psalm 4:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "safety"
+    ]
+  },
+  {
+    "id": "1-corinthians-6-11",
+    "category": "Hope",
+    "verse": "And such were some of you; but you have been washed, you have been made holy, you have been given righteousness in the name of the Lord Jesus Christ and in the Spirit of our God.",
+    "reference": "1 Corinthians 6:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-16-8",
+    "category": "Trust",
+    "verse": "I have put the Lord before me at all times; because he is at my right hand, I will not be moved.",
+    "reference": "Psalm 16:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "stability",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-18-2",
+    "category": "Strength",
+    "verse": "The Lord is my Rock, my walled town, and my saviour; my God, my Rock, in him will I put my faith; my breastplate, and the horn of my salvation, and my high tower.",
+    "reference": "Psalm 18:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "refuge",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-19-14",
+    "category": "Prayer",
+    "verse": "Let the words of my mouth and the thoughts of my heart be pleasing in your eyes, O Lord, my strength and my salvation.",
+    "reference": "Psalm 19:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "heart",
+      "words"
+    ]
+  },
+  {
+    "id": "psalm-27-14",
+    "category": "Hope",
+    "verse": "Let your hope be in the Lord: take heart and be strong; yes, let your hope be in the Lord.",
+    "reference": "Psalm 27:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "waiting",
+      "courage"
+    ]
+  },
+  {
+    "id": "psalm-31-24",
+    "category": "Courage",
+    "verse": "Put away fear and let your heart be strong, all you whose hope is in the Lord.",
+    "reference": "Psalm 31:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "hope",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalm-32-8",
+    "category": "Wisdom",
+    "verse": "I will give you knowledge, teaching you the way to go; my eye will be your guide.",
+    "reference": "Psalm 32:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "teaching"
+    ]
+  },
+  {
+    "id": "psalm-34-4",
+    "category": "Comfort",
+    "verse": "I was searching for the Lord, and he gave ear to my voice, and made me free from all my fears.",
+    "reference": "Psalm 34:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "fear",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-46-10",
+    "category": "Peace",
+    "verse": "Be at peace in the knowledge that I am God: I will be lifted up among the nations, I will be honoured through all the earth.",
+    "reference": "Psalm 46:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "stillness",
+      "god"
+    ]
+  },
+  {
+    "id": "psalm-56-3",
+    "category": "Trust",
+    "verse": "In the time of my fear, I will have faith in you.",
+    "reference": "Psalm 56:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "fear",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-73-26",
+    "category": "Strength",
+    "verse": "My flesh and my heart are wasting away: but God is the Rock of my heart and my eternal heritage.",
+    "reference": "Psalm 73:26",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "heart",
+      "god"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-12",
+    "category": "Grace",
+    "verse": "So that glory may be given to the name of our Lord Jesus through you, and you may have glory in him, by the grace of our God and the Lord Jesus Christ.",
+    "reference": "2 Thessalonians 1:12",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-94-19",
+    "category": "Comfort",
+    "verse": "Among all my troubled thoughts, your comforts are the delight of my soul.",
+    "reference": "Psalm 94:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "anxiety",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalm-100-5",
+    "category": "Love",
+    "verse": "For the Lord is good, and his mercy is never-ending; his faith is unchanging through all generations.",
+    "reference": "Psalm 100:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "psalm-118-24",
+    "category": "Joy",
+    "verse": "This is the day which the Lord has made; we will be full of joy and delight in it.",
+    "reference": "Psalm 118:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "gratitude",
+      "today"
+    ]
+  },
+  {
+    "id": "romans-8-39",
+    "category": "Grace",
+    "verse": "Or things on high, or things under the earth, or anything which is made, will be able to come between us and the love of God which is in Christ Jesus our Lord.",
+    "reference": "Romans 8:39",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-121-2",
+    "category": "Strength",
+    "verse": "Your help comes from the Lord, who made heaven and earth.",
+    "reference": "Psalm 121:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "creator"
+    ]
+  },
+  {
+    "id": "psalm-138-8",
+    "category": "Hope",
+    "verse": "The Lord will make all things complete for me: O Lord, your mercy is eternal; do not give up the works of your hands.",
+    "reference": "Psalm 138:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "purpose",
+      "mercy"
+    ]
+  },
+  {
+    "id": "proverbs-16-3",
+    "category": "Trust",
+    "verse": "Put your works into the hands of the Lord, and your purposes will be made certain.",
+    "reference": "Proverbs 16:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "plans",
+      "work"
+    ]
+  },
+  {
+    "id": "proverbs-18-10",
+    "category": "Strength",
+    "verse": "The name of the Lord is a strong tower: the upright man running into it is safe.",
+    "reference": "Proverbs 18:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "refuge",
+      "safety"
+    ]
+  },
+  {
+    "id": "isaiah-12-2",
+    "category": "Trust",
+    "verse": "See, God is my salvation; I will have faith in the Lord, without fear: for the Lord Jah is my strength and song; and he has become my salvation.",
+    "reference": "Isaiah 12:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "salvation",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-26-4",
+    "category": "Trust",
+    "verse": "Let your hope be in the Lord for ever: for the Lord Jah is an unchanging Rock.",
+    "reference": "Isaiah 26:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "strength",
+      "eternal"
+    ]
+  },
+  {
+    "id": "isaiah-30-21",
+    "category": "Wisdom",
+    "verse": "And at your back, when you are turning to the right hand or to the left, a voice will be sounding in your ears, saying, This is the way in which you are to go.",
+    "reference": "Isaiah 30:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "direction"
+    ]
+  },
+  {
+    "id": "isaiah-43-2",
+    "category": "Comfort",
+    "verse": "When you go through the waters, I will be with you; and through the rivers, they will not go over you: when you go through the fire, you will not be burned; and the flame will have no power over you.",
+    "reference": "Isaiah 43:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "trials",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-43-19",
+    "category": "Hope",
+    "verse": "See, I am doing a new thing; now it is starting; will you not take note of it? I will even make a way in the waste land, and rivers in the dry country.",
+    "reference": "Isaiah 43:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "new",
+      "way"
+    ]
+  },
+  {
+    "id": "isaiah-54-10",
+    "category": "Love",
+    "verse": "For the mountains may be taken away, and the hills be moved out of their places, but my love will not be taken from you, or my agreement of peace broken, says the Lord, who has had mercy on you.",
+    "reference": "Isaiah 54:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "peace",
+      "mercy"
+    ]
+  },
+  {
+    "id": "lamentations-3-23",
+    "category": "Grace",
+    "verse": "They are new every morning; great is your good faith.",
+    "reference": "Lamentations 3:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "faithfulness",
+      "morning"
+    ]
+  },
+  {
+    "id": "matthew-6-33",
+    "category": "Trust",
+    "verse": "But let your first care be for his kingdom and his righteousness; and all these other things will be given to you in addition.",
+    "reference": "Matthew 6:33",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "kingdom",
+      "provision"
+    ]
+  },
+  {
+    "id": "galatians-6-18",
+    "category": "Grace",
+    "verse": "The grace of our Lord Jesus Christ be with your spirit, brothers. So be it.",
+    "reference": "Galatians 6:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "matthew-19-26",
+    "category": "Faith",
+    "verse": "And Jesus, looking at them, said, With men this is not possible; but with God all things are possible.",
+    "reference": "Matthew 19:26",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "mark-10-27",
+    "category": "Faith",
+    "verse": "Jesus, looking on them, said, With men it is impossible, but not with God: for all things are possible with God.",
+    "reference": "Mark 10:27",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "luke-1-37",
+    "category": "Faith",
+    "verse": "For there is nothing which God is not able to do.",
+    "reference": "Luke 1:37",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "promise",
+      "god"
+    ]
+  },
+  {
+    "id": "john-6-35",
+    "category": "Life",
+    "verse": "And this was the answer of Jesus: I am the bread of life. He who comes to me will never be in need of food, and he who has faith in me will never be in need of drink.",
+    "reference": "John 6:35",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "life",
+      "jesus",
+      "satisfaction"
+    ]
+  },
+  {
+    "id": "john-8-12",
+    "category": "Life",
+    "verse": "Then again Jesus said to them, I am the light of the world; he who comes with me will not be walking in the dark but will have the light of life.",
+    "reference": "John 8:12",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "life",
+      "light",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-15-5",
+    "category": "Faith",
+    "verse": "I am the vine, you are the branches: he who is in me at all times as I am in him, gives much fruit, because without me you are able to do nothing.",
+    "reference": "John 15:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "fruit",
+      "jesus"
+    ]
+  },
+  {
+    "id": "ephesians-6-24",
+    "category": "Grace",
+    "verse": "Grace be with all those who have true love for our Lord Jesus Christ.",
+    "reference": "Ephesians 6:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-15-13",
+    "category": "Hope",
+    "verse": "Now may the God of hope make you full of joy and peace through faith, so that all hope may be yours in the power of the Holy Spirit.",
+    "reference": "Romans 15:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "joy",
+      "peace"
+    ]
+  },
+  {
+    "id": "1-corinthians-10-13",
+    "category": "Strength",
+    "verse": "You have been put to no test but such as is common to man: and God is true, who will not let any test come on you which you are not able to undergo; but he will make with the test a way out of it, so that you may be able to go through it.",
+    "reference": "1 Corinthians 10:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "testing",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "1-corinthians-13-13",
+    "category": "Love",
+    "verse": "But now we still have faith, hope, love, these three; and the greatest of these is love.",
+    "reference": "1 Corinthians 13:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "faith",
+      "hope"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-16",
+    "category": "Strength",
+    "verse": "For which cause we do not give way to weariness; but though our outer man is getting feebler, our inner man is made new day by day.",
+    "reference": "2 Corinthians 4:16",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "renewal",
+      "inner-life"
+    ]
+  },
+  {
+    "id": "ephesians-2-10",
+    "category": "Life",
+    "verse": "For by his act we were given existence in Christ Jesus to do those good works which God before made ready for us so that we might do them.",
+    "reference": "Ephesians 2:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "life",
+      "purpose",
+      "good-works"
+    ]
+  },
+  {
+    "id": "colossians-4-12",
+    "category": "Grace",
+    "verse": "Epaphras, who is one of you, a servant of Christ Jesus, sends you his love, ever taking thought for you in his prayers, that you may be complete and fully certain of all the purpose of God.",
+    "reference": "Colossians 4:12",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "ephesians-6-10",
+    "category": "Strength",
+    "verse": "Lastly, be strong in the Lord, and in the strength of his power.",
+    "reference": "Ephesians 6:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "power",
+      "lord"
+    ]
+  },
+  {
+    "id": "colossians-3-15",
+    "category": "Peace",
+    "verse": "And let the peace of Christ be ruling in your hearts, as it was the purpose of God for you to be one body; and give praise to God at all times.",
+    "reference": "Colossians 3:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "gratitude",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-timothy-1-7",
+    "category": "Courage",
+    "verse": "For God did not give us a spirit of fear, but of power and of love and of self-control.",
+    "reference": "2 Timothy 1:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "power",
+      "love"
+    ]
+  },
+  {
+    "id": "genesis-15-6",
+    "category": "Faith",
+    "verse": "And he had faith in the Lord, and it was put to his account as righteousness.",
+    "reference": "Genesis 15:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "righteousness",
+      "trust"
+    ]
+  },
+  {
+    "id": "exodus-15-2",
+    "category": "Strength",
+    "verse": "The Lord is my strength and my strong helper, he has become my salvation: he is my God and I will give him praise; my father's God and I will give him glory.",
+    "reference": "Exodus 15:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "colossians-3-16",
+    "category": "Wisdom",
+    "verse": "Let the word of Christ be in you in all wealth of wisdom; teaching and helping one another with songs of praise and holy words, making melody to God with grace in your hearts.",
+    "reference": "Colossians 3:16",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "truth"
+    ]
+  },
+  {
+    "id": "isaiah-33-2",
+    "category": "Hope",
+    "verse": "O Lord, have mercy on us; for we have been waiting for your help: be our strength every morning, our salvation in time of trouble.",
+    "reference": "Isaiah 33:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "numbers-6-26",
+    "category": "Peace",
+    "verse": "May the Lord's approval be resting on you and may he give you peace.",
+    "reference": "Numbers 6:26",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "blessing",
+      "presence"
+    ]
+  },
+  {
+    "id": "joshua-24-15",
+    "category": "Faith",
+    "verse": "And if it seems evil to you to be the servants of the Lord, make the decision this day whose servants you will be: of the gods whose servants your fathers were across the River, or of the gods of the Amorites in whose land you are living: but I and my house will be the servants of the Lord.",
+    "reference": "Joshua 24:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "choice",
+      "service"
+    ]
+  },
+  {
+    "id": "1-samuel-2-2",
+    "category": "Strength",
+    "verse": "No other is holy as the Lord, for there is no other God but you: there is no Rock like our God.",
+    "reference": "1 Samuel 2:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "holiness",
+      "rock"
+    ]
+  },
+  {
+    "id": "2-samuel-22-31",
+    "category": "Trust",
+    "verse": "As for God, his way is all good: the word of the Lord is tested; he is a safe cover for all those who put their faith in him.",
+    "reference": "2 Samuel 22:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "word",
+      "refuge"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-11",
+    "category": "Prayer",
+    "verse": "Let your search be for the Lord and for his strength; let your hearts ever be turned to him.",
+    "reference": "1 Chronicles 16:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "strength"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-34",
+    "category": "Love",
+    "verse": "O give praise to the Lord, for he is good: for his mercy is unchanging for ever.",
+    "reference": "1 Chronicles 16:34",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "nehemiah-8-10",
+    "category": "Joy",
+    "verse": "Then he said to them, Go away now, and take the fat for your food and the sweet for your drink, and send some to him for whom nothing is made ready: for this day is holy to our Lord: and let there be no grief in your hearts; for the joy of the Lord is your strong place.",
+    "reference": "Nehemiah 8:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "strength",
+      "lord"
+    ]
+  },
+  {
+    "id": "job-23-10",
+    "category": "Trust",
+    "verse": "For he has knowledge of the way I take; after I have been tested I will come out like gold.",
+    "reference": "Job 23:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "testing",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-1-3",
+    "category": "Life",
+    "verse": "He will be like a tree planted by the rivers of water, which gives its fruit at the right time, whose leaves will ever be green; and he will do well in all his undertakings.",
+    "reference": "Psalm 1:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "life",
+      "fruit",
+      "growth"
+    ]
+  },
+  {
+    "id": "psalm-5-3",
+    "category": "Prayer",
+    "verse": "My voice will come to you in the morning, O Lord; in the morning will I send my prayer to you, and keep watch.",
+    "reference": "Psalm 5:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "morning",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-16-11",
+    "category": "Joy",
+    "verse": "You will make clear to me the way of life; where you are joy is complete; in your right hand there are pleasures for ever and ever.",
+    "reference": "Psalm 16:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "presence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalm-20-7",
+    "category": "Trust",
+    "verse": "Some put their faith in carriages and some in horses; but we will be strong in the name of the Lord our God.",
+    "reference": "Psalm 20:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "lord"
+    ]
+  },
+  {
+    "id": "psalm-25-4",
+    "category": "Wisdom",
+    "verse": "Make your steps clear to me, O Lord; give me knowledge of your ways.",
+    "reference": "Psalm 25:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "ways"
+    ]
+  },
+  {
+    "id": "psalm-25-5",
+    "category": "Wisdom",
+    "verse": "Be my guide and teacher in the true way; for you are the God of my salvation; I am waiting for your word all the day.",
+    "reference": "Psalm 25:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "truth",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-29-11",
+    "category": "Peace",
+    "verse": "The Lord will give strength to his people; the Lord will give his people the blessing of peace.",
+    "reference": "Psalm 29:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "strength",
+      "blessing"
+    ]
+  },
+  {
+    "id": "psalm-30-5",
+    "category": "Joy",
+    "verse": "For his wrath is only for a minute; in his grace there is life; weeping may be for a night, but joy comes in the morning.",
+    "reference": "Psalm 30:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "morning",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-33-20",
+    "category": "Hope",
+    "verse": "Our souls are waiting for the Lord; he is our help and our salvation.",
+    "reference": "Psalm 33:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "help",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-34-8",
+    "category": "Trust",
+    "verse": "By experience you will see that the Lord is good; happy is the man who has faith in him.",
+    "reference": "Psalm 34:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "goodness",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalm-37-7",
+    "category": "Peace",
+    "verse": "Take your rest in the Lord, waiting quietly for him; do not be angry because of the man who does well in his evil ways, and gives effect to his bad designs.",
+    "reference": "Psalm 37:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "waiting",
+      "rest"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-8",
+    "category": "Hope",
+    "verse": "But let us, who are of the day, be serious, putting on the breastplate of faith and love, and on our heads, the hope of salvation.",
+    "reference": "1 Thessalonians 5:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-51-10",
+    "category": "Grace",
+    "verse": "Make a clean heart in me, O God; give me a right spirit again.",
+    "reference": "Psalm 51:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "renewal",
+      "heart"
+    ]
+  },
+  {
+    "id": "jeremiah-3-23",
+    "category": "Hope",
+    "verse": "Truly, the hills, and the noise of an army on the mountains, are a false hope: truly, in the Lord our God is the salvation of Israel.",
+    "reference": "Jeremiah 3:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-62-5",
+    "category": "Hope",
+    "verse": "My soul, put all your faith in God; for from him comes my hope.",
+    "reference": "Psalm 62:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "rest",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-84-11",
+    "category": "Grace",
+    "verse": "The Lord God is our sun and our strength: the Lord will give grace and glory: he will not keep back any good thing from those whose ways are upright.",
+    "reference": "Psalm 84:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "provision",
+      "glory"
+    ]
+  },
+  {
+    "id": "psalm-86-5",
+    "category": "Grace",
+    "verse": "You are good, O Lord, and full of forgiveness; your mercy is great to all who make their cry to you.",
+    "reference": "Psalm 86:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "mercy"
+    ]
+  },
+  {
+    "id": "psalm-103-8",
+    "category": "Love",
+    "verse": "The Lord is kind and full of pity, not quickly made angry, but ever ready to have mercy.",
+    "reference": "Psalm 103:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalm-103-12",
+    "category": "Freedom",
+    "verse": "As far as the east is from the west, so far has he put our sins from us.",
+    "reference": "Psalm 103:12",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "freedom",
+      "forgiveness",
+      "sin"
+    ]
+  },
+  {
+    "id": "acts-20-21",
+    "category": "Trust",
+    "verse": "Preaching to Jews and to Greeks the need for a turning of the heart to God, and faith in the Lord Jesus Christ.",
+    "reference": "Acts 20:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-121-7",
+    "category": "Comfort",
+    "verse": "The Lord will keep you safe from all evil; he will take care of your soul.",
+    "reference": "Psalm 121:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "protection",
+      "safety"
+    ]
+  },
+  {
+    "id": "psalm-145-18",
+    "category": "Prayer",
+    "verse": "The Lord is near all those who give honour to his name; even to all who give honour to him with true hearts.",
+    "reference": "Psalm 145:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "nearness",
+      "truth"
+    ]
+  },
+  {
+    "id": "psalm-147-3",
+    "category": "Comfort",
+    "verse": "He makes the broken-hearted well, and puts oil on their wounds.",
+    "reference": "Psalm 147:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "healing",
+      "heart"
+    ]
+  },
+  {
+    "id": "1-thessalonians-2-19",
+    "category": "Hope",
+    "verse": "For what is our hope or joy or crown of glory? Are not even you, before our Lord Jesus, at his coming?",
+    "reference": "1 Thessalonians 2:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "proverbs-4-23",
+    "category": "Wisdom",
+    "verse": "And keep watch over your heart with all care; so you will have life.",
+    "reference": "Proverbs 4:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "heart",
+      "life"
+    ]
+  },
+  {
+    "id": "proverbs-17-22",
+    "category": "Joy",
+    "verse": "A glad heart makes a healthy body, but a crushed spirit makes the bones dry.",
+    "reference": "Proverbs 17:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "heart",
+      "healing"
+    ]
+  },
+  {
+    "id": "isaiah-25-1",
+    "category": "Trust",
+    "verse": "O Lord, you are my God; I will give praise to you, I will give honour to your name; for you have done great acts of power; your purposes in the past have been made true and certain in effect.",
+    "reference": "Isaiah 25:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faithfulness",
+      "praise"
+    ]
+  },
+  {
+    "id": "isaiah-40-29",
+    "category": "Strength",
+    "verse": "He gives power to the feeble, increasing the strength of him who has no force.",
+    "reference": "Isaiah 40:29",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "weakness",
+      "power"
+    ]
+  },
+  {
+    "id": "philippians-2-11",
+    "category": "Hope",
+    "verse": "And that every tongue may give witness that Jesus Christ is Lord, to the glory of God the Father.",
+    "reference": "Philippians 2:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-58-11",
+    "category": "Wisdom",
+    "verse": "And the Lord will be your guide at all times; in dry places he will give you water in full measure, and will make strong your bones; and you will be like a watered garden, and like an ever-flowing spring.",
+    "reference": "Isaiah 58:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "provision",
+      "strength"
+    ]
+  },
+  {
+    "id": "jeremiah-17-7",
+    "category": "Trust",
+    "verse": "A blessing is on the man who puts his faith in the Lord, and whose hope the Lord is.",
+    "reference": "Jeremiah 17:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "blessing",
+      "hope"
+    ]
+  },
+  {
+    "id": "jeremiah-17-8",
+    "category": "Hope",
+    "verse": "For he will be like a tree planted by the waters, pushing out its roots by the stream; he will have no fear when the heat comes, but his leaf will be green; in a dry year he will have no care, and will go on giving fruit.",
+    "reference": "Jeremiah 17:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "growth",
+      "fruit"
+    ]
+  },
+  {
+    "id": "micah-6-8",
+    "category": "Wisdom",
+    "verse": "He has made clear to you, O man, what is good; and what is desired from you by the Lord; only doing what is right, and loving mercy, and walking without pride before your God.",
+    "reference": "Micah 6:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "justice",
+      "mercy"
+    ]
+  },
+  {
+    "id": "nahum-1-7",
+    "category": "Comfort",
+    "verse": "The Lord is good, a strong place in the day of trouble; and he has knowledge of those who take him for their safe cover.",
+    "reference": "Nahum 1:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "refuge",
+      "trust"
+    ]
+  },
+  {
+    "id": "habakkuk-3-18",
+    "category": "Joy",
+    "verse": "Still, I will be glad in the Lord, my joy will be in the God of my salvation.",
+    "reference": "Habakkuk 3:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "matthew-5-8",
+    "category": "Grace",
+    "verse": "Happy are the clean in heart: for they will see God.",
+    "reference": "Matthew 5:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "purity",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-5-9",
+    "category": "Peace",
+    "verse": "Happy are the peacemakers: for they will be named sons of God.",
+    "reference": "Matthew 5:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "children",
+      "god"
+    ]
+  },
+  {
+    "id": "romans-10-1",
+    "category": "Hope",
+    "verse": "Brothers, my heart's desire and my prayer to God for them is, that they may get salvation.",
+    "reference": "Romans 10:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "luke-6-36",
+    "category": "Grace",
+    "verse": "Be full of pity, even as your Father is full of pity.",
+    "reference": "Luke 6:36",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "father"
+    ]
+  },
+  {
+    "id": "romans-15-6",
+    "category": "Hope",
+    "verse": "So that with one mouth you may give glory to the God and Father of our Lord Jesus Christ.",
+    "reference": "Romans 15:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "john-3-17",
+    "category": "Grace",
+    "verse": "God did not send his Son into the world to be judge of the world; he sent him so that the world might have salvation through him.",
+    "reference": "John 3:17",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "salvation",
+      "world"
+    ]
+  },
+  {
+    "id": "john-8-36",
+    "category": "Freedom",
+    "verse": "If then the son makes you free, you will be truly free.",
+    "reference": "John 8:36",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "freedom",
+      "son",
+      "truth"
+    ]
+  },
+  {
+    "id": "acts-16-31",
+    "category": "Faith",
+    "verse": "And they said, Have faith in the Lord Jesus, and you and your family will have salvation.",
+    "reference": "Acts 16:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "salvation",
+      "belief"
+    ]
+  },
+  {
+    "id": "psalms-71-5",
+    "category": "Hope",
+    "verse": "For you are my hope, O Lord God; I have had faith in you from the time when I was young.",
+    "reference": "Psalms 71:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-6-14",
+    "category": "Freedom",
+    "verse": "For sin may not have rule over you: because you are not under law, but under grace.",
+    "reference": "Romans 6:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "freedom",
+      "grace",
+      "sin"
+    ]
+  },
+  {
+    "id": "romans-10-13",
+    "category": "Prayer",
+    "verse": "Because, Whoever will give worship to the name of the Lord will get salvation.",
+    "reference": "Romans 10:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "salvation",
+      "calling"
+    ]
+  },
+  {
+    "id": "galatians-5-1",
+    "category": "Freedom",
+    "verse": "Christ has truly made us free: then keep your free condition and let no man put a yoke on you again.",
+    "reference": "Galatians 5:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "freedom",
+      "christ",
+      "standing"
+    ]
+  },
+  {
+    "id": "isaiah-30-15",
+    "category": "Peace",
+    "verse": "For the Lord, the Holy One of Israel, said, In quiet and rest is your salvation: peace and hope are your strength: but you would not have it so.",
+    "reference": "Isaiah 30:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "isaiah-52-7",
+    "category": "Hope",
+    "verse": "How beautiful on the mountains are the feet of him who comes with good news, who gives word of peace, saying that salvation is near; who says to Zion, Your God is ruling!",
+    "reference": "Isaiah 52:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "colossians-3-2",
+    "category": "Wisdom",
+    "verse": "Keep your mind on the higher things, not on the things of earth.",
+    "reference": "Colossians 3:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "focus",
+      "heaven"
+    ]
+  },
+  {
+    "id": "1-corinthians-8-6",
+    "category": "Hope",
+    "verse": "There is for us only one God, the Father, of whom are all things, and we are for him; and one Lord, Jesus Christ, through whom are all things, and we have our being through him.",
+    "reference": "1 Corinthians 8:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "james-1-17",
+    "category": "Grace",
+    "verse": "Every good and true thing is given to us from heaven, coming from the Father of lights, with whom there is no change or any shade made by turning.",
+    "reference": "James 1:17",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "gift",
+      "father"
+    ]
+  },
+  {
+    "id": "james-4-8",
+    "category": "Prayer",
+    "verse": "Come near to God and he will come near to you. Make your hands clean, you evil-doers; put away deceit from your hearts, you false in mind.",
+    "reference": "James 4:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "nearness",
+      "heart"
+    ]
+  },
+  {
+    "id": "philemon-1-25",
+    "category": "Grace",
+    "verse": "The grace of our Lord Jesus Christ be with your spirit. So be it.",
+    "reference": "Philemon 1:25",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "1-peter-2-24",
+    "category": "Grace",
+    "verse": "He took our sins on himself, giving his body to be nailed on the tree, so that we, being dead to sin, might have a new life in righteousness, and by his wounds we have been made well.",
+    "reference": "1 Peter 2:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "healing",
+      "righteousness"
+    ]
+  },
+  {
+    "id": "1-john-1-9",
+    "category": "Grace",
+    "verse": "If we say openly that we have done wrong, he is upright and true to his word, giving us forgiveness of sins and making us clean from all evil.",
+    "reference": "1 John 1:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "cleansing"
+    ]
+  },
+  {
+    "id": "1-john-4-18",
+    "category": "Love",
+    "verse": "There is no fear in love: true love has no room for fear, because where fear is, there is pain; and he who is not free from fear is not complete in love.",
+    "reference": "1 John 4:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "fear",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-11",
+    "category": "Peace",
+    "verse": "Let this be my last word, brothers; be glad; be complete; be comforted; be of the same mind; be at peace with one another: and the God of love and peace will be with you.",
+    "reference": "2 Corinthians 13:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-103-20",
+    "category": "Hope",
+    "verse": "Give praise to the Lord, you his angels, who are great in strength, doing his orders, and waiting for his voice.",
+    "reference": "Psalms 103:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-30",
+    "category": "Hope",
+    "verse": "If you send out your spirit, they are given life; you make new the face of the earth.",
+    "reference": "Psalms 104:30",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "life"
+    ]
+  },
+  {
+    "id": "isaiah-25-9",
+    "category": "Hope",
+    "verse": "And in that day it will be said, See, this is our God; we have been waiting for him, and he will be our saviour: this is the Lord in whom is our hope; we will be glad and have delight in his salvation.",
+    "reference": "Isaiah 25:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-108-7",
+    "category": "Hope",
+    "verse": "This is the word of the holy God: I will be glad; I will make Shechem a heritage, measuring out the valley of Succoth.",
+    "reference": "Psalms 108:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-109-20",
+    "category": "Hope",
+    "verse": "Let this be the reward given to my haters from the Lord, and to those who say evil of my soul.",
+    "reference": "Psalms 109:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-112-7",
+    "category": "Hope",
+    "verse": "He will have no fear of evil news; his heart is fixed, for his hope is in the Lord.",
+    "reference": "Psalms 112:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-115-1",
+    "category": "Hope",
+    "verse": "Not to us, O Lord, not to us, but to your name let glory be given, because of your mercy and your unchanging faith.",
+    "reference": "Psalms 115:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-7",
+    "category": "Hope",
+    "verse": "Come back to your rest, O my soul; for the Lord has given you your reward.",
+    "reference": "Psalms 116:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-118-14",
+    "category": "Hope",
+    "verse": "The Lord is my strength and my song; he has become my salvation.",
+    "reference": "Psalms 118:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-15",
+    "category": "Hope",
+    "verse": "The sound of joy and salvation is in the tents of the upright; the right hand of the Lord does works of power.",
+    "reference": "Psalms 118:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-8",
+    "category": "Hope",
+    "verse": "It is better to have faith in the Lord than to put one's hope in man.",
+    "reference": "Psalms 118:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-118-9",
+    "category": "Hope",
+    "verse": "It is better to have faith in the Lord than to put one's hope in rulers.",
+    "reference": "Psalms 118:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-119-166",
+    "category": "Hope",
+    "verse": "Lord, my hope has been in your salvation; and I have kept your teachings.",
+    "reference": "Psalms 119:166",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "2-peter-3-18",
+    "category": "Grace",
+    "verse": "But be increased in grace and in the knowledge of our Lord and Saviour Jesus Christ. May he have glory now and for ever. So be it.",
+    "reference": "2 Peter 3:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-130-5",
+    "category": "Hope",
+    "verse": "I am waiting for the Lord, my soul is waiting for him, and my hope is in his word.",
+    "reference": "Psalms 130:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-130-7",
+    "category": "Hope",
+    "verse": "O Israel, have hope in the Lord; for with the Lord is mercy and full salvation.",
+    "reference": "Psalms 130:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-131-3",
+    "category": "Hope",
+    "verse": "O Israel, have hope in the Lord, from this time and for ever.",
+    "reference": "Psalms 131:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-14-7",
+    "category": "Hope",
+    "verse": "May the salvation of Israel come out of Zion! when the fate of his people is changed by the Lord, Jacob will have joy and Israel will be glad.",
+    "reference": "Psalms 14:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-140-7",
+    "category": "Hope",
+    "verse": "O Lord God, the strength of my salvation, you have been a cover over my head in the day of the fight.",
+    "reference": "Psalms 140:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-141-8",
+    "category": "Hope",
+    "verse": "But my eyes are turned to you, O Lord God: my hope is in you; let not my soul be given up to death.",
+    "reference": "Psalms 141:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-143-9",
+    "category": "Hope",
+    "verse": "O Lord, take me out of the hands of my haters; my soul is waiting for you.",
+    "reference": "Psalms 143:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-147-11",
+    "category": "Hope",
+    "verse": "The Lord takes pleasure in his worshippers, and in those whose hope is in his mercy.",
+    "reference": "Psalms 147:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-timothy-2-22",
+    "category": "Love",
+    "verse": "But keep yourself from those desires of the flesh which are strong when the body is young, and go after righteousness, faith, love, peace, with those whose prayers go up to the Lord from a clean heart.",
+    "reference": "2 Timothy 2:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "1-john-5-1",
+    "category": "Trust",
+    "verse": "Everyone who has faith that Jesus is the Christ is a child of God: and everyone who has love for the Father has love for his child.",
+    "reference": "1 John 5:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-20-6",
+    "category": "Hope",
+    "verse": "Now am I certain that the Lord gives salvation to his king; he will give him an answer from his holy heaven with the strength of salvation in his right hand.",
+    "reference": "Psalms 20:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-30-18",
+    "category": "Hope",
+    "verse": "For this cause the Lord will be waiting, so that he may be kind to you; and he will be lifted up, so that he may have mercy on you; for the Lord is a God of righteousness: there is a blessing on all whose hope is in him.",
+    "reference": "Isaiah 30:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-10-10",
+    "category": "Trust",
+    "verse": "For with the heart man has faith to get righteousness, and with the mouth he says that Jesus is Lord to get salvation.",
+    "reference": "Romans 10:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-27-13",
+    "category": "Hope",
+    "verse": "I had almost given up my hope of seeing the blessing of the Lord in the land of the living.",
+    "reference": "Psalms 27:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "daniel-10-19",
+    "category": "Courage",
+    "verse": "And he said to me, O man greatly loved, have no fear: peace be with you, be strong and let your heart be lifted up. And at his words I became strong, and said, Let my lord say on, for you have given me strength.",
+    "reference": "Daniel 10:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "strength",
+      "fear",
+      "trust"
+    ]
+  },
+  {
+    "id": "psalms-28-8",
+    "category": "Hope",
+    "verse": "The Lord is their strength, and a strong place of salvation for his king.",
+    "reference": "Psalms 28:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "ephesians-6-23",
+    "category": "Trust",
+    "verse": "Peace be to the brothers, and love with faith, from God the Father and the Lord Jesus Christ.",
+    "reference": "Ephesians 6:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-3-3",
+    "category": "Hope",
+    "verse": "But your strength, O Lord, is round me, you are my glory and the lifter up of my head.",
+    "reference": "Psalms 3:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-86-15",
+    "category": "Grace",
+    "verse": "But you, O Lord, are a God full of pity and forgiveness, slow to get angry, great in mercy and wisdom.",
+    "reference": "Psalms 86:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-23",
+    "category": "Hope",
+    "verse": "O have love for the Lord, all you his saints; for the Lord keeps safe from danger all those who are true to him, and gives the workers of pride their right reward.",
+    "reference": "Psalms 31:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "trust"
+    ]
+  },
+  {
+    "id": "2-corinthians-9-14",
+    "category": "Love",
+    "verse": "While their hearts go out to you in love and in prayer for you, because of the great grace of God which is in you.",
+    "reference": "2 Corinthians 9:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-6",
+    "category": "Hope",
+    "verse": "I am full of hate for those who go after false gods; but my hope is in the Lord.",
+    "reference": "Psalms 31:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-132-13",
+    "category": "Trust",
+    "verse": "For the Lord's heart is on Zion, desiring it for his resting-place.",
+    "reference": "Psalms 132:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-132-8",
+    "category": "Trust",
+    "verse": "Come back, O Lord, to your resting-place; you and the ark of your strength.",
+    "reference": "Psalms 132:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-14",
+    "category": "Grace",
+    "verse": "The grace of our Lord Jesus Christ, and the love of God, and the harmony of the Holy Spirit, be with you all.",
+    "reference": "2 Corinthians 13:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-john-1-3",
+    "category": "Grace",
+    "verse": "May grace, mercy, and peace be with us from God the Father, and from Jesus Christ, the Son of the Father, in all true love.",
+    "reference": "2 John 1:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-30-3",
+    "category": "Trust",
+    "verse": "O Lord, you have made my soul come again from the underworld: you have given me life and kept me from going down among the dead.",
+    "reference": "Psalms 30:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-30-7",
+    "category": "Trust",
+    "verse": "Lord, by your grace you have kept my mountain strong: when your face was turned from me I was troubled.",
+    "reference": "Psalms 30:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-36-7",
+    "category": "Trust",
+    "verse": "How good is your loving mercy, O God! the children of men take cover under the shade of your wings.",
+    "reference": "Psalms 36:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-15-16",
+    "category": "Joy",
+    "verse": "But to me your word is a joy, making my heart glad; for I am named by your name, O Lord God of armies.",
+    "reference": "Jeremiah 15:16",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-40-11",
+    "category": "Trust",
+    "verse": "Take not away your gentle mercies from me, O Lord; let your mercy and your faith keep me safe for ever.",
+    "reference": "Psalms 40:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-41-2",
+    "category": "Trust",
+    "verse": "The Lord will keep him safe, and give him life; the Lord will let him be a blessing on the earth, and will not give him into the hand of his haters.",
+    "reference": "Psalms 41:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-56-13",
+    "category": "Trust",
+    "verse": "Because you have taken my soul from the power of death; and kept my feet from falling, so that I may be walking before God in the light of life.",
+    "reference": "Psalms 56:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-61-7",
+    "category": "Trust",
+    "verse": "May the seat of his authority be before God for ever; may mercy and righteousness keep him safe.",
+    "reference": "Psalms 61:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "philippians-4-21",
+    "category": "Grace",
+    "verse": "Give words of love to every saint in Christ Jesus. The brothers who are with me send you their love.",
+    "reference": "Philippians 4:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-84-9",
+    "category": "Trust",
+    "verse": "O God, let your eyes be on him who is our safe cover, and let your heart be turned to your king.",
+    "reference": "Psalms 84:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "isaiah-30-29",
+    "category": "Trust",
+    "verse": "You will have a song, as in the night when a holy feast is kept; and you will be glad in heart, as when they go with music of the pipe to the mountain of the Lord, the Rock of Israel.",
+    "reference": "Isaiah 30:29",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "proverbs-29-25",
+    "category": "Trust",
+    "verse": "The fear of man is a cause of danger: but whoever puts his faith in the Lord will have a safe place on high.",
+    "reference": "Proverbs 29:25",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-12",
+    "category": "Trust",
+    "verse": "The Lord has kept us in mind and will give us his blessing; he will send blessings on the house of Israel and on the house of Aaron.",
+    "reference": "Psalms 115:12",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-116-6",
+    "category": "Trust",
+    "verse": "The Lord keeps the simple; I was made low, and he was my saviour.",
+    "reference": "Psalms 116:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-119-52",
+    "category": "Trust",
+    "verse": "I have kept the memory of your decisions from times past, O Lord; and they have been my comfort.",
+    "reference": "Psalms 119:52",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-119-55",
+    "category": "Trust",
+    "verse": "I have given thought to your name in the night, O Lord, and have kept your law.",
+    "reference": "Psalms 119:55",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-12-7",
+    "category": "Trust",
+    "verse": "You will keep them, O Lord, you will keep them safe from this generation for ever.",
+    "reference": "Psalms 12:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-121-5",
+    "category": "Trust",
+    "verse": "The Lord is your keeper; the Lord is your shade on your right hand.",
+    "reference": "Psalms 121:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-132-5",
+    "category": "Trust",
+    "verse": "Till I have got a place for the Lord, a resting-place for the great God of Jacob.",
+    "reference": "Psalms 132:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-140-4",
+    "category": "Trust",
+    "verse": "O Lord, take me out of the hands of sinners; keep me safe from the violent man: for they are designing my downfall.",
+    "reference": "Psalms 140:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-21",
+    "category": "Trust",
+    "verse": "For I have kept the ways of the Lord; I have not been turned away in sin from my God.",
+    "reference": "Psalms 18:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-3",
+    "category": "Trust",
+    "verse": "I will send up my cry to the Lord, who is to be praised; so will I be made safe from those who are against me.",
+    "reference": "Psalms 18:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-10-11",
+    "category": "Peace",
+    "verse": "He says in his heart, God has no memory of me: his face is turned away; he will never see it.",
+    "reference": "Psalms 10:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-10-3",
+    "category": "Peace",
+    "verse": "For the evil-doer is lifted up because of the purpose of his heart, and he whose mind is fixed on wealth is turned away from the Lord, saying evil against him.",
+    "reference": "Psalms 10:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-thessalonians-3-5",
+    "category": "Love",
+    "verse": "And may your hearts be guided by the Lord into the love of God and quiet waiting for Christ.",
+    "reference": "2 Thessalonians 3:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-1",
+    "category": "Peace",
+    "verse": "Let the Lord be praised. I will give praise to the Lord with all my heart, among the upright, and in the meeting of the people.",
+    "reference": "Psalms 111:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-9",
+    "category": "Grace",
+    "verse": "For you see the grace of our Lord Jesus Christ, how though he had wealth, he became poor on your account, so that through his need you might have wealth.",
+    "reference": "2 Corinthians 8:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-125-4",
+    "category": "Peace",
+    "verse": "Do good, O Lord, to those who are good, and to those who are upright in heart.",
+    "reference": "Psalms 125:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-125-5",
+    "category": "Peace",
+    "verse": "But as for such as are turned out of the straight way, the Lord will take them away with the workers of evil. Let peace be on Israel.",
+    "reference": "Psalms 125:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "philippians-1-8",
+    "category": "Grace",
+    "verse": "For God is my witness, how my love goes out to you all in the loving mercies of Christ Jesus.",
+    "reference": "Philippians 1:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-16-20",
+    "category": "Peace",
+    "verse": "And the God of peace will be crushing Satan under your feet before long. The grace of our Lord Jesus Christ be with you.",
+    "reference": "Romans 16:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-4",
+    "category": "Peace",
+    "verse": "Because of this my spirit is overcome; and my heart is full of fear.",
+    "reference": "Psalms 143:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-19-8",
+    "category": "Peace",
+    "verse": "The orders of the Lord are right, making glad the heart: the rule of the Lord is holy, giving light to the eyes.",
+    "reference": "Psalms 19:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-26",
+    "category": "Peace",
+    "verse": "The poor will have a feast of good things: those who make search for the Lord will give him praise: your heart will have life for ever.",
+    "reference": "Psalms 22:26",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-7",
+    "category": "Peace",
+    "verse": "Do not keep in mind my sins when I was young, or my wrongdoing: let your memory of me be full of mercy, O Lord, because of your righteousness.",
+    "reference": "Psalms 25:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-28-7",
+    "category": "Peace",
+    "verse": "The Lord is my strength and my breastplate, my heart had faith in him and I am helped; for this cause my heart is full of rapture, and I will give him praise in my song.",
+    "reference": "Psalms 28:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "strength"
+    ]
+  },
+  {
+    "id": "galatians-3-14",
+    "category": "Trust",
+    "verse": "So that on the Gentiles might come the blessing of Abraham in Christ Jesus; in order that we through faith might have the Spirit which God had undertaken to give.",
+    "reference": "Galatians 3:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-32-11",
+    "category": "Peace",
+    "verse": "Be glad in the Lord with joy, you upright men; give cries of joy, all you whose hearts are true.",
+    "reference": "Psalms 32:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-33-11",
+    "category": "Peace",
+    "verse": "The Lord's purpose is eternal, the designs of his heart go on through all the generations of man.",
+    "reference": "Psalms 33:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-35-27",
+    "category": "Peace",
+    "verse": "Let those who are on my side give cries of joy; let them ever say, The Lord be praised, for he has pleasure in the peace of his servant.",
+    "reference": "Psalms 35:27",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-11",
+    "category": "Peace",
+    "verse": "And not only so, but we have joy in God through our Lord Jesus Christ, through whom we are now at peace with God.",
+    "reference": "Romans 5:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-37-3",
+    "category": "Peace",
+    "verse": "Have faith in the Lord, and do good; be at rest in the land, and go after righteousness.",
+    "reference": "Psalms 37:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-37-31",
+    "category": "Peace",
+    "verse": "The law of his God is in his heart; he will never make a false step.",
+    "reference": "Psalms 37:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-37-4",
+    "category": "Peace",
+    "verse": "So will your delight be in the Lord, and he will give you your heart's desires.",
+    "reference": "Psalms 37:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-4-7",
+    "category": "Peace",
+    "verse": "Lord, you have put joy in my heart, more than they have when their grain and their wine are increased.",
+    "reference": "Psalms 4:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-40-8",
+    "category": "Peace",
+    "verse": "My delight is to do your pleasure, O my God; truly, your law is in my heart.",
+    "reference": "Psalms 40:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-10-14",
+    "category": "Strength",
+    "verse": "You have seen it; for your eyes are on sorrow and grief, to take it into your hand: the poor man puts his faith in you; you have been the helper of the child who has no father.",
+    "reference": "Psalms 10:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-104-1",
+    "category": "Strength",
+    "verse": "Give praise to the Lord, O my soul. O Lord my God, you are very great; you are robed with honour and power.",
+    "reference": "Psalms 104:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-109-21",
+    "category": "Strength",
+    "verse": "But, O Lord God, give me your help, because of your name; take me out of danger, because your mercy is good.",
+    "reference": "Psalms 109:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-7",
+    "category": "Grace",
+    "verse": "And that as you are full of every good thing, of faith, of the word, of knowledge, of a ready mind, and of love to us, so you may be full of this grace in the same way.",
+    "reference": "2 Corinthians 8:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-110-2",
+    "category": "Strength",
+    "verse": "The Lord will send out the rod of your strength from Zion; be king over your haters.",
+    "reference": "Psalms 110:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-115-10",
+    "category": "Strength",
+    "verse": "O house of Aaron, have faith in the Lord: he is their help and their breastplate.",
+    "reference": "Psalms 115:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-11",
+    "category": "Strength",
+    "verse": "You worshippers of the Lord, have faith in the Lord: he is their help and their breastplate.",
+    "reference": "Psalms 115:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-9",
+    "category": "Strength",
+    "verse": "O Israel, have faith in the Lord: he is their help and their breastplate.",
+    "reference": "Psalms 115:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-23",
+    "category": "Peace",
+    "verse": "And may the God of peace himself make you holy in every way; and may your spirit and soul and body be free from all sin at the coming of our Lord Jesus Christ.",
+    "reference": "1 Thessalonians 5:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-7",
+    "category": "Strength",
+    "verse": "Be quick in answering me, O Lord, for the strength of my spirit is gone: let me see your face, so that I may not be like those who go down into the underworld.",
+    "reference": "Psalms 143:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-147-5",
+    "category": "Strength",
+    "verse": "Great is our Lord, and great his power; there is no limit to his wisdom.",
+    "reference": "Psalms 147:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "1-corinthians-15-57",
+    "category": "Trust",
+    "verse": "But praise be to God who gives us strength to overcome through our Lord Jesus Christ.",
+    "reference": "1 Corinthians 15:57",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-21-13",
+    "category": "Strength",
+    "verse": "Be lifted up, O Lord, in your strength; so will we make songs in praise of your power.",
+    "reference": "Psalms 21:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-19",
+    "category": "Strength",
+    "verse": "Do not be far from me, O Lord: O my strength, come quickly to my help.",
+    "reference": "Psalms 22:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "1-corinthians-1-3",
+    "category": "Peace",
+    "verse": "Grace to you and peace from God our Father and the Lord Jesus Christ.",
+    "reference": "1 Corinthians 1:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-30-10",
+    "category": "Strength",
+    "verse": "Give ear to me, O Lord, and have mercy on me: Lord, be my helper.",
+    "reference": "Psalms 30:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-21",
+    "category": "Strength",
+    "verse": "May the Lord be praised, because he has made clear to me the wonder of his grace in a strong town.",
+    "reference": "Psalms 31:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-36-5",
+    "category": "Strength",
+    "verse": "Your mercy, O Lord, is in the heavens, and your strong purpose is as high as the clouds.",
+    "reference": "Psalms 36:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-37-39",
+    "category": "Strength",
+    "verse": "But the Lord is the saviour of the upright: he is their strength in the time of trouble.",
+    "reference": "Psalms 37:39",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-41-3",
+    "category": "Strength",
+    "verse": "The Lord will be his support on his bed of pain: by you will all his grief be turned to strength.",
+    "reference": "Psalms 41:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "luke-2-52",
+    "category": "Grace",
+    "verse": "And Jesus was increasing in wisdom and in years, and in grace before God and men.",
+    "reference": "Luke 2:52",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-2",
+    "category": "Peace",
+    "verse": "Grace to you and peace from God the Father and the Lord Jesus Christ.",
+    "reference": "2 Thessalonians 1:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-40-10",
+    "category": "Faith",
+    "verse": "Your righteousness has not been folded away in my heart; I have made clear your true word and your salvation; I have not kept secret your mercy or your faith from the great meeting.",
+    "reference": "Psalms 40:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "lamentations-3-24",
+    "category": "Hope",
+    "verse": "I said to myself, The Lord is my heritage; and because of this I will have hope in him.",
+    "reference": "Lamentations 3:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "trust",
+      "presence",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-69-13",
+    "category": "Prayer",
+    "verse": "But as for me, let my prayer be made to you, O Lord, at a time when you are pleased; O God, give me an answer in your great mercy, for your salvation is certain.",
+    "reference": "Psalms 69:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "luke-10-27",
+    "category": "Love",
+    "verse": "And he, answering, said, Have love for the Lord your God with all your heart and with all your soul and with all your strength and with all your mind; and for your neighbour as for yourself.",
+    "reference": "Luke 10:27",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-106-1",
+    "category": "Comfort",
+    "verse": "Let the Lord be praised. O give praise to the Lord, for he is good: for his mercy is unchanging for ever.",
+    "reference": "Psalms 106:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-42-20",
+    "category": "Faith",
+    "verse": "For you have been acting with deceit in your hearts; for you sent me to the Lord your God, saying, Make prayer for us to the Lord our God, and give us word of everything he may say, and we will do it.",
+    "reference": "Jeremiah 42:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-107-15",
+    "category": "Comfort",
+    "verse": "Let men give praise to the Lord for his mercy, and for the wonders which he does for the children of men!",
+    "reference": "Psalms 107:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-11-17",
+    "category": "Trust",
+    "verse": "If then God gave them, when they had faith in the Lord Jesus Christ, the same as he gave to us, who was I to go against God?",
+    "reference": "Acts 11:17",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-6-5",
+    "category": "Love",
+    "verse": "And the Lord your God is to be loved with all your heart and with all your soul and with all your strength.",
+    "reference": "Deuteronomy 6:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "mark-12-30",
+    "category": "Love",
+    "verse": "And you are to have love for the Lord your God with all your heart, and with all your soul, and with all your mind, and with all your strength.",
+    "reference": "Mark 12:30",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-4",
+    "category": "Comfort",
+    "verse": "Certain for ever is the memory of his wonders: the Lord is full of pity and mercy.",
+    "reference": "Psalms 111:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-4",
+    "category": "Comfort",
+    "verse": "Then I made my prayer to the Lord, saying, O Lord, take my soul out of trouble.",
+    "reference": "Psalms 116:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-116-5",
+    "category": "Comfort",
+    "verse": "The Lord is full of grace and righteousness; truly, he is a God of mercy.",
+    "reference": "Psalms 116:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-117-2",
+    "category": "Comfort",
+    "verse": "For great is his mercy to us, and his faith is unchanging for ever. Praise be to the Lord.",
+    "reference": "Psalms 117:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-15-11",
+    "category": "Trust",
+    "verse": "But we have faith that we will get salvation through the grace of the Lord Jesus in the same way as they.",
+    "reference": "Acts 15:11",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "2-timothy-1-13",
+    "category": "Faith",
+    "verse": "Keep the form of those true words which you had from me, in faith and love which is in Christ Jesus.",
+    "reference": "2 Timothy 1:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-118-4",
+    "category": "Comfort",
+    "verse": "Let all worshippers of the Lord now say, that his mercy is unchanging for ever.",
+    "reference": "Psalms 118:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-107",
+    "category": "Comfort",
+    "verse": "I am greatly troubled, O Lord, give me life in keeping with your word.",
+    "reference": "Psalms 119:107",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-119-149",
+    "category": "Comfort",
+    "verse": "Let my voice come to you, in your mercy; O Lord, by your decisions give me life.",
+    "reference": "Psalms 119:149",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-159",
+    "category": "Comfort",
+    "verse": "See how great is my love for your orders: give me life, O Lord, in keeping with your mercy.",
+    "reference": "Psalms 119:159",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-156",
+    "category": "Grace",
+    "verse": "Great is the number of your mercies, O Lord; give me life in keeping with your decisions.",
+    "reference": "Psalms 119:156",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "1-peter-1-21",
+    "category": "Hope",
+    "verse": "Who through him have faith in God who took him up again from the dead into glory; so that your faith and hope might be in God.",
+    "reference": "1 Peter 1:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-36-6",
+    "category": "Grace",
+    "verse": "Your righteousness is like the mountains of God; your judging is like the great deep; O Lord, you give life to man and beast.",
+    "reference": "Psalms 36:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-4-5",
+    "category": "Grace",
+    "verse": "Give the offerings of righteousness, and put your faith in the Lord.",
+    "reference": "Psalms 4:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-41-10",
+    "category": "Grace",
+    "verse": "But you, O Lord, have mercy on me, lifting me up, so that I may give them their punishment.",
+    "reference": "Psalms 41:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "jude-1-21",
+    "category": "Grace",
+    "verse": "Keep yourselves in the love of God, looking for life eternal through the mercy of our Lord Jesus Christ.",
+    "reference": "Jude 1:21",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-96-13",
+    "category": "Grace",
+    "verse": "Before the Lord, for he is come; he is come to be the judge of the earth; the earth will be judged in righteousness, and the peoples with unchanging faith.",
+    "reference": "Psalms 96:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-89-49",
+    "category": "Grace",
+    "verse": "Lord, where are your earlier mercies? where is the oath which you made to David in unchanging faith?",
+    "reference": "Psalms 89:49",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-4",
+    "category": "Grace",
+    "verse": "So you will have grace and a good name in the eyes of God and men.",
+    "reference": "Proverbs 3:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "proverbs-8-35",
+    "category": "Grace",
+    "verse": "For whoever gets me gets life, and grace from the Lord will come to him.",
+    "reference": "Proverbs 8:35",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-103-13",
+    "category": "Grace",
+    "verse": "As a father has pity on his children, so the Lord has pity on his worshippers.",
+    "reference": "Psalms 103:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "psalms-107-43",
+    "category": "Grace",
+    "verse": "Let the wise give thought to these things, and see the mercies of the Lord.",
+    "reference": "Psalms 107:43",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-11-7",
+    "category": "Grace",
+    "verse": "For the Lord is upright; he is a lover of righteousness: the upright will see his face.",
+    "reference": "Psalms 11:7",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-118-19",
+    "category": "Grace",
+    "verse": "Let the doors of righteousness be open to me; I will go in and give praise to the Lord.",
+    "reference": "Psalms 118:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-20",
+    "category": "Grace",
+    "verse": "This is the door of the Lord's house; the workers of righteousness will go in through it.",
+    "reference": "Psalms 118:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "hebrews-3-6",
+    "category": "Hope",
+    "verse": "But Christ as a son, over his house; whose house are we, if we keep our hearts fixed in the glad and certain hope till the end.",
+    "reference": "Hebrews 3:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-143-10",
+    "category": "Grace",
+    "verse": "Give me teaching so that I may do your pleasure; for you are my God: let your good Spirit be my guide into the land of righteousness.",
+    "reference": "Psalms 143:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-18-30",
+    "category": "Faith",
+    "verse": "As for God, his way is completely good; the word of the Lord is tested; he is a breastplate for all those who put their faith in him.",
+    "reference": "Psalms 18:30",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-22-8",
+    "category": "Faith",
+    "verse": "He put his faith in the Lord; let the Lord be his saviour now: let the Lord be his saviour, because he had delight in him.",
+    "reference": "Psalms 22:8",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-2",
+    "category": "Faith",
+    "verse": "O my God, I have put my faith in you, let me not be shamed; let not my haters be glorying over me.",
+    "reference": "Psalms 25:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-timothy-1-14",
+    "category": "Grace",
+    "verse": "And the grace of our Lord was very great, with faith and love which is in Christ Jesus.",
+    "reference": "1 Timothy 1:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-14",
+    "category": "Faith",
+    "verse": "But I had faith in you, O Lord; I said, You are my God.",
+    "reference": "Psalms 31:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-33-4",
+    "category": "Faith",
+    "verse": "For the word of the Lord is upright, and all his works are certain.",
+    "reference": "Psalms 33:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-34-22",
+    "category": "Faith",
+    "verse": "The Lord will be the saviour of the souls of his servants, and no one who has faith in him will be put to shame.",
+    "reference": "Psalms 34:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "acts-7-59",
+    "category": "Prayer",
+    "verse": "And Stephen, while he was being stoned, made prayer to God, saying, Lord Jesus, take my spirit.",
+    "reference": "Acts 7:59",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "psalms-37-5",
+    "category": "Faith",
+    "verse": "Put your life in the hands of the Lord; have faith in him and he will do it.",
+    "reference": "Psalms 37:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-40-4",
+    "category": "Faith",
+    "verse": "Happy is the man who has faith in the Lord, and does not give honour to the men of pride or to those who are turned away to deceit.",
+    "reference": "Psalms 40:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-55-23",
+    "category": "Faith",
+    "verse": "But you, O God, will send them down into the underworld; the cruel and the false will be cut off before half their days are ended; but I will have faith in you.",
+    "reference": "Psalms 55:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-78-22",
+    "category": "Faith",
+    "verse": "Because they had no faith in God, and no hope in his salvation.",
+    "reference": "Psalms 78:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalms-89-5",
+    "category": "Faith",
+    "verse": "In heaven let them give praise for your wonders, O Lord; and your unchanging faith among the saints.",
+    "reference": "Psalms 89:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-20-5",
+    "category": "Hope",
+    "verse": "We will be glad in your salvation, and in the name of our God we will put up our flags: may the Lord give you all your requests.",
+    "reference": "Psalms 20:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-48-2",
+    "category": "Faith",
+    "verse": "For they say that they are of the holy town, and put their faith in the God of Israel: the Lord of armies is his name.",
+    "reference": "Isaiah 48:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "proverbs-16-20",
+    "category": "Faith",
+    "verse": "He who gives attention to the law of right will get good; and whoever puts his faith in the Lord is happy.",
+    "reference": "Proverbs 16:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-116-1",
+    "category": "Love",
+    "verse": "I have given my love to the Lord, because he has given ear to the voice of my cry and my prayer.",
+    "reference": "Psalms 116:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "prayer"
+    ]
+  },
+  {
+    "id": "isaiah-45-22",
+    "category": "Hope",
+    "verse": "Let your hearts be turned to me, so that you may have salvation, all the ends of the earth: for I am God, and there is no other.",
+    "reference": "Isaiah 45:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-87-2",
+    "category": "Love",
+    "verse": "The Lord has more love for the doors of Zion than for all the tents of Jacob.",
+    "reference": "Psalms 87:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "psalms-55-14",
+    "category": "Love",
+    "verse": "We had loving talk together, and went to the house of God in company.",
+    "reference": "Psalms 55:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-10-17",
+    "category": "Love",
+    "verse": "For this reason am I loved by the Father, because I give up my life so that I may take it again.",
+    "reference": "John 10:17",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "life"
+    ]
+  },
+  {
+    "id": "john-14-23",
+    "category": "Love",
+    "verse": "Jesus said to him in answer, If anyone has love for me, he will keep my words: and he will be dear to my Father; and we will come to him and make our living-place with him.",
+    "reference": "John 14:23",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-24",
+    "category": "Love",
+    "verse": "He who has no love for me does not keep my words; and the word which you are hearing is not my word but the Father's who sent me.",
+    "reference": "John 14:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-31",
+    "category": "Love",
+    "verse": "But he comes so that the world may see that I have love for the Father, and that I am doing as I am ordered by the Father. Get up, and let us go.",
+    "reference": "John 14:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-15-9",
+    "category": "Love",
+    "verse": "Even as the Father has given me his love, so I have given my love to you: be ever in my love.",
+    "reference": "John 15:9",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-3-35",
+    "category": "Love",
+    "verse": "The Father has love for the Son and has put all things into his hands.",
+    "reference": "John 3:35",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-5-20",
+    "category": "Love",
+    "verse": "For the Father has love for the Son and lets him see everything which he does: and he will let him see greater works than these so that you may be full of wonder.",
+    "reference": "John 5:20",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-8-42",
+    "category": "Love",
+    "verse": "Jesus said to them, If God was your Father you would have love for me, because it was from God I came and am here. I did not come of myself, but he sent me.",
+    "reference": "John 8:42",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-10-37",
+    "category": "Love",
+    "verse": "He who has more love for his father or mother than for me is not good enough for me; he who has more love for son or daughter than for me is not good enough for me.",
+    "reference": "Matthew 10:37",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-12-18",
+    "category": "Love",
+    "verse": "See my servant, the man of my selection, my loved one in whom my soul is well pleased: I will put my Spirit on him, and he will make my decision clear to the Gentiles.",
+    "reference": "Matthew 12:18",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-19-19",
+    "category": "Love",
+    "verse": "Give honour to your father and your mother: and, Have love for your neighbour as for yourself.",
+    "reference": "Matthew 19:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "2-peter-1-14",
+    "category": "Hope",
+    "verse": "For I am conscious that in a short time I will have to put off this tent of flesh, as our Lord Jesus Christ has made clear to me.",
+    "reference": "2 Peter 1:14",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-52-10",
+    "category": "Hope",
+    "verse": "The Lord has let his holy arm be seen by the eyes of all nations; and all the ends of the earth will see the salvation of our God.",
+    "reference": "Isaiah 52:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-89-15",
+    "category": "Prayer",
+    "verse": "Happy are the people who have knowledge of the holy cry: the light of your face, O Lord, will be shining on their way.",
+    "reference": "Psalms 89:15",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-98-4",
+    "category": "Prayer",
+    "verse": "Let all the earth send out a glad cry to the Lord; sounding with a loud voice, and praising him with songs of joy.",
+    "reference": "Psalms 98:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-5",
+    "category": "Hope",
+    "verse": "For our preaching is not about ourselves, but about Christ Jesus as Lord, and ourselves as your servants through Jesus.",
+    "reference": "2 Corinthians 4:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-106-25",
+    "category": "Prayer",
+    "verse": "Talking against him secretly in their tents, they did not give ear to the voice of the Lord.",
+    "reference": "Psalms 106:25",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "romans-2-16",
+    "category": "Hope",
+    "verse": "In the day when God will be a judge of the secrets of men, as it says in the good news of which I am a preacher, through Jesus Christ.",
+    "reference": "Romans 2:16",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-116-17",
+    "category": "Prayer",
+    "verse": "I will give an offering of praise to you, and make my prayer in the name of the Lord.",
+    "reference": "Psalms 116:17",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-126-2",
+    "category": "Prayer",
+    "verse": "Then our mouths were full of laughing, and our tongues gave a glad cry; they said among the nations, The Lord has done great things for them.",
+    "reference": "Psalms 126:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-2",
+    "category": "Hope",
+    "verse": "Through whom, in the same way, we have been able by faith to come to this grace in which we now are; and let us have joy in hope of the glory of God.",
+    "reference": "Romans 5:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-130-2",
+    "category": "Prayer",
+    "verse": "Lord, let my voice come before you: let your ears be awake to the voice of my prayer.",
+    "reference": "Psalms 130:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-140-6",
+    "category": "Prayer",
+    "verse": "I have said to the Lord, You are my God: give ear, O Lord, to the voice of my prayer.",
+    "reference": "Psalms 140:6",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-104-24",
+    "category": "Wisdom",
+    "verse": "O Lord, how great is the number of your works! in wisdom you have made them all; the earth is full of the things you have made.",
+    "reference": "Psalms 104:24",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-105-19",
+    "category": "Wisdom",
+    "verse": "Till the time when his word came true; he was tested by the word of the Lord.",
+    "reference": "Psalms 105:19",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-111-10",
+    "category": "Wisdom",
+    "verse": "The fear of the Lord is the best part of wisdom: all those who keep his laws are wise: his praise is eternal.",
+    "reference": "Psalms 111:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-27",
+    "category": "Wisdom",
+    "verse": "The Lord is God, and he has given us light; let the holy dance be ordered with branches, even up to the horns of the altar.",
+    "reference": "Psalms 118:27",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-119-31",
+    "category": "Wisdom",
+    "verse": "I have been true to your unchanging word; O Lord, do not put me to shame.",
+    "reference": "Psalms 119:31",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-64-10",
+    "category": "Hope",
+    "verse": "The upright will be glad in the Lord and have hope in him; and all the lovers of righteousness will give him glory.",
+    "reference": "Psalms 64:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-56-4",
+    "category": "Hope",
+    "verse": "In God will I give praise to his word; in God have I put my hope; I will have no fear of what flesh may do to me.",
+    "reference": "Psalms 56:4",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-26-13",
+    "category": "Hope",
+    "verse": "O Lord, our God, other lords than you have had rule over us; but in you only is our salvation, and no other name will we take on our lips.",
+    "reference": "Isaiah 26:13",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-100-2",
+    "category": "Joy",
+    "verse": "Give worship to the Lord with joy; come before him with a song.",
+    "reference": "Psalms 100:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-5",
+    "category": "Hope",
+    "verse": "And going even farther than our hope, they first gave themselves to the Lord and to us after the purpose of God.",
+    "reference": "2 Corinthians 8:5",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-103-2",
+    "category": "Joy",
+    "verse": "Give praise to the Lord, O my soul; let not all his blessings go from your memory.",
+    "reference": "Psalms 103:2",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "psalms-103-22",
+    "category": "Joy",
+    "verse": "Give praise to the Lord, all his works, in all places under his rule: give praise to the Lord, O my soul.",
+    "reference": "Psalms 103:22",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "deuteronomy-13-3",
+    "category": "Love",
+    "verse": "Then give no attention to the words of that prophet or that dreamer of dreams: for the Lord your God is testing you, to see if all the love of your heart and soul is given to him.",
+    "reference": "Deuteronomy 13:3",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "isaiah-43-1",
+    "category": "Courage",
+    "verse": "But now, says the Lord your Maker, O Jacob, and your life-giver, O Israel: have no fear, for I have taken up your cause; naming you by your name, I have made you mine.",
+    "reference": "Isaiah 43:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "fear",
+      "strength",
+      "life"
+    ]
+  },
+  {
+    "id": "1-samuel-2-1",
+    "category": "Joy",
+    "verse": "And Hannah, in prayer before the Lord, said, My heart is glad in the Lord, my horn is lifted up in the Lord: my mouth is open wide over my haters; because my joy is in your salvation.",
+    "reference": "1 Samuel 2:1",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-96-10",
+    "category": "Courage",
+    "verse": "Say among the nations, The Lord is King; yes, the world is ordered so that it may not be moved; he will be an upright judge of the peoples.",
+    "reference": "Psalms 96:10",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "courage",
+      "fear",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-33",
+    "category": "Life",
+    "verse": "I will make songs to the Lord all my life; I will make melody to my God while I have my being.",
+    "reference": "Psalms 104:33",
+    "translation": "Bible in Basic English (BBE)",
+    "tags": [
+      "life",
+      "light",
+      "eternal-life"
+    ]
+  }
 ]
