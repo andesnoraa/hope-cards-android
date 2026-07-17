@@ -47,10 +47,10 @@ export default function AboutScreen() {
           { color: theme.cardText },
         ]}
       >
-        Hope Cards is a beautifully
-        designed Bible verse app that
-        helps encourage, strengthen, and
-        inspire people through God's Word.
+        Hope Cards helps you find Bible
+        verses for daily encouragement.
+        Draw a card, save favorite verses,
+        and share hope with others.
       </Text>
 
       <View style={styles.section}>
@@ -69,7 +69,7 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Draw encouraging Bible verses
+          • Draw encouraging verse cards
         </Text>
 
         <Text
@@ -78,7 +78,7 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Save your favorite verses
+          • Save verses that speak to you
         </Text>
 
         <Text
@@ -87,8 +87,7 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Read a fresh Daily Hope verse
-          each day
+          • Begin each day with Daily Hope
         </Text>
 
         <Text
@@ -97,7 +96,7 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Set daily reminder times
+          • Set reminders for quiet moments
         </Text>
 
         <Text
@@ -106,7 +105,7 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Share verses with family and
+          • Share hope with family and
           friends
         </Text>
 
@@ -116,8 +115,7 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Backup and restore your saved
-          data
+          • Choose calming visual themes
         </Text>
 
         <Text
@@ -126,7 +124,8 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Gentle haptic feedback
+          • Back up and restore your saved
+          verses
         </Text>
 
         <Text
@@ -135,8 +134,117 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          • Clean and distraction-free
-          experience
+          • Read in a clean,
+          distraction-free space
+        </Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
+          Why Hope Cards Exists
+        </Text>
+
+        <Text
+          style={[
+            styles.body,
+            { color: theme.cardText },
+          ]}
+        >
+          Hope Cards was created from a
+          season where Scripture brought
+          encouragement and strength
+          during a difficult time.
+        </Text>
+
+        <Text
+          style={[
+            styles.body,
+            styles.bodySpacing,
+            { color: theme.cardText },
+          ]}
+        >
+          The vision is simple: to help
+          someone facing a hard situation
+          find a timely verse, a quiet
+          reminder, and renewed hope.
+        </Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
+          Bible Translation
+        </Text>
+
+        <Text
+          style={[
+            styles.body,
+            { color: theme.cardText },
+          ]}
+        >
+          Hope Cards uses the Bible in
+          Basic English (BBE), prepared by
+          Professor S. H. Hooke.
+        </Text>
+
+        <Text
+          style={[
+            styles.body,
+            styles.bodySpacing,
+            { color: theme.cardText },
+          ]}
+        >
+          The BBE uses a limited Basic
+          English vocabulary to make
+          Scripture easier to read. The New
+          Testament was released in 1941,
+          the Old Testament in 1949, and
+          the revised edition in 1965.
+        </Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text
+          style={[
+            styles.sectionTitle,
+            { color: theme.text },
+          ]}
+        >
+          Copyright
+        </Text>
+
+        <Text
+          style={[
+            styles.body,
+            { color: theme.cardText },
+          ]}
+        >
+          The verses in Hope Cards are from
+          the Bible in Basic English, a
+          public-domain translation.
+        </Text>
+
+        <Text
+          style={[
+            styles.body,
+            styles.bodySpacing,
+            { color: theme.cardText },
+          ]}
+        >
+          Bible text: Bible in Basic
+          English (BBE){"\n"}
+          Translator: Professor S. H.
+          Hooke{"\n"}
+          Status: Public domain
         </Text>
       </View>
 
@@ -230,6 +338,10 @@ const styles = StyleSheet.create({
   body: {
     fontSize: 18,
     lineHeight: 28,
+  },
+
+  bodySpacing: {
+    marginTop: 14,
   },
 
   footer: {

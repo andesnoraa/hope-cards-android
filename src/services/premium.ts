@@ -1,3 +1,4 @@
+import Constants from "expo-constants";
 import { Platform } from "react-native";
 import Purchases, {
   LOG_LEVEL,
@@ -38,6 +39,10 @@ export type PremiumOffering = {
 
 let configurePromise: Promise<boolean> | null = null;
 
+function isRunningInExpoGo() {
+  return Constants.appOwnership === "expo";
+}
+
 export function isPremiumTheme(
   themeName: AppThemeName
 ) {
@@ -77,6 +82,7 @@ async function configurePurchases() {
   configurePromise = (async () => {
     if (
       Platform.OS !== "android" ||
+      isRunningInExpoGo() ||
       !REVENUECAT_ANDROID_API_KEY
     ) {
       return false;

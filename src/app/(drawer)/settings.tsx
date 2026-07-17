@@ -220,6 +220,21 @@ export default function SettingsScreen() {
     setPremiumPrompt(feature);
   }
 
+  function getPremiumPromptMessage(
+    feature: string | null
+  ) {
+    if (!feature) {
+      return "";
+    }
+
+    const verb =
+      feature === "Premium themes"
+        ? "are"
+        : "is";
+
+    return `${feature} ${verb} included with Hope Cards Premium.`;
+  }
+
   async function toggleDrawButton(
     value: boolean
   ) {
@@ -1717,11 +1732,9 @@ Your current favorites and settings will be replaced.`,
       <PremiumNoticeModal
         visible={premiumPrompt !== null}
         title="Premium Subscription"
-        message={
+        message={getPremiumPromptMessage(
           premiumPrompt
-            ? `${premiumPrompt} is included with Hope Cards Premium.`
-            : ""
-        }
+        )}
         icon="lock-closed-outline"
         secondaryLabel="Not Now"
         onSecondary={() => {
