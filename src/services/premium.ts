@@ -16,11 +16,7 @@ declare const process: {
 const REVENUECAT_ANDROID_API_KEY =
   process.env?.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY;
 
-const PREMIUM_ENTITLEMENT_IDS = [
-  "premium",
-  "pro",
-  "Hope Cards Pro",
-];
+const PREMIUM_ENTITLEMENT_ID = "Hope Cards Pro";
 
 export const PREMIUM_THEME_NAMES: AppThemeName[] = [
   "roseDawn",
@@ -57,14 +53,8 @@ function hasPremiumEntitlement(
     customerInfo.entitlements.active;
 
   return (
-    PREMIUM_ENTITLEMENT_IDS.some(
-      (entitlementId) =>
-        activeEntitlements[entitlementId]
-          ?.isActive
-    ) ||
-    Object.values(activeEntitlements).some(
-      (entitlement) => entitlement.isActive
-    )
+    activeEntitlements[PREMIUM_ENTITLEMENT_ID]
+      ?.isActive === true
   );
 }
 

@@ -33,7 +33,7 @@ Hope Cards Premium is powered by RevenueCat on Android. Add the Android public S
 EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY=goog_your_android_public_sdk_key
 ```
 
-The app expects a RevenueCat offering with a monthly package and treats the `premium`, `pro`, or `Hope Cards Pro` entitlement as Premium access. Purchases must be tested in an Android development/preview/production build, not Expo Go.
+The app expects a RevenueCat `default` offering with a monthly package and treats the `Hope Cards Pro` entitlement identifier as Premium access. Purchases must be tested in an Android development/preview/production build, not Expo Go.
 
 ## Get a fresh project
 
