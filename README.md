@@ -25,6 +25,16 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Premium subscriptions
+
+Hope Cards Premium is powered by RevenueCat on Android. Add the Android public SDK key before creating a development, preview, or production build:
+
+```bash
+EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY=goog_your_android_public_sdk_key
+```
+
+The app expects a RevenueCat offering with a monthly package and treats the `premium`, `pro`, or `Hope Cards Pro` entitlement as Premium access. Purchases must be tested in an Android development/preview/production build, not Expo Go.
+
 ## Get a fresh project
 
 When you're ready, run:

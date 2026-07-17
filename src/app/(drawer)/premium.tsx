@@ -6,6 +6,7 @@ import {
 } from "react";
 
 import {
+  ActivityIndicator,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -15,9 +16,10 @@ import {
 
 import PremiumNoticeModal from "../../components/premium/PremiumNoticeModal";
 import {
+  getPremiumOffering,
   getPremiumStatus,
+  purchasePremium,
   restorePremium,
-  unlockPremium,
 } from "../../services/premium";
 import { useAppTheme } from "../../theme/appTheme";
 
@@ -105,6 +107,14 @@ export default function PremiumScreen() {
   const { theme } = useAppTheme();
   const [isPremium, setIsPremium] =
     useState(false);
+  const [isLoading, setIsLoading] =
+    useState(true);
+  const [isPurchasing, setIsPurchasing] =
+    useState(false);
+  const [isRestoring, setIsRestoring] =
+    useState(false);
+  const [canPurchase, setCanPurchase] =
+    useState(false);
   const [notice, setNotice] =
     useState<Notice | null>(null);
 
@@ -113,13 +123,31 @@ export default function PremiumScreen() {
       let mounted = true;
 
       async function load() {
-        const status =
-          await getPremiumStatus();
+        try {
+          const [status, offering] =
+            await Promise.all([
+              getPremiumStatus(),
+              getPremiumOffering(),
+            ]);
 
-        if (mounted) {
-          setIsPremium(
-            status.isPremium
-          );
+          if (mounted) {
+            setIsPremium(
+              status.isPremium
+            );
+            setCanPurchase(
+              Boolean(
+                offering.packageToPurchase
+              )
+            );
+          }
+        } catch {
+          if (mounted) {
+            setCanPurchase(false);
+          }
+        } finally {
+          if (mounted) {
+            setIsLoading(false);
+          }
         }
       }
 
@@ -131,41 +159,93 @@ export default function PremiumScreen() {
     }, [])
   );
 
+  function getPurchaseMessage(error: unknown) {
+    if (
+      typeof error === "object" &&
+      error !== null &&
+      "userCancelled" in error &&
+      error.userCancelled
+    ) {
+      return null;
+    }
+
+    if (error instanceof Error) {
+      return error.message;
+    }
+
+    return "Premium could not be started. Please try again.";
+  }
+
   async function handleUnlock() {
-    const status =
-      await unlockPremium();
+    setIsPurchasing(true);
 
-    setIsPremium(status.isPremium);
+    try {
+      const status =
+        await purchasePremium();
 
-    setNotice({
-      title: "Subscription Active",
-      message:
-        "Hope Cards Premium is active. Daily Hope, reminders, backup tools, and premium themes are now unlocked.",
-      icon: "checkmark-circle-outline",
-    });
+      setIsPremium(status.isPremium);
+      setCanPurchase(true);
+
+      setNotice({
+        title: "Subscription Active",
+        message:
+          "Hope Cards Premium is active. Daily Hope, reminders, backup tools, and premium themes are now unlocked.",
+        icon: "checkmark-circle-outline",
+      });
+    } catch (error) {
+      const message =
+        getPurchaseMessage(error);
+
+      if (message) {
+        setNotice({
+          title: "Premium Not Ready",
+          message,
+          icon: "information-circle-outline",
+        });
+      }
+    } finally {
+      setIsPurchasing(false);
+    }
   }
 
   async function handleRestore() {
-    const status =
-      await restorePremium();
+    setIsRestoring(true);
 
-    setIsPremium(status.isPremium);
+    try {
+      const status =
+        await restorePremium();
 
-    setNotice(
-      status.isPremium
-        ? {
-            title: "Subscription Restored",
-            message:
-              "Your Hope Cards Premium subscription is active on this device.",
-            icon: "refresh-circle-outline",
-          }
-        : {
-            title: "Nothing to Restore",
-            message:
-              "No active Hope Cards Premium subscription was found on this device.",
-            icon: "information-circle-outline",
-          }
-    );
+      setIsPremium(status.isPremium);
+
+      setNotice(
+        status.isPremium
+          ? {
+              title: "Subscription Restored",
+              message:
+                "Your Hope Cards Premium subscription is active on this device.",
+              icon: "refresh-circle-outline",
+            }
+          : {
+              title: "Nothing to Restore",
+              message:
+                status.isConfigured
+                  ? "No active Hope Cards Premium subscription was found on this device."
+                  : "Premium subscriptions are not configured for this build yet.",
+              icon: "information-circle-outline",
+            }
+      );
+    } catch (error) {
+      setNotice({
+        title: "Restore Failed",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Subscription restore could not be completed. Please try again.",
+        icon: "information-circle-outline",
+      });
+    } finally {
+      setIsRestoring(false);
+    }
   }
 
   return (
@@ -313,7 +393,33 @@ export default function PremiumScreen() {
           ))}
         </View>
 
-        {isPremium ? (
+        {isLoading ? (
+          <View
+            style={[
+              styles.activeBanner,
+              {
+                backgroundColor:
+                  theme.surface,
+                borderColor:
+                  theme.accentLine,
+                borderWidth: 1,
+              },
+            ]}
+          >
+            <ActivityIndicator
+              color={theme.accent}
+            />
+
+            <Text
+              style={[
+                styles.activeText,
+                { color: theme.text },
+              ]}
+            >
+              Checking subscription
+            </Text>
+          </View>
+        ) : isPremium ? (
           <View
             style={[
               styles.activeBanner,
@@ -345,22 +451,36 @@ export default function PremiumScreen() {
               {
                 backgroundColor:
                   PREMIUM_YELLOW,
-                opacity: pressed ? 0.78 : 1,
+                opacity:
+                  pressed || isPurchasing
+                    ? 0.78
+                    : 1,
               },
             ]}
+            disabled={isPurchasing}
             onPress={handleUnlock}
           >
-            <Text
-              style={styles.subscribeButtonText}
-            >
-              Start Premium
-            </Text>
+            {isPurchasing ? (
+              <ActivityIndicator color="#111111" />
+            ) : (
+              <>
+                <Text
+                  style={
+                    styles.subscribeButtonText
+                  }
+                >
+                  {canPurchase
+                    ? "Start Premium"
+                    : "Set Up Premium"}
+                </Text>
 
-            <Ionicons
-              name="arrow-forward"
-              size={21}
-              color="#111111"
-            />
+                <Ionicons
+                  name="arrow-forward"
+                  size={21}
+                  color="#111111"
+                />
+              </>
+            )}
           </Pressable>
         )}
 
@@ -369,13 +489,21 @@ export default function PremiumScreen() {
             styles.restoreButton,
             { opacity: pressed ? 0.65 : 1 },
           ]}
+          disabled={isRestoring}
           onPress={handleRestore}
         >
-          <Ionicons
-            name="refresh-outline"
-            size={17}
-            color={theme.textSecondary}
-          />
+          {isRestoring ? (
+            <ActivityIndicator
+              size="small"
+              color={theme.textSecondary}
+            />
+          ) : (
+            <Ionicons
+              name="refresh-outline"
+              size={17}
+              color={theme.textSecondary}
+            />
+          )}
 
           <Text
             style={[
