@@ -107,13 +107,13 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="settings"
+        name="premium"
         options={{
-          title: "Settings",
-          drawerLabel: "Settings",
+          title: "Premium",
+          drawerLabel: "Premium",
           drawerIcon: ({ color }) => (
             <Ionicons
-              name="settings-outline"
+              name="sparkles-outline"
               color={color}
               size={24}
             />
@@ -122,13 +122,13 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="about"
+        name="settings"
         options={{
-          title: "About",
-          drawerLabel: "About",
+          title: "Settings",
+          drawerLabel: "Settings",
           drawerIcon: ({ color }) => (
             <Ionicons
-              name="information-circle-outline"
+              name="settings-outline"
               color={color}
               size={24}
             />
@@ -152,13 +152,13 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
-        name="premium"
+        name="about"
         options={{
-          title: "Premium",
-          drawerLabel: "Premium",
+          title: "About",
+          drawerLabel: "About",
           drawerIcon: ({ color }) => (
             <Ionicons
-              name="diamond-outline"
+              name="information-circle-outline"
               color={color}
               size={24}
             />

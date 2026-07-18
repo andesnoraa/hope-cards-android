@@ -468,6 +468,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 34,
+    paddingBottom: 110,
   },
 
   lockedIcon: {

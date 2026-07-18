@@ -51,8 +51,8 @@ const BENEFITS = [
   },
 ] as const;
 
-const PREMIUM_YELLOW = "#FFD93D";
-const PREMIUM_BORDER = "#D0A800";
+const PREMIUM_YELLOW = "#F2C84B";
+const PREMIUM_BORDER = "#C99A2E";
 
 type Notice = {
   title: string;
@@ -570,6 +570,7 @@ const styles = StyleSheet.create({
   },
 
   compareCard: {
+    marginTop: 12,
     borderWidth: 1,
     borderRadius: 30,
     overflow: "hidden",
