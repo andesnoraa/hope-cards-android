@@ -23,14 +23,17 @@ import {
 import PremiumNoticeModal from "../../components/premium/PremiumNoticeModal";
 
 import {
+  exportBackup,
   loadBackup,
-  shareBackup,
+  loadLatestLocalBackup,
+  type BackupData,
 } from "../../services/backup";
 
 import {
   disableDailyHopeReminder,
   enableDailyHopeReminder,
   formatReminderTime,
+  syncDailyHopeReminderSchedule,
   updateDailyHopeReminderTime,
 } from "../../services/dailyHopeNotifications";
 
@@ -565,6 +568,91 @@ export default function SettingsScreen() {
     });
   }
 
+  function showRestoreConfirmation(
+    backup: BackupData
+  ) {
+    Alert.alert(
+      "Restore Backup",
+      `Restore this backup?
+
+Created:
+${formatRelativeDate(
+        backup.createdAt
+      )}
+
+Favorites:
+${backup.favorites.length}
+
+Your current favorites and settings will be replaced.`,
+      [
+        {
+          text: "Cancel",
+          style: "cancel",
+        },
+        {
+          text: "Restore",
+          style: "destructive",
+          onPress: async () => {
+            try {
+              await restoreBackup(
+                backup
+              );
+
+              await syncDailyHopeReminderSchedule();
+
+              const settings =
+                await getSettings();
+
+              setShowDrawButton(
+                settings.showDrawButton
+              );
+
+              setEnableHaptics(
+                settings.enableHaptics
+              );
+
+              setDailyHopeMusicEnabled(
+                settings
+                  .dailyHopeMusicEnabled
+              );
+
+              setDailyHopeReminderEnabled(
+                settings
+                  .dailyHopeReminderEnabled
+              );
+
+              setDailyHopeReminderHour(
+                settings
+                  .dailyHopeReminderHour
+              );
+
+              setDailyHopeReminderMinute(
+                settings
+                  .dailyHopeReminderMinute
+              );
+
+              setThemeName(
+                settings.themeName
+              );
+
+              Alert.alert(
+                "Restore Complete",
+                "Your backup has been restored successfully."
+              );
+            } catch (error) {
+              console.error(error);
+
+              Alert.alert(
+                "Restore Failed",
+                "Unable to restore the backup."
+              );
+            }
+          },
+        },
+      ]
+    );
+  }
+
   async function handleBackup() {
     if (!isPremium) {
       openPremiumPrompt(
@@ -574,10 +662,15 @@ export default function SettingsScreen() {
     }
 
     try {
-      const info =
-        await shareBackup();
+      const { info } =
+        await exportBackup();
 
       setBackupInfo(info);
+
+      Alert.alert(
+        "Backup Created",
+        "Your favorites and settings were saved on this device."
+      );
     } catch (error) {
       console.error(error);
 
@@ -587,6 +680,7 @@ export default function SettingsScreen() {
       );
     }
   }
+
   async function handleRestore() {
     if (!isPremium) {
       openPremiumPrompt(
@@ -596,92 +690,19 @@ export default function SettingsScreen() {
     }
 
     try {
+      const localBackup =
+        await loadLatestLocalBackup();
+
       const backup =
+        localBackup ??
         await loadBackup();
 
       if (!backup) {
         return;
       }
 
-      Alert.alert(
-        "Restore Backup",
-        `Restore this backup?
-
-Created:
-${formatRelativeDate(
-          backup.createdAt
-        )}
-
-Favorites:
-${backup.favorites.length}
-
-Your current favorites and settings will be replaced.`,
-        [
-          {
-            text: "Cancel",
-            style: "cancel",
-          },
-          {
-            text: "Restore",
-            style: "destructive",
-            onPress: async () => {
-              try {
-                await restoreBackup(
-                  backup
-                );
-
-                const settings =
-                  await getSettings();
-
-                setShowDrawButton(
-                  settings.showDrawButton
-                );
-
-                setEnableHaptics(
-                  settings.enableHaptics
-                );
-
-                setDailyHopeMusicEnabled(
-                  settings
-                    .dailyHopeMusicEnabled
-                );
-
-                setDailyHopeReminderEnabled(
-                  settings
-                    .dailyHopeReminderEnabled
-                );
-
-                setDailyHopeReminderHour(
-                  settings
-                    .dailyHopeReminderHour
-                );
-
-                setDailyHopeReminderMinute(
-                  settings
-                    .dailyHopeReminderMinute
-                );
-
-                setThemeName(
-                  settings.themeName
-                );
-
-                Alert.alert(
-                  "Restore Complete",
-                  "Your backup has been restored successfully."
-                );
-              } catch (error) {
-                console.error(
-                  error
-                );
-
-                Alert.alert(
-                  "Restore Failed",
-                  "Unable to restore the backup."
-                );
-              }
-            },
-          },
-        ]
+      showRestoreConfirmation(
+        backup
       );
     } catch (error) {
       console.error(error);

@@ -5,6 +5,7 @@ import {
 } from "expo-router";
 
 import { useFonts } from "expo-font";
+import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 
 import {
@@ -98,39 +99,43 @@ function RootStack() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen
-        name="(drawer)"
-        options={{
-          headerShown: false,
-        }}
-      />
+    <>
+      <StatusBar style="dark" />
 
-      <Stack.Screen
-        name="verse/[id]"
-        options={{
-          title: "Verse",
+      <Stack>
+        <Stack.Screen
+          name="(drawer)"
+          options={{
+            headerShown: false,
+          }}
+        />
 
-          headerShown: true,
+        <Stack.Screen
+          name="verse/[id]"
+          options={{
+            title: "Verse",
 
-          headerLargeTitle: false,
+            headerShown: true,
 
-          headerTintColor: theme.text,
+            headerLargeTitle: false,
 
-          headerTitleStyle: {
-            color: theme.text,
-            fontWeight: "600",
-          },
+            headerTintColor: theme.text,
 
-          headerStyle: {
-            backgroundColor:
-              theme.background,
-          },
+            headerTitleStyle: {
+              color: theme.text,
+              fontWeight: "600",
+            },
 
-          headerShadowVisible: true,
-        }}
-      />
-    </Stack>
+            headerStyle: {
+              backgroundColor:
+                theme.background,
+            },
+
+            headerShadowVisible: true,
+          }}
+        />
+      </Stack>
+    </>
   );
 }
 

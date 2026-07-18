@@ -2,6 +2,7 @@ import * as DocumentPicker from "expo-document-picker";
 import * as Sharing from "expo-sharing";
 
 import {
+    Directory,
     File,
     Paths,
 } from "expo-file-system";
@@ -32,6 +33,17 @@ const THEME_NAMES: AppThemeName[] = [
     "midnight",
 ];
 
+const BACKUP_DIRECTORY_NAME =
+    "backups";
+
+const BACKUP_FILE_PREFIX =
+    "hope-cards-backup-";
+
+const BACKUP_FILE_EXTENSION =
+    ".json";
+
+const MAX_LOCAL_BACKUPS = 10;
+
 export interface BackupData {
     version: 1;
 
@@ -42,7 +54,10 @@ export interface BackupData {
     settings: {
         showDrawButton: boolean;
         enableHaptics: boolean;
+        dailyHopeReminderEnabled?: boolean;
         dailyHopeMusicEnabled?: boolean;
+        dailyHopeReminderHour?: number;
+        dailyHopeReminderMinute?: number;
         themeName?: AppThemeName;
 
         /**
@@ -52,10 +67,65 @@ export interface BackupData {
     };
 }
 
-type BackupExport = {
+export type BackupExport = {
+    backup: BackupData;
     file: File;
     info: BackupInfo;
 };
+
+function getBackupDirectory(): Directory {
+    const directory = new Directory(
+        Paths.document,
+        BACKUP_DIRECTORY_NAME
+    );
+
+    directory.create({
+        idempotent: true,
+        intermediates: true,
+    });
+
+    return directory;
+}
+
+function getBackupFileName(
+    createdAt: string
+): string {
+    const timestamp = createdAt.replace(
+        /[:.]/g,
+        "-"
+    );
+
+    return `${BACKUP_FILE_PREFIX}${timestamp}${BACKUP_FILE_EXTENSION}`;
+}
+
+function getLocalBackupFiles(): File[] {
+    return getBackupDirectory()
+        .list()
+        .filter(
+            (entry): entry is File =>
+                entry instanceof File &&
+                entry.name.startsWith(
+                    BACKUP_FILE_PREFIX
+                ) &&
+                entry.name.endsWith(
+                    BACKUP_FILE_EXTENSION
+                )
+        )
+        .sort((a, b) =>
+            b.name.localeCompare(a.name)
+        );
+}
+
+function removeOldLocalBackups() {
+    const oldBackups =
+        getLocalBackupFiles().slice(
+            MAX_LOCAL_BACKUPS
+        );
+
+    for (const file of oldBackups) {
+        file.delete();
+    }
+}
 
 /**
  * Creates a backup object containing
@@ -83,8 +153,19 @@ export async function createBackup(): Promise<BackupData> {
             enableHaptics:
                 settings.enableHaptics,
 
+            dailyHopeReminderEnabled:
+                settings
+                    .dailyHopeReminderEnabled,
+
             dailyHopeMusicEnabled:
                 settings.dailyHopeMusicEnabled,
+
+            dailyHopeReminderHour:
+                settings.dailyHopeReminderHour,
+
+            dailyHopeReminderMinute:
+                settings
+                    .dailyHopeReminderMinute,
 
             themeName:
                 settings.themeName,
@@ -99,12 +180,28 @@ export async function createBackup(): Promise<BackupData> {
 }
 
 /**
- * Creates a backup file in the
- * app's documents directory.
+ * Creates a timestamped backup in the
+ * app's dedicated documents directory.
  */
 export async function exportBackup(): Promise<BackupExport> {
     const backup =
         await createBackup();
+
+    return saveBackupLocally(backup);
+}
+
+/**
+ * Writes validated backup data to local storage.
+ * Used for both new and downloaded backups.
+ */
+export async function saveBackupLocally(
+    backup: BackupData
+): Promise<BackupExport> {
+    if (!validateBackup(backup)) {
+        throw new Error(
+            "Invalid backup data."
+        );
+    }
 
     const json = JSON.stringify(
         backup,
@@ -112,14 +209,11 @@ export async function exportBackup(): Promise<BackupExport> {
         2
     );
 
-    const today =
-        new Date()
-            .toISOString()
-            .split("T")[0];
-
     const file = new File(
-        Paths.document,
-        `hope-cards-backup-${today}.json`
+        getBackupDirectory(),
+        getBackupFileName(
+            backup.createdAt
+        )
     );
 
     file.create({
@@ -153,7 +247,12 @@ export async function exportBackup(): Promise<BackupExport> {
             backup.favorites.length,
     };
 
+    await saveBackupInfo(info);
+
+    removeOldLocalBackups();
+
     return {
+        backup,
         file,
         info,
     };
@@ -192,8 +291,6 @@ export async function shareBackup(): Promise<BackupInfo> {
         }
     );
 
-    await saveBackupInfo(info);
-
     return info;
 }
 
@@ -223,15 +320,26 @@ export async function pickBackupFile():
 export async function readBackupFile(
     asset: DocumentPicker.DocumentPickerAsset
 ): Promise<BackupData> {
+    return readBackupFromFile(
+        new File(asset.uri)
+    );
+}
 
-    const file = new File(asset.uri);
+async function readBackupFromFile(
+    file: File
+): Promise<BackupData> {
+    const json = await file.text();
 
-    const json =
-        await file.text();
+    const backup: unknown =
+        JSON.parse(json);
 
-    return JSON.parse(
-        json
-    ) as BackupData;
+    if (!validateBackup(backup)) {
+        throw new Error(
+            "Invalid backup file."
+        );
+    }
+
+    return backup;
 }
 
 /**
@@ -265,6 +373,11 @@ export function validateBackup(
     if (
         !Array.isArray(
             data.favorites
+        ) ||
+        !data.favorites.every(
+            (favorite) =>
+                typeof favorite ===
+                "string"
         )
     ) {
         return false;
@@ -296,11 +409,58 @@ export function validateBackup(
 
     if (
         data.settings
+            .dailyHopeReminderEnabled !==
+            undefined &&
+        typeof data.settings
+            .dailyHopeReminderEnabled !==
+            "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        data.settings
             .dailyHopeMusicEnabled !==
             undefined &&
         typeof data.settings
             .dailyHopeMusicEnabled !==
             "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        data.settings
+            .dailyHopeReminderHour !==
+            undefined &&
+        (
+            !Number.isInteger(
+                data.settings
+                    .dailyHopeReminderHour
+            ) ||
+            data.settings
+                .dailyHopeReminderHour < 0 ||
+            data.settings
+                .dailyHopeReminderHour > 23
+        )
+    ) {
+        return false;
+    }
+
+    if (
+        data.settings
+            .dailyHopeReminderMinute !==
+            undefined &&
+        (
+            !Number.isInteger(
+                data.settings
+                    .dailyHopeReminderMinute
+            ) ||
+            data.settings
+                .dailyHopeReminderMinute < 0 ||
+            data.settings
+                .dailyHopeReminderMinute > 59
+        )
     ) {
         return false;
     }
@@ -349,18 +509,9 @@ export async function loadBackup():
     }
 
     try {
-        const backup =
-            await readBackupFile(asset);
-
-        if (
-            !validateBackup(backup)
-        ) {
-            throw new Error(
-                "Invalid backup file."
-            );
-        }
-
-        return backup;
+        return await readBackupFile(
+            asset
+        );
     } catch (error) {
         console.error(error);
 
@@ -372,4 +523,22 @@ export async function loadBackup():
             "Unable to read the backup file."
         );
     }
+}
+
+/**
+ * Loads the newest backup saved in the
+ * app's local backup directory.
+ */
+export async function loadLatestLocalBackup():
+    Promise<BackupData | null> {
+    const [latestBackup] =
+        getLocalBackupFiles();
+
+    if (!latestBackup) {
+        return null;
+    }
+
+    return readBackupFromFile(
+        latestBackup
+    );
 }

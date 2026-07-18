@@ -247,6 +247,15 @@ export async function syncDailyHopeReminderSchedule() {
         await getSettings();
 
     if (!settings.dailyHopeReminderEnabled) {
+        const Notifications =
+            await getNotificationsModule();
+
+        if (Notifications) {
+            await cancelExistingDailyHopeReminders(
+                Notifications
+            );
+        }
+
         return;
     }
 
@@ -272,23 +281,11 @@ export async function syncDailyHopeReminderSchedule() {
         return;
     }
 
-    const scheduled =
-        await Notifications.getAllScheduledNotificationsAsync();
-
-    const hasDailyHopeReminder =
-        scheduled.some(
-            (notification) =>
-                notification.content.data?.kind ===
-                DAILY_HOPE_NOTIFICATION_KEY
-        );
-
-    if (!hasDailyHopeReminder) {
-        await scheduleDailyHopeNotification({
-            hour: settings.dailyHopeReminderHour,
-            minute:
-                settings.dailyHopeReminderMinute,
-        });
-    }
+    await scheduleDailyHopeNotification({
+        hour: settings.dailyHopeReminderHour,
+        minute:
+            settings.dailyHopeReminderMinute,
+    });
 }
 
 export async function registerDailyHopeNotificationHandler(
