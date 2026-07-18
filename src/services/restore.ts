@@ -30,6 +30,12 @@ export async function restoreBackup(
         enableHaptics:
             backup.settings.enableHaptics,
 
+        dailyHopeMusicEnabled:
+            backup.settings
+                .dailyHopeMusicEnabled ??
+            DEFAULT_SETTINGS
+                .dailyHopeMusicEnabled,
+
         themeName:
             backup.settings.themeName ??
             DEFAULT_SETTINGS.themeName,

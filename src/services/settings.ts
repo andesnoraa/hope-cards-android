@@ -10,6 +10,7 @@ export type AppSettings = {
     showDrawButton: boolean;
     enableHaptics: boolean;
     dailyHopeReminderEnabled: boolean;
+    dailyHopeMusicEnabled: boolean;
     dailyHopeReminderHour: number;
     dailyHopeReminderMinute: number;
     themeName: AppThemeName;
@@ -19,6 +20,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
     showDrawButton: true,
     enableHaptics: true,
     dailyHopeReminderEnabled: false,
+    dailyHopeMusicEnabled: true,
     dailyHopeReminderHour: 8,
     dailyHopeReminderMinute: 0,
     themeName: "classic",

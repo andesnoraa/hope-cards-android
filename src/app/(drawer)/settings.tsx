@@ -76,6 +76,11 @@ export default function SettingsScreen() {
     useState(true);
 
   const [
+    dailyHopeMusicEnabled,
+    setDailyHopeMusicEnabled,
+  ] = useState(true);
+
+  const [
     dailyHopeReminderEnabled,
     setDailyHopeReminderEnabled,
   ] = useState(false);
@@ -157,6 +162,10 @@ export default function SettingsScreen() {
 
         setEnableHaptics(
           settings.enableHaptics
+        );
+
+        setDailyHopeMusicEnabled(
+          settings.dailyHopeMusicEnabled
         );
 
         setDailyHopeReminderEnabled(
@@ -256,6 +265,23 @@ export default function SettingsScreen() {
 
     await updateSettings({
       enableHaptics: value,
+    });
+  }
+
+  async function toggleDailyHopeMusic(
+    value: boolean
+  ) {
+    if (!isPremium) {
+      openPremiumPrompt(
+        "Background music"
+      );
+      return;
+    }
+
+    setDailyHopeMusicEnabled(value);
+
+    await updateSettings({
+      dailyHopeMusicEnabled: value,
     });
   }
 
@@ -576,6 +602,11 @@ Your current favorites and settings will be replaced.`,
                   settings.enableHaptics
                 );
 
+                setDailyHopeMusicEnabled(
+                  settings
+                    .dailyHopeMusicEnabled
+                );
+
                 setDailyHopeReminderEnabled(
                   settings
                     .dailyHopeReminderEnabled
@@ -865,6 +896,68 @@ Your current favorites and settings will be replaced.`,
           ]}
         />
       </View>
+
+      <Pressable
+        style={styles.settingRow}
+        onPress={() => {
+          if (!isPremium) {
+            openPremiumPrompt(
+              "Background music"
+            );
+          }
+        }}
+      >
+        <View style={styles.textContainer}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
+            Background Music
+          </Text>
+
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            {isPremium
+              ? "Play peaceful music while reading Daily Hope."
+              : "Premium: play peaceful music with Daily Hope."}
+          </Text>
+        </View>
+
+        <Switch
+          value={
+            isPremium &&
+            dailyHopeMusicEnabled
+          }
+          onValueChange={
+            toggleDailyHopeMusic
+          }
+          disabled={!isPremium}
+          trackColor={{
+            false: theme.switchOff,
+            true: theme.accent,
+          }}
+          thumbColor={theme.white}
+        />
+      </Pressable>
+
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
 
       <Pressable
         style={styles.settingRow}

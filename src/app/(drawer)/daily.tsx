@@ -1,4 +1,12 @@
-import { router, useFocusEffect } from "expo-router";
+import {
+  setAudioModeAsync,
+  useAudioPlayer,
+} from "expo-audio";
+import {
+  router,
+  useFocusEffect,
+  useIsFocused,
+} from "expo-router";
 import {
   useCallback,
   useEffect,
@@ -7,6 +15,7 @@ import {
 } from "react";
 
 import {
+  AppState,
   ScrollView,
   StyleSheet,
   Text,
@@ -28,6 +37,9 @@ import {
 import {
   getDailyHope,
 } from "../../services/dailyHope";
+import {
+  getDailyHopeMusic,
+} from "../../services/dailyHopeMusic";
 
 import {
   isFavorite,
@@ -39,6 +51,9 @@ import { shareVerse } from "../../services/share";
 import {
   getPremiumStatus,
 } from "../../services/premium";
+import {
+  getSettings,
+} from "../../services/settings";
 
 import {
   lightImpact,
@@ -51,9 +66,17 @@ import { useAppTheme } from "../../theme/appTheme";
 
 export default function DailyHopeScreen() {
   const { theme } = useAppTheme();
+  const isFocused = useIsFocused();
+  const musicPlayer = useAudioPlayer(null);
 
   const [isPremium, setIsPremium] =
     useState<boolean | null>(null);
+
+  const [musicEnabled, setMusicEnabled] =
+    useState(false);
+
+  const [appState, setAppState] =
+    useState(AppState.currentState);
 
   const [verse, setVerse] =
     useState<Verse | null>(null);
@@ -92,12 +115,21 @@ export default function DailyHopeScreen() {
       let mounted = true;
 
       async function loadPremium() {
-        const status =
-          await getPremiumStatus();
+        const [status, settings] =
+          await Promise.all([
+            getPremiumStatus(),
+            getSettings(),
+          ]);
 
         if (mounted) {
           setIsPremium(
             status.isPremium
+          );
+
+          setMusicEnabled(
+            status.isPremium &&
+              settings
+                .dailyHopeMusicEnabled
           );
         }
       }
@@ -109,6 +141,31 @@ export default function DailyHopeScreen() {
       };
     }, [])
   );
+
+  useEffect(() => {
+    setAudioModeAsync({
+      playsInSilentMode: true,
+      shouldPlayInBackground: false,
+      interruptionMode: "doNotMix",
+    }).catch((error) => {
+      console.error(
+        "Unable to configure Daily Hope audio:",
+        error
+      );
+    });
+  }, []);
+
+  useEffect(() => {
+    const subscription =
+      AppState.addEventListener(
+        "change",
+        setAppState
+      );
+
+    return () => {
+      subscription.remove();
+    };
+  }, []);
 
   useEffect(() => {
     async function load() {
@@ -151,6 +208,44 @@ export default function DailyHopeScreen() {
 
     return unsubscribe;
   }, [verse]);
+
+  useEffect(() => {
+    if (!verse) {
+      return;
+    }
+
+    musicPlayer.replace(
+      getDailyHopeMusic(verse.category)
+    );
+    musicPlayer.loop = true;
+    musicPlayer.volume = 0.45;
+
+    return () => {
+      musicPlayer.pause();
+    };
+  }, [musicPlayer, verse]);
+
+  useEffect(() => {
+    const shouldPlay =
+      isFocused &&
+      appState === "active" &&
+      isPremium === true &&
+      musicEnabled &&
+      verse !== null;
+
+    if (shouldPlay) {
+      musicPlayer.play();
+    } else {
+      musicPlayer.pause();
+    }
+  }, [
+    appState,
+    isFocused,
+    isPremium,
+    musicEnabled,
+    musicPlayer,
+    verse,
+  ]);
 
   async function handleFavorite() {
     if (!verse) return;

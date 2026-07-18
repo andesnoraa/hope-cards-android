@@ -42,6 +42,7 @@ export interface BackupData {
     settings: {
         showDrawButton: boolean;
         enableHaptics: boolean;
+        dailyHopeMusicEnabled?: boolean;
         themeName?: AppThemeName;
 
         /**
@@ -81,6 +82,9 @@ export async function createBackup(): Promise<BackupData> {
 
             enableHaptics:
                 settings.enableHaptics,
+
+            dailyHopeMusicEnabled:
+                settings.dailyHopeMusicEnabled,
 
             themeName:
                 settings.themeName,
@@ -286,6 +290,17 @@ export function validateBackup(
         typeof data.settings
             .enableHaptics !==
         "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        data.settings
+            .dailyHopeMusicEnabled !==
+            undefined &&
+        typeof data.settings
+            .dailyHopeMusicEnabled !==
+            "boolean"
     ) {
         return false;
     }
