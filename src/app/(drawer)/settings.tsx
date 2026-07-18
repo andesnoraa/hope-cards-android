@@ -62,6 +62,11 @@ import {
   formatRelativeDate,
 } from "../../utils/formatDate";
 
+type TimeInputSelection = {
+  start: number;
+  end: number;
+};
+
 export default function SettingsScreen() {
   const {
     theme,
@@ -114,6 +119,16 @@ export default function SettingsScreen() {
     pickerMinuteInput,
     setPickerMinuteInput,
   ] = useState("00");
+
+  const [
+    pickerHourSelection,
+    setPickerHourSelection,
+  ] = useState<TimeInputSelection>();
+
+  const [
+    pickerMinuteSelection,
+    setPickerMinuteSelection,
+  ] = useState<TimeInputSelection>();
 
   const [
     pickerPeriod,
@@ -360,6 +375,30 @@ export default function SettingsScreen() {
     return value
       .replace(/[^0-9]/g, "")
       .slice(0, 2);
+  }
+
+  function updatePickerHourInput(
+    value: string
+  ) {
+    const sanitized = sanitizeTimeInput(value);
+
+    setPickerHourInput(sanitized);
+    setPickerHourSelection({
+      start: sanitized.length,
+      end: sanitized.length,
+    });
+  }
+
+  function updatePickerMinuteInput(
+    value: string
+  ) {
+    const sanitized = sanitizeTimeInput(value);
+
+    setPickerMinuteInput(sanitized);
+    setPickerMinuteSelection({
+      start: sanitized.length,
+      end: sanitized.length,
+    });
   }
 
   function formatTimePart(value: number) {
@@ -1644,15 +1683,26 @@ Your current favorites and settings will be replaced.`,
 
                 <TextInput
                   value={pickerHourInput}
-                  onChangeText={(value) => {
-                    setPickerHourInput(
-                      sanitizeTimeInput(value)
-                    );
+                  onChangeText={
+                    updatePickerHourInput
+                  }
+                  onFocus={() => {
+                    setPickerHourSelection({
+                      start: 0,
+                      end: pickerHourInput.length,
+                    });
                   }}
-                  onBlur={normalizePickerInputs}
+                  onBlur={() => {
+                    setPickerHourSelection(
+                      undefined
+                    );
+                    normalizePickerInputs();
+                  }}
                   keyboardType="number-pad"
                   maxLength={2}
-                  selectTextOnFocus
+                  selection={
+                    pickerHourSelection
+                  }
                   style={[
                     styles.timeInput,
                     {
@@ -1702,15 +1752,26 @@ Your current favorites and settings will be replaced.`,
 
                 <TextInput
                   value={pickerMinuteInput}
-                  onChangeText={(value) => {
-                    setPickerMinuteInput(
-                      sanitizeTimeInput(value)
-                    );
+                  onChangeText={
+                    updatePickerMinuteInput
+                  }
+                  onFocus={() => {
+                    setPickerMinuteSelection({
+                      start: 0,
+                      end: pickerMinuteInput.length,
+                    });
                   }}
-                  onBlur={normalizePickerInputs}
+                  onBlur={() => {
+                    setPickerMinuteSelection(
+                      undefined
+                    );
+                    normalizePickerInputs();
+                  }}
                   keyboardType="number-pad"
                   maxLength={2}
-                  selectTextOnFocus
+                  selection={
+                    pickerMinuteSelection
+                  }
                   style={[
                     styles.timeInput,
                     {
