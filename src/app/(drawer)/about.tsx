@@ -125,7 +125,7 @@ export default function AboutScreen() {
           ]}
         >
           • Back up and restore your saved
-          verses
+          verses and settings
         </Text>
 
         <Text
@@ -155,10 +155,10 @@ export default function AboutScreen() {
             { color: theme.cardText },
           ]}
         >
-          Hope Cards was created from a
-          season where Scripture brought
-          encouragement and strength
-          during a difficult time.
+          Hope Cards was created during a
+          difficult season when Scripture
+          brought encouragement and
+          strength.
         </Text>
 
         <Text
@@ -169,9 +169,9 @@ export default function AboutScreen() {
           ]}
         >
           The vision is simple: to help
-          someone facing a hard situation
-          find a timely verse, a quiet
-          reminder, and renewed hope.
+          someone facing a difficult
+          situation find a timely verse, a
+          quiet reminder, and renewed hope.
         </Text>
       </View>
 
@@ -229,8 +229,7 @@ export default function AboutScreen() {
           ]}
         >
           The verses in Hope Cards are from
-          the Bible in Basic English, a
-          public-domain translation.
+          the Bible in Basic English (BBE).
         </Text>
 
         <Text
