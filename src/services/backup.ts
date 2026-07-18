@@ -42,6 +42,7 @@ export interface BackupData {
     settings: {
         showDrawButton: boolean;
         enableHaptics: boolean;
+        savedVersePatternEnabled?: boolean;
         themeName?: AppThemeName;
 
         /**
@@ -81,6 +82,10 @@ export async function createBackup(): Promise<BackupData> {
 
             enableHaptics:
                 settings.enableHaptics,
+
+            savedVersePatternEnabled:
+                settings
+                    .savedVersePatternEnabled,
 
             themeName:
                 settings.themeName,
@@ -286,6 +291,17 @@ export function validateBackup(
         typeof data.settings
             .enableHaptics !==
         "boolean"
+    ) {
+        return false;
+    }
+
+    if (
+        data.settings
+            .savedVersePatternEnabled !==
+            undefined &&
+        typeof data.settings
+            .savedVersePatternEnabled !==
+            "boolean"
     ) {
         return false;
     }

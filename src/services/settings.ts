@@ -13,6 +13,7 @@ export type AppSettings = {
     dailyHopeReminderHour: number;
     dailyHopeReminderMinute: number;
     themeName: AppThemeName;
+    savedVersePatternEnabled: boolean;
 };
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -22,6 +23,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
     dailyHopeReminderHour: 8,
     dailyHopeReminderMinute: 0,
     themeName: "classic",
+    savedVersePatternEnabled: false,
 };
 
 export async function getSettings(): Promise<AppSettings> {

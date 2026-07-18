@@ -29,6 +29,12 @@ import {
   selection,
   success,
 } from "../../services/haptics";
+import {
+  getPremiumStatus,
+} from "../../services/premium";
+import {
+  getSettings,
+} from "../../services/settings";
 import { useAppTheme } from "../../theme/appTheme";
 
 export default function VerseScreen() {
@@ -39,6 +45,10 @@ export default function VerseScreen() {
 
   const [favorite, setFavorite] =
     useState(false);
+  const [
+    showSavedVersePattern,
+    setShowSavedVersePattern,
+  ] = useState(false);
 
   useEffect(() => {
     async function loadFavorite() {
@@ -47,8 +57,17 @@ export default function VerseScreen() {
       const saved = await isFavorite(
         verse.id
       );
+      const settings =
+        await getSettings();
+      const premiumStatus =
+        await getPremiumStatus();
 
       setFavorite(saved);
+      setShowSavedVersePattern(
+        saved &&
+          premiumStatus.isPremium &&
+          settings.savedVersePatternEnabled
+      );
     }
 
     loadFavorite();
@@ -62,6 +81,17 @@ export default function VerseScreen() {
     );
 
     setFavorite(saved);
+
+    const settings =
+      await getSettings();
+    const premiumStatus =
+      await getPremiumStatus();
+
+    setShowSavedVersePattern(
+      saved &&
+        premiumStatus.isPremium &&
+        settings.savedVersePatternEnabled
+    );
 
     if (saved) {
       await success();
@@ -127,8 +157,61 @@ export default function VerseScreen() {
       >
         <Animated.View
           entering={FadeIn.duration(300)}
-          style={styles.contentWrapper}
+          style={[
+            styles.contentWrapper,
+            showSavedVersePattern &&
+              styles.patternWrapper,
+          ]}
         >
+          {showSavedVersePattern ? (
+            <View
+              pointerEvents="none"
+              style={styles.pattern}
+            >
+              {[0, 1, 2, 3, 4].map(
+                (index) => (
+                  <View
+                    key={index}
+                    style={[
+                      styles.patternLine,
+                      {
+                        backgroundColor:
+                          theme.accent,
+                        top:
+                          22 +
+                          index * 52,
+                        right:
+                          -24 +
+                          index * 24,
+                      },
+                    ]}
+                  />
+                )
+              )}
+
+              {[0, 1, 2, 3].map(
+                (index) => (
+                  <View
+                    key={`dot-${index}`}
+                    style={[
+                      styles.patternDot,
+                      {
+                        borderColor:
+                          theme.accent,
+                        top:
+                          34 +
+                          index * 66,
+                        left:
+                          18 +
+                          index * 44,
+                      },
+                    ]}
+                  />
+                )
+              )}
+            </View>
+          ) : null}
+
           <Text
             style={[
               styles.category,
@@ -239,6 +322,43 @@ const styles = StyleSheet.create({
   contentWrapper: {
     width: "100%",
     alignItems: "center",
+  },
+
+  patternWrapper: {
+    position: "relative",
+    overflow: "hidden",
+    borderRadius: 28,
+    paddingHorizontal: 18,
+    paddingVertical: 22,
+  },
+
+  pattern: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    opacity: 0.08,
+  },
+
+  patternLine: {
+    position: "absolute",
+    width: 140,
+    height: 2,
+    borderRadius: 2,
+    transform: [
+      {
+        rotate: "-28deg",
+      },
+    ],
+  },
+
+  patternDot: {
+    position: "absolute",
+    width: 14,
+    height: 14,
+    borderRadius: 7,
+    borderWidth: 2,
   },
 
   category: {

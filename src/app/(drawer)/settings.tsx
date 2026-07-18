@@ -76,6 +76,11 @@ export default function SettingsScreen() {
     useState(true);
 
   const [
+    savedVersePatternEnabled,
+    setSavedVersePatternEnabled,
+  ] = useState(false);
+
+  const [
     dailyHopeReminderEnabled,
     setDailyHopeReminderEnabled,
   ] = useState(false);
@@ -159,6 +164,13 @@ export default function SettingsScreen() {
           settings.enableHaptics
         );
 
+        setSavedVersePatternEnabled(
+          premiumStatus.isPremium
+            ? settings
+                .savedVersePatternEnabled
+            : false
+        );
+
         setDailyHopeReminderEnabled(
           premiumStatus.isPremium
             ? settings.dailyHopeReminderEnabled
@@ -203,6 +215,16 @@ export default function SettingsScreen() {
                 false,
             });
           }
+
+          if (
+            settings
+              .savedVersePatternEnabled
+          ) {
+            await updateSettings({
+              savedVersePatternEnabled:
+                false,
+            });
+          }
         }
       }
 
@@ -228,7 +250,11 @@ export default function SettingsScreen() {
     }
 
     const verb =
-      feature === "Premium themes"
+      [
+        "Premium themes",
+        "Daily reminders",
+        "Saved verse accents",
+      ].includes(feature)
         ? "are"
         : "is";
 
@@ -252,6 +278,23 @@ export default function SettingsScreen() {
 
     await updateSettings({
       enableHaptics: value,
+    });
+  }
+
+  async function toggleSavedVersePattern(
+    value: boolean
+  ) {
+    if (!isPremium) {
+      openPremiumPrompt(
+        "Saved verse accents"
+      );
+      return;
+    }
+
+    setSavedVersePatternEnabled(value);
+
+    await updateSettings({
+      savedVersePatternEnabled: value,
     });
   }
 
@@ -760,6 +803,68 @@ Your current favorites and settings will be replaced.`,
             color={theme.textTertiary}
           />
         </View>
+      </Pressable>
+
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
+
+      <Pressable
+        style={styles.settingRow}
+        onPress={() => {
+          if (!isPremium) {
+            openPremiumPrompt(
+              "Saved verse accents"
+            );
+          }
+        }}
+      >
+        <View style={styles.textContainer}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
+            Saved Verse Accent
+          </Text>
+
+          <Text
+            style={[
+              styles.settingSubtitle,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            {isPremium
+              ? "Add a subtle accent to saved verse pages."
+              : "Premium: add a subtle accent to saved verse pages."}
+          </Text>
+        </View>
+
+        <Switch
+          value={
+            isPremium &&
+            savedVersePatternEnabled
+          }
+          onValueChange={
+            toggleSavedVersePattern
+          }
+          disabled={!isPremium}
+          trackColor={{
+            false: theme.switchOff,
+            true: theme.accent,
+          }}
+          thumbColor={theme.white}
+        />
       </Pressable>
 
       <View

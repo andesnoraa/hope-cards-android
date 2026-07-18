@@ -30,6 +30,12 @@ export async function restoreBackup(
         enableHaptics:
             backup.settings.enableHaptics,
 
+        savedVersePatternEnabled:
+            backup.settings
+                .savedVersePatternEnabled ??
+            DEFAULT_SETTINGS
+                .savedVersePatternEnabled,
+
         themeName:
             backup.settings.themeName ??
             DEFAULT_SETTINGS.themeName,
