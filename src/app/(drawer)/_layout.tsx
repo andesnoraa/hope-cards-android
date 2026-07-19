@@ -1,15 +1,112 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Drawer from "expo-router/drawer";
+import Constants from "expo-constants";
+import Drawer, {
+  DrawerContentScrollView,
+  DrawerItem,
+  type DrawerContentComponentProps,
+} from "expo-router/drawer";
+import { StyleSheet, Text, View } from "react-native";
 
 import {
   useAppTheme,
 } from "../../theme/appTheme";
+
+const APP_VERSION = Constants.expoConfig?.version ?? "Unknown";
+
+function ThemedDrawerContent({
+  state,
+  navigation,
+  descriptors,
+}: DrawerContentComponentProps) {
+  const { theme } = useAppTheme();
+
+  return (
+    <DrawerContentScrollView
+      contentContainerStyle={styles.drawerContent}
+    >
+      {state.routes.map((route, index) => {
+        const focused = state.index === index;
+        const options = descriptors[route.key].options;
+        const label =
+          options.drawerLabel ??
+          options.title ??
+          route.name;
+
+        return (
+          <View key={route.key}>
+            <DrawerItem
+              route={route}
+              label={label}
+              icon={options.drawerIcon}
+              focused={focused}
+              activeTintColor={options.drawerActiveTintColor}
+              inactiveTintColor={options.drawerInactiveTintColor}
+              activeBackgroundColor={options.drawerActiveBackgroundColor}
+              inactiveBackgroundColor={options.drawerInactiveBackgroundColor}
+              allowFontScaling={options.drawerAllowFontScaling}
+              labelStyle={options.drawerLabelStyle}
+              style={options.drawerItemStyle}
+              onPress={() => {
+                const event = navigation.emit({
+                  type: "drawerItemPress",
+                  target: route.key,
+                  canPreventDefault: true,
+                });
+
+                if (event.defaultPrevented) {
+                  return;
+                }
+
+                if (focused) {
+                  navigation.closeDrawer();
+                } else {
+                  navigation.navigate(route.name, route.params);
+                }
+              }}
+            />
+
+            {(route.name === "premium" || route.name === "settings") && (
+              <View
+                style={[
+                  styles.drawerDivider,
+                  { backgroundColor: theme.divider },
+                ]}
+              />
+            )}
+          </View>
+        );
+      })}
+
+      <View style={styles.drawerFooter}>
+        <Text
+          style={[
+            styles.drawerFooterTitle,
+            { color: theme.textSecondary },
+          ]}
+        >
+          Hope Cards
+        </Text>
+        <Text
+          style={[
+            styles.drawerFooterVersion,
+            { color: theme.textTertiary },
+          ]}
+        >
+          Version {APP_VERSION}
+        </Text>
+      </View>
+    </DrawerContentScrollView>
+  );
+}
 
 export default function DrawerLayout() {
   const { theme } = useAppTheme();
 
   return (
     <Drawer
+      drawerContent={(props) => (
+        <ThemedDrawerContent {...props} />
+      )}
       screenOptions={{
         headerShown: true,
 
@@ -33,7 +130,9 @@ export default function DrawerLayout() {
         },
 
         drawerStyle: {
-          backgroundColor: theme.background,
+          backgroundColor: theme.homeBackground,
+          borderRightColor: theme.divider,
+          borderRightWidth: StyleSheet.hairlineWidth,
           width: 305,
         },
 
@@ -166,3 +265,31 @@ export default function DrawerLayout() {
     </Drawer>
   );
 }
+
+const styles = StyleSheet.create({
+  drawerContent: {
+    flexGrow: 1,
+  },
+  drawerDivider: {
+    height: StyleSheet.hairlineWidth,
+    marginHorizontal: 24,
+    marginVertical: 6,
+  },
+  drawerFooter: {
+    marginTop: "auto",
+    marginHorizontal: 24,
+    paddingTop: 24,
+    paddingBottom: 8,
+  },
+  drawerFooterTitle: {
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: "600",
+  },
+  drawerFooterVersion: {
+    marginTop: 2,
+    fontSize: 11,
+    lineHeight: 16,
+    fontWeight: "500",
+  },
+});
