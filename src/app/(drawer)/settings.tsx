@@ -5,6 +5,7 @@ import {
 } from "expo-router";
 import {
   useCallback,
+  useRef,
   useState,
 } from "react";
 
@@ -19,8 +20,16 @@ import {
   TextInput,
   View,
 } from "react-native";
+import Animated, {
+  FadeInUp,
+  ReduceMotion,
+  useReducedMotion,
+} from "react-native-reanimated";
 
 import PremiumNoticeModal from "../../components/premium/PremiumNoticeModal";
+import StatusNoticeModal from "../../components/common/StatusNoticeModal";
+import SubtlePressable from "../../components/common/SubtlePressable";
+import useModalTitleFocus from "../../components/common/useModalTitleFocus";
 
 import {
   exportBackup,
@@ -45,6 +54,10 @@ import {
 import {
   restoreBackup,
 } from "../../services/restore";
+
+import {
+  success,
+} from "../../services/haptics";
 
 import {
   getSettings,
@@ -80,6 +93,7 @@ export default function SettingsScreen() {
     themeName,
     setThemeName,
   } = useAppTheme();
+  const reduceMotion = useReducedMotion();
 
   const [showDrawButton, setShowDrawButton] =
     useState(true);
@@ -155,6 +169,34 @@ export default function SettingsScreen() {
 
   const [isPremium, setIsPremium] =
     useState(false);
+
+  const selectionLock = useRef(false);
+  const reminderSaveLock = useRef(false);
+  const backupLock = useRef(false);
+  const restoreLock = useRef(false);
+
+  const [isReminderSaving, setIsReminderSaving] =
+    useState(false);
+  const [isBackupProcessing, setIsBackupProcessing] =
+    useState(false);
+  const [isRestoreProcessing, setIsRestoreProcessing] =
+    useState(false);
+
+  const [successNotice, setSuccessNotice] =
+    useState<{
+      title: string;
+      message: string;
+      icon: keyof typeof Ionicons.glyphMap;
+    } | null>(null);
+
+  const translationTitleRef =
+    useModalTitleFocus(
+      translationPickerVisible
+    );
+  const themeTitleRef =
+    useModalTitleFocus(themePickerVisible);
+  const timeTitleRef =
+    useModalTitleFocus(timePickerVisible);
 
   const [
     premiumPrompt,
@@ -311,12 +353,22 @@ export default function SettingsScreen() {
   async function selectTranslation(
     translation: TranslationId
   ) {
-    setPreferredTranslation(translation);
-    setTranslationPickerVisible(false);
+    if (selectionLock.current) {
+      return;
+    }
 
-    await updateSettings({
-      preferredTranslation: translation,
-    });
+    selectionLock.current = true;
+
+    try {
+      setPreferredTranslation(translation);
+      setTranslationPickerVisible(false);
+
+      await updateSettings({
+        preferredTranslation: translation,
+      });
+    } finally {
+      selectionLock.current = false;
+    }
   }
 
   async function toggleDailyHopeMusic(
@@ -353,12 +405,22 @@ export default function SettingsScreen() {
       return;
     }
 
-    setThemeName(nextTheme);
-    setThemePickerVisible(false);
+    if (selectionLock.current) {
+      return;
+    }
 
-    await updateSettings({
-      themeName: nextTheme,
-    });
+    selectionLock.current = true;
+
+    try {
+      setThemeName(nextTheme);
+      setThemePickerVisible(false);
+
+      await updateSettings({
+        themeName: nextTheme,
+      });
+    } finally {
+      selectionLock.current = false;
+    }
   }
 
   async function toggleDailyHopeReminder(
@@ -564,41 +626,58 @@ export default function SettingsScreen() {
   }
 
   async function saveReminderTime() {
-    const normalized =
-      normalizePickerInputs();
-
-    const hour = getHourFromPicker();
-    const minute = normalized.minute;
-
-    setDailyHopeReminderHour(hour);
-    setDailyHopeReminderMinute(minute);
-    setTimePickerVisible(false);
-
-    if (dailyHopeReminderEnabled) {
-      const status =
-        await updateDailyHopeReminderTime({
-          hour,
-          minute,
-        });
-
-      if (status !== "granted") {
-        setDailyHopeReminderEnabled(false);
-
-        Alert.alert(
-          "Notifications Off",
-          status === "unsupported"
-            ? "Daily reminders require a development build on Android. They are not available in Expo Go."
-            : "Allow notifications in system settings to receive Daily Hope reminders."
-        );
-      }
-
+    if (reminderSaveLock.current) {
       return;
     }
 
-    await updateSettings({
-      dailyHopeReminderHour: hour,
-      dailyHopeReminderMinute: minute,
-    });
+    reminderSaveLock.current = true;
+    setIsReminderSaving(true);
+
+    try {
+      const normalized =
+        normalizePickerInputs();
+
+      const hour = getHourFromPicker();
+      const minute = normalized.minute;
+
+      setDailyHopeReminderHour(hour);
+      setDailyHopeReminderMinute(minute);
+      setTimePickerVisible(false);
+
+      if (dailyHopeReminderEnabled) {
+        const status =
+          await updateDailyHopeReminderTime({
+            hour,
+            minute,
+          });
+
+        if (status !== "granted") {
+          setDailyHopeReminderEnabled(false);
+
+          Alert.alert(
+            "Notifications Off",
+            status === "unsupported"
+              ? "Daily reminders require a development build on Android. They are not available in Expo Go."
+              : "Allow notifications in system settings to receive Daily Hope reminders."
+          );
+        }
+
+        return;
+      }
+
+      await updateSettings({
+        dailyHopeReminderHour: hour,
+        dailyHopeReminderMinute: minute,
+      });
+    } finally {
+      reminderSaveLock.current = false;
+      setIsReminderSaving(false);
+    }
+  }
+
+  function finishRestoreOperation() {
+    restoreLock.current = false;
+    setIsRestoreProcessing(false);
   }
 
   function showRestoreConfirmation(
@@ -621,6 +700,7 @@ Your current favorites and settings will be replaced.`,
         {
           text: "Cancel",
           style: "cancel",
+          onPress: finishRestoreOperation,
         },
         {
           text: "Restore",
@@ -672,10 +752,14 @@ Your current favorites and settings will be replaced.`,
                 settings.themeName
               );
 
-              Alert.alert(
-                "Restore Complete",
-                "Your backup has been restored successfully."
-              );
+              await success();
+
+              setSuccessNotice({
+                title: "Restore Complete",
+                message:
+                  "Your favorites and settings are restored and ready to use.",
+                icon: "checkmark-circle-outline",
+              });
             } catch (error) {
               console.error(error);
 
@@ -683,10 +767,13 @@ Your current favorites and settings will be replaced.`,
                 "Restore Failed",
                 "Unable to restore the backup."
               );
+            } finally {
+              finishRestoreOperation();
             }
           },
         },
-      ]
+      ],
+      { cancelable: false }
     );
   }
 
@@ -698,16 +785,27 @@ Your current favorites and settings will be replaced.`,
       return;
     }
 
+    if (backupLock.current) {
+      return;
+    }
+
+    backupLock.current = true;
+    setIsBackupProcessing(true);
+
     try {
       const { info } =
         await exportBackup();
 
       setBackupInfo(info);
 
-      Alert.alert(
-        "Backup Created",
-        "Your favorites and settings were saved on this device."
-      );
+      await success();
+
+      setSuccessNotice({
+        title: "Backup Ready",
+        message:
+          "Your favorites and settings are safely backed up on this device.",
+        icon: "cloud-done-outline",
+      });
     } catch (error) {
       console.error(error);
 
@@ -715,6 +813,9 @@ Your current favorites and settings will be replaced.`,
         "Backup Failed",
         "Unable to create the backup."
       );
+    } finally {
+      backupLock.current = false;
+      setIsBackupProcessing(false);
     }
   }
 
@@ -726,6 +827,13 @@ Your current favorites and settings will be replaced.`,
       return;
     }
 
+    if (restoreLock.current) {
+      return;
+    }
+
+    restoreLock.current = true;
+    setIsRestoreProcessing(true);
+
     try {
       const localBackup =
         await loadLatestLocalBackup();
@@ -735,6 +843,7 @@ Your current favorites and settings will be replaced.`,
         await loadBackup();
 
       if (!backup) {
+        finishRestoreOperation();
         return;
       }
 
@@ -750,6 +859,7 @@ Your current favorites and settings will be replaced.`,
           ? error.message
           : "Unable to restore the selected backup."
       );
+      finishRestoreOperation();
     }
   }
 
@@ -1350,6 +1460,13 @@ Your current favorites and settings will be replaced.`,
       <Pressable
         style={styles.settingRow}
         onPress={handleBackup}
+        accessibilityRole="button"
+        accessibilityLabel="Back up favorites and settings"
+        disabled={isBackupProcessing}
+        accessibilityState={{
+          disabled: isBackupProcessing,
+          busy: isBackupProcessing,
+        }}
         android_ripple={{
           color: theme.accentSoft,
         }}
@@ -1447,6 +1564,13 @@ Your current favorites and settings will be replaced.`,
       <Pressable
         style={styles.settingRow}
         onPress={handleRestore}
+        accessibilityRole="button"
+        accessibilityLabel="Restore favorites and settings"
+        disabled={isRestoreProcessing}
+        accessibilityState={{
+          disabled: isRestoreProcessing,
+          busy: isRestoreProcessing,
+        }}
         android_ripple={{
           color: theme.accentSoft,
         }}
@@ -1492,13 +1616,28 @@ Your current favorites and settings will be replaced.`,
       <Modal
         transparent
         visible={translationPickerVisible}
-        animationType="fade"
+        animationType={
+          reduceMotion ? "none" : "fade"
+        }
         onRequestClose={() => {
           setTranslationPickerVisible(false);
         }}
       >
-        <View style={styles.modalBackdrop}>
-          <View
+        <View
+          accessibilityViewIsModal
+          style={styles.modalBackdrop}
+        >
+          <Pressable
+            accessible={false}
+            style={StyleSheet.absoluteFill}
+            onPress={() => {
+              setTranslationPickerVisible(false);
+            }}
+          />
+          <Animated.View
+            entering={FadeInUp.duration(180).reduceMotion(
+              ReduceMotion.System
+            )}
             style={[
               styles.themePickerCard,
               {
@@ -1510,6 +1649,9 @@ Your current favorites and settings will be replaced.`,
             <View style={styles.modalHeader}>
               <View style={styles.themeModalCopy}>
                 <Text
+                  ref={translationTitleRef}
+                  accessible
+                  accessibilityRole="header"
                   style={[
                     styles.modalTitle,
                     { color: theme.text },
@@ -1528,7 +1670,9 @@ Your current favorites and settings will be replaced.`,
                 </Text>
               </View>
 
-              <Pressable
+              <SubtlePressable
+                accessibilityRole="button"
+                accessibilityLabel="Close Bible translation selector"
                 style={[
                   styles.iconButton,
                   {
@@ -1546,7 +1690,7 @@ Your current favorites and settings will be replaced.`,
                   size={22}
                   color={theme.text}
                 />
-              </Pressable>
+              </SubtlePressable>
             </View>
 
             <ScrollView
@@ -1562,7 +1706,7 @@ Your current favorites and settings will be replaced.`,
                   preferredTranslation === option.id;
 
                 return (
-                  <Pressable
+                  <SubtlePressable
                     key={option.id}
                     accessibilityRole="radio"
                     accessibilityState={{ selected }}
@@ -1617,24 +1761,39 @@ Your current favorites and settings will be replaced.`,
                           : theme.textTertiary}
                       />
                     </View>
-                  </Pressable>
+                  </SubtlePressable>
                 );
               })}
             </ScrollView>
-          </View>
+          </Animated.View>
         </View>
       </Modal>
 
       <Modal
         transparent
         visible={themePickerVisible}
-        animationType="fade"
+        animationType={
+          reduceMotion ? "none" : "fade"
+        }
         onRequestClose={() => {
           setThemePickerVisible(false);
         }}
       >
-        <View style={styles.modalBackdrop}>
-          <View
+        <View
+          accessibilityViewIsModal
+          style={styles.modalBackdrop}
+        >
+          <Pressable
+            accessible={false}
+            style={StyleSheet.absoluteFill}
+            onPress={() => {
+              setThemePickerVisible(false);
+            }}
+          />
+          <Animated.View
+            entering={FadeInUp.duration(180).reduceMotion(
+              ReduceMotion.System
+            )}
             style={[
               styles.themePickerCard,
               {
@@ -1646,6 +1805,9 @@ Your current favorites and settings will be replaced.`,
             <View style={styles.modalHeader}>
               <View style={styles.themeModalCopy}>
                 <Text
+                  ref={themeTitleRef}
+                  accessible
+                  accessibilityRole="header"
                   style={[
                     styles.modalTitle,
                     { color: theme.text },
@@ -1667,7 +1829,9 @@ Your current favorites and settings will be replaced.`,
                 </Text>
               </View>
 
-              <Pressable
+              <SubtlePressable
+                accessibilityRole="button"
+                accessibilityLabel="Close theme selector"
                 style={[
                   styles.iconButton,
                   {
@@ -1685,7 +1849,7 @@ Your current favorites and settings will be replaced.`,
                   size={22}
                   color={theme.text}
                 />
-              </Pressable>
+              </SubtlePressable>
             </View>
 
             <ScrollView
@@ -1704,8 +1868,15 @@ Your current favorites and settings will be replaced.`,
                   ) && !isPremium;
 
                 return (
-                  <Pressable
+                  <SubtlePressable
                     key={option.name}
+                    accessibilityRole="radio"
+                    accessibilityLabel={`${option.label} theme${
+                      locked ? ", Premium" : ""
+                    }`}
+                    accessibilityState={{
+                      selected,
+                    }}
                     style={[
                       styles.themeOptionCard,
                       {
@@ -1841,24 +2012,41 @@ Your current favorites and settings will be replaced.`,
                         />
                       ) : null}
                     </View>
-                  </Pressable>
+                  </SubtlePressable>
                 );
               })}
             </ScrollView>
-          </View>
+          </Animated.View>
         </View>
       </Modal>
 
       <Modal
         transparent
         visible={timePickerVisible}
-        animationType="fade"
+        animationType={
+          reduceMotion ? "none" : "fade"
+        }
         onRequestClose={() => {
           setTimePickerVisible(false);
         }}
       >
-        <View style={styles.modalBackdrop}>
-          <View
+        <View
+          accessibilityViewIsModal
+          style={styles.modalBackdrop}
+        >
+          <Pressable
+            accessible={false}
+            style={StyleSheet.absoluteFill}
+            onPress={() => {
+              if (!isReminderSaving) {
+                setTimePickerVisible(false);
+              }
+            }}
+          />
+          <Animated.View
+            entering={FadeInUp.duration(180).reduceMotion(
+              ReduceMotion.System
+            )}
             style={[
               styles.timePickerCard,
               {
@@ -1869,6 +2057,9 @@ Your current favorites and settings will be replaced.`,
           >
             <View style={styles.modalHeader}>
               <Text
+                ref={timeTitleRef}
+                accessible
+                accessibilityRole="header"
                 style={[
                   styles.modalTitle,
                   { color: theme.text },
@@ -1877,7 +2068,9 @@ Your current favorites and settings will be replaced.`,
                 Reminder Time
               </Text>
 
-              <Pressable
+              <SubtlePressable
+                accessibilityRole="button"
+                accessibilityLabel="Close reminder time selector"
                 style={[
                   styles.iconButton,
                   {
@@ -1895,12 +2088,21 @@ Your current favorites and settings will be replaced.`,
                   size={22}
                   color={theme.text}
                 />
-              </Pressable>
+              </SubtlePressable>
             </View>
 
+            <ScrollView
+              contentContainerStyle={
+                styles.timePickerScrollContent
+              }
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+            >
             <View style={styles.timePickerBody}>
               <View style={styles.timeUnit}>
-                <Pressable
+                <SubtlePressable
+                  accessibilityRole="button"
+                  accessibilityLabel="Increase reminder hour"
                   style={styles.stepButton}
                   onPress={() =>
                     adjustPickerHour(1)
@@ -1911,9 +2113,10 @@ Your current favorites and settings will be replaced.`,
                     size={24}
                     color={theme.accent}
                   />
-                </Pressable>
+                </SubtlePressable>
 
                 <TextInput
+                  accessibilityLabel="Reminder hour"
                   value={pickerHourInput}
                   onChangeText={
                     updatePickerHourInput
@@ -1945,7 +2148,9 @@ Your current favorites and settings will be replaced.`,
                   ]}
                 />
 
-                <Pressable
+                <SubtlePressable
+                  accessibilityRole="button"
+                  accessibilityLabel="Decrease reminder hour"
                   style={styles.stepButton}
                   onPress={() =>
                     adjustPickerHour(-1)
@@ -1956,7 +2161,7 @@ Your current favorites and settings will be replaced.`,
                     size={24}
                     color={theme.accent}
                   />
-                </Pressable>
+                </SubtlePressable>
               </View>
 
               <Text
@@ -1969,7 +2174,9 @@ Your current favorites and settings will be replaced.`,
               </Text>
 
               <View style={styles.timeUnit}>
-                <Pressable
+                <SubtlePressable
+                  accessibilityRole="button"
+                  accessibilityLabel="Increase reminder minute"
                   style={styles.stepButton}
                   onPress={() =>
                     adjustPickerMinute(1)
@@ -1980,9 +2187,10 @@ Your current favorites and settings will be replaced.`,
                     size={24}
                     color={theme.accent}
                   />
-                </Pressable>
+                </SubtlePressable>
 
                 <TextInput
+                  accessibilityLabel="Reminder minute"
                   value={pickerMinuteInput}
                   onChangeText={
                     updatePickerMinuteInput
@@ -2014,7 +2222,9 @@ Your current favorites and settings will be replaced.`,
                   ]}
                 />
 
-                <Pressable
+                <SubtlePressable
+                  accessibilityRole="button"
+                  accessibilityLabel="Decrease reminder minute"
                   style={styles.stepButton}
                   onPress={() =>
                     adjustPickerMinute(-1)
@@ -2025,14 +2235,20 @@ Your current favorites and settings will be replaced.`,
                     size={24}
                     color={theme.accent}
                   />
-                </Pressable>
+                </SubtlePressable>
               </View>
 
               <View style={styles.periodControl}>
                 {(["AM", "PM"] as const).map(
                   (period) => (
-                    <Pressable
+                    <SubtlePressable
                       key={period}
+                      accessibilityRole="radio"
+                      accessibilityLabel={period}
+                      accessibilityState={{
+                        selected:
+                          pickerPeriod === period,
+                      }}
                       style={[
                         styles.periodButton,
                         {
@@ -2069,14 +2285,16 @@ Your current favorites and settings will be replaced.`,
                       >
                         {period}
                       </Text>
-                    </Pressable>
+                    </SubtlePressable>
                   )
                 )}
               </View>
             </View>
 
             <View style={styles.modalActions}>
-              <Pressable
+              <SubtlePressable
+                accessibilityRole="button"
+                accessibilityLabel="Cancel reminder time changes"
                 style={[
                   styles.secondaryButton,
                   {
@@ -2096,9 +2314,16 @@ Your current favorites and settings will be replaced.`,
                 >
                   Cancel
                 </Text>
-              </Pressable>
+              </SubtlePressable>
 
-              <Pressable
+              <SubtlePressable
+                accessibilityRole="button"
+                accessibilityLabel="Save reminder time"
+                accessibilityState={{
+                  disabled: isReminderSaving,
+                  busy: isReminderSaving,
+                }}
+                disabled={isReminderSaving}
                 style={[
                   styles.primaryButton,
                   {
@@ -2113,9 +2338,10 @@ Your current favorites and settings will be replaced.`,
                 >
                   Save
                 </Text>
-              </Pressable>
+              </SubtlePressable>
             </View>
-          </View>
+            </ScrollView>
+          </Animated.View>
         </View>
       </Modal>
 
@@ -2134,6 +2360,19 @@ Your current favorites and settings will be replaced.`,
         onPrimary={() => {
           setPremiumPrompt(null);
           router.push("/premium");
+        }}
+      />
+
+      <StatusNoticeModal
+        visible={successNotice !== null}
+        title={successNotice?.title ?? ""}
+        message={successNotice?.message ?? ""}
+        icon={
+          successNotice?.icon ??
+          "checkmark-circle-outline"
+        }
+        onDismiss={() => {
+          setSuccessNotice(null);
         }}
       />
     </>
@@ -2408,9 +2647,14 @@ const styles = StyleSheet.create({
   },
 
   timePickerCard: {
+    maxHeight: "86%",
     borderRadius: 8,
     backgroundColor: "#FFFFFF",
     padding: 22,
+  },
+
+  timePickerScrollContent: {
+    paddingBottom: 2,
   },
 
   modalHeader: {

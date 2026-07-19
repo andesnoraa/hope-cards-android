@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useFocusEffect } from "expo-router";
 import {
   useCallback,
+  useRef,
   useState,
 } from "react";
 
@@ -132,6 +133,8 @@ export default function PremiumScreen() {
     useState(false);
   const [notice, setNotice] =
     useState<Notice | null>(null);
+  const purchaseLock = useRef(false);
+  const restoreLock = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -192,6 +195,11 @@ export default function PremiumScreen() {
   }
 
   async function handleUnlock() {
+    if (purchaseLock.current) {
+      return;
+    }
+
+    purchaseLock.current = true;
     setIsPurchasing(true);
 
     try {
@@ -219,11 +227,17 @@ export default function PremiumScreen() {
         });
       }
     } finally {
+      purchaseLock.current = false;
       setIsPurchasing(false);
     }
   }
 
   async function handleRestore() {
+    if (restoreLock.current) {
+      return;
+    }
+
+    restoreLock.current = true;
     setIsRestoring(true);
 
     try {
@@ -259,6 +273,7 @@ export default function PremiumScreen() {
         icon: "information-circle-outline",
       });
     } finally {
+      restoreLock.current = false;
       setIsRestoring(false);
     }
   }
@@ -461,6 +476,8 @@ export default function PremiumScreen() {
           </View>
         ) : (
           <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Start Hope Cards Premium"
             style={({ pressed }) => [
               styles.subscribeButton,
               {
@@ -473,6 +490,10 @@ export default function PremiumScreen() {
               },
             ]}
             disabled={isPurchasing}
+            accessibilityState={{
+              disabled: isPurchasing,
+              busy: isPurchasing,
+            }}
             onPress={handleUnlock}
           >
             {isPurchasing ? (
@@ -500,11 +521,17 @@ export default function PremiumScreen() {
         )}
 
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Restore Premium subscription"
           style={({ pressed }) => [
             styles.restoreButton,
             { opacity: pressed ? 0.65 : 1 },
           ]}
           disabled={isRestoring}
+          accessibilityState={{
+            disabled: isRestoring,
+            busy: isRestoring,
+          }}
           onPress={handleRestore}
         >
           {isRestoring ? (

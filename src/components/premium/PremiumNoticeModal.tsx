@@ -1,13 +1,20 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   Modal,
-  Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
+import Animated, {
+  FadeInUp,
+  ReduceMotion,
+  useReducedMotion,
+} from "react-native-reanimated";
 
 import { useAppTheme } from "../../theme/appTheme";
+import SubtlePressable from "../common/SubtlePressable";
+import useModalTitleFocus from "../common/useModalTitleFocus";
 
 type Props = {
   visible: boolean;
@@ -31,18 +38,28 @@ export default function PremiumNoticeModal({
   onSecondary,
 }: Props) {
   const { theme } = useAppTheme();
+  const reduceMotion = useReducedMotion();
+  const titleRef = useModalTitleFocus(visible);
 
   return (
     <Modal
       transparent
       visible={visible}
-      animationType="fade"
+      animationType={
+        reduceMotion ? "none" : "fade"
+      }
       onRequestClose={
         onSecondary ?? onPrimary
       }
     >
-      <View style={styles.backdrop}>
-        <View
+      <View
+        accessibilityViewIsModal
+        style={styles.backdrop}
+      >
+        <Animated.View
+          entering={FadeInUp.duration(180).reduceMotion(
+            ReduceMotion.System
+          )}
           style={[
             styles.card,
             {
@@ -51,93 +68,104 @@ export default function PremiumNoticeModal({
             },
           ]}
         >
-          <View
-            style={[
-              styles.iconWrap,
-              {
-                backgroundColor:
-                  theme.accentSoft,
-              },
-            ]}
+          <ScrollView
+            contentContainerStyle={styles.content}
+            showsVerticalScrollIndicator={false}
           >
-            <Ionicons
-              name={icon}
-              size={26}
-              color={theme.accent}
-            />
-          </View>
+            <View
+              style={[
+                styles.iconWrap,
+                {
+                  backgroundColor:
+                    theme.accentSoft,
+                },
+              ]}
+            >
+              <Ionicons
+                name={icon}
+                size={26}
+                color={theme.accent}
+              />
+            </View>
 
-          <Text
-            style={[
-              styles.title,
-              { color: theme.text },
-            ]}
-          >
-            {title}
-          </Text>
+            <Text
+              ref={titleRef}
+              accessible
+              accessibilityRole="header"
+              style={[
+                styles.title,
+                { color: theme.text },
+              ]}
+            >
+              {title}
+            </Text>
 
-          <Text
-            style={[
-              styles.message,
-              {
-                color:
-                  theme.textSecondary,
-              },
-            ]}
-          >
-            {message}
-          </Text>
+            <Text
+              selectable
+              style={[
+                styles.message,
+                {
+                  color:
+                    theme.textSecondary,
+                },
+              ]}
+            >
+              {message}
+            </Text>
 
-          <View style={styles.actions}>
-            {secondaryLabel &&
-            onSecondary ? (
-              <Pressable
+            <View style={styles.actions}>
+              {secondaryLabel &&
+              onSecondary ? (
+                <SubtlePressable
+                  accessibilityRole="button"
+                  style={[
+                    styles.secondaryButton,
+                    {
+                      backgroundColor:
+                        theme.background,
+                    },
+                  ]}
+                  onPress={onSecondary}
+                >
+                  <Text
+                    style={[
+                      styles.secondaryText,
+                      { color: theme.text },
+                    ]}
+                  >
+                    {secondaryLabel}
+                  </Text>
+                </SubtlePressable>
+              ) : null}
+
+              <SubtlePressable
+                accessibilityRole="button"
                 style={[
-                  styles.secondaryButton,
+                  styles.primaryButton,
                   {
                     backgroundColor:
-                      theme.background,
+                      theme.buttonBackground,
+                    borderColor:
+                      theme.buttonBorder,
                   },
                 ]}
-                onPress={onSecondary}
+                onPress={onPrimary}
               >
                 <Text
                   style={[
-                    styles.secondaryText,
-                    { color: theme.text },
+                    styles.primaryText,
+                    {
+                      color:
+                        theme.buttonText,
+                    },
                   ]}
                 >
-                  {secondaryLabel}
+                  {primaryLabel}
                 </Text>
-              </Pressable>
-            ) : null}
-
-            <Pressable
-              style={[
-                styles.primaryButton,
-                {
-                  backgroundColor:
-                    theme.buttonBackground,
-                  borderColor:
-                    theme.buttonBorder,
-                },
-              ]}
-              onPress={onPrimary}
-            >
-              <Text
-                style={[
-                  styles.primaryText,
-                  {
-                    color:
-                      theme.buttonText,
-                  },
-                ]}
-              >
-                {primaryLabel}
-              </Text>
-            </Pressable>
-          </View>
-        </View>
+              </SubtlePressable>
+            </View>
+          </ScrollView>
+        </Animated.View>
       </View>
     </Modal>
   );
@@ -153,7 +181,11 @@ const styles = StyleSheet.create({
   },
 
   card: {
+    maxHeight: "86%",
     borderRadius: 8,
+  },
+
+  content: {
     padding: 24,
   },
 
