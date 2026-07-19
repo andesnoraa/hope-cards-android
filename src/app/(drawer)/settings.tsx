@@ -1560,7 +1560,10 @@ Your current favorites and settings will be replaced.`,
 
             <ScrollView
               style={styles.themeOptionScroller}
-              contentContainerStyle={styles.themeOptionList}
+              contentContainerStyle={[
+                styles.themeOptionList,
+                styles.translationOptionList,
+              ]}
               showsVerticalScrollIndicator={false}
             >
               {TRANSLATION_OPTIONS.map((option) => {
@@ -1577,6 +1580,7 @@ Your current favorites and settings will be replaced.`,
                     }
                     style={[
                       styles.themeOptionCard,
+                      styles.translationOptionCard,
                       {
                         backgroundColor:
                           selected
@@ -1594,6 +1598,7 @@ Your current favorites and settings will be replaced.`,
                         <Text
                           style={[
                             styles.themeOptionTitle,
+                            styles.translationOptionTitle,
                             { color: theme.text },
                           ]}
                         >
@@ -1603,6 +1608,7 @@ Your current favorites and settings will be replaced.`,
                         <Text
                           style={[
                             styles.themeOptionDescription,
+                            styles.translationOptionDescription,
                             { color: theme.textSecondary },
                           ]}
                         >
@@ -2318,11 +2324,20 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
   },
 
+  translationOptionList: {
+    gap: 7,
+  },
+
   themeOptionCard: {
     borderWidth: 1,
     borderRadius: 8,
     paddingVertical: 14,
     paddingHorizontal: 14,
+  },
+
+  translationOptionCard: {
+    minHeight: 62,
+    paddingVertical: 10,
   },
 
   themeOptionHeader: {
@@ -2372,6 +2387,10 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
 
+  translationOptionTitle: {
+    fontSize: 16,
+  },
+
   themePremiumBadge: {
     borderRadius: 999,
     paddingVertical: 3,
@@ -2387,6 +2406,12 @@ const styles = StyleSheet.create({
     marginTop: 3,
     fontSize: 14,
     lineHeight: 20,
+  },
+
+  translationOptionDescription: {
+    marginTop: 2,
+    fontSize: 13,
+    lineHeight: 18,
   },
 
   modalBackdrop: {

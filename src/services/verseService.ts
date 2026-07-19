@@ -7,6 +7,7 @@ import rv1909Verses from "../data/verses/es-rv1909.json";
 import lsg1910Verses from "../data/verses/fr-lsg1910.json";
 import lut1912Verses from "../data/verses/de-lut1912.json";
 import riv1927Verses from "../data/verses/it-riv1927.json";
+import adb1905Verses from "../data/verses/tl-adb1905.json";
 
 import type { Verse } from "../types/verse";
 
@@ -60,7 +61,7 @@ const translationRegistry = {
     language: "ml",
     label: "MAL",
     license: "Public domain",
-    name: "Sathyavedapusthakam 1910",
+    name: "Sathyavedapusthakam (1910)",
     verses: mal1910Verses as Verse[],
   },
   rv1909: {
@@ -68,7 +69,7 @@ const translationRegistry = {
     language: "es",
     label: "RV1909",
     license: "Public domain",
-    name: "Reina-Valera 1909",
+    name: "Reina-Valera (1909)",
     verses: rv1909Verses as Verse[],
   },
   lsg1910: {
@@ -76,7 +77,7 @@ const translationRegistry = {
     language: "fr",
     label: "LSG",
     license: "Public domain",
-    name: "Louis Segond 1910",
+    name: "Louis Segond (1910)",
     verses: lsg1910Verses as Verse[],
   },
   lut1912: {
@@ -84,7 +85,7 @@ const translationRegistry = {
     language: "de",
     label: "LUT",
     license: "Public domain",
-    name: "Lutherbibel 1912",
+    name: "Lutherbibel (1912)",
     verses: lut1912Verses as Verse[],
   },
   riv1927: {
@@ -92,8 +93,16 @@ const translationRegistry = {
     language: "it",
     label: "RIV",
     license: "Public domain",
-    name: "Riveduta 1927",
+    name: "Riveduta (1927)",
     verses: riv1927Verses as Verse[],
+  },
+  adb1905: {
+    attribution: "Philippine Bible Society",
+    language: "tl",
+    label: "ADB1905",
+    license: "Public domain",
+    name: "Ang Dating Biblia (1905)",
+    verses: adb1905Verses as Verse[],
   },
 } satisfies Record<string, TranslationDefinition>;
 
