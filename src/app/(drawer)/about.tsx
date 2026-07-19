@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   creditCopy: { flex: 1, gap: 1 },
   creditDetails: { fontSize: 14, lineHeight: 20, fontWeight: "500" },
   license: { fontSize: 12, lineHeight: 17, fontWeight: "400" },
-  signature: { alignItems: "center", borderTopWidth: StyleSheet.hairlineWidth, paddingTop: 22 },
+  signature: { alignItems: "center", borderTopWidth: StyleSheet.hairlineWidth, paddingTop: 16 },
   signatureLabel: { fontSize: 13, lineHeight: 18, fontWeight: "400" },
   signatureName: { fontWeight: "600" },
   copyright: { marginTop: 12, textAlign: "center", fontSize: 11, lineHeight: 16 },
