@@ -98,7 +98,6 @@ export default function CardFront({
           backgroundColor:
             theme.cardFront,
           borderColor: theme.accent,
-          shadowColor: theme.shadow,
         },
       ]}
     >
@@ -219,14 +218,7 @@ const styles = StyleSheet.create({
     borderRadius: 34,
 
     borderWidth: 1.5,
-    shadowOpacity: 0.12,
-    shadowRadius: 42,
-    shadowOffset: {
-      width: 0,
-      height: 24,
-    },
-
-    elevation: 18,
+    boxShadow: "0 6px 14px rgba(0, 0, 0, 0.10)",
   },
 
   innerBorder: {

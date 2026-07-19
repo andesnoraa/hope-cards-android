@@ -14,7 +14,6 @@ export default function CardBack() {
             theme.cardBack,
           borderColor:
             theme.cardBackAccent,
-          shadowColor: theme.shadow,
         },
       ]}
     >
@@ -28,41 +27,43 @@ export default function CardBack() {
         ]}
       />
 
-      <Text
-        style={[
-          styles.cross,
-          {
-            color:
-              theme.cardBackAccent,
-          },
-        ]}
-      >
-        ✝
-      </Text>
+      <View style={styles.logoGroup}>
+        <Text
+          style={[
+            styles.cross,
+            {
+              color:
+                theme.cardBackAccent,
+            },
+          ]}
+        >
+          ✝
+        </Text>
 
-      <Text
-        style={[
-          styles.title,
-          {
-            color:
-              theme.cardBackText,
-          },
-        ]}
-      >
-        HOPE
-      </Text>
+        <Text
+          style={[
+            styles.title,
+            {
+              color:
+                theme.cardBackText,
+            },
+          ]}
+        >
+          HOPE
+        </Text>
 
-      <Text
-        style={[
-          styles.subtitle,
-          {
-            color:
-              theme.cardBackAccent,
-          },
-        ]}
-      >
-        CARDS
-      </Text>
+        <Text
+          style={[
+            styles.subtitle,
+            {
+              color:
+                theme.cardBackAccent,
+            },
+          ]}
+        >
+          CARDS
+        </Text>
+      </View>
     </View>
   );
 }
@@ -78,14 +79,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
 
     borderWidth: 1.5,
-    shadowOpacity: 0.08,
-    shadowRadius: 20,
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-
-    elevation: 8,
+    boxShadow: "0 6px 14px rgba(0, 0, 0, 0.10)",
   },
 
   innerBorder: {
@@ -102,10 +96,15 @@ const styles = StyleSheet.create({
 
   },
 
-  cross: {
-    fontSize: 62,
+  logoGroup: {
+    alignItems: "center",
+    transform: [{ translateY: -18 }],
+  },
 
-    marginBottom: 16,
+  cross: {
+    fontSize: 52,
+
+    marginBottom: 12,
 
     fontFamily: "CormorantGaramond-Bold",
   },

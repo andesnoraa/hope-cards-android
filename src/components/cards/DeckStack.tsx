@@ -54,10 +54,6 @@ export default function DeckStack({
 
   return (
     <View style={styles.container}>
-      <View style={[styles.card, styles.card4]}>
-        <StackCard />
-      </View>
-
       <View style={[styles.card, styles.card3]}>
         <StackCard />
       </View>
@@ -141,19 +137,10 @@ const styles = StyleSheet.create({
   card3: {
     transform: [
       { translateX: -4 },
-      { translateY: -5 },
-      { rotate: "-1.2deg" },
+      { translateY: -6 },
+      { rotate: "-1deg" },
     ],
     zIndex: 2,
-  },
-
-  card4: {
-    transform: [
-      { translateX: -5 },
-      { translateY: -8 },
-      { rotate: "-1.8deg" },
-    ],
-    zIndex: 1,
   },
 
   face: {

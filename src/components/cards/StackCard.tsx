@@ -14,7 +14,6 @@ export default function StackCard() {
             theme.cardBack,
           borderColor:
             theme.cardBackAccent,
-          shadowColor: theme.shadow,
         },
       ]}
     />
@@ -29,13 +28,6 @@ const styles = StyleSheet.create({
     borderRadius: 34,
 
     borderWidth: 1.5,
-    shadowOpacity: 0.06,
-    shadowRadius: 16,
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
-
-    elevation: 7,
+    boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
   },
 });
