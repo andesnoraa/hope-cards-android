@@ -64,6 +64,36 @@ import {
 import type { Verse } from "../../types/verse";
 import { useAppTheme } from "../../theme/appTheme";
 
+function getVerseStyle(text: string) {
+  const length = text.length;
+
+  if (length <= 90) {
+    return {
+      fontSize: 24,
+      lineHeight: 42,
+    };
+  }
+
+  if (length <= 150) {
+    return {
+      fontSize: 22,
+      lineHeight: 38,
+    };
+  }
+
+  if (length <= 220) {
+    return {
+      fontSize: 20,
+      lineHeight: 34,
+    };
+  }
+
+  return {
+    fontSize: 18,
+    lineHeight: 31,
+  };
+}
+
 export default function DailyHopeScreen() {
   const { theme } = useAppTheme();
   const isFocused = useIsFocused();
@@ -370,8 +400,11 @@ export default function DailyHopeScreen() {
     return null;
   }
 
+  const verseStyle = getVerseStyle(verse.verse);
+
   return (
     <ScrollView
+      contentInsetAdjustmentBehavior="automatic"
       style={[
         styles.container,
         {
@@ -439,8 +472,10 @@ export default function DailyHopeScreen() {
         />
 
         <Text
+          selectable
           style={[
             styles.verse,
+            verseStyle,
             { color: theme.cardText },
           ]}
         >
@@ -548,8 +583,6 @@ const styles = StyleSheet.create({
   },
 
   verse: {
-    fontSize: 22,
-    lineHeight: 52,
     textAlign: "center",
     fontFamily:
       "CormorantGaramond-Regular",

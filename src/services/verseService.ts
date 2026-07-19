@@ -32,7 +32,7 @@ const translationRegistry = {
     verses: bsbVerses as Verse[],
   },
   bbe: {
-    attribution: "Professor S. H. Hooke",
+    attribution: "Samuel Henry Hooke",
     language: "en",
     label: "BBE",
     license: "Public domain",
@@ -40,7 +40,7 @@ const translationRegistry = {
     verses: bbeVerses as Verse[],
   },
   kjv: {
-    attribution: "King James Version translators",
+    attribution: "King James Bible translation committees",
     language: "en",
     label: "KJV",
     license: "Public domain",
@@ -48,7 +48,7 @@ const translationRegistry = {
     verses: kjvVerses as Verse[],
   },
   web: {
-    attribution: "World English Bible project",
+    attribution: "Michael Paul Johnson and contributors",
     language: "en",
     label: "WEB",
     license: "Public domain",
@@ -64,7 +64,7 @@ const translationRegistry = {
     verses: mal1910Verses as Verse[],
   },
   rv1909: {
-    attribution: "Reina y Valera",
+    attribution: "Casiodoro de Reina & Cipriano de Valera",
     language: "es",
     label: "RV1909",
     license: "Public domain",

@@ -100,7 +100,14 @@ export default function AboutScreen() {
               key={translation.id}
               style={[styles.creditRow, { borderBottomColor: theme.divider }]}
             >
-              <Text style={[styles.creditCode, { color: theme.accent }]}>{translation.label}</Text>
+              <Text
+                adjustsFontSizeToFit
+                minimumFontScale={0.85}
+                numberOfLines={1}
+                style={[styles.creditCode, { color: theme.accent }]}
+              >
+                {translation.label}
+              </Text>
               <View style={styles.creditCopy}>
                 <Text style={[styles.creditDetails, { color: theme.cardText }]}>{translation.attribution}</Text>
                 <Text style={[styles.license, { color: theme.textSecondary }]}>{translation.license}</Text>
@@ -161,7 +168,7 @@ const styles = StyleSheet.create({
   purposeVision: { marginTop: 12, fontSize: 14, lineHeight: 21, fontWeight: "400" },
   creditList: {},
   creditRow: { minHeight: 58, flexDirection: "row", alignItems: "flex-start", gap: 12, borderBottomWidth: StyleSheet.hairlineWidth, paddingVertical: 10 },
-  creditCode: { width: 38, fontSize: 14, lineHeight: 20, fontWeight: "700", letterSpacing: 0.2 },
+  creditCode: { width: 52, fontSize: 14, lineHeight: 20, fontWeight: "700", letterSpacing: 0.2 },
   creditCopy: { flex: 1, gap: 1 },
   creditDetails: { fontSize: 14, lineHeight: 20, fontWeight: "500" },
   license: { fontSize: 12, lineHeight: 17, fontWeight: "400" },

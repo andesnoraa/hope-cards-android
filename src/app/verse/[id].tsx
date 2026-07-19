@@ -166,6 +166,7 @@ export default function VerseScreen() {
       />
 
       <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
         style={[
           styles.container,
           {
@@ -282,9 +283,11 @@ const styles = StyleSheet.create({
   },
 
   content: {
+    flexGrow: 1,
+    justifyContent: "center",
     paddingHorizontal: 28,
-    paddingTop: 20,
-    paddingBottom: 60,
+    paddingTop: 32,
+    paddingBottom: 220,
     alignItems: "center",
   },
 
