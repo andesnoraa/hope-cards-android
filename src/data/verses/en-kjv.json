@@ -1,0 +1,4551 @@
+[
+  {
+    "id": "john-3-16",
+    "category": "Love",
+    "verse": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+    "reference": "John 3:16",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "salvation",
+      "eternal-life"
+    ]
+  },
+  {
+    "id": "matthew-11-28",
+    "category": "Comfort",
+    "verse": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    "reference": "Matthew 11:28",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "rest",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-14-27",
+    "category": "Peace",
+    "verse": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+    "reference": "John 14:27",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "comfort",
+      "fear"
+    ]
+  },
+  {
+    "id": "isaiah-41-10",
+    "category": "Hope",
+    "verse": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+    "reference": "Isaiah 41:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "strength",
+      "comfort"
+    ]
+  },
+  {
+    "id": "philippians-4-13",
+    "category": "Strength",
+    "verse": "I can do all things through Christ which strengtheneth me.",
+    "reference": "Philippians 4:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "faith",
+      "confidence"
+    ]
+  },
+  {
+    "id": "philippians-4-6",
+    "category": "Prayer",
+    "verse": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+    "reference": "Philippians 4:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "anxiety",
+      "peace"
+    ]
+  },
+  {
+    "id": "romans-8-28",
+    "category": "Hope",
+    "verse": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+    "reference": "Romans 8:28",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "purpose",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-5-6",
+    "category": "Trust",
+    "verse": "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+    "reference": "Proverbs 3:5-6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "wisdom",
+      "guidance"
+    ]
+  },
+  {
+    "id": "psalm-46-1",
+    "category": "Peace",
+    "verse": "God is our refuge and strength, a very present help in trouble.",
+    "reference": "Psalm 46:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "refuge",
+      "help"
+    ]
+  },
+  {
+    "id": "joshua-1-9",
+    "category": "Courage",
+    "verse": "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+    "reference": "Joshua 1:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-40-31",
+    "category": "Strength",
+    "verse": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    "reference": "Isaiah 40:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "hope",
+      "endurance"
+    ]
+  },
+  {
+    "id": "psalm-34-18",
+    "category": "Comfort",
+    "verse": "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
+    "reference": "Psalm 34:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "healing",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-55-22",
+    "category": "Trust",
+    "verse": "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
+    "reference": "Psalm 55:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "comfort",
+      "burden"
+    ]
+  },
+  {
+    "id": "jeremiah-29-11",
+    "category": "Hope",
+    "verse": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
+    "reference": "Jeremiah 29:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "future",
+      "promise"
+    ]
+  },
+  {
+    "id": "2-corinthians-5-7",
+    "category": "Faith",
+    "verse": "(For we walk by faith, not by sight:)",
+    "reference": "2 Corinthians 5:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "trust",
+      "walk"
+    ]
+  },
+  {
+    "id": "2-corinthians-12-9",
+    "category": "Grace",
+    "verse": "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.",
+    "reference": "2 Corinthians 12:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "strength",
+      "weakness"
+    ]
+  },
+  {
+    "id": "1-peter-5-7",
+    "category": "Trust",
+    "verse": "Casting all your care upon him; for he careth for you.",
+    "reference": "1 Peter 5:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "care",
+      "comfort"
+    ]
+  },
+  {
+    "id": "1-john-4-19",
+    "category": "Love",
+    "verse": "We love him, because he first loved us.",
+    "reference": "1 John 4:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "grace"
+    ]
+  },
+  {
+    "id": "romans-8-38-39",
+    "category": "Hope",
+    "verse": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+    "reference": "Romans 8:38-39",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "love",
+      "assurance"
+    ]
+  },
+  {
+    "id": "revelation-21-4",
+    "category": "Hope",
+    "verse": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+    "reference": "Revelation 21:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "heaven",
+      "comfort"
+    ]
+  },
+  {
+    "id": "isaiah-26-3",
+    "category": "Peace",
+    "verse": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+    "reference": "Isaiah 26:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "trust",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-23-1",
+    "category": "Hope",
+    "verse": "The LORD is my shepherd; I shall not want.",
+    "reference": "Psalm 23:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "shepherd",
+      "provision"
+    ]
+  },
+  {
+    "id": "psalm-23-4",
+    "category": "Comfort",
+    "verse": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",
+    "reference": "Psalm 23:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "fear",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-37-5",
+    "category": "Trust",
+    "verse": "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
+    "reference": "Psalm 37:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "guidance",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-37-4",
+    "category": "Joy",
+    "verse": "Delight thyself also in the LORD; and he shall give thee the desires of thine heart.",
+    "reference": "Psalm 37:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "trust",
+      "delight"
+    ]
+  },
+  {
+    "id": "psalm-27-1",
+    "category": "Strength",
+    "verse": "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+    "reference": "Psalm 27:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "courage",
+      "fear"
+    ]
+  },
+  {
+    "id": "jeremiah-33-3",
+    "category": "Prayer",
+    "verse": "Call unto me, and I will answer thee, and shew thee great and mighty things, which thou knowest not.",
+    "reference": "Jeremiah 33:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "promise",
+      "guidance"
+    ]
+  },
+  {
+    "id": "james-1-5",
+    "category": "Wisdom",
+    "verse": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+    "reference": "James 1:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "prayer",
+      "guidance"
+    ]
+  },
+  {
+    "id": "hebrews-4-16",
+    "category": "Grace",
+    "verse": "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.",
+    "reference": "Hebrews 4:16",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "prayer",
+      "mercy"
+    ]
+  },
+  {
+    "id": "hebrews-13-5",
+    "category": "Hope",
+    "verse": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+    "reference": "Hebrews 13:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "hebrews-11-1",
+    "category": "Faith",
+    "verse": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+    "reference": "Hebrews 11:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "hope",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-john-3-1",
+    "category": "Love",
+    "verse": "Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God: therefore the world knoweth us not, because it knew him not.",
+    "reference": "1 John 3:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "identity",
+      "children-of-god"
+    ]
+  },
+  {
+    "id": "john-16-33",
+    "category": "Hope",
+    "verse": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+    "reference": "John 16:33",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "peace",
+      "victory"
+    ]
+  },
+  {
+    "id": "john-14-1",
+    "category": "Peace",
+    "verse": "Let not your heart be troubled: ye believe in God, believe also in me.",
+    "reference": "John 14:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "faith",
+      "comfort"
+    ]
+  },
+  {
+    "id": "john-10-10",
+    "category": "Life",
+    "verse": "The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly.",
+    "reference": "John 10:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "life",
+      "hope",
+      "jesus"
+    ]
+  },
+  {
+    "id": "romans-8-31",
+    "category": "Hope",
+    "verse": "What shall we then say to these things? If God be for us, who can be against us?",
+    "reference": "Romans 8:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "confidence",
+      "victory"
+    ]
+  },
+  {
+    "id": "romans-8-1",
+    "category": "Freedom",
+    "verse": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
+    "reference": "Romans 8:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "freedom"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-17",
+    "category": "Prayer",
+    "verse": "Pray without ceasing.",
+    "reference": "1 Thessalonians 5:17",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "devotion"
+    ]
+  },
+  {
+    "id": "philippians-4-4",
+    "category": "Joy",
+    "verse": "Rejoice in the Lord alway: and again I say, Rejoice.",
+    "reference": "Philippians 4:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "praise",
+      "faith"
+    ]
+  },
+  {
+    "id": "philippians-4-7",
+    "category": "Peace",
+    "verse": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+    "reference": "Philippians 4:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "heart",
+      "prayer"
+    ]
+  },
+  {
+    "id": "genesis-28-15",
+    "category": "Comfort",
+    "verse": "And, behold, I am with thee, and will keep thee in all places whither thou goest, and will bring thee again into this land; for I will not leave thee, until I have done that which I have spoken to thee of.",
+    "reference": "Genesis 28:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "exodus-14-14",
+    "category": "Peace",
+    "verse": "The LORD shall fight for you, and ye shall hold your peace.",
+    "reference": "Exodus 14:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "trust",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-6",
+    "category": "Courage",
+    "verse": "Be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee.",
+    "reference": "Deuteronomy 31:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-8",
+    "category": "Courage",
+    "verse": "And the LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed.",
+    "reference": "Deuteronomy 31:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "guidance",
+      "fear"
+    ]
+  },
+  {
+    "id": "psalm-4-8",
+    "category": "Peace",
+    "verse": "I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell in safety.",
+    "reference": "Psalm 4:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "safety"
+    ]
+  },
+  {
+    "id": "1-corinthians-6-11",
+    "category": "Hope",
+    "verse": "And such were some of you: but ye are washed, but ye are sanctified, but ye are justified in the name of the Lord Jesus, and by the Spirit of our God.",
+    "reference": "1 Corinthians 6:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-16-8",
+    "category": "Trust",
+    "verse": "I have set the LORD always before me: because he is at my right hand, I shall not be moved.",
+    "reference": "Psalm 16:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "stability",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-18-2",
+    "category": "Strength",
+    "verse": "The LORD is my rock, and my fortress, and my deliverer; my God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower.",
+    "reference": "Psalm 18:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "refuge",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-19-14",
+    "category": "Prayer",
+    "verse": "Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer.",
+    "reference": "Psalm 19:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "heart",
+      "words"
+    ]
+  },
+  {
+    "id": "psalm-27-14",
+    "category": "Hope",
+    "verse": "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
+    "reference": "Psalm 27:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "waiting",
+      "courage"
+    ]
+  },
+  {
+    "id": "psalm-31-24",
+    "category": "Courage",
+    "verse": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+    "reference": "Psalm 31:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "hope",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalm-32-8",
+    "category": "Wisdom",
+    "verse": "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
+    "reference": "Psalm 32:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "teaching"
+    ]
+  },
+  {
+    "id": "psalm-34-4",
+    "category": "Comfort",
+    "verse": "I sought the LORD, and he heard me, and delivered me from all my fears.",
+    "reference": "Psalm 34:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "fear",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-46-10",
+    "category": "Peace",
+    "verse": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+    "reference": "Psalm 46:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "stillness",
+      "god"
+    ]
+  },
+  {
+    "id": "psalm-56-3",
+    "category": "Trust",
+    "verse": "What time I am afraid, I will trust in thee.",
+    "reference": "Psalm 56:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "fear",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-73-26",
+    "category": "Strength",
+    "verse": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+    "reference": "Psalm 73:26",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "heart",
+      "god"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-12",
+    "category": "Grace",
+    "verse": "That the name of our Lord Jesus Christ may be glorified in you, and ye in him, according to the grace of our God and the Lord Jesus Christ.",
+    "reference": "2 Thessalonians 1:12",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-94-19",
+    "category": "Comfort",
+    "verse": "In the multitude of my thoughts within me thy comforts delight my soul.",
+    "reference": "Psalm 94:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "anxiety",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalm-100-5",
+    "category": "Love",
+    "verse": "For the LORD is good; his mercy is everlasting; and his truth endureth to all generations.",
+    "reference": "Psalm 100:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "psalm-118-24",
+    "category": "Joy",
+    "verse": "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+    "reference": "Psalm 118:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "gratitude",
+      "today"
+    ]
+  },
+  {
+    "id": "romans-8-39",
+    "category": "Grace",
+    "verse": "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+    "reference": "Romans 8:39",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-121-2",
+    "category": "Strength",
+    "verse": "My help cometh from the LORD, which made heaven and earth.",
+    "reference": "Psalm 121:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "creator"
+    ]
+  },
+  {
+    "id": "psalm-138-8",
+    "category": "Hope",
+    "verse": "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.",
+    "reference": "Psalm 138:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "purpose",
+      "mercy"
+    ]
+  },
+  {
+    "id": "proverbs-16-3",
+    "category": "Trust",
+    "verse": "Commit thy works unto the LORD, and thy thoughts shall be established.",
+    "reference": "Proverbs 16:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "plans",
+      "work"
+    ]
+  },
+  {
+    "id": "proverbs-18-10",
+    "category": "Strength",
+    "verse": "The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+    "reference": "Proverbs 18:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "refuge",
+      "safety"
+    ]
+  },
+  {
+    "id": "isaiah-12-2",
+    "category": "Trust",
+    "verse": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+    "reference": "Isaiah 12:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "salvation",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-26-4",
+    "category": "Trust",
+    "verse": "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+    "reference": "Isaiah 26:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "strength",
+      "eternal"
+    ]
+  },
+  {
+    "id": "isaiah-30-21",
+    "category": "Wisdom",
+    "verse": "And thine ears shall hear a word behind thee, saying, This is the way, walk ye in it, when ye turn to the right hand, and when ye turn to the left.",
+    "reference": "Isaiah 30:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "direction"
+    ]
+  },
+  {
+    "id": "isaiah-43-2",
+    "category": "Comfort",
+    "verse": "When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+    "reference": "Isaiah 43:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "trials",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-43-19",
+    "category": "Hope",
+    "verse": "Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert.",
+    "reference": "Isaiah 43:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "new",
+      "way"
+    ]
+  },
+  {
+    "id": "isaiah-54-10",
+    "category": "Love",
+    "verse": "For the mountains shall depart, and the hills be removed; but my kindness shall not depart from thee, neither shall the covenant of my peace be removed, saith the LORD that hath mercy on thee.",
+    "reference": "Isaiah 54:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "peace",
+      "mercy"
+    ]
+  },
+  {
+    "id": "lamentations-3-23",
+    "category": "Grace",
+    "verse": "They are new every morning: great is thy faithfulness.",
+    "reference": "Lamentations 3:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "faithfulness",
+      "morning"
+    ]
+  },
+  {
+    "id": "matthew-6-33",
+    "category": "Trust",
+    "verse": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+    "reference": "Matthew 6:33",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "kingdom",
+      "provision"
+    ]
+  },
+  {
+    "id": "galatians-6-18",
+    "category": "Grace",
+    "verse": "Brethren, the grace of our Lord Jesus Christ be with your spirit. Amen.",
+    "reference": "Galatians 6:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "matthew-19-26",
+    "category": "Faith",
+    "verse": "But Jesus beheld them, and said unto them, With men this is impossible; but with God all things are possible.",
+    "reference": "Matthew 19:26",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "mark-10-27",
+    "category": "Faith",
+    "verse": "And Jesus looking upon them saith, With men it is impossible, but not with God: for with God all things are possible.",
+    "reference": "Mark 10:27",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "luke-1-37",
+    "category": "Faith",
+    "verse": "For with God nothing shall be impossible.",
+    "reference": "Luke 1:37",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "promise",
+      "god"
+    ]
+  },
+  {
+    "id": "john-6-35",
+    "category": "Life",
+    "verse": "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+    "reference": "John 6:35",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "life",
+      "jesus",
+      "satisfaction"
+    ]
+  },
+  {
+    "id": "john-8-12",
+    "category": "Life",
+    "verse": "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",
+    "reference": "John 8:12",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "life",
+      "light",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-15-5",
+    "category": "Faith",
+    "verse": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+    "reference": "John 15:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "fruit",
+      "jesus"
+    ]
+  },
+  {
+    "id": "ephesians-6-24",
+    "category": "Grace",
+    "verse": "Grace be with all them that love our Lord Jesus Christ in sincerity. Amen.",
+    "reference": "Ephesians 6:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-15-13",
+    "category": "Hope",
+    "verse": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    "reference": "Romans 15:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "joy",
+      "peace"
+    ]
+  },
+  {
+    "id": "1-corinthians-10-13",
+    "category": "Strength",
+    "verse": "There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it.",
+    "reference": "1 Corinthians 10:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "testing",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "1-corinthians-13-13",
+    "category": "Love",
+    "verse": "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+    "reference": "1 Corinthians 13:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "faith",
+      "hope"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-16",
+    "category": "Strength",
+    "verse": "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day.",
+    "reference": "2 Corinthians 4:16",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "renewal",
+      "inner-life"
+    ]
+  },
+  {
+    "id": "ephesians-2-10",
+    "category": "Life",
+    "verse": "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+    "reference": "Ephesians 2:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "life",
+      "purpose",
+      "good-works"
+    ]
+  },
+  {
+    "id": "colossians-4-12",
+    "category": "Grace",
+    "verse": "Epaphras, who is one of you, a servant of Christ, saluteth you, always labouring fervently for you in prayers, that ye may stand perfect and complete in all the will of God.",
+    "reference": "Colossians 4:12",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "ephesians-6-10",
+    "category": "Strength",
+    "verse": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+    "reference": "Ephesians 6:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "power",
+      "lord"
+    ]
+  },
+  {
+    "id": "colossians-3-15",
+    "category": "Peace",
+    "verse": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+    "reference": "Colossians 3:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "gratitude",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-timothy-1-7",
+    "category": "Courage",
+    "verse": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+    "reference": "2 Timothy 1:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "power",
+      "love"
+    ]
+  },
+  {
+    "id": "genesis-15-6",
+    "category": "Faith",
+    "verse": "And he believed in the LORD; and he counted it to him for righteousness.",
+    "reference": "Genesis 15:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "righteousness",
+      "trust"
+    ]
+  },
+  {
+    "id": "exodus-15-2",
+    "category": "Strength",
+    "verse": "The LORD is my strength and song, and he is become my salvation: he is my God, and I will prepare him an habitation; my father's God, and I will exalt him.",
+    "reference": "Exodus 15:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "colossians-3-16",
+    "category": "Wisdom",
+    "verse": "Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.",
+    "reference": "Colossians 3:16",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "truth"
+    ]
+  },
+  {
+    "id": "isaiah-33-2",
+    "category": "Hope",
+    "verse": "O LORD, be gracious unto us; we have waited for thee: be thou their arm every morning, our salvation also in the time of trouble.",
+    "reference": "Isaiah 33:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "numbers-6-26",
+    "category": "Peace",
+    "verse": "The LORD lift up his countenance upon thee, and give thee peace.",
+    "reference": "Numbers 6:26",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "blessing",
+      "presence"
+    ]
+  },
+  {
+    "id": "joshua-24-15",
+    "category": "Faith",
+    "verse": "And if it seem evil unto you to serve the LORD, choose you this day whom ye will serve; whether the gods which your fathers served that were on the other side of the flood, or the gods of the Amorites, in whose land ye dwell: but as for me and my house, we will serve the LORD.",
+    "reference": "Joshua 24:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "choice",
+      "service"
+    ]
+  },
+  {
+    "id": "1-samuel-2-2",
+    "category": "Strength",
+    "verse": "There is none holy as the LORD: for there is none beside thee: neither is there any rock like our God.",
+    "reference": "1 Samuel 2:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "holiness",
+      "rock"
+    ]
+  },
+  {
+    "id": "2-samuel-22-31",
+    "category": "Trust",
+    "verse": "As for God, his way is perfect; the word of the LORD is tried: he is a buckler to all them that trust in him.",
+    "reference": "2 Samuel 22:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "word",
+      "refuge"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-11",
+    "category": "Prayer",
+    "verse": "Seek the LORD and his strength, seek his face continually.",
+    "reference": "1 Chronicles 16:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "strength"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-34",
+    "category": "Love",
+    "verse": "O give thanks unto the LORD; for he is good; for his mercy endureth for ever.",
+    "reference": "1 Chronicles 16:34",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "nehemiah-8-10",
+    "category": "Joy",
+    "verse": "Then he said unto them, Go your way, eat the fat, and drink the sweet, and send portions unto them for whom nothing is prepared: for this day is holy unto our Lord: neither be ye sorry; for the joy of the LORD is your strength.",
+    "reference": "Nehemiah 8:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "strength",
+      "lord"
+    ]
+  },
+  {
+    "id": "job-23-10",
+    "category": "Trust",
+    "verse": "But he knoweth the way that I take: when he hath tried me, I shall come forth as gold.",
+    "reference": "Job 23:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "testing",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-1-3",
+    "category": "Life",
+    "verse": "And he shall be like a tree planted by the rivers of water, that bringeth forth his fruit in his season; his leaf also shall not wither; and whatsoever he doeth shall prosper.",
+    "reference": "Psalm 1:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "life",
+      "fruit",
+      "growth"
+    ]
+  },
+  {
+    "id": "psalm-5-3",
+    "category": "Prayer",
+    "verse": "My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up.",
+    "reference": "Psalm 5:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "morning",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-16-11",
+    "category": "Joy",
+    "verse": "Thou wilt shew me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore.",
+    "reference": "Psalm 16:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "presence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalm-20-7",
+    "category": "Trust",
+    "verse": "Some trust in chariots, and some in horses: but we will remember the name of the LORD our God.",
+    "reference": "Psalm 20:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "lord"
+    ]
+  },
+  {
+    "id": "psalm-25-4",
+    "category": "Wisdom",
+    "verse": "Shew me thy ways, O LORD; teach me thy paths.",
+    "reference": "Psalm 25:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "ways"
+    ]
+  },
+  {
+    "id": "psalm-25-5",
+    "category": "Wisdom",
+    "verse": "Lead me in thy truth, and teach me: for thou art the God of my salvation; on thee do I wait all the day.",
+    "reference": "Psalm 25:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "truth",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-29-11",
+    "category": "Peace",
+    "verse": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+    "reference": "Psalm 29:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "strength",
+      "blessing"
+    ]
+  },
+  {
+    "id": "psalm-30-5",
+    "category": "Joy",
+    "verse": "For his anger endureth but a moment; in his favour is life: weeping may endure for a night, but joy cometh in the morning.",
+    "reference": "Psalm 30:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "morning",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-33-20",
+    "category": "Hope",
+    "verse": "Our soul waiteth for the LORD: he is our help and our shield.",
+    "reference": "Psalm 33:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "help",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-34-8",
+    "category": "Trust",
+    "verse": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+    "reference": "Psalm 34:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "goodness",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalm-37-7",
+    "category": "Peace",
+    "verse": "Rest in the LORD, and wait patiently for him: fret not thyself because of him who prospereth in his way, because of the man who bringeth wicked devices to pass.",
+    "reference": "Psalm 37:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "waiting",
+      "rest"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-8",
+    "category": "Hope",
+    "verse": "But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.",
+    "reference": "1 Thessalonians 5:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-51-10",
+    "category": "Grace",
+    "verse": "Create in me a clean heart, O God; and renew a right spirit within me.",
+    "reference": "Psalm 51:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "renewal",
+      "heart"
+    ]
+  },
+  {
+    "id": "jeremiah-3-23",
+    "category": "Hope",
+    "verse": "Truly in vain is salvation hoped for from the hills, and from the multitude of mountains: truly in the LORD our God is the salvation of Israel.",
+    "reference": "Jeremiah 3:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-62-5",
+    "category": "Hope",
+    "verse": "My soul, wait thou only upon God; for my expectation is from him.",
+    "reference": "Psalm 62:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "rest",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-84-11",
+    "category": "Grace",
+    "verse": "For the LORD God is a sun and shield: the LORD will give grace and glory: no good thing will he withhold from them that walk uprightly.",
+    "reference": "Psalm 84:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "provision",
+      "glory"
+    ]
+  },
+  {
+    "id": "psalm-86-5",
+    "category": "Grace",
+    "verse": "For thou, Lord, art good, and ready to forgive; and plenteous in mercy unto all them that call upon thee.",
+    "reference": "Psalm 86:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "mercy"
+    ]
+  },
+  {
+    "id": "psalm-103-8",
+    "category": "Love",
+    "verse": "The LORD is merciful and gracious, slow to anger, and plenteous in mercy.",
+    "reference": "Psalm 103:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalm-103-12",
+    "category": "Freedom",
+    "verse": "As far as the east is from the west, so far hath he removed our transgressions from us.",
+    "reference": "Psalm 103:12",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "freedom",
+      "forgiveness",
+      "sin"
+    ]
+  },
+  {
+    "id": "acts-20-21",
+    "category": "Trust",
+    "verse": "Testifying both to the Jews, and also to the Greeks, repentance toward God, and faith toward our Lord Jesus Christ.",
+    "reference": "Acts 20:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-121-7",
+    "category": "Comfort",
+    "verse": "The LORD shall preserve thee from all evil: he shall preserve thy soul.",
+    "reference": "Psalm 121:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "protection",
+      "safety"
+    ]
+  },
+  {
+    "id": "psalm-145-18",
+    "category": "Prayer",
+    "verse": "The LORD is nigh unto all them that call upon him, to all that call upon him in truth.",
+    "reference": "Psalm 145:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "nearness",
+      "truth"
+    ]
+  },
+  {
+    "id": "psalm-147-3",
+    "category": "Comfort",
+    "verse": "He healeth the broken in heart, and bindeth up their wounds.",
+    "reference": "Psalm 147:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "healing",
+      "heart"
+    ]
+  },
+  {
+    "id": "1-thessalonians-2-19",
+    "category": "Hope",
+    "verse": "For what is our hope, or joy, or crown of rejoicing? Are not even ye in the presence of our Lord Jesus Christ at his coming?",
+    "reference": "1 Thessalonians 2:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "proverbs-4-23",
+    "category": "Wisdom",
+    "verse": "Keep thy heart with all diligence; for out of it are the issues of life.",
+    "reference": "Proverbs 4:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "heart",
+      "life"
+    ]
+  },
+  {
+    "id": "proverbs-17-22",
+    "category": "Joy",
+    "verse": "A merry heart doeth good like a medicine: but a broken spirit drieth the bones.",
+    "reference": "Proverbs 17:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "heart",
+      "healing"
+    ]
+  },
+  {
+    "id": "isaiah-25-1",
+    "category": "Trust",
+    "verse": "O LORD, thou art my God; I will exalt thee, I will praise thy name; for thou hast done wonderful things; thy counsels of old are faithfulness and truth.",
+    "reference": "Isaiah 25:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faithfulness",
+      "praise"
+    ]
+  },
+  {
+    "id": "isaiah-40-29",
+    "category": "Strength",
+    "verse": "He giveth power to the faint; and to them that have no might he increaseth strength.",
+    "reference": "Isaiah 40:29",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "weakness",
+      "power"
+    ]
+  },
+  {
+    "id": "philippians-2-11",
+    "category": "Hope",
+    "verse": "And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+    "reference": "Philippians 2:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-58-11",
+    "category": "Wisdom",
+    "verse": "And the LORD shall guide thee continually, and satisfy thy soul in drought, and make fat thy bones: and thou shalt be like a watered garden, and like a spring of water, whose waters fail not.",
+    "reference": "Isaiah 58:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "provision",
+      "strength"
+    ]
+  },
+  {
+    "id": "jeremiah-17-7",
+    "category": "Trust",
+    "verse": "Blessed is the man that trusteth in the LORD, and whose hope the LORD is.",
+    "reference": "Jeremiah 17:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "blessing",
+      "hope"
+    ]
+  },
+  {
+    "id": "jeremiah-17-8",
+    "category": "Hope",
+    "verse": "For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+    "reference": "Jeremiah 17:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "growth",
+      "fruit"
+    ]
+  },
+  {
+    "id": "micah-6-8",
+    "category": "Wisdom",
+    "verse": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+    "reference": "Micah 6:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "justice",
+      "mercy"
+    ]
+  },
+  {
+    "id": "nahum-1-7",
+    "category": "Comfort",
+    "verse": "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+    "reference": "Nahum 1:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "refuge",
+      "trust"
+    ]
+  },
+  {
+    "id": "habakkuk-3-18",
+    "category": "Joy",
+    "verse": "Yet I will rejoice in the LORD, I will joy in the God of my salvation.",
+    "reference": "Habakkuk 3:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "matthew-5-8",
+    "category": "Grace",
+    "verse": "Blessed are the pure in heart: for they shall see God.",
+    "reference": "Matthew 5:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "purity",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-5-9",
+    "category": "Peace",
+    "verse": "Blessed are the peacemakers: for they shall be called the children of God.",
+    "reference": "Matthew 5:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "children",
+      "god"
+    ]
+  },
+  {
+    "id": "romans-10-1",
+    "category": "Hope",
+    "verse": "Brethren, my heart's desire and prayer to God for Israel is, that they might be saved.",
+    "reference": "Romans 10:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "luke-6-36",
+    "category": "Grace",
+    "verse": "Be ye therefore merciful, as your Father also is merciful.",
+    "reference": "Luke 6:36",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "father"
+    ]
+  },
+  {
+    "id": "romans-15-6",
+    "category": "Hope",
+    "verse": "That ye may with one mind and one mouth glorify God, even the Father of our Lord Jesus Christ.",
+    "reference": "Romans 15:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "john-3-17",
+    "category": "Grace",
+    "verse": "For God sent not his Son into the world to condemn the world; but that the world through him might be saved.",
+    "reference": "John 3:17",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "salvation",
+      "world"
+    ]
+  },
+  {
+    "id": "john-8-36",
+    "category": "Freedom",
+    "verse": "If the Son therefore shall make you free, ye shall be free indeed.",
+    "reference": "John 8:36",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "freedom",
+      "son",
+      "truth"
+    ]
+  },
+  {
+    "id": "acts-16-31",
+    "category": "Faith",
+    "verse": "And they said, Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house.",
+    "reference": "Acts 16:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "salvation",
+      "belief"
+    ]
+  },
+  {
+    "id": "psalms-71-5",
+    "category": "Hope",
+    "verse": "For thou art my hope, O Lord GOD: thou art my trust from my youth.",
+    "reference": "Psalms 71:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-6-14",
+    "category": "Freedom",
+    "verse": "For sin shall not have dominion over you: for ye are not under the law, but under grace.",
+    "reference": "Romans 6:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "freedom",
+      "grace",
+      "sin"
+    ]
+  },
+  {
+    "id": "romans-10-13",
+    "category": "Prayer",
+    "verse": "For whosoever shall call upon the name of the Lord shall be saved.",
+    "reference": "Romans 10:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "salvation",
+      "calling"
+    ]
+  },
+  {
+    "id": "galatians-5-1",
+    "category": "Freedom",
+    "verse": "Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage.",
+    "reference": "Galatians 5:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "freedom",
+      "christ",
+      "standing"
+    ]
+  },
+  {
+    "id": "isaiah-30-15",
+    "category": "Peace",
+    "verse": "For thus saith the Lord GOD, the Holy One of Israel; In returning and rest shall ye be saved; in quietness and in confidence shall be your strength: and ye would not.",
+    "reference": "Isaiah 30:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "isaiah-52-7",
+    "category": "Hope",
+    "verse": "How beautiful upon the mountains are the feet of him that bringeth good tidings, that publisheth peace; that bringeth good tidings of good, that publisheth salvation; that saith unto Zion, Thy God reigneth!",
+    "reference": "Isaiah 52:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "colossians-3-2",
+    "category": "Wisdom",
+    "verse": "Set your affection on things above, not on things on the earth.",
+    "reference": "Colossians 3:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "focus",
+      "heaven"
+    ]
+  },
+  {
+    "id": "1-corinthians-8-6",
+    "category": "Hope",
+    "verse": "But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him.",
+    "reference": "1 Corinthians 8:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "james-1-17",
+    "category": "Grace",
+    "verse": "Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.",
+    "reference": "James 1:17",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "gift",
+      "father"
+    ]
+  },
+  {
+    "id": "james-4-8",
+    "category": "Prayer",
+    "verse": "Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.",
+    "reference": "James 4:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "nearness",
+      "heart"
+    ]
+  },
+  {
+    "id": "philemon-1-25",
+    "category": "Grace",
+    "verse": "The grace of our Lord Jesus Christ be with your spirit. Amen.",
+    "reference": "Philemon 1:25",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "1-peter-2-24",
+    "category": "Grace",
+    "verse": "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed.",
+    "reference": "1 Peter 2:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "healing",
+      "righteousness"
+    ]
+  },
+  {
+    "id": "1-john-1-9",
+    "category": "Grace",
+    "verse": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+    "reference": "1 John 1:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "cleansing"
+    ]
+  },
+  {
+    "id": "1-john-4-18",
+    "category": "Love",
+    "verse": "There is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love.",
+    "reference": "1 John 4:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "fear",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-11",
+    "category": "Peace",
+    "verse": "Finally, brethren, farewell. Be perfect, be of good comfort, be of one mind, live in peace; and the God of love and peace shall be with you.",
+    "reference": "2 Corinthians 13:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-103-20",
+    "category": "Hope",
+    "verse": "Bless the LORD, ye his angels, that excel in strength, that do his commandments, hearkening unto the voice of his word.",
+    "reference": "Psalms 103:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-30",
+    "category": "Hope",
+    "verse": "Thou sendest forth thy spirit, they are created: and thou renewest the face of the earth.",
+    "reference": "Psalms 104:30",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "life"
+    ]
+  },
+  {
+    "id": "isaiah-25-9",
+    "category": "Hope",
+    "verse": "And it shall be said in that day, Lo, this is our God; we have waited for him, and he will save us: this is the LORD; we have waited for him, we will be glad and rejoice in his salvation.",
+    "reference": "Isaiah 25:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-108-7",
+    "category": "Hope",
+    "verse": "God hath spoken in his holiness; I will rejoice, I will divide Shechem, and mete out the valley of Succoth.",
+    "reference": "Psalms 108:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-109-20",
+    "category": "Hope",
+    "verse": "Let this be the reward of mine adversaries from the LORD, and of them that speak evil against my soul.",
+    "reference": "Psalms 109:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-112-7",
+    "category": "Hope",
+    "verse": "He shall not be afraid of evil tidings: his heart is fixed, trusting in the LORD.",
+    "reference": "Psalms 112:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-115-1",
+    "category": "Hope",
+    "verse": "Not unto us, O LORD, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake.",
+    "reference": "Psalms 115:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-7",
+    "category": "Hope",
+    "verse": "Return unto thy rest, O my soul; for the LORD hath dealt bountifully with thee.",
+    "reference": "Psalms 116:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-118-14",
+    "category": "Hope",
+    "verse": "The LORD is my strength and song, and is become my salvation.",
+    "reference": "Psalms 118:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-15",
+    "category": "Hope",
+    "verse": "The voice of rejoicing and salvation is in the tabernacles of the righteous: the right hand of the LORD doeth valiantly.",
+    "reference": "Psalms 118:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-8",
+    "category": "Hope",
+    "verse": "It is better to trust in the LORD than to put confidence in man.",
+    "reference": "Psalms 118:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-118-9",
+    "category": "Hope",
+    "verse": "It is better to trust in the LORD than to put confidence in princes.",
+    "reference": "Psalms 118:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-119-166",
+    "category": "Hope",
+    "verse": "LORD, I have hoped for thy salvation, and done thy commandments.",
+    "reference": "Psalms 119:166",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "2-peter-3-18",
+    "category": "Grace",
+    "verse": "But grow in grace, and in the knowledge of our Lord and Saviour Jesus Christ. To him be glory both now and for ever. Amen.",
+    "reference": "2 Peter 3:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-130-5",
+    "category": "Hope",
+    "verse": "I wait for the LORD, my soul doth wait, and in his word do I hope.",
+    "reference": "Psalms 130:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-130-7",
+    "category": "Hope",
+    "verse": "Let Israel hope in the LORD: for with the LORD there is mercy, and with him is plenteous redemption.",
+    "reference": "Psalms 130:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-131-3",
+    "category": "Hope",
+    "verse": "Let Israel hope in the LORD from henceforth and for ever.",
+    "reference": "Psalms 131:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-14-7",
+    "category": "Hope",
+    "verse": "Oh that the salvation of Israel were come out of Zion! when the LORD bringeth back the captivity of his people, Jacob shall rejoice, and Israel shall be glad.",
+    "reference": "Psalms 14:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-140-7",
+    "category": "Hope",
+    "verse": "O GOD the Lord, the strength of my salvation, thou hast covered my head in the day of battle.",
+    "reference": "Psalms 140:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-141-8",
+    "category": "Hope",
+    "verse": "But mine eyes are unto thee, O GOD the Lord: in thee is my trust; leave not my soul destitute.",
+    "reference": "Psalms 141:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-143-9",
+    "category": "Hope",
+    "verse": "Deliver me, O LORD, from mine enemies: I flee unto thee to hide me.",
+    "reference": "Psalms 143:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-147-11",
+    "category": "Hope",
+    "verse": "The LORD taketh pleasure in them that fear him, in those that hope in his mercy.",
+    "reference": "Psalms 147:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-timothy-2-22",
+    "category": "Love",
+    "verse": "Flee also youthful lusts: but follow righteousness, faith, charity, peace, with them that call on the Lord out of a pure heart.",
+    "reference": "2 Timothy 2:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "1-john-5-1",
+    "category": "Trust",
+    "verse": "Whosoever believeth that Jesus is the Christ is born of God: and every one that loveth him that begat loveth him also that is begotten of him.",
+    "reference": "1 John 5:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-20-6",
+    "category": "Hope",
+    "verse": "Now know I that the LORD saveth his anointed; he will hear him from his holy heaven with the saving strength of his right hand.",
+    "reference": "Psalms 20:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-30-18",
+    "category": "Hope",
+    "verse": "And therefore will the LORD wait, that he may be gracious unto you, and therefore will he be exalted, that he may have mercy upon you: for the LORD is a God of judgment: blessed are all they that wait for him.",
+    "reference": "Isaiah 30:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-10-10",
+    "category": "Trust",
+    "verse": "For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.",
+    "reference": "Romans 10:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-27-13",
+    "category": "Hope",
+    "verse": "I had fainted, unless I had believed to see the goodness of the LORD in the land of the living.",
+    "reference": "Psalms 27:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "daniel-10-19",
+    "category": "Courage",
+    "verse": "And said, O man greatly beloved, fear not: peace be unto thee, be strong, yea, be strong. And when he had spoken unto me, I was strengthened, and said, Let my lord speak; for thou hast strengthened me.",
+    "reference": "Daniel 10:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "strength",
+      "fear",
+      "trust"
+    ]
+  },
+  {
+    "id": "psalms-28-8",
+    "category": "Hope",
+    "verse": "The LORD is their strength, and he is the saving strength of his anointed.",
+    "reference": "Psalms 28:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "ephesians-6-23",
+    "category": "Trust",
+    "verse": "Peace be to the brethren, and love with faith, from God the Father and the Lord Jesus Christ.",
+    "reference": "Ephesians 6:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-3-3",
+    "category": "Hope",
+    "verse": "But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head.",
+    "reference": "Psalms 3:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-86-15",
+    "category": "Grace",
+    "verse": "But thou, O Lord, art a God full of compassion, and gracious, longsuffering, and plenteous in mercy and truth.",
+    "reference": "Psalms 86:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-23",
+    "category": "Hope",
+    "verse": "O love the LORD, all ye his saints: for the LORD preserveth the faithful, and plentifully rewardeth the proud doer.",
+    "reference": "Psalms 31:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "trust"
+    ]
+  },
+  {
+    "id": "2-corinthians-9-14",
+    "category": "Love",
+    "verse": "And by their prayer for you, which long after you for the exceeding grace of God in you.",
+    "reference": "2 Corinthians 9:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-6",
+    "category": "Hope",
+    "verse": "I have hated them that regard lying vanities: but I trust in the LORD.",
+    "reference": "Psalms 31:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-132-13",
+    "category": "Trust",
+    "verse": "For the LORD hath chosen Zion; he hath desired it for his habitation.",
+    "reference": "Psalms 132:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-132-8",
+    "category": "Trust",
+    "verse": "Arise, O LORD, into thy rest; thou, and the ark of thy strength.",
+    "reference": "Psalms 132:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-14",
+    "category": "Grace",
+    "verse": "The grace of the Lord Jesus Christ, and the love of God, and the communion of the Holy Ghost, be with you all. Amen.",
+    "reference": "2 Corinthians 13:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-john-1-3",
+    "category": "Grace",
+    "verse": "Grace be with you, mercy, and peace, from God the Father, and from the Lord Jesus Christ, the Son of the Father, in truth and love.",
+    "reference": "2 John 1:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-30-3",
+    "category": "Trust",
+    "verse": "O LORD, thou hast brought up my soul from the grave: thou hast kept me alive, that I should not go down to the pit.",
+    "reference": "Psalms 30:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-30-7",
+    "category": "Trust",
+    "verse": "LORD, by thy favour thou hast made my mountain to stand strong: thou didst hide thy face, and I was troubled.",
+    "reference": "Psalms 30:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-36-7",
+    "category": "Trust",
+    "verse": "How excellent is thy lovingkindness, O God! therefore the children of men put their trust under the shadow of thy wings.",
+    "reference": "Psalms 36:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-15-16",
+    "category": "Joy",
+    "verse": "Thy words were found, and I did eat them; and thy word was unto me the joy and rejoicing of mine heart: for I am called by thy name, O LORD God of hosts.",
+    "reference": "Jeremiah 15:16",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-40-11",
+    "category": "Trust",
+    "verse": "Withhold not thou thy tender mercies from me, O LORD: let thy lovingkindness and thy truth continually preserve me.",
+    "reference": "Psalms 40:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-41-2",
+    "category": "Trust",
+    "verse": "The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies.",
+    "reference": "Psalms 41:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-56-13",
+    "category": "Trust",
+    "verse": "For thou hast delivered my soul from death: wilt not thou deliver my feet from falling, that I may walk before God in the light of the living?",
+    "reference": "Psalms 56:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-61-7",
+    "category": "Trust",
+    "verse": "He shall abide before God for ever: O prepare mercy and truth, which may preserve him.",
+    "reference": "Psalms 61:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "philippians-4-21",
+    "category": "Grace",
+    "verse": "Salute every saint in Christ Jesus. The brethren which are with me greet you.",
+    "reference": "Philippians 4:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-84-9",
+    "category": "Trust",
+    "verse": "Behold, O God our shield, and look upon the face of thine anointed.",
+    "reference": "Psalms 84:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "isaiah-30-29",
+    "category": "Trust",
+    "verse": "Ye shall have a song, as in the night when a holy solemnity is kept; and gladness of heart, as when one goeth with a pipe to come into the mountain of the LORD, to the mighty One of Israel.",
+    "reference": "Isaiah 30:29",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "proverbs-29-25",
+    "category": "Trust",
+    "verse": "The fear of man bringeth a snare: but whoso putteth his trust in the LORD shall be safe.",
+    "reference": "Proverbs 29:25",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-12",
+    "category": "Trust",
+    "verse": "The LORD hath been mindful of us: he will bless us; he will bless the house of Israel; he will bless the house of Aaron.",
+    "reference": "Psalms 115:12",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-116-6",
+    "category": "Trust",
+    "verse": "The LORD preserveth the simple: I was brought low, and he helped me.",
+    "reference": "Psalms 116:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-119-52",
+    "category": "Trust",
+    "verse": "I remembered thy judgments of old, O LORD; and have comforted myself.",
+    "reference": "Psalms 119:52",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-119-55",
+    "category": "Trust",
+    "verse": "I have remembered thy name, O LORD, in the night, and have kept thy law.",
+    "reference": "Psalms 119:55",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-12-7",
+    "category": "Trust",
+    "verse": "Thou shalt keep them, O LORD, thou shalt preserve them from this generation for ever.",
+    "reference": "Psalms 12:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-121-5",
+    "category": "Trust",
+    "verse": "The LORD is thy keeper: the LORD is thy shade upon thy right hand.",
+    "reference": "Psalms 121:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-132-5",
+    "category": "Trust",
+    "verse": "Until I find out a place for the LORD, an habitation for the mighty God of Jacob.",
+    "reference": "Psalms 132:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-140-4",
+    "category": "Trust",
+    "verse": "Keep me, O LORD, from the hands of the wicked; preserve me from the violent man; who have purposed to overthrow my goings.",
+    "reference": "Psalms 140:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-21",
+    "category": "Trust",
+    "verse": "For I have kept the ways of the LORD, and have not wickedly departed from my God.",
+    "reference": "Psalms 18:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-3",
+    "category": "Trust",
+    "verse": "I will call upon the LORD, who is worthy to be praised: so shall I be saved from mine enemies.",
+    "reference": "Psalms 18:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-10-11",
+    "category": "Peace",
+    "verse": "He hath said in his heart, God hath forgotten: he hideth his face; he will never see it.",
+    "reference": "Psalms 10:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-10-3",
+    "category": "Peace",
+    "verse": "For the wicked boasteth of his heart's desire, and blesseth the covetous, whom the LORD abhorreth.",
+    "reference": "Psalms 10:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-thessalonians-3-5",
+    "category": "Love",
+    "verse": "And the Lord direct your hearts into the love of God, and into the patient waiting for Christ.",
+    "reference": "2 Thessalonians 3:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-1",
+    "category": "Peace",
+    "verse": "Praise ye the LORD. I will praise the LORD with my whole heart, in the assembly of the upright, and in the congregation.",
+    "reference": "Psalms 111:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-9",
+    "category": "Grace",
+    "verse": "For ye know the grace of our Lord Jesus Christ, that, though he was rich, yet for your sakes he became poor, that ye through his poverty might be rich.",
+    "reference": "2 Corinthians 8:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-125-4",
+    "category": "Peace",
+    "verse": "Do good, O LORD, unto those that be good, and to them that are upright in their hearts.",
+    "reference": "Psalms 125:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-125-5",
+    "category": "Peace",
+    "verse": "As for such as turn aside unto their crooked ways, the LORD shall lead them forth with the workers of iniquity: but peace shall be upon Israel.",
+    "reference": "Psalms 125:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "philippians-1-8",
+    "category": "Grace",
+    "verse": "For God is my record, how greatly I long after you all in the bowels of Jesus Christ.",
+    "reference": "Philippians 1:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-16-20",
+    "category": "Peace",
+    "verse": "And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen.",
+    "reference": "Romans 16:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-4",
+    "category": "Peace",
+    "verse": "Therefore is my spirit overwhelmed within me; my heart within me is desolate.",
+    "reference": "Psalms 143:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-19-8",
+    "category": "Peace",
+    "verse": "The statutes of the LORD are right, rejoicing the heart: the commandment of the LORD is pure, enlightening the eyes.",
+    "reference": "Psalms 19:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-26",
+    "category": "Peace",
+    "verse": "The meek shall eat and be satisfied: they shall praise the LORD that seek him: your heart shall live for ever.",
+    "reference": "Psalms 22:26",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-7",
+    "category": "Peace",
+    "verse": "Remember not the sins of my youth, nor my transgressions: according to thy mercy remember thou me for thy goodness' sake, O LORD.",
+    "reference": "Psalms 25:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-28-7",
+    "category": "Peace",
+    "verse": "The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.",
+    "reference": "Psalms 28:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "strength"
+    ]
+  },
+  {
+    "id": "galatians-3-14",
+    "category": "Trust",
+    "verse": "That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.",
+    "reference": "Galatians 3:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-32-11",
+    "category": "Peace",
+    "verse": "Be glad in the LORD, and rejoice, ye righteous: and shout for joy, all ye that are upright in heart.",
+    "reference": "Psalms 32:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-33-11",
+    "category": "Peace",
+    "verse": "The counsel of the LORD standeth for ever, the thoughts of his heart to all generations.",
+    "reference": "Psalms 33:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-35-27",
+    "category": "Peace",
+    "verse": "Let them shout for joy, and be glad, that favour my righteous cause: yea, let them say continually, Let the LORD be magnified, which hath pleasure in the prosperity of his servant.",
+    "reference": "Psalms 35:27",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-11",
+    "category": "Peace",
+    "verse": "And not only so, but we also joy in God through our Lord Jesus Christ, by whom we have now received the atonement.",
+    "reference": "Romans 5:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-37-3",
+    "category": "Peace",
+    "verse": "Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed.",
+    "reference": "Psalms 37:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-37-31",
+    "category": "Peace",
+    "verse": "The law of his God is in his heart; none of his steps shall slide.",
+    "reference": "Psalms 37:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-37-4",
+    "category": "Peace",
+    "verse": "Delight thyself also in the LORD; and he shall give thee the desires of thine heart.",
+    "reference": "Psalms 37:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-4-7",
+    "category": "Peace",
+    "verse": "Thou hast put gladness in my heart, more than in the time that their corn and their wine increased.",
+    "reference": "Psalms 4:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-40-8",
+    "category": "Peace",
+    "verse": "I delight to do thy will, O my God: yea, thy law is within my heart.",
+    "reference": "Psalms 40:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-10-14",
+    "category": "Strength",
+    "verse": "Thou hast seen it; for thou beholdest mischief and spite, to requite it with thy hand: the poor committeth himself unto thee; thou art the helper of the fatherless.",
+    "reference": "Psalms 10:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-104-1",
+    "category": "Strength",
+    "verse": "Bless the LORD, O my soul. O LORD my God, thou art very great; thou art clothed with honour and majesty.",
+    "reference": "Psalms 104:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-109-21",
+    "category": "Strength",
+    "verse": "But do thou for me, O GOD the Lord, for thy name's sake: because thy mercy is good, deliver thou me.",
+    "reference": "Psalms 109:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-7",
+    "category": "Grace",
+    "verse": "Therefore, as ye abound in every thing, in faith, and utterance, and knowledge, and in all diligence, and in your love to us, see that ye abound in this grace also.",
+    "reference": "2 Corinthians 8:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-110-2",
+    "category": "Strength",
+    "verse": "The LORD shall send the rod of thy strength out of Zion: rule thou in the midst of thine enemies.",
+    "reference": "Psalms 110:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-115-10",
+    "category": "Strength",
+    "verse": "O house of Aaron, trust in the LORD: he is their help and their shield.",
+    "reference": "Psalms 115:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-11",
+    "category": "Strength",
+    "verse": "Ye that fear the LORD, trust in the LORD: he is their help and their shield.",
+    "reference": "Psalms 115:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-9",
+    "category": "Strength",
+    "verse": "O Israel, trust thou in the LORD: he is their help and their shield.",
+    "reference": "Psalms 115:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-23",
+    "category": "Peace",
+    "verse": "And the very God of peace sanctify you wholly; and I pray God your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.",
+    "reference": "1 Thessalonians 5:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-7",
+    "category": "Strength",
+    "verse": "Hear me speedily, O LORD: my spirit faileth: hide not thy face from me, lest I be like unto them that go down into the pit.",
+    "reference": "Psalms 143:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-147-5",
+    "category": "Strength",
+    "verse": "Great is our Lord, and of great power: his understanding is infinite.",
+    "reference": "Psalms 147:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "1-corinthians-15-57",
+    "category": "Trust",
+    "verse": "But thanks be to God, which giveth us the victory through our Lord Jesus Christ.",
+    "reference": "1 Corinthians 15:57",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-21-13",
+    "category": "Strength",
+    "verse": "Be thou exalted, LORD, in thine own strength: so will we sing and praise thy power.",
+    "reference": "Psalms 21:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-19",
+    "category": "Strength",
+    "verse": "But be not thou far from me, O LORD: O my strength, haste thee to help me.",
+    "reference": "Psalms 22:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "1-corinthians-1-3",
+    "category": "Peace",
+    "verse": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ.",
+    "reference": "1 Corinthians 1:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-30-10",
+    "category": "Strength",
+    "verse": "Hear, O LORD, and have mercy upon me: LORD, be thou my helper.",
+    "reference": "Psalms 30:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-21",
+    "category": "Strength",
+    "verse": "Blessed be the LORD: for he hath shewed me his marvellous kindness in a strong city.",
+    "reference": "Psalms 31:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-36-5",
+    "category": "Strength",
+    "verse": "Thy mercy, O LORD, is in the heavens; and thy faithfulness reacheth unto the clouds.",
+    "reference": "Psalms 36:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-37-39",
+    "category": "Strength",
+    "verse": "But the salvation of the righteous is of the LORD: he is their strength in the time of trouble.",
+    "reference": "Psalms 37:39",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-41-3",
+    "category": "Strength",
+    "verse": "The LORD will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness.",
+    "reference": "Psalms 41:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "luke-2-52",
+    "category": "Grace",
+    "verse": "And Jesus increased in wisdom and stature, and in favour with God and man.",
+    "reference": "Luke 2:52",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-2",
+    "category": "Peace",
+    "verse": "Grace unto you, and peace, from God our Father and the Lord Jesus Christ.",
+    "reference": "2 Thessalonians 1:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-40-10",
+    "category": "Faith",
+    "verse": "I have not hid thy righteousness within my heart; I have declared thy faithfulness and thy salvation: I have not concealed thy lovingkindness and thy truth from the great congregation.",
+    "reference": "Psalms 40:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "lamentations-3-24",
+    "category": "Hope",
+    "verse": "The LORD is my portion, saith my soul; therefore will I hope in him.",
+    "reference": "Lamentations 3:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "trust",
+      "presence",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-69-13",
+    "category": "Prayer",
+    "verse": "But as for me, my prayer is unto thee, O LORD, in an acceptable time: O God, in the multitude of thy mercy hear me, in the truth of thy salvation.",
+    "reference": "Psalms 69:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "luke-10-27",
+    "category": "Love",
+    "verse": "And he answering said, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbour as thyself.",
+    "reference": "Luke 10:27",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-106-1",
+    "category": "Comfort",
+    "verse": "Praise ye the LORD. O give thanks unto the LORD; for he is good: for his mercy endureth for ever.",
+    "reference": "Psalms 106:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-42-20",
+    "category": "Faith",
+    "verse": "For ye dissembled in your hearts, when ye sent me unto the LORD your God, saying, Pray for us unto the LORD our God; and according unto all that the LORD our God shall say, so declare unto us, and we will do it.",
+    "reference": "Jeremiah 42:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-107-15",
+    "category": "Comfort",
+    "verse": "Oh that men would praise the LORD for his goodness, and for his wonderful works to the children of men!",
+    "reference": "Psalms 107:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-11-17",
+    "category": "Trust",
+    "verse": "Forasmuch then as God gave them the like gift as he did unto us, who believed on the Lord Jesus Christ; what was I, that I could withstand God?",
+    "reference": "Acts 11:17",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-6-5",
+    "category": "Love",
+    "verse": "And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",
+    "reference": "Deuteronomy 6:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "mark-12-30",
+    "category": "Love",
+    "verse": "And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment.",
+    "reference": "Mark 12:30",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-4",
+    "category": "Comfort",
+    "verse": "He hath made his wonderful works to be remembered: the LORD is gracious and full of compassion.",
+    "reference": "Psalms 111:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-4",
+    "category": "Comfort",
+    "verse": "Then called I upon the name of the LORD; O LORD, I beseech thee, deliver my soul.",
+    "reference": "Psalms 116:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-116-5",
+    "category": "Comfort",
+    "verse": "Gracious is the LORD, and righteous; yea, our God is merciful.",
+    "reference": "Psalms 116:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-117-2",
+    "category": "Comfort",
+    "verse": "For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.",
+    "reference": "Psalms 117:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-15-11",
+    "category": "Trust",
+    "verse": "But we believe that through the grace of the Lord Jesus Christ we shall be saved, even as they.",
+    "reference": "Acts 15:11",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "2-timothy-1-13",
+    "category": "Faith",
+    "verse": "Hold fast the form of sound words, which thou hast heard of me, in faith and love which is in Christ Jesus.",
+    "reference": "2 Timothy 1:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-118-4",
+    "category": "Comfort",
+    "verse": "Let them now that fear the LORD say, that his mercy endureth for ever.",
+    "reference": "Psalms 118:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-107",
+    "category": "Comfort",
+    "verse": "I am afflicted very much: quicken me, O LORD, according unto thy word.",
+    "reference": "Psalms 119:107",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-119-149",
+    "category": "Comfort",
+    "verse": "Hear my voice according unto thy lovingkindness: O LORD, quicken me according to thy judgment.",
+    "reference": "Psalms 119:149",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-159",
+    "category": "Comfort",
+    "verse": "Consider how I love thy precepts: quicken me, O LORD, according to thy lovingkindness.",
+    "reference": "Psalms 119:159",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-156",
+    "category": "Grace",
+    "verse": "Great are thy tender mercies, O LORD: quicken me according to thy judgments.",
+    "reference": "Psalms 119:156",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "1-peter-1-21",
+    "category": "Hope",
+    "verse": "Who by him do believe in God, that raised him up from the dead, and gave him glory; that your faith and hope might be in God.",
+    "reference": "1 Peter 1:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-36-6",
+    "category": "Grace",
+    "verse": "Thy righteousness is like the great mountains; thy judgments are a great deep: O LORD, thou preservest man and beast.",
+    "reference": "Psalms 36:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-4-5",
+    "category": "Grace",
+    "verse": "Offer the sacrifices of righteousness, and put your trust in the LORD.",
+    "reference": "Psalms 4:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-41-10",
+    "category": "Grace",
+    "verse": "But thou, O LORD, be merciful unto me, and raise me up, that I may requite them.",
+    "reference": "Psalms 41:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "jude-1-21",
+    "category": "Grace",
+    "verse": "Keep yourselves in the love of God, looking for the mercy of our Lord Jesus Christ unto eternal life.",
+    "reference": "Jude 1:21",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-96-13",
+    "category": "Grace",
+    "verse": "Before the LORD: for he cometh, for he cometh to judge the earth: he shall judge the world with righteousness, and the people with his truth.",
+    "reference": "Psalms 96:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-89-49",
+    "category": "Grace",
+    "verse": "Lord, where are thy former lovingkindnesses, which thou swarest unto David in thy truth?",
+    "reference": "Psalms 89:49",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-4",
+    "category": "Grace",
+    "verse": "So shalt thou find favour and good understanding in the sight of God and man.",
+    "reference": "Proverbs 3:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "proverbs-8-35",
+    "category": "Grace",
+    "verse": "For whoso findeth me findeth life, and shall obtain favour of the LORD.",
+    "reference": "Proverbs 8:35",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-103-13",
+    "category": "Grace",
+    "verse": "Like as a father pitieth his children, so the LORD pitieth them that fear him.",
+    "reference": "Psalms 103:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "psalms-107-43",
+    "category": "Grace",
+    "verse": "Whoso is wise, and will observe these things, even they shall understand the lovingkindness of the LORD.",
+    "reference": "Psalms 107:43",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-11-7",
+    "category": "Grace",
+    "verse": "For the righteous LORD loveth righteousness; his countenance doth behold the upright.",
+    "reference": "Psalms 11:7",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-118-19",
+    "category": "Grace",
+    "verse": "Open to me the gates of righteousness: I will go into them, and I will praise the LORD:",
+    "reference": "Psalms 118:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-20",
+    "category": "Grace",
+    "verse": "This gate of the LORD, into which the righteous shall enter.",
+    "reference": "Psalms 118:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "hebrews-3-6",
+    "category": "Hope",
+    "verse": "But Christ as a son over his own house; whose house are we, if we hold fast the confidence and the rejoicing of the hope firm unto the end.",
+    "reference": "Hebrews 3:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-143-10",
+    "category": "Grace",
+    "verse": "Teach me to do thy will; for thou art my God: thy spirit is good; lead me into the land of uprightness.",
+    "reference": "Psalms 143:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-18-30",
+    "category": "Faith",
+    "verse": "As for God, his way is perfect: the word of the LORD is tried: he is a buckler to all those that trust in him.",
+    "reference": "Psalms 18:30",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-22-8",
+    "category": "Faith",
+    "verse": "He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him.",
+    "reference": "Psalms 22:8",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-2",
+    "category": "Faith",
+    "verse": "O my God, I trust in thee: let me not be ashamed, let not mine enemies triumph over me.",
+    "reference": "Psalms 25:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-timothy-1-14",
+    "category": "Grace",
+    "verse": "And the grace of our Lord was exceeding abundant with faith and love which is in Christ Jesus.",
+    "reference": "1 Timothy 1:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-14",
+    "category": "Faith",
+    "verse": "But I trusted in thee, O LORD: I said, Thou art my God.",
+    "reference": "Psalms 31:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-33-4",
+    "category": "Faith",
+    "verse": "For the word of the LORD is right; and all his works are done in truth.",
+    "reference": "Psalms 33:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-34-22",
+    "category": "Faith",
+    "verse": "The LORD redeemeth the soul of his servants: and none of them that trust in him shall be desolate.",
+    "reference": "Psalms 34:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "acts-7-59",
+    "category": "Prayer",
+    "verse": "And they stoned Stephen, calling upon God, and saying, Lord Jesus, receive my spirit.",
+    "reference": "Acts 7:59",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "psalms-37-5",
+    "category": "Faith",
+    "verse": "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
+    "reference": "Psalms 37:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-40-4",
+    "category": "Faith",
+    "verse": "Blessed is that man that maketh the LORD his trust, and respecteth not the proud, nor such as turn aside to lies.",
+    "reference": "Psalms 40:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-55-23",
+    "category": "Faith",
+    "verse": "But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; but I will trust in thee.",
+    "reference": "Psalms 55:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-78-22",
+    "category": "Faith",
+    "verse": "Because they believed not in God, and trusted not in his salvation:",
+    "reference": "Psalms 78:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalms-89-5",
+    "category": "Faith",
+    "verse": "And the heavens shall praise thy wonders, O LORD: thy faithfulness also in the congregation of the saints.",
+    "reference": "Psalms 89:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-20-5",
+    "category": "Hope",
+    "verse": "We will rejoice in thy salvation, and in the name of our God we will set up our banners: the LORD fulfil all thy petitions.",
+    "reference": "Psalms 20:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-48-2",
+    "category": "Faith",
+    "verse": "For they call themselves of the holy city, and stay themselves upon the God of Israel; The LORD of hosts is his name.",
+    "reference": "Isaiah 48:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "proverbs-16-20",
+    "category": "Faith",
+    "verse": "He that handleth a matter wisely shall find good: and whoso trusteth in the LORD, happy is he.",
+    "reference": "Proverbs 16:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-116-1",
+    "category": "Love",
+    "verse": "I love the LORD, because he hath heard my voice and my supplications.",
+    "reference": "Psalms 116:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "prayer"
+    ]
+  },
+  {
+    "id": "isaiah-45-22",
+    "category": "Hope",
+    "verse": "Look unto me, and be ye saved, all the ends of the earth: for I am God, and there is none else.",
+    "reference": "Isaiah 45:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-87-2",
+    "category": "Love",
+    "verse": "The LORD loveth the gates of Zion more than all the dwellings of Jacob.",
+    "reference": "Psalms 87:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "psalms-55-14",
+    "category": "Love",
+    "verse": "We took sweet counsel together, and walked unto the house of God in company.",
+    "reference": "Psalms 55:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-10-17",
+    "category": "Love",
+    "verse": "Therefore doth my Father love me, because I lay down my life, that I might take it again.",
+    "reference": "John 10:17",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "life"
+    ]
+  },
+  {
+    "id": "john-14-23",
+    "category": "Love",
+    "verse": "Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him.",
+    "reference": "John 14:23",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-24",
+    "category": "Love",
+    "verse": "He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me.",
+    "reference": "John 14:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-31",
+    "category": "Love",
+    "verse": "But that the world may know that I love the Father; and as the Father gave me commandment, even so I do. Arise, let us go hence.",
+    "reference": "John 14:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-15-9",
+    "category": "Love",
+    "verse": "As the Father hath loved me, so have I loved you: continue ye in my love.",
+    "reference": "John 15:9",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-3-35",
+    "category": "Love",
+    "verse": "The Father loveth the Son, and hath given all things into his hand.",
+    "reference": "John 3:35",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-5-20",
+    "category": "Love",
+    "verse": "For the Father loveth the Son, and sheweth him all things that himself doeth: and he will shew him greater works than these, that ye may marvel.",
+    "reference": "John 5:20",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-8-42",
+    "category": "Love",
+    "verse": "Jesus said unto them, If God were your Father, ye would love me: for I proceeded forth and came from God; neither came I of myself, but he sent me.",
+    "reference": "John 8:42",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-10-37",
+    "category": "Love",
+    "verse": "He that loveth father or mother more than me is not worthy of me: and he that loveth son or daughter more than me is not worthy of me.",
+    "reference": "Matthew 10:37",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-12-18",
+    "category": "Love",
+    "verse": "Behold my servant, whom I have chosen; my beloved, in whom my soul is well pleased: I will put my spirit upon him, and he shall shew judgment to the Gentiles.",
+    "reference": "Matthew 12:18",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-19-19",
+    "category": "Love",
+    "verse": "Honour thy father and thy mother: and, Thou shalt love thy neighbour as thyself.",
+    "reference": "Matthew 19:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "2-peter-1-14",
+    "category": "Hope",
+    "verse": "Knowing that shortly I must put off this my tabernacle, even as our Lord Jesus Christ hath shewed me.",
+    "reference": "2 Peter 1:14",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-52-10",
+    "category": "Hope",
+    "verse": "The LORD hath made bare his holy arm in the eyes of all the nations; and all the ends of the earth shall see the salvation of our God.",
+    "reference": "Isaiah 52:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-89-15",
+    "category": "Prayer",
+    "verse": "Blessed is the people that know the joyful sound: they shall walk, O LORD, in the light of thy countenance.",
+    "reference": "Psalms 89:15",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-98-4",
+    "category": "Prayer",
+    "verse": "Make a joyful noise unto the LORD, all the earth: make a loud noise, and rejoice, and sing praise.",
+    "reference": "Psalms 98:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-5",
+    "category": "Hope",
+    "verse": "For we preach not ourselves, but Christ Jesus the Lord; and ourselves your servants for Jesus' sake.",
+    "reference": "2 Corinthians 4:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-106-25",
+    "category": "Prayer",
+    "verse": "But murmured in their tents, and hearkened not unto the voice of the LORD.",
+    "reference": "Psalms 106:25",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "romans-2-16",
+    "category": "Hope",
+    "verse": "In the day when God shall judge the secrets of men by Jesus Christ according to my gospel.",
+    "reference": "Romans 2:16",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-116-17",
+    "category": "Prayer",
+    "verse": "I will offer to thee the sacrifice of thanksgiving, and will call upon the name of the LORD.",
+    "reference": "Psalms 116:17",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-126-2",
+    "category": "Prayer",
+    "verse": "Then was our mouth filled with laughter, and our tongue with singing: then said they among the heathen, The LORD hath done great things for them.",
+    "reference": "Psalms 126:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-2",
+    "category": "Hope",
+    "verse": "By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.",
+    "reference": "Romans 5:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-130-2",
+    "category": "Prayer",
+    "verse": "Lord, hear my voice: let thine ears be attentive to the voice of my supplications.",
+    "reference": "Psalms 130:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-140-6",
+    "category": "Prayer",
+    "verse": "I said unto the LORD, Thou art my God: hear the voice of my supplications, O LORD.",
+    "reference": "Psalms 140:6",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-104-24",
+    "category": "Wisdom",
+    "verse": "O LORD, how manifold are thy works! in wisdom hast thou made them all: the earth is full of thy riches.",
+    "reference": "Psalms 104:24",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-105-19",
+    "category": "Wisdom",
+    "verse": "Until the time that his word came: the word of the LORD tried him.",
+    "reference": "Psalms 105:19",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-111-10",
+    "category": "Wisdom",
+    "verse": "The fear of the LORD is the beginning of wisdom: a good understanding have all they that do his commandments: his praise endureth for ever.",
+    "reference": "Psalms 111:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-27",
+    "category": "Wisdom",
+    "verse": "God is the LORD, which hath shewed us light: bind the sacrifice with cords, even unto the horns of the altar.",
+    "reference": "Psalms 118:27",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-119-31",
+    "category": "Wisdom",
+    "verse": "I have stuck unto thy testimonies: O LORD, put me not to shame.",
+    "reference": "Psalms 119:31",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-64-10",
+    "category": "Hope",
+    "verse": "The righteous shall be glad in the LORD, and shall trust in him; and all the upright in heart shall glory.",
+    "reference": "Psalms 64:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-56-4",
+    "category": "Hope",
+    "verse": "In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+    "reference": "Psalms 56:4",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-26-13",
+    "category": "Hope",
+    "verse": "O LORD our God, other lords beside thee have had dominion over us: but by thee only will we make mention of thy name.",
+    "reference": "Isaiah 26:13",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-100-2",
+    "category": "Joy",
+    "verse": "Serve the LORD with gladness: come before his presence with singing.",
+    "reference": "Psalms 100:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-5",
+    "category": "Hope",
+    "verse": "And this they did, not as we hoped, but first gave their own selves to the Lord, and unto us by the will of God.",
+    "reference": "2 Corinthians 8:5",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-103-2",
+    "category": "Joy",
+    "verse": "Bless the LORD, O my soul, and forget not all his benefits:",
+    "reference": "Psalms 103:2",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "psalms-103-22",
+    "category": "Joy",
+    "verse": "Bless the LORD, all his works in all places of his dominion: bless the LORD, O my soul.",
+    "reference": "Psalms 103:22",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "deuteronomy-13-3",
+    "category": "Love",
+    "verse": "Thou shalt not hearken unto the words of that prophet, or that dreamer of dreams: for the LORD your God proveth you, to know whether ye love the LORD your God with all your heart and with all your soul.",
+    "reference": "Deuteronomy 13:3",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "isaiah-43-1",
+    "category": "Courage",
+    "verse": "But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine.",
+    "reference": "Isaiah 43:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "fear",
+      "strength",
+      "life"
+    ]
+  },
+  {
+    "id": "1-samuel-2-1",
+    "category": "Joy",
+    "verse": "And Hannah prayed, and said, My heart rejoiceth in the LORD, mine horn is exalted in the LORD: my mouth is enlarged over mine enemies; because I rejoice in thy salvation.",
+    "reference": "1 Samuel 2:1",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-96-10",
+    "category": "Courage",
+    "verse": "Say among the heathen that the LORD reigneth: the world also shall be established that it shall not be moved: he shall judge the people righteously.",
+    "reference": "Psalms 96:10",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "courage",
+      "fear",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-33",
+    "category": "Life",
+    "verse": "I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being.",
+    "reference": "Psalms 104:33",
+    "translation": "King James Version (KJV)",
+    "tags": [
+      "life",
+      "light",
+      "eternal-life"
+    ]
+  }
+]

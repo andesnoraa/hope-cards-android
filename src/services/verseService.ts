@@ -1,5 +1,6 @@
 import bbeVerses from "../data/verses/en-bbe.json";
 import bsbVerses from "../data/verses/en-bsb.json";
+import kjvVerses from "../data/verses/en-kjv.json";
 import webVerses from "../data/verses/en-web.json";
 
 import type { Verse } from "../types/verse";
@@ -32,6 +33,14 @@ const translationRegistry = {
     license: "Public domain",
     name: "Bible in Basic English",
     verses: bbeVerses as Verse[],
+  },
+  kjv: {
+    attribution: "King James Version translators",
+    language: "en",
+    label: "KJV",
+    license: "Public domain",
+    name: "King James Version",
+    verses: kjvVerses as Verse[],
   },
   web: {
     attribution: "World English Bible project",
