@@ -149,7 +149,7 @@ function SectionTitle({
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { paddingHorizontal: 24, paddingTop: 14, paddingBottom: 42 },
+  content: { paddingHorizontal: 24, paddingTop: 14, paddingBottom: 16 },
   hero: { alignItems: "center", paddingTop: 24, paddingBottom: 30, paddingHorizontal: 8 },
   title: { fontSize: 36, lineHeight: 43, fontWeight: "700", letterSpacing: -0.7, textAlign: "center" },
   tagline: { marginTop: 9, maxWidth: 300, fontSize: 17, lineHeight: 25, fontWeight: "400", textAlign: "center" },
