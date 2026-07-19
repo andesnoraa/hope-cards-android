@@ -352,7 +352,7 @@ export default function DailyHopeScreen() {
             { color: theme.text },
           ]}
         >
-          Daily Hope is Premium
+          Daily encouragement, every day
         </Text>
 
         <Text
@@ -364,9 +364,9 @@ export default function DailyHopeScreen() {
             },
           ]}
         >
-          Unlock Premium to read a fresh
-          Daily Hope verse each day and set
-          verse reminders.
+          Daily Hope is included with Premium.
+          Receive a fresh verse each day and set
+          a gentle reminder if you choose.
         </Text>
 
         <Pressable

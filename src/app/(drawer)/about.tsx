@@ -45,7 +45,7 @@ export default function AboutScreen() {
     >
       <View style={styles.hero}>
         <Text style={[styles.title, { color: theme.text }]}>Hope Cards</Text>
-        <Text style={[styles.tagline, { color: theme.textSecondary }]}>Discover, save, and share encouraging Bible verses.</Text>
+        <Text style={[styles.tagline, { color: theme.textSecondary }]}>Discover timely encouragement in Scripture, save meaningful verses, and share hope with others.</Text>
         <Text style={[styles.version, { color: theme.textTertiary }]}>Version {APP_VERSION}</Text>
       </View>
 
@@ -88,17 +88,21 @@ export default function AboutScreen() {
         </View>
       </View>
 
-      <View style={[styles.section, sectionStyle]}>
+      <View style={[styles.section, styles.creditsSection, sectionStyle]}>
         <SectionTitle
           title="Credits"
           text={theme.text}
         />
 
         <View style={styles.creditList}>
-          {TRANSLATION_OPTIONS.map((translation) => (
+          {TRANSLATION_OPTIONS.map((translation, index) => (
             <View
               key={translation.id}
-              style={[styles.creditRow, { borderBottomColor: theme.divider }]}
+              style={[
+                styles.creditRow,
+                { borderBottomColor: theme.divider },
+                index === TRANSLATION_OPTIONS.length - 1 && styles.lastCreditRow,
+              ]}
             >
               <Text
                 adjustsFontSizeToFit
@@ -149,12 +153,13 @@ function SectionTitle({
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { paddingHorizontal: 24, paddingTop: 14, paddingBottom: 16 },
-  hero: { alignItems: "center", paddingTop: 24, paddingBottom: 30, paddingHorizontal: 8 },
+  content: { paddingHorizontal: 24, paddingTop: 14, paddingBottom: 28 },
+  hero: { alignItems: "center", paddingTop: 12, paddingBottom: 30, paddingHorizontal: 8 },
   title: { fontSize: 36, lineHeight: 43, fontWeight: "700", letterSpacing: -0.7, textAlign: "center" },
   tagline: { marginTop: 9, maxWidth: 300, fontSize: 17, lineHeight: 25, fontWeight: "400", textAlign: "center" },
   version: { marginTop: 14, fontSize: 13, lineHeight: 18, fontWeight: "500" },
   section: { borderTopWidth: StyleSheet.hairlineWidth, paddingVertical: 32 },
+  creditsSection: { paddingBottom: 20 },
   sectionTitleRow: { flexDirection: "row", alignItems: "center", marginBottom: 24 },
   sectionTitle: { flex: 1, fontSize: 22, lineHeight: 28, fontWeight: "700", letterSpacing: -0.35 },
   featureGrid: { flexDirection: "row", flexWrap: "wrap", rowGap: 21, columnGap: 16 },
@@ -168,6 +173,7 @@ const styles = StyleSheet.create({
   purposeVision: { marginTop: 12, fontSize: 14, lineHeight: 21, fontWeight: "400" },
   creditList: {},
   creditRow: { minHeight: 58, flexDirection: "row", alignItems: "flex-start", gap: 12, borderBottomWidth: StyleSheet.hairlineWidth, paddingVertical: 10 },
+  lastCreditRow: { borderBottomWidth: 0 },
   creditCode: { width: 52, fontSize: 14, lineHeight: 20, fontWeight: "700", letterSpacing: 0.2 },
   creditCopy: { flex: 1, gap: 1 },
   creditDetails: { fontSize: 14, lineHeight: 20, fontWeight: "500" },

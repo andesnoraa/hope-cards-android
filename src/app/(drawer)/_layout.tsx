@@ -13,8 +13,6 @@ export default function DrawerLayout() {
       screenOptions={{
         headerShown: true,
 
-        headerTitle: "Hope Cards",
-
         headerTitleStyle: {
           fontSize: 24,
           fontWeight: "700",

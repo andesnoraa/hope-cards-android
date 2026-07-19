@@ -173,7 +173,7 @@ async function scheduleDailyHopeNotification({
 
     await Notifications.scheduleNotificationAsync({
         content: {
-            title: "Today's Hope is ready",
+            title: "Your Daily Hope awaits",
             body: "Take a quiet moment with today's verse.",
             sound: true,
             data: {

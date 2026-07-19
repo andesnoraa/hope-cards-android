@@ -773,15 +773,6 @@ Your current favorites and settings will be replaced.`,
       <View style={styles.header}>
         <Text
           style={[
-            styles.title,
-            { color: theme.text },
-          ]}
-        >
-          Settings
-        </Text>
-
-        <Text
-          style={[
             styles.subtitle,
             {
               color:
@@ -2161,17 +2152,10 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    marginBottom: 36,
-  },
-
-  title: {
-    fontSize: 34,
-    fontWeight: "700",
-    color: "#1A2747",
+    marginBottom: 28,
   },
 
   subtitle: {
-    marginTop: 12,
     fontSize: 16,
     lineHeight: 28,
     color: "#777777",
