@@ -108,7 +108,7 @@ function PlanMark({
           ? "star"
           : "checkmark-circle"
       }
-      size={premium ? 18 : 20}
+      size={premium ? 16 : 18}
       color={
         premium
           ? "#111111"
@@ -585,19 +585,19 @@ const styles = StyleSheet.create({
   },
 
   compareCard: {
-    marginTop: 12,
+    marginTop: 8,
     borderWidth: 1,
-    borderRadius: 30,
+    borderRadius: 24,
     overflow: "hidden",
   },
 
   compareHeader: {
-    minHeight: 54,
+    minHeight: 46,
     flexDirection: "row",
   },
 
   compareRow: {
-    minHeight: 64,
+    minHeight: 54,
     flexDirection: "row",
   },
 
@@ -626,7 +626,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     justifyContent: "center",
     paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingVertical: 8,
   },
 
   benefitText: {
@@ -640,7 +640,7 @@ const styles = StyleSheet.create({
   },
 
   emptyMark: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "700",
   },
 
