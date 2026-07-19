@@ -1533,7 +1533,7 @@ Your current favorites and settings will be replaced.`,
                     { color: theme.textSecondary },
                   ]}
                 >
-                  Choose the Bible text used throughout Hope Cards.
+                  Select your preferred Bible translation.
                 </Text>
               </View>
 
