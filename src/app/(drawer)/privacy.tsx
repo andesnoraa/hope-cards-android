@@ -1,297 +1,201 @@
 import {
   Linking,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from "react-native";
+
 import { useAppTheme } from "../../theme/appTheme";
+
+const PRIVACY_POLICY_URL =
+  "https://hope-cards-web.vercel.app/privacy";
+const REVENUECAT_PRIVACY_URL =
+  "https://www.revenuecat.com/privacy";
+const GOOGLE_PRIVACY_URL =
+  "https://policies.google.com/privacy";
+
+type PolicySectionProps = {
+  title: string;
+  children: React.ReactNode;
+  textColor: string;
+  dividerColor: string;
+};
 
 export default function PrivacyPolicyScreen() {
   const { theme } = useAppTheme();
 
-  function openPrivacyPolicy() {
-    Linking.openURL(
-      "https://hope-cards-web.vercel.app/privacy"
-    );
-  }
-
   return (
     <ScrollView
-      style={[
-        styles.container,
-        {
-          backgroundColor:
-            theme.background,
-        },
-      ]}
+      style={[styles.container, { backgroundColor: theme.background }]}
       contentContainerStyle={styles.content}
+      contentInsetAdjustmentBehavior="automatic"
       showsVerticalScrollIndicator={false}
     >
-      <Text
-        style={[
-          styles.title,
-          { color: theme.text },
-        ]}
+      <View style={styles.hero}>
+        <Text style={[styles.title, { color: theme.text }]}>Your privacy matters</Text>
+        <Text style={[styles.summary, { color: theme.textSecondary }]}>Hope Cards is designed to keep your verses and preferences on your device. It does not require an account and does not use advertising or analytics.</Text>
+        <Text style={[styles.updated, { color: theme.textTertiary }]}>Effective July 19, 2026</Text>
+      </View>
+
+      <PolicySection
+        title="Information We Collect"
+        textColor={theme.text}
+        dividerColor={theme.divider}
       >
-        Privacy Policy
-      </Text>
+        <Body color={theme.cardText}>Hope Cards does not ask for your name, email address, phone number, contacts, precise location, photos, or microphone access.</Body>
+        <Body color={theme.cardText}>To provide and verify premium access, limited purchase and technical information is processed as described under “Premium Purchases.”</Body>
+      </PolicySection>
 
-      <Text
-        style={[
-          styles.updated,
-          {
-            color: theme.textSecondary,
-          },
-        ]}
+      <PolicySection
+        title="Data Stored on Your Device"
+        textColor={theme.text}
+        dividerColor={theme.divider}
       >
-        Last updated: July 2026
-      </Text>
+        <Body color={theme.cardText}>Your favorites, selected Bible translation, theme, reminder time, music preference, haptic preference, and other app settings are stored locally on your device.</Body>
+        <Body color={theme.cardText}>Removing the app may remove this data unless you have exported a backup.</Body>
+      </PolicySection>
 
-      <Text
-        style={[
-          styles.description,
-          { color: theme.cardText },
-        ]}
+      <PolicySection
+        title="Reminders and Permissions"
+        textColor={theme.text}
+        dividerColor={theme.divider}
       >
-        Hope Cards respects your privacy.
-        We are committed to protecting your
-        personal information and providing
-        a safe, secure experience.
-      </Text>
+        <Body color={theme.cardText}>If you enable Daily Hope reminders, the app requests notification permission and schedules reminders on your device. Hope Cards does not use your contacts, location, camera, photos, or microphone.</Body>
+        <Body color={theme.cardText}>Background music is included with the app and does not require microphone access.</Body>
+      </PolicySection>
 
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Information We Collect
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          Hope Cards does not collect,
-          store, or transmit personal
-          information such as your name,
-          email address, phone number,
-          location, contacts, or device
-          identifiers.
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Local Storage
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          Favorites and app preferences,
-          including settings such as haptic
-          feedback and the Draw Card button,
-          are stored only on your device
-          using local storage. This
-          information never leaves your
-          device.
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Sharing Bible Verses
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          When you choose to share a Bible
-          verse, Hope Cards uses your
-          device's built-in sharing menu.
-          The app does not receive, store,
-          or track any information about
-          what you share or whom you share
-          it with.
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Third-Party Services
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          Hope Cards does not use
-          advertising services, analytics
-          platforms, or third-party SDKs
-          that collect personal
-          information.
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Children's Privacy
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          Hope Cards is suitable for users
-          of all ages and does not
-          knowingly collect personal
-          information from children or
-          adults.
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Changes to This Privacy Policy
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          We may update this Privacy Policy
-          from time to time. Any changes
-          will be posted on this page and
-          on our website.
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Privacy Policy Website
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          A copy of this Privacy Policy is
-          also available on our website:
-        </Text>
-
-        <TouchableOpacity
-          onPress={openPrivacyPolicy}
-          activeOpacity={0.7}
-        >
-          <Text
-            style={[
-              styles.link,
-              { color: theme.accent },
-            ]}
-          >
-            https://hope-cards-web.vercel.app/privacy
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            { color: theme.text },
-          ]}
-        >
-          Contact
-        </Text>
-
-        <Text style={[styles.body, { color: theme.cardText }]}>
-          If you have any questions about
-          this Privacy Policy, please visit
-          our website or contact the
-          developer through the Hope Cards
-          website.
-        </Text>
-      </View>
-
-      <Text
-        style={[
-          styles.footer,
-          { color: theme.textTertiary },
-        ]}
+      <PolicySection
+        title="Sharing and Backups"
+        textColor={theme.text}
+        dividerColor={theme.divider}
       >
-        © 2026 Hope Cards. All rights
-        reserved.
-      </Text>
+        <Body color={theme.cardText}>Sharing a verse or backup opens your device’s sharing controls. Hope Cards does not record who you share with or which service you choose.</Body>
+        <Body color={theme.cardText}>Backup files contain your favorites and app settings. They are created locally. If you send or save a backup through another app or service, that provider’s privacy practices apply.</Body>
+      </PolicySection>
+
+      <PolicySection
+        title="Premium Purchases"
+        textColor={theme.text}
+        dividerColor={theme.divider}
+      >
+        <Body color={theme.cardText}>Premium access is processed by Google Play and managed with RevenueCat. These services may process an anonymous app identifier, purchase history, subscription status, purchase tokens, and basic device or app information to offer purchases, verify access, and restore purchases.</Body>
+        <Body color={theme.cardText}>Hope Cards does not receive or store your full payment card details.</Body>
+        <PolicyLink
+          label="RevenueCat Privacy Policy"
+          url={REVENUECAT_PRIVACY_URL}
+          color={theme.accent}
+        />
+        <PolicyLink
+          label="Google Privacy Policy"
+          url={GOOGLE_PRIVACY_URL}
+          color={theme.accent}
+        />
+      </PolicySection>
+
+      <PolicySection
+        title="Analytics and Advertising"
+        textColor={theme.text}
+        dividerColor={theme.divider}
+      >
+        <Body color={theme.cardText}>Hope Cards does not include advertising or analytics services and does not sell your personal information.</Body>
+      </PolicySection>
+
+      <PolicySection
+        title="Children’s Privacy"
+        textColor={theme.text}
+        dividerColor={theme.divider}
+      >
+        <Body color={theme.cardText}>Hope Cards is intended for a general audience. We do not knowingly collect personal information directly from children.</Body>
+      </PolicySection>
+
+      <PolicySection
+        title="Policy Updates"
+        textColor={theme.text}
+        dividerColor={theme.divider}
+      >
+        <Body color={theme.cardText}>We may update this policy when the app or its services change. The effective date above will show when the policy was last revised.</Body>
+      </PolicySection>
+
+      <PolicySection
+        title="Contact"
+        textColor={theme.text}
+        dividerColor={theme.divider}
+      >
+        <Body color={theme.cardText}>For privacy questions, corrections, or requests, contact the developer through the Hope Cards website.</Body>
+        <PolicyLink
+          label="View the privacy policy online"
+          url={PRIVACY_POLICY_URL}
+          color={theme.accent}
+        />
+      </PolicySection>
+
+      <Text style={[styles.footer, { color: theme.textTertiary }]}>© 2026 Hope Cards · All rights reserved</Text>
     </ScrollView>
   );
 }
 
+function PolicySection({
+  title,
+  children,
+  textColor,
+  dividerColor,
+}: PolicySectionProps) {
+  return (
+    <View style={[styles.section, { borderTopColor: dividerColor }]}>
+      <Text style={[styles.sectionTitle, { color: textColor }]}>{title}</Text>
+      <View style={styles.sectionContent}>{children}</View>
+    </View>
+  );
+}
+
+function Body({
+  children,
+  color,
+}: {
+  children: React.ReactNode;
+  color: string;
+}) {
+  return <Text style={[styles.body, { color }]}>{children}</Text>;
+}
+
+function PolicyLink({
+  label,
+  url,
+  color,
+}: {
+  label: string;
+  url: string;
+  color: string;
+}) {
+  return (
+    <Pressable
+      accessibilityRole="link"
+      accessibilityLabel={label}
+      onPress={() => void Linking.openURL(url)}
+      style={({ pressed }) => [styles.linkButton, pressed && styles.linkPressed]}
+    >
+      <Text style={[styles.link, { color }]}>{label}</Text>
+      <Text style={[styles.linkArrow, { color }]} accessibilityElementsHidden>↗</Text>
+    </Pressable>
+  );
+}
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
-  content: {
-    padding: 24,
-    paddingBottom: 40,
-  },
-
-  title: {
-    fontSize: 34,
-    fontWeight: "700",
-  },
-
-  updated: {
-    marginTop: 6,
-    fontSize: 16,
-  },
-
-  description: {
-    marginTop: 24,
-    fontSize: 18,
-    lineHeight: 30,
-  },
-
-  section: {
-    marginTop: 34,
-  },
-
-  sectionTitle: {
-    fontSize: 22,
-    fontWeight: "700",
-    marginBottom: 14,
-  },
-
-  body: {
-    fontSize: 17,
-    lineHeight: 28,
-  },
-
-  link: {
-    marginTop: 12,
-    fontSize: 17,
-    fontWeight: "600",
-    textDecorationLine: "underline",
-  },
-
-  footer: {
-    marginTop: 48,
-    textAlign: "center",
-    fontSize: 15,
-  },
+  container: { flex: 1 },
+  content: { paddingHorizontal: 24, paddingTop: 14, paddingBottom: 42 },
+  hero: { paddingTop: 18, paddingBottom: 30 },
+  title: { fontSize: 32, lineHeight: 38, fontWeight: "700", letterSpacing: -0.6 },
+  summary: { marginTop: 12, fontSize: 17, lineHeight: 26 },
+  updated: { marginTop: 14, fontSize: 13, lineHeight: 18, fontWeight: "500" },
+  section: { borderTopWidth: StyleSheet.hairlineWidth, paddingVertical: 32 },
+  sectionTitle: { fontSize: 22, lineHeight: 28, fontWeight: "700", letterSpacing: -0.35 },
+  sectionContent: { marginTop: 14, gap: 12 },
+  body: { fontSize: 15, lineHeight: 23 },
+  linkButton: { minHeight: 32, flexDirection: "row", alignItems: "center", alignSelf: "flex-start", gap: 6 },
+  linkPressed: { opacity: 0.55 },
+  link: { fontSize: 15, lineHeight: 22, fontWeight: "600" },
+  linkArrow: { fontSize: 14, lineHeight: 20, fontWeight: "600" },
+  footer: { paddingTop: 4, textAlign: "center", fontSize: 11, lineHeight: 16 },
 });

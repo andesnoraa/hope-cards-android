@@ -167,29 +167,41 @@ export default function DailyHopeScreen() {
     };
   }, []);
 
-  useEffect(() => {
-    async function load() {
-      if (!isPremium) {
-        return;
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
+
+      async function load() {
+        if (!isPremium) {
+          return;
+        }
+
+        const todayVerse =
+          await getDailyHope();
+
+        if (!mounted) {
+          return;
+        }
+
+        setVerse(todayVerse);
+
+        const saved =
+          await isFavorite(todayVerse.id);
+
+        setFavorite(saved);
+
+        setTimeout(() => {
+          lightImpact();
+        }, 1300);
       }
 
-      const todayVerse =
-        await getDailyHope();
+      load();
 
-      setVerse(todayVerse);
-
-      const saved =
-        await isFavorite(todayVerse.id);
-
-      setFavorite(saved);
-
-      setTimeout(() => {
-        lightImpact();
-      }, 1300);
-    }
-
-    load();
-  }, [isPremium]);
+      return () => {
+        mounted = false;
+      };
+    }, [isPremium])
+  );
 
   useEffect(() => {
     if (!verse) {

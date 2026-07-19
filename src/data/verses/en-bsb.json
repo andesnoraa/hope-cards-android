@@ -1,0 +1,4551 @@
+[
+  {
+    "id": "john-3-16",
+    "category": "Love",
+    "verse": "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life.",
+    "reference": "John 3:16",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "salvation",
+      "eternal-life"
+    ]
+  },
+  {
+    "id": "matthew-11-28",
+    "category": "Comfort",
+    "verse": "Come to Me, all you who are weary and burdened, and I will give you rest.",
+    "reference": "Matthew 11:28",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "rest",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-14-27",
+    "category": "Peace",
+    "verse": "Peace I leave with you; My peace I give to you. I do not give to you as the world gives. Do not let your hearts be troubled; do not be afraid.",
+    "reference": "John 14:27",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "comfort",
+      "fear"
+    ]
+  },
+  {
+    "id": "isaiah-41-10",
+    "category": "Hope",
+    "verse": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My righteous right hand.",
+    "reference": "Isaiah 41:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "strength",
+      "comfort"
+    ]
+  },
+  {
+    "id": "philippians-4-13",
+    "category": "Strength",
+    "verse": "I can do all things through Christ who gives me strength.",
+    "reference": "Philippians 4:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "faith",
+      "confidence"
+    ]
+  },
+  {
+    "id": "philippians-4-6",
+    "category": "Prayer",
+    "verse": "Be anxious for nothing, but in everything, by prayer and petition, with thanksgiving, present your requests to God.",
+    "reference": "Philippians 4:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "anxiety",
+      "peace"
+    ]
+  },
+  {
+    "id": "romans-8-28",
+    "category": "Hope",
+    "verse": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose.",
+    "reference": "Romans 8:28",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "purpose",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-5-6",
+    "category": "Trust",
+    "verse": "Trust in the LORD with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He will make your paths straight.",
+    "reference": "Proverbs 3:5-6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "wisdom",
+      "guidance"
+    ]
+  },
+  {
+    "id": "psalm-46-1",
+    "category": "Peace",
+    "verse": "God is our refuge and strength, an ever-present help in times of trouble.",
+    "reference": "Psalm 46:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "refuge",
+      "help"
+    ]
+  },
+  {
+    "id": "joshua-1-9",
+    "category": "Courage",
+    "verse": "Have I not commanded you to be strong and courageous? Do not be afraid; do not be discouraged, for the LORD your God is with you wherever you go.”",
+    "reference": "Joshua 1:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-40-31",
+    "category": "Strength",
+    "verse": "But those who wait upon the LORD will renew their strength; they will mount up with wings like eagles; they will run and not grow weary, they will walk and not faint.",
+    "reference": "Isaiah 40:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "hope",
+      "endurance"
+    ]
+  },
+  {
+    "id": "psalm-34-18",
+    "category": "Comfort",
+    "verse": "The LORD is near to the brokenhearted; He saves the contrite in spirit.",
+    "reference": "Psalm 34:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "healing",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-55-22",
+    "category": "Trust",
+    "verse": "Cast your burden upon the LORD and He will sustain you; He will never let the righteous be shaken.",
+    "reference": "Psalm 55:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "comfort",
+      "burden"
+    ]
+  },
+  {
+    "id": "jeremiah-29-11",
+    "category": "Hope",
+    "verse": "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, to give you a future and a hope.",
+    "reference": "Jeremiah 29:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "future",
+      "promise"
+    ]
+  },
+  {
+    "id": "2-corinthians-5-7",
+    "category": "Faith",
+    "verse": "For we walk by faith, not by sight.",
+    "reference": "2 Corinthians 5:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "trust",
+      "walk"
+    ]
+  },
+  {
+    "id": "2-corinthians-12-9",
+    "category": "Grace",
+    "verse": "But He said to me, “My grace is sufficient for you, for My power is perfected in weakness.” Therefore I will boast all the more gladly in my weaknesses, so that the power of Christ may rest on me.",
+    "reference": "2 Corinthians 12:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "strength",
+      "weakness"
+    ]
+  },
+  {
+    "id": "1-peter-5-7",
+    "category": "Trust",
+    "verse": "Cast all your anxiety on Him, because He cares for you.",
+    "reference": "1 Peter 5:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "care",
+      "comfort"
+    ]
+  },
+  {
+    "id": "1-john-4-19",
+    "category": "Love",
+    "verse": "We love because He first loved us.",
+    "reference": "1 John 4:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "grace"
+    ]
+  },
+  {
+    "id": "romans-8-38-39",
+    "category": "Hope",
+    "verse": "For I am convinced that neither death nor life, neither angels nor principalities, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+    "reference": "Romans 8:38-39",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "love",
+      "assurance"
+    ]
+  },
+  {
+    "id": "revelation-21-4",
+    "category": "Hope",
+    "verse": "‘He will wipe away every tear from their eyes,’ and there will be no more death or mourning or crying or pain, for the former things have passed away.”",
+    "reference": "Revelation 21:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "heaven",
+      "comfort"
+    ]
+  },
+  {
+    "id": "isaiah-26-3",
+    "category": "Peace",
+    "verse": "You will keep in perfect peace the steadfast of mind, because he trusts in You.",
+    "reference": "Isaiah 26:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "trust",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-23-1",
+    "category": "Hope",
+    "verse": "The LORD is my shepherd; I shall not want.",
+    "reference": "Psalm 23:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "shepherd",
+      "provision"
+    ]
+  },
+  {
+    "id": "psalm-23-4",
+    "category": "Comfort",
+    "verse": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me.",
+    "reference": "Psalm 23:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "fear",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-37-5",
+    "category": "Trust",
+    "verse": "Commit your way to the LORD; trust in Him, and He will do it.",
+    "reference": "Psalm 37:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "guidance",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-37-4",
+    "category": "Joy",
+    "verse": "Delight yourself in the LORD, and He will give you the desires of your heart.",
+    "reference": "Psalm 37:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "trust",
+      "delight"
+    ]
+  },
+  {
+    "id": "psalm-27-1",
+    "category": "Strength",
+    "verse": "The LORD is my light and my salvation— whom shall I fear? The LORD is the stronghold of my life— whom shall I dread?",
+    "reference": "Psalm 27:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "courage",
+      "fear"
+    ]
+  },
+  {
+    "id": "jeremiah-33-3",
+    "category": "Prayer",
+    "verse": "Call to Me, and I will answer and show you great and unsearchable things you do not know.",
+    "reference": "Jeremiah 33:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "promise",
+      "guidance"
+    ]
+  },
+  {
+    "id": "james-1-5",
+    "category": "Wisdom",
+    "verse": "Now if any of you lacks wisdom, he should ask God, who gives generously to all without finding fault, and it will be given to him.",
+    "reference": "James 1:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "prayer",
+      "guidance"
+    ]
+  },
+  {
+    "id": "hebrews-4-16",
+    "category": "Grace",
+    "verse": "Let us then approach the throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
+    "reference": "Hebrews 4:16",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "prayer",
+      "mercy"
+    ]
+  },
+  {
+    "id": "hebrews-13-5",
+    "category": "Hope",
+    "verse": "Keep your lives free from the love of money and be content with what you have, for God has said: “Never will I leave you, never will I forsake you.”",
+    "reference": "Hebrews 13:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "hebrews-11-1",
+    "category": "Faith",
+    "verse": "Now faith is the assurance of what we hope for and the certainty of what we do not see.",
+    "reference": "Hebrews 11:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "hope",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-john-3-1",
+    "category": "Love",
+    "verse": "Behold what manner of love the Father has given to us, that we should be called children of God. And that is what we are! The reason the world does not know us is that it did not know Him.",
+    "reference": "1 John 3:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "identity",
+      "children-of-god"
+    ]
+  },
+  {
+    "id": "john-16-33",
+    "category": "Hope",
+    "verse": "I have told you these things so that in Me you may have peace. In the world you will have tribulation. But take courage; I have overcome the world!”",
+    "reference": "John 16:33",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "peace",
+      "victory"
+    ]
+  },
+  {
+    "id": "john-14-1",
+    "category": "Peace",
+    "verse": "“Do not let your hearts be troubled. You believe in God; believe in Me as well.",
+    "reference": "John 14:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "faith",
+      "comfort"
+    ]
+  },
+  {
+    "id": "john-10-10",
+    "category": "Life",
+    "verse": "The thief comes only to steal and kill and destroy. I have come that they may have life, and have it in all its fullness.",
+    "reference": "John 10:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "life",
+      "hope",
+      "jesus"
+    ]
+  },
+  {
+    "id": "romans-8-31",
+    "category": "Hope",
+    "verse": "What then shall we say in response to these things? If God is for us, who can be against us?",
+    "reference": "Romans 8:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "confidence",
+      "victory"
+    ]
+  },
+  {
+    "id": "romans-8-1",
+    "category": "Freedom",
+    "verse": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
+    "reference": "Romans 8:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "freedom"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-17",
+    "category": "Prayer",
+    "verse": "Pray without ceasing.",
+    "reference": "1 Thessalonians 5:17",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "devotion"
+    ]
+  },
+  {
+    "id": "philippians-4-4",
+    "category": "Joy",
+    "verse": "Rejoice in the Lord always. I will say it again: Rejoice!",
+    "reference": "Philippians 4:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "praise",
+      "faith"
+    ]
+  },
+  {
+    "id": "philippians-4-7",
+    "category": "Peace",
+    "verse": "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+    "reference": "Philippians 4:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "heart",
+      "prayer"
+    ]
+  },
+  {
+    "id": "genesis-28-15",
+    "category": "Comfort",
+    "verse": "Look, I am with you, and I will watch over you wherever you go, and I will bring you back to this land. For I will not leave you until I have done what I have promised you.”",
+    "reference": "Genesis 28:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "exodus-14-14",
+    "category": "Peace",
+    "verse": "The LORD will fight for you; you need only to be still.”",
+    "reference": "Exodus 14:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "trust",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-6",
+    "category": "Courage",
+    "verse": "Be strong and courageous; do not be afraid or terrified of them, for it is the LORD your God who goes with you; He will never leave you nor forsake you.”",
+    "reference": "Deuteronomy 31:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-8",
+    "category": "Courage",
+    "verse": "The LORD Himself goes before you; He will be with you. He will never leave you nor forsake you. Do not be afraid or discouraged.”",
+    "reference": "Deuteronomy 31:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "guidance",
+      "fear"
+    ]
+  },
+  {
+    "id": "psalm-4-8",
+    "category": "Peace",
+    "verse": "I will lie down and sleep in peace, for You alone, O LORD, make me dwell in safety.",
+    "reference": "Psalm 4:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "safety"
+    ]
+  },
+  {
+    "id": "1-corinthians-6-11",
+    "category": "Hope",
+    "verse": "And that is what some of you were. But you were washed, you were sanctified, you were justified, in the name of the Lord Jesus Christ and by the Spirit of our God.",
+    "reference": "1 Corinthians 6:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-16-8",
+    "category": "Trust",
+    "verse": "I have set the LORD always before me. Because He is at my right hand, I will not be shaken.",
+    "reference": "Psalm 16:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "stability",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-18-2",
+    "category": "Strength",
+    "verse": "The LORD is my rock, my fortress, and my deliverer. My God is my rock, in whom I take refuge, my shield, and the horn of my salvation, my stronghold.",
+    "reference": "Psalm 18:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "refuge",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-19-14",
+    "category": "Prayer",
+    "verse": "May the words of my mouth and the meditation of my heart be pleasing in Your sight, O LORD, my Rock and my Redeemer.",
+    "reference": "Psalm 19:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "heart",
+      "words"
+    ]
+  },
+  {
+    "id": "psalm-27-14",
+    "category": "Hope",
+    "verse": "Wait patiently for the LORD; be strong and courageous. Wait patiently for the LORD!",
+    "reference": "Psalm 27:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "waiting",
+      "courage"
+    ]
+  },
+  {
+    "id": "psalm-31-24",
+    "category": "Courage",
+    "verse": "Be strong and courageous, all you who hope in the LORD.",
+    "reference": "Psalm 31:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "hope",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalm-32-8",
+    "category": "Wisdom",
+    "verse": "I will instruct you and teach you the way you should go; I will give you counsel and watch over you.",
+    "reference": "Psalm 32:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "teaching"
+    ]
+  },
+  {
+    "id": "psalm-34-4",
+    "category": "Comfort",
+    "verse": "I sought the LORD, and He answered me; He delivered me from all my fears.",
+    "reference": "Psalm 34:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "fear",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-46-10",
+    "category": "Peace",
+    "verse": "“Be still and know that I am God; I will be exalted among the nations, I will be exalted over the earth.”",
+    "reference": "Psalm 46:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "stillness",
+      "god"
+    ]
+  },
+  {
+    "id": "psalm-56-3",
+    "category": "Trust",
+    "verse": "When I am afraid, I put my trust in You.",
+    "reference": "Psalm 56:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "fear",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-73-26",
+    "category": "Strength",
+    "verse": "My flesh and my heart may fail, but God is the strength of my heart and my portion forever.",
+    "reference": "Psalm 73:26",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "heart",
+      "god"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-12",
+    "category": "Grace",
+    "verse": "so that the name of our Lord Jesus will be glorified in you, and you in Him, according to the grace of our God and of the Lord Jesus Christ.",
+    "reference": "2 Thessalonians 1:12",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-94-19",
+    "category": "Comfort",
+    "verse": "When anxiety overwhelms me, Your consolation delights my soul.",
+    "reference": "Psalm 94:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "anxiety",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalm-100-5",
+    "category": "Love",
+    "verse": "For the LORD is good, and His loving devotion endures forever; His faithfulness continues to all generations.",
+    "reference": "Psalm 100:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "psalm-118-24",
+    "category": "Joy",
+    "verse": "This is the day that the LORD has made; we will rejoice and be glad in it.",
+    "reference": "Psalm 118:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "gratitude",
+      "today"
+    ]
+  },
+  {
+    "id": "romans-8-39",
+    "category": "Grace",
+    "verse": "neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+    "reference": "Romans 8:39",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-121-2",
+    "category": "Strength",
+    "verse": "My help comes from the LORD, the Maker of heaven and earth.",
+    "reference": "Psalm 121:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "creator"
+    ]
+  },
+  {
+    "id": "psalm-138-8",
+    "category": "Hope",
+    "verse": "The LORD will fulfill His purpose for me. O LORD, Your loving devotion endures forever— do not abandon the works of Your hands.",
+    "reference": "Psalm 138:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "purpose",
+      "mercy"
+    ]
+  },
+  {
+    "id": "proverbs-16-3",
+    "category": "Trust",
+    "verse": "Commit your works to the LORD and your plans will be achieved.",
+    "reference": "Proverbs 16:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "plans",
+      "work"
+    ]
+  },
+  {
+    "id": "proverbs-18-10",
+    "category": "Strength",
+    "verse": "The name of the LORD is a strong tower; the righteous run to it and are safe.",
+    "reference": "Proverbs 18:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "refuge",
+      "safety"
+    ]
+  },
+  {
+    "id": "isaiah-12-2",
+    "category": "Trust",
+    "verse": "Surely God is my salvation; I will trust and not be afraid. For the LORD GOD is my strength and my song, and He also has become my salvation.”",
+    "reference": "Isaiah 12:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "salvation",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-26-4",
+    "category": "Trust",
+    "verse": "Trust in the LORD forever, because GOD the LORD is the Rock eternal.",
+    "reference": "Isaiah 26:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "strength",
+      "eternal"
+    ]
+  },
+  {
+    "id": "isaiah-30-21",
+    "category": "Wisdom",
+    "verse": "And whether you turn to the right or to the left, your ears will hear this command behind you: “This is the way. Walk in it.”",
+    "reference": "Isaiah 30:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "direction"
+    ]
+  },
+  {
+    "id": "isaiah-43-2",
+    "category": "Comfort",
+    "verse": "When you pass through the waters, I will be with you; and when you go through the rivers, they will not overwhelm you. When you walk through the fire, you will not be scorched; the flames will not set you ablaze.",
+    "reference": "Isaiah 43:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "trials",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-43-19",
+    "category": "Hope",
+    "verse": "Behold, I am about to do something new; even now it is coming. Do you not see it? Indeed, I will make a way in the wilderness and streams in the desert.",
+    "reference": "Isaiah 43:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "new",
+      "way"
+    ]
+  },
+  {
+    "id": "isaiah-54-10",
+    "category": "Love",
+    "verse": "Though the mountains may be removed and the hills may be shaken, My loving devotion will not depart from you, and My covenant of peace will not be broken,” says the LORD, who has compassion on you.",
+    "reference": "Isaiah 54:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "peace",
+      "mercy"
+    ]
+  },
+  {
+    "id": "lamentations-3-23",
+    "category": "Grace",
+    "verse": "They are new every morning; great is Your faithfulness!",
+    "reference": "Lamentations 3:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "faithfulness",
+      "morning"
+    ]
+  },
+  {
+    "id": "matthew-6-33",
+    "category": "Trust",
+    "verse": "But seek first the kingdom of God and His righteousness, and all these things will be added unto you.",
+    "reference": "Matthew 6:33",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "kingdom",
+      "provision"
+    ]
+  },
+  {
+    "id": "galatians-6-18",
+    "category": "Grace",
+    "verse": "The grace of our Lord Jesus Christ be with your spirit, brothers. Amen.",
+    "reference": "Galatians 6:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "matthew-19-26",
+    "category": "Faith",
+    "verse": "Jesus looked at them and said, “With man this is impossible, but with God all things are possible.”",
+    "reference": "Matthew 19:26",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "mark-10-27",
+    "category": "Faith",
+    "verse": "Jesus looked at them and said, “With man this is impossible, but not with God. For all things are possible with God.”",
+    "reference": "Mark 10:27",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "luke-1-37",
+    "category": "Faith",
+    "verse": "For no word from God will ever fail. ”",
+    "reference": "Luke 1:37",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "promise",
+      "god"
+    ]
+  },
+  {
+    "id": "john-6-35",
+    "category": "Life",
+    "verse": "Jesus answered, “I am the bread of life. Whoever comes to Me will never hunger, and whoever believes in Me will never thirst.",
+    "reference": "John 6:35",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "life",
+      "jesus",
+      "satisfaction"
+    ]
+  },
+  {
+    "id": "john-8-12",
+    "category": "Life",
+    "verse": "Once again, Jesus spoke to the people and said, “I am the light of the world. Whoever follows Me will never walk in the darkness, but will have the light of life.”",
+    "reference": "John 8:12",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "life",
+      "light",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-15-5",
+    "category": "Faith",
+    "verse": "I am the vine and you are the branches. The one who remains in Me, and I in him, will bear much fruit. For apart from Me you can do nothing.",
+    "reference": "John 15:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "fruit",
+      "jesus"
+    ]
+  },
+  {
+    "id": "ephesians-6-24",
+    "category": "Grace",
+    "verse": "Grace to all who love our Lord Jesus Christ with an undying love.",
+    "reference": "Ephesians 6:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-15-13",
+    "category": "Hope",
+    "verse": "Now may the God of hope fill you with all joy and peace as you believe in Him, so that you may overflow with hope by the power of the Holy Spirit.",
+    "reference": "Romans 15:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "joy",
+      "peace"
+    ]
+  },
+  {
+    "id": "1-corinthians-10-13",
+    "category": "Strength",
+    "verse": "No temptation has seized you except what is common to man. And God is faithful; He will not let you be tempted beyond what you can bear. But when you are tempted, He will also provide an escape, so that you can stand up under it.",
+    "reference": "1 Corinthians 10:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "testing",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "1-corinthians-13-13",
+    "category": "Love",
+    "verse": "And now these three remain: faith, hope, and love; but the greatest of these is love.",
+    "reference": "1 Corinthians 13:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "faith",
+      "hope"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-16",
+    "category": "Strength",
+    "verse": "Therefore we do not lose heart. Though our outer self is wasting away, yet our inner self is being renewed day by day.",
+    "reference": "2 Corinthians 4:16",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "renewal",
+      "inner-life"
+    ]
+  },
+  {
+    "id": "ephesians-2-10",
+    "category": "Life",
+    "verse": "For we are God’s workmanship, created in Christ Jesus to do good works, which God prepared in advance as our way of life.",
+    "reference": "Ephesians 2:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "life",
+      "purpose",
+      "good-works"
+    ]
+  },
+  {
+    "id": "colossians-4-12",
+    "category": "Grace",
+    "verse": "Epaphras, who is one of you and a servant of Christ Jesus, sends you greetings. He is always wrestling in prayer for you, so that you may stand mature and fully assured in the full will of God.",
+    "reference": "Colossians 4:12",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "ephesians-6-10",
+    "category": "Strength",
+    "verse": "Finally, be strong in the Lord and in His mighty power.",
+    "reference": "Ephesians 6:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "power",
+      "lord"
+    ]
+  },
+  {
+    "id": "colossians-3-15",
+    "category": "Peace",
+    "verse": "Let the peace of Christ rule in your hearts, for to this you were called as members of one body. And be thankful.",
+    "reference": "Colossians 3:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "gratitude",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-timothy-1-7",
+    "category": "Courage",
+    "verse": "For God has not given us a spirit of fear, but of power, love, and self-control.",
+    "reference": "2 Timothy 1:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "power",
+      "love"
+    ]
+  },
+  {
+    "id": "genesis-15-6",
+    "category": "Faith",
+    "verse": "Abram believed the LORD, and it was credited to him as righteousness.",
+    "reference": "Genesis 15:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "righteousness",
+      "trust"
+    ]
+  },
+  {
+    "id": "exodus-15-2",
+    "category": "Strength",
+    "verse": "The LORD is my strength and my song, and He has become my salvation. He is my God, and I will praise Him, my father’s God, and I will exalt Him.",
+    "reference": "Exodus 15:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "colossians-3-16",
+    "category": "Wisdom",
+    "verse": "Let the word of Christ richly dwell within you as you teach and admonish one another with all wisdom, and as you sing psalms, hymns, and spiritual songs with gratitude in your hearts to God.",
+    "reference": "Colossians 3:16",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "truth"
+    ]
+  },
+  {
+    "id": "isaiah-33-2",
+    "category": "Hope",
+    "verse": "O LORD, be gracious to us! We wait for You. Be our strength every morning and our salvation in time of trouble.",
+    "reference": "Isaiah 33:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "numbers-6-26",
+    "category": "Peace",
+    "verse": "may the LORD lift up His countenance toward you and give you peace.’",
+    "reference": "Numbers 6:26",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "blessing",
+      "presence"
+    ]
+  },
+  {
+    "id": "joshua-24-15",
+    "category": "Faith",
+    "verse": "But if it is unpleasing in your sight to serve the LORD, then choose for yourselves this day whom you will serve, whether the gods your fathers served beyond the Euphrates, or the gods of the Amorites in whose land you are living. As for me and my house, we will serve the LORD!”",
+    "reference": "Joshua 24:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "choice",
+      "service"
+    ]
+  },
+  {
+    "id": "1-samuel-2-2",
+    "category": "Strength",
+    "verse": "There is no one holy like the LORD. Indeed, there is no one besides You! And there is no Rock like our God.",
+    "reference": "1 Samuel 2:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "holiness",
+      "rock"
+    ]
+  },
+  {
+    "id": "2-samuel-22-31",
+    "category": "Trust",
+    "verse": "As for God, His way is perfect; the word of the LORD is flawless. He is a shield to all who take refuge in Him.",
+    "reference": "2 Samuel 22:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "word",
+      "refuge"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-11",
+    "category": "Prayer",
+    "verse": "Seek out the LORD and His strength; seek His face always.",
+    "reference": "1 Chronicles 16:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "strength"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-34",
+    "category": "Love",
+    "verse": "Give thanks to the LORD, for He is good; His loving devotion endures forever.",
+    "reference": "1 Chronicles 16:34",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "nehemiah-8-10",
+    "category": "Joy",
+    "verse": "Then Nehemiah told them, “Go and eat what is rich, drink what is sweet, and send out portions to those who have nothing prepared, since today is holy to our Lord. Do not grieve, for the joy of the LORD is your strength.”",
+    "reference": "Nehemiah 8:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "strength",
+      "lord"
+    ]
+  },
+  {
+    "id": "job-23-10",
+    "category": "Trust",
+    "verse": "Yet He knows the way I have taken; when He has tested me, I will come forth as gold.",
+    "reference": "Job 23:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "testing",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-1-3",
+    "category": "Life",
+    "verse": "He is like a tree planted by streams of water, yielding its fruit in season, whose leaf does not wither, and who prospers in all he does.",
+    "reference": "Psalm 1:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "life",
+      "fruit",
+      "growth"
+    ]
+  },
+  {
+    "id": "psalm-5-3",
+    "category": "Prayer",
+    "verse": "In the morning, O LORD, You hear my voice; at daybreak I lay my plea before You and wait in expectation.",
+    "reference": "Psalm 5:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "morning",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-16-11",
+    "category": "Joy",
+    "verse": "You have made known to me the path of life; You will fill me with joy in Your presence, with eternal pleasures at Your right hand.",
+    "reference": "Psalm 16:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "presence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalm-20-7",
+    "category": "Trust",
+    "verse": "Some trust in chariots and others in horses, but we trust in the name of the LORD our God.",
+    "reference": "Psalm 20:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "lord"
+    ]
+  },
+  {
+    "id": "psalm-25-4",
+    "category": "Wisdom",
+    "verse": "Show me Your ways, O LORD; teach me Your paths.",
+    "reference": "Psalm 25:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "ways"
+    ]
+  },
+  {
+    "id": "psalm-25-5",
+    "category": "Wisdom",
+    "verse": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
+    "reference": "Psalm 25:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "truth",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-29-11",
+    "category": "Peace",
+    "verse": "The LORD gives His people strength; the LORD blesses His people with peace.",
+    "reference": "Psalm 29:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "strength",
+      "blessing"
+    ]
+  },
+  {
+    "id": "psalm-30-5",
+    "category": "Joy",
+    "verse": "For His anger is fleeting, but His favor lasts a lifetime. Weeping may stay the night, but joy comes in the morning.",
+    "reference": "Psalm 30:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "morning",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-33-20",
+    "category": "Hope",
+    "verse": "Our soul waits for the LORD; He is our help and our shield.",
+    "reference": "Psalm 33:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "help",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-34-8",
+    "category": "Trust",
+    "verse": "Taste and see that the LORD is good; blessed is the man who takes refuge in Him!",
+    "reference": "Psalm 34:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "goodness",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalm-37-7",
+    "category": "Peace",
+    "verse": "Be still before the LORD and wait patiently for Him; do not fret when men prosper in their ways, when they carry out wicked schemes.",
+    "reference": "Psalm 37:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "waiting",
+      "rest"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-8",
+    "category": "Hope",
+    "verse": "But since we belong to the day, let us be sober, putting on the breastplate of faith and love, and the helmet of our hope of salvation.",
+    "reference": "1 Thessalonians 5:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-51-10",
+    "category": "Grace",
+    "verse": "Create in me a clean heart, O God, and renew a right spirit within me.",
+    "reference": "Psalm 51:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "renewal",
+      "heart"
+    ]
+  },
+  {
+    "id": "jeremiah-3-23",
+    "category": "Hope",
+    "verse": "Surely deception comes from the hills, and commotion from the mountains. Surely the salvation of Israel is in the LORD our God.",
+    "reference": "Jeremiah 3:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-62-5",
+    "category": "Hope",
+    "verse": "Rest in God alone, O my soul, for my hope comes from Him.",
+    "reference": "Psalm 62:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "rest",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-84-11",
+    "category": "Grace",
+    "verse": "For the LORD God is a sun and a shield; the LORD gives grace and glory; He withholds no good thing from those who walk with integrity.",
+    "reference": "Psalm 84:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "provision",
+      "glory"
+    ]
+  },
+  {
+    "id": "psalm-86-5",
+    "category": "Grace",
+    "verse": "For You, O Lord, are kind and forgiving, rich in loving devotion to all who call on You.",
+    "reference": "Psalm 86:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "mercy"
+    ]
+  },
+  {
+    "id": "psalm-103-8",
+    "category": "Love",
+    "verse": "The LORD is compassionate and gracious, slow to anger, abounding in loving devotion.",
+    "reference": "Psalm 103:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalm-103-12",
+    "category": "Freedom",
+    "verse": "As far as the east is from the west, so far has He removed our transgressions from us.",
+    "reference": "Psalm 103:12",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "freedom",
+      "forgiveness",
+      "sin"
+    ]
+  },
+  {
+    "id": "acts-20-21",
+    "category": "Trust",
+    "verse": "testifying to Jews and Greeks alike about repentance to God and faith in our Lord Jesus Christ.",
+    "reference": "Acts 20:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-121-7",
+    "category": "Comfort",
+    "verse": "The LORD will guard you from all evil; He will preserve your soul.",
+    "reference": "Psalm 121:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "protection",
+      "safety"
+    ]
+  },
+  {
+    "id": "psalm-145-18",
+    "category": "Prayer",
+    "verse": "The LORD is near to all who call on Him, to all who call out to Him in truth.",
+    "reference": "Psalm 145:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "nearness",
+      "truth"
+    ]
+  },
+  {
+    "id": "psalm-147-3",
+    "category": "Comfort",
+    "verse": "He heals the brokenhearted and binds up their wounds.",
+    "reference": "Psalm 147:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "healing",
+      "heart"
+    ]
+  },
+  {
+    "id": "1-thessalonians-2-19",
+    "category": "Hope",
+    "verse": "After all, who is our hope, our joy, our crown of boasting, if it is not you yourselves in the presence of our Lord Jesus at His coming?",
+    "reference": "1 Thessalonians 2:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "proverbs-4-23",
+    "category": "Wisdom",
+    "verse": "Guard your heart with all diligence, for from it flow springs of life.",
+    "reference": "Proverbs 4:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "heart",
+      "life"
+    ]
+  },
+  {
+    "id": "proverbs-17-22",
+    "category": "Joy",
+    "verse": "A joyful heart is good medicine, but a broken spirit dries up the bones.",
+    "reference": "Proverbs 17:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "heart",
+      "healing"
+    ]
+  },
+  {
+    "id": "isaiah-25-1",
+    "category": "Trust",
+    "verse": "O LORD, You are my God! I will exalt You; I will praise Your name. For You have worked wonders— plans formed long ago— in perfect faithfulness.",
+    "reference": "Isaiah 25:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faithfulness",
+      "praise"
+    ]
+  },
+  {
+    "id": "isaiah-40-29",
+    "category": "Strength",
+    "verse": "He gives power to the faint and increases the strength of the weak.",
+    "reference": "Isaiah 40:29",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "weakness",
+      "power"
+    ]
+  },
+  {
+    "id": "philippians-2-11",
+    "category": "Hope",
+    "verse": "and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.",
+    "reference": "Philippians 2:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-58-11",
+    "category": "Wisdom",
+    "verse": "The LORD will always guide you; He will satisfy you in a sun-scorched land and strengthen your frame. You will be like a well-watered garden, like a spring whose waters never fail.",
+    "reference": "Isaiah 58:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "provision",
+      "strength"
+    ]
+  },
+  {
+    "id": "jeremiah-17-7",
+    "category": "Trust",
+    "verse": "But blessed is the man who trusts in the LORD, whose confidence is in Him.",
+    "reference": "Jeremiah 17:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "blessing",
+      "hope"
+    ]
+  },
+  {
+    "id": "jeremiah-17-8",
+    "category": "Hope",
+    "verse": "He is like a tree planted by the waters that sends out its roots toward the stream. It does not fear when the heat comes, and its leaves are always green. It does not worry in a year of drought, nor does it cease to produce fruit.",
+    "reference": "Jeremiah 17:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "growth",
+      "fruit"
+    ]
+  },
+  {
+    "id": "micah-6-8",
+    "category": "Wisdom",
+    "verse": "He has shown you, O man, what is good. And what does the LORD require of you but to act justly, to love mercy, and to walk humbly with your God?",
+    "reference": "Micah 6:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "justice",
+      "mercy"
+    ]
+  },
+  {
+    "id": "nahum-1-7",
+    "category": "Comfort",
+    "verse": "The LORD is good, a stronghold in the day of distress; He cares for those who trust in Him.",
+    "reference": "Nahum 1:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "refuge",
+      "trust"
+    ]
+  },
+  {
+    "id": "habakkuk-3-18",
+    "category": "Joy",
+    "verse": "yet I will exult in the LORD; I will rejoice in the God of my salvation!",
+    "reference": "Habakkuk 3:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "matthew-5-8",
+    "category": "Grace",
+    "verse": "Blessed are the pure in heart, for they will see God.",
+    "reference": "Matthew 5:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "purity",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-5-9",
+    "category": "Peace",
+    "verse": "Blessed are the peacemakers, for they will be called sons of God.",
+    "reference": "Matthew 5:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "children",
+      "god"
+    ]
+  },
+  {
+    "id": "romans-10-1",
+    "category": "Hope",
+    "verse": "Brothers, my heart’s desire and prayer to God for the Israelites is for their salvation.",
+    "reference": "Romans 10:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "luke-6-36",
+    "category": "Grace",
+    "verse": "Be merciful, just as your Father is merciful.",
+    "reference": "Luke 6:36",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "father"
+    ]
+  },
+  {
+    "id": "romans-15-6",
+    "category": "Hope",
+    "verse": "so that with one mind and one voice you may glorify the God and Father of our Lord Jesus Christ.",
+    "reference": "Romans 15:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "john-3-17",
+    "category": "Grace",
+    "verse": "For God did not send His Son into the world to condemn the world, but to save the world through Him.",
+    "reference": "John 3:17",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "salvation",
+      "world"
+    ]
+  },
+  {
+    "id": "john-8-36",
+    "category": "Freedom",
+    "verse": "So if the Son sets you free, you will be free indeed.",
+    "reference": "John 8:36",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "freedom",
+      "son",
+      "truth"
+    ]
+  },
+  {
+    "id": "acts-16-31",
+    "category": "Faith",
+    "verse": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+    "reference": "Acts 16:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "salvation",
+      "belief"
+    ]
+  },
+  {
+    "id": "psalms-71-5",
+    "category": "Hope",
+    "verse": "For You are my hope, O Lord GOD, my confidence from my youth.",
+    "reference": "Psalms 71:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-6-14",
+    "category": "Freedom",
+    "verse": "For sin shall not be your master, because you are not under law, but under grace.",
+    "reference": "Romans 6:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "freedom",
+      "grace",
+      "sin"
+    ]
+  },
+  {
+    "id": "romans-10-13",
+    "category": "Prayer",
+    "verse": "for, “Everyone who calls on the name of the Lord will be saved.”",
+    "reference": "Romans 10:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "salvation",
+      "calling"
+    ]
+  },
+  {
+    "id": "galatians-5-1",
+    "category": "Freedom",
+    "verse": "It is for freedom that Christ has set us free. Stand firm, then, and do not be encumbered once more by a yoke of slavery.",
+    "reference": "Galatians 5:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "freedom",
+      "christ",
+      "standing"
+    ]
+  },
+  {
+    "id": "isaiah-30-15",
+    "category": "Peace",
+    "verse": "For the Lord GOD, the Holy One of Israel, has said: “By repentance and rest you would be saved; your strength would lie in quiet confidence— but you were not willing.”",
+    "reference": "Isaiah 30:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "isaiah-52-7",
+    "category": "Hope",
+    "verse": "How beautiful on the mountains are the feet of those who bring good news, who proclaim peace, who bring good tidings, who proclaim salvation, who say to Zion, “Your God reigns!”",
+    "reference": "Isaiah 52:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "colossians-3-2",
+    "category": "Wisdom",
+    "verse": "Set your minds on things above, not on earthly things.",
+    "reference": "Colossians 3:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "focus",
+      "heaven"
+    ]
+  },
+  {
+    "id": "1-corinthians-8-6",
+    "category": "Hope",
+    "verse": "yet for us there is but one God, the Father, from whom all things came and for whom we exist. And there is but one Lord, Jesus Christ, through whom all things came and through whom we exist.",
+    "reference": "1 Corinthians 8:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "james-1-17",
+    "category": "Grace",
+    "verse": "Every good and perfect gift is from above, coming down from the Father of the heavenly lights, with whom there is no change or shifting shadow.",
+    "reference": "James 1:17",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "gift",
+      "father"
+    ]
+  },
+  {
+    "id": "james-4-8",
+    "category": "Prayer",
+    "verse": "Draw near to God, and He will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded.",
+    "reference": "James 4:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "nearness",
+      "heart"
+    ]
+  },
+  {
+    "id": "philemon-1-25",
+    "category": "Grace",
+    "verse": "The grace of the Lord Jesus Christ be with your spirit.",
+    "reference": "Philemon 1:25",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "1-peter-2-24",
+    "category": "Grace",
+    "verse": "He Himself bore our sins in His body on the tree, so that we might die to sin and live to righteousness. “By His stripes you are healed.”",
+    "reference": "1 Peter 2:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "healing",
+      "righteousness"
+    ]
+  },
+  {
+    "id": "1-john-1-9",
+    "category": "Grace",
+    "verse": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
+    "reference": "1 John 1:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "cleansing"
+    ]
+  },
+  {
+    "id": "1-john-4-18",
+    "category": "Love",
+    "verse": "There is no fear in love, but perfect love drives out fear, because fear involves punishment. The one who fears has not been perfected in love.",
+    "reference": "1 John 4:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "fear",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-11",
+    "category": "Peace",
+    "verse": "Finally, brothers, rejoice! Aim for perfect harmony, encourage one another, be of one mind, live in peace. And the God of love and peace will be with you.",
+    "reference": "2 Corinthians 13:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-103-20",
+    "category": "Hope",
+    "verse": "Bless the LORD, all His angels mighty in strength who carry out His word, who hearken to the voice of His command.",
+    "reference": "Psalms 103:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-30",
+    "category": "Hope",
+    "verse": "When You send Your Spirit, they are created, and You renew the face of the earth.",
+    "reference": "Psalms 104:30",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "life"
+    ]
+  },
+  {
+    "id": "isaiah-25-9",
+    "category": "Hope",
+    "verse": "And in that day it will be said, “Surely this is our God; we have waited for Him, and He has saved us. This is the LORD for whom we have waited. Let us rejoice and be glad in His salvation.”",
+    "reference": "Isaiah 25:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-108-7",
+    "category": "Hope",
+    "verse": "God has spoken from His sanctuary: “I will triumph! I will parcel out Shechem and apportion the Valley of Succoth.",
+    "reference": "Psalms 108:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-109-20",
+    "category": "Hope",
+    "verse": "May this be the LORD’s reward to my accusers, to those who speak evil against me.",
+    "reference": "Psalms 109:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-112-7",
+    "category": "Hope",
+    "verse": "He does not fear bad news; his heart is steadfast, trusting in the LORD.",
+    "reference": "Psalms 112:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-115-1",
+    "category": "Hope",
+    "verse": "Not to us, O LORD, not to us, but to Your name be the glory, because of Your loving devotion, because of Your faithfulness.",
+    "reference": "Psalms 115:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-7",
+    "category": "Hope",
+    "verse": "Return to your rest, O my soul, for the LORD has been good to you.",
+    "reference": "Psalms 116:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-118-14",
+    "category": "Hope",
+    "verse": "The LORD is my strength and my song, and He has become my salvation.",
+    "reference": "Psalms 118:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-15",
+    "category": "Hope",
+    "verse": "Shouts of joy and salvation resound in the tents of the righteous: “The right hand of the LORD performs with valor!",
+    "reference": "Psalms 118:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-8",
+    "category": "Hope",
+    "verse": "It is better to take refuge in the LORD than to trust in man.",
+    "reference": "Psalms 118:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-118-9",
+    "category": "Hope",
+    "verse": "It is better to take refuge in the LORD than to trust in princes.",
+    "reference": "Psalms 118:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-119-166",
+    "category": "Hope",
+    "verse": "I wait for Your salvation, O LORD, and I carry out Your commandments.",
+    "reference": "Psalms 119:166",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "2-peter-3-18",
+    "category": "Grace",
+    "verse": "But grow in the grace and knowledge of our Lord and Savior Jesus Christ. To Him be the glory both now and to the day of eternity. Amen.",
+    "reference": "2 Peter 3:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-130-5",
+    "category": "Hope",
+    "verse": "I wait for the LORD; my soul does wait, and in His word I put my hope.",
+    "reference": "Psalms 130:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-130-7",
+    "category": "Hope",
+    "verse": "O Israel, put your hope in the LORD, for with the LORD is loving devotion, and with Him is redemption in abundance.",
+    "reference": "Psalms 130:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-131-3",
+    "category": "Hope",
+    "verse": "O Israel, put your hope in the LORD, both now and forevermore.",
+    "reference": "Psalms 131:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-14-7",
+    "category": "Hope",
+    "verse": "Oh, that the salvation of Israel would come from Zion! When the LORD restores His captive people, let Jacob rejoice, let Israel be glad!",
+    "reference": "Psalms 14:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-140-7",
+    "category": "Hope",
+    "verse": "O GOD the Lord, the strength of my salvation, You shield my head in the day of battle.",
+    "reference": "Psalms 140:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-141-8",
+    "category": "Hope",
+    "verse": "But my eyes are fixed on You, O GOD the Lord. In You I seek refuge; do not leave my soul defenseless.",
+    "reference": "Psalms 141:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-143-9",
+    "category": "Hope",
+    "verse": "Deliver me from my enemies, O LORD; I flee to You for refuge.",
+    "reference": "Psalms 143:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-147-11",
+    "category": "Hope",
+    "verse": "The LORD is pleased with those who fear Him, who hope in His loving devotion.",
+    "reference": "Psalms 147:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-timothy-2-22",
+    "category": "Love",
+    "verse": "Flee from youthful passions and pursue righteousness, faith, love, and peace, together with those who call on the Lord out of a pure heart.",
+    "reference": "2 Timothy 2:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "1-john-5-1",
+    "category": "Trust",
+    "verse": "Everyone who believes that Jesus is the Christ has been born of God, and everyone who loves the Father also loves those born of Him.",
+    "reference": "1 John 5:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-20-6",
+    "category": "Hope",
+    "verse": "Now I know that the LORD saves His anointed; He answers him from His holy heaven with the saving power of His right hand.",
+    "reference": "Psalms 20:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-30-18",
+    "category": "Hope",
+    "verse": "Therefore the LORD longs to be gracious to you; therefore He rises to show you compassion, for the LORD is a just God. Blessed are all who wait for Him.",
+    "reference": "Isaiah 30:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-10-10",
+    "category": "Trust",
+    "verse": "For with your heart you believe and are justified, and with your mouth you confess and are saved.",
+    "reference": "Romans 10:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-27-13",
+    "category": "Hope",
+    "verse": "Still I am certain to see the goodness of the LORD in the land of the living.",
+    "reference": "Psalms 27:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "daniel-10-19",
+    "category": "Courage",
+    "verse": "“Do not be afraid, you who are highly precious,” he said. “Peace be with you! Be strong now; be very strong!” As he spoke with me, I was strengthened and said, “Speak, my lord, for you have strengthened me.”",
+    "reference": "Daniel 10:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "strength",
+      "fear",
+      "trust"
+    ]
+  },
+  {
+    "id": "psalms-28-8",
+    "category": "Hope",
+    "verse": "The LORD is the strength of His people, a stronghold of salvation for His anointed.",
+    "reference": "Psalms 28:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "ephesians-6-23",
+    "category": "Trust",
+    "verse": "Peace to the brothers and love with faith from God the Father and the Lord Jesus Christ.",
+    "reference": "Ephesians 6:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-3-3",
+    "category": "Hope",
+    "verse": "But You, O LORD, are a shield around me, my glory, and the One who lifts my head.",
+    "reference": "Psalms 3:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-86-15",
+    "category": "Grace",
+    "verse": "But You, O Lord, are a compassionate and gracious God, slow to anger, abounding in loving devotion and faithfulness.",
+    "reference": "Psalms 86:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-23",
+    "category": "Hope",
+    "verse": "Love the LORD, all His saints. The LORD preserves the faithful, but fully repays the arrogant.",
+    "reference": "Psalms 31:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "trust"
+    ]
+  },
+  {
+    "id": "2-corinthians-9-14",
+    "category": "Love",
+    "verse": "And their prayers for you will express their affection for you, because of the surpassing grace God has given you.",
+    "reference": "2 Corinthians 9:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-6",
+    "category": "Hope",
+    "verse": "I hate those who cling to worthless idols, but in the LORD I trust.",
+    "reference": "Psalms 31:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-132-13",
+    "category": "Trust",
+    "verse": "For the LORD has chosen Zion; He has desired it for His home:",
+    "reference": "Psalms 132:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-132-8",
+    "category": "Trust",
+    "verse": "Arise, O LORD, to Your resting place, You and the ark of Your strength.",
+    "reference": "Psalms 132:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-14",
+    "category": "Grace",
+    "verse": "The grace of the Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit be with all of you.",
+    "reference": "2 Corinthians 13:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-john-1-3",
+    "category": "Grace",
+    "verse": "Grace, mercy, and peace from God the Father and from Jesus Christ, the Son of the Father, will be with us in truth and love.",
+    "reference": "2 John 1:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-30-3",
+    "category": "Trust",
+    "verse": "O LORD, You pulled me up from Sheol; You spared me from descending into the Pit.",
+    "reference": "Psalms 30:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-30-7",
+    "category": "Trust",
+    "verse": "O LORD, You favored me; You made my mountain stand strong. When You hid Your face, I was dismayed.",
+    "reference": "Psalms 30:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-36-7",
+    "category": "Trust",
+    "verse": "How precious is Your loving devotion, O God, that the children of men take refuge in the shadow of Your wings!",
+    "reference": "Psalms 36:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-15-16",
+    "category": "Joy",
+    "verse": "Your words were found, and I ate them. Your words became my joy and my heart’s delight. For I bear Your name, O LORD God of Hosts.",
+    "reference": "Jeremiah 15:16",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-40-11",
+    "category": "Trust",
+    "verse": "O LORD, do not withhold Your mercy from me; Your loving devotion and faithfulness will always guard me.",
+    "reference": "Psalms 40:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-41-2",
+    "category": "Trust",
+    "verse": "The LORD will protect and preserve him; He will bless him in the land and refuse to give him over to the will of his foes.",
+    "reference": "Psalms 41:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-56-13",
+    "category": "Trust",
+    "verse": "For You have delivered my soul from death, and my feet from stumbling, that I may walk before God in the light of life.",
+    "reference": "Psalms 56:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-61-7",
+    "category": "Trust",
+    "verse": "May he sit enthroned in God’s presence forever; appoint Your loving devotion and Your faithfulness to guard him.",
+    "reference": "Psalms 61:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "philippians-4-21",
+    "category": "Grace",
+    "verse": "Greet all the saints in Christ Jesus. The brothers who are with me send you greetings.",
+    "reference": "Philippians 4:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-84-9",
+    "category": "Trust",
+    "verse": "Take notice of our shield, O God, and look with favor on the face of Your anointed.",
+    "reference": "Psalms 84:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "isaiah-30-29",
+    "category": "Trust",
+    "verse": "You will sing as on the night of a holy festival, and your heart will rejoice like one who walks to the music of a flute, going up to the mountain of the LORD, to the Rock of Israel.",
+    "reference": "Isaiah 30:29",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "proverbs-29-25",
+    "category": "Trust",
+    "verse": "The fear of man is a snare, but whoever trusts in the LORD is set securely on high.",
+    "reference": "Proverbs 29:25",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-12",
+    "category": "Trust",
+    "verse": "The LORD is mindful of us; He will bless us. He will bless the house of Israel; He will bless the house of Aaron;",
+    "reference": "Psalms 115:12",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-116-6",
+    "category": "Trust",
+    "verse": "The LORD preserves the simplehearted; I was helpless, and He saved me.",
+    "reference": "Psalms 116:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-119-52",
+    "category": "Trust",
+    "verse": "I remember Your judgments of old, O LORD, and in them I find comfort.",
+    "reference": "Psalms 119:52",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-119-55",
+    "category": "Trust",
+    "verse": "In the night, O LORD, I remember Your name, that I may keep Your law.",
+    "reference": "Psalms 119:55",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-12-7",
+    "category": "Trust",
+    "verse": "You, O LORD, will keep us; You will forever guard us from this generation.",
+    "reference": "Psalms 12:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-121-5",
+    "category": "Trust",
+    "verse": "The LORD is your keeper; the LORD is the shade on your right hand.",
+    "reference": "Psalms 121:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-132-5",
+    "category": "Trust",
+    "verse": "until I find a place for the LORD, a dwelling for the Mighty One of Jacob. ”",
+    "reference": "Psalms 132:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-140-4",
+    "category": "Trust",
+    "verse": "Guard me, O LORD, from the hands of the wicked. Keep me safe from men of violence who scheme to make me stumble.",
+    "reference": "Psalms 140:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-21",
+    "category": "Trust",
+    "verse": "For I have kept the ways of the LORD and have not wickedly departed from my God.",
+    "reference": "Psalms 18:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-3",
+    "category": "Trust",
+    "verse": "I will call upon the LORD, who is worthy to be praised; so shall I be saved from my enemies.",
+    "reference": "Psalms 18:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-10-11",
+    "category": "Peace",
+    "verse": "He says to himself, “God has forgotten; He hides His face and never sees.”",
+    "reference": "Psalms 10:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-10-3",
+    "category": "Peace",
+    "verse": "For the wicked man boasts in the cravings of his heart; he blesses the greedy and reviles the LORD.",
+    "reference": "Psalms 10:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-thessalonians-3-5",
+    "category": "Love",
+    "verse": "May the Lord direct your hearts into God’s love and Christ’s perseverance.",
+    "reference": "2 Thessalonians 3:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-1",
+    "category": "Peace",
+    "verse": "Hallelujah! I will give thanks to the LORD with all my heart in the council of the upright and in the assembly.",
+    "reference": "Psalms 111:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-9",
+    "category": "Grace",
+    "verse": "For you know the grace of our Lord Jesus Christ, that though He was rich, yet for your sake He became poor, so that you through His poverty might become rich.",
+    "reference": "2 Corinthians 8:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-125-4",
+    "category": "Peace",
+    "verse": "Do good, O LORD, to those who are good, and to the upright in heart.",
+    "reference": "Psalms 125:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-125-5",
+    "category": "Peace",
+    "verse": "But those who turn to crooked ways the LORD will banish with the evildoers. Peace be upon Israel.",
+    "reference": "Psalms 125:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "philippians-1-8",
+    "category": "Grace",
+    "verse": "God is my witness how I long for all of you with the affection of Christ Jesus.",
+    "reference": "Philippians 1:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-16-20",
+    "category": "Peace",
+    "verse": "The God of peace will soon crush Satan under your feet. The grace of our Lord Jesus Christ be with you.",
+    "reference": "Romans 16:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-4",
+    "category": "Peace",
+    "verse": "My spirit grows faint within me; my heart is dismayed inside me.",
+    "reference": "Psalms 143:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-19-8",
+    "category": "Peace",
+    "verse": "The precepts of the LORD are right, bringing joy to the heart; the commandments of the LORD are radiant, giving light to the eyes.",
+    "reference": "Psalms 19:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-26",
+    "category": "Peace",
+    "verse": "The poor will eat and be satisfied; those who seek the LORD will praise Him. May your hearts live forever!",
+    "reference": "Psalms 22:26",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-7",
+    "category": "Peace",
+    "verse": "Remember not the sins of my youth, nor my rebellious acts; remember me according to Your loving devotion, because of Your goodness, O LORD.",
+    "reference": "Psalms 25:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-28-7",
+    "category": "Peace",
+    "verse": "The LORD is my strength and my shield; my heart trusts in Him, and I am helped. Therefore my heart rejoices, and I give thanks to Him with my song.",
+    "reference": "Psalms 28:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "strength"
+    ]
+  },
+  {
+    "id": "galatians-3-14",
+    "category": "Trust",
+    "verse": "He redeemed us in order that the blessing promised to Abraham would come to the Gentiles in Christ Jesus, so that by faith we might receive the promise of the Spirit.",
+    "reference": "Galatians 3:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-32-11",
+    "category": "Peace",
+    "verse": "Be glad in the LORD and rejoice, O righteous ones; shout for joy, all you upright in heart.",
+    "reference": "Psalms 32:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-33-11",
+    "category": "Peace",
+    "verse": "The counsel of the LORD stands forever, the purposes of His heart to all generations.",
+    "reference": "Psalms 33:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-35-27",
+    "category": "Peace",
+    "verse": "May those who favor my vindication shout for joy and gladness; may they always say, “Exalted be the LORD who delights in His servant’s well-being.”",
+    "reference": "Psalms 35:27",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-11",
+    "category": "Peace",
+    "verse": "Not only that, but we also rejoice in God through our Lord Jesus Christ, through whom we have now received reconciliation.",
+    "reference": "Romans 5:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-37-3",
+    "category": "Peace",
+    "verse": "Trust in the LORD and do good; dwell in the land and cultivate faithfulness.",
+    "reference": "Psalms 37:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-37-31",
+    "category": "Peace",
+    "verse": "The law of his God is in his heart; his steps do not falter.",
+    "reference": "Psalms 37:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-37-4",
+    "category": "Peace",
+    "verse": "Delight yourself in the LORD, and He will give you the desires of your heart.",
+    "reference": "Psalms 37:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-4-7",
+    "category": "Peace",
+    "verse": "You have filled my heart with more joy than when grain and new wine abound.",
+    "reference": "Psalms 4:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-40-8",
+    "category": "Peace",
+    "verse": "I delight to do Your will, O my God; Your law is within my heart.”",
+    "reference": "Psalms 40:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-10-14",
+    "category": "Strength",
+    "verse": "But You have regarded trouble and grief; You see to repay it by Your hand. The victim entrusts himself to You; You are the helper of the fatherless.",
+    "reference": "Psalms 10:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-104-1",
+    "category": "Strength",
+    "verse": "Bless the LORD, O my soul! O LORD my God, You are very great; You are clothed with splendor and majesty.",
+    "reference": "Psalms 104:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-109-21",
+    "category": "Strength",
+    "verse": "But You, O GOD, the Lord, deal kindly with me for the sake of Your name; deliver me by the goodness of Your loving devotion.",
+    "reference": "Psalms 109:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-7",
+    "category": "Grace",
+    "verse": "But just as you excel in everything—in faith, in speech, in knowledge, in complete earnestness, and in the love we inspired in you —see that you also excel in this grace of giving.",
+    "reference": "2 Corinthians 8:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-110-2",
+    "category": "Strength",
+    "verse": "The LORD extends Your mighty scepter from Zion: “Rule in the midst of Your enemies.”",
+    "reference": "Psalms 110:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-115-10",
+    "category": "Strength",
+    "verse": "O house of Aaron, trust in the LORD! He is their help and shield.",
+    "reference": "Psalms 115:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-11",
+    "category": "Strength",
+    "verse": "You who fear the LORD, trust in the LORD! He is their help and shield.",
+    "reference": "Psalms 115:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-9",
+    "category": "Strength",
+    "verse": "O Israel, trust in the LORD! He is their help and shield.",
+    "reference": "Psalms 115:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-23",
+    "category": "Peace",
+    "verse": "Now may the God of peace Himself sanctify you completely, and may your entire spirit, soul, and body be kept blameless at the coming of our Lord Jesus Christ.",
+    "reference": "1 Thessalonians 5:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-7",
+    "category": "Strength",
+    "verse": "Answer me quickly, O LORD; my spirit fails. Do not hide Your face from me, or I will be like those who descend to the Pit.",
+    "reference": "Psalms 143:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-147-5",
+    "category": "Strength",
+    "verse": "Great is our Lord, and mighty in power; His understanding has no limit.",
+    "reference": "Psalms 147:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "1-corinthians-15-57",
+    "category": "Trust",
+    "verse": "But thanks be to God, who gives us the victory through our Lord Jesus Christ!",
+    "reference": "1 Corinthians 15:57",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-21-13",
+    "category": "Strength",
+    "verse": "Be exalted, O LORD, in Your strength; we will sing and praise Your power.",
+    "reference": "Psalms 21:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-19",
+    "category": "Strength",
+    "verse": "But You, O LORD, be not far off; O my Strength, come quickly to help me.",
+    "reference": "Psalms 22:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "1-corinthians-1-3",
+    "category": "Peace",
+    "verse": "Grace and peace to you from God our Father and the Lord Jesus Christ.",
+    "reference": "1 Corinthians 1:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-30-10",
+    "category": "Strength",
+    "verse": "Hear me, O LORD, and have mercy; O LORD, be my helper.”",
+    "reference": "Psalms 30:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-21",
+    "category": "Strength",
+    "verse": "Blessed be the LORD, for He has shown me His loving devotion in a city under siege.",
+    "reference": "Psalms 31:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-36-5",
+    "category": "Strength",
+    "verse": "Your loving devotion, O LORD, reaches to the heavens, Your faithfulness to the clouds.",
+    "reference": "Psalms 36:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-37-39",
+    "category": "Strength",
+    "verse": "The salvation of the righteous is from the LORD; He is their stronghold in time of trouble.",
+    "reference": "Psalms 37:39",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-41-3",
+    "category": "Strength",
+    "verse": "The LORD will sustain him on his bed of illness and restore him from his bed of sickness.",
+    "reference": "Psalms 41:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "luke-2-52",
+    "category": "Grace",
+    "verse": "And Jesus grew in wisdom and stature, and in favor with God and man.",
+    "reference": "Luke 2:52",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-2",
+    "category": "Peace",
+    "verse": "Grace and peace to you from God our Father and the Lord Jesus Christ.",
+    "reference": "2 Thessalonians 1:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-40-10",
+    "category": "Faith",
+    "verse": "I have not covered up Your righteousness in my heart; I have declared Your faithfulness and salvation; I have not concealed Your loving devotion and faithfulness from the great assembly.",
+    "reference": "Psalms 40:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "lamentations-3-24",
+    "category": "Hope",
+    "verse": "“The LORD is my portion,” says my soul, “therefore I will hope in Him.”",
+    "reference": "Lamentations 3:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "trust",
+      "presence",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-69-13",
+    "category": "Prayer",
+    "verse": "But my prayer to You, O LORD, is for a time of favor. In Your abundant loving devotion, O God, answer me with Your sure salvation.",
+    "reference": "Psalms 69:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "luke-10-27",
+    "category": "Love",
+    "verse": "He answered, “‘Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind’ and ‘Love your neighbor as yourself.’ ”",
+    "reference": "Luke 10:27",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-106-1",
+    "category": "Comfort",
+    "verse": "Hallelujah! Give thanks to the LORD, for He is good; His loving devotion endures forever.",
+    "reference": "Psalms 106:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-42-20",
+    "category": "Faith",
+    "verse": "For you have deceived yourselves by sending me to the LORD your God, saying, ‘Pray to the LORD our God on our behalf, and as for all that the LORD our God says, tell it to us and we will do it.’",
+    "reference": "Jeremiah 42:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-107-15",
+    "category": "Comfort",
+    "verse": "Let them give thanks to the LORD for His loving devotion and His wonders to the sons of men.",
+    "reference": "Psalms 107:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-11-17",
+    "category": "Trust",
+    "verse": "So if God gave them the same gift He gave us who believed in the Lord Jesus Christ, who was I to hinder the work of God?”",
+    "reference": "Acts 11:17",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-6-5",
+    "category": "Love",
+    "verse": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+    "reference": "Deuteronomy 6:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "mark-12-30",
+    "category": "Love",
+    "verse": "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.’",
+    "reference": "Mark 12:30",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-4",
+    "category": "Comfort",
+    "verse": "He has caused His wonders to be remembered; the LORD is gracious and compassionate.",
+    "reference": "Psalms 111:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-4",
+    "category": "Comfort",
+    "verse": "Then I called on the name of the LORD: “O LORD, deliver my soul!”",
+    "reference": "Psalms 116:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-116-5",
+    "category": "Comfort",
+    "verse": "The LORD is gracious and righteous; our God is full of compassion.",
+    "reference": "Psalms 116:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-117-2",
+    "category": "Comfort",
+    "verse": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever. Hallelujah!",
+    "reference": "Psalms 117:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-15-11",
+    "category": "Trust",
+    "verse": "On the contrary, we believe it is through the grace of the Lord Jesus that we are saved, just as they are.”",
+    "reference": "Acts 15:11",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "2-timothy-1-13",
+    "category": "Faith",
+    "verse": "Hold on to the pattern of sound teaching you have heard from me, with the faith and love that are in Christ Jesus.",
+    "reference": "2 Timothy 1:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-118-4",
+    "category": "Comfort",
+    "verse": "Let those who fear the LORD say, “His loving devotion endures forever.”",
+    "reference": "Psalms 118:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-107",
+    "category": "Comfort",
+    "verse": "I am severely afflicted, O LORD; revive me through Your word.",
+    "reference": "Psalms 119:107",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-119-149",
+    "category": "Comfort",
+    "verse": "Hear my voice, O LORD, according to Your loving devotion; give me life according to Your justice.",
+    "reference": "Psalms 119:149",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-159",
+    "category": "Comfort",
+    "verse": "Consider how I love Your precepts, O LORD; give me life according to Your loving devotion.",
+    "reference": "Psalms 119:159",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-156",
+    "category": "Grace",
+    "verse": "Great are Your mercies, O LORD; revive me according to Your ordinances.",
+    "reference": "Psalms 119:156",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "1-peter-1-21",
+    "category": "Hope",
+    "verse": "Through Him you believe in God, who raised Him from the dead and glorified Him; and so your faith and hope are in God.",
+    "reference": "1 Peter 1:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-36-6",
+    "category": "Grace",
+    "verse": "Your righteousness is like the highest mountains; Your judgments are like the deepest sea. O LORD, You preserve man and beast.",
+    "reference": "Psalms 36:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-4-5",
+    "category": "Grace",
+    "verse": "Offer the sacrifices of the righteous and trust in the LORD.",
+    "reference": "Psalms 4:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-41-10",
+    "category": "Grace",
+    "verse": "But You, O LORD, be gracious to me and raise me up, that I may repay them.",
+    "reference": "Psalms 41:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "jude-1-21",
+    "category": "Grace",
+    "verse": "keep yourselves in the love of God as you await the mercy of our Lord Jesus Christ to bring you eternal life.",
+    "reference": "Jude 1:21",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-96-13",
+    "category": "Grace",
+    "verse": "before the LORD, for He is coming— He is coming to judge the earth. He will judge the world in righteousness and the peoples in His faithfulness.",
+    "reference": "Psalms 96:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-89-49",
+    "category": "Grace",
+    "verse": "Where, O Lord, is Your loving devotion of old, which You faithfully swore to David?",
+    "reference": "Psalms 89:49",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-4",
+    "category": "Grace",
+    "verse": "Then you will find favor and high regard in the sight of God and man.",
+    "reference": "Proverbs 3:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "proverbs-8-35",
+    "category": "Grace",
+    "verse": "For whoever finds me finds life and obtains the favor of the LORD.",
+    "reference": "Proverbs 8:35",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-103-13",
+    "category": "Grace",
+    "verse": "As a father has compassion on his children, so the LORD has compassion on those who fear Him.",
+    "reference": "Psalms 103:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "psalms-107-43",
+    "category": "Grace",
+    "verse": "Let him who is wise pay heed to these things and consider the loving devotion of the LORD.",
+    "reference": "Psalms 107:43",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-11-7",
+    "category": "Grace",
+    "verse": "For the LORD is righteous; He loves justice. The upright will see His face.",
+    "reference": "Psalms 11:7",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-118-19",
+    "category": "Grace",
+    "verse": "Open to me the gates of righteousness, that I may enter and give thanks to the LORD.",
+    "reference": "Psalms 118:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-20",
+    "category": "Grace",
+    "verse": "This is the gate of the LORD; the righteous shall enter through it.",
+    "reference": "Psalms 118:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "hebrews-3-6",
+    "category": "Hope",
+    "verse": "But Christ is faithful as the Son over God’s house. And we are His house, if we hold firmly to our confidence and the hope of which we boast.",
+    "reference": "Hebrews 3:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-143-10",
+    "category": "Grace",
+    "verse": "Teach me to do Your will, for You are my God. May Your good Spirit lead me on level ground.",
+    "reference": "Psalms 143:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-18-30",
+    "category": "Faith",
+    "verse": "As for God, His way is perfect; the word of the LORD is flawless. He is a shield to all who take refuge in Him.",
+    "reference": "Psalms 18:30",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-22-8",
+    "category": "Faith",
+    "verse": "“He trusts in the LORD, let the LORD deliver him; let the LORD rescue him, since He delights in him.”",
+    "reference": "Psalms 22:8",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-2",
+    "category": "Faith",
+    "verse": "in You, my God, I trust. Do not let me be put to shame; do not let my enemies exult over me.",
+    "reference": "Psalms 25:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-timothy-1-14",
+    "category": "Grace",
+    "verse": "And the grace of our Lord overflowed to me, along with the faith and love that are in Christ Jesus.",
+    "reference": "1 Timothy 1:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-14",
+    "category": "Faith",
+    "verse": "But I trust in You, O LORD; I say, “You are my God.”",
+    "reference": "Psalms 31:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-33-4",
+    "category": "Faith",
+    "verse": "For the word of the LORD is upright, and all His work is trustworthy.",
+    "reference": "Psalms 33:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-34-22",
+    "category": "Faith",
+    "verse": "The LORD redeems His servants, and none who take refuge in Him will be condemned.",
+    "reference": "Psalms 34:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "acts-7-59",
+    "category": "Prayer",
+    "verse": "While they were stoning him, Stephen appealed, “Lord Jesus, receive my spirit.”",
+    "reference": "Acts 7:59",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "psalms-37-5",
+    "category": "Faith",
+    "verse": "Commit your way to the LORD; trust in Him, and He will do it.",
+    "reference": "Psalms 37:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-40-4",
+    "category": "Faith",
+    "verse": "Blessed is the man who has made the LORD his trust, who has not turned to the proud, nor to those who lapse into falsehood.",
+    "reference": "Psalms 40:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-55-23",
+    "category": "Faith",
+    "verse": "But You, O God, will bring them down to the Pit of destruction; men of bloodshed and deceit will not live out half their days. But I will trust in You.",
+    "reference": "Psalms 55:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-78-22",
+    "category": "Faith",
+    "verse": "because they did not believe God or rely on His salvation.",
+    "reference": "Psalms 78:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalms-89-5",
+    "category": "Faith",
+    "verse": "The heavens praise Your wonders, O LORD— Your faithfulness as well— in the assembly of the holy ones.",
+    "reference": "Psalms 89:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-20-5",
+    "category": "Hope",
+    "verse": "May we shout for joy at your victory and raise a banner in the name of our God. May the LORD grant all your petitions.",
+    "reference": "Psalms 20:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-48-2",
+    "category": "Faith",
+    "verse": "who indeed call yourselves after the holy city and lean on the God of Israel; the LORD of Hosts is His name.",
+    "reference": "Isaiah 48:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "proverbs-16-20",
+    "category": "Faith",
+    "verse": "Whoever heeds instruction will find success, and blessed is he who trusts in the LORD.",
+    "reference": "Proverbs 16:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-116-1",
+    "category": "Love",
+    "verse": "I love the LORD, for He has heard my voice— my appeal for mercy.",
+    "reference": "Psalms 116:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "prayer"
+    ]
+  },
+  {
+    "id": "isaiah-45-22",
+    "category": "Hope",
+    "verse": "Turn to Me and be saved, all the ends of the earth; for I am God, and there is no other.",
+    "reference": "Isaiah 45:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-87-2",
+    "category": "Love",
+    "verse": "The LORD loves the gates of Zion more than all the dwellings of Jacob.",
+    "reference": "Psalms 87:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "psalms-55-14",
+    "category": "Love",
+    "verse": "We shared sweet fellowship together; we walked with the crowd into the house of God.",
+    "reference": "Psalms 55:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-10-17",
+    "category": "Love",
+    "verse": "The reason the Father loves Me is that I lay down My life in order to take it up again.",
+    "reference": "John 10:17",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "life"
+    ]
+  },
+  {
+    "id": "john-14-23",
+    "category": "Love",
+    "verse": "Jesus replied, “If anyone loves Me, he will keep My word. My Father will love him, and We will come to him and make Our home with him.",
+    "reference": "John 14:23",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-24",
+    "category": "Love",
+    "verse": "Whoever does not love Me does not keep My words. The word that you hear is not My own, but it is from the Father who sent Me.",
+    "reference": "John 14:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-31",
+    "category": "Love",
+    "verse": "But I do exactly what the Father has commanded Me, so that the world may know that I love the Father. Get up! Let us go on from here.",
+    "reference": "John 14:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-15-9",
+    "category": "Love",
+    "verse": "As the Father has loved Me, so have I loved you. Remain in My love.",
+    "reference": "John 15:9",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-3-35",
+    "category": "Love",
+    "verse": "The Father loves the Son and has placed all things in His hands.",
+    "reference": "John 3:35",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-5-20",
+    "category": "Love",
+    "verse": "The Father loves the Son and shows Him all He does. And to your amazement, He will show Him even greater works than these.",
+    "reference": "John 5:20",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-8-42",
+    "category": "Love",
+    "verse": "Jesus said to them, “If God were your Father, you would love Me, for I have come here from God. I have not come on My own, but He sent Me.",
+    "reference": "John 8:42",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-10-37",
+    "category": "Love",
+    "verse": "Anyone who loves his father or mother more than Me is not worthy of Me; anyone who loves his son or daughter more than Me is not worthy of Me;",
+    "reference": "Matthew 10:37",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-12-18",
+    "category": "Love",
+    "verse": "“Here is My Servant, whom I have chosen, My beloved, in whom My soul delights. I will put My Spirit on Him, and He will proclaim justice to the nations.",
+    "reference": "Matthew 12:18",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-19-19",
+    "category": "Love",
+    "verse": "honor your father and mother, and love your neighbor as yourself.’ ”",
+    "reference": "Matthew 19:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "2-peter-1-14",
+    "category": "Hope",
+    "verse": "because I know that this tent will soon be laid aside, as our Lord Jesus Christ has made clear to me.",
+    "reference": "2 Peter 1:14",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-52-10",
+    "category": "Hope",
+    "verse": "The LORD has bared His holy arm in the sight of all the nations; all the ends of the earth will see the salvation of our God.",
+    "reference": "Isaiah 52:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-89-15",
+    "category": "Prayer",
+    "verse": "Blessed are those who know the joyful sound, who walk, O LORD, in the light of Your presence.",
+    "reference": "Psalms 89:15",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-98-4",
+    "category": "Prayer",
+    "verse": "Make a joyful noise to the LORD, all the earth; break forth—let your cry ring out, and sing praises!",
+    "reference": "Psalms 98:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-5",
+    "category": "Hope",
+    "verse": "For we do not proclaim ourselves, but Jesus Christ as Lord, and ourselves as your servants for Jesus’ sake.",
+    "reference": "2 Corinthians 4:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-106-25",
+    "category": "Prayer",
+    "verse": "They grumbled in their tents and did not listen to the voice of the LORD.",
+    "reference": "Psalms 106:25",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "romans-2-16",
+    "category": "Hope",
+    "verse": "on the day when God will judge men’s secrets through Christ Jesus, as proclaimed by my gospel.",
+    "reference": "Romans 2:16",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-116-17",
+    "category": "Prayer",
+    "verse": "I will offer to You a sacrifice of thanksgiving and call on the name of the LORD.",
+    "reference": "Psalms 116:17",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-126-2",
+    "category": "Prayer",
+    "verse": "Then our mouths were filled with laughter, our tongues with shouts of joy. Then it was said among the nations, “The LORD has done great things for them.”",
+    "reference": "Psalms 126:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-2",
+    "category": "Hope",
+    "verse": "through whom we have gained access by faith into this grace in which we stand. And we rejoice in the hope of the glory of God.",
+    "reference": "Romans 5:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-130-2",
+    "category": "Prayer",
+    "verse": "O Lord, hear my voice; let Your ears be attentive to my plea for mercy.",
+    "reference": "Psalms 130:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-140-6",
+    "category": "Prayer",
+    "verse": "I say to the LORD, “You are my God.” Hear, O LORD, my cry for help.",
+    "reference": "Psalms 140:6",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-104-24",
+    "category": "Wisdom",
+    "verse": "How many are Your works, O LORD! In wisdom You have made them all; the earth is full of Your creatures.",
+    "reference": "Psalms 104:24",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-105-19",
+    "category": "Wisdom",
+    "verse": "until his prediction came true and the word of the LORD proved him right.",
+    "reference": "Psalms 105:19",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-111-10",
+    "category": "Wisdom",
+    "verse": "The fear of the LORD is the beginning of wisdom; all who follow His precepts gain rich understanding. His praise endures forever!",
+    "reference": "Psalms 111:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-27",
+    "category": "Wisdom",
+    "verse": "The LORD is God; He has made His light to shine upon us. Bind the festal sacrifice with cords to the horns of the altar.",
+    "reference": "Psalms 118:27",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-119-31",
+    "category": "Wisdom",
+    "verse": "I cling to Your testimonies, O LORD; let me not be put to shame.",
+    "reference": "Psalms 119:31",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-64-10",
+    "category": "Hope",
+    "verse": "Let the righteous rejoice in the LORD and take refuge in Him; let all the upright in heart exult.",
+    "reference": "Psalms 64:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-56-4",
+    "category": "Hope",
+    "verse": "In God, whose word I praise— in God I trust. I will not be afraid. What can man do to me?",
+    "reference": "Psalms 56:4",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-26-13",
+    "category": "Hope",
+    "verse": "O LORD our God, other lords besides You have ruled over us, but Your name alone do we confess.",
+    "reference": "Isaiah 26:13",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-100-2",
+    "category": "Joy",
+    "verse": "Serve the LORD with gladness; come into His presence with joyful songs.",
+    "reference": "Psalms 100:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-5",
+    "category": "Hope",
+    "verse": "And not only did they do as we expected, but they gave themselves first to the Lord and then to us, through the will of God.",
+    "reference": "2 Corinthians 8:5",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-103-2",
+    "category": "Joy",
+    "verse": "Bless the LORD, O my soul, and do not forget all His kind deeds—",
+    "reference": "Psalms 103:2",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "psalms-103-22",
+    "category": "Joy",
+    "verse": "Bless the LORD, all His works in all places of His dominion. Bless the LORD, O my soul!",
+    "reference": "Psalms 103:22",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "deuteronomy-13-3",
+    "category": "Love",
+    "verse": "you must not listen to the words of that prophet or dreamer. For the LORD your God is testing you to find out whether you love Him with all your heart and with all your soul.",
+    "reference": "Deuteronomy 13:3",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "isaiah-43-1",
+    "category": "Courage",
+    "verse": "But now, this is what the LORD says— He who created you, O Jacob, and He who formed you, O Israel: “Do not fear, for I have redeemed you; I have called you by your name; you are Mine!",
+    "reference": "Isaiah 43:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "fear",
+      "strength",
+      "life"
+    ]
+  },
+  {
+    "id": "1-samuel-2-1",
+    "category": "Joy",
+    "verse": "At that time Hannah prayed: “My heart rejoices in the LORD; my horn is exalted in the LORD. My mouth speaks boldly against my enemies, for I rejoice in Your salvation.",
+    "reference": "1 Samuel 2:1",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-96-10",
+    "category": "Courage",
+    "verse": "Declare among the nations: “The LORD reigns!” The world is firmly established; it cannot be moved; He will judge the peoples with equity.",
+    "reference": "Psalms 96:10",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "courage",
+      "fear",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-33",
+    "category": "Life",
+    "verse": "I will sing to the LORD all my life; I will sing praise to my God while I have my being.",
+    "reference": "Psalms 104:33",
+    "translation": "Berean Standard Bible (BSB)",
+    "tags": [
+      "life",
+      "light",
+      "eternal-life"
+    ]
+  }
+]

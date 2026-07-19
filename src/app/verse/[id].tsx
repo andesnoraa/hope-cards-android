@@ -24,6 +24,8 @@ import { shareVerse } from "../../services/share";
 import {
   getVerseById,
 } from "../../services/verseService";
+import { getSettings } from "../../services/settings";
+import type { Verse } from "../../types/verse";
 
 import {
   selection,
@@ -35,10 +37,26 @@ export default function VerseScreen() {
   const { theme } = useAppTheme();
   const { id } = useLocalSearchParams();
 
-  const verse = getVerseById(id as string);
+  const [verse, setVerse] =
+    useState<Verse | undefined>();
 
   const [favorite, setFavorite] =
     useState(false);
+
+  useEffect(() => {
+    async function loadVerse() {
+      const settings = await getSettings();
+
+      setVerse(
+        getVerseById(
+          id as string,
+          settings.preferredTranslation
+        )
+      );
+    }
+
+    loadVerse();
+  }, [id]);
 
   useEffect(() => {
     async function loadFavorite() {

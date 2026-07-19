@@ -22,6 +22,8 @@ import DeckStack from "./DeckStack";
 
 import {
   getRandomVerse,
+  getVerseById,
+  type TranslationId,
 } from "../../services/verseService";
 
 import {
@@ -71,6 +73,9 @@ export default function DrawCard() {
   const [showDrawButton, setShowDrawButton] =
     useState(true);
 
+  const [translation, setTranslation] =
+    useState<TranslationId>("bsb");
+
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
   const rotateY = useSharedValue(0);
@@ -112,6 +117,20 @@ export default function DrawCard() {
 
         setShowDrawButton(
           settings.showDrawButton
+        );
+
+        setTranslation(
+          settings.preferredTranslation
+        );
+
+        setCurrentVerse((current) =>
+          getVerseById(
+            current.id,
+            settings.preferredTranslation
+          ) ?? getRandomVerse(
+            undefined,
+            settings.preferredTranslation
+          )
         );
       }
 
@@ -163,7 +182,8 @@ export default function DrawCard() {
     }
 
     const nextVerse = getRandomVerse(
-      currentVerse.id
+      currentVerse.id,
+      translation
     );
 
     setCurrentVerse(nextVerse);

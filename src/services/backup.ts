@@ -23,6 +23,10 @@ import {
 import type {
     AppThemeName,
 } from "../theme/appTheme";
+import {
+    isTranslationId,
+    type TranslationId,
+} from "./verseService";
 
 const THEME_NAMES: AppThemeName[] = [
     "classic",
@@ -63,7 +67,7 @@ export interface BackupData {
         /**
          * Reserved for future versions.
          */
-        preferredTranslation: string;
+        preferredTranslation: TranslationId;
     };
 }
 
@@ -170,11 +174,8 @@ export async function createBackup(): Promise<BackupData> {
             themeName:
                 settings.themeName,
 
-            // Default for now.
-            // This will become the user's
-            // selected Bible translation later.
             preferredTranslation:
-                "bbe",
+                settings.preferredTranslation,
         },
     };
 }
@@ -478,9 +479,9 @@ export function validateBackup(
     }
 
     if (
-        typeof data.settings
-            .preferredTranslation !==
-        "string"
+        !isTranslationId(
+            data.settings.preferredTranslation
+        )
     ) {
         return false;
     }

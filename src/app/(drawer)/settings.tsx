@@ -51,6 +51,10 @@ import {
   updateSettings,
 } from "../../services/settings";
 import {
+  TRANSLATION_OPTIONS,
+  type TranslationId,
+} from "../../services/verseService";
+import {
   getPremiumStatus,
   isPremiumTheme,
 } from "../../services/premium";
@@ -83,6 +87,9 @@ export default function SettingsScreen() {
   const [enableHaptics, setEnableHaptics] =
     useState(true);
 
+  const [preferredTranslation, setPreferredTranslation] =
+    useState<TranslationId>("bsb");
+
   const [
     dailyHopeMusicEnabled,
     setDailyHopeMusicEnabled,
@@ -111,6 +118,11 @@ export default function SettingsScreen() {
   const [
     themePickerVisible,
     setThemePickerVisible,
+  ] = useState(false);
+
+  const [
+    translationPickerVisible,
+    setTranslationPickerVisible,
   ] = useState(false);
 
   const [
@@ -155,6 +167,12 @@ export default function SettingsScreen() {
         option.name === themeName
     ) ?? THEME_OPTIONS[0];
 
+  const selectedTranslation =
+    TRANSLATION_OPTIONS.find(
+      (option) =>
+        option.id === preferredTranslation
+    ) ?? TRANSLATION_OPTIONS[0];
+
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
@@ -180,6 +198,10 @@ export default function SettingsScreen() {
 
         setEnableHaptics(
           settings.enableHaptics
+        );
+
+        setPreferredTranslation(
+          settings.preferredTranslation
         );
 
         setDailyHopeMusicEnabled(
@@ -283,6 +305,17 @@ export default function SettingsScreen() {
 
     await updateSettings({
       enableHaptics: value,
+    });
+  }
+
+  async function selectTranslation(
+    translation: TranslationId
+  ) {
+    setPreferredTranslation(translation);
+    setTranslationPickerVisible(false);
+
+    await updateSettings({
+      preferredTranslation: translation,
     });
   }
 
@@ -611,6 +644,10 @@ Your current favorites and settings will be replaced.`,
                 settings.enableHaptics
               );
 
+              setPreferredTranslation(
+                settings.preferredTranslation
+              );
+
               setDailyHopeMusicEnabled(
                 settings
                   .dailyHopeMusicEnabled
@@ -902,6 +939,53 @@ Your current favorites and settings will be replaced.`,
           thumbColor={theme.white}
         />
       </View>
+
+      <View
+        style={[
+          styles.divider,
+          {
+            backgroundColor:
+              theme.divider,
+          },
+        ]}
+      />
+
+      <Pressable
+        style={styles.settingRow}
+        onPress={() => {
+          setTranslationPickerVisible(true);
+        }}
+        android_ripple={{
+          color: theme.accentSoft,
+        }}
+      >
+        <View style={styles.textContainer}>
+          <Text
+            style={[
+              styles.settingTitle,
+              { color: theme.text },
+            ]}
+          >
+            Bible Translation
+          </Text>
+
+          <Text
+            style={[
+              styles.settingSubtitle,
+              { color: theme.textSecondary },
+            ]}
+            numberOfLines={1}
+          >
+            {selectedTranslation.label} · {selectedTranslation.name}
+          </Text>
+        </View>
+
+        <Ionicons
+          name="chevron-forward"
+          size={22}
+          color={theme.textTertiary}
+        />
+      </Pressable>
 
       <View
         style={[
@@ -1413,6 +1497,136 @@ Your current favorites and settings will be replaced.`,
       </Pressable>
 
       </ScrollView>
+
+      <Modal
+        transparent
+        visible={translationPickerVisible}
+        animationType="fade"
+        onRequestClose={() => {
+          setTranslationPickerVisible(false);
+        }}
+      >
+        <View style={styles.modalBackdrop}>
+          <View
+            style={[
+              styles.themePickerCard,
+              {
+                backgroundColor:
+                  theme.surface,
+              },
+            ]}
+          >
+            <View style={styles.modalHeader}>
+              <View style={styles.themeModalCopy}>
+                <Text
+                  style={[
+                    styles.modalTitle,
+                    { color: theme.text },
+                  ]}
+                >
+                  Bible Translation
+                </Text>
+
+                <Text
+                  style={[
+                    styles.modalSubtitle,
+                    { color: theme.textSecondary },
+                  ]}
+                >
+                  Choose the Bible text used throughout Hope Cards.
+                </Text>
+              </View>
+
+              <Pressable
+                style={[
+                  styles.iconButton,
+                  {
+                    backgroundColor:
+                      theme.accentSoft,
+                  },
+                ]}
+                onPress={() => {
+                  setTranslationPickerVisible(false);
+                }}
+                hitSlop={8}
+              >
+                <Ionicons
+                  name="close"
+                  size={22}
+                  color={theme.text}
+                />
+              </Pressable>
+            </View>
+
+            <ScrollView
+              style={styles.themeOptionScroller}
+              contentContainerStyle={styles.themeOptionList}
+              showsVerticalScrollIndicator={false}
+            >
+              {TRANSLATION_OPTIONS.map((option) => {
+                const selected =
+                  preferredTranslation === option.id;
+
+                return (
+                  <Pressable
+                    key={option.id}
+                    accessibilityRole="radio"
+                    accessibilityState={{ selected }}
+                    onPress={() =>
+                      selectTranslation(option.id)
+                    }
+                    style={[
+                      styles.themeOptionCard,
+                      {
+                        backgroundColor:
+                          selected
+                            ? theme.accentSoft
+                            : theme.background,
+                        borderColor:
+                          selected
+                            ? theme.accent
+                            : theme.divider,
+                      },
+                    ]}
+                  >
+                    <View style={styles.themeOptionHeader}>
+                      <View style={styles.themeOptionText}>
+                        <Text
+                          style={[
+                            styles.themeOptionTitle,
+                            { color: theme.text },
+                          ]}
+                        >
+                          {option.label}
+                        </Text>
+
+                        <Text
+                          style={[
+                            styles.themeOptionDescription,
+                            { color: theme.textSecondary },
+                          ]}
+                        >
+                          {option.name}
+                        </Text>
+                      </View>
+
+                      <Ionicons
+                        name={selected
+                          ? "radio-button-on"
+                          : "radio-button-off"}
+                        size={24}
+                        color={selected
+                          ? theme.accent
+                          : theme.textTertiary}
+                      />
+                    </View>
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
 
       <Modal
         transparent

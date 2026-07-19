@@ -3,6 +3,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   getVerses,
 } from "./verseService";
+import { getSettings } from "./settings";
 
 import type { Verse } from "../types/verse";
 
@@ -158,8 +159,11 @@ export async function getFavoriteVerses(): Promise<
   Verse[]
 > {
   const favoriteIds = await getFavorites();
+  const settings = await getSettings();
 
-  const verses = getVerses();
+  const verses = getVerses(
+    settings.preferredTranslation
+  );
 
   return verses.filter((verse) =>
     favoriteIds.includes(verse.id)

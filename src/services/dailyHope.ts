@@ -6,6 +6,7 @@ import {
     getRandomVerse,
     getVerseById,
 } from "./verseService";
+import { getSettings } from "./settings";
 
 const DAILY_HOPE_KEY = "hope_cards_daily_hope";
 
@@ -48,6 +49,9 @@ export async function clearDailyHope() {
 
 export async function getDailyHope(): Promise<Verse> {
     const today = getTodayString();
+    const settings = await getSettings();
+    const translation =
+        settings.preferredTranslation;
 
     const saved = await loadDailyHope();
 
@@ -56,10 +60,17 @@ export async function getDailyHope(): Promise<Verse> {
         saved.date === today
     ) {
         const verse = getVerseById(
-            saved.verseId
+            saved.verseId,
+            translation
         );
 
         if (verse) {
+            if (saved.translation !== translation) {
+                await saveDailyHope({
+                    ...saved,
+                    translation,
+                });
+            }
             return verse;
         }
     }
@@ -68,12 +79,15 @@ export async function getDailyHope(): Promise<Verse> {
         saved?.verseId;
 
     const verse =
-        getRandomVerse(previousVerseId);
+        getRandomVerse(
+            previousVerseId,
+            translation
+        );
 
     await saveDailyHope({
         date: today,
         verseId: verse.id,
-        translation: "en-bbe",
+        translation,
     });
 
     return verse;

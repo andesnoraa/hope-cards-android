@@ -57,5 +57,9 @@ export async function restoreBackup(
         themeName:
             backup.settings.themeName ??
             DEFAULT_SETTINGS.themeName,
+
+        preferredTranslation:
+            backup.settings
+                .preferredTranslation,
     });
 }

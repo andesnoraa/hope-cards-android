@@ -3,6 +3,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import type {
     AppThemeName,
 } from "../theme/appTheme";
+import {
+    isTranslationId,
+    type TranslationId,
+} from "./verseService";
 
 const SETTINGS_KEY = "hope_cards_settings";
 
@@ -14,6 +18,7 @@ export type AppSettings = {
     dailyHopeReminderHour: number;
     dailyHopeReminderMinute: number;
     themeName: AppThemeName;
+    preferredTranslation: TranslationId;
 };
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -24,6 +29,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
     dailyHopeReminderHour: 8,
     dailyHopeReminderMinute: 0,
     themeName: "classic",
+    preferredTranslation: "bsb",
 };
 
 export async function getSettings(): Promise<AppSettings> {
@@ -36,9 +42,18 @@ export async function getSettings(): Promise<AppSettings> {
             return DEFAULT_SETTINGS;
         }
 
+        const stored = JSON.parse(json);
+
         return {
             ...DEFAULT_SETTINGS,
-            ...JSON.parse(json),
+            ...stored,
+            preferredTranslation:
+                isTranslationId(
+                    stored.preferredTranslation
+                )
+                    ? stored.preferredTranslation
+                    : DEFAULT_SETTINGS
+                        .preferredTranslation,
         };
     } catch {
         return DEFAULT_SETTINGS;

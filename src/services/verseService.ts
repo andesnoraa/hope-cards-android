@@ -1,23 +1,90 @@
-import verses from "../data/verses/en-bbe.json";
+import bbeVerses from "../data/verses/en-bbe.json";
+import bsbVerses from "../data/verses/en-bsb.json";
+import webVerses from "../data/verses/en-web.json";
 
 import type { Verse } from "../types/verse";
 
-const verseList = verses as Verse[];
+type TranslationDefinition = {
+  attribution: string;
+  language: string;
+  label: string;
+  license: string;
+  name: string;
+  verses: Verse[];
+};
+
+// To add a translation, import its verse JSON above and add
+// one entry here. Settings, validation, and verse lookup derive
+// their supported translations from this registry.
+const translationRegistry = {
+  bsb: {
+    attribution: "Berean Bible Translation Committee",
+    language: "en",
+    label: "BSB",
+    license: "Public domain",
+    name: "Berean Standard Bible",
+    verses: bsbVerses as Verse[],
+  },
+  bbe: {
+    attribution: "Professor S. H. Hooke",
+    language: "en",
+    label: "BBE",
+    license: "Public domain",
+    name: "Bible in Basic English",
+    verses: bbeVerses as Verse[],
+  },
+  web: {
+    attribution: "World English Bible project",
+    language: "en",
+    label: "WEB",
+    license: "Public domain",
+    name: "World English Bible",
+    verses: webVerses as Verse[],
+  },
+} satisfies Record<string, TranslationDefinition>;
+
+export type TranslationId =
+  keyof typeof translationRegistry;
+
+export const DEFAULT_TRANSLATION: TranslationId = "bsb";
+
+export const TRANSLATION_OPTIONS = (
+  Object.keys(translationRegistry) as TranslationId[]
+).map((id) => ({
+  id,
+  attribution: translationRegistry[id].attribution,
+  language: translationRegistry[id].language,
+  label: translationRegistry[id].label,
+  license: translationRegistry[id].license,
+  name: translationRegistry[id].name,
+}));
+
+export function isTranslationId(
+  value: unknown
+): value is TranslationId {
+  return (
+    typeof value === "string" &&
+    Object.hasOwn(translationRegistry, value)
+  );
+}
 
 /**
  * Returns every verse.
  */
-export function getVerses(): Verse[] {
-  return verseList;
+export function getVerses(
+  translation: TranslationId = DEFAULT_TRANSLATION
+): Verse[] {
+  return translationRegistry[translation].verses;
 }
 
 /**
  * Returns a verse by its ID.
  */
 export function getVerseById(
-  id: string
+  id: string,
+  translation: TranslationId = DEFAULT_TRANSLATION
 ): Verse | undefined {
-  return verseList.find(
+  return getVerses(translation).find(
     (verse) => verse.id === id
   );
 }
@@ -27,8 +94,10 @@ export function getVerseById(
  * If excludeId is provided, a different verse is returned.
  */
 export function getRandomVerse(
-  excludeId?: string
+  excludeId?: string,
+  translation: TranslationId = DEFAULT_TRANSLATION
 ): Verse {
+  const verseList = getVerses(translation);
   if (verseList.length === 0) {
     throw new Error("No verses available.");
   }
@@ -59,9 +128,10 @@ export function getRandomVerse(
  * Returns all verses in a category.
  */
 export function getVersesByCategory(
-  category: string
+  category: string,
+  translation: TranslationId = DEFAULT_TRANSLATION
 ): Verse[] {
-  return verseList.filter(
+  return getVerses(translation).filter(
     (verse) =>
       verse.category.toLowerCase() ===
       category.toLowerCase()
@@ -73,8 +143,10 @@ export function getVersesByCategory(
  * category or tags.
  */
 export function searchVerses(
-  query: string
+  query: string,
+  translation: TranslationId = DEFAULT_TRANSLATION
 ): Verse[] {
+  const verseList = getVerses(translation);
   const q = query.trim().toLowerCase();
 
   if (!q) {
@@ -102,10 +174,14 @@ export function searchVerses(
 /**
  * Returns the translation currently loaded.
  */
-export function getTranslation() {
+export function getTranslation(
+  id: TranslationId = DEFAULT_TRANSLATION
+) {
+  const translation = translationRegistry[id];
+
   return {
-    id: "bbe",
-    language: "en",
-    name: "Bible in Basic English (BBE)",
+    id,
+    language: translation.language,
+    name: `${translation.name} (${translation.label})`,
   };
 }
