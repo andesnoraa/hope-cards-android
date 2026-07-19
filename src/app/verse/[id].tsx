@@ -33,6 +33,36 @@ import {
 } from "../../services/haptics";
 import { useAppTheme } from "../../theme/appTheme";
 
+function getVerseStyle(text: string) {
+  const length = text.length;
+
+  if (length <= 90) {
+    return {
+      fontSize: 24,
+      lineHeight: 40,
+    };
+  }
+
+  if (length <= 150) {
+    return {
+      fontSize: 22,
+      lineHeight: 37,
+    };
+  }
+
+  if (length <= 220) {
+    return {
+      fontSize: 20,
+      lineHeight: 34,
+    };
+  }
+
+  return {
+    fontSize: 18,
+    lineHeight: 31,
+  };
+}
+
 export default function VerseScreen() {
   const { theme } = useAppTheme();
   const { id } = useLocalSearchParams();
@@ -125,6 +155,8 @@ export default function VerseScreen() {
     );
   }
 
+  const verseStyle = getVerseStyle(verse.verse);
+
   return (
     <>
       <Stack.Screen
@@ -176,8 +208,10 @@ export default function VerseScreen() {
           </Text>
 
           <Text
+            selectable
             style={[
               styles.verse,
+              verseStyle,
               { color: theme.cardText },
             ]}
           >
@@ -281,8 +315,6 @@ const styles = StyleSheet.create({
 
   verse: {
     marginTop: 34,
-    fontSize: 23,
-    lineHeight: 44,
     textAlign: "center",
     fontFamily:
       "SourceSerif4_400Regular",
