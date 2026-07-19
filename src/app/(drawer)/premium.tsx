@@ -25,27 +25,42 @@ import { useAppTheme } from "../../theme/appTheme";
 
 const BENEFITS = [
   {
-    title: "Draw encouraging Hope Cards",
+    title: "Draw Hope Cards",
     free: true,
     premium: true,
   },
   {
-    title: "Read a fresh Daily Hope verse",
+    title: "Multiple Bible translations",
+    free: true,
+    premium: true,
+  },
+  {
+    title: "Haptic feedback",
+    free: true,
+    premium: true,
+  },
+  {
+    title: "Daily Hope",
     free: false,
     premium: true,
   },
   {
-    title: "Schedule verse reminders",
+    title: "Background music",
     free: false,
     premium: true,
   },
   {
-    title: "Unlock premium themes",
+    title: "Daily reminders",
     free: false,
     premium: true,
   },
   {
-    title: "Backup and restore saved data",
+    title: "Premium themes",
+    free: false,
+    premium: true,
+  },
+  {
+    title: "Backup & restore",
     free: false,
     premium: true,
   },
@@ -189,7 +204,7 @@ export default function PremiumScreen() {
       setNotice({
         title: "Subscription Active",
         message:
-          "Hope Cards Premium is active. Daily Hope, reminders, backup tools, and premium themes are now unlocked.",
+          "Hope Cards Premium is active. Daily Hope, background music, reminders, backup tools, and premium themes are now unlocked.",
         icon: "checkmark-circle-outline",
       });
     } catch (error) {
@@ -281,9 +296,9 @@ export default function PremiumScreen() {
               },
             ]}
           >
-            Daily verses, reminders, themes,
-            and backup tools in one simple
-            upgrade.
+            Daily verses, peaceful music,
+            reminders, themes, and backup tools
+            in one simple upgrade.
           </Text>
         </View>
 
