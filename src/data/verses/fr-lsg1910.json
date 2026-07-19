@@ -1,0 +1,4551 @@
+[
+  {
+    "id": "john-3-16",
+    "category": "Love",
+    "verse": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle.",
+    "reference": "John 3:16",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "salvation",
+      "eternal-life"
+    ]
+  },
+  {
+    "id": "matthew-11-28",
+    "category": "Comfort",
+    "verse": "Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.",
+    "reference": "Matthew 11:28",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "rest",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-14-27",
+    "category": "Peace",
+    "verse": "Je vous laisse la paix, je vous donne ma paix. Je ne vous donne pas comme le monde donne. Que votre cœur ne se trouble point, et ne s’alarme point.",
+    "reference": "John 14:27",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "comfort",
+      "fear"
+    ]
+  },
+  {
+    "id": "isaiah-41-10",
+    "category": "Hope",
+    "verse": "Ne crains rien, car je suis avec toi; Ne promène pas des regards inquiets, car je suis ton Dieu; Je te fortifie, je viens à ton secours, Je te soutiens de ma droite triomphante.",
+    "reference": "Isaiah 41:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "strength",
+      "comfort"
+    ]
+  },
+  {
+    "id": "philippians-4-13",
+    "category": "Strength",
+    "verse": "Je puis tout par celui qui me fortifie.",
+    "reference": "Philippians 4:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "faith",
+      "confidence"
+    ]
+  },
+  {
+    "id": "philippians-4-6",
+    "category": "Prayer",
+    "verse": "Ne vous inquiétez de rien; mais en toute chose faites connaître vos besoins à Dieu par des prières et des supplications, avec des actions de grâces.",
+    "reference": "Philippians 4:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "anxiety",
+      "peace"
+    ]
+  },
+  {
+    "id": "romans-8-28",
+    "category": "Hope",
+    "verse": "Nous savons, du reste, que toutes choses concourent au bien de ceux qui aiment Dieu, de ceux qui sont appelés selon son dessein.",
+    "reference": "Romans 8:28",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "purpose",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-5-6",
+    "category": "Trust",
+    "verse": "Confie-toi en l’Éternel de tout ton cœur, Et ne t’appuie pas sur ta sagesse; Reconnais-le dans toutes tes voies, Et il aplanira tes sentiers.",
+    "reference": "Proverbs 3:5-6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "wisdom",
+      "guidance"
+    ]
+  },
+  {
+    "id": "psalm-46-1",
+    "category": "Peace",
+    "verse": "Au chef des chantres. Des fils de Koré. Sur alamoth. Cantique.",
+    "reference": "Psalm 46:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "refuge",
+      "help"
+    ]
+  },
+  {
+    "id": "joshua-1-9",
+    "category": "Courage",
+    "verse": "Ne t’ai-je pas donné cet ordre: Fortifie-toi et prends courage? Ne t’effraie point et ne t’épouvante point, car l’Éternel, ton Dieu, est avec toi dans tout ce que tu entreprendras.",
+    "reference": "Joshua 1:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-40-31",
+    "category": "Strength",
+    "verse": "Mais ceux qui se confient en l’Éternel renouvellent leur force. Ils prennent le vol comme les aigles; Ils courent, et ne se lassent point, Ils marchent, et ne se fatiguent point.",
+    "reference": "Isaiah 40:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "hope",
+      "endurance"
+    ]
+  },
+  {
+    "id": "psalm-34-18",
+    "category": "Comfort",
+    "verse": "Quand les justes crient, l’Éternel entend, Et il les délivre de toutes leurs détresses;",
+    "reference": "Psalm 34:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "healing",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-55-22",
+    "category": "Trust",
+    "verse": "Sa bouche est plus douce que la crème, Mais la guerre est dans son cœur; Ses paroles sont plus onctueuses que l’huile, Mais ce sont des épées nues.",
+    "reference": "Psalm 55:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "comfort",
+      "burden"
+    ]
+  },
+  {
+    "id": "jeremiah-29-11",
+    "category": "Hope",
+    "verse": "Car je connais les projets que j’ai formés sur vous, dit l’Éternel, projets de paix et non de malheur, afin de vous donner un avenir et de l’espérance.",
+    "reference": "Jeremiah 29:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "future",
+      "promise"
+    ]
+  },
+  {
+    "id": "2-corinthians-5-7",
+    "category": "Faith",
+    "verse": "car nous marchons par la foi et non par la vue,",
+    "reference": "2 Corinthians 5:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "trust",
+      "walk"
+    ]
+  },
+  {
+    "id": "2-corinthians-12-9",
+    "category": "Grace",
+    "verse": "et il m’a dit: Ma grâce te suffit, car ma puissance s’accomplit dans la faiblesse. Je me glorifierai donc bien plus volontiers de mes faiblesses, afin que la puissance de Christ repose sur moi.",
+    "reference": "2 Corinthians 12:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "strength",
+      "weakness"
+    ]
+  },
+  {
+    "id": "1-peter-5-7",
+    "category": "Trust",
+    "verse": "et déchargez-vous sur lui de tous vos soucis, car lui-même prend soin de vous.",
+    "reference": "1 Peter 5:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "care",
+      "comfort"
+    ]
+  },
+  {
+    "id": "1-john-4-19",
+    "category": "Love",
+    "verse": "Pour nous, nous l’aimons, parce qu’il nous a aimés le premier.",
+    "reference": "1 John 4:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "grace"
+    ]
+  },
+  {
+    "id": "romans-8-38-39",
+    "category": "Hope",
+    "verse": "Car j’ai l’assurance que ni la mort ni la vie, ni les anges ni les dominations, ni les choses présentes ni les choses à venir, ni les puissances, ni la hauteur, ni la profondeur, ni aucune autre créature ne pourra nous séparer de l’amour de Dieu manifesté en Jésus-Christ notre Seigneur.",
+    "reference": "Romans 8:38-39",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "love",
+      "assurance"
+    ]
+  },
+  {
+    "id": "revelation-21-4",
+    "category": "Hope",
+    "verse": "Il essuiera toute larme de leurs yeux, et la mort ne sera plus, et il n’y aura plus ni deuil, ni cri, ni douleur, car les premières choses ont disparu.",
+    "reference": "Revelation 21:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "heaven",
+      "comfort"
+    ]
+  },
+  {
+    "id": "isaiah-26-3",
+    "category": "Peace",
+    "verse": "A celui qui est ferme dans ses sentiments Tu assures la paix, la paix, Parce qu’il se confie en toi.",
+    "reference": "Isaiah 26:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "trust",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-23-1",
+    "category": "Hope",
+    "verse": "Cantique de David. L’Éternel est mon berger: je ne manquerai de rien.",
+    "reference": "Psalm 23:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "shepherd",
+      "provision"
+    ]
+  },
+  {
+    "id": "psalm-23-4",
+    "category": "Comfort",
+    "verse": "Quand je marche dans la vallée de l’ombre de la mort, Je ne crains aucun mal, car tu es avec moi: Ta houlette et ton bâton me rassurent.",
+    "reference": "Psalm 23:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "fear",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-37-5",
+    "category": "Trust",
+    "verse": "Recommande ton sort à l’Éternel, Mets en lui ta confiance, et il agira.",
+    "reference": "Psalm 37:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "guidance",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-37-4",
+    "category": "Joy",
+    "verse": "Fais de l’Éternel tes délices, Et il te donnera ce que ton cœur désire.",
+    "reference": "Psalm 37:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "trust",
+      "delight"
+    ]
+  },
+  {
+    "id": "psalm-27-1",
+    "category": "Strength",
+    "verse": "De David. L’Éternel est ma lumière et mon salut: De qui aurais-je crainte? L’Éternel est le soutien de ma vie: De qui aurais-je peur?",
+    "reference": "Psalm 27:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "courage",
+      "fear"
+    ]
+  },
+  {
+    "id": "jeremiah-33-3",
+    "category": "Prayer",
+    "verse": "Invoque-moi, et je te répondrai; Je t’annoncerai de grandes choses, des choses cachées, Que tu ne connais pas.",
+    "reference": "Jeremiah 33:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "promise",
+      "guidance"
+    ]
+  },
+  {
+    "id": "james-1-5",
+    "category": "Wisdom",
+    "verse": "Si quelqu’un d’entre vous manque de sagesse, qu’il la demande à Dieu, qui donne à tous simplement et sans reproche, et elle lui sera donnée.",
+    "reference": "James 1:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "prayer",
+      "guidance"
+    ]
+  },
+  {
+    "id": "hebrews-4-16",
+    "category": "Grace",
+    "verse": "Approchons-nous donc avec assurance du trône de la grâce, afin d’obtenir miséricorde et de trouver grâce, pour être secourus dans nos besoins.",
+    "reference": "Hebrews 4:16",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "prayer",
+      "mercy"
+    ]
+  },
+  {
+    "id": "hebrews-13-5",
+    "category": "Hope",
+    "verse": "Ne vous livrez pas à l’amour de l’argent; contentez-vous de ce que vous avez; car Dieu lui-même a dit: Je ne te délaisserai point, et je ne t’abandonnerai point.",
+    "reference": "Hebrews 13:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "hebrews-11-1",
+    "category": "Faith",
+    "verse": "Or la foi est une ferme assurance des choses qu’on espère, une démonstration de celles qu’on ne voit pas.",
+    "reference": "Hebrews 11:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "hope",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-john-3-1",
+    "category": "Love",
+    "verse": "Voyez quel amour le Père nous a témoigné, pour que nous soyons appelés enfants de Dieu! Et nous le sommes. Si le monde ne nous connaît pas, c’est qu’il ne l’a pas connu.",
+    "reference": "1 John 3:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "identity",
+      "children-of-god"
+    ]
+  },
+  {
+    "id": "john-16-33",
+    "category": "Hope",
+    "verse": "Je vous ai dit ces choses, afin que vous ayez la paix en moi. Vous aurez des tribulations dans le monde; mais prenez courage, j’ai vaincu le monde.",
+    "reference": "John 16:33",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "peace",
+      "victory"
+    ]
+  },
+  {
+    "id": "john-14-1",
+    "category": "Peace",
+    "verse": "Que votre cœur ne se trouble point. Croyez en Dieu, et croyez en moi.",
+    "reference": "John 14:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "faith",
+      "comfort"
+    ]
+  },
+  {
+    "id": "john-10-10",
+    "category": "Life",
+    "verse": "Le voleur ne vient que pour dérober, égorger et détruire; moi, je suis venu afin que les brebis aient la vie, et qu’elles soient dans l’abondance.",
+    "reference": "John 10:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "life",
+      "hope",
+      "jesus"
+    ]
+  },
+  {
+    "id": "romans-8-31",
+    "category": "Hope",
+    "verse": "Que dirons-nous donc à l’égard de ces choses? Si Dieu est pour nous, qui sera contre nous?",
+    "reference": "Romans 8:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "confidence",
+      "victory"
+    ]
+  },
+  {
+    "id": "romans-8-1",
+    "category": "Freedom",
+    "verse": "Il n’y a donc maintenant aucune condamnation pour ceux qui sont en Jésus-Christ.",
+    "reference": "Romans 8:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "freedom"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-17",
+    "category": "Prayer",
+    "verse": "Priez sans cesse.",
+    "reference": "1 Thessalonians 5:17",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "devotion"
+    ]
+  },
+  {
+    "id": "philippians-4-4",
+    "category": "Joy",
+    "verse": "Réjouissez-vous toujours dans le Seigneur; je le répète, réjouissez-vous.",
+    "reference": "Philippians 4:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "praise",
+      "faith"
+    ]
+  },
+  {
+    "id": "philippians-4-7",
+    "category": "Peace",
+    "verse": "Et la paix de Dieu, qui surpasse toute intelligence, gardera vos cœurs et vos pensées en Jésus-Christ.",
+    "reference": "Philippians 4:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "heart",
+      "prayer"
+    ]
+  },
+  {
+    "id": "genesis-28-15",
+    "category": "Comfort",
+    "verse": "Voici, je suis avec toi, je te garderai partout où tu iras, et je te ramènerai dans ce pays; car je ne t’abandonnerai point, que je n’aie exécuté ce que je te dis.",
+    "reference": "Genesis 28:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "presence",
+      "promise"
+    ]
+  },
+  {
+    "id": "exodus-14-14",
+    "category": "Peace",
+    "verse": "L’Éternel combattra pour vous; et vous, gardez le silence.",
+    "reference": "Exodus 14:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "trust",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-6",
+    "category": "Courage",
+    "verse": "Fortifiez-vous et ayez du courage! Ne craignez point et ne soyez point effrayés devant eux; car l’Éternel, ton Dieu, marchera lui-même avec toi, il ne te délaissera point, il ne t’abandonnera point.",
+    "reference": "Deuteronomy 31:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "strength",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-31-8",
+    "category": "Courage",
+    "verse": "L’Éternel marchera lui-même devant toi, il sera lui-même avec toi, il ne te délaissera point, il ne t’abandonnera point; ne crains point, et ne t’effraie point.",
+    "reference": "Deuteronomy 31:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "guidance",
+      "fear"
+    ]
+  },
+  {
+    "id": "psalm-4-8",
+    "category": "Peace",
+    "verse": "Tu mets dans mon cœur plus de joie qu’ils n’en ont Quand abondent leur froment et leur moût.",
+    "reference": "Psalm 4:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "safety"
+    ]
+  },
+  {
+    "id": "1-corinthians-6-11",
+    "category": "Hope",
+    "verse": "Et c’est là ce que vous étiez, quelques-uns de vous. Mais vous avez été lavés, mais vous avez été sanctifiés, mais vous avez été justifiés au nom du Seigneur Jésus-Christ, et par l’Esprit de notre Dieu.",
+    "reference": "1 Corinthians 6:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-16-8",
+    "category": "Trust",
+    "verse": "J’ai constamment l’Éternel sous mes yeux; Quand il est à ma droite, je ne chancelle pas.",
+    "reference": "Psalm 16:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "stability",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-18-2",
+    "category": "Strength",
+    "verse": "Je t’aime, ô Éternel, ma force!",
+    "reference": "Psalm 18:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "refuge",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-19-14",
+    "category": "Prayer",
+    "verse": "Préserve aussi ton serviteur des orgueilleux; Qu’ils ne dominent point sur moi! Alors je serai intègre, innocent de grands péchés.",
+    "reference": "Psalm 19:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "heart",
+      "words"
+    ]
+  },
+  {
+    "id": "psalm-27-14",
+    "category": "Hope",
+    "verse": "Espère en l’Éternel! Fortifie-toi et que ton cœur s’affermisse! Espère en l’Éternel!",
+    "reference": "Psalm 27:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "waiting",
+      "courage"
+    ]
+  },
+  {
+    "id": "psalm-31-24",
+    "category": "Courage",
+    "verse": "Aimez l’Éternel, vous qui avez de la piété! L’Éternel garde les fidèles, Et il punit sévèrement les orgueilleux.",
+    "reference": "Psalm 31:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "hope",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalm-32-8",
+    "category": "Wisdom",
+    "verse": "Je t’instruirai et te montrerai la voie que tu dois suivre; Je te conseillerai, j’aurai le regard sur toi.",
+    "reference": "Psalm 32:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "teaching"
+    ]
+  },
+  {
+    "id": "psalm-34-4",
+    "category": "Comfort",
+    "verse": "Exaltez avec moi l’Éternel! Célébrons tous son nom!",
+    "reference": "Psalm 34:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "fear",
+      "deliverance"
+    ]
+  },
+  {
+    "id": "psalm-46-10",
+    "category": "Peace",
+    "verse": "C’est lui qui a fait cesser les combats jusqu’au bout de la terre; Il a brisé l’arc, et il a rompu la lance, Il a consumé par le feu les chars de guerre.",
+    "reference": "Psalm 46:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "stillness",
+      "god"
+    ]
+  },
+  {
+    "id": "psalm-56-3",
+    "category": "Trust",
+    "verse": "Tout le jour mes adversaires me harcèlent; Ils sont nombreux, ils me font la guerre comme des hautains.",
+    "reference": "Psalm 56:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "fear",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-73-26",
+    "category": "Strength",
+    "verse": "Ma chair et mon cœur peuvent se consumer: Dieu sera toujours le rocher de mon cœur et mon partage.",
+    "reference": "Psalm 73:26",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "heart",
+      "god"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-12",
+    "category": "Grace",
+    "verse": "pour que le nom de notre Seigneur Jésus soit glorifié en vous, et que vous soyez glorifiés en lui, selon la grâce de notre Dieu et du Seigneur Jésus-Christ.",
+    "reference": "2 Thessalonians 1:12",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-94-19",
+    "category": "Comfort",
+    "verse": "Quand les pensées s’agitent en foule au-dedans de moi, Tes consolations réjouissent mon âme.",
+    "reference": "Psalm 94:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "anxiety",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalm-100-5",
+    "category": "Love",
+    "verse": "Car l’Éternel est bon; sa bonté dure toujours, Et sa fidélité de génération en génération.",
+    "reference": "Psalm 100:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "psalm-118-24",
+    "category": "Joy",
+    "verse": "C’est ici la journée que l’Éternel a faite: Qu’elle soit pour nous un sujet d’allégresse et de joie!",
+    "reference": "Psalm 118:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "gratitude",
+      "today"
+    ]
+  },
+  {
+    "id": "romans-8-39",
+    "category": "Grace",
+    "verse": "ni les puissances, ni la hauteur, ni la profondeur, ni aucune autre créature ne pourra nous séparer de l’amour de Dieu manifesté en Jésus-Christ notre Seigneur.",
+    "reference": "Romans 8:39",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalm-121-2",
+    "category": "Strength",
+    "verse": "Le secours me vient de l’Éternel, Qui a fait les cieux et la terre.",
+    "reference": "Psalm 121:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "creator"
+    ]
+  },
+  {
+    "id": "psalm-138-8",
+    "category": "Hope",
+    "verse": "L’Éternel agira en ma faveur. Éternel, ta bonté dure toujours, N’abandonne pas les œuvres de tes mains!",
+    "reference": "Psalm 138:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "purpose",
+      "mercy"
+    ]
+  },
+  {
+    "id": "proverbs-16-3",
+    "category": "Trust",
+    "verse": "Recommande à l’Éternel tes œuvres, Et tes projets réussiront.",
+    "reference": "Proverbs 16:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "plans",
+      "work"
+    ]
+  },
+  {
+    "id": "proverbs-18-10",
+    "category": "Strength",
+    "verse": "Le nom de l’Éternel est une tour forte; Le juste s’y réfugie, et se trouve en sûreté.",
+    "reference": "Proverbs 18:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "refuge",
+      "safety"
+    ]
+  },
+  {
+    "id": "isaiah-12-2",
+    "category": "Trust",
+    "verse": "Voici, Dieu est ma délivrance, Je serai plein de confiance, et je ne craindrai rien; Car l’Éternel, l’Éternel est ma force et le sujet de mes louanges; C’est lui qui m’a sauvé.",
+    "reference": "Isaiah 12:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "salvation",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-26-4",
+    "category": "Trust",
+    "verse": "Confiez-vous en l’Éternel à perpétuité, Car l’Éternel, l’Éternel est le rocher des siècles.",
+    "reference": "Isaiah 26:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "strength",
+      "eternal"
+    ]
+  },
+  {
+    "id": "isaiah-30-21",
+    "category": "Wisdom",
+    "verse": "Tes oreilles entendront derrière toi la voix qui dira: Voici le chemin, marchez-y! Car vous iriez à droite, ou vous iriez à gauche.",
+    "reference": "Isaiah 30:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "direction"
+    ]
+  },
+  {
+    "id": "isaiah-43-2",
+    "category": "Comfort",
+    "verse": "Si tu traverses les eaux, je serai avec toi; Et les fleuves, ils ne te submergeront point; Si tu marches dans le feu, tu ne te brûleras pas, Et la flamme ne t’embrasera pas.",
+    "reference": "Isaiah 43:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "trials",
+      "presence"
+    ]
+  },
+  {
+    "id": "isaiah-43-19",
+    "category": "Hope",
+    "verse": "Voici, je vais faire une chose nouvelle, sur le point d’arriver: Ne la connaîtrez-vous pas? Je mettrai un chemin dans le désert, Et des fleuves dans la solitude.",
+    "reference": "Isaiah 43:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "new",
+      "way"
+    ]
+  },
+  {
+    "id": "isaiah-54-10",
+    "category": "Love",
+    "verse": "Quand les montagnes s’éloigneraient, Quand les collines chancelleraient, Mon amour ne s’éloignera point de toi, Et mon alliance de paix ne chancellera point, Dit l’Éternel, qui a compassion de toi.",
+    "reference": "Isaiah 54:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "peace",
+      "mercy"
+    ]
+  },
+  {
+    "id": "lamentations-3-23",
+    "category": "Grace",
+    "verse": "Elles se renouvellent chaque matin. Oh! Que ta fidélité est grande!",
+    "reference": "Lamentations 3:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "faithfulness",
+      "morning"
+    ]
+  },
+  {
+    "id": "matthew-6-33",
+    "category": "Trust",
+    "verse": "Cherchez premièrement le royaume et la justice de Dieu; et toutes ces choses vous seront données par-dessus.",
+    "reference": "Matthew 6:33",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "kingdom",
+      "provision"
+    ]
+  },
+  {
+    "id": "galatians-6-18",
+    "category": "Grace",
+    "verse": "Frères, que la grâce de notre Seigneur Jésus-Christ soit avec votre esprit! Amen!",
+    "reference": "Galatians 6:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "matthew-19-26",
+    "category": "Faith",
+    "verse": "Jésus les regarda, et leur dit: Aux hommes cela est impossible, mais à Dieu tout est possible.",
+    "reference": "Matthew 19:26",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "mark-10-27",
+    "category": "Faith",
+    "verse": "Jésus les regarda, et dit: Cela est impossible aux hommes, mais non à Dieu: car tout est possible à Dieu.",
+    "reference": "Mark 10:27",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "possibility",
+      "god"
+    ]
+  },
+  {
+    "id": "luke-1-37",
+    "category": "Faith",
+    "verse": "Car rien n’est impossible à Dieu.",
+    "reference": "Luke 1:37",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "promise",
+      "god"
+    ]
+  },
+  {
+    "id": "john-6-35",
+    "category": "Life",
+    "verse": "Jésus leur dit: Je suis le pain de vie. Celui qui vient à moi n’aura jamais faim, et celui qui croit en moi n’aura jamais soif.",
+    "reference": "John 6:35",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "life",
+      "jesus",
+      "satisfaction"
+    ]
+  },
+  {
+    "id": "john-8-12",
+    "category": "Life",
+    "verse": "Jésus leur parla de nouveau, et dit: Je suis la lumière du monde; celui qui me suit ne marchera pas dans les ténèbres, mais il aura la lumière de la vie.",
+    "reference": "John 8:12",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "life",
+      "light",
+      "jesus"
+    ]
+  },
+  {
+    "id": "john-15-5",
+    "category": "Faith",
+    "verse": "Je suis le cep, vous êtes les sarments. Celui qui demeure en moi et en qui je demeure porte beaucoup de fruit, car sans moi vous ne pouvez rien faire.",
+    "reference": "John 15:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "fruit",
+      "jesus"
+    ]
+  },
+  {
+    "id": "ephesians-6-24",
+    "category": "Grace",
+    "verse": "Que la grâce soit avec tous ceux qui aiment notre Seigneur Jésus-Christ d’un amour inaltérable!",
+    "reference": "Ephesians 6:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-15-13",
+    "category": "Hope",
+    "verse": "Que le Dieu de l’espérance vous remplisse de toute joie et de toute paix dans la foi, pour que vous abondiez en espérance, par la puissance du Saint-Esprit!",
+    "reference": "Romans 15:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "joy",
+      "peace"
+    ]
+  },
+  {
+    "id": "1-corinthians-10-13",
+    "category": "Strength",
+    "verse": "Aucune tentation ne vous est survenue qui n’ait été humaine, et Dieu, qui est fidèle, ne permettra pas que vous soyez tentés au-delà de vos forces; mais avec la tentation il préparera aussi le moyen d’en sortir, afin que vous puissiez la supporter.",
+    "reference": "1 Corinthians 10:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "testing",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "1-corinthians-13-13",
+    "category": "Love",
+    "verse": "Maintenant donc ces trois choses demeurent: la foi, l’espérance, la charité; mais la plus grande de ces choses, c’est la charité.",
+    "reference": "1 Corinthians 13:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "faith",
+      "hope"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-16",
+    "category": "Strength",
+    "verse": "C’est pourquoi nous ne perdons pas courage. Et lors même que notre homme extérieur se détruit, notre homme intérieur se renouvelle de jour en jour.",
+    "reference": "2 Corinthians 4:16",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "renewal",
+      "inner-life"
+    ]
+  },
+  {
+    "id": "ephesians-2-10",
+    "category": "Life",
+    "verse": "Car nous sommes son ouvrage, ayant été créés en Jésus-Christ pour de bonnes œuvres, que Dieu a préparées d’avance, afin que nous les pratiquions.",
+    "reference": "Ephesians 2:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "life",
+      "purpose",
+      "good-works"
+    ]
+  },
+  {
+    "id": "colossians-4-12",
+    "category": "Grace",
+    "verse": "Épaphras, qui est des vôtres, vous salue: serviteur de Jésus-Christ, il ne cesse de combattre pour vous dans ses prières, afin que, parfaits et pleinement persuadés, vous persistiez dans une entière soumission à la volonté de Dieu.",
+    "reference": "Colossians 4:12",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "ephesians-6-10",
+    "category": "Strength",
+    "verse": "Au reste, fortifiez-vous dans le Seigneur, et par sa force toute-puissante.",
+    "reference": "Ephesians 6:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "power",
+      "lord"
+    ]
+  },
+  {
+    "id": "colossians-3-15",
+    "category": "Peace",
+    "verse": "Et que la paix de Christ, à laquelle vous avez été appelés pour former un seul corps, règne dans vos cœurs. Et soyez reconnaissants.",
+    "reference": "Colossians 3:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "gratitude",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-timothy-1-7",
+    "category": "Courage",
+    "verse": "Car ce n’est pas un esprit de timidité que Dieu nous a donné, mais un esprit de force, d’amour et de sagesse.",
+    "reference": "2 Timothy 1:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "power",
+      "love"
+    ]
+  },
+  {
+    "id": "genesis-15-6",
+    "category": "Faith",
+    "verse": "Abram eut confiance en l’Éternel, qui le lui imputa à justice.",
+    "reference": "Genesis 15:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "righteousness",
+      "trust"
+    ]
+  },
+  {
+    "id": "exodus-15-2",
+    "category": "Strength",
+    "verse": "L’Éternel est ma force et le sujet de mes louanges; C’est lui qui m’a sauvé. Il est mon Dieu: je le célèbrerai; Il est le Dieu de mon père: je l’exalterai.",
+    "reference": "Exodus 15:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "colossians-3-16",
+    "category": "Wisdom",
+    "verse": "Que la parole de Christ habite parmi vous abondamment; instruisez-vous et exhortez-vous les uns les autres en toute sagesse, par des psaumes, par des hymnes, par des cantiques spirituels, chantant à Dieu dans vos cœurs sous l’inspiration de la grâce.",
+    "reference": "Colossians 3:16",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "truth"
+    ]
+  },
+  {
+    "id": "isaiah-33-2",
+    "category": "Hope",
+    "verse": "Éternel, aie pitié de nous! Nous espérons en toi. Sois notre aide chaque matin, Et notre délivrance au temps de la détresse!",
+    "reference": "Isaiah 33:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "numbers-6-26",
+    "category": "Peace",
+    "verse": "Que l’Éternel tourne sa face vers toi, et qu’il te donne la paix!",
+    "reference": "Numbers 6:26",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "blessing",
+      "presence"
+    ]
+  },
+  {
+    "id": "joshua-24-15",
+    "category": "Faith",
+    "verse": "Et si vous ne trouvez pas bon de servir l’Éternel, choisissez aujourd’hui qui vous voulez servir, ou les dieux que servaient vos pères au-delà du fleuve, ou les dieux des Amoréens dans le pays desquels vous habitez. Moi et ma maison, nous servirons l’Éternel.",
+    "reference": "Joshua 24:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "choice",
+      "service"
+    ]
+  },
+  {
+    "id": "1-samuel-2-2",
+    "category": "Strength",
+    "verse": "Nul n’est saint comme l’Éternel; Il n’y a point d’autre Dieu que toi; Il n’y a point de rocher comme notre Dieu.",
+    "reference": "1 Samuel 2:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "holiness",
+      "rock"
+    ]
+  },
+  {
+    "id": "2-samuel-22-31",
+    "category": "Trust",
+    "verse": "Les voies de Dieu sont parfaites, La parole de l’Éternel est éprouvée; Il est un bouclier pour tous ceux qui se confient en lui.",
+    "reference": "2 Samuel 22:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "word",
+      "refuge"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-11",
+    "category": "Prayer",
+    "verse": "Ayez recours à l’Éternel et à son appui, Cherchez continuellement sa face!",
+    "reference": "1 Chronicles 16:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "strength"
+    ]
+  },
+  {
+    "id": "1-chronicles-16-34",
+    "category": "Love",
+    "verse": "Louez l’Éternel, car il est bon, Car sa miséricorde dure à toujours!",
+    "reference": "1 Chronicles 16:34",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "nehemiah-8-10",
+    "category": "Joy",
+    "verse": "Ils leur dirent: Allez, mangez des viandes grasses et buvez des liqueurs douces, et envoyez des portions à ceux qui n’ont rien de préparé, car ce jour est consacré à notre Seigneur; ne vous affligez pas, car la joie de l’Éternel sera votre force.",
+    "reference": "Nehemiah 8:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "strength",
+      "lord"
+    ]
+  },
+  {
+    "id": "job-23-10",
+    "category": "Trust",
+    "verse": "Il sait néanmoins quelle voie j’ai suivie; Et, s’il m’éprouvait, je sortirais pur comme l’or.",
+    "reference": "Job 23:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "testing",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalm-1-3",
+    "category": "Life",
+    "verse": "Il est comme un arbre planté près d’un courant d’eau, Qui donne son fruit en sa saison, Et dont le feuillage ne se flétrit point: Tout ce qu’il fait lui réussit.",
+    "reference": "Psalm 1:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "life",
+      "fruit",
+      "growth"
+    ]
+  },
+  {
+    "id": "psalm-5-3",
+    "category": "Prayer",
+    "verse": "Sois attentif à mes cris, mon roi et mon Dieu! C’est à toi que j’adresse ma prière.",
+    "reference": "Psalm 5:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "morning",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-16-11",
+    "category": "Joy",
+    "verse": "Tu me feras connaître le sentier de la vie; Il y a d’abondantes joies devant ta face, Des délices éternelles à ta droite.",
+    "reference": "Psalm 16:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "presence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalm-20-7",
+    "category": "Trust",
+    "verse": "Je sais déjà que l’Éternel sauve son oint; Il l’exaucera des cieux, de sa sainte demeure, Par le secours puissant de sa droite.",
+    "reference": "Psalm 20:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "lord"
+    ]
+  },
+  {
+    "id": "psalm-25-4",
+    "category": "Wisdom",
+    "verse": "Éternel! fais-moi connaître tes voies, Enseigne-moi tes sentiers.",
+    "reference": "Psalm 25:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "ways"
+    ]
+  },
+  {
+    "id": "psalm-25-5",
+    "category": "Wisdom",
+    "verse": "Conduis-moi dans ta vérité, et instruis-moi; Car tu es le Dieu de mon salut, Tu es toujours mon espérance.",
+    "reference": "Psalm 25:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "truth",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-29-11",
+    "category": "Peace",
+    "verse": "L’Éternel donne la force à son peuple; L’Éternel bénit son peuple et le rend heureux.",
+    "reference": "Psalm 29:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "strength",
+      "blessing"
+    ]
+  },
+  {
+    "id": "psalm-30-5",
+    "category": "Joy",
+    "verse": "Chantez à l’Éternel, vous qui l’aimez, Célébrez par vos louanges sa sainteté!",
+    "reference": "Psalm 30:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "morning",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalm-33-20",
+    "category": "Hope",
+    "verse": "Notre âme espère en l’Éternel; Il est notre secours et notre bouclier.",
+    "reference": "Psalm 33:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "help",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-34-8",
+    "category": "Trust",
+    "verse": "L’ange de l’Éternel campe autour de ceux qui le craignent, Et il les arrache au danger.",
+    "reference": "Psalm 34:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "goodness",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalm-37-7",
+    "category": "Peace",
+    "verse": "Garde le silence devant l’Éternel, et espère en lui; Ne t’irrite pas contre celui qui réussit dans ses voies, Contre l’homme qui vient à bout de ses mauvais desseins.",
+    "reference": "Psalm 37:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "waiting",
+      "rest"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-8",
+    "category": "Hope",
+    "verse": "Mais nous qui sommes du jour, soyons sobres, ayant revêtu la cuirasse de la foi et de la charité, et ayant pour casque l’espérance du salut.",
+    "reference": "1 Thessalonians 5:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-51-10",
+    "category": "Grace",
+    "verse": "Annonce-moi l’allégresse et la joie, Et les os que tu as brisés se réjouiront.",
+    "reference": "Psalm 51:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "renewal",
+      "heart"
+    ]
+  },
+  {
+    "id": "jeremiah-3-23",
+    "category": "Hope",
+    "verse": "Oui, le bruit qui vient des collines et des montagnes n’est que mensonge; Oui, c’est en l’Éternel, notre Dieu, qu’est le salut d’Israël.",
+    "reference": "Jeremiah 3:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalm-62-5",
+    "category": "Hope",
+    "verse": "Ils conspirent pour le précipiter de son poste élevé; Ils prennent plaisir au mensonge; Ils bénissent de leur bouche, Et ils maudissent dans leur cœur. — Pause.",
+    "reference": "Psalm 62:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "rest",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalm-84-11",
+    "category": "Grace",
+    "verse": "Mieux vaut un jour dans tes parvis que mille ailleurs; Je préfère me tenir sur le seuil de la maison de mon Dieu, Plutôt que d’habiter sous les tentes de la méchanceté.",
+    "reference": "Psalm 84:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "provision",
+      "glory"
+    ]
+  },
+  {
+    "id": "psalm-86-5",
+    "category": "Grace",
+    "verse": "Car tu es bon, Seigneur, tu pardonnes, Tu es plein d’amour pour tous ceux qui t’invoquent.",
+    "reference": "Psalm 86:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "mercy"
+    ]
+  },
+  {
+    "id": "psalm-103-8",
+    "category": "Love",
+    "verse": "L’Éternel est miséricordieux et compatissant, Lent à la colère et riche en bonté;",
+    "reference": "Psalm 103:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalm-103-12",
+    "category": "Freedom",
+    "verse": "Autant l’orient est éloigné de l’occident, Autant il éloigne de nous nos transgressions.",
+    "reference": "Psalm 103:12",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "freedom",
+      "forgiveness",
+      "sin"
+    ]
+  },
+  {
+    "id": "acts-20-21",
+    "category": "Trust",
+    "verse": "annonçant aux Juifs et aux Grecs la repentance envers Dieu et la foi en notre Seigneur Jésus-Christ.",
+    "reference": "Acts 20:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalm-121-7",
+    "category": "Comfort",
+    "verse": "L’Éternel te gardera de tout mal, Il gardera ton âme;",
+    "reference": "Psalm 121:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "protection",
+      "safety"
+    ]
+  },
+  {
+    "id": "psalm-145-18",
+    "category": "Prayer",
+    "verse": "L’Éternel est près de tous ceux qui l’invoquent, De tous ceux qui l’invoquent avec sincérité;",
+    "reference": "Psalm 145:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "nearness",
+      "truth"
+    ]
+  },
+  {
+    "id": "psalm-147-3",
+    "category": "Comfort",
+    "verse": "Il guérit ceux qui ont le cœur brisé, Et il panse leurs blessures.",
+    "reference": "Psalm 147:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "healing",
+      "heart"
+    ]
+  },
+  {
+    "id": "1-thessalonians-2-19",
+    "category": "Hope",
+    "verse": "Qui est, en effet, notre espérance, ou notre joie, ou notre couronne de gloire? N’est-ce pas vous aussi, devant notre Seigneur Jésus, lors de son avènement?",
+    "reference": "1 Thessalonians 2:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "proverbs-4-23",
+    "category": "Wisdom",
+    "verse": "Garde ton cœur plus que toute autre chose, Car de lui viennent les sources de la vie.",
+    "reference": "Proverbs 4:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "heart",
+      "life"
+    ]
+  },
+  {
+    "id": "proverbs-17-22",
+    "category": "Joy",
+    "verse": "Un cœur joyeux est un bon remède, Mais un esprit abattu dessèche les os.",
+    "reference": "Proverbs 17:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "heart",
+      "healing"
+    ]
+  },
+  {
+    "id": "isaiah-25-1",
+    "category": "Trust",
+    "verse": "O Éternel! Tu es mon Dieu; Je t’exalterai, je célébrerai ton nom, Car tu as fait des choses merveilleuses; Tes desseins conçus à l’avance se sont fidèlement accomplis.",
+    "reference": "Isaiah 25:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faithfulness",
+      "praise"
+    ]
+  },
+  {
+    "id": "isaiah-40-29",
+    "category": "Strength",
+    "verse": "Il donne de la force à celui qui est fatigué, Et il augmente la vigueur de celui qui tombe en défaillance.",
+    "reference": "Isaiah 40:29",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "weakness",
+      "power"
+    ]
+  },
+  {
+    "id": "philippians-2-11",
+    "category": "Hope",
+    "verse": "et que toute langue confesse que Jésus-Christ est Seigneur, à la gloire de Dieu le Père.",
+    "reference": "Philippians 2:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-58-11",
+    "category": "Wisdom",
+    "verse": "L’Éternel sera toujours ton guide, Il rassasiera ton âme dans les lieux arides, Et il redonnera de la vigueur à tes membres; Tu seras comme un jardin arrosé, Comme une source dont les eaux ne tarissent pas.",
+    "reference": "Isaiah 58:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "provision",
+      "strength"
+    ]
+  },
+  {
+    "id": "jeremiah-17-7",
+    "category": "Trust",
+    "verse": "Béni soit l’homme qui se confie dans l’Éternel, Et dont l’Éternel est l’espérance!",
+    "reference": "Jeremiah 17:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "blessing",
+      "hope"
+    ]
+  },
+  {
+    "id": "jeremiah-17-8",
+    "category": "Hope",
+    "verse": "Il est comme un arbre planté près des eaux, Et qui étend ses racines vers le courant; Il n’aperçoit point la chaleur quand elle vient, Et son feuillage reste vert; Dans l’année de la sécheresse, il n’a point de crainte, Et il ne cesse de porter du fruit.",
+    "reference": "Jeremiah 17:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "growth",
+      "fruit"
+    ]
+  },
+  {
+    "id": "micah-6-8",
+    "category": "Wisdom",
+    "verse": "On t’a fait connaître, ô homme, ce qui est bien; Et ce que l’Éternel demande de toi, C’est que tu pratiques la justice, Que tu aimes la miséricorde, Et que tu marches humblement avec ton Dieu.",
+    "reference": "Micah 6:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "justice",
+      "mercy"
+    ]
+  },
+  {
+    "id": "nahum-1-7",
+    "category": "Comfort",
+    "verse": "L’Éternel est bon, Il est un refuge au jour de la détresse; Il connaît ceux qui se confient en lui.",
+    "reference": "Nahum 1:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "refuge",
+      "trust"
+    ]
+  },
+  {
+    "id": "habakkuk-3-18",
+    "category": "Joy",
+    "verse": "Toutefois, je veux me réjouir en l’Éternel, Je veux me réjouir dans le Dieu de mon salut.",
+    "reference": "Habakkuk 3:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "salvation",
+      "praise"
+    ]
+  },
+  {
+    "id": "matthew-5-8",
+    "category": "Grace",
+    "verse": "Heureux ceux qui ont le cœur pur, car ils verront Dieu!",
+    "reference": "Matthew 5:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "purity",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-5-9",
+    "category": "Peace",
+    "verse": "Heureux ceux qui procurent la paix, car ils seront appelés fils de Dieu!",
+    "reference": "Matthew 5:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "children",
+      "god"
+    ]
+  },
+  {
+    "id": "romans-10-1",
+    "category": "Hope",
+    "verse": "Frères, le vœu de mon cœur et ma prière à Dieu pour eux, c’est qu’ils soient sauvés.",
+    "reference": "Romans 10:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "luke-6-36",
+    "category": "Grace",
+    "verse": "Soyez donc miséricordieux, comme votre Père est miséricordieux.",
+    "reference": "Luke 6:36",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "father"
+    ]
+  },
+  {
+    "id": "romans-15-6",
+    "category": "Hope",
+    "verse": "afin que tous ensemble, d’une seule bouche, vous glorifiiez le Dieu et Père de notre Seigneur Jésus-Christ.",
+    "reference": "Romans 15:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "john-3-17",
+    "category": "Grace",
+    "verse": "Dieu, en effet, n’a pas envoyé son Fils dans le monde pour qu’il juge le monde, mais pour que le monde soit sauvé par lui.",
+    "reference": "John 3:17",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "salvation",
+      "world"
+    ]
+  },
+  {
+    "id": "john-8-36",
+    "category": "Freedom",
+    "verse": "Si donc le Fils vous affranchit, vous serez réellement libres.",
+    "reference": "John 8:36",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "freedom",
+      "son",
+      "truth"
+    ]
+  },
+  {
+    "id": "acts-16-31",
+    "category": "Faith",
+    "verse": "Paul et Silas répondirent: Crois au Seigneur Jésus, et tu seras sauvé, toi et ta famille.",
+    "reference": "Acts 16:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "salvation",
+      "belief"
+    ]
+  },
+  {
+    "id": "psalms-71-5",
+    "category": "Hope",
+    "verse": "Car tu es mon espérance, Seigneur Éternel! En toi je me confie dès ma jeunesse.",
+    "reference": "Psalms 71:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-6-14",
+    "category": "Freedom",
+    "verse": "Car le péché n’aura point de pouvoir sur vous, puisque vous êtes, non sous la loi, mais sous la grâce.",
+    "reference": "Romans 6:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "freedom",
+      "grace",
+      "sin"
+    ]
+  },
+  {
+    "id": "romans-10-13",
+    "category": "Prayer",
+    "verse": "Car quiconque invoquera le nom du Seigneur sera sauvé.",
+    "reference": "Romans 10:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "salvation",
+      "calling"
+    ]
+  },
+  {
+    "id": "galatians-5-1",
+    "category": "Freedom",
+    "verse": "C’est pour la liberté que Christ nous a affranchis. Demeurez donc fermes, et ne vous laissez pas mettre de nouveau sous le joug de la servitude.",
+    "reference": "Galatians 5:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "freedom",
+      "christ",
+      "standing"
+    ]
+  },
+  {
+    "id": "isaiah-30-15",
+    "category": "Peace",
+    "verse": "Car ainsi a parlé le Seigneur, l’Éternel, le Saint d’Israël: C’est dans la tranquillité et le repos que sera votre salut, C’est dans le calme et la confiance que sera votre force. Mais vous ne l’avez pas voulu!",
+    "reference": "Isaiah 30:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "isaiah-52-7",
+    "category": "Hope",
+    "verse": "Qu’ils sont beaux sur les montagnes, Les pieds de celui qui apporte de bonnes nouvelles, Qui publie la paix! De celui qui apporte de bonnes nouvelles, Qui publie le salut! De celui qui dit à Sion: Ton Dieu règne!",
+    "reference": "Isaiah 52:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "colossians-3-2",
+    "category": "Wisdom",
+    "verse": "Affectionnez-vous aux choses d’en haut, et non à celles qui sont sur la terre.",
+    "reference": "Colossians 3:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "focus",
+      "heaven"
+    ]
+  },
+  {
+    "id": "1-corinthians-8-6",
+    "category": "Hope",
+    "verse": "néanmoins pour nous il n’y a qu’un seul Dieu, le Père, de qui viennent toutes choses et pour qui nous sommes, et un seul Seigneur, Jésus-Christ, par qui sont toutes choses et par qui nous sommes.",
+    "reference": "1 Corinthians 8:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "james-1-17",
+    "category": "Grace",
+    "verse": "toute grâce excellente et tout don parfait descendent d’en haut, du Père des lumières, chez lequel il n’y a ni changement ni ombre de variation.",
+    "reference": "James 1:17",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "gift",
+      "father"
+    ]
+  },
+  {
+    "id": "james-4-8",
+    "category": "Prayer",
+    "verse": "Approchez-vous de Dieu, et il s’approchera de vous. Nettoyez vos mains, pécheurs; purifiez vos cœurs, hommes irrésolus.",
+    "reference": "James 4:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "nearness",
+      "heart"
+    ]
+  },
+  {
+    "id": "philemon-1-25",
+    "category": "Grace",
+    "verse": "Que la grâce de notre Seigneur Jésus-Christ soit avec votre esprit!",
+    "reference": "Philemon 1:25",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "1-peter-2-24",
+    "category": "Grace",
+    "verse": "lui qui a porté lui-même nos péchés en son corps sur le bois, afin que morts aux péchés nous vivions pour la justice; lui par les meurtrissures duquel vous avez été guéris.",
+    "reference": "1 Peter 2:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "healing",
+      "righteousness"
+    ]
+  },
+  {
+    "id": "1-john-1-9",
+    "category": "Grace",
+    "verse": "Si nous confessons nos péchés, il est fidèle et juste pour nous les pardonner, et pour nous purifier de toute iniquité.",
+    "reference": "1 John 1:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "forgiveness",
+      "cleansing"
+    ]
+  },
+  {
+    "id": "1-john-4-18",
+    "category": "Love",
+    "verse": "La crainte n’est pas dans l’amour, mais l’amour parfait bannit la crainte; car la crainte suppose un châtiment, et celui qui craint n’est pas parfait dans l’amour.",
+    "reference": "1 John 4:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "fear",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-11",
+    "category": "Peace",
+    "verse": "Au reste, frères, soyez dans la joie, perfectionnez-vous, consolez-vous, ayez un même sentiment, vivez en paix; et le Dieu d’amour et de paix sera avec vous.",
+    "reference": "2 Corinthians 13:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-103-20",
+    "category": "Hope",
+    "verse": "Bénissez l’Éternel, vous ses anges, Qui êtes puissants en force, et qui exécutez ses ordres, En obéissant à la voix de sa parole!",
+    "reference": "Psalms 103:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-30",
+    "category": "Hope",
+    "verse": "Tu envoies ton souffle: ils sont créés, Et tu renouvelles la face de la terre.",
+    "reference": "Psalms 104:30",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "life"
+    ]
+  },
+  {
+    "id": "isaiah-25-9",
+    "category": "Hope",
+    "verse": "En ce jour l’on dira: Voici, c’est notre Dieu, en qui nous avons confiance, Et c’est lui qui nous sauve; C’est l’Éternel, en qui nous avons confiance; Soyons dans l’allégresse, et réjouissons-nous de son salut!",
+    "reference": "Isaiah 25:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-108-7",
+    "category": "Hope",
+    "verse": "Afin que tes bien-aimés soient délivrés, Sauve par ta droite, et exauce-nous!",
+    "reference": "Psalms 108:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-109-20",
+    "category": "Hope",
+    "verse": "Tel soit, de la part de l’Éternel, le salaire de mes ennemis, Et de ceux qui parlent méchamment de moi!",
+    "reference": "Psalms 109:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-112-7",
+    "category": "Hope",
+    "verse": "Il ne craint point les mauvaises nouvelles; Son cœur est ferme, confiant en l’Éternel.",
+    "reference": "Psalms 112:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-115-1",
+    "category": "Hope",
+    "verse": "Non pas à nous, Éternel, non pas à nous, Mais à ton nom donne gloire, A cause de ta bonté, à cause de ta fidélité!",
+    "reference": "Psalms 115:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-7",
+    "category": "Hope",
+    "verse": "Mon âme, retourne à ton repos, Car l’Éternel t’a fait du bien.",
+    "reference": "Psalms 116:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-118-14",
+    "category": "Hope",
+    "verse": "L’Éternel est ma force et le sujet de mes louanges; C’est lui qui m’a sauvé.",
+    "reference": "Psalms 118:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-15",
+    "category": "Hope",
+    "verse": "Des cris de triomphe et de salut s’élèvent dans les tentes des justes: La droite de l’Éternel manifeste sa puissance!",
+    "reference": "Psalms 118:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-118-8",
+    "category": "Hope",
+    "verse": "Mieux vaut chercher un refuge en l’Éternel Que de se confier à l’homme;",
+    "reference": "Psalms 118:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-118-9",
+    "category": "Hope",
+    "verse": "Mieux vaut chercher un refuge en l’Éternel Que de se confier aux grands.",
+    "reference": "Psalms 118:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-119-166",
+    "category": "Hope",
+    "verse": "J’espère en ton salut, ô Éternel! Et je pratique tes commandements.",
+    "reference": "Psalms 119:166",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "2-peter-3-18",
+    "category": "Grace",
+    "verse": "Mais croissez dans la grâce et dans la connaissance de notre Seigneur et Sauveur Jésus-Christ. A lui soit la gloire, maintenant et pour l’éternité! Amen!",
+    "reference": "2 Peter 3:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-130-5",
+    "category": "Hope",
+    "verse": "J’espère en l’Éternel, mon âme espère, Et j’attends sa promesse.",
+    "reference": "Psalms 130:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-130-7",
+    "category": "Hope",
+    "verse": "Israël, mets ton espoir en l’Éternel! Car la miséricorde est auprès de l’Éternel, Et la rédemption est auprès de lui en abondance.",
+    "reference": "Psalms 130:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-131-3",
+    "category": "Hope",
+    "verse": "Israël, mets ton espoir en l’Éternel, Dès maintenant et à jamais!",
+    "reference": "Psalms 131:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-14-7",
+    "category": "Hope",
+    "verse": "Oh! Qui fera partir de Sion la délivrance d’Israël? Quand l’Éternel ramènera les captifs de son peuple, Jacob sera dans l’allégresse, Israël se réjouira.",
+    "reference": "Psalms 14:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-140-7",
+    "category": "Hope",
+    "verse": "Je dis à l’Éternel: Tu es mon Dieu! Éternel, prête l’oreille à la voix de mes supplications!",
+    "reference": "Psalms 140:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-141-8",
+    "category": "Hope",
+    "verse": "C’est vers toi, Éternel, Seigneur! Que se tournent mes yeux, C’est auprès de toi que je cherche un refuge: N’abandonne pas mon âme!",
+    "reference": "Psalms 141:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-143-9",
+    "category": "Hope",
+    "verse": "Délivre-moi de mes ennemis, ô Éternel! Auprès de toi je cherche un refuge.",
+    "reference": "Psalms 143:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-147-11",
+    "category": "Hope",
+    "verse": "L’Éternel aime ceux qui le craignent, Ceux qui espèrent en sa bonté.",
+    "reference": "Psalms 147:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-timothy-2-22",
+    "category": "Love",
+    "verse": "Fuis les passions de la jeunesse, et recherche la justice, la foi, la charité, la paix, avec ceux qui invoquent le Seigneur d’un cœur pur.",
+    "reference": "2 Timothy 2:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "1-john-5-1",
+    "category": "Trust",
+    "verse": "Quiconque croit que Jésus est le Christ, est né de Dieu, et quiconque aime celui qui l’a engendré aime aussi celui qui est né de lui.",
+    "reference": "1 John 5:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-20-6",
+    "category": "Hope",
+    "verse": "Nous nous réjouirons de ton salut, Nous lèverons l’étendard au nom de notre Dieu; L’Éternel exaucera tous tes vœux.",
+    "reference": "Psalms 20:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "isaiah-30-18",
+    "category": "Hope",
+    "verse": "Cependant l’Éternel désire vous faire grâce, Et il se lèvera pour vous faire miséricorde; Car l’Éternel est un Dieu juste: Heureux tous ceux qui espèrent en lui!",
+    "reference": "Isaiah 30:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "romans-10-10",
+    "category": "Trust",
+    "verse": "Car c’est en croyant du cœur qu’on parvient à la justice, et c’est en confessant de la bouche qu’on parvient au salut, selon ce que dit l’Écriture:",
+    "reference": "Romans 10:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-27-13",
+    "category": "Hope",
+    "verse": "Oh! Si je n’étais pas sûr de voir la bonté de l’Éternel Sur la terre des vivants!…",
+    "reference": "Psalms 27:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "joy"
+    ]
+  },
+  {
+    "id": "daniel-10-19",
+    "category": "Courage",
+    "verse": "Puis il me dit: Ne crains rien, homme bien-aimé, que la paix soit avec toi! Courage, courage! Et comme il me parlait, je repris des forces, et je dis: Que mon seigneur parle, car tu m’as fortifié.",
+    "reference": "Daniel 10:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "strength",
+      "fear",
+      "trust"
+    ]
+  },
+  {
+    "id": "psalms-28-8",
+    "category": "Hope",
+    "verse": "L’Éternel est la force de son peuple, Il est le rocher des délivrances de son oint.",
+    "reference": "Psalms 28:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "ephesians-6-23",
+    "category": "Trust",
+    "verse": "Que la paix et la charité avec la foi soient données aux frères de la part de Dieu le Père et du Seigneur Jésus-Christ!",
+    "reference": "Ephesians 6:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-3-3",
+    "category": "Hope",
+    "verse": "Combien qui disent à mon sujet: Plus de salut pour lui auprès de Dieu! — Pause.",
+    "reference": "Psalms 3:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-86-15",
+    "category": "Grace",
+    "verse": "Mais toi, Seigneur, tu es un Dieu miséricordieux et compatissant, Lent à la colère, riche en bonté et en fidélité;",
+    "reference": "Psalms 86:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-23",
+    "category": "Hope",
+    "verse": "Je disais dans ma précipitation: Je suis chassé loin de ton regard! Mais tu as entendu la voix de mes supplications, Quand j’ai crié vers toi.",
+    "reference": "Psalms 31:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting",
+      "trust"
+    ]
+  },
+  {
+    "id": "2-corinthians-9-14",
+    "category": "Love",
+    "verse": "ils prient pour vous, parce qu’ils vous aiment à cause de la grâce éminente que Dieu vous a faite.",
+    "reference": "2 Corinthians 9:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-6",
+    "category": "Hope",
+    "verse": "Je remets mon esprit entre tes mains; Tu me délivreras, Éternel, Dieu de vérité!",
+    "reference": "Psalms 31:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "waiting"
+    ]
+  },
+  {
+    "id": "psalms-132-13",
+    "category": "Trust",
+    "verse": "Oui, l’Éternel a choisi Sion, Il l’a désirée pour sa demeure:",
+    "reference": "Psalms 132:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-132-8",
+    "category": "Trust",
+    "verse": "Lève-toi, Éternel, viens à ton lieu de repos, Toi et l’arche de ta majesté!",
+    "reference": "Psalms 132:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "2-corinthians-13-14",
+    "category": "Grace",
+    "verse": "Que la grâce du Seigneur Jésus-Christ, l’amour de Dieu, et la communication du Saint-Esprit, soient avec vous tous!",
+    "reference": "2 Corinthians 13:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-john-1-3",
+    "category": "Grace",
+    "verse": "que la grâce, la miséricorde et la paix soient avec vous de la part de Dieu le Père et de la part de Jésus-Christ, le Fils du Père, dans la vérité et la charité!",
+    "reference": "2 John 1:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-30-3",
+    "category": "Trust",
+    "verse": "Éternel, mon Dieu! J’ai crié à toi, et tu m’as guéri.",
+    "reference": "Psalms 30:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-30-7",
+    "category": "Trust",
+    "verse": "Je disais dans ma sécurité: Je ne chancellerai jamais!",
+    "reference": "Psalms 30:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-36-7",
+    "category": "Trust",
+    "verse": "Ta justice est comme les montagnes de Dieu, Tes jugements sont comme le grand abîme. Éternel! Tu soutiens les hommes et les bêtes.",
+    "reference": "Psalms 36:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-15-16",
+    "category": "Joy",
+    "verse": "J’ai recueilli tes paroles, et je les ai dévorées; Tes paroles ont fait la joie et l’allégresse de mon cœur; Car ton nom est invoqué sur moi, Éternel, Dieu des armées!",
+    "reference": "Jeremiah 15:16",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-40-11",
+    "category": "Trust",
+    "verse": "Je ne retiens pas dans mon cœur ta justice, Je publie ta vérité et ton salut; Je ne cache pas ta bonté et ta fidélité Dans la grande assemblée.",
+    "reference": "Psalms 40:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-41-2",
+    "category": "Trust",
+    "verse": "Heureux celui qui s’intéresse au pauvre! Au jour du malheur l’Éternel le délivre;",
+    "reference": "Psalms 41:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-56-13",
+    "category": "Trust",
+    "verse": "O Dieu! Je dois accomplir les vœux que je t’ai faits; Je t’offrirai des actions de grâces.",
+    "reference": "Psalms 56:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-61-7",
+    "category": "Trust",
+    "verse": "Ajoute des jours aux jours du roi; Que ses années se prolongent à jamais!",
+    "reference": "Psalms 61:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "grace"
+    ]
+  },
+  {
+    "id": "philippians-4-21",
+    "category": "Grace",
+    "verse": "Saluez tous les saints en Jésus-Christ. Les frères qui sont avec moi vous saluent.",
+    "reference": "Philippians 4:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-84-9",
+    "category": "Trust",
+    "verse": "Éternel, Dieu des armées, écoute ma prière! Prête l’oreille, Dieu de Jacob! — Pause.",
+    "reference": "Psalms 84:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "isaiah-30-29",
+    "category": "Trust",
+    "verse": "Vous chanterez comme la nuit où l’on célèbre la fête, Vous aurez le cœur joyeux comme celui qui marche au son de la flûte, Pour aller à la montagne de l’Éternel, vers le rocher d’Israël.",
+    "reference": "Isaiah 30:29",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "proverbs-29-25",
+    "category": "Trust",
+    "verse": "La crainte des hommes tend un piège, Mais celui qui se confie en l’Éternel est protégé.",
+    "reference": "Proverbs 29:25",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-12",
+    "category": "Trust",
+    "verse": "L’Éternel se souvient de nous: il bénira, Il bénira la maison d’Israël, Il bénira la maison d’Aaron,",
+    "reference": "Psalms 115:12",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-116-6",
+    "category": "Trust",
+    "verse": "L’Éternel garde les simples; J’étais malheureux, et il m’a sauvé.",
+    "reference": "Psalms 116:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-119-52",
+    "category": "Trust",
+    "verse": "Je pense à tes jugements d’autrefois, ô Éternel! Et je me console.",
+    "reference": "Psalms 119:52",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-119-55",
+    "category": "Trust",
+    "verse": "La nuit je me rappelle ton nom, ô Éternel! Et je garde ta loi.",
+    "reference": "Psalms 119:55",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-12-7",
+    "category": "Trust",
+    "verse": "Les paroles de l’Éternel sont des paroles pures, Un argent éprouvé sur terre au creuset, Et sept fois épuré.",
+    "reference": "Psalms 12:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-121-5",
+    "category": "Trust",
+    "verse": "L’Éternel est celui qui te garde, L’Éternel est ton ombre à ta main droite.",
+    "reference": "Psalms 121:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-132-5",
+    "category": "Trust",
+    "verse": "Jusqu’à ce que j’aie trouvé un lieu pour l’Éternel, Une demeure pour le puissant de Jacob.",
+    "reference": "Psalms 132:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-140-4",
+    "category": "Trust",
+    "verse": "Ils aiguisent leur langue comme un serpent, Ils ont sous leurs lèvres un venin d’aspic. — Pause.",
+    "reference": "Psalms 140:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-21",
+    "category": "Trust",
+    "verse": "L’Éternel m’a traité selon ma droiture, Il m’a rendu selon la pureté de mes mains;",
+    "reference": "Psalms 18:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge"
+    ]
+  },
+  {
+    "id": "psalms-18-3",
+    "category": "Trust",
+    "verse": "Éternel, mon rocher, ma forteresse, mon libérateur! Mon Dieu, mon rocher, où je trouve un abri! Mon bouclier, la force qui me sauve, ma haute retraite!",
+    "reference": "Psalms 18:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "confidence",
+      "refuge",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-10-11",
+    "category": "Peace",
+    "verse": "Il dit en son cœur: Dieu oublie! Il cache sa face, il ne regarde jamais!",
+    "reference": "Psalms 10:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-10-3",
+    "category": "Peace",
+    "verse": "Car le méchant se glorifie de sa convoitise, Et le ravisseur outrage, méprise l’Éternel.",
+    "reference": "Psalms 10:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "2-thessalonians-3-5",
+    "category": "Love",
+    "verse": "Que le Seigneur dirige vos cœurs vers l’amour de Dieu et vers la patience de Christ!",
+    "reference": "2 Thessalonians 3:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-1",
+    "category": "Peace",
+    "verse": "Louez l’Éternel! Je louerai l’Éternel de tout mon cœur, Dans la réunion des hommes droits et dans l’assemblée.",
+    "reference": "Psalms 111:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-9",
+    "category": "Grace",
+    "verse": "Car vous connaissez la grâce de notre Seigneur Jésus-Christ, qui pour vous s’est fait pauvre, de riche qu’il était, afin que par sa pauvreté vous fussiez enrichis.",
+    "reference": "2 Corinthians 8:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-125-4",
+    "category": "Peace",
+    "verse": "Éternel, répands tes bienfaits sur les bons Et sur ceux dont le cœur est droit!",
+    "reference": "Psalms 125:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-125-5",
+    "category": "Peace",
+    "verse": "Mais ceux qui s’engagent dans des voies détournées, Que l’Éternel les détruise avec ceux qui font le mal! Que la paix soit sur Israël!",
+    "reference": "Psalms 125:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "philippians-1-8",
+    "category": "Grace",
+    "verse": "Car Dieu m’est témoin que je vous chéris tous avec la tendresse de Jésus-Christ.",
+    "reference": "Philippians 1:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "romans-16-20",
+    "category": "Peace",
+    "verse": "Le Dieu de paix écrasera bientôt Satan sous vos pieds. Que la grâce de notre Seigneur Jésus-Christ soit avec vous!",
+    "reference": "Romans 16:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-4",
+    "category": "Peace",
+    "verse": "Mon esprit est abattu au-dedans de moi, Mon cœur est troublé dans mon sein.",
+    "reference": "Psalms 143:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-19-8",
+    "category": "Peace",
+    "verse": "La loi de l’Éternel est parfaite, elle restaure l’âme; Le témoignage de l’Éternel est véritable, il rend sage l’ignorant.",
+    "reference": "Psalms 19:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-26",
+    "category": "Peace",
+    "verse": "Tu seras dans la grande assemblée l’objet de mes louanges; J’accomplirai mes vœux en présence de ceux qui te craignent.",
+    "reference": "Psalms 22:26",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-7",
+    "category": "Peace",
+    "verse": "Ne te souviens pas des fautes de ma jeunesse ni de mes transgressions; Souviens-toi de moi selon ta miséricorde, A cause de ta bonté, ô Éternel!",
+    "reference": "Psalms 25:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-28-7",
+    "category": "Peace",
+    "verse": "L’Éternel est ma force et mon bouclier; En lui mon cœur se confie, et je suis secouru; J’ai de l’allégresse dans le cœur, Et je le loue par mes chants.",
+    "reference": "Psalms 28:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "strength"
+    ]
+  },
+  {
+    "id": "galatians-3-14",
+    "category": "Trust",
+    "verse": "afin que la bénédiction d’Abraham eût pour les païens son accomplissement en Jésus-Christ, et que nous reçussions par la foi l’Esprit qui avait été promis.",
+    "reference": "Galatians 3:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-32-11",
+    "category": "Peace",
+    "verse": "Justes, réjouissez-vous en l’Éternel et soyez dans l’allégresse! Poussez des cris de joie, vous tous qui êtes droits de cœur!",
+    "reference": "Psalms 32:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-33-11",
+    "category": "Peace",
+    "verse": "Les desseins de l’Éternel subsistent à toujours, Et les projets de son cœur, de génération en génération.",
+    "reference": "Psalms 33:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-35-27",
+    "category": "Peace",
+    "verse": "Qu’ils aient de l’allégresse et de la joie, Ceux qui prennent plaisir à mon innocence, Et que sans cesse ils disent: Exalté soit l’Éternel, Qui veut la paix de son serviteur!",
+    "reference": "Psalms 35:27",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-11",
+    "category": "Peace",
+    "verse": "Et non seulement cela, mais encore nous nous glorifions en Dieu par notre Seigneur Jésus-Christ, par qui maintenant nous avons obtenu la réconciliation.",
+    "reference": "Romans 5:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-37-3",
+    "category": "Peace",
+    "verse": "Confie-toi en l’Éternel, et pratique le bien; Aie le pays pour demeure et la fidélité pour pâture.",
+    "reference": "Psalms 37:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-37-31",
+    "category": "Peace",
+    "verse": "La loi de son Dieu est dans son cœur; Ses pas ne chancellent point.",
+    "reference": "Psalms 37:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart"
+    ]
+  },
+  {
+    "id": "psalms-37-4",
+    "category": "Peace",
+    "verse": "Fais de l’Éternel tes délices, Et il te donnera ce que ton cœur désire.",
+    "reference": "Psalms 37:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-4-7",
+    "category": "Peace",
+    "verse": "Plusieurs disent: Qui nous fera voir le bonheur? Fais lever sur nous la lumière de ta face, ô Éternel!",
+    "reference": "Psalms 4:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-40-8",
+    "category": "Peace",
+    "verse": "Alors je dis: Voici, je viens Avec le rouleau du livre écrit pour moi.",
+    "reference": "Psalms 40:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "heart",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-10-14",
+    "category": "Strength",
+    "verse": "Tu regardes cependant, car tu vois la peine et la souffrance, Pour prendre en main leur cause; C’est à toi que s’abandonne le malheureux, C’est toi qui viens en aide à l’orphelin.",
+    "reference": "Psalms 10:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-104-1",
+    "category": "Strength",
+    "verse": "Mon âme, bénis l’Éternel! Éternel, mon Dieu, tu es infiniment grand! Tu es revêtu d’éclat et de magnificence!",
+    "reference": "Psalms 104:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-109-21",
+    "category": "Strength",
+    "verse": "Et toi, Éternel, Seigneur! Agis en ma faveur à cause de ton nom, Car ta bonté est grande; délivre-moi!",
+    "reference": "Psalms 109:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-7",
+    "category": "Grace",
+    "verse": "De même que vous excellez en toutes choses, en foi, en parole, en connaissance, en zèle à tous égards, et dans votre amour pour nous, faites en sorte d’exceller aussi dans cette œuvre de bienfaisance.",
+    "reference": "2 Corinthians 8:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-110-2",
+    "category": "Strength",
+    "verse": "L’Éternel étendra de Sion le sceptre de ta puissance: Domine au milieu de tes ennemis!",
+    "reference": "Psalms 110:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-115-10",
+    "category": "Strength",
+    "verse": "Maison d’Aaron, confie-toi en l’Éternel! Il est leur secours et leur bouclier.",
+    "reference": "Psalms 115:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-11",
+    "category": "Strength",
+    "verse": "Vous qui craignez l’Éternel, confiez-vous en l’Éternel! Il est leur secours et leur bouclier.",
+    "reference": "Psalms 115:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-115-9",
+    "category": "Strength",
+    "verse": "Israël, confie-toi en l’Éternel! Il est leur secours et leur bouclier.",
+    "reference": "Psalms 115:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "faith"
+    ]
+  },
+  {
+    "id": "1-thessalonians-5-23",
+    "category": "Peace",
+    "verse": "Que le Dieu de paix vous sanctifie lui-même tout entiers, et que tout votre être, l’esprit, l’âme et le corps, soit conservé irrépréhensible, lors de l’avènement de notre Seigneur Jésus-Christ!",
+    "reference": "1 Thessalonians 5:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-143-7",
+    "category": "Strength",
+    "verse": "Hâte-toi de m’exaucer, ô Éternel! Mon esprit se consume. Ne me cache pas ta face! Je serais semblable à ceux qui descendent dans la fosse.",
+    "reference": "Psalms 143:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "psalms-147-5",
+    "category": "Strength",
+    "verse": "Notre Seigneur est grand, puissant par sa force, Son intelligence n’a point de limite.",
+    "reference": "Psalms 147:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "1-corinthians-15-57",
+    "category": "Trust",
+    "verse": "Mais grâces soient rendues à Dieu, qui nous donne la victoire par notre Seigneur Jésus-Christ!",
+    "reference": "1 Corinthians 15:57",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "psalms-21-13",
+    "category": "Strength",
+    "verse": "Car tu leur feras tourner le dos, Et avec ton arc tu tireras sur eux.",
+    "reference": "Psalms 21:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-22-19",
+    "category": "Strength",
+    "verse": "Ils se partagent mes vêtements, Ils tirent au sort ma tunique.",
+    "reference": "Psalms 22:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "1-corinthians-1-3",
+    "category": "Peace",
+    "verse": "que la grâce et la paix vous soient données de la part de Dieu notre Père et du Seigneur Jésus-Christ!",
+    "reference": "1 Corinthians 1:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-30-10",
+    "category": "Strength",
+    "verse": "Que gagnes-tu à verser mon sang, A me faire descendre dans la fosse? La poussière a-t-elle pour toi des louanges? Raconte-t-elle ta fidélité?",
+    "reference": "Psalms 30:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-31-21",
+    "category": "Strength",
+    "verse": "Tu les protèges sous l’abri de ta face contre ceux qui les persécutent, Tu les protèges dans ta tente contre les langues qui les attaquent.",
+    "reference": "Psalms 31:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-36-5",
+    "category": "Strength",
+    "verse": "Il médite l’injustice sur sa couche, Il se tient sur une voie qui n’est pas bonne, Il ne repousse pas le mal.",
+    "reference": "Psalms 36:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-37-39",
+    "category": "Strength",
+    "verse": "Le salut des justes vient de l’Éternel; Il est leur protecteur au temps de la détresse.",
+    "reference": "Psalms 37:39",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power",
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-41-3",
+    "category": "Strength",
+    "verse": "L’Éternel le garde et lui conserve la vie. Il est heureux sur la terre, Et tu ne le livres pas au bon plaisir de ses ennemis.",
+    "reference": "Psalms 41:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "strength",
+      "help",
+      "power"
+    ]
+  },
+  {
+    "id": "luke-2-52",
+    "category": "Grace",
+    "verse": "Et Jésus croissait en sagesse, en stature, et en grâce, devant Dieu et devant les hommes.",
+    "reference": "Luke 2:52",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "2-thessalonians-1-2",
+    "category": "Peace",
+    "verse": "que la grâce et la paix vous soient données de la part de Dieu notre Père et du Seigneur Jésus-Christ!",
+    "reference": "2 Thessalonians 1:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "peace",
+      "rest",
+      "comfort",
+      "calm"
+    ]
+  },
+  {
+    "id": "psalms-40-10",
+    "category": "Faith",
+    "verse": "J’annonce la justice dans la grande assemblée; Voici, je ne ferme pas mes lèvres, Éternel, tu le sais!",
+    "reference": "Psalms 40:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "lamentations-3-24",
+    "category": "Hope",
+    "verse": "L’Éternel est mon partage, dit mon âme; C’est pourquoi je veux espérer en lui.",
+    "reference": "Lamentations 3:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "trust",
+      "presence",
+      "peace"
+    ]
+  },
+  {
+    "id": "psalms-69-13",
+    "category": "Prayer",
+    "verse": "Ceux qui sont assis à la porte parlent de moi, Et les buveurs de liqueurs fortes me mettent en chansons.",
+    "reference": "Psalms 69:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "luke-10-27",
+    "category": "Love",
+    "verse": "Il répondit: Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, de toute ta force, et de toute ta pensée; et ton prochain comme toi-même.",
+    "reference": "Luke 10:27",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-106-1",
+    "category": "Comfort",
+    "verse": "Louez l’Éternel! Louez l’Éternel, car il est bon, Car sa miséricorde dure à toujours!",
+    "reference": "Psalms 106:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "jeremiah-42-20",
+    "category": "Faith",
+    "verse": "Vous vous trompez vous-mêmes, car vous m’avez envoyé vers l’Éternel, votre Dieu, en disant: Intercède en notre faveur auprès de l’Éternel, notre Dieu, fais-nous connaître tout ce que l’Éternel, notre Dieu, dira, et nous le ferons.",
+    "reference": "Jeremiah 42:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-107-15",
+    "category": "Comfort",
+    "verse": "Qu’ils louent l’Éternel pour sa bonté, Et pour ses merveilles en faveur des fils de l’homme!",
+    "reference": "Psalms 107:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-11-17",
+    "category": "Trust",
+    "verse": "Or, puisque Dieu leur a accordé le même don qu’à nous qui avons cru au Seigneur Jésus-Christ, pouvais-je, moi, m’opposer à Dieu?",
+    "reference": "Acts 11:17",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "deuteronomy-6-5",
+    "category": "Love",
+    "verse": "Tu aimeras l’Éternel, ton Dieu, de tout ton cœur, de toute ton âme et de toute ta force.",
+    "reference": "Deuteronomy 6:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "mark-12-30",
+    "category": "Love",
+    "verse": "et: Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, de toute ta pensée, et de toute ta force.",
+    "reference": "Mark 12:30",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-111-4",
+    "category": "Comfort",
+    "verse": "Il a laissé la mémoire de ses prodiges, L’Éternel miséricordieux et compatissant.",
+    "reference": "Psalms 111:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-116-4",
+    "category": "Comfort",
+    "verse": "Mais j’invoquai le nom de l’Éternel: O Éternel, sauve mon âme!",
+    "reference": "Psalms 116:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "prayer"
+    ]
+  },
+  {
+    "id": "psalms-116-5",
+    "category": "Comfort",
+    "verse": "L’Éternel est miséricordieux et juste, Notre Dieu est plein de compassion;",
+    "reference": "Psalms 116:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-117-2",
+    "category": "Comfort",
+    "verse": "Car sa bonté pour nous est grande, Et sa fidélité dure à toujours. Louez l’Éternel!",
+    "reference": "Psalms 117:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "acts-15-11",
+    "category": "Trust",
+    "verse": "Mais c’est par la grâce du Seigneur Jésus que nous croyons être sauvés, de la même manière qu’eux.",
+    "reference": "Acts 15:11",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "trust",
+      "faith",
+      "safety",
+      "presence"
+    ]
+  },
+  {
+    "id": "2-timothy-1-13",
+    "category": "Faith",
+    "verse": "Retiens dans la foi et dans la charité qui est en Jésus-Christ le modèle des saines paroles que tu as reçues de moi.",
+    "reference": "2 Timothy 1:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "trust",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-118-4",
+    "category": "Comfort",
+    "verse": "Que ceux qui craignent l’Éternel disent: Car sa miséricorde dure à toujours!",
+    "reference": "Psalms 118:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-107",
+    "category": "Comfort",
+    "verse": "Je suis bien humilié: Éternel, rends-moi la vie selon ta parole!",
+    "reference": "Psalms 119:107",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-119-149",
+    "category": "Comfort",
+    "verse": "Écoute ma voix selon ta bonté! Rends-moi la vie selon ton jugement!",
+    "reference": "Psalms 119:149",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-159",
+    "category": "Comfort",
+    "verse": "Considère que j’aime tes ordonnances: Éternel, rends-moi la vie selon ta bonté!",
+    "reference": "Psalms 119:159",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "comfort",
+      "care",
+      "presence",
+      "grace"
+    ]
+  },
+  {
+    "id": "psalms-119-156",
+    "category": "Grace",
+    "verse": "Tes compassions sont grandes, ô Éternel! Rends-moi la vie selon tes jugements!",
+    "reference": "Psalms 119:156",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "1-peter-1-21",
+    "category": "Hope",
+    "verse": "qui par lui croyez en Dieu, lequel l’a ressuscité des morts et lui a donné la gloire, en sorte que votre foi et votre espérance reposent sur Dieu.",
+    "reference": "1 Peter 1:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-36-6",
+    "category": "Grace",
+    "verse": "Éternel! Ta bonté atteint jusqu’aux cieux, Ta fidélité jusqu’aux nues.",
+    "reference": "Psalms 36:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-4-5",
+    "category": "Grace",
+    "verse": "Tremblez, et ne péchez point; Parlez en vos cœurs sur votre couche, puis taisez-vous. — Pause.",
+    "reference": "Psalms 4:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-41-10",
+    "category": "Grace",
+    "verse": "Celui-là même avec qui j’étais en paix, Qui avait ma confiance et qui mangeait mon pain, Lève le talon contre moi.",
+    "reference": "Psalms 41:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "jude-1-21",
+    "category": "Grace",
+    "verse": "maintenez-vous dans l’amour de Dieu, en attendant la miséricorde de notre Seigneur Jésus-Christ pour la vie éternelle.",
+    "reference": "Jude 1:21",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-96-13",
+    "category": "Grace",
+    "verse": "Devant l’Éternel! Car il vient, Car il vient pour juger la terre; Il jugera le monde avec justice, Et les peuples selon sa fidélité.",
+    "reference": "Psalms 96:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "psalms-89-49",
+    "category": "Grace",
+    "verse": "Y a-t-il un homme qui puisse vivre et ne pas voir la mort, Qui puisse sauver son âme du séjour des morts? — Pause.",
+    "reference": "Psalms 89:49",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "faith"
+    ]
+  },
+  {
+    "id": "proverbs-3-4",
+    "category": "Grace",
+    "verse": "Tu acquerras ainsi de la grâce et une raison saine, Aux yeux de Dieu et des hommes.",
+    "reference": "Proverbs 3:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "proverbs-8-35",
+    "category": "Grace",
+    "verse": "Car celui qui me trouve a trouvé la vie, Et il obtient la faveur de l’Éternel.",
+    "reference": "Proverbs 8:35",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-103-13",
+    "category": "Grace",
+    "verse": "Comme un père a compassion de ses enfants, L’Éternel a compassion de ceux qui le craignent.",
+    "reference": "Psalms 103:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "psalms-107-43",
+    "category": "Grace",
+    "verse": "Que celui qui est sage prenne garde à ces choses, Et qu’il soit attentif aux bontés de l’Éternel.",
+    "reference": "Psalms 107:43",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-11-7",
+    "category": "Grace",
+    "verse": "Car l’Éternel est juste, il aime la justice; Les hommes droits contemplent sa face.",
+    "reference": "Psalms 11:7",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-118-19",
+    "category": "Grace",
+    "verse": "Ouvrez-moi les portes de la justice: J’entrerai, je louerai l’Éternel.",
+    "reference": "Psalms 118:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-20",
+    "category": "Grace",
+    "verse": "Voici la porte de l’Éternel: C’est par elle qu’entrent les justes.",
+    "reference": "Psalms 118:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "hebrews-3-6",
+    "category": "Hope",
+    "verse": "mais Christ l’est comme Fils sur sa maison; et sa maison, c’est nous, pourvu que nous retenions jusqu’à la fin la ferme confiance et l’espérance dont nous nous glorifions.",
+    "reference": "Hebrews 3:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-143-10",
+    "category": "Grace",
+    "verse": "Enseigne-moi à faire ta volonté! Car tu es mon Dieu. Que ton bon esprit me conduise sur la voie droite!",
+    "reference": "Psalms 143:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-18-30",
+    "category": "Faith",
+    "verse": "Avec toi je me précipite sur une troupe en armes, Avec mon Dieu je franchis une muraille.",
+    "reference": "Psalms 18:30",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-22-8",
+    "category": "Faith",
+    "verse": "Tous ceux qui me voient se moquent de moi, Ils ouvrent la bouche, secouent la tête:",
+    "reference": "Psalms 22:8",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-25-2",
+    "category": "Faith",
+    "verse": "Mon Dieu! en toi je me confie: que je ne sois pas couvert de honte! Que mes ennemis ne se réjouissent pas à mon sujet!",
+    "reference": "Psalms 25:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "1-timothy-1-14",
+    "category": "Grace",
+    "verse": "et la grâce de notre Seigneur a surabondé, avec la foi et la charité qui est en Jésus-Christ.",
+    "reference": "1 Timothy 1:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "grace",
+      "mercy",
+      "forgiveness",
+      "love"
+    ]
+  },
+  {
+    "id": "psalms-31-14",
+    "category": "Faith",
+    "verse": "J’apprends les mauvais propos de plusieurs, L’épouvante qui règne à l’entour, Quand ils se concertent ensemble contre moi: Ils complotent de m’ôter la vie.",
+    "reference": "Psalms 31:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-33-4",
+    "category": "Faith",
+    "verse": "Car la parole de l’Éternel est droite, Et toutes ses œuvres s’accomplissent avec fidélité;",
+    "reference": "Psalms 33:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-34-22",
+    "category": "Faith",
+    "verse": "Le malheur tue le méchant, Et les ennemis du juste sont châtiés.",
+    "reference": "Psalms 34:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "acts-7-59",
+    "category": "Prayer",
+    "verse": "Et ils lapidaient Étienne, qui priait et disait: Seigneur Jésus, reçois mon esprit!",
+    "reference": "Acts 7:59",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "answer",
+      "presence",
+      "help"
+    ]
+  },
+  {
+    "id": "psalms-37-5",
+    "category": "Faith",
+    "verse": "Recommande ton sort à l’Éternel, Mets en lui ta confiance, et il agira.",
+    "reference": "Psalms 37:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-40-4",
+    "category": "Faith",
+    "verse": "Il a mis dans ma bouche un cantique nouveau, Une louange à notre Dieu; Beaucoup l’ont vu, et ont eu de la crainte, Et ils se sont confiés en l’Éternel.",
+    "reference": "Psalms 40:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-55-23",
+    "category": "Faith",
+    "verse": "Remets ton sort à l’Éternel, et il te soutiendra, Il ne laissera jamais chanceler le juste.",
+    "reference": "Psalms 55:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-78-22",
+    "category": "Faith",
+    "verse": "Parce qu’ils ne crurent pas en Dieu, Parce qu’ils n’eurent pas confiance dans son secours.",
+    "reference": "Psalms 78:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "hope"
+    ]
+  },
+  {
+    "id": "psalms-89-5",
+    "category": "Faith",
+    "verse": "J’affermirai ta postérité pour toujours, Et j’établirai ton trône à perpétuité. — Pause.",
+    "reference": "Psalms 89:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-20-5",
+    "category": "Hope",
+    "verse": "Qu’il te donne ce que ton cœur désire, Et qu’il accomplisse tous tes desseins!",
+    "reference": "Psalms 20:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-48-2",
+    "category": "Faith",
+    "verse": "Car ils prennent leur nom de la ville sainte, Et ils s’appuient sur le Dieu d’Israël, Dont le nom est l’Éternel des armées.",
+    "reference": "Isaiah 48:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "proverbs-16-20",
+    "category": "Faith",
+    "verse": "Celui qui réfléchit sur les choses trouve le bonheur, Et celui qui se confie en l’Éternel est heureux.",
+    "reference": "Proverbs 16:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "faith",
+      "belief",
+      "confidence"
+    ]
+  },
+  {
+    "id": "psalms-116-1",
+    "category": "Love",
+    "verse": "J’aime l’Éternel, car il entend Ma voix, mes supplications;",
+    "reference": "Psalms 116:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "prayer"
+    ]
+  },
+  {
+    "id": "isaiah-45-22",
+    "category": "Hope",
+    "verse": "Tournez-vous vers moi, et vous serez sauvés, Vous tous qui êtes aux extrémités de la terre! Car je suis Dieu, et il n’y en a point d’autre.",
+    "reference": "Isaiah 45:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-87-2",
+    "category": "Love",
+    "verse": "L’Éternel aime les portes de Sion Plus que toutes les demeures de Jacob.",
+    "reference": "Psalms 87:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "psalms-55-14",
+    "category": "Love",
+    "verse": "C’est toi, que j’estimais mon égal, Toi, mon confident et mon ami!",
+    "reference": "Psalms 55:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-10-17",
+    "category": "Love",
+    "verse": "Le Père m’aime, parce que je donne ma vie, afin de la reprendre.",
+    "reference": "John 10:17",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "life"
+    ]
+  },
+  {
+    "id": "john-14-23",
+    "category": "Love",
+    "verse": "Jésus lui répondit: Si quelqu’un m’aime, il gardera ma parole, et mon Père l’aimera; nous viendrons à lui, et nous ferons notre demeure chez lui.",
+    "reference": "John 14:23",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-24",
+    "category": "Love",
+    "verse": "Celui qui ne m’aime pas ne garde point mes paroles. Et la parole que vous entendez n’est pas de moi, mais du Père qui m’a envoyé.",
+    "reference": "John 14:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "john-14-31",
+    "category": "Love",
+    "verse": "mais afin que le monde sache que j’aime le Père, et que j’agis selon l’ordre que le Père m’a donné, levez-vous, partons d’ici.",
+    "reference": "John 14:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-15-9",
+    "category": "Love",
+    "verse": "Comme le Père m’a aimé, je vous ai aussi aimés. Demeurez dans mon amour.",
+    "reference": "John 15:9",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-3-35",
+    "category": "Love",
+    "verse": "Le Père aime le Fils, et il a remis toutes choses entre ses mains.",
+    "reference": "John 3:35",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-5-20",
+    "category": "Love",
+    "verse": "Car le Père aime le Fils, et lui montre tout ce qu’il fait; et il lui montrera des œuvres plus grandes que celles-ci, afin que vous soyez dans l’étonnement.",
+    "reference": "John 5:20",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "john-8-42",
+    "category": "Love",
+    "verse": "Jésus leur dit: Si Dieu était votre Père, vous m’aimeriez, car c’est de Dieu que je suis sorti et que je viens; je ne suis pas venu de moi-même, mais c’est lui qui m’a envoyé.",
+    "reference": "John 8:42",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-10-37",
+    "category": "Love",
+    "verse": "Celui qui aime son père ou sa mère plus que moi n’est pas digne de moi, et celui qui aime son fils ou sa fille plus que moi n’est pas digne de moi;",
+    "reference": "Matthew 10:37",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-12-18",
+    "category": "Love",
+    "verse": "Voici mon serviteur que j’ai choisi, Mon bien-aimé en qui mon âme a pris plaisir. Je mettrai mon Esprit sur lui, Et il annoncera la justice aux nations.",
+    "reference": "Matthew 12:18",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "matthew-19-19",
+    "category": "Love",
+    "verse": "honore ton père et ta mère; et: tu aimeras ton prochain comme toi-même.",
+    "reference": "Matthew 19:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "god"
+    ]
+  },
+  {
+    "id": "2-peter-1-14",
+    "category": "Hope",
+    "verse": "car je sais que je la quitterai subitement, ainsi que notre Seigneur Jésus-Christ me l’a fait connaître.",
+    "reference": "2 Peter 1:14",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-52-10",
+    "category": "Hope",
+    "verse": "L’Éternel découvre le bras de sa sainteté, Aux yeux de toutes les nations; Et toutes les extrémités de la terre verront Le salut de notre Dieu.",
+    "reference": "Isaiah 52:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-89-15",
+    "category": "Prayer",
+    "verse": "La justice et l’équité sont la base de ton trône. La bonté et la fidélité sont devant ta face.",
+    "reference": "Psalms 89:15",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "psalms-98-4",
+    "category": "Prayer",
+    "verse": "Poussez vers l’Éternel des cris de joie, Vous tous, habitants de la terre! Faites éclater votre allégresse, et chantez!",
+    "reference": "Psalms 98:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "2-corinthians-4-5",
+    "category": "Hope",
+    "verse": "Nous ne nous prêchons pas nous-mêmes; c’est Jésus-Christ le Seigneur que nous prêchons, et nous nous disons vos serviteurs à cause de Jésus.",
+    "reference": "2 Corinthians 4:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-106-25",
+    "category": "Prayer",
+    "verse": "Ils murmurèrent dans leurs tentes, Ils n’obéirent point à sa voix.",
+    "reference": "Psalms 106:25",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "romans-2-16",
+    "category": "Hope",
+    "verse": "C’est ce qui paraîtra au jour où, selon mon Évangile, Dieu jugera par Jésus-Christ les actions secrètes des hommes.",
+    "reference": "Romans 2:16",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-116-17",
+    "category": "Prayer",
+    "verse": "Je t’offrirai un sacrifice d’actions de grâces, Et j’invoquerai le nom de l’Éternel;",
+    "reference": "Psalms 116:17",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-126-2",
+    "category": "Prayer",
+    "verse": "Alors notre bouche était remplie de cris de joie, Et notre langue de chants d’allégresse; Alors on disait parmi les nations: L’Éternel a fait pour eux de grandes choses!",
+    "reference": "Psalms 126:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling",
+      "joy"
+    ]
+  },
+  {
+    "id": "romans-5-2",
+    "category": "Hope",
+    "verse": "à qui nous devons d’avoir eu par la foi accès à cette grâce, dans laquelle nous demeurons fermes, et nous nous glorifions dans l’espérance de la gloire de Dieu.",
+    "reference": "Romans 5:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-130-2",
+    "category": "Prayer",
+    "verse": "Seigneur, écoute ma voix! Que tes oreilles soient attentives A la voix de mes supplications!",
+    "reference": "Psalms 130:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-140-6",
+    "category": "Prayer",
+    "verse": "Des orgueilleux me tendent un piège et des filets, Ils placent des rets le long du chemin, Ils me dressent des embûches. — Pause.",
+    "reference": "Psalms 140:6",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "prayer",
+      "seeking",
+      "calling"
+    ]
+  },
+  {
+    "id": "psalms-104-24",
+    "category": "Wisdom",
+    "verse": "Que tes œuvres sont en grand nombre, ô Éternel! Tu les as toutes faites avec sagesse. La terre est remplie de tes biens.",
+    "reference": "Psalms 104:24",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-105-19",
+    "category": "Wisdom",
+    "verse": "Jusqu’au temps où arriva ce qu’il avait annoncé, Et où la parole de l’Éternel l’éprouva.",
+    "reference": "Psalms 105:19",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-111-10",
+    "category": "Wisdom",
+    "verse": "La crainte de l’Éternel est le commencement de la sagesse; Tous ceux qui l’observent ont une raison saine. Sa gloire subsiste à jamais.",
+    "reference": "Psalms 111:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "joy"
+    ]
+  },
+  {
+    "id": "psalms-118-27",
+    "category": "Wisdom",
+    "verse": "L’Éternel est Dieu, et il nous éclaire. Attachez la victime avec des liens, Amenez-la jusqu’aux cornes de l’autel!",
+    "reference": "Psalms 118:27",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word",
+      "life"
+    ]
+  },
+  {
+    "id": "psalms-119-31",
+    "category": "Wisdom",
+    "verse": "Je m’attache à tes préceptes: Éternel, ne me rends point confus!",
+    "reference": "Psalms 119:31",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "wisdom",
+      "guidance",
+      "word"
+    ]
+  },
+  {
+    "id": "psalms-64-10",
+    "category": "Hope",
+    "verse": "Tous les hommes sont saisis de crainte, Ils publient ce que Dieu fait, Et prennent garde à son œuvre.",
+    "reference": "Psalms 64:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-56-4",
+    "category": "Hope",
+    "verse": "Quand je suis dans la crainte, En toi je me confie.",
+    "reference": "Psalms 56:4",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "isaiah-26-13",
+    "category": "Hope",
+    "verse": "Éternel, notre Dieu, d’autres maîtres que toi ont dominé sur nous; Mais c’est grâce à toi seul que nous invoquons ton nom.",
+    "reference": "Isaiah 26:13",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-100-2",
+    "category": "Joy",
+    "verse": "Servez l’Éternel, avec joie, Venez avec allégresse en sa présence!",
+    "reference": "Psalms 100:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "2-corinthians-8-5",
+    "category": "Hope",
+    "verse": "Et non seulement ils ont contribué comme nous l’espérions, mais ils se sont d’abord donnés eux-mêmes au Seigneur, puis à nous, par la volonté de Dieu.",
+    "reference": "2 Corinthians 8:5",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "hope",
+      "promise",
+      "trust",
+      "daily"
+    ]
+  },
+  {
+    "id": "psalms-103-2",
+    "category": "Joy",
+    "verse": "Mon âme, bénis l’Éternel, Et n’oublie aucun de ses bienfaits!",
+    "reference": "Psalms 103:2",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "psalms-103-22",
+    "category": "Joy",
+    "verse": "Bénissez l’Éternel, vous toutes ses œuvres, Dans tous les lieux de sa domination! Mon âme, bénis l’Éternel!",
+    "reference": "Psalms 103:22",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "gladness",
+      "praise"
+    ]
+  },
+  {
+    "id": "deuteronomy-13-3",
+    "category": "Love",
+    "verse": "tu n’écouteras pas les paroles de ce prophète ou de ce songeur, car c’est l’Éternel, votre Dieu, qui vous met à l’épreuve pour savoir si vous aimez l’Éternel, votre Dieu, de tout votre cœur et de toute votre âme.",
+    "reference": "Deuteronomy 13:3",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "love",
+      "mercy",
+      "heart",
+      "grace"
+    ]
+  },
+  {
+    "id": "isaiah-43-1",
+    "category": "Courage",
+    "verse": "Ainsi parle maintenant l’Éternel, qui t’a créé, ô Jacob! Celui qui t’a formé, ô Israël! Ne crains rien, car je te rachète, Je t’appelle par ton nom: tu es à moi!",
+    "reference": "Isaiah 43:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "fear",
+      "strength",
+      "life"
+    ]
+  },
+  {
+    "id": "1-samuel-2-1",
+    "category": "Joy",
+    "verse": "Anne pria, et dit: Mon cœur se réjouit en l’Éternel, Ma force a été relevée par l’Éternel; Ma bouche s’est ouverte contre mes ennemis, Car je me réjouis de ton secours.",
+    "reference": "1 Samuel 2:1",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "joy",
+      "delight",
+      "praise",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "psalms-96-10",
+    "category": "Courage",
+    "verse": "Dites parmi les nations: L’Éternel règne; Aussi le monde est ferme, il ne chancelle pas; L’Éternel juge les peuples avec droiture.",
+    "reference": "Psalms 96:10",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "courage",
+      "fear",
+      "strength"
+    ]
+  },
+  {
+    "id": "psalms-104-33",
+    "category": "Life",
+    "verse": "Je chanterai l’Éternel tant que je vivrai, Je célébrerai mon Dieu tant que j’existerai.",
+    "reference": "Psalms 104:33",
+    "translation": "Louis Segond 1910",
+    "tags": [
+      "life",
+      "light",
+      "eternal-life"
+    ]
+  }
+]

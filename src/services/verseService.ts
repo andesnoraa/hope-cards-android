@@ -2,6 +2,11 @@ import bbeVerses from "../data/verses/en-bbe.json";
 import bsbVerses from "../data/verses/en-bsb.json";
 import kjvVerses from "../data/verses/en-kjv.json";
 import webVerses from "../data/verses/en-web.json";
+import mal1910Verses from "../data/verses/ml-mal1910.json";
+import rv1909Verses from "../data/verses/es-rv1909.json";
+import lsg1910Verses from "../data/verses/fr-lsg1910.json";
+import lut1912Verses from "../data/verses/de-lut1912.json";
+import riv1927Verses from "../data/verses/it-riv1927.json";
 
 import type { Verse } from "../types/verse";
 
@@ -49,6 +54,46 @@ const translationRegistry = {
     license: "Public domain",
     name: "World English Bible",
     verses: webVerses as Verse[],
+  },
+  mal1910: {
+    attribution: "British and Foreign Bible Society",
+    language: "ml",
+    label: "MAL",
+    license: "Public domain",
+    name: "Sathyavedapusthakam 1910",
+    verses: mal1910Verses as Verse[],
+  },
+  rv1909: {
+    attribution: "Reina y Valera",
+    language: "es",
+    label: "RV1909",
+    license: "Public domain",
+    name: "Reina-Valera 1909",
+    verses: rv1909Verses as Verse[],
+  },
+  lsg1910: {
+    attribution: "Louis Segond",
+    language: "fr",
+    label: "LSG",
+    license: "Public domain",
+    name: "Louis Segond 1910",
+    verses: lsg1910Verses as Verse[],
+  },
+  lut1912: {
+    attribution: "Martin Luther",
+    language: "de",
+    label: "LUT",
+    license: "Public domain",
+    name: "Lutherbibel 1912",
+    verses: lut1912Verses as Verse[],
+  },
+  riv1927: {
+    attribution: "Bible Society in Italy",
+    language: "it",
+    label: "RIV",
+    license: "Public domain",
+    name: "Riveduta 1927",
+    verses: riv1927Verses as Verse[],
   },
 } satisfies Record<string, TranslationDefinition>;
 

@@ -35,16 +35,44 @@ function getVerseStyle(text: string) {
     };
   }
 
-  if (length <= 180) {
+  if (length <= 160) {
     return {
       fontSize: 20,
-      lineHeight: 30,
+      lineHeight: 29,
+    };
+  }
+
+  if (length <= 220) {
+    return {
+      fontSize: 18,
+      lineHeight: 26,
     };
   }
 
   return {
-    fontSize: 18,
-    lineHeight: 28,
+    fontSize: 16,
+    lineHeight: 23,
+  };
+}
+
+function getTranslationStyle(text: string) {
+  if (text.length <= 22) {
+    return {
+      fontSize: 16,
+      letterSpacing: 1.5,
+    };
+  }
+
+  if (text.length <= 30) {
+    return {
+      fontSize: 15,
+      letterSpacing: 0.8,
+    };
+  }
+
+  return {
+    fontSize: 14,
+    letterSpacing: 0.3,
   };
 }
 
@@ -58,6 +86,9 @@ export default function CardFront({
   const { theme } = useAppTheme();
 
   const verseStyle = getVerseStyle(verse.verse);
+  const translationStyle = getTranslationStyle(
+    verse.translation
+  );
 
   return (
     <View
@@ -105,6 +136,9 @@ export default function CardFront({
 
         <View style={styles.verseContainer}>
           <Text
+            adjustsFontSizeToFit
+            minimumFontScale={0.8}
+            numberOfLines={14}
             style={[
               styles.verse,
               verseStyle,
@@ -158,8 +192,12 @@ export default function CardFront({
           </Text>
 
           <Text
+            adjustsFontSizeToFit
+            minimumFontScale={0.8}
+            numberOfLines={1}
             style={[
               styles.translation,
+              translationStyle,
               {
                 color: theme.cardMuted,
               },
@@ -289,10 +327,7 @@ const styles = StyleSheet.create({
 
   translation: {
     marginTop: 6,
-
-    fontSize: 16,
-
-
-    letterSpacing: 1.5,
+    maxWidth: "100%",
+    textAlign: "center",
   },
 });
