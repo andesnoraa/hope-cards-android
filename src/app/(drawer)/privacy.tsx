@@ -36,7 +36,7 @@ export default function PrivacyPolicyScreen() {
       <View style={styles.hero}>
         <Text style={[styles.title, { color: theme.text }]}>Your privacy matters</Text>
         <Text style={[styles.summary, { color: theme.textSecondary }]}>Hope Cards is designed to keep your verses and preferences on your device. It does not require an account and does not use advertising or analytics.</Text>
-        <Text style={[styles.updated, { color: theme.textTertiary }]}>Effective July 19, 2026</Text>
+        <Text style={[styles.updated, { color: theme.textTertiary }]}>Effective August 18, 2026</Text>
       </View>
 
       <PolicySection
@@ -53,7 +53,8 @@ export default function PrivacyPolicyScreen() {
         textColor={theme.text}
         dividerColor={theme.divider}
       >
-        <Body color={theme.cardText}>Your favorites, selected Bible translation, theme, reminder time, music preference, haptic preference, and other app settings are stored locally on your device.</Body>
+        <Body color={theme.cardText}>Your favorites, private journal entries, selected Bible translation, theme, reminder time, music preference, haptic preference, and other app settings are stored locally on your device.</Body>
+        <Body color={theme.cardText}>Journal entries are not sent to Hope Cards, Google Play, or RevenueCat. They remain on your device unless you explicitly include them in an exported backup.</Body>
         <Body color={theme.cardText}>Removing the app may remove this data unless you have exported a backup.</Body>
       </PolicySection>
 
@@ -72,7 +73,7 @@ export default function PrivacyPolicyScreen() {
         dividerColor={theme.divider}
       >
         <Body color={theme.cardText}>Sharing a verse or backup opens your device’s sharing controls. Hope Cards does not record who you share with or which service you choose.</Body>
-        <Body color={theme.cardText}>Backup files contain your favorites and app settings. They are created locally. If you send or save a backup through another app or service, that provider’s privacy practices apply.</Body>
+        <Body color={theme.cardText}>Backup files contain your favorites, private journal entries, and app settings. They are created locally. If you send or save a backup through another app or service, that provider’s privacy practices apply.</Body>
       </PolicySection>
 
       <PolicySection

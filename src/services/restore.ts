@@ -1,5 +1,6 @@
-import type {
-    BackupData,
+import {
+    createBackup,
+    type BackupData,
 } from "./backup";
 
 import {
@@ -10,6 +11,9 @@ import {
     DEFAULT_SETTINGS,
     replaceSettings,
 } from "./settings";
+import {
+    replaceJournalEntries,
+} from "./journal";
 
 /**
  * Restores user data from a backup.
@@ -17,9 +21,25 @@ import {
 export async function restoreBackup(
     backup: BackupData
 ): Promise<void> {
-    await replaceFavorites(
-        backup.favorites
-    );
+    const previous = await createBackup();
+
+    try {
+        await applyBackup(backup);
+    } catch (error) {
+        try {
+            await applyBackup(previous);
+        } catch (rollbackError) {
+            console.error("Restore rollback failed:", rollbackError);
+        }
+
+        throw error;
+    }
+}
+
+async function applyBackup(
+    backup: BackupData
+): Promise<void> {
+    await replaceFavorites(backup.favorites);
 
     await replaceSettings({
         ...DEFAULT_SETTINGS,
@@ -62,4 +82,6 @@ export async function restoreBackup(
             backup.settings
                 .preferredTranslation,
     });
+
+    replaceJournalEntries(backup.journalEntries ?? []);
 }

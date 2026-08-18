@@ -1,66 +1,208 @@
-# Welcome to your Expo app 👋
+# Hope Cards
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Hope Cards is an Expo SDK 57 / React Native Android app. Android development and release builds are created locally with Android Studio, Expo Prebuild, and Gradle. EAS Build is not required for the normal workflow.
 
-## Get started
+The Android application ID is `com.aaronsedna.hopecards`.
 
-1. Install dependencies
+## Requirements
 
-   ```bash
-   npm install
-   ```
+- Node.js 22.13 or newer
+- pnpm
+- Android Studio with the Android SDK, platform tools, and an Android emulator
+- Android Studio's bundled JDK, or another compatible JDK
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Premium subscriptions
-
-Hope Cards Premium is powered by RevenueCat on Android. Add the Android public SDK key before creating a development, preview, or production build:
+Install the JavaScript dependencies from the project root:
 
 ```bash
+pnpm install --frozen-lockfile
+```
+
+Copy the example environment file and add the RevenueCat Android public SDK key:
+
+```bash
+cp .env.example .env
+```
+
+```dotenv
 EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY=goog_your_android_public_sdk_key
 ```
 
-The app expects a RevenueCat `default` offering with a monthly package and treats the `Hope Cards Pro` entitlement identifier as Premium access. Purchases must be tested in an Android development/preview/production build, not Expo Go.
+The file is plain dotenv text: one `NAME=value` entry per line, with no JSON object, commas, or trailing semicolon. Quotes are unnecessary. Use the **Android public SDK key** from RevenueCat (**Project settings > API keys**) whose value starts with `goog_`. Do not use a RevenueCat secret key or a Google service-account JSON file here. The public SDK key is embedded in the app by design, while `.env` remains untracked to prevent accidental configuration changes.
 
-## Get a fresh project
+Expo only embeds `EXPO_PUBLIC_` values when Metro creates the JavaScript bundle. After changing `.env`, rebuild the native app; restarting an already-built release does not update its embedded key.
 
-When you're ready, run:
+Do not commit `.env`, signing credentials, keystores, or Google Play service-account files.
+
+## Run on an Android emulator
+
+1. Open Android Studio.
+2. Open **Tools > Device Manager** and start an emulator.
+3. From the project root, compile, install, and run the app:
 
 ```bash
-npm run reset-project
+pnpm android
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This runs `expo run:android`, installs a debug build, and starts Metro. Use it for the first build and after changing native dependencies, Expo config plugins, or native configuration.
 
-### Other setup steps
+For normal TypeScript or JavaScript changes after the app is installed, only start Metro:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+pnpm start
+```
 
-## Learn more
+Press `a` in the Expo terminal to open the installed app on Android.
 
-To learn more about developing your project with Expo, look at the following resources:
+To select a particular connected emulator or physical device:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+pnpm exec expo run:android --device
+```
 
-## Join the community
+If a USB-connected physical device cannot reach Metro, run:
 
-Join our community of developers creating universal apps.
+```bash
+adb reverse tcp:8081 tcp:8081
+pnpm start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Regenerate the Android project
+
+The `android/` directory is generated by Expo Prebuild and is intentionally not committed. Generate it when it is absent:
+
+```bash
+pnpm exec expo prebuild --platform android --no-install
+```
+
+Use a clean regeneration only when native files are stale or after a significant Expo configuration change:
+
+```bash
+pnpm exec expo prebuild --clean --platform android --no-install
+```
+
+Important: `--clean` deletes and recreates `android/`. The local release-signing changes in `android/app/build.gradle` must be restored afterward before creating a signed release. Never run a production Gradle task until it reports that it is using the Hope Cards release keystore.
+
+## Android signing credentials
+
+Google Play updates must be signed with the same Hope Cards upload key used for earlier releases. This machine expects these private, untracked files:
+
+```text
+credentials.json
+credentials/android/keystore.jks
+```
+
+The keystore is also backed up outside the repository. Never generate a replacement key for an ordinary update, and never commit either credential file.
+
+If credentials must be restored from the existing Expo account, the one-time recovery command is:
+
+```bash
+npx eas-cli@latest credentials -p android
+```
+
+Choose the production Android credentials and download `credentials.json`. This uses EAS only as the existing credential vault; builds remain local.
+
+## Set up the local Android toolchain
+
+On macOS with the standard Android Studio installation:
+
+```bash
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+```
+
+If Gradle cannot locate the Android SDK, create `android/local.properties` containing the machine's SDK path:
+
+```properties
+sdk.dir=/Users/your-name/Library/Android/sdk
+```
+
+All commands below assume that the generated Android project has the existing Hope Cards release-signing configuration.
+
+## Preview build (APK)
+
+A preview APK is useful for direct installation and testing outside Google Play:
+
+```bash
+cd android
+JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew app:assembleRelease
+```
+
+Output:
+
+```text
+android/app/build/outputs/apk/release/app-release.apk
+```
+
+Install it on the running emulator or a connected Android device:
+
+```bash
+adb install -r app/build/outputs/apk/release/app-release.apk
+```
+
+This preview APK is signed with the production upload key. Keep it private unless it is intentionally being distributed to testers.
+
+## Production build (AAB)
+
+Before every Google Play upload:
+
+1. Increase `expo.android.versionCode` in `app.json`. Google Play rejects a version code that was already uploaded.
+2. Change `expo.version` when the user-visible release version changes.
+3. Confirm `.env` contains the production RevenueCat public SDK key.
+4. Confirm the Hope Cards upload keystore and signing configuration are present.
+
+Build the signed Android App Bundle:
+
+```bash
+cd android
+JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew clean app:bundleRelease
+```
+
+Output:
+
+```text
+android/app/build/outputs/bundle/release/app-release.aab
+```
+
+Optional verification:
+
+```bash
+jarsigner -verify -verbose -certs app/build/outputs/bundle/release/app-release.aab
+```
+
+## Publish to Google Play
+
+The repository does not contain a Google Play service-account key, so publishing is currently completed in Google Play Console:
+
+1. Open Google Play Console and select **Hope Cards**.
+2. Open the desired track: **Internal testing**, **Closed testing**, **Open testing**, or **Production**.
+3. Create a new release and upload `android/app/build/outputs/bundle/release/app-release.aab`.
+4. Add release notes, resolve any Play Console checks, review the release, and start the rollout.
+
+For a preview rollout, upload the AAB to **Internal testing** first. For production, promote the tested release or create a release on the **Production** track.
+
+Command-line publishing can be added later with the Google Play Developer API, but it requires a private service-account JSON file and Play Console permissions. That key must remain outside Git.
+
+## Useful commands
+
+| Task | Command |
+| --- | --- |
+| Install dependencies | `pnpm install --frozen-lockfile` |
+| Run the first Android debug build | `pnpm android` |
+| Start Metro for an installed build | `pnpm start` |
+| Select an Android device | `pnpm exec expo run:android --device` |
+| Run the web app | `pnpm web` |
+| Lint | `pnpm lint` |
+| Generate Android native files | `pnpm exec expo prebuild --platform android --no-install` |
+| Build a preview APK | `cd android && ./gradlew app:assembleRelease` |
+| Build a production AAB | `cd android && ./gradlew clean app:bundleRelease` |
+
+## Premium subscriptions
+
+Hope Cards Premium is powered by RevenueCat on Android. The app expects a RevenueCat `default` offering with a monthly package and treats the `Hope Cards Pro` entitlement identifier as Premium access. Purchases must be tested in an Android development, preview, or production build, not Expo Go.
+
+## References
+
+- [Expo SDK 57 reference](https://docs.expo.dev/versions/v57.0.0/)
+- [Create a debug build locally](https://docs.expo.dev/guides/local-app-development/)
+- [Create a release build locally](https://docs.expo.dev/guides/local-app-production/)
+- [Android Studio emulator setup](https://docs.expo.dev/workflow/android-studio-emulator/)

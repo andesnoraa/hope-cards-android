@@ -1,4 +1,28 @@
 minimumReleaseAgeExclude:
+  - '@expo/ui'
+  - expo-asset
+  - expo-audio
+  - expo-constants
+  - expo-device
+  - expo-document-picker
+  - expo-file-system
+  - expo-font
+  - expo-glass-effect
+  - expo-haptics
+  - expo-image
+  - expo-linking
+  - expo-notifications
+  - expo-router
+  - expo-sharing
+  - expo-splash-screen
+  - expo-status-bar
+  - expo-symbols
+  - expo-system-ui
+  - expo-web-browser
+  - react-native
+  - react-native-reanimated
+  - react-native-screens
+  - react-native-worklets
   - '@expo/cli@57.0.4'
   - '@expo/config-plugins@57.0.2'
   - '@expo/config@57.0.2'

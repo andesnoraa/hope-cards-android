@@ -114,6 +114,7 @@ export default function CardFront({
       <View style={styles.content}>
         <View style={styles.header}>
           <Text
+            selectable
             style={[
               styles.category,
               { color: theme.accent },
@@ -135,6 +136,7 @@ export default function CardFront({
 
         <View style={styles.verseContainer}>
           <Text
+            selectable
             adjustsFontSizeToFit
             minimumFontScale={0.8}
             numberOfLines={14}
@@ -281,7 +283,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
 
     fontFamily:
-      "CormorantGaramond-Regular",
+      "SourceSerif4_400Regular",
 
     fontWeight: "400",
 

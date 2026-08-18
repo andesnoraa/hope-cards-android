@@ -66,6 +66,7 @@ export async function replaceFavorites(
       "Failed to restore favorites:",
       error
     );
+    throw error;
   }
 }
 

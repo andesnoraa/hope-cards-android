@@ -42,11 +42,16 @@ const BENEFITS = [
   },
   {
     title: "Daily Hope",
-    free: false,
+    free: true,
     premium: true,
   },
   {
     title: "Background music",
+    free: false,
+    premium: true,
+  },
+  {
+    title: "Guided reflections & journal",
     free: false,
     premium: true,
   },
@@ -131,6 +136,10 @@ export default function PremiumScreen() {
     useState(false);
   const [canPurchase, setCanPurchase] =
     useState(false);
+  const [priceText, setPriceText] =
+    useState<string | null>(null);
+  const [trialDays, setTrialDays] =
+    useState<number | null>(null);
   const [notice, setNotice] =
     useState<Notice | null>(null);
   const purchaseLock = useRef(false);
@@ -157,6 +166,8 @@ export default function PremiumScreen() {
                 offering.packageToPurchase
               )
             );
+            setPriceText(offering.priceText);
+            setTrialDays(offering.trialDays);
           }
         } catch {
           if (mounted) {
@@ -212,7 +223,7 @@ export default function PremiumScreen() {
       setNotice({
         title: "Subscription Active",
         message:
-          "Hope Cards Premium is active. Daily Hope, background music, reminders, backup tools, and premium themes are now unlocked.",
+          "Hope Cards Premium is active. Guided reflections, background music, reminders, device backup tools, and premium themes are now unlocked.",
         icon: "checkmark-circle-outline",
       });
     } catch (error) {
@@ -299,7 +310,9 @@ export default function PremiumScreen() {
               { color: theme.text },
             ]}
           >
-            Make hope part of every day
+            {trialDays === 7
+              ? "Try every premium feature free"
+              : "Make hope part of every day"}
           </Text>
 
           <Text
@@ -311,9 +324,9 @@ export default function PremiumScreen() {
               },
             ]}
           >
-            Daily verses, peaceful music,
-            reminders, themes, and backup tools
-            in one simple upgrade.
+            {trialDays === 7
+              ? "Enjoy 7 days free, then continue monthly. Cancel anytime in Google Play."
+              : "Guided reflections, peaceful music, reminders, themes, and device backup tools in one simple upgrade."}
           </Text>
         </View>
 
@@ -506,7 +519,9 @@ export default function PremiumScreen() {
                   }
                 >
                   {canPurchase
-                    ? "Start Premium"
+                    ? trialDays === 7
+                      ? "Start 7-Day Free Trial"
+                      : "Start Premium"
                     : "Set Up Premium"}
                 </Text>
 
@@ -563,8 +578,11 @@ export default function PremiumScreen() {
             { color: theme.textTertiary },
           ]}
         >
-          Price and billing details will be
-          shown by Google Play before purchase.
+          {priceText
+            ? trialDays === 7
+              ? `Free for 7 days, then ${priceText} per month. Renews automatically until cancelled in Google Play.`
+              : `${priceText} per month. Renews automatically until cancelled in Google Play.`
+            : "Price and billing details will be shown by Google Play before purchase."}
         </Text>
       </ScrollView>
 
@@ -672,8 +690,12 @@ const styles = StyleSheet.create({
   },
 
   subscribeButton: {
+    width: "72%",
+    minWidth: 240,
+    maxWidth: 300,
     minHeight: 54,
     borderRadius: 27,
+    alignSelf: "center",
     flexDirection: "row",
     gap: 12,
     alignItems: "center",

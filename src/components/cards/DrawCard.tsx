@@ -5,6 +5,7 @@ import {
   useState,
 } from "react";
 import {
+  type LayoutChangeEvent,
   Pressable,
   StyleSheet,
   Text,
@@ -20,6 +21,10 @@ import Animated, {
 
 import DeckStack from "./DeckStack";
 
+import {
+  CARD_STACK_HEIGHT,
+  CARD_STACK_WIDTH,
+} from "./cardDimensions";
 import {
   getRandomVerse,
   getVerseById,
@@ -75,6 +80,11 @@ export default function DrawCard() {
 
   const [translation, setTranslation] =
     useState<TranslationId>("bsb");
+
+  const [layout, setLayout] = useState({
+    width: 0,
+    height: 0,
+  });
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -150,7 +160,6 @@ export default function DrawCard() {
   const buttonAnimatedStyle =
     useAnimatedStyle(() => ({
       transform: [
-        { translateY: -32 },
         { scale: buttonScale.value },
       ],
     }));
@@ -235,10 +244,86 @@ export default function DrawCard() {
     await shareVerse(currentVerse);
   }
 
+  function handleLayout(event: LayoutChangeEvent) {
+    const { width, height } =
+      event.nativeEvent.layout;
+
+    setLayout({ width, height });
+  }
+
+  const layoutGap = 20;
+  const targetDeckWidth = Math.min(
+    350,
+    Math.max(280, layout.width * 0.92),
+    Math.max(0, layout.width - 16)
+  );
+  const availableDeckHeight =
+    layout.height -
+    (showDrawButton
+      ? REGULAR_CTA_HEIGHT + layoutGap
+      : 0);
+  const deckScale =
+    layout.width > 0 && layout.height > 0
+      ? Math.min(
+          targetDeckWidth /
+            CARD_STACK_WIDTH,
+          availableDeckHeight /
+            CARD_STACK_HEIGHT
+        )
+      : 1;
+
   return (
-    <View style={styles.container}>
-      <View style={styles.deckContainer}>
-        <Pressable onPress={drawCard}>
+    <View
+      style={styles.container}
+      onLayout={handleLayout}
+    >
+      <View style={styles.hintContainer}>
+        <Text
+          style={[
+            styles.hint,
+            { color: theme.textSecondary },
+          ]}
+          accessibilityLiveRegion="polite"
+        >
+          {showingVerse
+            ? "Tap to return the card to the deck"
+            : "Tap the deck to reveal a verse"}
+        </Text>
+      </View>
+
+      <View
+        style={[
+          styles.deckContainer,
+          {
+            width:
+              CARD_STACK_WIDTH * deckScale,
+            height:
+              CARD_STACK_HEIGHT * deckScale,
+          },
+        ]}
+      >
+        <Pressable
+          onPress={drawCard}
+          accessibilityRole="button"
+          accessibilityLabel={
+            showingVerse
+              ? "Return card to deck"
+              : "Draw a card"
+          }
+          accessibilityHint={
+            showingVerse
+              ? "Turns the card face down"
+              : "Reveals a randomly selected Bible verse"
+          }
+          style={[
+            styles.deckScaleLayer,
+            {
+              transform: [
+                { scale: deckScale },
+              ],
+            },
+          ]}
+        >
           <DeckStack
             animatedStyle={animatedStyle}
             rotateY={rotateY}
@@ -256,6 +341,12 @@ export default function DrawCard() {
       {showDrawButton && (
         <Pressable
           onPress={drawCard}
+          accessibilityRole="button"
+          accessibilityLabel={
+            showingVerse
+              ? "Return card to deck"
+              : "Draw a card"
+          }
           onPressIn={() => {
             buttonScale.value =
               withSpring(
@@ -275,6 +366,8 @@ export default function DrawCard() {
             style={[
               styles.button,
               {
+                width:
+                  CARD_STACK_WIDTH * deckScale,
                 backgroundColor:
                   theme.buttonBackground,
                 borderColor:
@@ -308,16 +401,33 @@ export default function DrawCard() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
+    gap: 20,
   },
 
-  deckContainer: {
-    marginBottom: 64,
+  hintContainer: {
+    minHeight: 24,
+    justifyContent: "center",
+  },
+
+  hint: {
+    fontSize: 14,
+    lineHeight: 20,
+    fontWeight: "500",
+    textAlign: "center",
+  },
+
+  deckContainer: {},
+
+  deckScaleLayer: {
+    width: CARD_STACK_WIDTH,
+    height: CARD_STACK_HEIGHT,
+    transformOrigin: "top left",
   },
 
   button: {
-    width: 270,
     height: REGULAR_CTA_HEIGHT,
 
     borderRadius: REGULAR_CTA_RADIUS,

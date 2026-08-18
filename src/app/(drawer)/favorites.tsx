@@ -71,7 +71,7 @@ export default function FavoritesScreen() {
             },
           ]}
         >
-          Save verses you love and they'll appear here.
+          Save verses you love and they’ll appear here.
         </Text>
       </View>
     );
@@ -79,6 +79,7 @@ export default function FavoritesScreen() {
 
   return (
     <FlatList
+      contentInsetAdjustmentBehavior="automatic"
       data={favorites}
       keyExtractor={(item) =>
         item.id.toString()

@@ -11,6 +11,8 @@ export interface BackupInfo {
     version: number;
 
     favoriteCount: number;
+
+    journalEntryCount?: number;
 }
 
 export async function getBackupInfo(): Promise<BackupInfo | null> {

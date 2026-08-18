@@ -1,11 +1,13 @@
 import {
   setAudioModeAsync,
+  type AudioPlayer,
   useAudioPlayer,
 } from "expo-audio";
 import {
   router,
   useFocusEffect,
   useIsFocused,
+  useNavigation,
 } from "expo-router";
 import {
   useCallback,
@@ -19,6 +21,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   View,
   Pressable,
 } from "react-native";
@@ -27,6 +30,7 @@ import Animated, {
   FadeIn,
   FadeInDown,
 } from "react-native-reanimated";
+import { captureScreen } from "react-native-view-shot";
 
 import ActionButton from "../../components/common/ActionButton";
 import {
@@ -47,10 +51,19 @@ import {
   toggleFavorite,
 } from "../../services/favorites";
 
-import { shareVerse } from "../../services/share";
+import {
+  shareVerse,
+  shareVerseImage,
+} from "../../services/share";
 import {
   getPremiumStatus,
 } from "../../services/premium";
+import {
+  getJournalEntry,
+  getJournalEntryId,
+  getReflectionPrompt,
+  saveJournalEntry,
+} from "../../services/journal";
 import {
   getSettings,
 } from "../../services/settings";
@@ -94,9 +107,44 @@ function getVerseStyle(text: string) {
   };
 }
 
+function safelyPause(player: AudioPlayer) {
+  try {
+    if (player.isLoaded) {
+      player.pause();
+    }
+  } catch {
+    // The hook may release its native shared object before effect cleanup.
+  }
+}
+
+function safelyPlay(player: AudioPlayer) {
+  try {
+    if (player.isLoaded) {
+      player.play();
+    }
+  } catch {
+    // Ignore a late lifecycle update after the native player is released.
+  }
+}
+
+function getLocalDateKey() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = String(
+    date.getMonth() + 1
+  ).padStart(2, "0");
+  const day = String(date.getDate()).padStart(
+    2,
+    "0"
+  );
+
+  return `${year}-${month}-${day}`;
+}
+
 export default function DailyHopeScreen() {
   const { theme } = useAppTheme();
   const isFocused = useIsFocused();
+  const navigation = useNavigation();
   const musicPlayer = useAudioPlayer(null);
 
   const [isPremium, setIsPremium] =
@@ -113,6 +161,15 @@ export default function DailyHopeScreen() {
 
   const [favorite, setFavorite] =
     useState(false);
+
+  const [isCapturingShare, setIsCapturingShare] =
+    useState(false);
+
+  const [journalNote, setJournalNote] =
+    useState("");
+
+  const [savedJournalNote, setSavedJournalNote] =
+    useState("");
 
   const today = useMemo(() => {
     const parts =
@@ -202,7 +259,7 @@ export default function DailyHopeScreen() {
       let mounted = true;
 
       async function load() {
-        if (!isPremium) {
+        if (isPremium === null) {
           return;
         }
 
@@ -215,14 +272,32 @@ export default function DailyHopeScreen() {
 
         setVerse(todayVerse);
 
+        if (isPremium) {
+          const entry = getJournalEntry(
+            getJournalEntryId(
+              getLocalDateKey(),
+              todayVerse.id
+            )
+          );
+          const note = entry?.note ?? "";
+
+          setJournalNote(note);
+          setSavedJournalNote(note);
+        } else {
+          setJournalNote("");
+          setSavedJournalNote("");
+        }
+
         const saved =
           await isFavorite(todayVerse.id);
 
         setFavorite(saved);
 
-        setTimeout(() => {
-          lightImpact();
-        }, 1300);
+        if (isPremium) {
+          setTimeout(() => {
+            lightImpact();
+          }, 1300);
+        }
       }
 
       load();
@@ -262,9 +337,6 @@ export default function DailyHopeScreen() {
     musicPlayer.loop = true;
     musicPlayer.volume = 0.45;
 
-    return () => {
-      musicPlayer.pause();
-    };
   }, [musicPlayer, verse]);
 
   useEffect(() => {
@@ -276,9 +348,9 @@ export default function DailyHopeScreen() {
       verse !== null;
 
     if (shouldPlay) {
-      musicPlayer.play();
+      safelyPlay(musicPlayer);
     } else {
-      musicPlayer.pause();
+      safelyPause(musicPlayer);
     }
   }, [
     appState,
@@ -309,91 +381,72 @@ export default function DailyHopeScreen() {
   async function handleShare() {
     if (!verse) return;
 
-    await shareVerse(verse);
+    try {
+      navigation.setOptions({
+        headerShown: false,
+      });
+      setIsCapturingShare(true);
+
+      await new Promise<void>((resolve) => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setTimeout(resolve, 120);
+          });
+        });
+      });
+
+      const imageUri = await captureScreen({
+        format: "png",
+        quality: 1,
+        result: "tmpfile",
+      });
+
+      setIsCapturingShare(false);
+      navigation.setOptions({
+        headerShown: true,
+      });
+
+      await shareVerseImage(
+        imageUri,
+        verse
+      );
+    } catch (error) {
+      console.error(
+        "Failed to share Daily Hope image:",
+        error
+      );
+
+      setIsCapturingShare(false);
+      navigation.setOptions({
+        headerShown: true,
+      });
+      await shareVerse(verse);
+    }
+  }
+
+  async function handleSaveReflection() {
+    if (!verse || !isPremium) return;
+
+    const date = getLocalDateKey();
+    const note = journalNote.trim();
+
+    saveJournalEntry({
+      id: getJournalEntryId(date, verse.id),
+      date,
+      verseId: verse.id,
+      reference: verse.reference,
+      prompt: getReflectionPrompt(verse.category),
+      note,
+      updatedAt: new Date().toISOString(),
+    });
+
+    setJournalNote(note);
+    setSavedJournalNote(note);
+    await success();
   }
 
   if (isPremium === null) {
     return null;
-  }
-
-  if (!isPremium) {
-    return (
-      <View
-        style={[
-          styles.lockedContainer,
-          {
-            backgroundColor:
-              theme.background,
-          },
-        ]}
-      >
-        <View
-          style={[
-            styles.lockedIcon,
-            {
-              backgroundColor:
-                theme.accentSoft,
-            },
-          ]}
-        >
-          <Text
-            style={[
-              styles.lockedIconText,
-              { color: theme.accent },
-            ]}
-          >
-            ✦
-          </Text>
-        </View>
-
-        <Text
-          style={[
-            styles.lockedTitle,
-            { color: theme.text },
-          ]}
-        >
-          Daily encouragement, every day
-        </Text>
-
-        <Text
-          style={[
-            styles.lockedCopy,
-            {
-              color:
-                theme.textSecondary,
-            },
-          ]}
-        >
-          Daily Hope is included with Premium.
-          Receive a fresh verse each day and set
-          a gentle reminder if you choose.
-        </Text>
-
-        <Pressable
-          style={[
-            styles.lockedButton,
-            {
-              backgroundColor:
-                theme.buttonBackground,
-              borderColor:
-                theme.buttonBorder,
-            },
-          ]}
-          onPress={() => {
-            router.push("/premium");
-          }}
-        >
-          <Text
-            style={[
-              styles.lockedButtonText,
-              { color: theme.buttonText },
-            ]}
-          >
-            View Premium
-          </Text>
-        </Pressable>
-      </View>
-    );
   }
 
   if (!verse) {
@@ -401,6 +454,85 @@ export default function DailyHopeScreen() {
   }
 
   const verseStyle = getVerseStyle(verse.verse);
+
+  if (isCapturingShare) {
+    return (
+      <View
+        style={[
+          styles.sharePresentation,
+          {
+            backgroundColor: theme.background,
+          },
+        ]}
+      >
+        <View style={styles.sharePresentationMain}>
+          <View style={styles.sharePresentationHeader}>
+            <Text
+              style={[
+                styles.sharePresentationTitle,
+                { color: theme.text },
+              ]}
+            >
+              Today’s Hope
+            </Text>
+            <Text
+              style={[
+                styles.sharePresentationDate,
+                { color: theme.textSecondary },
+              ]}
+            >
+              {today}
+            </Text>
+          </View>
+
+          <View style={styles.sharePresentationVerse}>
+            <Text
+              style={[
+                styles.sharePresentationReference,
+                { color: theme.text },
+              ]}
+            >
+              {verse.reference}
+            </Text>
+            <View
+              style={[
+                styles.sharePresentationDivider,
+                { backgroundColor: theme.accent },
+              ]}
+            />
+            <Text
+              style={[
+                styles.sharePresentationText,
+                verseStyle,
+                { color: theme.cardText },
+              ]}
+            >
+              {verse.verse}
+            </Text>
+          </View>
+        </View>
+
+        <View style={styles.sharePresentationFooter}>
+          <Text
+            style={[
+              styles.sharePresentationTranslation,
+              { color: theme.textTertiary },
+            ]}
+          >
+            {verse.translation}
+          </Text>
+          <Text
+            style={[
+              styles.sharePresentationBrand,
+              { color: theme.accent },
+            ]}
+          >
+            HOPE CARDS
+          </Text>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <ScrollView
@@ -416,72 +548,88 @@ export default function DailyHopeScreen() {
         styles.content
       }
       showsVerticalScrollIndicator={false}
+      keyboardShouldPersistTaps="handled"
     >
       <Animated.View
-        entering={FadeIn.duration(600)}
-        style={styles.header}
-      >
-        <Text
-          style={[
-            styles.title,
-            { color: theme.text },
-          ]}
+          entering={FadeIn.duration(600)}
+          style={styles.header}
         >
-          Today's Hope
-        </Text>
+          <Text
+            style={[
+              styles.title,
+              { color: theme.text },
+            ]}
+          >
+            Today’s Hope
+          </Text>
 
-        <Animated.Text
-          entering={FadeIn.delay(300).duration(
+          <Animated.Text
+            entering={FadeIn.delay(300).duration(
+              600
+            )}
+            style={[
+              styles.date,
+              {
+                color:
+                  theme.textSecondary,
+              },
+            ]}
+          >
+            {today}
+          </Animated.Text>
+        </Animated.View>
+
+        <Animated.View
+          entering={FadeInDown.delay(900).duration(
+            1000
+          )}
+          style={styles.verseContainer}
+        >
+          <Text
+            style={[
+              styles.reference,
+              { color: theme.text },
+            ]}
+          >
+            {verse.reference}
+          </Text>
+
+          <View
+            style={[
+              styles.separator,
+              {
+                backgroundColor:
+                  theme.accent,
+              },
+            ]}
+          />
+
+          <Text
+            selectable
+            style={[
+              styles.verse,
+              verseStyle,
+              { color: theme.cardText },
+            ]}
+          >
+            {verse.verse}
+          </Text>
+        </Animated.View>
+
+      <Animated.Text
+          entering={FadeIn.delay(2100).duration(
             600
           )}
           style={[
-            styles.date,
+            styles.translation,
             {
               color:
-                theme.textSecondary,
+                theme.textTertiary,
             },
           ]}
         >
-          {today}
-        </Animated.Text>
-      </Animated.View>
-
-      <Animated.View
-        entering={FadeInDown.delay(900).duration(
-          1000
-        )}
-        style={styles.verseContainer}
-      >
-        <Text
-          style={[
-            styles.reference,
-            { color: theme.text },
-          ]}
-        >
-          {verse.reference}
-        </Text>
-
-        <View
-          style={[
-            styles.separator,
-            {
-              backgroundColor:
-                theme.accent,
-            },
-          ]}
-        />
-
-        <Text
-          selectable
-          style={[
-            styles.verse,
-            verseStyle,
-            { color: theme.cardText },
-          ]}
-        >
-          {verse.verse}
-        </Text>
-      </Animated.View>
+          {verse.translation}
+      </Animated.Text>
 
       <Animated.View
         entering={FadeIn.delay(1900).duration(
@@ -516,19 +664,157 @@ export default function DailyHopeScreen() {
         />
       </Animated.View>
 
-      <Animated.Text
-        entering={FadeIn.delay(2100).duration(
-          600
-        )}
-        style={[
-          styles.translation,
-          {
-            color: theme.textTertiary,
-          },
-        ]}
-      >
-        {verse.translation}
-      </Animated.Text>
+      {isPremium && (
+        <View
+          style={[
+            styles.reflectionCard,
+            {
+              backgroundColor: theme.surface,
+              borderColor: theme.accentLine,
+            },
+          ]}
+        >
+          <Text
+            style={[
+              styles.reflectionEyebrow,
+              { color: theme.accent },
+            ]}
+          >
+            GUIDED REFLECTION
+          </Text>
+          <Text
+            selectable
+            style={[
+              styles.reflectionPrompt,
+              { color: theme.text },
+            ]}
+          >
+            {getReflectionPrompt(verse.category)}
+          </Text>
+          <TextInput
+            accessibilityLabel="Private reflection note"
+            multiline
+            maxLength={1000}
+            placeholder="Write what comes to mind…"
+            placeholderTextColor={theme.textTertiary}
+            selectionColor={theme.accent}
+            value={journalNote}
+            onChangeText={setJournalNote}
+            style={[
+              styles.reflectionInput,
+              {
+                backgroundColor: theme.background,
+                borderColor: theme.divider,
+                color: theme.cardText,
+              },
+            ]}
+          />
+          <View style={styles.reflectionFooter}>
+            <Text
+              style={[
+                styles.reflectionPrivacy,
+                { color: theme.textTertiary },
+              ]}
+            >
+              Private on this device
+            </Text>
+            <Text
+              style={[
+                styles.reflectionCount,
+                { color: theme.textTertiary },
+              ]}
+            >
+              {journalNote.length}/1000
+            </Text>
+          </View>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Save reflection"
+            disabled={
+              journalNote.trim() === savedJournalNote
+            }
+            style={[
+              styles.reflectionSaveButton,
+              {
+                backgroundColor:
+                  theme.buttonBackground,
+                borderColor: theme.buttonBorder,
+              },
+              journalNote.trim() ===
+                savedJournalNote &&
+                styles.reflectionSaveButtonDisabled,
+            ]}
+            onPress={handleSaveReflection}
+          >
+            <Text
+              style={[
+                styles.reflectionSaveButtonText,
+                { color: theme.buttonText },
+              ]}
+            >
+              {savedJournalNote
+                ? "Update Reflection"
+                : "Save Reflection"}
+            </Text>
+          </Pressable>
+        </View>
+      )}
+
+      {!isPremium && (
+        <View
+          style={[
+            styles.premiumPrompt,
+            isCapturingShare &&
+              styles.hiddenDuringCapture,
+            {
+              backgroundColor: theme.surface,
+              borderColor: theme.accentLine,
+            },
+          ]}
+        >
+          <Text
+            style={[
+              styles.premiumPromptTitle,
+              { color: theme.text },
+            ]}
+          >
+            Make Daily Hope part of your routine
+          </Text>
+          <Text
+            style={[
+              styles.premiumPromptCopy,
+              { color: theme.textSecondary },
+            ]}
+          >
+            Add guided reflections, a private journal,
+            gentle reminders, music, and device backup.
+          </Text>
+          <Pressable
+            style={[
+              styles.premiumButton,
+              {
+                backgroundColor:
+                  theme.buttonBackground,
+                borderColor:
+                  theme.buttonBorder,
+              },
+            ]}
+            onPress={() => {
+              router.push("/premium");
+            }}
+          >
+            <Text
+              style={[
+                styles.premiumButtonText,
+                { color: theme.buttonText },
+              ]}
+            >
+              Explore Premium
+            </Text>
+          </Pressable>
+        </View>
+      )}
+
     </ScrollView>
   );
 }
@@ -543,6 +829,85 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
     paddingTop: 32,
     paddingBottom: 60,
+  },
+
+  sharePresentation: {
+    flex: 1,
+    alignItems: "center",
+    paddingHorizontal: 28,
+    paddingTop: 96,
+    paddingBottom: 76,
+  },
+
+  sharePresentationHeader: {
+    alignItems: "center",
+    gap: 10,
+  },
+
+  sharePresentationMain: {
+    flex: 1,
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 64,
+  },
+
+  sharePresentationTitle: {
+    fontSize: 36,
+    lineHeight: 44,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+
+  sharePresentationDate: {
+    fontSize: 16,
+    lineHeight: 23,
+    letterSpacing: 0.3,
+  },
+
+  sharePresentationVerse: {
+    width: "82%",
+    alignItems: "center",
+  },
+
+  sharePresentationReference: {
+    fontSize: 28,
+    lineHeight: 36,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+
+  sharePresentationDivider: {
+    width: 56,
+    height: 2,
+    borderRadius: 2,
+    opacity: 0.75,
+    marginTop: 20,
+    marginBottom: 38,
+  },
+
+  sharePresentationText: {
+    fontFamily: "SourceSerif4_400Regular",
+    textAlign: "center",
+  },
+
+  sharePresentationFooter: {
+    alignItems: "center",
+    gap: 22,
+  },
+
+  sharePresentationTranslation: {
+    fontSize: 14,
+    lineHeight: 20,
+    textAlign: "center",
+    letterSpacing: 0.4,
+  },
+
+  sharePresentationBrand: {
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: "700",
+    letterSpacing: 3,
   },
 
   header: {
@@ -585,7 +950,7 @@ const styles = StyleSheet.create({
   verse: {
     textAlign: "center",
     fontFamily:
-      "CormorantGaramond-Regular",
+      "SourceSerif4_400Regular",
   },
 
   actions: {
@@ -603,53 +968,123 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
 
-  lockedContainer: {
+  reflectionCard: {
+    width: "100%",
+    maxWidth: 420,
+    padding: 20,
+    gap: 14,
+    borderWidth: 1,
+    borderRadius: 20,
+    borderCurve: "continuous",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.06)",
+    marginTop: 40,
+  },
+
+  reflectionEyebrow: {
+    fontSize: 12,
+    lineHeight: 16,
+    fontWeight: "700",
+    letterSpacing: 1.5,
+  },
+
+  reflectionPrompt: {
+    fontSize: 20,
+    lineHeight: 29,
+    fontWeight: "600",
+  },
+
+  reflectionInput: {
+    minHeight: 132,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderWidth: 1,
+    borderRadius: 14,
+    borderCurve: "continuous",
+    fontFamily: "SourceSerif4_400Regular",
+    fontSize: 18,
+    lineHeight: 27,
+    textAlignVertical: "top",
+  },
+
+  reflectionFooter: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    gap: 12,
+  },
+
+  reflectionPrivacy: {
     flex: 1,
+    fontSize: 12,
+    lineHeight: 17,
+  },
+
+  reflectionCount: {
+    fontSize: 12,
+    lineHeight: 17,
+    fontVariant: ["tabular-nums"],
+  },
+
+  reflectionSaveButton: {
+    minHeight: 50,
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: 34,
-    paddingBottom: 110,
+    borderWidth: 2,
+    borderRadius: 14,
+    borderCurve: "continuous",
   },
 
-  lockedIcon: {
-    width: 78,
-    height: 78,
-    borderRadius: 39,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 22,
+  reflectionSaveButtonDisabled: {
+    opacity: 0.45,
   },
 
-  lockedIconText: {
-    fontSize: 32,
-    fontWeight: "700",
-  },
-
-  lockedTitle: {
-    fontSize: 30,
-    fontWeight: "700",
-    textAlign: "center",
-  },
-
-  lockedCopy: {
-    marginTop: 12,
+  reflectionSaveButtonText: {
     fontSize: 16,
-    lineHeight: 26,
+    lineHeight: 22,
+    fontWeight: "700",
+  },
+
+  premiumPrompt: {
+    width: "100%",
+    maxWidth: 360,
+    padding: 20,
+    borderWidth: 1,
+    borderRadius: 20,
+    borderCurve: "continuous",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.06)",
+    marginTop: 40,
+    alignItems: "center",
+  },
+
+  hiddenDuringCapture: {
+    opacity: 0,
+  },
+
+  premiumPromptTitle: {
+    fontSize: 18,
+    lineHeight: 25,
+    fontWeight: "700",
     textAlign: "center",
   },
 
-  lockedButton: {
+  premiumPromptCopy: {
+    marginTop: 8,
+    fontSize: 14,
+    lineHeight: 21,
+    textAlign: "center",
+  },
+
+  premiumButton: {
     width: "100%",
     height: REGULAR_CTA_HEIGHT,
     borderRadius: REGULAR_CTA_RADIUS,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: 18,
   },
 
-  lockedButtonText: {
-    fontSize: 17,
+  premiumButtonText: {
+    fontSize: 15,
     fontWeight: "700",
   },
 });

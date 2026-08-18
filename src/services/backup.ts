@@ -14,6 +14,11 @@ import {
 import {
     getSettings,
 } from "./settings";
+import {
+    getJournalEntries,
+    isJournalEntry,
+    type JournalEntry,
+} from "./journal";
 
 import {
     type BackupInfo,
@@ -24,6 +29,7 @@ import type {
     AppThemeName,
 } from "../theme/appTheme";
 import {
+    getVerses,
     isTranslationId,
     type TranslationId,
 } from "./verseService";
@@ -47,6 +53,14 @@ const BACKUP_FILE_EXTENSION =
     ".json";
 
 const MAX_LOCAL_BACKUPS = 10;
+const MAX_BACKUP_FILE_BYTES = 5 * 1024 * 1024;
+const MAX_FAVORITES = 5000;
+const MAX_JOURNAL_ENTRIES = 5000;
+const MAX_JOURNAL_NOTE_LENGTH = 20000;
+
+const VERSE_IDS = new Set(
+    getVerses("bsb").map((verse) => verse.id)
+);
 
 export interface BackupData {
     version: 1;
@@ -54,6 +68,8 @@ export interface BackupData {
     createdAt: string;
 
     favorites: string[];
+
+    journalEntries?: JournalEntry[];
 
     settings: {
         showDrawButton: boolean;
@@ -142,6 +158,9 @@ export async function createBackup(): Promise<BackupData> {
     const settings =
         await getSettings();
 
+    const journalEntries =
+        getJournalEntries();
+
     return {
         version: 1,
 
@@ -149,6 +168,8 @@ export async function createBackup(): Promise<BackupData> {
             new Date().toISOString(),
 
         favorites,
+
+        journalEntries,
 
         settings: {
             showDrawButton:
@@ -246,6 +267,9 @@ export async function saveBackupLocally(
 
         favoriteCount:
             backup.favorites.length,
+
+        journalEntryCount:
+            backup.journalEntries?.length ?? 0,
     };
 
     await saveBackupInfo(info);
@@ -329,6 +353,16 @@ export async function readBackupFile(
 async function readBackupFromFile(
     file: File
 ): Promise<BackupData> {
+    const info = file.info();
+
+    if (
+        info.exists &&
+        typeof info.size === "number" &&
+        info.size > MAX_BACKUP_FILE_BYTES
+    ) {
+        throw new Error("Backup file is too large.");
+    }
+
     const json = await file.text();
 
     const backup: unknown =
@@ -365,20 +399,41 @@ export function validateBackup(
     }
 
     if (
-        typeof data.createdAt !==
-        "string"
+        typeof data.createdAt !== "string" ||
+        !Number.isFinite(Date.parse(data.createdAt))
     ) {
         return false;
     }
 
     if (
-        !Array.isArray(
-            data.favorites
-        ) ||
+        !Array.isArray(data.favorites) ||
+        data.favorites.length > MAX_FAVORITES ||
         !data.favorites.every(
             (favorite) =>
-                typeof favorite ===
-                "string"
+                typeof favorite === "string" &&
+                VERSE_IDS.has(favorite)
+        ) ||
+        new Set(data.favorites).size !== data.favorites.length
+    ) {
+        return false;
+    }
+
+    if (
+        data.journalEntries !== undefined &&
+        (
+            !Array.isArray(data.journalEntries) ||
+            data.journalEntries.length > MAX_JOURNAL_ENTRIES ||
+            !data.journalEntries.every(
+                (entry) =>
+                    isJournalEntry(entry) &&
+                    entry.note.length <= MAX_JOURNAL_NOTE_LENGTH &&
+                    VERSE_IDS.has(entry.verseId) &&
+                    Number.isFinite(Date.parse(entry.updatedAt)) &&
+                    /^\d{4}-\d{2}-\d{2}$/.test(entry.date)
+            ) ||
+            new Set(
+                data.journalEntries.map((entry) => entry.id)
+            ).size !== data.journalEntries.length
         )
     ) {
         return false;

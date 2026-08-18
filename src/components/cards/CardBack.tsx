@@ -106,11 +106,11 @@ const styles = StyleSheet.create({
 
     marginBottom: 12,
 
-    fontFamily: "CormorantGaramond-Bold",
+    fontFamily: "SourceSerif4_600SemiBold",
   },
 
   title: {
-    fontFamily: "CormorantGaramond-Bold",
+    fontFamily: "SourceSerif4_600SemiBold",
 
     fontSize: 68,
 

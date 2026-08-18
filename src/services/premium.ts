@@ -8,14 +8,14 @@ import Purchases, {
 
 import type { AppThemeName } from "../theme/appTheme";
 
-declare const process: {
-  env?: {
-    EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY?: string;
-  };
-};
-
 const REVENUECAT_ANDROID_API_KEY =
-  process.env?.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY;
+  process.env
+    .EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY;
+
+const HAS_VALID_REVENUECAT_ANDROID_API_KEY =
+  REVENUECAT_ANDROID_API_KEY?.startsWith(
+    "goog_"
+  ) === true;
 
 const PREMIUM_ENTITLEMENT_ID = "Hope Cards Pro";
 
@@ -35,7 +35,31 @@ export type PremiumStatus = {
 
 export type PremiumOffering = {
   packageToPurchase: PurchasesPackage | null;
+  priceText: string | null;
+  trialDays: number | null;
 };
+
+function getTrialDays(
+  packageToPurchase: PurchasesPackage | null
+) {
+  const period =
+    packageToPurchase?.product.defaultOption
+      ?.freePhase?.billingPeriod;
+
+  if (!period) {
+    return null;
+  }
+
+  if (period.unit === "DAY") {
+    return period.value;
+  }
+
+  if (period.unit === "WEEK") {
+    return period.value * 7;
+  }
+
+  return null;
+}
 
 let configurePromise: Promise<boolean> | null = null;
 
@@ -83,7 +107,7 @@ async function configurePurchases() {
     if (
       Platform.OS !== "android" ||
       isRunningInExpoGo() ||
-      !REVENUECAT_ANDROID_API_KEY
+      !HAS_VALID_REVENUECAT_ANDROID_API_KEY
     ) {
       return false;
     }
@@ -137,6 +161,8 @@ export async function getPremiumOffering(): Promise<PremiumOffering> {
   if (!isConfigured) {
     return {
       packageToPurchase: null,
+      priceText: null,
+      trialDays: null,
     };
   }
 
@@ -144,12 +170,17 @@ export async function getPremiumOffering(): Promise<PremiumOffering> {
     await Purchases.getOfferings();
   const currentOffering = offerings.current;
 
-  return {
-    packageToPurchase:
+  const packageToPurchase =
       currentOffering?.monthly ??
       currentOffering
         ?.availablePackages[0] ??
-      null,
+      null;
+
+  return {
+    packageToPurchase,
+    priceText:
+      packageToPurchase?.product.priceString ?? null,
+    trialDays: getTrialDays(packageToPurchase),
   };
 }
 

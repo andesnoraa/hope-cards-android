@@ -204,6 +204,21 @@ export default function DrawerLayout() {
       />
 
       <Drawer.Screen
+        name="journal"
+        options={{
+          title: "Journal",
+          drawerLabel: "Journal",
+          drawerIcon: ({ color }) => (
+            <Ionicons
+              name="journal-outline"
+              color={color}
+              size={24}
+            />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
         name="premium"
         options={{
           title: "Premium",

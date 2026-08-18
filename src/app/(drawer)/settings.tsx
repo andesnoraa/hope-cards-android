@@ -35,6 +35,7 @@ import {
   exportBackup,
   loadBackup,
   loadLatestLocalBackup,
+  shareBackup,
   type BackupData,
 } from "../../services/backup";
 
@@ -695,7 +696,10 @@ ${formatRelativeDate(
 Favorites:
 ${backup.favorites.length}
 
-Your current favorites and settings will be replaced.`,
+Journal entries:
+${backup.journalEntries?.length ?? 0}
+
+Your current favorites, journal entries, and settings will be replaced.`,
       [
         {
           text: "Cancel",
@@ -757,7 +761,7 @@ Your current favorites and settings will be replaced.`,
               setSuccessNotice({
                 title: "Restore Complete",
                 message:
-                  "Your favorites and settings are restored and ready to use.",
+                  "Your favorites, journal entries, and settings are restored and ready to use.",
                 icon: "checkmark-circle-outline",
               });
             } catch (error) {
@@ -803,7 +807,7 @@ Your current favorites and settings will be replaced.`,
       setSuccessNotice({
         title: "Backup Ready",
         message:
-          "Your favorites and settings are safely backed up on this device.",
+          "A device backup was created. Export a copy if you want to keep it outside this app.",
         icon: "cloud-done-outline",
       });
     } catch (error) {
@@ -813,6 +817,29 @@ Your current favorites and settings will be replaced.`,
         "Backup Failed",
         "Unable to create the backup."
       );
+    } finally {
+      backupLock.current = false;
+      setIsBackupProcessing(false);
+    }
+  }
+
+  async function handleExportBackup() {
+    if (!isPremium) {
+      openPremiumPrompt("Backup and restore");
+      return;
+    }
+
+    if (backupLock.current) return;
+
+    backupLock.current = true;
+    setIsBackupProcessing(true);
+
+    try {
+      const info = await shareBackup();
+      setBackupInfo(info);
+    } catch (error) {
+      console.error(error);
+      Alert.alert("Export Failed", "Unable to export the backup file.");
     } finally {
       backupLock.current = false;
       setIsBackupProcessing(false);
@@ -866,6 +893,7 @@ Your current favorites and settings will be replaced.`,
   return (
     <>
       <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
         style={[
           styles.container,
           {
@@ -1461,7 +1489,7 @@ Your current favorites and settings will be replaced.`,
         style={styles.settingRow}
         onPress={handleBackup}
         accessibilityRole="button"
-        accessibilityLabel="Back up favorites and settings"
+        accessibilityLabel="Back up favorites, journal entries, and settings"
         disabled={isBackupProcessing}
         accessibilityState={{
           disabled: isBackupProcessing,
@@ -1520,6 +1548,11 @@ Your current favorites and settings will be replaced.`,
                 {backupInfo.favoriteCount === 1
                   ? ""
                   : "s"}{" "}
+                and {backupInfo.journalEntryCount ?? 0}{" "}
+                journal entr
+                {(backupInfo.journalEntryCount ?? 0) === 1
+                  ? "y"
+                  : "ies"}{" "}
                 backed up
               </Text>
             </>
@@ -1563,9 +1596,35 @@ Your current favorites and settings will be replaced.`,
 
       <Pressable
         style={styles.settingRow}
+        onPress={handleExportBackup}
+        accessibilityRole="button"
+        accessibilityLabel="Export a device backup file"
+        disabled={isBackupProcessing}
+        accessibilityState={{ disabled: isBackupProcessing, busy: isBackupProcessing }}
+        android_ripple={{ color: theme.accentSoft }}
+      >
+        <View style={styles.textContainer}>
+          <Text style={[styles.settingTitle, { color: theme.text }]}>Export Backup</Text>
+          <Text style={[styles.settingSubtitle, { color: theme.textSecondary }]}>
+            {isPremium
+              ? "Save or share a copy outside Hope Cards. Backup files are not encrypted."
+              : "Premium: export a device backup file."}
+          </Text>
+        </View>
+        <Ionicons
+          name={isPremium ? "share-outline" : "lock-closed-outline"}
+          size={22}
+          color={theme.textTertiary}
+        />
+      </Pressable>
+
+      <View style={[styles.divider, { backgroundColor: theme.divider }]} />
+
+      <Pressable
+        style={styles.settingRow}
         onPress={handleRestore}
         accessibilityRole="button"
-        accessibilityLabel="Restore favorites and settings"
+        accessibilityLabel="Restore favorites, journal entries, and settings"
         disabled={isRestoreProcessing}
         accessibilityState={{
           disabled: isRestoreProcessing,
@@ -1596,7 +1655,7 @@ Your current favorites and settings will be replaced.`,
           >
             {isPremium
               ? "Restore your data from a backup file."
-              : "Premium: restore favorites and settings."}
+              : "Premium: restore favorites, journal entries, and settings."}
           </Text>
         </View>
 
