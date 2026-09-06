@@ -89,7 +89,6 @@ fun PrivacyScreen(onPrivacyOptions: (() -> Unit)?) {
                 }
             }
         }
-        Text("© 2026 Hope Cards · All rights reserved", color = colors.textTertiary, fontFamily = Poppins, fontSize = 11.sp, lineHeight = 16.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(top = 4.dp))
     }
 }
 
@@ -173,8 +172,8 @@ fun AboutScreen() {
         Text(
             buildAnnotatedString {
                 append("Developed with ")
-                // Force text presentation so Samsung does not replace the themed heart with a red emoji.
-                withStyle(SpanStyle(color = colors.accent)) { append("♥︎") }
+                // Force text presentation so Samsung does not replace the heart with an emoji.
+                withStyle(SpanStyle(color = colors.danger)) { append("♥︎") }
                 append(" by ")
                 withStyle(SpanStyle(color = colors.text, fontWeight = FontWeight.SemiBold)) { append("Aaronsedna") }
             },
@@ -185,7 +184,6 @@ fun AboutScreen() {
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
         )
-        Text("© 2026 Hope Cards · All rights reserved", color = colors.textTertiary, fontFamily = Poppins, fontSize = 11.sp, lineHeight = 16.sp, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(top = 12.dp))
     }
 }
 

@@ -171,7 +171,7 @@ fun SettingsScreen(
     if (themePicker) {
         SelectorDialog(
             title = "Theme",
-            subtitle = "Choose the atmosphere that feels right.",
+            subtitle = "Choose a style that helps you pause and reflect.",
             onDismiss = { themePicker = false },
         ) {
             ThemeName.entries.forEach { theme ->
