@@ -306,8 +306,11 @@ fun HopeCardsApp(
                                             scope.launch {
                                                 snackbarHostState.currentSnackbarData?.dismiss()
                                                 snackbarHostState.showSnackbar(
-                                                    if (it.isBlank()) "Reflection removed from this device."
-                                                    else "Reflection kept privately on this device.",
+                                                    when {
+                                                        it.isBlank() -> "Removed from your journal."
+                                                        existing.isBlank() -> "Added to your journal."
+                                                        else -> "Journal entry updated."
+                                                    },
                                                 )
                                             }
                                         },

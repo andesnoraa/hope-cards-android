@@ -235,7 +235,7 @@ fun DailyHopeScreen(
                     }
                     Column(Modifier.weight(1f).padding(start = 12.dp)) {
                         Text("Notes", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 20.sp)
-                        Text("A private note for this verse", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                        Text("Notes for this verse", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                     }
                     IconButton(onClick = { reflectionOpen = false }) {
                         AppIcon(AppIconGlyph.Close, "Close notes", colors.textSecondary, size = 22.dp)
@@ -275,7 +275,7 @@ fun DailyHopeScreen(
                     ),
                 )
                 Row(Modifier.fillMaxWidth()) {
-                    Text("Only on this device", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
+                    Text("Journal note", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
                     Text("${note.length}/1000", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                 }
                 if (noteChanged) {
@@ -306,7 +306,7 @@ fun DailyHopeScreen(
                 } else {
                     Text(
                         if (existingNote.isBlank()) "Write anything you would like to remember."
-                        else "Your note is saved on this device.",
+                        else "This note is in your journal.",
                         color = colors.textTertiary,
                         fontFamily = Poppins,
                         fontSize = 12.sp,
