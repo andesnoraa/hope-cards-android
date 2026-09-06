@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hope Cards</string>
+    <string name="daily_hope_channel_name">Daily Hope</string>
+    <string name="daily_hope_channel_description">Daily reminders to read today’s hope.</string>
+    <string name="daily_hope_notification_title">Your Daily Hope awaits</string>
+    <string name="daily_hope_notification_body">Take a quiet moment with today’s verse.</string>
+</resources>

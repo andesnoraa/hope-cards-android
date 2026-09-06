@@ -1,208 +1,89 @@
 # Hope Cards
 
-Hope Cards is an Expo SDK 57 / React Native Android app. Android development and release builds are created locally with Android Studio, Expo Prebuild, and Gradle. EAS Build is not required for the normal workflow.
+Hope Cards is a native Android app written entirely in Kotlin with Jetpack Compose. The application ID remains `com.aaronsedna.hopecards`, so this codebase upgrades the existing Google Play app rather than creating a new listing.
 
-The Android application ID is `com.aaronsedna.hopecards`.
+Every app feature is free. Monetization uses:
+
+- an anchored adaptive banner on selected browsing screens;
+- a frequency-capped interstitial after every fifth completed card, with a minimum ten-minute cooldown;
+- a non-consumable Google Play one-time product, `remove_ads_lifetime`, to remove all ads permanently.
+
+Purchases use Google Play Billing directly. RevenueCat is not used.
 
 ## Requirements
 
-- Node.js 22.13 or newer
-- pnpm
-- Android Studio with the Android SDK, platform tools, and an Android emulator
-- Android Studio's bundled JDK, or another compatible JDK
+- Android Studio with Android SDK 36 and platform tools
+- JDK 17 (Android Studio's bundled JBR is supported)
+- the existing, private Hope Cards upload keystore for release builds
 
-Install the JavaScript dependencies from the project root:
-
-```bash
-pnpm install --frozen-lockfile
-```
-
-Copy the example environment file and add the RevenueCat Android public SDK key:
+Open the `android/` directory in Android Studio, or build from the terminal:
 
 ```bash
-cp .env.example .env
+cd android
+JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew app:assembleDebug
 ```
 
-```dotenv
-EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY=goog_your_android_public_sdk_key
-```
-
-The file is plain dotenv text: one `NAME=value` entry per line, with no JSON object, commas, or trailing semicolon. Quotes are unnecessary. Use the **Android public SDK key** from RevenueCat (**Project settings > API keys**) whose value starts with `goog_`. Do not use a RevenueCat secret key or a Google service-account JSON file here. The public SDK key is embedded in the app by design, while `.env` remains untracked to prevent accidental configuration changes.
-
-Expo only embeds `EXPO_PUBLIC_` values when Metro creates the JavaScript bundle. After changing `.env`, rebuild the native app; restarting an already-built release does not update its embedded key.
-
-Do not commit `.env`, signing credentials, keystores, or Google Play service-account files.
-
-## Run on an Android emulator
-
-1. Open Android Studio.
-2. Open **Tools > Device Manager** and start an emulator.
-3. From the project root, compile, install, and run the app:
+Install on a connected device without clearing existing app data:
 
 ```bash
-pnpm android
+adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-This runs `expo run:android`, installs a debug build, and starts Metro. Use it for the first build and after changing native dependencies, Expo config plugins, or native configuration.
+Do not uninstall the existing app when validating data migration. The native app imports compatible settings, favorites, journal entries, Daily Hope state, backup metadata, and ad counters from the previous Expo/React Native installation on its first launch.
 
-For normal TypeScript or JavaScript changes after the app is installed, only start Metro:
+## AdMob configuration
 
-```bash
-pnpm start
+Debug builds always use Google's official test ad units. Provide production identifiers to a release build as Gradle properties or environment variables:
+
+```text
+ADMOB_APP_ID=ca-app-pub-0000000000000000~0000000000
+ADMOB_BANNER_AD_UNIT_ID=ca-app-pub-0000000000000000/0000000000
+ADMOB_INTERSTITIAL_AD_UNIT_ID=ca-app-pub-0000000000000000/0000000000
 ```
 
-Press `a` in the Expo terminal to open the installed app on Android.
+The app requests consent through Google's User Messaging Platform before initializing Mobile Ads and exposes Ad Privacy Choices when required. Configure and publish the applicable privacy messages in AdMob before release.
 
-To select a particular connected emulator or physical device:
+## Google Play Billing
 
-```bash
-pnpm exec expo run:android --device
-```
+Create and activate a one-time product with product ID `remove_ads_lifetime` in the existing Google Play Console app. It must be a non-consumable purchase. The app queries ownership, handles pending purchases, acknowledges completed purchases, and restores ownership through Google Play.
 
-If a USB-connected physical device cannot reach Metro, run:
+The migration also recognizes an active legacy Google Play subscription as ad-free so existing Premium subscribers are not downgraded when RevenueCat is removed.
 
-```bash
-adb reverse tcp:8081 tcp:8081
-pnpm start
-```
+Billing availability and real purchases must be tested with a Play-installed build and a license tester. A directly installed debug APK can compile and exercise the UI but Google Play may not return product details for it.
 
-## Regenerate the Android project
+## Notifications, performance, and layout
 
-The `android/` directory is generated by Expo Prebuild and is intentionally not committed. Generate it when it is absent:
+- The phone activity requests portrait orientation.
+- Compose layouts use bounded widths, adaptive grids, scrolling content, safe drawing insets, and adaptive ad sizes.
+- Android 16 and later may override fixed orientation on large-screen devices; the responsive layouts remain usable in those configurations as required by current Android guidance.
+- Daily Hope uses one inexact, idle-aware alarm instead of an exact repeating alarm.
+- Music starts only after a user action and its `MediaPlayer` is released when playback stops, the screen leaves composition, or the app goes to the background.
+- Verse data uses a two-translation LRU cache instead of retaining every translation in memory.
+- Ad views and billing connections are disposed with their owners; the app does not retain an Activity globally.
 
-```bash
-pnpm exec expo prebuild --platform android --no-install
-```
+## Signed release bundle
 
-Use a clean regeneration only when native files are stale or after a significant Expo configuration change:
-
-```bash
-pnpm exec expo prebuild --clean --platform android --no-install
-```
-
-Important: `--clean` deletes and recreates `android/`. The local release-signing changes in `android/app/build.gradle` must be restored afterward before creating a signed release. Never run a production Gradle task until it reports that it is using the Hope Cards release keystore.
-
-## Android signing credentials
-
-Google Play updates must be signed with the same Hope Cards upload key used for earlier releases. This machine expects these private, untracked files:
+The private, untracked files expected by the release signing configuration are:
 
 ```text
 credentials.json
 credentials/android/keystore.jks
 ```
 
-The keystore is also backed up outside the repository. Never generate a replacement key for an ordinary update, and never commit either credential file.
-
-If credentials must be restored from the existing Expo account, the one-time recovery command is:
-
-```bash
-npx eas-cli@latest credentials -p android
-```
-
-Choose the production Android credentials and download `credentials.json`. This uses EAS only as the existing credential vault; builds remain local.
-
-## Set up the local Android toolchain
-
-On macOS with the standard Android Studio installation:
-
-```bash
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-```
-
-If Gradle cannot locate the Android SDK, create `android/local.properties` containing the machine's SDK path:
-
-```properties
-sdk.dir=/Users/your-name/Library/Android/sdk
-```
-
-All commands below assume that the generated Android project has the existing Hope Cards release-signing configuration.
-
-## Preview build (APK)
-
-A preview APK is useful for direct installation and testing outside Google Play:
-
-```bash
-cd android
-JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew app:assembleRelease
-```
-
-Output:
-
-```text
-android/app/build/outputs/apk/release/app-release.apk
-```
-
-Install it on the running emulator or a connected Android device:
-
-```bash
-adb install -r app/build/outputs/apk/release/app-release.apk
-```
-
-This preview APK is signed with the production upload key. Keep it private unless it is intentionally being distributed to testers.
-
-## Production build (AAB)
-
 Before every Google Play upload:
 
-1. Increase `expo.android.versionCode` in `app.json`. Google Play rejects a version code that was already uploaded.
-2. Change `expo.version` when the user-visible release version changes.
-3. Confirm `.env` contains the production RevenueCat public SDK key.
-4. Confirm the Hope Cards upload keystore and signing configuration are present.
-
-Build the signed Android App Bundle:
+1. Confirm `versionCode` in `android/app/build.gradle` is greater than every uploaded artifact.
+2. Set the production AdMob identifiers.
+3. Confirm the existing Hope Cards upload keystore is available.
+4. Build locally:
 
 ```bash
 cd android
 JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradlew clean app:bundleRelease
 ```
 
-Output:
+The bundle is written to `android/app/build/outputs/bundle/release/app-release.aab`.
 
-```text
-android/app/build/outputs/bundle/release/app-release.aab
-```
+## Preserve the current closed test
 
-Optional verification:
-
-```bash
-jarsigner -verify -verbose -certs app/build/outputs/bundle/release/app-release.aab
-```
-
-## Publish to Google Play
-
-The repository does not contain a Google Play service-account key, so publishing is currently completed in Google Play Console:
-
-1. Open Google Play Console and select **Hope Cards**.
-2. Open the desired track: **Internal testing**, **Closed testing**, **Open testing**, or **Production**.
-3. Create a new release and upload `android/app/build/outputs/bundle/release/app-release.aab`.
-4. Add release notes, resolve any Play Console checks, review the release, and start the rollout.
-
-For a preview rollout, upload the AAB to **Internal testing** first. For production, promote the tested release or create a release on the **Production** track.
-
-Command-line publishing can be added later with the Google Play Developer API, but it requires a private service-account JSON file and Play Console permissions. That key must remain outside Git.
-
-## Useful commands
-
-| Task | Command |
-| --- | --- |
-| Install dependencies | `pnpm install --frozen-lockfile` |
-| Run the first Android debug build | `pnpm android` |
-| Start Metro for an installed build | `pnpm start` |
-| Select an Android device | `pnpm exec expo run:android --device` |
-| Run the web app | `pnpm web` |
-| Lint | `pnpm lint` |
-| Generate Android native files | `pnpm exec expo prebuild --platform android --no-install` |
-| Build a preview APK | `cd android && ./gradlew app:assembleRelease` |
-| Build a production AAB | `cd android && ./gradlew clean app:bundleRelease` |
-
-## Premium subscriptions
-
-Hope Cards Premium is powered by RevenueCat on Android. The app expects a RevenueCat `default` offering with a monthly package and treats the `Hope Cards Pro` entitlement identifier as Premium access. Purchases must be tested in an Android development, preview, or production build, not Expo Go.
-
-## References
-
-- [Expo SDK 57 reference](https://docs.expo.dev/versions/v57.0.0/)
-- [Create a debug build locally](https://docs.expo.dev/guides/local-app-development/)
-- [Create a release build locally](https://docs.expo.dev/guides/local-app-production/)
-- [Android Studio emulator setup](https://docs.expo.dev/workflow/android-studio-emulator/)
+Upload future builds to the existing `com.aaronsedna.hopecards` Play listing, signed with the existing upload key, using a higher version code. Keep the current closed-testing track and tester opt-in configuration. Do not create a new application, change the package name, replace the signing identity, deactivate the existing track, or ask testers to leave and rejoin. Updating the existing closed track does not restart the tester opt-in period; the 14-day requirement follows continuous tester participation.
