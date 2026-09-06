@@ -41,8 +41,11 @@ class AdsManager(
 
     private var interstitial: InterstitialAd? = null
     private var loadingInterstitial = false
+    private var adsEnabled = true
+    private var closed = false
 
     fun initialize(activity: Activity, isAdFree: Boolean) {
+        adsEnabled = !isAdFree
         if (isAdFree) {
             interstitial?.fullScreenContentCallback = null
             interstitial = null
@@ -110,16 +113,18 @@ class AdsManager(
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: InterstitialAd) {
                     loadingInterstitial = false
+                    if (!adsEnabled || closed) {
+                        ad.fullScreenContentCallback = null
+                        return
+                    }
                     interstitial = ad
                     ad.fullScreenContentCallback = object : FullScreenContentCallback() {
                         override fun onAdDismissedFullScreenContent() {
                             interstitial = null
-                            loadInterstitial()
                         }
 
                         override fun onAdFailedToShowFullScreenContent(error: AdError) {
                             interstitial = null
-                            loadInterstitial()
                         }
 
                         override fun onAdShowedFullScreenContent() {
@@ -137,6 +142,7 @@ class AdsManager(
     }
 
     private fun showInterstitial(activity: Activity) {
+        if (activity.isFinishing || activity.isDestroyed) return
         val ad = interstitial
         if (ad == null) {
             loadInterstitial()
@@ -146,6 +152,8 @@ class AdsManager(
     }
 
     fun close() {
+        closed = true
+        adsEnabled = false
         interstitial?.fullScreenContentCallback = null
         interstitial = null
         scope.cancel()

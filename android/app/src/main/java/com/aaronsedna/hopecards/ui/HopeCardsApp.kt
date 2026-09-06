@@ -64,6 +64,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.ads.BannerAd
 import com.aaronsedna.hopecards.model.Destination
 import com.aaronsedna.hopecards.model.Verse
@@ -185,7 +186,15 @@ fun HopeCardsApp(
                         Spacer(Modifier.weight(1f))
                         Column(Modifier.padding(start = 24.dp, end = 24.dp, top = 24.dp, bottom = 8.dp)) {
                             Text("Hope Cards", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 13.sp, lineHeight = 18.sp)
-                            Text("Version 1.0.0", color = colors.textTertiary, fontFamily = Poppins, fontWeight = FontWeight.Medium, fontSize = 11.sp, lineHeight = 16.sp, modifier = Modifier.padding(top = 2.dp))
+                            Text(
+                                "Version ${BuildConfig.VERSION_NAME.removeSuffix("-debug")}",
+                                color = colors.textTertiary,
+                                fontFamily = Poppins,
+                                fontWeight = FontWeight.Medium,
+                                fontSize = 11.sp,
+                                lineHeight = 16.sp,
+                                modifier = Modifier.padding(top = 2.dp),
+                            )
                         }
                     }
                 }

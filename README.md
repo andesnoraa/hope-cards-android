@@ -5,7 +5,7 @@ Hope Cards is a native Android app written entirely in Kotlin with Jetpack Compo
 Every app feature is free. Monetization uses:
 
 - an anchored adaptive banner on selected browsing screens;
-- a frequency-capped interstitial after every fifth completed card, with a minimum ten-minute cooldown;
+- a frequency-capped interstitial after every tenth completed card, with a minimum ten-minute cooldown;
 - a non-consumable Google Play one-time product, `remove_ads_lifetime`, to remove all ads permanently.
 
 Purchases use Google Play Billing directly. RevenueCat is not used.

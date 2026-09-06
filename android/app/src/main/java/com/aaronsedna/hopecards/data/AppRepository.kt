@@ -23,6 +23,14 @@ import org.json.JSONObject
 
 private val Context.hopeCardsDataStore by preferencesDataStore("hope_cards_native")
 
+internal object InterstitialPolicy {
+    const val COMPLETED_CARDS_BETWEEN_ADS = 10
+    const val MIN_INTERVAL_MS = 10 * 60 * 1000L
+
+    fun shouldShow(completedCards: Int, elapsedMs: Long): Boolean =
+        completedCards >= COMPLETED_CARDS_BETWEEN_ADS && elapsedMs >= MIN_INTERVAL_MS
+}
+
 class AppRepository(context: Context) {
     private val appContext = context.applicationContext
     private val dataStore = appContext.hopeCardsDataStore
@@ -143,7 +151,7 @@ class AppRepository(context: Context) {
         dataStore.edit { preferences ->
             val count = (preferences[Keys.adCount] ?: 0) + 1
             val elapsed = now - (preferences[Keys.lastAdTime] ?: 0L)
-            shouldShow = count >= 5 && elapsed >= 10 * 60 * 1000L
+            shouldShow = InterstitialPolicy.shouldShow(count, elapsed)
             if (shouldShow) {
                 preferences[Keys.adCount] = 0
                 preferences[Keys.lastAdTime] = now

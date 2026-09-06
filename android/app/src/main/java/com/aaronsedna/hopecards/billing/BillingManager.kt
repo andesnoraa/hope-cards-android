@@ -184,7 +184,7 @@ class BillingManager(
         ) { result, purchases ->
             if (result.responseCode == BillingClient.BillingResponseCode.OK) {
                 // Hope Cards previously sold only its Premium subscription. Recognizing any still-active
-                // subscription keeps those closed-test customers ad-free after RevenueCat is removed.
+                // subscription keeps those closed-test customers ad-free during the billing transition.
                 activeLegacySubscription = purchases.any {
                     it.purchaseState == Purchase.PurchaseState.PURCHASED
                 }
