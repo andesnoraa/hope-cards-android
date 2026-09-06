@@ -201,7 +201,7 @@ fun DailyHopeScreen(
             modifier = Modifier.padding(top = 18.dp),
         ) {
             Text(
-                "Take a quiet moment",
+                "Add a note",
                 color = colors.accent,
                 fontFamily = Poppins,
                 fontWeight = FontWeight.SemiBold,
@@ -234,16 +234,16 @@ fun DailyHopeScreen(
                         }
                     }
                     Column(Modifier.weight(1f).padding(start = 12.dp)) {
-                        Text("A Quiet Reflection", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 20.sp)
-                        Text("A gentle space to pause", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                        Text("Notes", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                        Text("A private note for this verse", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                     }
                     IconButton(onClick = { reflectionOpen = false }) {
-                        AppIcon(AppIconGlyph.Close, "Close reflection", colors.textSecondary, size = 22.dp)
+                        AppIcon(AppIconGlyph.Close, "Close notes", colors.textSecondary, size = 22.dp)
                     }
                 }
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(
-                        "A GENTLE THOUGHT",
+                        "A SIMPLE THOUGHT",
                         color = colors.accent,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
@@ -252,7 +252,7 @@ fun DailyHopeScreen(
                     )
                     Text(
                         HopeCardsViewModel.prompts[verse.category.lowercase()]
-                            ?: "Stay with the words that bring you peace, hope, or courage today.",
+                            ?: "Keep the words that feel meaningful to you today.",
                         color = colors.text,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
@@ -264,7 +264,7 @@ fun DailyHopeScreen(
                     value = note,
                     onValueChange = { if (it.length <= 1_000) note = it },
                     modifier = Modifier.fillMaxWidth().height(120.dp),
-                    placeholder = { Text("A word, feeling, or prayer…", color = colors.textTertiary) },
+                    placeholder = { Text("Write a note…", color = colors.textTertiary) },
                     shape = RoundedCornerShape(18.dp),
                     textStyle = androidx.compose.ui.text.TextStyle(fontFamily = SourceSerif, fontSize = 18.sp, lineHeight = 27.sp, color = colors.cardText),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -275,7 +275,7 @@ fun DailyHopeScreen(
                     ),
                 )
                 Row(Modifier.fillMaxWidth()) {
-                    Text("Private · only on this device", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
+                    Text("Only on this device", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
                     Text("${note.length}/1000", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                 }
                 if (noteChanged) {
@@ -294,9 +294,9 @@ fun DailyHopeScreen(
                     ) {
                         Text(
                             when {
-                                trimmedNote.isBlank() && existingNote.isNotBlank() -> "Remove Reflection"
-                                existingNote.isBlank() -> "Keep This Reflection"
-                                else -> "Update Reflection"
+                                trimmedNote.isBlank() && existingNote.isNotBlank() -> "Remove Note"
+                                existingNote.isBlank() -> "Save Note"
+                                else -> "Update Note"
                             },
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -305,8 +305,8 @@ fun DailyHopeScreen(
                     }
                 } else {
                     Text(
-                        if (existingNote.isBlank()) "Add a few words whenever you feel ready."
-                        else "Your reflection is safely kept on this device.",
+                        if (existingNote.isBlank()) "Write anything you would like to remember."
+                        else "Your note is saved on this device.",
                         color = colors.textTertiary,
                         fontFamily = Poppins,
                         fontSize = 12.sp,

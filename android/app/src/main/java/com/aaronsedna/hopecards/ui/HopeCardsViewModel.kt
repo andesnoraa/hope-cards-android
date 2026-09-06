@@ -198,7 +198,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     private fun reflectionPrompt(category: String): String = prompts[category.lowercase()]
-        ?: "Stay with the words that bring you peace, hope, or courage today."
+        ?: "Keep the words that feel meaningful to you today."
 
     override fun onCleared() {
         billing.close()
@@ -208,20 +208,20 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
 
     companion object {
         val prompts = mapOf(
-            "comfort" to "You are allowed to rest here and receive comfort, one breath at a time.",
-            "courage" to "Courage can begin with one small, faithful step.",
-            "faith" to "You do not need to see the whole path to take the next step in faith.",
-            "freedom" to "You may gently loosen your hold on what has been weighing you down.",
-            "grace" to "There is grace for you here, and enough to share with someone else.",
-            "hope" to "Hold space for hope, even before the way forward becomes clear.",
-            "joy" to "A quiet gift may be waiting to be noticed today.",
-            "life" to "Notice what brings you back to life, peace, and presence.",
-            "love" to "Let love move gently through the way you meet someone today.",
-            "peace" to "You can place what feels heavy into God’s hands and make room for peace.",
-            "prayer" to "Let a simple, honest prayer rise from this moment.",
-            "strength" to "Strength for the next faithful step is enough for today.",
-            "trust" to "You do not have to carry everything alone; this can be entrusted to God.",
-            "wisdom" to "Move slowly, listen deeply, and let wisdom shape the next choice.",
+            "comfort" to "Take a moment to rest in these words.",
+            "courage" to "One small step is enough for today.",
+            "faith" to "You can move forward without having every answer.",
+            "freedom" to "Consider what you can gently let go of today.",
+            "grace" to "Receive grace, and offer it where you can.",
+            "hope" to "Keep close the words that give you hope.",
+            "joy" to "Notice one good thing in this day.",
+            "life" to "Notice what helps you feel present and grateful.",
+            "love" to "Let these words guide how you care for others today.",
+            "peace" to "Place what feels heavy in God’s care.",
+            "prayer" to "Let these words become a simple prayer.",
+            "strength" to "Take the next step with the strength you have.",
+            "trust" to "Place what you cannot control in God’s hands.",
+            "wisdom" to "Pause and choose what is thoughtful and kind.",
         )
     }
 }
