@@ -32,7 +32,7 @@ The brand name remains “Hope Cards” in every market. The localized copy is a
 - Primary positioning: daily Bible verse cards and calm Scripture encouragement
 - Secondary positioning: Daily Hope, favorites, verse-linked journal notes, reminders, and themes
 - Monetization wording: every feature is free; occasional ads; optional one-time purchase to remove ads; no subscription
-- Privacy policy: `https://aaronsedna.com/privacy/`
+- Privacy policy: `https://aaronsedna.com/privacy/hope-cards/`
 
 ## Store listing experiments
 

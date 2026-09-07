@@ -17,6 +17,7 @@ private let gold = NSColor(calibratedRed: 202 / 255, green: 153 / 255, blue: 43 
 private let softGold = NSColor(calibratedRed: 232 / 255, green: 207 / 255, blue: 147 / 255, alpha: 1)
 private let ivory = NSColor(calibratedRed: 250 / 255, green: 248 / 255, blue: 243 / 255, alpha: 1)
 private let warmIvory = NSColor(calibratedRed: 242 / 255, green: 234 / 255, blue: 219 / 255, alpha: 1)
+private let mist = NSColor(calibratedRed: 230 / 255, green: 239 / 255, blue: 237 / 255, alpha: 1)
 
 private struct ScreenshotSpec {
     let source: String
@@ -153,10 +154,10 @@ private func writePNG(_ bitmap: NSBitmapImageRep, to destination: URL) throws {
 private func drawBackground(width: CGFloat, height: CGFloat) {
     NSGradient(starting: ivory, ending: warmIvory)?.draw(in: NSRect(x: 0, y: 0, width: width, height: height), angle: -90)
 
-    softGold.withAlphaComponent(0.13).setFill()
-    NSBezierPath(ovalIn: NSRect(x: width - 390, y: height - 285, width: 520, height: 520)).fill()
-    navy.withAlphaComponent(0.035).setFill()
-    NSBezierPath(ovalIn: NSRect(x: -220, y: -140, width: 570, height: 570)).fill()
+    softGold.withAlphaComponent(0.11).setFill()
+    NSBezierPath(ovalIn: NSRect(x: width - 365, y: height - 260, width: 500, height: 500)).fill()
+    mist.withAlphaComponent(0.40).setFill()
+    NSBezierPath(ovalIn: NSRect(x: -250, y: -185, width: 640, height: 640)).fill()
 }
 
 private func generateScreenshot(locale: String, caption: String, index: Int, spec: ScreenshotSpec, destination: URL) throws {
@@ -175,7 +176,7 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
         )
 
         drawText(
-            String(format: "%02d  /  %02d", index + 1, screenshotSpecs.count),
+            String(format: "%02d  —  %02d", index + 1, screenshotSpecs.count),
             locale: locale,
             in: topRect(x: 800, y: 62, width: 198, height: 44, canvasHeight: canvasHeight),
             font: font(named: "Poppins-SemiBold", size: 23, fallbackWeight: .semibold),
@@ -192,7 +193,7 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
             text: caption,
             locale: locale,
             bold: true,
-            maxSize: 64,
+            maxSize: 60,
             minSize: 42,
             width: captionRect.width,
             height: captionRect.height,
@@ -201,7 +202,7 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
         )
         drawText(caption, locale: locale, in: captionRect, font: captionFont, color: navy, lineSpacing: 3)
 
-        let outer = topRect(x: 62, y: 335, width: 956, height: 1544, canvasHeight: canvasHeight)
+        let outer = topRect(x: 54, y: 330, width: 972, height: 1_550, canvasHeight: canvasHeight)
         let shadow = NSShadow()
         shadow.shadowColor = NSColor.black.withAlphaComponent(0.18)
         shadow.shadowBlurRadius = 28
@@ -209,11 +210,16 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
 
         NSGraphicsContext.saveGraphicsState()
         shadow.set()
-        NSColor.white.setFill()
-        NSBezierPath(roundedRect: outer, xRadius: 46, yRadius: 46).fill()
+        ivory.setFill()
+        NSBezierPath(roundedRect: outer, xRadius: 50, yRadius: 50).fill()
         NSGraphicsContext.restoreGraphicsState()
 
-        let inner = outer.insetBy(dx: 14, dy: 14)
+        gold.withAlphaComponent(0.32).setStroke()
+        let frameBorder = NSBezierPath(roundedRect: outer.insetBy(dx: 2, dy: 2), xRadius: 48, yRadius: 48)
+        frameBorder.lineWidth = 2
+        frameBorder.stroke()
+
+        let inner = outer.insetBy(dx: 16, dy: 16)
         guard let image = NSImage(contentsOf: sourceRoot.appendingPathComponent(spec.source)) else {
             throw NSError(domain: "HopeCardsStoreAssets", code: 3, userInfo: [NSLocalizedDescriptionKey: "Missing source screenshot: \(spec.source)"])
         }
@@ -250,7 +256,17 @@ private func generateFeatureGraphic(locale: String, lines: [String], destination
     let subtitle = lines.first ?? ""
     let featureLine = lines.dropFirst().first ?? ""
     let bitmap = try makeBitmap(width: width, height: height) { canvasHeight in
-        drawBackground(width: CGFloat(width), height: canvasHeight)
+        NSGradient(
+            colors: [
+                NSColor(calibratedRed: 10 / 255, green: 29 / 255, blue: 55 / 255, alpha: 1),
+                NSColor(calibratedRed: 29 / 255, green: 58 / 255, blue: 96 / 255, alpha: 1),
+            ]
+        )?.draw(in: NSRect(x: 0, y: 0, width: CGFloat(width), height: canvasHeight), angle: -18)
+
+        softGold.withAlphaComponent(0.075).setFill()
+        NSBezierPath(ovalIn: NSRect(x: -150, y: -220, width: 610, height: 610)).fill()
+        NSColor.white.withAlphaComponent(0.045).setFill()
+        NSBezierPath(ovalIn: NSRect(x: 740, y: 250, width: 420, height: 420)).fill()
 
         gold.setFill()
         NSBezierPath(roundedRect: topRect(x: 68, y: 70, width: 62, height: 9, canvasHeight: canvasHeight), xRadius: 4.5, yRadius: 4.5).fill()
@@ -260,7 +276,7 @@ private func generateFeatureGraphic(locale: String, lines: [String], destination
             locale: locale,
             in: topRect(x: 68, y: 112, width: 540, height: 90, canvasHeight: canvasHeight),
             font: font(named: "Poppins-Bold", size: 64, fallbackWeight: .bold),
-            color: navy
+            color: ivory
         )
 
         let subtitleRect = topRect(x: 70, y: 215, width: 525, height: 114, canvasHeight: canvasHeight)
@@ -275,7 +291,7 @@ private func generateFeatureGraphic(locale: String, lines: [String], destination
             alignment: .left,
             lineSpacing: 5
         )
-        drawText(subtitle, locale: locale, in: subtitleRect, font: subtitleFont, color: navy.withAlphaComponent(0.67), lineSpacing: 5)
+        drawText(subtitle, locale: locale, in: subtitleRect, font: subtitleFont, color: NSColor.white.withAlphaComponent(0.70), lineSpacing: 5)
 
         let featureRect = topRect(x: 70, y: 366, width: 530, height: 62, canvasHeight: canvasHeight)
         let featureFont = fittedFont(
