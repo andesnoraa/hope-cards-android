@@ -21,6 +21,9 @@ def testInterstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712"
 def productionAdMobAppId = propertyOrEnvironment("ADMOB_APP_ID", "ADMOB_APP_ID", "")
 def productionBannerAdUnitId = propertyOrEnvironment("ADMOB_BANNER_AD_UNIT_ID", "ADMOB_BANNER_AD_UNIT_ID", "")
 def productionInterstitialAdUnitId = propertyOrEnvironment("ADMOB_INTERSTITIAL_AD_UNIT_ID", "ADMOB_INTERSTITIAL_AD_UNIT_ID", "")
+def screenshotMode = providers.gradleProperty("screenshotMode")
+    .map { it.toBoolean() }
+    .getOrElse(false)
 
 android {
     namespace = "com.aaronsedna.hopecards"
@@ -61,6 +64,7 @@ android {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
             signingConfig = signingConfigs.debug
+            buildConfigField "boolean", "SCREENSHOT_MODE", screenshotMode.toString()
             buildConfigField "String", "BANNER_AD_UNIT_ID", '"' + testBannerAdUnitId + '"'
             buildConfigField "String", "INTERSTITIAL_AD_UNIT_ID", '"' + testInterstitialAdUnitId + '"'
         }
@@ -71,6 +75,7 @@ android {
             signingConfig = signingConfigs.release
             minifyEnabled true
             shrinkResources = true
+            buildConfigField "boolean", "SCREENSHOT_MODE", "false"
             manifestPlaceholders = [admobAppId: productionAdMobAppId]
             buildConfigField "String", "BANNER_AD_UNIT_ID", '"' + productionBannerAdUnitId + '"'
             buildConfigField "String", "INTERSTITIAL_AD_UNIT_ID", '"' + productionInterstitialAdUnitId + '"'

@@ -142,6 +142,7 @@ fun HopeCardsApp(
     val scope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val snackbarHostState = remember { SnackbarHostState() }
+    val adsSuppressed = billing.isAdFree || BuildConfig.SCREENSHOT_MODE
     var drawerLoaded by rememberSaveable { mutableStateOf(false) }
     var dailySharePresentation by remember { mutableStateOf<Verse?>(null) }
     var journalEntryInDetail by remember { mutableStateOf<JournalEntry?>(null) }
@@ -171,13 +172,13 @@ fun HopeCardsApp(
         viewModel.billing.connect()
         onDispose { lifecycle.removeObserver(observer) }
     }
-    LaunchedEffect(state.initialized, billing.loading, billing.isAdFree, state.destination) {
+    LaunchedEffect(state.initialized, billing.loading, adsSuppressed, state.destination) {
         if (
-            state.initialized && !billing.loading && !billing.isAdFree &&
+            state.initialized && !billing.loading && !adsSuppressed &&
             state.destination in bannerDestinations
         ) {
             delay(500)
-            viewModel.initializeAds(activity, billing.isAdFree)
+            viewModel.initializeAds(activity, adsSuppressed)
         }
     }
     LaunchedEffect(dailyRequest, state.initialized) {
@@ -284,7 +285,7 @@ fun HopeCardsApp(
                 },
                 bottomBar = {
                     if (
-                        dailySharePresentation == null && adsReady && !billing.isAdFree && state.selectedVerse == null &&
+                        dailySharePresentation == null && adsReady && !adsSuppressed && state.selectedVerse == null &&
                         state.destination in bannerDestinations
                     ) {
                         Column(Modifier.fillMaxWidth().background(colors.background).navigationBarsPadding()) {
@@ -322,7 +323,9 @@ fun HopeCardsApp(
                                         onNextVerse = viewModel::nextCard,
                                         onFavorite = { viewModel.toggleFavorite(verse) },
                                         onShare = { shareVerse(activity, verse) },
-                                        onCompletedCard = viewModel::completedCard,
+                                        onCompletedCard = { completedActivity ->
+                                            if (!BuildConfig.SCREENSHOT_MODE) viewModel.completedCard(completedActivity)
+                                        },
                                     )
                                 }
                                 Destination.DAILY -> state.dailyVerse?.let { verse ->
