@@ -7,9 +7,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -22,6 +24,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
@@ -39,6 +42,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.AppIcon
@@ -171,18 +176,95 @@ fun JournalEditorDialog(
 ) {
     val colors = LocalHopeColors.current
     var draft by remember(entry.id, entry.updatedAt) { mutableStateOf(entry.note) }
-    AlertDialog(
+    val trimmedDraft = draft.trim()
+
+    Dialog(
         onDismissRequest = onDismiss,
-        title = { Text("Your Reflection", fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                Text(calmReflectionText(entry.prompt), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+        properties = DialogProperties(usePlatformDefaultWidth = false),
+    ) {
+        Surface(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp)
+                .widthIn(max = 560.dp)
+                .imePadding(),
+            shape = RoundedCornerShape(28.dp),
+            color = colors.surface,
+            tonalElevation = 0.dp,
+            shadowElevation = 18.dp,
+        ) {
+            Column(Modifier.padding(horizontal = 24.dp, vertical = 22.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Surface(
+                        modifier = Modifier.size(44.dp),
+                        shape = CircleShape,
+                        color = colors.accentSoft,
+                    ) {
+                        Box(contentAlignment = Alignment.Center) {
+                            AppIcon(AppIconGlyph.CreateOutline, null, colors.accent, size = 21.dp)
+                        }
+                    }
+                    Column(Modifier.padding(start = 13.dp).weight(1f)) {
+                        Text(
+                            "Edit journal",
+                            color = colors.text,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 22.sp,
+                            lineHeight = 28.sp,
+                        )
+                        Text(
+                            entry.reference,
+                            color = colors.textTertiary,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 13.sp,
+                            lineHeight = 19.sp,
+                        )
+                    }
+                    IconButton(onClick = onDismiss) {
+                        AppIcon(AppIconGlyph.Close, "Close journal editor", colors.textTertiary, size = 22.dp)
+                    }
+                }
+
+                Text(
+                    "A GENTLE THOUGHT",
+                    color = colors.accent,
+                    fontFamily = Poppins,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp,
+                    letterSpacing = 1.7.sp,
+                    modifier = Modifier.padding(top = 22.dp),
+                )
+                Text(
+                    calmReflectionText(entry.prompt),
+                    color = colors.text,
+                    fontFamily = Poppins,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 16.sp,
+                    lineHeight = 24.sp,
+                    modifier = Modifier.padding(top = 6.dp),
+                )
                 OutlinedTextField(
                     value = draft,
-                    onValueChange = { if (it.length <= 20_000) draft = it },
-                    minLines = 6,
+                    onValueChange = { if (it.length <= JOURNAL_CHARACTER_LIMIT) draft = it },
+                    modifier = Modifier.fillMaxWidth().height(150.dp).padding(top = 18.dp),
+                    placeholder = {
+                        Text(
+                            "Add a few words…",
+                            color = colors.textTertiary,
+                            fontFamily = SourceSerif,
+                        )
+                    },
+                    minLines = 4,
+                    maxLines = 6,
                     shape = RoundedCornerShape(18.dp),
-                    textStyle = androidx.compose.ui.text.TextStyle(fontFamily = SourceSerif, fontSize = 18.sp, color = colors.cardText),
+                    textStyle = androidx.compose.ui.text.TextStyle(
+                        fontFamily = SourceSerif,
+                        fontSize = 18.sp,
+                        lineHeight = 27.sp,
+                        color = colors.cardText,
+                    ),
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedBorderColor = colors.accent,
                         unfocusedBorderColor = colors.accentLine,
@@ -190,27 +272,65 @@ fun JournalEditorDialog(
                         unfocusedContainerColor = colors.background,
                     ),
                 )
+
+                Row(
+                    Modifier.fillMaxWidth().padding(top = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        "Journal note",
+                        color = colors.textTertiary,
+                        fontFamily = Poppins,
+                        fontSize = 12.sp,
+                        modifier = Modifier.weight(1f),
+                    )
+                    Text(
+                        "${draft.length} / 1,000",
+                        color = if (draft.length >= JOURNAL_CHARACTER_LIMIT) colors.accent else colors.textTertiary,
+                        fontFamily = Poppins,
+                        fontWeight = FontWeight.Medium,
+                        fontSize = 12.sp,
+                    )
+                }
+
+                HorizontalDivider(
+                    color = colors.divider,
+                    modifier = Modifier.padding(top = 18.dp, bottom = 12.dp),
+                )
+
+                Row(
+                    Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    TextButton(onClick = onDeleteRequest) {
+                        AppIcon(AppIconGlyph.TrashOutline, null, colors.danger, size = 18.dp)
+                        Text(
+                            "Delete",
+                            color = colors.danger,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.Medium,
+                            modifier = Modifier.padding(start = 6.dp),
+                        )
+                    }
+                    Spacer(Modifier.weight(1f))
+                    TextButton(onClick = onDismiss) {
+                        Text("Cancel", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.Medium)
+                    }
+                    Button(
+                        onClick = { onSave(entry.copy(note = trimmedDraft)) },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colors.buttonBackground,
+                            contentColor = colors.buttonText,
+                        ),
+                        shape = RoundedCornerShape(14.dp),
+                        modifier = Modifier.padding(start = 6.dp),
+                    ) {
+                        Text("Save", fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    }
+                }
             }
-        },
-        confirmButton = {
-            Button(
-                onClick = { onSave(entry.copy(note = draft)) },
-                colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground),
-                shape = RoundedCornerShape(16.dp),
-            ) { Text("Keep Changes", fontFamily = Poppins, fontWeight = FontWeight.SemiBold) }
-        },
-        dismissButton = {
-            Row {
-                TextButton(onClick = onDeleteRequest) { Text("Delete", color = colors.danger) }
-                TextButton(onClick = onDismiss) { Text("Cancel") }
-            }
-        },
-        shape = RoundedCornerShape(28.dp),
-        containerColor = colors.surface,
-        titleContentColor = colors.text,
-        textContentColor = colors.textSecondary,
-        tonalElevation = 0.dp,
-    )
+        }
+    }
 }
 
 @Composable
@@ -238,6 +358,8 @@ private fun formatDate(value: String): String = runCatching {
 }.getOrDefault(value)
 
 private fun calmReflectionText(value: String): String = legacyReflectionQuestions[value] ?: value
+
+private const val JOURNAL_CHARACTER_LIMIT = 1_000
 
 private val legacyReflectionQuestions = mapOf(
     "Where do you need to receive comfort today?" to "Take a moment to rest in these words.",
