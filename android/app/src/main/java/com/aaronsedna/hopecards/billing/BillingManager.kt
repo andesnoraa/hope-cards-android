@@ -25,6 +25,18 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+internal object BillingEntitlementPolicy {
+    fun resolve(
+        currentAdFree: Boolean,
+        ownsLifetimePurchase: Boolean,
+        hasLegacySubscription: Boolean,
+        inAppVerified: Boolean,
+        subscriptionsVerified: Boolean,
+    ): Boolean =
+        ownsLifetimePurchase || hasLegacySubscription ||
+            (currentAdFree && !(inAppVerified && subscriptionsVerified))
+}
+
 class BillingManager(
     context: Context,
     private val repository: AppRepository,
@@ -37,12 +49,15 @@ class BillingManager(
     private var ownedRemoveAds = false
     private var activeLegacySubscription = false
     private var connecting = false
+    private var refreshing = false
+    private var closed = false
 
     private val client = BillingClient.newBuilder(context.applicationContext)
         .setListener(this)
         .enablePendingPurchases(
             PendingPurchasesParams.newBuilder().enableOneTimeProducts().build(),
         )
+        .enableAutoServiceReconnection()
         .build()
 
     init {
@@ -56,6 +71,7 @@ class BillingManager(
     }
 
     fun connect(reportErrors: Boolean = false, preserveMessage: Boolean = false) {
+        if (closed) return
         if (client.isReady) {
             refresh(reportErrors, preserveMessage)
             return
@@ -64,6 +80,7 @@ class BillingManager(
         connecting = true
         client.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(result: BillingResult) {
+                if (closed) return
                 connecting = false
                 if (result.responseCode == BillingClient.BillingResponseCode.OK) {
                     _state.value = _state.value.copy(connected = true)
@@ -78,6 +95,7 @@ class BillingManager(
             }
 
             override fun onBillingServiceDisconnected() {
+                if (closed) return
                 connecting = false
                 _state.value = _state.value.copy(connected = false)
             }
@@ -85,10 +103,12 @@ class BillingManager(
     }
 
     fun refresh(reportErrors: Boolean = false, preserveMessage: Boolean = false) {
+        if (closed || refreshing) return
         if (!client.isReady) {
             connect(reportErrors, preserveMessage)
             return
         }
+        refreshing = true
         _state.value = _state.value.copy(
             loading = true,
             message = if (preserveMessage) _state.value.message else null,
@@ -96,7 +116,16 @@ class BillingManager(
         queryProduct()
         queryOwnedInApp { inAppSucceeded ->
             queryLegacySubscriptions { subscriptionsSucceeded ->
-                if (inAppSucceeded && subscriptionsSucceeded) updateEntitlement()
+                // A verified purchase in either category grants access immediately. Revocation
+                // requires both categories to succeed so an unsupported/offline legacy query can
+                // never take ad-free access away from an existing customer.
+                if (inAppSucceeded || subscriptionsSucceeded) {
+                    updateEntitlement(
+                        inAppVerified = inAppSucceeded,
+                        subscriptionsVerified = subscriptionsSucceeded,
+                    )
+                }
+                refreshing = false
                 _state.value = _state.value.copy(loading = false)
             }
         }
@@ -154,6 +183,7 @@ class BillingManager(
             )
             .build()
         client.queryProductDetailsAsync(params) { result, detailsResult ->
+            if (closed) return@queryProductDetailsAsync
             productDetails = detailsResult.productDetailsList.firstOrNull()
             val offer = productDetails?.oneTimePurchaseOfferDetailsList?.firstOrNull()
             _state.value = _state.value.copy(
@@ -167,6 +197,7 @@ class BillingManager(
         client.queryPurchasesAsync(
             QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.INAPP).build(),
         ) { result, purchases ->
+            if (closed) return@queryPurchasesAsync
             if (result.responseCode == BillingClient.BillingResponseCode.OK) {
                 ownedRemoveAds = purchases.any { purchase ->
                     BuildConfig.REMOVE_ADS_PRODUCT_ID in purchase.products &&
@@ -182,12 +213,18 @@ class BillingManager(
         client.queryPurchasesAsync(
             QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.SUBS).build(),
         ) { result, purchases ->
+            if (closed) return@queryPurchasesAsync
             if (result.responseCode == BillingClient.BillingResponseCode.OK) {
                 // Hope Cards previously sold only its Premium subscription. Recognizing any still-active
                 // subscription keeps those closed-test customers ad-free during the billing transition.
                 activeLegacySubscription = purchases.any {
                     it.purchaseState == Purchase.PurchaseState.PURCHASED
                 }
+                purchases
+                    .filter {
+                        it.purchaseState == Purchase.PurchaseState.PURCHASED && !it.isAcknowledged
+                    }
+                    .forEach(::acknowledge)
             }
             complete(result.responseCode == BillingClient.BillingResponseCode.OK)
         }
@@ -203,23 +240,36 @@ class BillingManager(
             .forEach { purchase ->
                 ownedRemoveAds = true
                 if (!purchase.isAcknowledged) {
-                    client.acknowledgePurchase(
-                        AcknowledgePurchaseParams.newBuilder()
-                            .setPurchaseToken(purchase.purchaseToken)
-                            .build(),
-                    ) { result ->
-                        if (result.responseCode != BillingClient.BillingResponseCode.OK) {
-                            _state.value = _state.value.copy(message = friendlyMessage(result))
-                        }
-                    }
+                    acknowledge(purchase)
                 }
             }
         _state.value = _state.value.copy(pending = pending)
         if (commitEntitlement) updateEntitlement()
     }
 
-    private fun updateEntitlement() {
-        val adFree = ownedRemoveAds || activeLegacySubscription
+    private fun acknowledge(purchase: Purchase) {
+        client.acknowledgePurchase(
+            AcknowledgePurchaseParams.newBuilder()
+                .setPurchaseToken(purchase.purchaseToken)
+                .build(),
+        ) { result ->
+            if (!closed && result.responseCode != BillingClient.BillingResponseCode.OK) {
+                _state.value = _state.value.copy(message = friendlyMessage(result))
+            }
+        }
+    }
+
+    private fun updateEntitlement(
+        inAppVerified: Boolean = false,
+        subscriptionsVerified: Boolean = false,
+    ) {
+        val adFree = BillingEntitlementPolicy.resolve(
+            currentAdFree = _state.value.isAdFree,
+            ownsLifetimePurchase = ownedRemoveAds,
+            hasLegacySubscription = activeLegacySubscription,
+            inAppVerified = inAppVerified,
+            subscriptionsVerified = subscriptionsVerified,
+        )
         _state.value = _state.value.copy(isAdFree = adFree)
         scope.launch { repository.setAdFree(adFree) }
     }
@@ -233,6 +283,7 @@ class BillingManager(
     }
 
     fun close() {
+        closed = true
         scope.cancel()
         client.endConnection()
     }

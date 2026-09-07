@@ -90,6 +90,14 @@ class AppRepository(context: Context) {
         dataStore.edit { it[Keys.favorites] = JSONArray(favorites.toList()).toString() }
     }
 
+    suspend fun removeFavorites(ids: Set<String>) {
+        if (ids.isEmpty()) return
+        dataStore.edit { preferences ->
+            val favorites = decodeStringSet(preferences[Keys.favorites]) - ids
+            preferences[Keys.favorites] = JSONArray(favorites.toList()).toString()
+        }
+    }
+
     suspend fun saveJournalEntry(entry: JournalEntry) {
         dataStore.edit { preferences ->
             val entries = decodeJournal(preferences[Keys.journal]).filterNot { it.id == entry.id }.toMutableList()
@@ -100,6 +108,15 @@ class AppRepository(context: Context) {
 
     suspend fun replaceJournalEntries(entries: List<JournalEntry>) {
         dataStore.edit { it[Keys.journal] = encodeJournal(entries) }
+    }
+
+    suspend fun deleteJournalEntries(ids: Set<String>) {
+        if (ids.isEmpty()) return
+        dataStore.edit { preferences ->
+            preferences[Keys.journal] = encodeJournal(
+                decodeJournal(preferences[Keys.journal]).filterNot { it.id in ids },
+            )
+        }
     }
 
     /** Replaces all user-authored backup data in one DataStore transaction. */
@@ -149,17 +166,22 @@ class AppRepository(context: Context) {
     suspend fun recordCompletedCard(now: Long): Boolean {
         var shouldShow = false
         dataStore.edit { preferences ->
-            val count = (preferences[Keys.adCount] ?: 0) + 1
+            val count = ((preferences[Keys.adCount] ?: 0) + 1)
+                .coerceAtMost(InterstitialPolicy.COMPLETED_CARDS_BETWEEN_ADS)
             val elapsed = now - (preferences[Keys.lastAdTime] ?: 0L)
             shouldShow = InterstitialPolicy.shouldShow(count, elapsed)
-            if (shouldShow) {
-                preferences[Keys.adCount] = 0
-                preferences[Keys.lastAdTime] = now
-            } else {
-                preferences[Keys.adCount] = count
-            }
+            // Keep the threshold reached until an ad is actually shown. A temporarily unavailable
+            // network/ad must not discard the next eligible impression.
+            preferences[Keys.adCount] = count
         }
         return shouldShow
+    }
+
+    suspend fun recordInterstitialShown(now: Long) {
+        dataStore.edit { preferences ->
+            preferences[Keys.adCount] = 0
+            preferences[Keys.lastAdTime] = now
+        }
     }
 
     private fun decodeSettings(preferences: Preferences): AppSettings =

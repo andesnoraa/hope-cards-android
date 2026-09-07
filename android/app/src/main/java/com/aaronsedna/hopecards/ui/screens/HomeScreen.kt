@@ -108,9 +108,14 @@ fun HomeScreen(
 
     BoxWithConstraints(Modifier.fillMaxSize().padding(horizontal = 16.dp)) {
         val buttonSpace = if (settings.showDrawButton) 76f else 0f
-        val targetWidth = min(350f, min(maxWidth.value * .92f, maxWidth.value - 16f)).coerceAtLeast(190f)
+        val tabletLayout = maxWidth >= 600.dp
+        val maximumCardWidth = if (tabletLayout) 560f else 350f
+        val widthFraction = if (tabletLayout) .72f else .92f
+        val targetWidth = min(maximumCardWidth, min(maxWidth.value * widthFraction, maxWidth.value - 16f))
+            .coerceAtLeast(190f)
         val availableHeight = (maxHeight.value - 24f - 20f - buttonSpace).coerceAtLeast(280f)
-        val scale = min(targetWidth / STACK_WIDTH, availableHeight / STACK_HEIGHT).coerceAtMost(1f)
+        val scale = min(targetWidth / STACK_WIDTH, availableHeight / STACK_HEIGHT)
+            .coerceAtMost(if (tabletLayout) 1.6f else 1f)
         val stackWidth = (STACK_WIDTH * scale).dp
         val stackHeight = (STACK_HEIGHT * scale).dp
 

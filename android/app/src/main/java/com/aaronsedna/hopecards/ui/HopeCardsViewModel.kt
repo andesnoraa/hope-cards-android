@@ -130,6 +130,10 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch { repository.toggleFavorite(verse.id) }
     }
 
+    fun removeFavorites(ids: Set<String>) {
+        viewModelScope.launch { repository.removeFavorites(ids) }
+    }
+
     fun saveReflection(verse: Verse, note: String) {
         val today = LocalDate.now().toString()
         val entry = JournalEntry(
@@ -148,6 +152,10 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch {
             repository.saveJournalEntry(entry.copy(updatedAt = Instant.now().toString()))
         }
+    }
+
+    fun deleteJournalEntries(ids: Set<String>) {
+        viewModelScope.launch { repository.deleteJournalEntries(ids) }
     }
 
     fun updateSettings(transform: (AppSettings) -> AppSettings) {

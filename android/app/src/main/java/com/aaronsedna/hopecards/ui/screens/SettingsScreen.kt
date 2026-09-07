@@ -39,6 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -74,6 +75,16 @@ fun SettingsScreen(
     var pickerHour by remember { mutableStateOf("08") }
     var pickerMinute by remember { mutableStateOf("00") }
     var pickerIsPm by remember { mutableStateOf(false) }
+    var enableReminderAfterSave by remember { mutableStateOf(false) }
+
+    fun openReminderPicker(enableAfterSave: Boolean) {
+        val hour12 = settings.dailyHopeReminderHour % 12
+        pickerHour = (if (hour12 == 0) 12 else hour12).toString().padStart(2, '0')
+        pickerMinute = settings.dailyHopeReminderMinute.toString().padStart(2, '0')
+        pickerIsPm = settings.dailyHopeReminderHour >= 12
+        enableReminderAfterSave = enableAfterSave
+        reminderPicker = true
+    }
 
     ResponsiveScrollColumn(
         Modifier.padding(horizontal = 24.dp).padding(top = 22.dp, bottom = 40.dp),
@@ -119,22 +130,21 @@ fun SettingsScreen(
             title = "Daily Reminder",
             subtitle = "Receive a daily verse reminder.",
             trailing = {
-                HopeSwitch(settings.dailyHopeReminderEnabled) { value ->
-                    if (value) onEnableReminder() else onUpdate { it.copy(dailyHopeReminderEnabled = false) }
-                }
+                HopeSwitch(
+                    checked = settings.dailyHopeReminderEnabled,
+                    modifier = Modifier.testTag("daily_reminder_switch"),
+                    onChecked = { value ->
+                        if (value) openReminderPicker(enableAfterSave = true)
+                        else onUpdate { it.copy(dailyHopeReminderEnabled = false) }
+                    },
+                )
             },
         )
         Divider()
         SettingsRow(
             title = "Reminder Time",
             subtitle = formatTime(settings.dailyHopeReminderHour, settings.dailyHopeReminderMinute),
-            onClick = {
-                val hour12 = settings.dailyHopeReminderHour % 12
-                pickerHour = (if (hour12 == 0) 12 else hour12).toString().padStart(2, '0')
-                pickerMinute = settings.dailyHopeReminderMinute.toString().padStart(2, '0')
-                pickerIsPm = settings.dailyHopeReminderHour >= 12
-                reminderPicker = true
-            },
+            onClick = { openReminderPicker(enableAfterSave = false) },
             trailing = { Chevron() },
         )
 
@@ -216,7 +226,10 @@ fun SettingsScreen(
                 pickerMinute = ((current + amount + 60) % 60).toString().padStart(2, '0')
             },
             onPeriodChange = { pickerIsPm = it },
-            onDismiss = { reminderPicker = false },
+            onDismiss = {
+                reminderPicker = false
+                enableReminderAfterSave = false
+            },
             onSave = {
                 val hour12 = pickerHour.toIntOrNull()?.coerceIn(1, 12) ?: 12
                 val minute = pickerMinute.toIntOrNull()?.coerceIn(0, 59) ?: 0
@@ -226,7 +239,9 @@ fun SettingsScreen(
                     else -> hour12
                 }
                 onUpdate { it.copy(dailyHopeReminderHour = hour24, dailyHopeReminderMinute = minute) }
+                if (enableReminderAfterSave) onEnableReminder()
                 reminderPicker = false
+                enableReminderAfterSave = false
             },
         )
     }
@@ -252,7 +267,7 @@ private fun ReminderTimeDialog(
             contentAlignment = Alignment.Center,
         ) {
             Surface(
-                modifier = Modifier.fillMaxWidth().widthIn(max = 520.dp),
+                modifier = Modifier.fillMaxWidth().widthIn(max = 520.dp).testTag("reminder_time_dialog"),
                 shape = RoundedCornerShape(28.dp),
                 color = colors.surface,
                 shadowElevation = 14.dp,
@@ -311,6 +326,7 @@ private fun ReminderTimeDialog(
                         }
                         Button(
                             onClick = onSave,
+                            modifier = Modifier.testTag("reminder_time_save"),
                             shape = RoundedCornerShape(10.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = colors.accent, contentColor = colors.buttonText),
                         ) {
@@ -494,9 +510,14 @@ private fun Divider() {
 }
 
 @Composable
-private fun HopeSwitch(checked: Boolean, onChecked: (Boolean) -> Unit) {
+private fun HopeSwitch(
+    checked: Boolean,
+    modifier: Modifier = Modifier,
+    onChecked: (Boolean) -> Unit,
+) {
     val colors = LocalHopeColors.current
     Switch(
+        modifier = modifier,
         checked = checked,
         onCheckedChange = onChecked,
         colors = SwitchDefaults.colors(

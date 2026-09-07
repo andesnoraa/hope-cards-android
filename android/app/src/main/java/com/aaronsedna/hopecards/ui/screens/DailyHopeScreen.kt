@@ -136,6 +136,7 @@ fun DailyHopeScreen(
             if (event == Lifecycle.Event.ON_RESUME) startPlayer()
         }
         lifecycle.addObserver(observer)
+        if (lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) startPlayer()
         onDispose {
             lifecycle.removeObserver(observer)
             releasePlayer()

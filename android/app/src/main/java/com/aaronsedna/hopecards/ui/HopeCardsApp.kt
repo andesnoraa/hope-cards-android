@@ -49,6 +49,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -63,6 +64,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.ads.BannerAd
@@ -113,6 +117,14 @@ private val informationEntries = listOf(
     DrawerEntry(Destination.ABOUT),
 )
 
+private val bannerDestinations = setOf(
+    Destination.FAVORITES,
+    Destination.JOURNAL,
+    Destination.SETTINGS,
+    Destination.ABOUT,
+    Destination.PRIVACY,
+)
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HopeCardsApp(
@@ -126,6 +138,7 @@ fun HopeCardsApp(
     val dailyRequest by dailyHopeRequests.collectAsStateWithLifecycle()
     val context = LocalContext.current
     val activity = LocalActivity.current ?: return
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
     val scope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val snackbarHostState = remember { SnackbarHostState() }
@@ -150,12 +163,19 @@ fun HopeCardsApp(
         ActivityResultContracts.OpenDocument(),
     ) { uri -> uri?.let(viewModel::restoreBackup) }
 
-    LaunchedEffect(Unit) {
-        delay(500)
+    DisposableEffect(lifecycle) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) viewModel.billing.refresh()
+        }
+        lifecycle.addObserver(observer)
         viewModel.billing.connect()
+        onDispose { lifecycle.removeObserver(observer) }
     }
-    LaunchedEffect(state.initialized, billing.loading, billing.isAdFree) {
-        if (state.initialized && !billing.loading) {
+    LaunchedEffect(state.initialized, billing.loading, billing.isAdFree, state.destination) {
+        if (
+            state.initialized && !billing.loading && !billing.isAdFree &&
+            state.destination in bannerDestinations
+        ) {
             delay(500)
             viewModel.initializeAds(activity, billing.isAdFree)
         }
@@ -265,12 +285,7 @@ fun HopeCardsApp(
                 bottomBar = {
                     if (
                         dailySharePresentation == null && adsReady && !billing.isAdFree && state.selectedVerse == null &&
-                        state.destination in setOf(
-                            Destination.FAVORITES,
-                            Destination.SETTINGS,
-                            Destination.ABOUT,
-                            Destination.PRIVACY,
-                        )
+                        state.destination in bannerDestinations
                     ) {
                         Column(Modifier.fillMaxWidth().background(colors.background).navigationBarsPadding()) {
                             BannerAd()
@@ -344,10 +359,15 @@ fun HopeCardsApp(
                                         },
                                     )
                                 }
-                                Destination.FAVORITES -> FavoritesScreen(viewModel.favoriteVerses()) { verse ->
-                                    journalEntryInDetail = null
-                                    viewModel.openVerse(verse)
-                                }
+                                Destination.FAVORITES -> FavoritesScreen(
+                                    verses = viewModel.favoriteVerses(),
+                                    onOpen = { verse ->
+                                        journalEntryInDetail = null
+                                        viewModel.openVerse(verse)
+                                    },
+                                    onRemove = { verse -> viewModel.removeFavorites(setOf(verse.id)) },
+                                    onRemoveSelected = viewModel::removeFavorites,
+                                )
                                 Destination.JOURNAL -> JournalScreen(
                                     entries = state.journalEntries,
                                     verseFor = viewModel::journalVerse,
@@ -355,6 +375,8 @@ fun HopeCardsApp(
                                         journalEntryInDetail = entry
                                         viewModel.openVerse(verse)
                                     },
+                                    onDeleteEntry = { entry -> viewModel.deleteJournalEntries(setOf(entry.id)) },
+                                    onDeleteSelected = viewModel::deleteJournalEntries,
                                 )
                                 Destination.REMOVE_ADS -> RemoveAdsScreen(
                                     billing = billing,

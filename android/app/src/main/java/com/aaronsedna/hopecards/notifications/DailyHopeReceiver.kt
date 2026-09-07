@@ -14,9 +14,9 @@ class DailyHopeReceiver : BroadcastReceiver() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val scheduler = ReminderScheduler(context.applicationContext)
-                scheduler.showNotification()
                 val settings = AppRepository(context.applicationContext).currentSettings()
                 if (settings.dailyHopeReminderEnabled) {
+                    scheduler.showNotification()
                     scheduler.schedule(settings.dailyHopeReminderHour, settings.dailyHopeReminderMinute)
                 }
             } finally {

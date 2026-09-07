@@ -1,7 +1,7 @@
 package com.aaronsedna.hopecards.ui.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -23,6 +24,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -60,8 +63,14 @@ fun JournalScreen(
     entries: List<JournalEntry>,
     verseFor: (String) -> Verse?,
     onOpenEntry: (JournalEntry, Verse) -> Unit,
+    onDeleteEntry: (JournalEntry) -> Unit,
+    onDeleteSelected: (Set<String>) -> Unit,
 ) {
     val colors = LocalHopeColors.current
+    var pendingRemoval by remember { mutableStateOf<JournalEntry?>(null) }
+    var selectionMode by remember { mutableStateOf(false) }
+    var selectedIds by remember { mutableStateOf(emptySet<String>()) }
+    var confirmSelectedRemoval by remember { mutableStateOf(false) }
 
     if (entries.isEmpty()) {
         Column(
@@ -78,20 +87,72 @@ fun JournalScreen(
             Text("Open Daily Hope and keep a few words from a quiet reflection. They will appear here.", color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 12.dp).widthIn(max = 360.dp))
         }
     } else {
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(horizontal = 20.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            items(entries, key = JournalEntry::id) { entry ->
-                val verse = verseFor(entry.verseId)
-                Column(
-                    Modifier
-                        .fillMaxWidth()
-                        .widthIn(max = 760.dp)
-                        .clickable(enabled = verse != null) { verse?.let { onOpenEntry(entry, it) } }
-                        .padding(vertical = 18.dp),
-                ) {
+        Column(Modifier.fillMaxSize()) {
+            Row(
+                Modifier.fillMaxWidth().widthIn(max = 760.dp).align(Alignment.CenterHorizontally)
+                    .padding(start = 20.dp, end = 12.dp, top = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    if (selectionMode) "${selectedIds.size} selected"
+                    else "${entries.size} journal ${if (entries.size == 1) "entry" else "entries"}",
+                    color = colors.textTertiary,
+                    fontFamily = Poppins,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 13.sp,
+                    modifier = Modifier.weight(1f),
+                )
+                if (selectionMode) {
+                    TextButton(onClick = {
+                        selectedIds = if (selectedIds.size == entries.size) emptySet() else entries.map(JournalEntry::id).toSet()
+                    }) {
+                        Text(
+                            if (selectedIds.size == entries.size) "Clear" else "Select all",
+                            color = colors.accent,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.SemiBold,
+                        )
+                    }
+                    TextButton(onClick = {
+                        selectionMode = false
+                        selectedIds = emptySet()
+                    }) {
+                        Text("Cancel", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    }
+                } else {
+                    TextButton(onClick = { selectionMode = true }) {
+                        Text("Select", color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    }
+                }
+            }
+            LazyColumn(
+                modifier = Modifier.weight(1f).fillMaxWidth(),
+                contentPadding = PaddingValues(horizontal = 20.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                items(entries, key = JournalEntry::id) { entry ->
+                    val verse = verseFor(entry.verseId)
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .widthIn(max = 760.dp)
+                            .combinedClickable(
+                                enabled = selectionMode || verse != null,
+                                onClick = {
+                                    if (selectionMode) {
+                                        selectedIds = if (entry.id in selectedIds) selectedIds - entry.id else selectedIds + entry.id
+                                    } else {
+                                        verse?.let { onOpenEntry(entry, it) }
+                                    }
+                                },
+                                onLongClickLabel = "Select journal entry for ${entry.reference}",
+                                onLongClick = {
+                                    selectionMode = true
+                                    selectedIds = selectedIds + entry.id
+                                },
+                            )
+                            .padding(vertical = 18.dp),
+                    ) {
                     if (verse != null) {
                         Text(
                             verse.category.uppercase(),
@@ -132,7 +193,27 @@ fun JournalScreen(
                             fontSize = 12.sp,
                             modifier = Modifier.padding(end = 8.dp),
                         )
-                        AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
+                        if (selectionMode) {
+                            Checkbox(
+                                checked = entry.id in selectedIds,
+                                onCheckedChange = { checked ->
+                                    selectedIds = if (checked) selectedIds + entry.id else selectedIds - entry.id
+                                },
+                                colors = CheckboxDefaults.colors(
+                                    checkedColor = colors.accent,
+                                    uncheckedColor = colors.textTertiary,
+                                    checkmarkColor = colors.buttonText,
+                                ),
+                            )
+                        } else {
+                            if (verse != null) {
+                                AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
+                                Spacer(Modifier.width(14.dp))
+                            }
+                            IconButton(onClick = { pendingRemoval = entry }) {
+                                AppIcon(AppIconGlyph.TrashOutline, "Delete journal entry for ${entry.reference}", colors.textTertiary, size = 19.dp)
+                            }
+                        }
                     }
 
                     Row(
@@ -161,9 +242,53 @@ fun JournalScreen(
                         color = colors.divider,
                         modifier = Modifier.padding(top = 18.dp),
                     )
+                    }
+                }
+            }
+            if (selectionMode && selectedIds.isNotEmpty()) {
+                Button(
+                    onClick = { confirmSelectedRemoval = true },
+                    modifier = Modifier.fillMaxWidth().widthIn(max = 720.dp).align(Alignment.CenterHorizontally)
+                        .padding(horizontal = 20.dp, vertical = 12.dp).heightIn(min = 52.dp),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = colors.danger),
+                ) {
+                    AppIcon(AppIconGlyph.TrashOutline, null, colors.buttonText, size = 19.dp)
+                    Text(
+                        "Delete selected (${selectedIds.size})",
+                        color = colors.buttonText,
+                        fontFamily = Poppins,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(start = 8.dp),
+                    )
                 }
             }
         }
+    }
+
+    pendingRemoval?.let { entry ->
+        DeleteJournalDialog(
+            onDismiss = { pendingRemoval = null },
+            onDelete = {
+                pendingRemoval = null
+                onDeleteEntry(entry)
+            },
+        )
+    }
+    if (confirmSelectedRemoval) {
+        DeleteJournalDialog(
+            title = "Delete selected entries?",
+            message = "${selectedIds.size} journal ${if (selectedIds.size == 1) "entry" else "entries"} will be permanently deleted.",
+            confirmLabel = "Delete",
+            onDismiss = { confirmSelectedRemoval = false },
+            onDelete = {
+                val ids = selectedIds
+                confirmSelectedRemoval = false
+                selectionMode = false
+                selectedIds = emptySet()
+                onDeleteSelected(ids)
+            },
+        )
     }
 }
 
@@ -335,15 +460,18 @@ fun JournalEditorDialog(
 
 @Composable
 fun DeleteJournalDialog(
+    title: String = "Delete journal entry?",
+    message: String = "This entry will be permanently removed from your journal.",
+    confirmLabel: String = "Delete",
     onDismiss: () -> Unit,
     onDelete: () -> Unit,
 ) {
     val colors = LocalHopeColors.current
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Delete Reflection?", fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-        text = { Text("This reflection will be removed from your journal.") },
-        confirmButton = { TextButton(onClick = onDelete) { Text("Delete", color = colors.danger) } },
+        title = { Text(title, fontFamily = Poppins, fontWeight = FontWeight.Bold) },
+        text = { Text(message, fontFamily = Poppins) },
+        confirmButton = { TextButton(onClick = onDelete) { Text(confirmLabel, color = colors.danger, fontFamily = Poppins) } },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
         shape = RoundedCornerShape(28.dp),
         containerColor = colors.surface,

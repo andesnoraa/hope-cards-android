@@ -41,6 +41,7 @@ class AdsManager(
 
     private var interstitial: InterstitialAd? = null
     private var loadingInterstitial = false
+    private var nextInterstitialLoadAt = 0L
     private var adsEnabled = true
     private var closed = false
 
@@ -49,6 +50,9 @@ class AdsManager(
         if (isAdFree) {
             interstitial?.fullScreenContentCallback = null
             interstitial = null
+            return
+        }
+        if (_ready.value) {
             return
         }
         if (!consentUpdateStarted.compareAndSet(false, true)) return
@@ -81,11 +85,12 @@ class AdsManager(
     }
 
     fun recordCompletedCard(activity: Activity, isAdFree: Boolean) {
-        if (isAdFree || !_ready.value) return
+        if (isAdFree) return
+        initialize(activity, isAdFree = false)
         scope.launch {
             if (repository.recordCompletedCard(System.currentTimeMillis())) {
-                showInterstitial(activity)
-            } else {
+                if (_ready.value) showInterstitial(activity)
+            } else if (_ready.value) {
                 loadInterstitial()
             }
         }
@@ -99,12 +104,16 @@ class AdsManager(
                 .build(),
         )
         MobileAds.initialize(appContext) {
+            if (closed) return@initialize
             _ready.value = true
         }
     }
 
     private fun loadInterstitial() {
-        if (!_ready.value || interstitial != null || loadingInterstitial) return
+        if (
+            !_ready.value || interstitial != null || loadingInterstitial ||
+            System.currentTimeMillis() < nextInterstitialLoadAt
+        ) return
         loadingInterstitial = true
         InterstitialAd.load(
             appContext,
@@ -113,6 +122,7 @@ class AdsManager(
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: InterstitialAd) {
                     loadingInterstitial = false
+                    nextInterstitialLoadAt = 0L
                     if (!adsEnabled || closed) {
                         ad.fullScreenContentCallback = null
                         return
@@ -121,14 +131,19 @@ class AdsManager(
                     ad.fullScreenContentCallback = object : FullScreenContentCallback() {
                         override fun onAdDismissedFullScreenContent() {
                             interstitial = null
+                            loadInterstitial()
                         }
 
                         override fun onAdFailedToShowFullScreenContent(error: AdError) {
                             interstitial = null
+                            loadInterstitial()
                         }
 
                         override fun onAdShowedFullScreenContent() {
                             interstitial = null
+                            scope.launch {
+                                repository.recordInterstitialShown(System.currentTimeMillis())
+                            }
                         }
                     }
                 }
@@ -136,13 +151,14 @@ class AdsManager(
                 override fun onAdFailedToLoad(error: com.google.android.gms.ads.LoadAdError) {
                     loadingInterstitial = false
                     interstitial = null
+                    nextInterstitialLoadAt = System.currentTimeMillis() + INTERSTITIAL_RETRY_DELAY_MS
                 }
             },
         )
     }
 
     private fun showInterstitial(activity: Activity) {
-        if (activity.isFinishing || activity.isDestroyed) return
+        if (closed || !adsEnabled || activity.isFinishing || activity.isDestroyed) return
         val ad = interstitial
         if (ad == null) {
             loadInterstitial()
@@ -157,5 +173,9 @@ class AdsManager(
         interstitial?.fullScreenContentCallback = null
         interstitial = null
         scope.cancel()
+    }
+
+    private companion object {
+        const val INTERSTITIAL_RETRY_DELAY_MS = 60_000L
     }
 }
