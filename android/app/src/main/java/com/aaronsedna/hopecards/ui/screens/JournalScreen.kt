@@ -1,13 +1,18 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -16,7 +21,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.IconButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
@@ -31,12 +36,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.model.JournalEntry
+import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
-import com.aaronsedna.hopecards.ui.components.SectionCard
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
@@ -45,10 +51,12 @@ import java.time.format.DateTimeFormatter
 import java.util.Locale
 
 @Composable
-fun JournalScreen(entries: List<JournalEntry>, onSave: (JournalEntry) -> Unit) {
+fun JournalScreen(
+    entries: List<JournalEntry>,
+    verseFor: (String) -> Verse?,
+    onOpenEntry: (JournalEntry, Verse) -> Unit,
+) {
     val colors = LocalHopeColors.current
-    var editing by remember { mutableStateOf<JournalEntry?>(null) }
-    var deleting by remember { mutableStateOf<JournalEntry?>(null) }
 
     if (entries.isEmpty()) {
         Column(
@@ -67,86 +75,162 @@ fun JournalScreen(entries: List<JournalEntry>, onSave: (JournalEntry) -> Unit) {
     } else {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            contentPadding = androidx.compose.foundation.layout.PaddingValues(20.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            contentPadding = PaddingValues(horizontal = 20.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             items(entries, key = JournalEntry::id) { entry ->
-                SectionCard(Modifier.widthIn(max = 760.dp)) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(entry.reference, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.weight(1f))
-                        Text(formatDate(entry.date), color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                val verse = verseFor(entry.verseId)
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .widthIn(max = 760.dp)
+                        .clickable(enabled = verse != null) { verse?.let { onOpenEntry(entry, it) } }
+                        .padding(vertical = 18.dp),
+                ) {
+                    if (verse != null) {
+                        Text(
+                            verse.category.uppercase(),
+                            color = colors.accent,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                            letterSpacing = 2.5.sp,
+                            modifier = Modifier.padding(bottom = 8.dp),
+                        )
+                        Text(
+                            verse.text,
+                            color = colors.cardText,
+                            fontFamily = SourceSerif,
+                            fontSize = 19.sp,
+                            lineHeight = 29.sp,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
                     }
-                    Text(calmReflectionText(entry.prompt), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, lineHeight = 21.sp)
-                    Text(entry.note, color = colors.cardText, fontFamily = SourceSerif, fontSize = 18.sp, lineHeight = 28.sp)
-                    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                        TextButton(onClick = { editing = entry }) {
-                            AppIcon(AppIconGlyph.CreateOutline, null, colors.accent, size = 18.dp)
-                            Text("Edit", modifier = Modifier.padding(start = 5.dp))
-                        }
-                        TextButton(onClick = { deleting = entry }) {
-                            AppIcon(AppIconGlyph.TrashOutline, null, colors.textTertiary, size = 18.dp)
-                            Text("Delete", color = colors.textTertiary, modifier = Modifier.padding(start = 5.dp))
-                        }
+
+                    Row(
+                        Modifier.fillMaxWidth().padding(top = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(
+                            verse?.reference ?: entry.reference,
+                            color = colors.text,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 17.sp,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Text(
+                            formatDate(entry.date),
+                            color = colors.textTertiary,
+                            fontFamily = Poppins,
+                            fontSize = 12.sp,
+                            modifier = Modifier.padding(end = 8.dp),
+                        )
+                        AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
                     }
+
+                    Row(
+                        Modifier.fillMaxWidth().padding(top = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(
+                            Modifier
+                                .width(2.dp)
+                                .height(42.dp)
+                                .background(colors.accentLine, RoundedCornerShape(1.dp)),
+                        )
+                        Text(
+                            entry.note,
+                            color = colors.textSecondary,
+                            fontFamily = SourceSerif,
+                            fontSize = 16.sp,
+                            lineHeight = 23.sp,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.padding(start = 12.dp).weight(1f),
+                        )
+                    }
+
+                    HorizontalDivider(
+                        color = colors.divider,
+                        modifier = Modifier.padding(top = 18.dp),
+                    )
                 }
             }
         }
     }
+}
 
-    editing?.let { entry ->
-        var draft by remember(entry.id) { mutableStateOf(entry.note) }
-        AlertDialog(
-            onDismissRequest = { editing = null },
-            title = { Text("Your Reflection", fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-            text = {
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text(calmReflectionText(entry.prompt), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
-                    OutlinedTextField(
-                        value = draft,
-                        onValueChange = { if (it.length <= 20_000) draft = it },
-                        minLines = 6,
-                        shape = RoundedCornerShape(18.dp),
-                        textStyle = androidx.compose.ui.text.TextStyle(fontFamily = SourceSerif, fontSize = 18.sp, color = colors.cardText),
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = colors.accent,
-                            unfocusedBorderColor = colors.accentLine,
-                            focusedContainerColor = colors.background,
-                            unfocusedContainerColor = colors.background,
-                        ),
-                    )
-                }
-            },
-            confirmButton = {
-                Button(
-                    onClick = { onSave(entry.copy(note = draft)); editing = null },
-                    colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground),
-                    shape = RoundedCornerShape(16.dp),
-                ) { Text("Keep Changes", fontFamily = Poppins, fontWeight = FontWeight.SemiBold) }
-            },
-            dismissButton = { TextButton(onClick = { editing = null }) { Text("Cancel") } },
-            shape = RoundedCornerShape(28.dp),
-            containerColor = colors.surface,
-            titleContentColor = colors.text,
-            textContentColor = colors.textSecondary,
-            tonalElevation = 0.dp,
-        )
-    }
+@Composable
+fun JournalEditorDialog(
+    entry: JournalEntry,
+    onDismiss: () -> Unit,
+    onSave: (JournalEntry) -> Unit,
+    onDeleteRequest: () -> Unit,
+) {
+    val colors = LocalHopeColors.current
+    var draft by remember(entry.id, entry.updatedAt) { mutableStateOf(entry.note) }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Your Reflection", fontFamily = Poppins, fontWeight = FontWeight.Bold) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Text(calmReflectionText(entry.prompt), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                OutlinedTextField(
+                    value = draft,
+                    onValueChange = { if (it.length <= 20_000) draft = it },
+                    minLines = 6,
+                    shape = RoundedCornerShape(18.dp),
+                    textStyle = androidx.compose.ui.text.TextStyle(fontFamily = SourceSerif, fontSize = 18.sp, color = colors.cardText),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = colors.accent,
+                        unfocusedBorderColor = colors.accentLine,
+                        focusedContainerColor = colors.background,
+                        unfocusedContainerColor = colors.background,
+                    ),
+                )
+            }
+        },
+        confirmButton = {
+            Button(
+                onClick = { onSave(entry.copy(note = draft)) },
+                colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground),
+                shape = RoundedCornerShape(16.dp),
+            ) { Text("Keep Changes", fontFamily = Poppins, fontWeight = FontWeight.SemiBold) }
+        },
+        dismissButton = {
+            Row {
+                TextButton(onClick = onDeleteRequest) { Text("Delete", color = colors.danger) }
+                TextButton(onClick = onDismiss) { Text("Cancel") }
+            }
+        },
+        shape = RoundedCornerShape(28.dp),
+        containerColor = colors.surface,
+        titleContentColor = colors.text,
+        textContentColor = colors.textSecondary,
+        tonalElevation = 0.dp,
+    )
+}
 
-    deleting?.let { entry ->
-        AlertDialog(
-            onDismissRequest = { deleting = null },
-            title = { Text("Delete Reflection?", fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-            text = { Text("This reflection will be removed from this device.") },
-            confirmButton = { TextButton(onClick = { onSave(entry.copy(note = "")); deleting = null }) { Text("Delete", color = colors.danger) } },
-            dismissButton = { TextButton(onClick = { deleting = null }) { Text("Cancel") } },
-            shape = RoundedCornerShape(28.dp),
-            containerColor = colors.surface,
-            titleContentColor = colors.text,
-            textContentColor = colors.textSecondary,
-            tonalElevation = 0.dp,
-        )
-    }
+@Composable
+fun DeleteJournalDialog(
+    onDismiss: () -> Unit,
+    onDelete: () -> Unit,
+) {
+    val colors = LocalHopeColors.current
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Delete Reflection?", fontFamily = Poppins, fontWeight = FontWeight.Bold) },
+        text = { Text("This reflection will be removed from your journal.") },
+        confirmButton = { TextButton(onClick = onDelete) { Text("Delete", color = colors.danger) } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
+        shape = RoundedCornerShape(28.dp),
+        containerColor = colors.surface,
+        titleContentColor = colors.text,
+        textContentColor = colors.textSecondary,
+        tonalElevation = 0.dp,
+    )
 }
 
 private fun formatDate(value: String): String = runCatching {

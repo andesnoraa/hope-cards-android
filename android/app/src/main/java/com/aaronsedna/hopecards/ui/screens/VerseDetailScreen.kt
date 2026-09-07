@@ -18,6 +18,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -29,12 +30,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.ActionPill
+import com.aaronsedna.hopecards.ui.components.AppIcon
+import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
 
 @Composable
-fun VerseDetailScreen(verse: Verse, favorite: Boolean, onFavorite: () -> Unit, onShare: () -> Unit) {
+fun VerseDetailScreen(
+    verse: Verse,
+    favorite: Boolean,
+    onFavorite: () -> Unit,
+    onShare: () -> Unit,
+    onEditJournal: (() -> Unit)? = null,
+) {
     val colors = LocalHopeColors.current
     val alpha = androidx.compose.runtime.remember(verse.id) { Animatable(0f) }
     LaunchedEffect(verse.id) { alpha.animateTo(1f, tween(300)) }
@@ -59,6 +68,18 @@ fun VerseDetailScreen(verse: Verse, favorite: Boolean, onFavorite: () -> Unit, o
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.padding(top = 28.dp, bottom = 18.dp)) {
                 ActionPill(if (favorite) "Saved" else "Save", onFavorite, favorite = favorite)
                 ActionPill("Share", onShare)
+            }
+            if (onEditJournal != null) {
+                TextButton(onClick = onEditJournal) {
+                    AppIcon(AppIconGlyph.CreateOutline, null, colors.accent, size = 19.dp)
+                    Text(
+                        "Edit journal",
+                        color = colors.accent,
+                        fontFamily = Poppins,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier.padding(start = 7.dp),
+                    )
+                }
             }
             Column(Modifier.padding(top = 34.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("TRANSLATION", color = colors.textTertiary, fontFamily = Poppins, fontSize = 13.sp, letterSpacing = 1.5.sp, modifier = Modifier.padding(bottom = 8.dp))

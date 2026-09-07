@@ -67,14 +67,17 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.ads.BannerAd
 import com.aaronsedna.hopecards.model.Destination
+import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.screens.AboutScreen
 import com.aaronsedna.hopecards.ui.screens.DailyHopeScreen
 import com.aaronsedna.hopecards.ui.screens.DailySharePresentation
+import com.aaronsedna.hopecards.ui.screens.DeleteJournalDialog
 import com.aaronsedna.hopecards.ui.screens.FavoritesScreen
 import com.aaronsedna.hopecards.ui.screens.HomeScreen
+import com.aaronsedna.hopecards.ui.screens.JournalEditorDialog
 import com.aaronsedna.hopecards.ui.screens.JournalScreen
 import com.aaronsedna.hopecards.ui.screens.PrivacyScreen
 import com.aaronsedna.hopecards.ui.screens.RemoveAdsScreen
@@ -128,6 +131,14 @@ fun HopeCardsApp(
     val snackbarHostState = remember { SnackbarHostState() }
     var drawerLoaded by rememberSaveable { mutableStateOf(false) }
     var dailySharePresentation by remember { mutableStateOf<Verse?>(null) }
+    var journalEntryInDetail by remember { mutableStateOf<JournalEntry?>(null) }
+    var editingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
+    var deletingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
+
+    val closeVerse = {
+        journalEntryInDetail = null
+        viewModel.closeVerse()
+    }
 
     val notificationPermission = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission(),
@@ -154,7 +165,7 @@ fun HopeCardsApp(
     }
 
     BackHandler(enabled = state.selectedVerse != null || state.destination != Destination.HOME) {
-        if (state.selectedVerse != null) viewModel.closeVerse() else viewModel.navigate(Destination.HOME)
+        if (state.selectedVerse != null) closeVerse() else viewModel.navigate(Destination.HOME)
     }
 
     HopeCardsTheme(state.settings.themeName) {
@@ -171,6 +182,7 @@ fun HopeCardsApp(
                     if (drawerLoaded) Column(Modifier.fillMaxHeight()) {
                         primaryEntries.forEach { entry ->
                             DrawerItem(entry, state.destination) { destination ->
+                                journalEntryInDetail = null
                                 viewModel.navigate(destination)
                                 scope.launch { drawerState.close() }
                             }
@@ -180,6 +192,7 @@ fun HopeCardsApp(
                         }
                         HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
                         DrawerItems(informationEntries, state.destination) { destination ->
+                            journalEntryInDetail = null
                             viewModel.navigate(destination)
                             scope.launch { drawerState.close() }
                         }
@@ -223,7 +236,7 @@ fun HopeCardsApp(
                         },
                         navigationIcon = {
                             IconButton(onClick = {
-                                if (state.selectedVerse != null) viewModel.closeVerse()
+                                if (state.selectedVerse != null) closeVerse()
                                 else scope.launch {
                                     drawerLoaded = true
                                     delay(16)
@@ -272,11 +285,17 @@ fun HopeCardsApp(
                     } else if (state.initialized) {
                         val selected = state.selectedVerse
                         if (selected != null) {
+                            val selectedJournalEntry = journalEntryInDetail?.let { selectedEntry ->
+                                state.journalEntries.firstOrNull { it.id == selectedEntry.id }
+                            }
                             VerseDetailScreen(
                                 verse = selected,
                                 favorite = selected.id in state.favorites,
                                 onFavorite = { viewModel.toggleFavorite(selected) },
                                 onShare = { shareVerse(activity, selected) },
+                                onEditJournal = selectedJournalEntry?.let { entry ->
+                                    { editingJournalEntry = entry }
+                                },
                             )
                         } else {
                             when (state.destination) {
@@ -325,8 +344,18 @@ fun HopeCardsApp(
                                         },
                                     )
                                 }
-                                Destination.FAVORITES -> FavoritesScreen(viewModel.favoriteVerses(), viewModel::openVerse)
-                                Destination.JOURNAL -> JournalScreen(state.journalEntries, viewModel::saveJournalEntry)
+                                Destination.FAVORITES -> FavoritesScreen(viewModel.favoriteVerses()) { verse ->
+                                    journalEntryInDetail = null
+                                    viewModel.openVerse(verse)
+                                }
+                                Destination.JOURNAL -> JournalScreen(
+                                    entries = state.journalEntries,
+                                    verseFor = viewModel::journalVerse,
+                                    onOpenEntry = { entry, verse ->
+                                        journalEntryInDetail = entry
+                                        viewModel.openVerse(verse)
+                                    },
+                                )
                                 Destination.REMOVE_ADS -> RemoveAdsScreen(
                                     billing = billing,
                                     privacyOptionsRequired = privacyOptionsRequired,
@@ -382,6 +411,38 @@ fun HopeCardsApp(
             billing.message?.let { message ->
                 NoticeDialog(message, viewModel.billing::clearMessage)
             }
+        }
+        editingJournalEntry?.let { entry ->
+            JournalEditorDialog(
+                entry = entry,
+                onDismiss = { editingJournalEntry = null },
+                onSave = { updated ->
+                    viewModel.saveJournalEntry(updated)
+                    editingJournalEntry = null
+                    scope.launch {
+                        snackbarHostState.currentSnackbarData?.dismiss()
+                        snackbarHostState.showSnackbar("Journal entry updated.")
+                    }
+                },
+                onDeleteRequest = {
+                    editingJournalEntry = null
+                    deletingJournalEntry = entry
+                },
+            )
+        }
+        deletingJournalEntry?.let { entry ->
+            DeleteJournalDialog(
+                onDismiss = { deletingJournalEntry = null },
+                onDelete = {
+                    viewModel.saveJournalEntry(entry.copy(note = ""))
+                    deletingJournalEntry = null
+                    closeVerse()
+                    scope.launch {
+                        snackbarHostState.currentSnackbarData?.dismiss()
+                        snackbarHostState.showSnackbar("Removed from your journal.")
+                    }
+                },
+            )
         }
     }
 }

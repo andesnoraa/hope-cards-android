@@ -109,6 +109,9 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         }.sortedBy { it.reference }
     }
 
+    fun journalVerse(verseId: String): Verse? =
+        verseRepository.byId(verseId, _uiState.value.settings.preferredTranslation)
+
     fun closeVerse() {
         _uiState.value = _uiState.value.copy(selectedVerse = null)
     }
