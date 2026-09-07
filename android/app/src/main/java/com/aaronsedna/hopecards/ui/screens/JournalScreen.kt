@@ -40,6 +40,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -253,10 +254,10 @@ fun JournalScreen(
                     shape = RoundedCornerShape(16.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = colors.danger),
                 ) {
-                    AppIcon(AppIconGlyph.TrashOutline, null, colors.buttonText, size = 19.dp)
+                    AppIcon(AppIconGlyph.TrashOutline, null, Color.White, size = 19.dp)
                     Text(
                         "Delete selected (${selectedIds.size})",
-                        color = colors.buttonText,
+                        color = Color.White,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(start = 8.dp),
