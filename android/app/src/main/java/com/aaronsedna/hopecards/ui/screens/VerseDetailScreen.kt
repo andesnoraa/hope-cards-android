@@ -73,7 +73,7 @@ fun VerseDetailScreen(
                 TextButton(onClick = onEditJournal) {
                     AppIcon(AppIconGlyph.CreateOutline, null, colors.accent, size = 19.dp)
                     Text(
-                        "Edit journal",
+                        "Edit journal entry",
                         color = colors.accent,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,

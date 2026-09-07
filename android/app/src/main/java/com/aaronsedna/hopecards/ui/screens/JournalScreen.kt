@@ -206,7 +206,7 @@ fun JournalEditorDialog(
                     }
                     Column(Modifier.padding(start = 13.dp).weight(1f)) {
                         Text(
-                            "Edit journal",
+                            "Edit journal entry",
                             color = colors.text,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -278,7 +278,7 @@ fun JournalEditorDialog(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        "Journal note",
+                        "Journal entry",
                         color = colors.textTertiary,
                         fontFamily = Poppins,
                         fontSize = 12.sp,

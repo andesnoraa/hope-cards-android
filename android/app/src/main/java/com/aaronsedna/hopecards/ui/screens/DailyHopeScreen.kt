@@ -201,7 +201,7 @@ fun DailyHopeScreen(
             modifier = Modifier.padding(top = 18.dp),
         ) {
             Text(
-                "Add a note",
+                if (existingNote.isBlank()) "Add to journal" else "Edit journal entry",
                 color = colors.accent,
                 fontFamily = Poppins,
                 fontWeight = FontWeight.SemiBold,
@@ -234,11 +234,17 @@ fun DailyHopeScreen(
                         }
                     }
                     Column(Modifier.weight(1f).padding(start = 12.dp)) {
-                        Text("Notes", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 20.sp)
-                        Text("Notes for this verse", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                        Text(
+                            if (existingNote.isBlank()) "Add to journal" else "Edit journal entry",
+                            color = colors.text,
+                            fontFamily = Poppins,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                        )
+                        Text("For ${verse.reference}", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                     }
                     IconButton(onClick = { reflectionOpen = false }) {
-                        AppIcon(AppIconGlyph.Close, "Close notes", colors.textSecondary, size = 22.dp)
+                        AppIcon(AppIconGlyph.Close, "Close journal entry", colors.textSecondary, size = 22.dp)
                     }
                 }
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -264,7 +270,7 @@ fun DailyHopeScreen(
                     value = note,
                     onValueChange = { if (it.length <= 1_000) note = it },
                     modifier = Modifier.fillMaxWidth().height(120.dp),
-                    placeholder = { Text("Write a note…", color = colors.textTertiary) },
+                    placeholder = { Text("Add a few words…", color = colors.textTertiary) },
                     shape = RoundedCornerShape(18.dp),
                     textStyle = androidx.compose.ui.text.TextStyle(fontFamily = SourceSerif, fontSize = 18.sp, lineHeight = 27.sp, color = colors.cardText),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -275,8 +281,8 @@ fun DailyHopeScreen(
                     ),
                 )
                 Row(Modifier.fillMaxWidth()) {
-                    Text("Journal note", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
-                    Text("${note.length}/1000", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                    Text("Journal entry", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
+                    Text("${note.length} / 1,000", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                 }
                 if (noteChanged) {
                     Button(
@@ -294,9 +300,9 @@ fun DailyHopeScreen(
                     ) {
                         Text(
                             when {
-                                trimmedNote.isBlank() && existingNote.isNotBlank() -> "Remove Note"
-                                existingNote.isBlank() -> "Save Note"
-                                else -> "Update Note"
+                                trimmedNote.isBlank() && existingNote.isNotBlank() -> "Remove from journal"
+                                existingNote.isBlank() -> "Save to journal"
+                                else -> "Save changes"
                             },
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -305,8 +311,8 @@ fun DailyHopeScreen(
                     }
                 } else {
                     Text(
-                        if (existingNote.isBlank()) "Write anything you would like to remember."
-                        else "This note is in your journal.",
+                        if (existingNote.isBlank()) "Add a few words whenever you feel ready."
+                        else "Added to your journal.",
                         color = colors.textTertiary,
                         fontFamily = Poppins,
                         fontSize = 12.sp,
