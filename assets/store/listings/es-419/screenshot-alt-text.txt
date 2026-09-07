@@ -1,0 +1,6 @@
+Hope Cards muestra un mazo grande y la acción para sacar una tarjeta bíblica.
+Tarjeta con Romanos 5:2, opciones para guardar y compartir, y traducción bíblica.
+Esperanza diaria muestra el versículo del día en una vista de lectura serena.
+Favoritos muestra versículos bíblicos guardados con referencias y acciones.
+Diario muestra notas personales vinculadas directamente a cada versículo.
+Selector de temas con elegantes estilos visuales para Hope Cards.

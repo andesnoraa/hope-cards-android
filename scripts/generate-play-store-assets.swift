@@ -10,6 +10,7 @@ private let storeRoot = root.appendingPathComponent("assets/store", isDirectory:
 private let listingRoot = storeRoot.appendingPathComponent("listings", isDirectory: true)
 private let sourceRoot = storeRoot.appendingPathComponent("source/phone", isDirectory: true)
 private let tabletSourceRoot = storeRoot.appendingPathComponent("source/tablet", isDirectory: true)
+private let featureBackgroundURL = storeRoot.appendingPathComponent("source/feature-background.png")
 
 private let navy = NSColor(calibratedRed: 22 / 255, green: 42 / 255, blue: 77 / 255, alpha: 1)
 private let ink = NSColor(calibratedRed: 28 / 255, green: 51 / 255, blue: 62 / 255, alpha: 1)
@@ -160,6 +161,36 @@ private func drawBackground(width: CGFloat, height: CGFloat) {
     NSBezierPath(ovalIn: NSRect(x: -250, y: -185, width: 640, height: 640)).fill()
 }
 
+private func drawFeatureBackground(width: CGFloat, height: CGFloat) throws {
+    guard let featureBackground = NSImage(contentsOf: featureBackgroundURL) else {
+        throw NSError(domain: "HopeCardsStoreAssets", code: 6, userInfo: [NSLocalizedDescriptionKey: "Missing feature background: \(featureBackgroundURL.path)"])
+    }
+
+    let destinationAspect = width / height
+    let sourceAspect = featureBackground.size.width / featureBackground.size.height
+    var sourceRect = NSRect(origin: .zero, size: featureBackground.size)
+    if sourceAspect > destinationAspect {
+        let croppedWidth = featureBackground.size.height * destinationAspect
+        sourceRect.origin.x = (featureBackground.size.width - croppedWidth) / 2
+        sourceRect.size.width = croppedWidth
+    } else {
+        let croppedHeight = featureBackground.size.width / destinationAspect
+        sourceRect.origin.y = (featureBackground.size.height - croppedHeight) / 2
+        sourceRect.size.height = croppedHeight
+    }
+
+    featureBackground.draw(
+        in: NSRect(x: 0, y: 0, width: width, height: height),
+        from: sourceRect,
+        operation: .copy,
+        fraction: 1,
+        respectFlipped: false,
+        hints: [.interpolation: NSImageInterpolation.high]
+    )
+    navy.withAlphaComponent(0.13).setFill()
+    NSBezierPath(rect: NSRect(x: 0, y: 0, width: width, height: height)).fill()
+}
+
 private func generateScreenshot(locale: String, caption: String, index: Int, spec: ScreenshotSpec, destination: URL) throws {
     let width = 1080
     let height = 1920
@@ -256,17 +287,7 @@ private func generateFeatureGraphic(locale: String, lines: [String], destination
     let subtitle = lines.first ?? ""
     let featureLine = lines.dropFirst().first ?? ""
     let bitmap = try makeBitmap(width: width, height: height) { canvasHeight in
-        NSGradient(
-            colors: [
-                NSColor(calibratedRed: 10 / 255, green: 29 / 255, blue: 55 / 255, alpha: 1),
-                NSColor(calibratedRed: 29 / 255, green: 58 / 255, blue: 96 / 255, alpha: 1),
-            ]
-        )?.draw(in: NSRect(x: 0, y: 0, width: CGFloat(width), height: canvasHeight), angle: -18)
-
-        softGold.withAlphaComponent(0.075).setFill()
-        NSBezierPath(ovalIn: NSRect(x: -150, y: -220, width: 610, height: 610)).fill()
-        NSColor.white.withAlphaComponent(0.045).setFill()
-        NSBezierPath(ovalIn: NSRect(x: 740, y: 250, width: 420, height: 420)).fill()
+        try drawFeatureBackground(width: CGFloat(width), height: canvasHeight)
 
         gold.setFill()
         NSBezierPath(roundedRect: topRect(x: 68, y: 70, width: 62, height: 9, canvasHeight: canvasHeight), xRadius: 4.5, yRadius: 4.5).fill()
@@ -356,6 +377,105 @@ private func generateFeatureGraphic(locale: String, lines: [String], destination
             color: gold,
             alignment: .center,
             tracking: 3
+        )
+    }
+    try writePNG(bitmap, to: destination)
+}
+
+private func generateVideoHero(locale: String, lines: [String], destination: URL) throws {
+    let width = 1_920
+    let height = 1_080
+    let subtitle = lines.first ?? ""
+    let featureLine = lines.dropFirst().first ?? ""
+    let bitmap = try makeBitmap(width: width, height: height) { canvasHeight in
+        try drawFeatureBackground(width: CGFloat(width), height: canvasHeight)
+
+        gold.setFill()
+        NSBezierPath(roundedRect: topRect(x: 130, y: 150, width: 118, height: 12, canvasHeight: canvasHeight), xRadius: 6, yRadius: 6).fill()
+
+        drawText(
+            "Hope Cards",
+            locale: locale,
+            in: topRect(x: 130, y: 235, width: 890, height: 160, canvasHeight: canvasHeight),
+            font: font(named: "Poppins-Bold", size: 116, fallbackWeight: .bold),
+            color: ivory
+        )
+
+        let subtitleRect = topRect(x: 135, y: 440, width: 875, height: 220, canvasHeight: canvasHeight)
+        let subtitleFont = fittedFont(
+            text: subtitle,
+            locale: locale,
+            bold: false,
+            maxSize: 57,
+            minSize: 40,
+            width: subtitleRect.width,
+            height: subtitleRect.height,
+            alignment: .left,
+            lineSpacing: 10
+        )
+        drawText(subtitle, locale: locale, in: subtitleRect, font: subtitleFont, color: NSColor.white.withAlphaComponent(0.76), lineSpacing: 10)
+
+        let featureRect = topRect(x: 135, y: 790, width: 875, height: 90, canvasHeight: canvasHeight)
+        let featureFont = fittedFont(
+            text: featureLine,
+            locale: locale,
+            bold: true,
+            maxSize: 45,
+            minSize: 31,
+            width: featureRect.width,
+            height: featureRect.height,
+            alignment: .left
+        )
+        drawText(featureLine, locale: locale, in: featureRect, font: featureFont, color: gold)
+
+        let cards: [(NSRect, NSColor, CGFloat)] = [
+            (topRect(x: 1_130, y: 120, width: 540, height: 790, canvasHeight: canvasHeight), NSColor.white, 0.12),
+            (topRect(x: 1_185, y: 155, width: 540, height: 790, canvasHeight: canvasHeight), ivory, 0.15),
+            (topRect(x: 1_240, y: 190, width: 540, height: 790, canvasHeight: canvasHeight), navy, 0.24),
+        ]
+
+        for (cardRect, fill, shadowAlpha) in cards {
+            NSGraphicsContext.saveGraphicsState()
+            let shadow = NSShadow()
+            shadow.shadowColor = NSColor.black.withAlphaComponent(shadowAlpha)
+            shadow.shadowBlurRadius = 34
+            shadow.shadowOffset = NSSize(width: 0, height: -10)
+            shadow.set()
+            fill.setFill()
+            NSBezierPath(roundedRect: cardRect, xRadius: 70, yRadius: 70).fill()
+            NSGraphicsContext.restoreGraphicsState()
+
+            gold.withAlphaComponent(fill.isEqual(navy) ? 0.95 : 0.48).setStroke()
+            let outline = NSBezierPath(roundedRect: cardRect.insetBy(dx: 24, dy: 24), xRadius: 54, yRadius: 54)
+            outline.lineWidth = fill.isEqual(navy) ? 5 : 3
+            outline.stroke()
+        }
+
+        drawText(
+            "✦",
+            locale: locale,
+            in: topRect(x: 1_345, y: 335, width: 330, height: 130, canvasHeight: canvasHeight),
+            font: NSFont.systemFont(ofSize: 96, weight: .light),
+            color: gold,
+            alignment: .center
+        )
+        drawText(
+            "HOPE",
+            locale: locale,
+            in: topRect(x: 1_300, y: 505, width: 420, height: 130, canvasHeight: canvasHeight),
+            font: font(named: "SourceSerif4-Regular", size: 105),
+            color: ivory,
+            alignment: .center,
+            tracking: 5
+        )
+        drawText(
+            "C A R D S",
+            locale: locale,
+            in: topRect(x: 1_350, y: 660, width: 320, height: 70, canvasHeight: canvasHeight),
+            font: font(named: "Poppins-SemiBold", size: 34, fallbackWeight: .semibold),
+            color: gold,
+            alignment: .center,
+            tracking: 6
         )
     }
     try writePNG(bitmap, to: destination)
@@ -550,6 +670,11 @@ for localeDirectory in locales {
         locale: locale,
         lines: featureCopy,
         destination: storeRoot.appendingPathComponent("feature-graphics/\(locale)/feature-graphic.png")
+    )
+    try generateVideoHero(
+        locale: locale,
+        lines: featureCopy,
+        destination: storeRoot.appendingPathComponent("videos/\(locale)/hero.png")
     )
 }
 

@@ -21,8 +21,9 @@ The phone set is 1080 × 1920. The tablet set is 1600 × 2560. Each image uses a
 - `de-DE` — German (Germany)
 - `it-IT` — Italian (Italy)
 - `ml-IN` — Malayalam (India)
+- `fil-PH` — Filipino / Tagalog (Philippines)
 
-Each locale includes a title, short description, full description, screenshot captions, feature-graphic copy, six phone screenshots, two tablet screenshots, and one 1024 × 500 feature graphic.
+Each locale includes a title, short description, full description, screenshot captions and alt text, feature-graphic copy, six phone screenshots, two tablet screenshots, one 1024 × 500 feature graphic, and one 1080p localized promo video.
 
 The brand name remains “Hope Cards” in every market. The localized copy is adapted around the terms users naturally associate with daily Bible verses, encouragement, favorites, notes, and reminders. It does not claim that the entire application interface is localized. The app currently offers Bible translations in these languages while the surrounding interface remains English; complete UI localization should be released before marketing the interface itself as translated.
 
@@ -50,7 +51,12 @@ Run from the repository root on macOS:
 
 ```sh
 swift scripts/generate-play-store-assets.swift
+scripts/generate-play-store-videos.sh
 scripts/validate-play-store-assets.sh
 ```
 
 The generator uses the bundled Poppins and Source Serif fonts and the source captures under `assets/store/source/`. Update those captures whenever the UI changes, then regenerate every locale so the visual system remains consistent.
+
+## Preview videos
+
+The localized videos are 21.8-second, 1920 × 1080 MP4 files under `videos/<locale>/`. Upload each video to YouTube as **Unlisted**, turn monetization/ads off, keep age restriction disabled, and paste its YouTube URL into the matching Play Store language listing. The opening and closing frame is generated in the locale language; the center scenes use the localized screenshot artwork and real app captures.

@@ -1,0 +1,6 @@
+Hope Cards screen showing a large teal Bible verse card deck and the Draw a Card action.
+Hope Cards verse card showing Romans 5:2 with Save, Share and Bible translation details.
+Daily Hope screen showing the Bible verse of the day in a calm reading layout.
+Favorites screen showing saved Bible verses with references and individual actions.
+Journal screen showing notes linked directly to their Bible verses.
+Theme selector showing elegant visual styles available for Hope Cards.
