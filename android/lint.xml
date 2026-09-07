@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- Keep the tested Gradle/AGP pair until the next deliberate toolchain upgrade. -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+
+    <!-- The legacy launcher art intentionally uses the brand's square black field. -->
+    <issue id="IconLauncherShape" severity="ignore" />
+
+    <!-- The monochrome adaptive icon deliberately shares the foreground silhouette. -->
+    <issue id="IconDuplicates" severity="ignore" />
+</lint>

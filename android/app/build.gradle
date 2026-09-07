@@ -23,7 +23,7 @@ def productionBannerAdUnitId = propertyOrEnvironment("ADMOB_BANNER_AD_UNIT_ID", 
 def productionInterstitialAdUnitId = propertyOrEnvironment("ADMOB_INTERSTITIAL_AD_UNIT_ID", "ADMOB_INTERSTITIAL_AD_UNIT_ID", "")
 
 android {
-    namespace "com.aaronsedna.hopecards"
+    namespace = "com.aaronsedna.hopecards"
     compileSdk 36
 
     defaultConfig {
@@ -60,7 +60,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
-            signingConfig signingConfigs.debug
+            signingConfig = signingConfigs.debug
             buildConfigField "String", "BANNER_AD_UNIT_ID", '"' + testBannerAdUnitId + '"'
             buildConfigField "String", "INTERSTITIAL_AD_UNIT_ID", '"' + testInterstitialAdUnitId + '"'
         }
@@ -68,9 +68,9 @@ android {
             if (releaseKeystore == null) {
                 throw new GradleException("Missing credentials.json. Production release signing is required.")
             }
-            signingConfig signingConfigs.release
+            signingConfig = signingConfigs.release
             minifyEnabled true
-            shrinkResources true
+            shrinkResources = true
             manifestPlaceholders = [admobAppId: productionAdMobAppId]
             buildConfigField "String", "BANNER_AD_UNIT_ID", '"' + productionBannerAdUnitId + '"'
             buildConfigField "String", "INTERSTITIAL_AD_UNIT_ID", '"' + productionInterstitialAdUnitId + '"'
@@ -79,14 +79,14 @@ android {
     }
 
     buildFeatures {
-        compose true
-        buildConfig true
+        compose = true
+        buildConfig = true
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-        coreLibraryDesugaringEnabled true
+        coreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {

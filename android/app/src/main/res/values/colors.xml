@@ -2,5 +2,4 @@
 <resources>
     <color name="splash_background">#000000</color>
     <color name="navigation_bar">#F8F6F2</color>
-    <color name="notification_icon_color">#132142</color>
 </resources>
