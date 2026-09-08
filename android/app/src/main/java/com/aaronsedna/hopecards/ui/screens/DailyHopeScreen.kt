@@ -8,6 +8,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -47,7 +48,10 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -56,6 +60,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.AppSettings
+import com.aaronsedna.hopecards.model.BibleDisplayDateFormatter
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.HopeCardsViewModel
 import com.aaronsedna.hopecards.ui.components.ActionPill
@@ -65,9 +70,9 @@ import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.ClassicHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
+import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
+import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -150,11 +155,11 @@ fun DailyHopeScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Column(Modifier.alpha(headerAlpha.value).padding(bottom = 24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("Today’s Hope", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 36.sp)
+            AdaptiveDailyHopeTitle(verse)
             Text(
-                LocalDate.now().format(DateTimeFormatter.ofPattern("EEEE • d MMMM", Locale.UK)),
+                BibleDisplayDateFormatter.format(LocalDate.now(), verse.edition),
                 color = colors.textSecondary,
-                fontFamily = Poppins,
+                fontFamily = interfaceFontFor(verse.edition),
                 fontSize = 16.sp,
                 letterSpacing = .4.sp,
                 modifier = Modifier.padding(top = 8.dp),
@@ -165,12 +170,12 @@ fun DailyHopeScreen(
                 .alpha(verseAlpha.value).offset { IntOffset(0, verseOffset.value.dp.roundToPx()) },
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(verse.reference, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(bottom = 14.dp))
+            Text(verse.displayReference, color = colors.text, fontFamily = interfaceFontFor(verse.edition), fontWeight = FontWeight.Bold, fontSize = 28.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(bottom = 14.dp))
             Box(Modifier.size(56.dp, 2.dp).background(colors.accent.copy(alpha = .75f), CircleShape))
             Text(
                 verse.text,
                 color = colors.cardText,
-                fontFamily = SourceSerif,
+                fontFamily = scriptureFontFor(verse.edition),
                 fontSize = dailyFontSize(verse.text.length),
                 lineHeight = dailyLineHeight(verse.text.length),
                 textAlign = TextAlign.Center,
@@ -180,7 +185,7 @@ fun DailyHopeScreen(
         Text(
             verse.translation,
             color = colors.textTertiary,
-            fontFamily = Poppins,
+            fontFamily = interfaceFontFor(verse.edition),
             fontSize = 14.sp,
             letterSpacing = .5.sp,
             textAlign = TextAlign.Center,
@@ -208,7 +213,7 @@ fun DailyHopeScreen(
             Text(
                 if (existingNote.isBlank()) "Add to journal" else "Edit journal entry",
                 color = colors.accent,
-                fontFamily = Poppins,
+                fontFamily = interfaceFontFor(verse.edition),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 15.sp,
             )
@@ -246,7 +251,7 @@ fun DailyHopeScreen(
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
                         )
-                        Text("For ${verse.reference}", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                        Text("For ${verse.displayReference}", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                     }
                     IconButton(onClick = { reflectionOpen = false }) {
                         AppIcon(AppIconGlyph.Close, "Close journal entry", colors.textSecondary, size = 22.dp)
@@ -344,19 +349,11 @@ fun DailySharePresentation(verse: Verse) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
+            AdaptiveDailyHopeTitle(verse)
             Text(
-                "Today’s Hope",
-                color = colors.text,
-                fontFamily = Poppins,
-                fontWeight = FontWeight.Bold,
-                fontSize = 36.sp,
-                lineHeight = 44.sp,
-                textAlign = TextAlign.Center,
-            )
-            Text(
-                LocalDate.now().format(DateTimeFormatter.ofPattern("EEEE • d MMMM", Locale.UK)),
+                BibleDisplayDateFormatter.format(LocalDate.now(), verse.edition),
                 color = colors.textSecondary,
-                fontFamily = Poppins,
+                fontFamily = interfaceFontFor(verse.edition),
                 fontSize = 16.sp,
                 lineHeight = 23.sp,
                 letterSpacing = .3.sp,
@@ -367,9 +364,9 @@ fun DailySharePresentation(verse: Verse) {
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
-                    verse.reference,
+                    verse.displayReference,
                     color = colors.text,
-                    fontFamily = Poppins,
+                    fontFamily = interfaceFontFor(verse.edition),
                     fontWeight = FontWeight.Bold,
                     fontSize = 28.sp,
                     lineHeight = 36.sp,
@@ -382,7 +379,7 @@ fun DailySharePresentation(verse: Verse) {
                 Text(
                     verse.text,
                     color = colors.cardText,
-                    fontFamily = SourceSerif,
+                    fontFamily = scriptureFontFor(verse.edition),
                     fontSize = dailyFontSize(verse.text.length),
                     lineHeight = dailyLineHeight(verse.text.length),
                     textAlign = TextAlign.Center,
@@ -392,7 +389,7 @@ fun DailySharePresentation(verse: Verse) {
         Text(
             verse.translation,
             color = colors.textTertiary,
-            fontFamily = Poppins,
+            fontFamily = interfaceFontFor(verse.edition),
             fontSize = 14.sp,
             lineHeight = 20.sp,
             letterSpacing = .4.sp,
@@ -416,6 +413,44 @@ private fun dailyFontSize(length: Int) = when {
     length <= 150 -> 22.sp
     length <= 220 -> 20.sp
     else -> 18.sp
+}
+
+@Composable
+private fun AdaptiveDailyHopeTitle(verse: Verse) {
+    val colors = ClassicHopeColors
+    val title = BibleDisplayDateFormatter.dailyHopeTitle(verse.edition)
+    val fontFamily = interfaceFontFor(verse.edition)
+    val textMeasurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+
+    BoxWithConstraints(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+        val availableWidthPx = with(density) { maxWidth.roundToPx() }
+        val fittedSize = remember(title, fontFamily, availableWidthPx) {
+            (36 downTo 18).firstOrNull { candidate ->
+                textMeasurer.measure(
+                    text = title,
+                    style = TextStyle(
+                        fontFamily = fontFamily,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = candidate.sp,
+                    ),
+                    maxLines = 1,
+                    softWrap = false,
+                ).size.width <= availableWidthPx
+            }?.sp ?: 18.sp
+        }
+
+        Text(
+            text = title,
+            color = colors.text,
+            fontFamily = fontFamily,
+            fontWeight = FontWeight.Bold,
+            fontSize = fittedSize,
+            textAlign = TextAlign.Center,
+            maxLines = 1,
+            softWrap = false,
+        )
+    }
 }
 
 private fun dailyLineHeight(length: Int) = when {

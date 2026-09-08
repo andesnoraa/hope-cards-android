@@ -47,6 +47,8 @@ import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
+import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
+import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
 
 @Composable
 fun FavoritesScreen(
@@ -129,7 +131,7 @@ fun FavoritesScreen(
                                 onOpen(verse)
                             }
                         },
-                        onLongClickLabel = "Select ${verse.reference}",
+                        onLongClickLabel = "Select ${verse.displayReference}",
                         onLongClick = {
                             selectionMode = true
                             selectedIds = selectedIds + verse.id
@@ -137,9 +139,9 @@ fun FavoritesScreen(
                     ).padding(top = 18.dp),
                 ) {
                     Text(verse.category.uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 2.5.sp, modifier = Modifier.padding(bottom = 10.dp))
-                    Text(verse.text, color = colors.cardText, fontFamily = SourceSerif, fontSize = 19.sp, lineHeight = 30.sp, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(bottom = 10.dp))
+                    Text(verse.text, color = colors.cardText, fontFamily = scriptureFontFor(verse.edition), fontSize = 19.sp, lineHeight = 30.sp, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(bottom = 10.dp))
                     Row(Modifier.fillMaxWidth().padding(bottom = 10.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Text(verse.reference, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.weight(1f))
+                        Text(verse.displayReference, color = colors.text, fontFamily = interfaceFontFor(verse.edition), fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.weight(1f))
                         if (selectionMode) {
                             Checkbox(
                                 checked = verse.id in selectedIds,
@@ -156,7 +158,7 @@ fun FavoritesScreen(
                             AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
                             Spacer(Modifier.width(14.dp))
                             IconButton(onClick = { pendingRemoval = verse }) {
-                                AppIcon(AppIconGlyph.TrashOutline, "Remove ${verse.reference} from favorites", colors.textTertiary, size = 19.dp)
+                                AppIcon(AppIconGlyph.TrashOutline, "Remove ${verse.displayReference} from favorites", colors.textTertiary, size = 19.dp)
                             }
                         }
                     }
@@ -187,7 +189,7 @@ fun FavoritesScreen(
     pendingRemoval?.let { verse ->
         FavoriteRemovalDialog(
             title = "Remove saved verse?",
-            message = "${verse.reference} will be removed from Favorites.",
+            message = "${verse.displayReference} will be removed from Favorites.",
             confirmLabel = "Remove",
             onDismiss = { pendingRemoval = null },
             onConfirm = {

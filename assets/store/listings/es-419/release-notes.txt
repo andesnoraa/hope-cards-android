@@ -1,0 +1,1 @@
+Los nombres de los libros bíblicos, los títulos y las fechas de “Esperanza para hoy” ahora aparecen de forma natural en español. También mejoramos la visualización en distintos tamaños de pantalla, los versículos guardados, el diario y la confiabilidad.

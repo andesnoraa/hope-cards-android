@@ -1,0 +1,1 @@
+Bible book names, Daily Hope titles, and dates now appear naturally in each supported language. This update also improves Malayalam typography, responsive layouts, saved verses, journal references, and overall reliability.

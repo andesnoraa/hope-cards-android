@@ -55,6 +55,8 @@ import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
+import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
+import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -146,7 +148,7 @@ fun JournalScreen(
                                         verse?.let { onOpenEntry(entry, it) }
                                     }
                                 },
-                                onLongClickLabel = "Select journal entry for ${entry.reference}",
+                                onLongClickLabel = "Select journal entry for ${verse?.displayReference ?: entry.reference}",
                                 onLongClick = {
                                     selectionMode = true
                                     selectedIds = selectedIds + entry.id
@@ -167,7 +169,7 @@ fun JournalScreen(
                         Text(
                             verse.text,
                             color = colors.cardText,
-                            fontFamily = SourceSerif,
+                            fontFamily = scriptureFontFor(verse.edition),
                             fontSize = 19.sp,
                             lineHeight = 29.sp,
                             maxLines = 2,
@@ -180,9 +182,9 @@ fun JournalScreen(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            verse?.reference ?: entry.reference,
+                            verse?.displayReference ?: entry.reference,
                             color = colors.text,
-                            fontFamily = Poppins,
+                            fontFamily = verse?.let { interfaceFontFor(it.edition) } ?: Poppins,
                             fontWeight = FontWeight.Bold,
                             fontSize = 17.sp,
                             modifier = Modifier.weight(1f),
@@ -212,7 +214,7 @@ fun JournalScreen(
                                 Spacer(Modifier.width(14.dp))
                             }
                             IconButton(onClick = { pendingRemoval = entry }) {
-                                AppIcon(AppIconGlyph.TrashOutline, "Delete journal entry for ${entry.reference}", colors.textTertiary, size = 19.dp)
+                                AppIcon(AppIconGlyph.TrashOutline, "Delete journal entry for ${verse?.displayReference ?: entry.reference}", colors.textTertiary, size = 19.dp)
                             }
                         }
                     }
@@ -296,6 +298,7 @@ fun JournalScreen(
 @Composable
 fun JournalEditorDialog(
     entry: JournalEntry,
+    displayReference: String,
     onDismiss: () -> Unit,
     onSave: (JournalEntry) -> Unit,
     onDeleteRequest: () -> Unit,
@@ -340,7 +343,7 @@ fun JournalEditorDialog(
                             lineHeight = 28.sp,
                         )
                         Text(
-                            entry.reference,
+                            displayReference,
                             color = colors.textTertiary,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Medium,

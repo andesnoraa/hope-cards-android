@@ -13,6 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.ThemeName
+import com.aaronsedna.hopecards.model.Translation
 
 val Poppins = FontFamily(
     Font(R.font.poppins_regular, FontWeight.Normal),
@@ -23,6 +24,17 @@ val SourceSerif = FontFamily(
     Font(R.font.source_serif_regular, FontWeight.Normal),
     Font(R.font.source_serif_semibold, FontWeight.SemiBold),
 )
+val NotoSansMalayalam = FontFamily(
+    Font(R.font.noto_sans_malayalam_regular, FontWeight.Normal),
+    Font(R.font.noto_sans_malayalam_semibold, FontWeight.SemiBold),
+    Font(R.font.noto_sans_malayalam_bold, FontWeight.Bold),
+)
+
+fun interfaceFontFor(translation: Translation): FontFamily =
+    if (translation == Translation.MAL1910) NotoSansMalayalam else Poppins
+
+fun scriptureFontFor(translation: Translation): FontFamily =
+    if (translation == Translation.MAL1910) NotoSansMalayalam else SourceSerif
 
 @Immutable
 data class HopeColors(

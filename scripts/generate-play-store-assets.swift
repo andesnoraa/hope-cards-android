@@ -39,7 +39,15 @@ private let screenshotSpecs = [
 
 private func registerBundledFonts() {
     let fontDirectory = root.appendingPathComponent("android/app/src/main/res/font", isDirectory: true)
-    ["poppins_regular.ttf", "poppins_semibold.ttf", "poppins_bold.ttf", "source_serif_regular.ttf"].forEach { name in
+    [
+        "poppins_regular.ttf",
+        "poppins_semibold.ttf",
+        "poppins_bold.ttf",
+        "source_serif_regular.ttf",
+        "noto_sans_malayalam_regular.ttf",
+        "noto_sans_malayalam_semibold.ttf",
+        "noto_sans_malayalam_bold.ttf",
+    ].forEach { name in
         CTFontManagerRegisterFontsForURL(fontDirectory.appendingPathComponent(name) as CFURL, .process, nil)
     }
 }
@@ -50,7 +58,7 @@ private func font(named name: String, size: CGFloat, fallbackWeight: NSFont.Weig
 
 private func displayFont(locale: String, size: CGFloat, bold: Bool) -> NSFont {
     if locale == "ml-IN" {
-        return font(named: bold ? "MalayalamSangamMN-Bold" : "MalayalamSangamMN", size: size, fallbackWeight: bold ? .bold : .regular)
+        return font(named: bold ? "NotoSansMalayalam-Bold" : "NotoSansMalayalam-Regular", size: size, fallbackWeight: bold ? .bold : .regular)
     }
     return font(named: bold ? "Poppins-Bold" : "Poppins-Regular", size: size, fallbackWeight: bold ? .bold : .regular)
 }
@@ -252,7 +260,10 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
         frameBorder.stroke()
 
         let inner = outer.insetBy(dx: 16, dy: 16)
-        guard let image = NSImage(contentsOf: sourceRoot.appendingPathComponent(spec.source)) else {
+        let localizedSource = sourceRoot.appendingPathComponent(locale, isDirectory: true).appendingPathComponent(spec.source)
+        let sharedSource = sourceRoot.appendingPathComponent(spec.source)
+        let source = fileManager.fileExists(atPath: localizedSource.path) ? localizedSource : sharedSource
+        guard let image = NSImage(contentsOf: source) else {
             throw NSError(domain: "HopeCardsStoreAssets", code: 3, userInfo: [NSLocalizedDescriptionKey: "Missing source screenshot: \(spec.source)"])
         }
 

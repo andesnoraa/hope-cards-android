@@ -51,6 +51,8 @@ import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.LocalHopeThemeName
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
+import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
+import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
 
 @Composable
 fun ActionPill(
@@ -149,7 +151,7 @@ fun VerseCardFace(
                     Text(
                         verse.text,
                         color = colors.cardText,
-                        fontFamily = SourceSerif,
+                        fontFamily = scriptureFontFor(verse.edition),
                         fontSize = verseFontSize(verse.text.length),
                         lineHeight = verseLineHeight(verse.text.length),
                         textAlign = TextAlign.Center,
@@ -163,9 +165,9 @@ fun VerseCardFace(
                     Spacer(Modifier.height(18.dp))
                 }
                 Text(
-                    verse.reference,
+                    verse.displayReference,
                     color = colors.cardText,
-                    fontFamily = Poppins,
+                    fontFamily = interfaceFontFor(verse.edition),
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
                     textAlign = TextAlign.Center,
@@ -273,7 +275,7 @@ private fun VintageVerseCardFace(
                     Text(
                         text = verse.text,
                         color = colors.cardText,
-                        fontFamily = SourceSerif,
+                        fontFamily = scriptureFontFor(verse.edition),
                         fontSize = vintageVerseFontSize(verse.text.length),
                         lineHeight = vintageVerseLineHeight(verse.text.length),
                         textAlign = TextAlign.Center,
@@ -295,9 +297,9 @@ private fun VintageVerseCardFace(
                 }
                 VintageDivider()
                 Text(
-                    text = verse.reference,
+                    text = verse.displayReference,
                     color = vintageBurgundy,
-                    fontFamily = SourceSerif,
+                    fontFamily = interfaceFontFor(verse.edition),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
                     textAlign = TextAlign.Center,
@@ -383,7 +385,7 @@ private fun EvergreenVerseCardFace(
                     Text(
                         text = verse.text,
                         color = evergreenGreen,
-                        fontFamily = SourceSerif,
+                        fontFamily = scriptureFontFor(verse.edition),
                         fontSize = vintageVerseFontSize(verse.text.length),
                         lineHeight = vintageVerseLineHeight(verse.text.length),
                         textAlign = TextAlign.Center,
@@ -405,9 +407,9 @@ private fun EvergreenVerseCardFace(
                 }
                 EvergreenDivider()
                 Text(
-                    text = verse.reference,
+                    text = verse.displayReference,
                     color = evergreenGreen,
-                    fontFamily = SourceSerif,
+                    fontFamily = interfaceFontFor(verse.edition),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
                     textAlign = TextAlign.Center,

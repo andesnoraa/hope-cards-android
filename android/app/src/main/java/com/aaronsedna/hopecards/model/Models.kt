@@ -7,7 +7,11 @@ data class Verse(
     val reference: String,
     val translation: String,
     val tags: List<String>,
-)
+    val edition: Translation,
+) {
+    val displayReference: String
+        get() = BibleReferenceFormatter.format(reference, edition)
+}
 
 enum class Translation(
     val id: String,

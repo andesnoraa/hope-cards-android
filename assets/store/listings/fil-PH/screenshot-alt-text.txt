@@ -1,6 +1,6 @@
 Hope Cards screen na may malaking Bible verse card deck at Draw a Card action.
 Verse card na may Romans 5:2, Save, Share at detalye ng salin ng Biblia.
-Daily Hope screen na nagpapakita ng talata ng araw sa payapang reading layout.
+Pag-asa Ngayong Araw na nagpapakita ng talata ng araw sa payapang reading layout.
 Favorites screen na may naka-save na Bible verses, references at actions.
 Journal screen na may personal notes na direktang nakaugnay sa Bible verses.
 Theme selector na nagpapakita ng eleganteng visual styles ng Hope Cards.

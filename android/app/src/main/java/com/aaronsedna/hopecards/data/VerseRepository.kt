@@ -37,6 +37,7 @@ class VerseRepository(private val context: Context) {
         return verses(translation).filter { verse ->
             verse.text.lowercase().contains(normalized) ||
                 verse.reference.lowercase().contains(normalized) ||
+                verse.displayReference.lowercase().contains(normalized) ||
                 verse.category.lowercase().contains(normalized) ||
                 verse.tags.any { it.lowercase().contains(normalized) }
         }
@@ -61,6 +62,7 @@ class VerseRepository(private val context: Context) {
                         tags = buildList(tagsJson.length()) {
                             repeat(tagsJson.length()) { add(tagsJson.getString(it)) }
                         },
+                        edition = translation,
                     ),
                 )
             }

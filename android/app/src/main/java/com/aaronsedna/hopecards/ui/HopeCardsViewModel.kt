@@ -106,7 +106,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         val state = _uiState.value
         return state.favorites.mapNotNull { id ->
             verseRepository.byId(id, state.settings.preferredTranslation)
-        }.sortedBy { it.reference }
+        }.sortedBy { it.displayReference }
     }
 
     fun journalVerse(verseId: String): Verse? =

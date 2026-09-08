@@ -467,6 +467,7 @@ fun HopeCardsApp(
         editingJournalEntry?.let { entry ->
             JournalEditorDialog(
                 entry = entry,
+                displayReference = viewModel.journalVerse(entry.verseId)?.displayReference ?: entry.reference,
                 onDismiss = { editingJournalEntry = null },
                 onSave = { updated ->
                     viewModel.saveJournalEntry(updated)
@@ -639,13 +640,13 @@ private fun CalmSnackbar(data: SnackbarData) {
 }
 
 private fun shareVerse(activity: Activity, verse: Verse) {
-    val text = "${verse.text}\n\n— ${verse.reference} • ${verse.translation}\n\n" +
+    val text = "${verse.text}\n\n— ${verse.displayReference} • ${verse.translation}\n\n" +
         "Shared from Hope Cards ❤️\n\nhttps://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
     activity.startActivity(
         Intent.createChooser(
             Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_SUBJECT, verse.reference)
+                putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
                 putExtra(Intent.EXTRA_TEXT, text)
             },
             "Share Hope Card",
@@ -697,8 +698,8 @@ private suspend fun shareDailyHopeImage(activity: Activity, verse: Verse) {
             Intent.createChooser(
                 Intent(Intent.ACTION_SEND).apply {
                     type = "image/png"
-                    putExtra(Intent.EXTRA_SUBJECT, verse.reference)
-                    putExtra(Intent.EXTRA_TEXT, "${verse.reference} • ${verse.translation}\n\nShared from Hope Cards ❤️")
+                    putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
+                    putExtra(Intent.EXTRA_TEXT, "${verse.displayReference} • ${verse.translation}\n\nShared from Hope Cards ❤️")
                     putExtra(Intent.EXTRA_STREAM, uri)
                     clipData = android.content.ClipData.newRawUri("Daily Hope", uri)
                     addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
