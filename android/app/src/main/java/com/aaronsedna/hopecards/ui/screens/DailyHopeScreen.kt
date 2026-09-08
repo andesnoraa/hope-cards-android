@@ -61,6 +61,7 @@ import com.aaronsedna.hopecards.ui.HopeCardsViewModel
 import com.aaronsedna.hopecards.ui.components.ActionPill
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
+import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.ClassicHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
@@ -78,6 +79,7 @@ fun DailyHopeScreen(
     onFavorite: () -> Unit,
     onShare: () -> Unit,
     onSaveReflection: (String) -> Unit,
+    onChangeTranslation: () -> Unit,
 ) {
     val colors = ClassicHopeColors
     val context = LocalContext.current
@@ -182,7 +184,9 @@ fun DailyHopeScreen(
             fontSize = 14.sp,
             letterSpacing = .5.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(top = 48.dp).alpha(translationAlpha.value),
+            modifier = Modifier.padding(top = 48.dp).alpha(translationAlpha.value)
+                .changeTranslationOnLongPress(settings.enableHaptics, onChangeTranslation)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
         )
         Row(
             horizontalArrangement = Arrangement.spacedBy(12.dp),

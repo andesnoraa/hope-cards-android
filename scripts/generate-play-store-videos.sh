@@ -2,11 +2,11 @@
 set -euo pipefail
 
 store_root="assets/store"
-background="$store_root/source/feature-background.png"
 video_root="$store_root/videos"
+promo_music="${HOPE_CARDS_PROMO_MUSIC:-$store_root/source/open-hands-glow.mp3}"
 
 command -v ffmpeg >/dev/null 2>&1 || { echo "ffmpeg is required" >&2; exit 1; }
-[ -f "$background" ] || { echo "Missing $background" >&2; exit 1; }
+[ -f "$promo_music" ] || { echo "Missing promo music: $promo_music" >&2; exit 1; }
 
 mkdir -p "$video_root"
 manifest="$video_root/upload-manifest.tsv"
@@ -29,8 +29,8 @@ for listing in "$store_root"/listings/*; do
     local second="$2"
     local output="$3"
     ffmpeg -hide_banner -loglevel error -y \
-      -i "$background" -i "$first" -i "$second" \
-      -filter_complex "[0:v]scale=1920:1080,drawbox=color=0x071a33@0.52:t=fill[bg];[1:v]scale=-2:1000[first];[2:v]scale=-2:1000[second];[bg][first]overlay=360:(H-h)/2[tmp];[tmp][second]overlay=W-w-360:(H-h)/2" \
+      -f lavfi -i "color=c=0xF1F4F8:s=1920x1080" -i "$first" -i "$second" \
+      -filter_complex "[0:v]format=rgba[bg];[1:v]scale=-2:1000[first];[2:v]scale=-2:1000[second];[bg][first]overlay=360:(H-h)/2[tmp];[tmp][second]overlay=W-w-360:(H-h)/2" \
       -frames:v 1 "$output"
   }
 
@@ -39,16 +39,16 @@ for listing in "$store_root"/listings/*; do
   pair_scene "$phone/05-journal-notes.png" "$phone/06-choose-a-theme.png" "$scene_dir/journal.png"
 
   ffmpeg -hide_banner -loglevel error -y \
-    -loop 1 -t 5 -i "$hero" \
-    -loop 1 -t 5 -i "$scene_dir/cards.png" \
-    -loop 1 -t 5 -i "$scene_dir/daily.png" \
-    -loop 1 -t 5 -i "$scene_dir/journal.png" \
-    -loop 1 -t 5 -i "$hero" \
-    -f lavfi -i "aevalsrc=0.060*sin(2*PI*220*t)+0.042*sin(2*PI*329.63*t)+0.024*sin(2*PI*440*t):s=48000:d=21.8" \
-    -filter_complex "[0:v]fps=30,format=yuv420p,setpts=PTS-STARTPTS[v0];[1:v]fps=30,format=yuv420p,setpts=PTS-STARTPTS[v1];[2:v]fps=30,format=yuv420p,setpts=PTS-STARTPTS[v2];[3:v]fps=30,format=yuv420p,setpts=PTS-STARTPTS[v3];[4:v]fps=30,format=yuv420p,setpts=PTS-STARTPTS[v4];[v0][v1]xfade=transition=fade:duration=0.8:offset=4.2[x1];[x1][v2]xfade=transition=fade:duration=0.8:offset=8.4[x2];[x2][v3]xfade=transition=fade:duration=0.8:offset=12.6[x3];[x3][v4]xfade=transition=fade:duration=0.8:offset=16.8[video];[5:a]lowpass=f=1100,aecho=0.8:0.88:70:0.22,afade=t=in:st=0:d=1.8,afade=t=out:st=19.3:d=2.5[audio]" \
-    -map "[video]" -map "[audio]" -t 21.8 \
+    -loop 1 -t 7 -i "$hero" \
+    -loop 1 -t 7 -i "$scene_dir/cards.png" \
+    -loop 1 -t 7 -i "$scene_dir/daily.png" \
+    -loop 1 -t 7 -i "$scene_dir/journal.png" \
+    -loop 1 -t 7 -i "$hero" \
+    -i "$promo_music" \
+    -filter_complex "[0:v]zoompan=z='min(zoom+0.000075,1.016)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=210:s=1920x1080:fps=30,trim=duration=7,setpts=PTS-STARTPTS[v0];[1:v]zoompan=z='min(zoom+0.000075,1.016)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=210:s=1920x1080:fps=30,trim=duration=7,setpts=PTS-STARTPTS[v1];[2:v]zoompan=z='min(zoom+0.000075,1.016)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=210:s=1920x1080:fps=30,trim=duration=7,setpts=PTS-STARTPTS[v2];[3:v]zoompan=z='min(zoom+0.000075,1.016)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=210:s=1920x1080:fps=30,trim=duration=7,setpts=PTS-STARTPTS[v3];[4:v]zoompan=z='min(zoom+0.000075,1.016)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=210:s=1920x1080:fps=30,trim=duration=7,setpts=PTS-STARTPTS[v4];[v0][v1]xfade=transition=fade:duration=0.75:offset=6.25[x1];[x1][v2]xfade=transition=fade:duration=0.75:offset=12.5[x2];[x2][v3]xfade=transition=fade:duration=0.75:offset=18.75[x3];[x3][v4]xfade=transition=fade:duration=0.75:offset=25,format=yuv420p[video];[5:a]atrim=0:32,asetpts=PTS-STARTPTS,volume=0.82,afade=t=in:st=0:d=1,afade=t=out:st=30:d=2[audio]" \
+    -map "[video]" -map "[audio]" -t 32 \
     -c:v libx264 -preset slow -crf 18 -profile:v high -level 4.1 -pix_fmt yuv420p \
-    -c:a aac -b:a 160k -movflags +faststart \
+    -c:a aac -b:a 256k -ar 48000 -movflags +faststart \
     "$destination/hope-cards-promo-$locale.mp4"
 
   title=$(tr -d '\n\r\t' < "$listing/video-title.txt")

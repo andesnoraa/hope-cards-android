@@ -65,6 +65,7 @@ fun HomeScreen(
     onFavorite: () -> Unit,
     onShare: () -> Unit,
     onCompletedCard: (Activity) -> Unit,
+    onChangeTranslation: () -> Unit,
 ) {
     val colors = LocalHopeColors.current
     val activity = LocalActivity.current ?: return
@@ -178,6 +179,8 @@ fun HomeScreen(
                             favorite = favorite,
                             onFavorite = onFavorite,
                             onShare = onShare,
+                            hapticsEnabled = settings.enableHaptics,
+                            onChangeTranslation = onChangeTranslation,
                             modifier = Modifier.fillMaxSize().graphicsLayer { rotationY = 180f },
                         )
                     }

@@ -59,4 +59,4 @@ The generator uses the bundled Poppins and Source Serif fonts and the source cap
 
 ## Preview videos
 
-The localized videos are 21.8-second, 1920 × 1080 MP4 files under `videos/<locale>/`. Upload each video to YouTube as **Unlisted**, turn monetization/ads off, keep age restriction disabled, and paste its YouTube URL into the matching Play Store language listing. The opening and closing frame is generated in the locale language; the center scenes use the localized screenshot artwork and real app captures.
+The localized videos are 32-second, 1920 × 1080 MP4 files under `videos/<locale>/`. Each scene remains visible long enough to read comfortably and uses the supplied “Open Hands Glow” music with gentle fades. Upload each video to YouTube as **Unlisted**, turn monetization/ads off, keep age restriction disabled, and paste its YouTube URL into the matching Play Store language listing. Google Play may autoplay up to 30 seconds muted, so the core experience appears within that window. The opening and closing frame is generated in the locale language; the center scenes use the localized screenshot artwork and real app captures.

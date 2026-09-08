@@ -5,4 +5,6 @@
     <string name="daily_hope_channel_description">Daily reminders to read today’s hope.</string>
     <string name="daily_hope_notification_title">Your Daily Hope awaits</string>
     <string name="daily_hope_notification_body">Take a quiet moment with today’s verse.</string>
+    <string name="update_ready">A new version is ready.</string>
+    <string name="restart_to_update">Restart</string>
 </resources>

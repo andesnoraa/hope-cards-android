@@ -42,6 +42,9 @@ import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarData
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -60,6 +63,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -76,6 +80,7 @@ import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.screens.AboutScreen
+import com.aaronsedna.hopecards.ui.screens.BibleTranslationDialog
 import com.aaronsedna.hopecards.ui.screens.DailyHopeScreen
 import com.aaronsedna.hopecards.ui.screens.DailySharePresentation
 import com.aaronsedna.hopecards.ui.screens.DeleteJournalDialog
@@ -129,6 +134,8 @@ private val bannerDestinations = setOf(
 @Composable
 fun HopeCardsApp(
     dailyHopeRequests: StateFlow<Int>,
+    updateReady: StateFlow<Boolean>,
+    onCompleteUpdate: () -> Unit,
     viewModel: HopeCardsViewModel = viewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
@@ -136,6 +143,9 @@ fun HopeCardsApp(
     val adsReady by viewModel.ads.ready.collectAsStateWithLifecycle()
     val privacyOptionsRequired by viewModel.ads.privacyOptionsRequired.collectAsStateWithLifecycle()
     val dailyRequest by dailyHopeRequests.collectAsStateWithLifecycle()
+    val isUpdateReady by updateReady.collectAsStateWithLifecycle()
+    val updateReadyMessage = stringResource(com.aaronsedna.hopecards.R.string.update_ready)
+    val restartToUpdateLabel = stringResource(com.aaronsedna.hopecards.R.string.restart_to_update)
     val context = LocalContext.current
     val activity = LocalActivity.current ?: return
     val lifecycle = LocalLifecycleOwner.current.lifecycle
@@ -148,6 +158,7 @@ fun HopeCardsApp(
     var journalEntryInDetail by remember { mutableStateOf<JournalEntry?>(null) }
     var editingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
     var deletingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
+    var translationPickerOpen by rememberSaveable { mutableStateOf(false) }
 
     val closeVerse = {
         journalEntryInDetail = null
@@ -183,6 +194,18 @@ fun HopeCardsApp(
     }
     LaunchedEffect(dailyRequest, state.initialized) {
         if (dailyRequest > 0 && state.initialized) viewModel.navigate(Destination.DAILY)
+    }
+    LaunchedEffect(isUpdateReady) {
+        if (isUpdateReady) {
+            snackbarHostState.currentSnackbarData?.dismiss()
+            val result = snackbarHostState.showSnackbar(
+                message = updateReadyMessage,
+                actionLabel = restartToUpdateLabel,
+                withDismissAction = false,
+                duration = SnackbarDuration.Indefinite,
+            )
+            if (result == SnackbarResult.ActionPerformed) onCompleteUpdate()
+        }
     }
 
     BackHandler(enabled = state.selectedVerse != null || state.destination != Destination.HOME) {
@@ -243,7 +266,7 @@ fun HopeCardsApp(
                 contentWindowInsets = WindowInsets.safeDrawing,
                 snackbarHost = {
                     SnackbarHost(snackbarHostState) { data ->
-                        CalmSnackbar(data.visuals.message)
+                        CalmSnackbar(data)
                     }
                 },
                 topBar = {
@@ -312,6 +335,8 @@ fun HopeCardsApp(
                                 onEditJournal = selectedJournalEntry?.let { entry ->
                                     { editingJournalEntry = entry }
                                 },
+                                hapticsEnabled = state.settings.enableHaptics,
+                                onChangeTranslation = { translationPickerOpen = true },
                             )
                         } else {
                             when (state.destination) {
@@ -326,6 +351,7 @@ fun HopeCardsApp(
                                         onCompletedCard = { completedActivity ->
                                             if (!BuildConfig.SCREENSHOT_MODE) viewModel.completedCard(completedActivity)
                                         },
+                                        onChangeTranslation = { translationPickerOpen = true },
                                     )
                                 }
                                 Destination.DAILY -> state.dailyVerse?.let { verse ->
@@ -360,6 +386,7 @@ fun HopeCardsApp(
                                                 )
                                             }
                                         },
+                                        onChangeTranslation = { translationPickerOpen = true },
                                     )
                                 }
                                 Destination.FAVORITES -> FavoritesScreen(
@@ -469,6 +496,16 @@ fun HopeCardsApp(
                 },
             )
         }
+        if (translationPickerOpen) {
+            BibleTranslationDialog(
+                selected = state.settings.preferredTranslation,
+                onDismiss = { translationPickerOpen = false },
+                onSelect = { translation ->
+                    viewModel.updateSettings { it.copy(preferredTranslation = translation) }
+                    translationPickerOpen = false
+                },
+            )
+        }
     }
 }
 
@@ -564,7 +601,7 @@ private fun NoticeDialog(message: String, onDismiss: () -> Unit) {
 }
 
 @Composable
-private fun CalmSnackbar(message: String) {
+private fun CalmSnackbar(data: SnackbarData) {
     val colors = LocalHopeColors.current
     Surface(
         modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp).fillMaxWidth(),
@@ -579,14 +616,24 @@ private fun CalmSnackbar(message: String) {
         ) {
             AppIcon(AppIconGlyph.CheckmarkCircleOutline, null, colors.accent, size = 22.dp)
             Text(
-                message,
+                data.visuals.message,
                 color = colors.buttonText,
                 fontFamily = Poppins,
                 fontWeight = FontWeight.Medium,
                 fontSize = 14.sp,
                 lineHeight = 20.sp,
-                modifier = Modifier.padding(start = 12.dp),
+                modifier = Modifier.padding(start = 12.dp).weight(1f),
             )
+            data.visuals.actionLabel?.let { actionLabel ->
+                TextButton(onClick = data::performAction) {
+                    Text(
+                        actionLabel,
+                        color = colors.accent,
+                        fontFamily = Poppins,
+                        fontWeight = FontWeight.Bold,
+                    )
+                }
+            }
         }
     }
 }

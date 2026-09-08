@@ -47,7 +47,7 @@ for locale in $expected_locales; do
     video_duration=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$video" | cut -d. -f1)
     [ "$video_width" -eq 1920 ] || { echo "$video has the wrong width" >&2; exit 1; }
     [ "$video_height" -eq 1080 ] || { echo "$video has the wrong height" >&2; exit 1; }
-    [ "$video_duration" -ge 20 ] && [ "$video_duration" -le 30 ] || { echo "$video duration must be between 20 and 30 seconds" >&2; exit 1; }
+    [ "$video_duration" -ge 20 ] && [ "$video_duration" -le 60 ] || { echo "$video duration must be between 20 and 60 seconds" >&2; exit 1; }
   fi
 done
 

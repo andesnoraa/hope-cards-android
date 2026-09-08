@@ -193,22 +193,14 @@ fun SettingsScreen(
         }
     }
     if (translationPicker) {
-        SelectorDialog(
-            title = "Bible Translation",
-            subtitle = "Choose the translation used throughout Hope Cards.",
+        BibleTranslationDialog(
+            selected = settings.preferredTranslation,
             onDismiss = { translationPicker = false },
-        ) {
-            Translation.entries.forEach { translation ->
-                PickerRow(
-                    "${translation.label} · ${translation.displayName}",
-                    translation.language,
-                    translation == settings.preferredTranslation,
-                ) {
-                    onUpdate { it.copy(preferredTranslation = translation) }
-                    translationPicker = false
-                }
-            }
-        }
+            onSelect = { translation ->
+                onUpdate { it.copy(preferredTranslation = translation) }
+                translationPicker = false
+            },
+        )
     }
     if (reminderPicker) {
         ReminderTimeDialog(
@@ -244,6 +236,27 @@ fun SettingsScreen(
                 enableReminderAfterSave = false
             },
         )
+    }
+}
+
+@Composable
+fun BibleTranslationDialog(
+    selected: Translation,
+    onDismiss: () -> Unit,
+    onSelect: (Translation) -> Unit,
+) {
+    SelectorDialog(
+        title = "Bible Translation",
+        subtitle = "Choose the translation used throughout Hope Cards.",
+        onDismiss = onDismiss,
+    ) {
+        Translation.entries.forEach { translation ->
+            PickerRow(
+                "${translation.label} · ${translation.displayName}",
+                translation.language,
+                translation == selected,
+            ) { onSelect(translation) }
+        }
     }
 }
 

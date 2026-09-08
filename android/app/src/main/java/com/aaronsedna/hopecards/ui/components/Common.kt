@@ -106,16 +106,18 @@ fun VerseCardFace(
     favorite: Boolean,
     onFavorite: () -> Unit,
     onShare: () -> Unit,
+    hapticsEnabled: Boolean,
+    onChangeTranslation: () -> Unit,
     modifier: Modifier = Modifier,
     showActions: Boolean = true,
 ) {
     when (LocalHopeThemeName.current) {
         ThemeName.VINTAGE_HERITAGE -> {
-            VintageVerseCardFace(verse, favorite, onFavorite, onShare, modifier, showActions)
+            VintageVerseCardFace(verse, favorite, onFavorite, onShare, hapticsEnabled, onChangeTranslation, modifier, showActions)
             return
         }
         ThemeName.SERENITY -> {
-            EvergreenVerseCardFace(verse, favorite, onFavorite, onShare, modifier, showActions)
+            EvergreenVerseCardFace(verse, favorite, onFavorite, onShare, hapticsEnabled, onChangeTranslation, modifier, showActions)
             return
         }
         else -> Unit
@@ -177,6 +179,8 @@ fun VerseCardFace(
                     letterSpacing = translationLetterSpacing(verse.translation.length),
                     textAlign = TextAlign.Center,
                     maxLines = 1,
+                    modifier = Modifier.changeTranslationOnLongPress(hapticsEnabled, onChangeTranslation)
+                        .padding(horizontal = 10.dp, vertical = 5.dp),
                 )
             }
         }
@@ -229,6 +233,8 @@ private fun VintageVerseCardFace(
     favorite: Boolean,
     onFavorite: () -> Unit,
     onShare: () -> Unit,
+    hapticsEnabled: Boolean,
+    onChangeTranslation: () -> Unit,
     modifier: Modifier,
     showActions: Boolean,
 ) {
@@ -305,7 +311,9 @@ private fun VintageVerseCardFace(
                     letterSpacing = .15.sp,
                     textAlign = TextAlign.Center,
                     maxLines = 1,
-                    modifier = Modifier.padding(top = 2.dp),
+                    modifier = Modifier.padding(top = 2.dp)
+                        .changeTranslationOnLongPress(hapticsEnabled, onChangeTranslation)
+                        .padding(horizontal = 10.dp, vertical = 4.dp),
                 )
             }
         }
@@ -335,6 +343,8 @@ private fun EvergreenVerseCardFace(
     favorite: Boolean,
     onFavorite: () -> Unit,
     onShare: () -> Unit,
+    hapticsEnabled: Boolean,
+    onChangeTranslation: () -> Unit,
     modifier: Modifier,
     showActions: Boolean,
 ) {
@@ -411,7 +421,9 @@ private fun EvergreenVerseCardFace(
                     letterSpacing = .15.sp,
                     textAlign = TextAlign.Center,
                     maxLines = 1,
-                    modifier = Modifier.padding(top = 2.dp),
+                    modifier = Modifier.padding(top = 2.dp)
+                        .changeTranslationOnLongPress(hapticsEnabled, onChangeTranslation)
+                        .padding(horizontal = 10.dp, vertical = 4.dp),
                 )
             }
         }

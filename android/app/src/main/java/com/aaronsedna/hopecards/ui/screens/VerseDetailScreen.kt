@@ -32,6 +32,7 @@ import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.ActionPill
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
+import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
@@ -43,6 +44,8 @@ fun VerseDetailScreen(
     onFavorite: () -> Unit,
     onShare: () -> Unit,
     onEditJournal: (() -> Unit)? = null,
+    hapticsEnabled: Boolean,
+    onChangeTranslation: () -> Unit,
 ) {
     val colors = LocalHopeColors.current
     val alpha = androidx.compose.runtime.remember(verse.id) { Animatable(0f) }
@@ -83,7 +86,16 @@ fun VerseDetailScreen(
             }
             Column(Modifier.padding(top = 34.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("TRANSLATION", color = colors.textTertiary, fontFamily = Poppins, fontSize = 13.sp, letterSpacing = 1.5.sp, modifier = Modifier.padding(bottom = 8.dp))
-                Text(verse.translation, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 18.sp, textAlign = TextAlign.Center)
+                Text(
+                    verse.translation,
+                    color = colors.text,
+                    fontFamily = Poppins,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 18.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.changeTranslationOnLongPress(hapticsEnabled, onChangeTranslation)
+                        .padding(horizontal = 12.dp, vertical = 8.dp),
+                )
             }
         }
     }

@@ -15,9 +15,10 @@ private let featureBackgroundURL = storeRoot.appendingPathComponent("source/feat
 private let navy = NSColor(calibratedRed: 22 / 255, green: 42 / 255, blue: 77 / 255, alpha: 1)
 private let ink = NSColor(calibratedRed: 28 / 255, green: 51 / 255, blue: 62 / 255, alpha: 1)
 private let gold = NSColor(calibratedRed: 202 / 255, green: 153 / 255, blue: 43 / 255, alpha: 1)
+private let deepGold = NSColor(calibratedRed: 152 / 255, green: 104 / 255, blue: 15 / 255, alpha: 1)
 private let softGold = NSColor(calibratedRed: 232 / 255, green: 207 / 255, blue: 147 / 255, alpha: 1)
 private let ivory = NSColor(calibratedRed: 250 / 255, green: 248 / 255, blue: 243 / 255, alpha: 1)
-private let warmIvory = NSColor(calibratedRed: 242 / 255, green: 234 / 255, blue: 219 / 255, alpha: 1)
+private let warmIvory = NSColor(calibratedRed: 236 / 255, green: 240 / 255, blue: 246 / 255, alpha: 1)
 private let mist = NSColor(calibratedRed: 230 / 255, green: 239 / 255, blue: 237 / 255, alpha: 1)
 
 private struct ScreenshotSpec {
@@ -388,9 +389,9 @@ private func generateVideoHero(locale: String, lines: [String], destination: URL
     let subtitle = lines.first ?? ""
     let featureLine = lines.dropFirst().first ?? ""
     let bitmap = try makeBitmap(width: width, height: height) { canvasHeight in
-        try drawFeatureBackground(width: CGFloat(width), height: canvasHeight)
+        drawBackground(width: CGFloat(width), height: canvasHeight)
 
-        gold.setFill()
+        deepGold.setFill()
         NSBezierPath(roundedRect: topRect(x: 130, y: 150, width: 118, height: 12, canvasHeight: canvasHeight), xRadius: 6, yRadius: 6).fill()
 
         drawText(
@@ -398,7 +399,7 @@ private func generateVideoHero(locale: String, lines: [String], destination: URL
             locale: locale,
             in: topRect(x: 130, y: 235, width: 890, height: 160, canvasHeight: canvasHeight),
             font: font(named: "Poppins-Bold", size: 116, fallbackWeight: .bold),
-            color: ivory
+            color: navy
         )
 
         let subtitleRect = topRect(x: 135, y: 440, width: 875, height: 220, canvasHeight: canvasHeight)
@@ -413,7 +414,7 @@ private func generateVideoHero(locale: String, lines: [String], destination: URL
             alignment: .left,
             lineSpacing: 10
         )
-        drawText(subtitle, locale: locale, in: subtitleRect, font: subtitleFont, color: NSColor.white.withAlphaComponent(0.76), lineSpacing: 10)
+        drawText(subtitle, locale: locale, in: subtitleRect, font: subtitleFont, color: ink.withAlphaComponent(0.84), lineSpacing: 10)
 
         let featureRect = topRect(x: 135, y: 790, width: 875, height: 90, canvasHeight: canvasHeight)
         let featureFont = fittedFont(
@@ -426,7 +427,7 @@ private func generateVideoHero(locale: String, lines: [String], destination: URL
             height: featureRect.height,
             alignment: .left
         )
-        drawText(featureLine, locale: locale, in: featureRect, font: featureFont, color: gold)
+        drawText(featureLine, locale: locale, in: featureRect, font: featureFont, color: deepGold)
 
         let cards: [(NSRect, NSColor, CGFloat)] = [
             (topRect(x: 1_130, y: 120, width: 540, height: 790, canvasHeight: canvasHeight), NSColor.white, 0.12),
