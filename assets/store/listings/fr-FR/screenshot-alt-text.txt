@@ -1,6 +1,6 @@
 Hope Cards affiche un grand jeu de cartes et l’action pour tirer un verset biblique.
 Carte de Romains 5:2 avec les actions enregistrer et partager et la traduction biblique.
-Une parole pour aujourd’hui affiche le verset biblique quotidien dans une lecture apaisante.
+Parole de Dieu affiche le verset biblique quotidien dans une lecture apaisante.
 Favoris affiche les versets bibliques enregistrés avec leurs références et actions.
 Journal affiche des notes personnelles directement liées aux versets bibliques.
 Sélecteur de thèmes présentant les styles visuels élégants de Hope Cards.
