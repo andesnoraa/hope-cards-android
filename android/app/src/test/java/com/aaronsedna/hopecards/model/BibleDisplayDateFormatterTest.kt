@@ -8,10 +8,10 @@ class BibleDisplayDateFormatterTest {
     @Test
     fun `daily hope title follows selected Bible language`() {
         val expected = mapOf(
-            Translation.BSB to "God’s Word",
-            Translation.BBE to "God’s Word",
-            Translation.KJV to "God’s Word",
-            Translation.WEB to "God’s Word",
+            Translation.BSB to "Today’s Hope",
+            Translation.BBE to "Today’s Hope",
+            Translation.KJV to "Today’s Hope",
+            Translation.WEB to "Today’s Hope",
             Translation.LUT1912 to "Gottes Wort",
             Translation.LSG1910 to "Parole de Dieu",
             Translation.RIV1927 to "Parola di Dio",

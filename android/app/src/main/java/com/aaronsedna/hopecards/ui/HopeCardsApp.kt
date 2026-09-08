@@ -108,6 +108,10 @@ private data class DrawerEntry(
     val destination: Destination,
 )
 
+private const val SHARE_ATTRIBUTION = "Shared from Hope Cards ❤️"
+private const val PLAY_STORE_URL =
+    "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
+
 private val primaryEntries = listOf(
     DrawerEntry(Destination.HOME),
     DrawerEntry(Destination.DAILY),
@@ -639,15 +643,20 @@ private fun CalmSnackbar(data: SnackbarData) {
     }
 }
 
+internal fun verseShareText(verse: Verse): String =
+    "${verse.text}\n\n— ${verse.displayReference} • ${verse.translation}\n\n" +
+        "$SHARE_ATTRIBUTION\n" +
+        PLAY_STORE_URL
+
+internal fun dailyHopeImageShareText(): String = "$SHARE_ATTRIBUTION\n$PLAY_STORE_URL"
+
 private fun shareVerse(activity: Activity, verse: Verse) {
-    val text = "${verse.text}\n\n— ${verse.displayReference} • ${verse.translation}\n\n" +
-        "Shared from Hope Cards ❤️\n\nhttps://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
     activity.startActivity(
         Intent.createChooser(
             Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
-                putExtra(Intent.EXTRA_TEXT, text)
+                putExtra(Intent.EXTRA_TEXT, verseShareText(verse))
             },
             "Share Hope Card",
         ),
@@ -699,7 +708,10 @@ private suspend fun shareDailyHopeImage(activity: Activity, verse: Verse) {
                 Intent(Intent.ACTION_SEND).apply {
                     type = "image/png"
                     putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
-                    putExtra(Intent.EXTRA_TEXT, "${verse.displayReference} • ${verse.translation}\n\nShared from Hope Cards ❤️")
+                    putExtra(
+                        Intent.EXTRA_TEXT,
+                        dailyHopeImageShareText(),
+                    )
                     putExtra(Intent.EXTRA_STREAM, uri)
                     clipData = android.content.ClipData.newRawUri("Daily Hope", uri)
                     addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)

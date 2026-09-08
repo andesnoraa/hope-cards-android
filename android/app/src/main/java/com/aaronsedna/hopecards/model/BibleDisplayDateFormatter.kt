@@ -13,7 +13,7 @@ object BibleDisplayDateFormatter {
         Translation.RV1909 -> "Palabra de Dios"
         Translation.ADB1905 -> "Salita ng Diyos"
         Translation.MAL1910 -> "ദൈവവചനം"
-        else -> "God’s Word"
+        else -> "Today’s Hope"
     }
 
     fun format(date: LocalDate, translation: Translation): String {
