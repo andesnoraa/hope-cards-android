@@ -1,6 +1,6 @@
 Découvrez chaque jour un verset biblique pour avancer avec espérance, réflexion et encouragement, une belle carte à la fois.
 
-Hope Cards est une application de versets bibliques conçue pour créer une habitude simple avec la Parole. Tirez une carte, découvrez Parole de Dieu, enregistrez vos passages favoris et ajoutez des notes de journal liées à l’Écriture. Aucun programme de lecture compliqué et aucun compte ne sont nécessaires.
+Hope Cards est une application de versets bibliques conçue pour vous aider à créer une habitude simple autour de la Parole. Tirez une carte, lisez le verset du jour, enregistrez vos passages favoris et ajoutez des notes de journal liées à l’Écriture. Aucun programme de lecture compliqué et aucun compte ne sont nécessaires.
 
 CARTES DE VERSETS BIBLIQUES
 
@@ -23,7 +23,7 @@ AUTRES FONCTIONNALITÉS
 • Partager des versets avec vos proches
 • Choisir parmi des thèmes de cartes élégants
 • Sauvegarder et restaurer favoris, journal et réglages
-• Écouter une musique paisible facultative dans Parole de Dieu
+• Écouter, si vous le souhaitez, une musique paisible pendant la lecture
 • Lire confortablement sur téléphone et tablette
 
 TOUTES LES FONCTIONNALITÉS SONT ACCESSIBLES
