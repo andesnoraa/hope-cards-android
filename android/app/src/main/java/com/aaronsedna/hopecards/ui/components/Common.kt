@@ -62,6 +62,8 @@ fun ActionPill(
     favorite: Boolean? = null,
     accentColor: Color? = null,
     savedColor: Color? = null,
+    glyph: AppIconGlyph? = null,
+    width: Dp = 120.dp,
 ) {
     val colors = LocalHopeColors.current
     val tint = if (favorite == true) savedColor ?: colors.danger else accentColor ?: colors.accent
@@ -74,7 +76,7 @@ fun ActionPill(
     )
     Box(
         modifier = modifier
-            .size(width = 120.dp, height = 48.dp)
+            .size(width = width, height = 48.dp)
             .alpha(actionAlpha)
             .clickable(
                 interactionSource = interactionSource,
@@ -88,7 +90,7 @@ fun ActionPill(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             AppIcon(
-                glyph = when (favorite) {
+                glyph = glyph ?: when (favorite) {
                     true -> AppIconGlyph.Heart
                     false -> AppIconGlyph.HeartOutline
                     null -> AppIconGlyph.ShareOutline

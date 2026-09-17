@@ -2,6 +2,7 @@ package com.aaronsedna.hopecards.ui
 
 import android.graphics.Bitmap
 import androidx.compose.ui.test.junit4.v2.createEmptyComposeRule
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.lifecycle.ViewModelProvider
@@ -34,6 +35,7 @@ class StoreScreenshotCapture {
         val originalJournal = runBlocking { repository.currentJournalEntries() }
         val originalDaily = runBlocking { repository.getDailyHopeRecord() }
         val device = args.getString("captureDevice") ?: "phone"
+        val dailyVerseId = args.getString("captureDailyVerseId") ?: "matthew-11-28"
         val locales = listOf(
             "en-US" to Translation.BSB, "es-419" to Translation.RV1909,
             "fr-FR" to Translation.LSG1910, "de-DE" to Translation.LUT1912,
@@ -60,7 +62,7 @@ class StoreScreenshotCapture {
                         "$today:matthew-11-28", today, "matthew-11-28", "Matthew 11:28",
                         HopeCardsViewModel.prompts.getValue("comfort"), notes.getValue(locale), "${today}T08:00:00Z",
                     )))
-                    repository.setDailyHopeRecord(DailyHopeRecord(today, "matthew-11-28", translation.id))
+                    repository.setDailyHopeRecord(DailyHopeRecord(today, dailyVerseId, translation.id))
                 }
                 ActivityScenario.launch(MainActivity::class.java).use { scenario ->
                     lateinit var vm: HopeCardsViewModel
@@ -90,6 +92,8 @@ class StoreScreenshotCapture {
                     capture("02-card-front.png")
                     if (device == "phone") {
                         compose.runOnIdle { vm.navigate(Destination.DAILY) }
+                        compose.onNodeWithText("Share").assertIsDisplayed()
+                        compose.onNodeWithText("Journal").assertIsDisplayed()
                         capture("03-daily-hope.png")
                         compose.runOnIdle { vm.navigate(Destination.FAVORITES) }
                         capture("04-favorites.png")
