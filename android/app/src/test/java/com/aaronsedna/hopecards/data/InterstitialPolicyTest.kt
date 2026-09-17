@@ -1,12 +1,18 @@
 package com.aaronsedna.hopecards.data
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class InterstitialPolicyTest {
     @Test
-    fun fewerThanTenCompletedCardsDoesNotShowAnAd() {
+    fun interstitialIsEligibleEveryTenCompletedCards() {
+        assertEquals(10, InterstitialPolicy.COMPLETED_CARDS_BETWEEN_ADS)
+    }
+
+    @Test
+    fun fewerThanRequiredCompletedCardsDoesNotShowAnAd() {
         assertFalse(
             InterstitialPolicy.shouldShow(
                 completedCards = InterstitialPolicy.COMPLETED_CARDS_BETWEEN_ADS - 1,
@@ -16,7 +22,7 @@ class InterstitialPolicyTest {
     }
 
     @Test
-    fun tenCardsBeforeMinimumIntervalDoesNotShowAnAd() {
+    fun enoughCardsBeforeMinimumIntervalDoesNotShowAnAd() {
         assertFalse(
             InterstitialPolicy.shouldShow(
                 completedCards = InterstitialPolicy.COMPLETED_CARDS_BETWEEN_ADS,
@@ -26,7 +32,7 @@ class InterstitialPolicyTest {
     }
 
     @Test
-    fun tenCardsAfterMinimumIntervalShowsAnAd() {
+    fun enoughCardsAfterMinimumIntervalShowsAnAd() {
         assertTrue(
             InterstitialPolicy.shouldShow(
                 completedCards = InterstitialPolicy.COMPLETED_CARDS_BETWEEN_ADS,

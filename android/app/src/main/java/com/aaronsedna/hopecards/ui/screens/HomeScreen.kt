@@ -3,8 +3,10 @@ package com.aaronsedna.hopecards.ui.screens
 import android.app.Activity
 import androidx.activity.compose.LocalActivity
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -47,7 +49,7 @@ import com.aaronsedna.hopecards.ui.components.VerseCardFace
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.LocalHopeThemeName
 import com.aaronsedna.hopecards.ui.theme.Poppins
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import kotlin.math.min
 
@@ -72,6 +74,7 @@ fun HomeScreen(
     val haptics = LocalHapticFeedback.current
     val scope = rememberCoroutineScope()
     var revealed by remember { mutableStateOf(false) }
+    var animating by remember { mutableStateOf(false) }
     val rotation = remember { Animatable(0f) }
     val cardTranslationY = remember { Animatable(0f) }
     val cardScale = remember { Animatable(1f) }
@@ -83,26 +86,41 @@ fun HomeScreen(
         spring(dampingRatio = .7f, stiffness = 260f),
         label = "drawButtonScale",
     )
-    val cardSpring = spring<Float>(dampingRatio = .86f, stiffness = 170f)
+    // Keep the transition bounded so a deliberate follow-up tap is never swallowed while a
+    // spring is still settling on a real device.
+    val cardTransition = tween<Float>(
+        durationMillis = 280,
+        easing = FastOutSlowInEasing,
+    )
 
     fun flip() {
+        if (animating) return
         if (settings.enableHaptics) {
             haptics.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
         }
         scope.launch {
-            if (revealed) {
-                revealed = false
-                launch { rotation.animateTo(0f, cardSpring) }
-                launch { cardTranslationY.animateTo(0f, cardSpring) }
-                launch { cardScale.animateTo(1f, cardSpring) }
-                onCompletedCard(activity)
-            } else {
-                onNextVerse()
-                revealed = true
-                launch { cardTranslationY.animateTo(-20f, cardSpring) }
-                launch { cardScale.animateTo(1.02f, cardSpring) }
-                delay(120)
-                rotation.animateTo(180f, cardSpring)
+            animating = true
+            try {
+                if (revealed) {
+                    revealed = false
+                    coroutineScope {
+                        launch { rotation.animateTo(0f, cardTransition) }
+                        launch { cardTranslationY.animateTo(0f, cardTransition) }
+                        launch { cardScale.animateTo(1f, cardTransition) }
+                    }
+                    // Returning a completed card to the deck is the app's natural content break.
+                    onCompletedCard(activity)
+                } else {
+                    onNextVerse()
+                    revealed = true
+                    coroutineScope {
+                        launch { cardTranslationY.animateTo(-20f, cardTransition) }
+                        launch { cardScale.animateTo(1.02f, cardTransition) }
+                        launch { rotation.animateTo(180f, cardTransition) }
+                    }
+                }
+            } finally {
+                animating = false
             }
         }
     }
@@ -120,15 +138,8 @@ fun HomeScreen(
         val stackWidth = (STACK_WIDTH * scale).dp
         val stackHeight = (STACK_HEIGHT * scale).dp
 
-        Column(
-            Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = androidx.compose.foundation.layout.Arrangement.Center,
-        ) {
-            Box(Modifier.height(24.dp), contentAlignment = Alignment.Center) {
-                // Matches the released app while the deck itself keeps a descriptive click label.
-            }
-            Spacer(Modifier.height(20.dp))
+        @Composable
+        fun Deck() {
             Box(
                 modifier = Modifier
                     .size(stackWidth, stackHeight)
@@ -186,31 +197,49 @@ fun HomeScreen(
                     }
                 }
             }
+        }
+
+        @Composable
+        fun DrawButton() {
+            Surface(
+                onClick = ::flip,
+                interactionSource = interactionSource,
+                modifier = Modifier.width(stackWidth).height(56.dp).graphicsLayer {
+                    scaleX = buttonScale
+                    scaleY = buttonScale
+                },
+                color = colors.buttonBackground,
+                contentColor = colors.buttonText,
+                shape = RoundedCornerShape(20.dp),
+                border = BorderStroke(2.dp, colors.buttonBorder),
+                shadowElevation = 5.dp,
+            ) {
+                Box(contentAlignment = Alignment.Center) {
+                    Text(
+                        if (revealed) "Return to Deck" else "Draw a Card",
+                        fontFamily = Poppins,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 18.sp,
+                        letterSpacing = .5.sp,
+                        maxLines = 1,
+                    )
+                }
+            }
+        }
+
+        Column(
+            Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = androidx.compose.foundation.layout.Arrangement.Center,
+        ) {
+            Box(Modifier.height(24.dp), contentAlignment = Alignment.Center) {
+                // Matches the released app while the deck itself keeps a descriptive click label.
+            }
+            Spacer(Modifier.height(20.dp))
+            Deck()
             if (settings.showDrawButton) {
                 Spacer(Modifier.height(20.dp))
-                Surface(
-                    onClick = ::flip,
-                    interactionSource = interactionSource,
-                    modifier = Modifier.width(stackWidth).height(56.dp).graphicsLayer {
-                        scaleX = buttonScale
-                        scaleY = buttonScale
-                    },
-                    color = colors.buttonBackground,
-                    contentColor = colors.buttonText,
-                    shape = RoundedCornerShape(20.dp),
-                    border = BorderStroke(2.dp, colors.buttonBorder),
-                    shadowElevation = 5.dp,
-                ) {
-                    Box(contentAlignment = Alignment.Center) {
-                        Text(
-                            if (revealed) "Return to Deck" else "Draw a Card",
-                            fontFamily = Poppins,
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 18.sp,
-                            letterSpacing = .5.sp,
-                        )
-                    }
-                }
+                DrawButton()
             }
         }
     }

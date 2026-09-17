@@ -2,11 +2,14 @@ package com.aaronsedna.hopecards.ads
 
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -22,14 +25,25 @@ fun BannerAd(modifier: Modifier = Modifier) {
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     BoxWithConstraints(modifier.fillMaxWidth()) {
         val width = maxWidth.value.toInt().coerceAtLeast(1)
-        val adView = remember(width) {
+        val adSize = remember(context, width) {
+            // SDK 25 replaces the deprecated standard sizing methods with a single adaptive size
+            // that follows the current orientation and supports modern banner inventory.
+            AdSize.getLargeAnchoredAdaptiveBannerAdSize(context, width)
+        }
+        val adView = remember(context, adSize) {
             AdView(context).apply {
                 adUnitId = BuildConfig.BANNER_AD_UNIT_ID
-                setAdSize(AdSize.getLargePortraitAnchoredAdaptiveBannerAdSize(context, width))
+                setAdSize(adSize)
                 loadAd(AdRequest.Builder().build())
             }
         }
-        AndroidView(factory = { adView }, modifier = Modifier.fillMaxWidth())
+        // AndroidView otherwise retains the old (disposed) view after a window resize.
+        key(adView) {
+            AndroidView(
+                factory = { adView },
+                modifier = Modifier.fillMaxWidth().height(adSize.height.dp),
+            )
+        }
         DisposableEffect(lifecycle, adView) {
             val observer = LifecycleEventObserver { _, event ->
                 when (event) {

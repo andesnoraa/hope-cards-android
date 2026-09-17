@@ -57,6 +57,30 @@ scripts/validate-play-store-assets.sh
 
 The generator uses the bundled Poppins and Source Serif fonts and the source captures under `assets/store/source/`. Update those captures whenever the UI changes, then regenerate every locale so the visual system remains consistent.
 
+### Fresh native screenshots
+
+`StoreScreenshotCapture` is an opt-in instrumentation capture utility. Build the debug app and instrumentation APK with `-PscreenshotMode=true`, install both on an emulator, then run:
+
+```sh
+adb -s EMULATOR_SERIAL shell am instrument -w -r \
+  -e class com.aaronsedna.hopecards.ui.StoreScreenshotCapture \
+  -e captureStore true -e captureDevice phone \
+  com.aaronsedna.hopecards.debug.test/androidx.test.runner.AndroidJUnitRunner
+```
+
+Use `captureDevice tablet` on a tablet emulator for the two tablet screens. Optional `captureLocale en-US` limits a run to one language. Captures use real translated verses and sample journal content, wait for entrance animations, and restore the prior settings, favorites, and journal afterward. Output is under the debug app's external files directory, `store-captures/phone/<locale>/` or `store-captures/tablet/<locale>/`. The utility is skipped unless both screenshot mode and the explicit capture argument are enabled.
+
+For uncropped captures at 1080 × 1920 (phone) and 1600 × 2560 (tablet), export fresh, opaque sRGB screenshots to a separate directory:
+
+```sh
+swift scripts/generate-play-store-assets.swift \
+  --source-root /path/to/store-captures \
+  --output-root /path/to/export \
+  --full-screens --screenshots-only
+```
+
+This writes only screenshot artwork, using localized phone and tablet sources where available.
+
 ## Preview videos
 
 The localized videos are 32-second, 1920 × 1080 MP4 files under `videos/<locale>/`. Each scene remains visible long enough to read comfortably and uses the supplied “Open Hands Glow” music with gentle fades. Upload each video to YouTube as **Unlisted**, turn monetization/ads off, keep age restriction disabled, and paste its YouTube URL into the matching Play Store language listing. Google Play may autoplay up to 30 seconds muted, so the core experience appears within that window. The opening and closing frame is generated in the locale language; the center scenes use the localized screenshot artwork and real app captures.

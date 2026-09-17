@@ -3,13 +3,22 @@
 import AppKit
 import CoreText
 import Foundation
+import ImageIO
 
 private let fileManager = FileManager.default
 private let root = URL(fileURLWithPath: fileManager.currentDirectoryPath, isDirectory: true)
 private let storeRoot = root.appendingPathComponent("assets/store", isDirectory: true)
 private let listingRoot = storeRoot.appendingPathComponent("listings", isDirectory: true)
-private let sourceRoot = storeRoot.appendingPathComponent("source/phone", isDirectory: true)
-private let tabletSourceRoot = storeRoot.appendingPathComponent("source/tablet", isDirectory: true)
+private func argument(_ name: String) -> String? {
+    guard let index = CommandLine.arguments.firstIndex(of: name), index + 1 < CommandLine.arguments.count else { return nil }
+    return CommandLine.arguments[index + 1]
+}
+private let outputRoot = argument("--output-root").map { URL(fileURLWithPath: $0, isDirectory: true) } ?? storeRoot
+private let captureRoot = argument("--source-root").map { URL(fileURLWithPath: $0, isDirectory: true) } ?? storeRoot.appendingPathComponent("source")
+private let fullScreens = CommandLine.arguments.contains("--full-screens")
+private let screenshotsOnly = CommandLine.arguments.contains("--screenshots-only")
+private let sourceRoot = captureRoot.appendingPathComponent("phone", isDirectory: true)
+private let tabletSourceRoot = captureRoot.appendingPathComponent("tablet", isDirectory: true)
 private let featureBackgroundURL = storeRoot.appendingPathComponent("source/feature-background.png")
 
 private let navy = NSColor(calibratedRed: 22 / 255, green: 42 / 255, blue: 77 / 255, alpha: 1)
@@ -155,6 +164,20 @@ private func makeBitmap(width: Int, height: Int, draw: (_ canvasHeight: CGFloat)
 
 private func writePNG(_ bitmap: NSBitmapImageRep, to destination: URL) throws {
     try fileManager.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true)
+    if screenshotsOnly {
+        // Flatten to an opaque sRGB PNG for direct store upload.
+        guard let source = bitmap.cgImage,
+              let context = CGContext(data: nil, width: source.width, height: source.height, bitsPerComponent: 8,
+                  bytesPerRow: source.width * 4, space: CGColorSpace(name: CGColorSpace.sRGB)!,
+                  bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue),
+              let encoder = CGImageDestinationCreateWithURL(destination as CFURL, "public.png" as CFString, 1, nil) else {
+            throw NSError(domain: "HopeCardsStoreAssets", code: 7, userInfo: [NSLocalizedDescriptionKey: "Unable to create opaque PNG"])
+        }
+        context.draw(source, in: CGRect(x: 0, y: 0, width: source.width, height: source.height))
+        CGImageDestinationAddImage(encoder, context.makeImage()!, nil)
+        guard CGImageDestinationFinalize(encoder) else { throw NSError(domain: "HopeCardsStoreAssets", code: 8) }
+        return
+    }
     guard let data = bitmap.representation(using: .png, properties: [.compressionFactor: 0.92]) else {
         throw NSError(domain: "HopeCardsStoreAssets", code: 2, userInfo: [NSLocalizedDescriptionKey: "Unable to encode PNG"])
     }
@@ -242,7 +265,8 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
         )
         drawText(caption, locale: locale, in: captionRect, font: captionFont, color: navy, lineSpacing: 3)
 
-        let outer = topRect(x: 54, y: 330, width: 972, height: 1_550, canvasHeight: canvasHeight)
+        let frameWidth: CGFloat = fullScreens ? 886 : 972
+        let outer = topRect(x: (1080 - frameWidth) / 2, y: 330, width: frameWidth, height: 1_550, canvasHeight: canvasHeight)
         let shadow = NSShadow()
         shadow.shadowColor = NSColor.black.withAlphaComponent(0.18)
         shadow.shadowBlurRadius = 28
@@ -278,7 +302,7 @@ private func generateScreenshot(locale: String, caption: String, index: Int, spe
         }
         let sourceX = (sourceWidth - cropWidth) / 2
         let sourceY = sourceHeight - spec.cropTop - cropHeight
-        let sourceRect = NSRect(x: sourceX, y: max(0, sourceY), width: cropWidth, height: cropHeight)
+        let sourceRect = fullScreens ? NSRect(origin: .zero, size: image.size) : NSRect(x: sourceX, y: max(0, sourceY), width: cropWidth, height: cropHeight)
 
         NSGraphicsContext.saveGraphicsState()
         NSBezierPath(roundedRect: inner, xRadius: 34, yRadius: 34).addClip()
@@ -593,7 +617,8 @@ private func generateTabletScreenshot(locale: String, caption: String, index: In
         )
         drawText(caption, locale: locale, in: captionRect, font: captionFont, color: navy, lineSpacing: 4)
 
-        let outer = topRect(x: 80, y: 410, width: 1_440, height: 2_075, canvasHeight: canvasHeight)
+        let frameWidth: CGFloat = fullScreens ? 1310 : 1440
+        let outer = topRect(x: (1600 - frameWidth) / 2, y: 410, width: frameWidth, height: 2_075, canvasHeight: canvasHeight)
         NSGraphicsContext.saveGraphicsState()
         let shadow = NSShadow()
         shadow.shadowColor = NSColor.black.withAlphaComponent(0.18)
@@ -605,7 +630,9 @@ private func generateTabletScreenshot(locale: String, caption: String, index: In
         NSGraphicsContext.restoreGraphicsState()
 
         let inner = outer.insetBy(dx: 18, dy: 18)
-        guard let image = NSImage(contentsOf: tabletSourceRoot.appendingPathComponent(source)) else {
+        let localizedSource = tabletSourceRoot.appendingPathComponent(locale).appendingPathComponent(source)
+        let sourceURL = fileManager.fileExists(atPath: localizedSource.path) ? localizedSource : tabletSourceRoot.appendingPathComponent(source)
+        guard let image = NSImage(contentsOf: sourceURL) else {
             throw NSError(domain: "HopeCardsStoreAssets", code: 5, userInfo: [NSLocalizedDescriptionKey: "Missing tablet screenshot: \(source)"])
         }
         let desiredAspect = inner.width / inner.height
@@ -615,7 +642,7 @@ private func generateTabletScreenshot(locale: String, caption: String, index: In
             cropWidth = image.size.width
             cropHeight = cropWidth / desiredAspect
         }
-        let sourceRect = NSRect(
+        let sourceRect = fullScreens ? NSRect(origin: .zero, size: image.size) : NSRect(
             x: (image.size.width - cropWidth) / 2,
             y: image.size.height - 180 - cropHeight,
             width: cropWidth,
@@ -650,7 +677,7 @@ for localeDirectory in locales {
         throw NSError(domain: "HopeCardsStoreAssets", code: 4, userInfo: [NSLocalizedDescriptionKey: "\(locale) must contain exactly \(screenshotSpecs.count) screenshot captions"])
     }
 
-    let screenshotsDirectory = storeRoot.appendingPathComponent("screenshots/phone/\(locale)", isDirectory: true)
+    let screenshotsDirectory = outputRoot.appendingPathComponent("screenshots/phone/\(locale)", isDirectory: true)
     for (index, spec) in screenshotSpecs.enumerated() {
         try generateScreenshot(
             locale: locale,
@@ -661,7 +688,7 @@ for localeDirectory in locales {
         )
     }
 
-    let tabletDirectory = storeRoot.appendingPathComponent("screenshots/tablet/\(locale)", isDirectory: true)
+    let tabletDirectory = outputRoot.appendingPathComponent("screenshots/tablet/\(locale)", isDirectory: true)
     try generateTabletScreenshot(
         locale: locale,
         caption: captions[0],
@@ -677,6 +704,7 @@ for localeDirectory in locales {
         destination: tabletDirectory.appendingPathComponent("02-read-scripture-tablet.png")
     )
 
+    if screenshotsOnly { continue }
     let featureCopy = try nonEmptyLines(at: localeDirectory.appendingPathComponent("feature-copy.txt"))
     try generateFeatureGraphic(
         locale: locale,
@@ -690,8 +718,10 @@ for localeDirectory in locales {
     )
 }
 
-let englishFeatureCopy = try nonEmptyLines(at: listingRoot.appendingPathComponent("en-US/feature-copy.txt"))
-try generateFeatureGraphic(locale: "en-US", lines: englishFeatureCopy, destination: storeRoot.appendingPathComponent("feature-graphic.png"))
-try generatePlayIcon(destination: storeRoot.appendingPathComponent("play-icon-512.png"))
+if !screenshotsOnly {
+    let englishFeatureCopy = try nonEmptyLines(at: listingRoot.appendingPathComponent("en-US/feature-copy.txt"))
+    try generateFeatureGraphic(locale: "en-US", lines: englishFeatureCopy, destination: storeRoot.appendingPathComponent("feature-graphic.png"))
+    try generatePlayIcon(destination: storeRoot.appendingPathComponent("play-icon-512.png"))
+}
 
 print("Generated localized Play Store assets for \(locales.count) locales.")

@@ -73,6 +73,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aaronsedna.hopecards.BuildConfig
+import com.aaronsedna.hopecards.ads.AdPlacementPolicy
 import com.aaronsedna.hopecards.ads.BannerAd
 import com.aaronsedna.hopecards.model.Destination
 import com.aaronsedna.hopecards.model.JournalEntry
@@ -117,21 +118,13 @@ private val primaryEntries = listOf(
     DrawerEntry(Destination.DAILY),
     DrawerEntry(Destination.FAVORITES),
     DrawerEntry(Destination.JOURNAL),
-    DrawerEntry(Destination.REMOVE_ADS),
     DrawerEntry(Destination.SETTINGS),
+    DrawerEntry(Destination.REMOVE_ADS),
 )
 
 private val informationEntries = listOf(
     DrawerEntry(Destination.PRIVACY),
     DrawerEntry(Destination.ABOUT),
-)
-
-private val bannerDestinations = setOf(
-    Destination.FAVORITES,
-    Destination.JOURNAL,
-    Destination.SETTINGS,
-    Destination.ABOUT,
-    Destination.PRIVACY,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -181,17 +174,21 @@ fun HopeCardsApp(
 
     DisposableEffect(lifecycle) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME) viewModel.billing.refresh()
+            when (event) {
+                Lifecycle.Event.ON_RESUME -> {
+                    viewModel.billing.refresh()
+                    viewModel.ads.onResume()
+                }
+                Lifecycle.Event.ON_PAUSE -> viewModel.ads.onPause()
+                else -> Unit
+            }
         }
         lifecycle.addObserver(observer)
         viewModel.billing.connect()
         onDispose { lifecycle.removeObserver(observer) }
     }
-    LaunchedEffect(state.initialized, billing.loading, adsSuppressed, state.destination) {
-        if (
-            state.initialized && !billing.loading && !adsSuppressed &&
-            state.destination in bannerDestinations
-        ) {
+    LaunchedEffect(state.initialized, billing.loading, adsSuppressed) {
+        if (state.initialized && !billing.loading) {
             delay(500)
             viewModel.initializeAds(activity, adsSuppressed)
         }
@@ -234,7 +231,7 @@ fun HopeCardsApp(
                                 viewModel.navigate(destination)
                                 scope.launch { drawerState.close() }
                             }
-                            if (entry.destination == Destination.REMOVE_ADS) {
+                            if (entry.destination == Destination.SETTINGS) {
                                 HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
                             }
                         }
@@ -313,7 +310,7 @@ fun HopeCardsApp(
                 bottomBar = {
                     if (
                         dailySharePresentation == null && adsReady && !adsSuppressed && state.selectedVerse == null &&
-                        state.destination in bannerDestinations
+                        AdPlacementPolicy.showsBanner(state.destination)
                     ) {
                         Column(Modifier.fillMaxWidth().background(colors.background).navigationBarsPadding()) {
                             BannerAd()
