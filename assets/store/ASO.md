@@ -19,6 +19,29 @@ The listing must not imply that Hope Cards is a complete chapter-by-chapter Bibl
 
 These phrases are used naturally in the title, short description, and opening paragraphs. Do not add repetitive keyword blocks: Google Play advises that unnecessary keywords do not improve ranking and create a poor user experience.
 
+## Standing listing rules
+
+- Recheck live Google Play results and Play Console search-term data before every
+  meaningful metadata update; do not rely on an old keyword list indefinitely.
+- Lead each localized title with the strongest natural, high-intent phrase for
+  that market, while keeping the Hope Cards brand visible where the 30-character
+  limit permits.
+- Use native, idiomatic wording written for that locale. Never translate English
+  keywords word-for-word when local search phrasing differs.
+- Give the title, short description, and opening paragraphs distinct jobs. Cover
+  the main intent early, then add accurate long-tail benefits without repetition.
+- Keep every claim faithful to the shipped app. Never use ranking claims,
+  promotional superlatives, competitor names, or repetitive keyword blocks.
+- Preserve approved localized screenshots, feature graphics, and promo videos
+  unless the UI or positioning has materially changed.
+- Validate the 30-character title, 80-character short description, 4,000-character
+  full description, artwork, and locale files before saving in Play Console.
+- After publication, measure search terms, conversion, ratings, retention and
+  Android vitals. Test one conversion variable at a time once traffic is sufficient.
+- Do not restart an active app-release review solely to submit metadata. Save the
+  listing changes and submit them after the active review completes unless there
+  is a time-critical correction.
+
 ## September 2026 keyword review
 
 Live Google Play searches were reviewed for the United States, Germany, Mexico,
