@@ -149,110 +149,80 @@ fun DailyHopeScreen(
         }
     }
 
-    BoxWithConstraints(Modifier.fillMaxSize()) {
-        val longVerse = verse.text.length >= 190
-        val compactHeight = maxHeight < 640.dp
-        val contentScrollState = rememberScrollState()
-        val headerBottomPadding = when {
-            longVerse || compactHeight -> 10.dp
-            else -> 18.dp
+    Column(
+        Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 28.dp).padding(top = 32.dp, bottom = 60.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Column(Modifier.alpha(headerAlpha.value).padding(bottom = 24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            AdaptiveDailyHopeTitle(verse)
+            Text(
+                BibleDisplayDateFormatter.format(LocalDate.now(), verse.edition),
+                color = colors.textSecondary,
+                fontFamily = interfaceFontFor(verse.edition),
+                fontSize = 16.sp,
+                letterSpacing = .4.sp,
+                modifier = Modifier.padding(top = 8.dp),
+            )
         }
-        val verseTopPadding = if (longVerse || compactHeight) 4.dp else 12.dp
-        val scriptureTopPadding = if (longVerse || compactHeight) 22.dp else 32.dp
-
         Column(
-            Modifier.fillMaxSize()
-                .padding(horizontal = 24.dp)
-                .padding(top = if (longVerse || compactHeight) 18.dp else 28.dp, bottom = 8.dp),
+            Modifier.widthIn(max = 620.dp).fillMaxWidth(.82f).padding(top = 12.dp)
+                .alpha(verseAlpha.value).offset { IntOffset(0, verseOffset.value.dp.roundToPx()) },
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Column(
-                Modifier.alpha(headerAlpha.value).padding(bottom = headerBottomPadding),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                AdaptiveDailyHopeTitle(verse)
-                Text(
-                    BibleDisplayDateFormatter.format(LocalDate.now(), verse.edition),
-                    color = colors.textSecondary,
-                    fontFamily = interfaceFontFor(verse.edition),
-                    fontSize = 16.sp,
-                    letterSpacing = .4.sp,
-                    modifier = Modifier.padding(top = 8.dp),
+            Text(
+                verse.displayReference,
+                color = colors.text,
+                fontFamily = interfaceFontFor(verse.edition),
+                fontWeight = FontWeight.Bold,
+                fontSize = 28.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(bottom = 14.dp),
+            )
+            Box(Modifier.size(56.dp, 2.dp).background(colors.accent.copy(alpha = .75f), CircleShape))
+            Text(
+                verse.text,
+                color = colors.cardText,
+                fontFamily = scriptureFontFor(verse.edition),
+                fontSize = dailyFontSize(verse.text.length),
+                lineHeight = dailyLineHeight(verse.text.length),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(top = 36.dp),
+            )
+        }
+        Text(
+            verse.translation,
+            color = colors.textTertiary,
+            fontFamily = interfaceFontFor(verse.edition),
+            fontSize = 14.sp,
+            letterSpacing = .5.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(top = 48.dp).alpha(translationAlpha.value)
+                .changeTranslationOnLongPress(settings.enableHaptics, onChangeTranslation)
+                .padding(horizontal = 12.dp, vertical = 8.dp),
+        )
+        BoxWithConstraints(
+            Modifier.fillMaxWidth().padding(top = 60.dp).alpha(actionsAlpha.value),
+            contentAlignment = Alignment.Center,
+        ) {
+            val actionGap = 4.dp
+            val actionWidth = ((maxWidth - actionGap * 2) / 3).coerceAtMost(108.dp)
+            Row(horizontalArrangement = Arrangement.spacedBy(actionGap)) {
+                ActionPill(
+                    if (favorite) "Saved" else "Save",
+                    onFavorite,
+                    favorite = favorite,
+                    accentColor = colors.accent,
+                    savedColor = colors.danger,
+                    width = actionWidth,
                 )
-            }
-
-            Box(
-                modifier = Modifier.weight(1f).fillMaxWidth(),
-                contentAlignment = if (longVerse || compactHeight) Alignment.TopCenter else Alignment.Center,
-            ) {
-                Column(
-                    Modifier.widthIn(max = 620.dp).fillMaxWidth(.9f)
-                        .verticalScroll(contentScrollState)
-                        .padding(top = verseTopPadding, bottom = 12.dp)
-                        .alpha(verseAlpha.value)
-                        .offset { IntOffset(0, verseOffset.value.dp.roundToPx()) },
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Text(
-                        verse.displayReference,
-                        color = colors.text,
-                        fontFamily = interfaceFontFor(verse.edition),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 28.sp,
-                        lineHeight = 35.sp,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(bottom = 14.dp),
-                    )
-                    Box(Modifier.size(56.dp, 2.dp).background(colors.accent.copy(alpha = .75f), CircleShape))
-                    Text(
-                        verse.text,
-                        color = colors.cardText,
-                        fontFamily = scriptureFontFor(verse.edition),
-                        fontSize = dailyFontSize(verse.text.length),
-                        lineHeight = dailyLineHeight(verse.text.length),
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(top = scriptureTopPadding),
-                    )
-                    Text(
-                        verse.translation,
-                        color = colors.textTertiary,
-                        fontFamily = interfaceFontFor(verse.edition),
-                        fontSize = 14.sp,
-                        lineHeight = 20.sp,
-                        letterSpacing = .5.sp,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(top = if (longVerse) 28.dp else 40.dp)
-                            .alpha(translationAlpha.value)
-                            .changeTranslationOnLongPress(settings.enableHaptics, onChangeTranslation)
-                            .padding(horizontal = 12.dp, vertical = 8.dp),
-                    )
-                }
-            }
-
-            BoxWithConstraints(
-                Modifier.fillMaxWidth().alpha(actionsAlpha.value),
-                contentAlignment = Alignment.Center,
-            ) {
-                val actionGap = 4.dp
-                val actionWidth = ((maxWidth - actionGap * 2) / 3).coerceAtMost(108.dp)
-                Row(horizontalArrangement = Arrangement.spacedBy(actionGap)) {
-                    ActionPill(
-                        if (favorite) "Saved" else "Save",
-                        onFavorite,
-                        favorite = favorite,
-                        accentColor = colors.accent,
-                        savedColor = colors.danger,
-                        width = actionWidth,
-                    )
-                    ActionPill("Share", onShare, accentColor = colors.accent, width = actionWidth)
-                    ActionPill(
-                        "Journal",
-                        { reflectionOpen = true },
-                        accentColor = colors.accent,
-                        glyph = AppIconGlyph.JournalOutline,
-                        width = actionWidth,
-                    )
-                }
+                ActionPill("Share", onShare, accentColor = colors.accent, width = actionWidth)
+                ActionPill(
+                    "Journal",
+                    { reflectionOpen = true },
+                    accentColor = colors.accent,
+                    glyph = AppIconGlyph.JournalOutline,
+                    width = actionWidth,
+                )
             }
         }
     }
