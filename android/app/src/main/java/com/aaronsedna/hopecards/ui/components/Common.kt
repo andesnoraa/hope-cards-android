@@ -151,7 +151,8 @@ fun ActionPill(
     )
     Box(
         modifier = modifier
-            .size(width = 120.dp, height = 48.dp)
+            .widthIn(min = 120.dp, max = 144.dp)
+            .height(48.dp)
             .alpha(actionAlpha)
             .clickable(
                 interactionSource = interactionSource,
@@ -174,7 +175,15 @@ fun ActionPill(
                 tint = tint,
                 size = 22.dp,
             )
-            Text(label, color = tint, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+            Text(
+                label,
+                color = tint,
+                fontFamily = Poppins,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 16.sp,
+                maxLines = 1,
+                softWrap = false,
+            )
         }
     }
 }

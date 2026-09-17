@@ -33,8 +33,11 @@ val Translation.localeTag: String
 
 fun Context.forTranslation(translation: Translation): Context {
     val configuration = Configuration(resources.configuration)
-    configuration.setLocale(Locale.forLanguageTag(translation.localeTag))
-    configuration.setLayoutDirection(Locale.forLanguageTag(translation.localeTag))
+    // Bible editions can change the verse text and book reference presentation, but the
+    // product UI stays in English. Keeping this context explicit also avoids a selected
+    // Malayalam/German/etc. Bible from unexpectedly changing navigation and settings labels.
+    configuration.setLocale(Locale.US)
+    configuration.setLayoutDirection(Locale.US)
     return createConfigurationContext(configuration)
 }
 

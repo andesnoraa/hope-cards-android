@@ -6,18 +6,18 @@ import org.junit.Test
 
 class BibleDisplayDateFormatterTest {
     @Test
-    fun `daily hope title follows selected Bible language`() {
+    fun `daily hope title stays in English for every Bible edition`() {
         val expected = mapOf(
             Translation.BSB to "Today’s Hope",
             Translation.BBE to "Today’s Hope",
             Translation.KJV to "Today’s Hope",
             Translation.WEB to "Today’s Hope",
-            Translation.LUT1912 to "Gottes Wort",
-            Translation.LSG1910 to "Parole de Dieu",
-            Translation.RIV1927 to "Parola di Dio",
-            Translation.RV1909 to "Palabra de Dios",
-            Translation.ADB1905 to "Salita ng Diyos",
-            Translation.MAL1910 to "ദൈവവചനം",
+            Translation.LUT1912 to "Today’s Hope",
+            Translation.LSG1910 to "Today’s Hope",
+            Translation.RIV1927 to "Today’s Hope",
+            Translation.RV1909 to "Today’s Hope",
+            Translation.ADB1905 to "Today’s Hope",
+            Translation.MAL1910 to "ദൈവ വചനം",
         )
 
         expected.forEach { (translation, title) ->
@@ -34,12 +34,12 @@ class BibleDisplayDateFormatterTest {
             Translation.BBE to "Tuesday • 8 September",
             Translation.KJV to "Tuesday • 8 September",
             Translation.WEB to "Tuesday • 8 September",
-            Translation.LUT1912 to "Dienstag • 8. September",
-            Translation.LSG1910 to "mardi • 8 septembre",
-            Translation.RIV1927 to "martedì • 8 settembre",
-            Translation.RV1909 to "martes • 8 de septiembre",
-            Translation.ADB1905 to "Martes • Setyembre 8",
-            Translation.MAL1910 to "സെപ്റ്റംബർ 8 • ചൊവ്വാഴ്ച",
+            Translation.LUT1912 to "Tuesday • 8 September",
+            Translation.LSG1910 to "Tuesday • 8 September",
+            Translation.RIV1927 to "Tuesday • 8 September",
+            Translation.RV1909 to "Tuesday • 8 September",
+            Translation.ADB1905 to "Tuesday • 8 September",
+            Translation.MAL1910 to "Tuesday • 8 September",
         )
 
         expected.forEach { (translation, formatted) ->
