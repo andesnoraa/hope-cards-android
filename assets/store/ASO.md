@@ -8,15 +8,38 @@ The listing must not imply that Hope Cards is a complete chapter-by-chapter Bibl
 
 ## Search intent priorities
 
-1. Daily Bible verse / verse of the day
-2. Bible verse app / Scripture cards
+1. Daily Bible verse / verse of the day (primary acquisition intent)
+2. Bible verse app
 3. Daily Bible reminder
-4. Favorite Bible verses
-5. Bible journal / verse notes
-6. KJV and multiple Bible translations
-7. Christian encouragement and reflection
+4. Bible journal / verse notes
+5. Favorite Bible verses
+6. Scripture cards (useful differentiator, lower search priority)
+7. KJV and multiple Bible translations
+8. Christian encouragement and reflection
 
 These phrases are used naturally in the title, short description, and opening paragraphs. Do not add repetitive keyword blocks: Google Play advises that unnecessary keywords do not improve ranking and create a poor user experience.
+
+## September 2026 keyword review
+
+Live Google Play searches were reviewed for the United States, Germany, Mexico,
+France, Italy, the Philippines and India. The highest-intent recurring phrases
+were moved to the front of each localized title:
+
+- English and Filipino market: Daily Bible Verse / Bible verse of the day
+- German: Bibelvers des Tages / tägliche Bibelverse
+- Spanish: Versículo del día / versículos bíblicos diarios
+- French: Verset du jour / versets bibliques quotidiens
+- Italian: Versetto del giorno / versetti biblici quotidiani
+- Malayalam market: Malayalam Bible Verse / ഇന്നത്തെ ബൈബിൾ വാക്യം
+
+“Bible cards” was not selected as a primary English keyword because live results
+were dominated by Bible-themed card games. “Scripture cards” remains in the
+short and full descriptions as an accurate, differentiating secondary phrase.
+
+Ranking first cannot be guaranteed by metadata alone. Search position also
+depends on install velocity, ratings, retention, listing conversion and app
+quality. Review Google Play search-term and conversion reports after the new
+metadata is indexed, then test one conversion variable at a time.
 
 ## Conversion priorities
 
