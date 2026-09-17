@@ -3,6 +3,8 @@ package com.aaronsedna.hopecards.ui
 import android.app.Activity
 import android.app.Application
 import android.net.Uri
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.aaronsedna.hopecards.ads.AdsManager
@@ -16,6 +18,8 @@ import com.aaronsedna.hopecards.model.Destination
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.notifications.ReminderScheduler
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.forTranslation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -83,10 +87,20 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         }
         viewModelScope.launch(Dispatchers.IO) {
             repository.settings
-                .map { Triple(it.dailyHopeReminderEnabled, it.dailyHopeReminderHour, it.dailyHopeReminderMinute) }
-                .distinctUntilChanged()
-                .collect { (enabled, hour, minute) ->
-                    if (enabled) reminders.schedule(hour, minute) else reminders.cancel()
+                .distinctUntilChanged { old, new ->
+                    old.dailyHopeReminderEnabled == new.dailyHopeReminderEnabled &&
+                        old.dailyHopeReminderHour == new.dailyHopeReminderHour &&
+                        old.dailyHopeReminderMinute == new.dailyHopeReminderMinute &&
+                        old.preferredTranslation == new.preferredTranslation
+                }
+                .collect { settings ->
+                    if (settings.dailyHopeReminderEnabled) {
+                        reminders.schedule(
+                            settings.dailyHopeReminderHour,
+                            settings.dailyHopeReminderMinute,
+                            settings.preferredTranslation,
+                        )
+                    } else reminders.cancel()
                 }
         }
     }
@@ -141,7 +155,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
             date = today,
             verseId = verse.id,
             reference = verse.reference,
-            prompt = reflectionPrompt(verse.category),
+            prompt = verse.category.lowercase(),
             note = note,
             updatedAt = Instant.now().toString(),
         )
@@ -185,11 +199,25 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     suspend fun createBackup(): Pair<Uri, com.aaronsedna.hopecards.model.BackupInfo> =
         withContext(Dispatchers.IO) { backups.createBackup() }
 
+    suspend fun createBackupIn(folderUri: Uri): Pair<Uri, com.aaronsedna.hopecards.model.BackupInfo> =
+        withContext(Dispatchers.IO) { backups.createBackupIn(folderUri) }
+
+    @RequiresApi(Build.VERSION_CODES.Q)
+    suspend fun createAutomaticBackup(): Pair<Uri, com.aaronsedna.hopecards.model.BackupInfo> =
+        withContext(Dispatchers.IO) { backups.createAutomaticBackup() }
+
+    suspend fun savedBackupFolder(): Uri? =
+        withContext(Dispatchers.IO) { backups.savedBackupTreeUri() }
+
+    suspend fun restoreInitialUri(): Uri? =
+        withContext(Dispatchers.IO) { backups.restoreInitialUri() }
+
     fun restoreBackup(uri: Uri) {
         viewModelScope.launch(Dispatchers.IO) {
+            val localized = getApplication<Application>().forTranslation(_uiState.value.settings.preferredTranslation)
             runCatching { backups.restore(uri) }
-                .onSuccess { showNotice("Backup restored successfully.") }
-                .onFailure { showNotice(it.message ?: "The backup could not be restored.") }
+                .onSuccess { showNotice(localized.getString(R.string.backup_restored)) }
+                .onFailure { showNotice(it.message ?: localized.getString(R.string.backup_restore_failed)) }
         }
     }
 
@@ -207,9 +235,6 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         repository.setDailyHopeRecord(DailyHopeRecord(today, daily.id, settings.preferredTranslation.id))
         _uiState.value = _uiState.value.copy(dailyVerse = daily)
     }
-
-    private fun reflectionPrompt(category: String): String = prompts[category.lowercase()]
-        ?: "Keep the words that feel meaningful to you today."
 
     override fun onCleared() {
         billing.close()

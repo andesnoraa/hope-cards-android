@@ -44,6 +44,8 @@ import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.model.AppSettings
 import com.aaronsedna.hopecards.model.ThemeName
 import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.appString
 import com.aaronsedna.hopecards.ui.components.CardBack
 import com.aaronsedna.hopecards.ui.components.VerseCardFace
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
@@ -147,7 +149,7 @@ fun HomeScreen(
                         interactionSource = deckInteractionSource,
                         indication = null,
                         role = Role.Button,
-                        onClickLabel = if (revealed) "Return card to deck" else "Draw a card",
+                        onClickLabel = if (revealed) appString(R.string.return_card_accessibility) else appString(R.string.draw_card_accessibility),
                         onClick = ::flip,
                     ),
                 contentAlignment = Alignment.Center,
@@ -216,7 +218,7 @@ fun HomeScreen(
             ) {
                 Box(contentAlignment = Alignment.Center) {
                     Text(
-                        if (revealed) "Return to Deck" else "Draw a Card",
+                        if (revealed) appString(R.string.return_to_deck) else appString(R.string.draw_a_card),
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 18.sp,

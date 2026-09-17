@@ -8,6 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.semantics.Role
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.appString
 
 /** A quiet, long-press-only affordance for displayed Bible translation names. */
 @Composable
@@ -22,7 +24,7 @@ fun Modifier.changeTranslationOnLongPress(
         indication = null,
         role = Role.Button,
         onClickLabel = null,
-        onLongClickLabel = "Change Bible translation",
+        onLongClickLabel = appString(R.string.change_translation),
         onLongClick = {
             if (hapticsEnabled) haptics.performHapticFeedback(HapticFeedbackType.LongPress)
             onLongPress()

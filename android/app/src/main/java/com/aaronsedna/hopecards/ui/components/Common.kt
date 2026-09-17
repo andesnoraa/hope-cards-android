@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.model.ThemeName
+import com.aaronsedna.hopecards.ui.appString
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.LocalHopeThemeName
 import com.aaronsedna.hopecards.ui.theme.Poppins
@@ -235,8 +236,8 @@ fun VerseCardFace(
                 }
                 if (showActions) {
                     Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                        ActionPill(if (favorite) "Saved" else "Save", onFavorite, favorite = favorite)
-                        ActionPill("Share", onShare)
+                        ActionPill(if (favorite) appString(R.string.saved) else appString(R.string.save), onFavorite, favorite = favorite)
+                        ActionPill(appString(R.string.share), onShare)
                     }
                     Spacer(Modifier.height(18.dp))
                 }
@@ -363,12 +364,12 @@ private fun VintageVerseCardFace(
                         horizontalArrangement = Arrangement.spacedBy(18.dp),
                     ) {
                         VintageAction(
-                            label = if (favorite) "Saved" else "Save",
+                            label = if (favorite) appString(R.string.saved) else appString(R.string.save),
                             icon = if (favorite) AppIconGlyph.Heart else AppIconGlyph.HeartOutline,
                             onClick = onFavorite,
                         )
                         Box(Modifier.width(1.dp).height(44.dp).background(vintageBrass.copy(alpha = .4f)))
-                        VintageAction("Share", AppIconGlyph.ShareOutline, onShare)
+                        VintageAction(appString(R.string.share), AppIconGlyph.ShareOutline, onShare)
                     }
                 }
                 VintageDivider()
@@ -473,12 +474,12 @@ private fun EvergreenVerseCardFace(
                         horizontalArrangement = Arrangement.spacedBy(18.dp),
                     ) {
                         EvergreenAction(
-                            label = if (favorite) "Saved" else "Save",
+                            label = if (favorite) appString(R.string.saved) else appString(R.string.save),
                             icon = if (favorite) AppIconGlyph.Heart else AppIconGlyph.HeartOutline,
                             onClick = onFavorite,
                         )
                         Box(Modifier.width(1.dp).height(44.dp).background(evergreenGold.copy(alpha = .7f)))
-                        EvergreenAction("Share", AppIconGlyph.ShareOutline, onShare)
+                        EvergreenAction(appString(R.string.share), AppIconGlyph.ShareOutline, onShare)
                     }
                 }
                 EvergreenDivider()

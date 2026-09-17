@@ -42,6 +42,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.appQuantityString
+import com.aaronsedna.hopecards.ui.appString
+import com.aaronsedna.hopecards.ui.categoryLabel
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
@@ -73,8 +77,8 @@ fun FavoritesScreen(
                     AppIcon(AppIconGlyph.Heart, null, colors.danger, size = 30.dp)
                 }
             }
-            Text("A place for verses you love", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp, bottom = 12.dp))
-            Text("When a verse stays with you, tap Save and find it here anytime.", color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 26.sp, textAlign = TextAlign.Center, modifier = Modifier.widthIn(max = 330.dp))
+            Text(appString(R.string.favorites_empty_title), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp, bottom = 12.dp))
+            Text(appString(R.string.favorites_empty_body), color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 26.sp, textAlign = TextAlign.Center, modifier = Modifier.widthIn(max = 330.dp))
         }
         return
     }
@@ -85,8 +89,8 @@ fun FavoritesScreen(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                if (selectionMode) "${selectedIds.size} selected"
-                else "${verses.size} saved ${if (verses.size == 1) "verse" else "verses"}",
+                if (selectionMode) appString(R.string.selected_count, selectedIds.size)
+                else appQuantityString(R.plurals.favorites_count, verses.size, verses.size),
                 color = colors.textTertiary,
                 fontFamily = Poppins,
                 fontWeight = FontWeight.Medium,
@@ -98,7 +102,7 @@ fun FavoritesScreen(
                     selectedIds = if (selectedIds.size == verses.size) emptySet() else verses.map(Verse::id).toSet()
                 }) {
                     Text(
-                        if (selectedIds.size == verses.size) "Clear" else "Select all",
+                        if (selectedIds.size == verses.size) appString(R.string.clear) else appString(R.string.select_all),
                         color = colors.accent,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
@@ -108,11 +112,11 @@ fun FavoritesScreen(
                     selectionMode = false
                     selectedIds = emptySet()
                 }) {
-                    Text("Cancel", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
                 }
             } else {
                 TextButton(onClick = { selectionMode = true }) {
-                    Text("Select", color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    Text(appString(R.string.select), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
                 }
             }
         }
@@ -138,7 +142,7 @@ fun FavoritesScreen(
                         },
                     ).padding(top = 18.dp),
                 ) {
-                    Text(verse.category.uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 2.5.sp, modifier = Modifier.padding(bottom = 10.dp))
+                    Text(categoryLabel(verse.category).uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 2.5.sp, modifier = Modifier.padding(bottom = 10.dp))
                     Text(verse.text, color = colors.cardText, fontFamily = scriptureFontFor(verse.edition), fontSize = 19.sp, lineHeight = 30.sp, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(bottom = 10.dp))
                     Row(Modifier.fillMaxWidth().padding(bottom = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text(verse.displayReference, color = colors.text, fontFamily = interfaceFontFor(verse.edition), fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.weight(1f))
@@ -176,7 +180,7 @@ fun FavoritesScreen(
             ) {
                 AppIcon(AppIconGlyph.TrashOutline, null, Color.White, size = 19.dp)
                 Text(
-                    "Remove selected (${selectedIds.size})",
+                    appString(R.string.remove_selected_count, selectedIds.size),
                     color = Color.White,
                     fontFamily = Poppins,
                     fontWeight = FontWeight.Bold,
@@ -188,9 +192,9 @@ fun FavoritesScreen(
 
     pendingRemoval?.let { verse ->
         FavoriteRemovalDialog(
-            title = "Remove saved verse?",
-            message = "${verse.displayReference} will be removed from Favorites.",
-            confirmLabel = "Remove",
+            title = appString(R.string.remove_saved_verse_title),
+            message = appString(R.string.remove_saved_verse_message, verse.displayReference),
+            confirmLabel = appString(R.string.remove),
             onDismiss = { pendingRemoval = null },
             onConfirm = {
                 pendingRemoval = null
@@ -200,9 +204,9 @@ fun FavoritesScreen(
     }
     if (confirmSelectedRemoval) {
         FavoriteRemovalDialog(
-            title = "Remove selected verses?",
-            message = "${selectedIds.size} saved ${if (selectedIds.size == 1) "verse" else "verses"} will be removed from Favorites.",
-            confirmLabel = "Remove",
+            title = appString(R.string.remove_selected_verses_title),
+            message = appString(R.string.remove_selected_verses_message, selectedIds.size),
+            confirmLabel = appString(R.string.remove),
             onDismiss = { confirmSelectedRemoval = false },
             onConfirm = {
                 val ids = selectedIds
@@ -233,7 +237,7 @@ private fun FavoriteRemovalDialog(
                 Text(confirmLabel, color = colors.danger, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
             }
         },
-        dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel", fontFamily = Poppins) } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(appString(R.string.cancel), fontFamily = Poppins) } },
         shape = RoundedCornerShape(28.dp),
         containerColor = colors.surface,
         titleContentColor = colors.text,

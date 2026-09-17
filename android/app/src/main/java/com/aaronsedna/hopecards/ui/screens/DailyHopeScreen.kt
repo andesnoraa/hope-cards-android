@@ -21,6 +21,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -63,6 +65,8 @@ import com.aaronsedna.hopecards.model.AppSettings
 import com.aaronsedna.hopecards.model.BibleDisplayDateFormatter
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.HopeCardsViewModel
+import com.aaronsedna.hopecards.ui.appString
+import com.aaronsedna.hopecards.ui.reflectionPrompt
 import com.aaronsedna.hopecards.ui.components.ActionPill
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
@@ -99,6 +103,8 @@ fun DailyHopeScreen(
     val verseOffset = remember(verse.id) { Animatable(18f) }
     val actionsAlpha = remember(verse.id) { Animatable(0f) }
     val translationAlpha = remember(verse.id) { Animatable(0f) }
+    val pageScrollState = rememberScrollState()
+    val actionsBringIntoViewRequester = remember(verse.id) { BringIntoViewRequester() }
 
     fun releasePlayer() {
         player?.runCatching { stop() }
@@ -138,6 +144,14 @@ fun DailyHopeScreen(
         kotlinx.coroutines.delay(2100)
         translationAlpha.animateTo(1f, tween(600))
     }
+    LaunchedEffect(verse.id) {
+        // Let the verse and controls finish their entrance before gently revealing controls that a
+        // long verse placed below the fold. Never take over after the reader has begun scrolling.
+        kotlinx.coroutines.delay(3500)
+        if (pageScrollState.value == 0 && !pageScrollState.isScrollInProgress) {
+            actionsBringIntoViewRequester.bringIntoView()
+        }
+    }
     DisposableEffect(lifecycle, verse.category, settings.dailyHopeMusicEnabled) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_PAUSE) releasePlayer()
@@ -152,7 +166,7 @@ fun DailyHopeScreen(
     }
 
     Column(
-        Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 28.dp).padding(top = 32.dp, bottom = 60.dp),
+        Modifier.fillMaxSize().verticalScroll(pageScrollState).padding(horizontal = 28.dp).padding(top = 32.dp, bottom = 60.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Column(Modifier.alpha(headerAlpha.value).padding(bottom = 24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
@@ -202,30 +216,35 @@ fun DailyHopeScreen(
                 .changeTranslationOnLongPress(settings.enableHaptics, onChangeTranslation)
                 .padding(horizontal = 12.dp, vertical = 8.dp),
         )
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.padding(top = 60.dp).alpha(actionsAlpha.value),
+        Column(
+            modifier = Modifier.bringIntoViewRequester(actionsBringIntoViewRequester),
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            ActionPill(
-                if (favorite) "Saved" else "Save",
-                onFavorite,
-                favorite = favorite,
-                accentColor = colors.accent,
-                savedColor = colors.danger,
-            )
-            ActionPill("Share", onShare, accentColor = colors.accent)
-        }
-        TextButton(
-            onClick = { reflectionOpen = true },
-            modifier = Modifier.padding(top = 18.dp),
-        ) {
-            Text(
-                if (existingNote.isBlank()) "Add to journal" else "Edit journal entry",
-                color = colors.accent,
-                fontFamily = interfaceFontFor(verse.edition),
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 15.sp,
-            )
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                modifier = Modifier.padding(top = 60.dp).alpha(actionsAlpha.value),
+            ) {
+                ActionPill(
+                    if (favorite) appString(R.string.saved) else appString(R.string.save),
+                    onFavorite,
+                    favorite = favorite,
+                    accentColor = colors.accent,
+                    savedColor = colors.danger,
+                )
+                ActionPill(appString(R.string.share), onShare, accentColor = colors.accent)
+            }
+            TextButton(
+                onClick = { reflectionOpen = true },
+                modifier = Modifier.padding(top = 18.dp),
+            ) {
+                Text(
+                    if (existingNote.isBlank()) appString(R.string.add_to_journal) else appString(R.string.edit_journal_entry),
+                    color = colors.accent,
+                    fontFamily = interfaceFontFor(verse.edition),
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 15.sp,
+                )
+            }
         }
     }
 
@@ -254,21 +273,21 @@ fun DailyHopeScreen(
                     }
                     Column(Modifier.weight(1f).padding(start = 12.dp)) {
                         Text(
-                            if (existingNote.isBlank()) "Add to journal" else "Edit journal entry",
+                            if (existingNote.isBlank()) appString(R.string.add_to_journal) else appString(R.string.edit_journal_entry),
                             color = colors.text,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
                         )
-                        Text("For ${verse.displayReference}", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                        Text(appString(R.string.for_reference, verse.displayReference), color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                     }
                     IconButton(onClick = { reflectionOpen = false }) {
-                        AppIcon(AppIconGlyph.Close, "Close journal entry", colors.textSecondary, size = 22.dp)
+                        AppIcon(AppIconGlyph.Close, appString(R.string.close_journal_entry), colors.textSecondary, size = 22.dp)
                     }
                 }
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(
-                        "A SIMPLE THOUGHT",
+                        appString(R.string.simple_thought),
                         color = colors.accent,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
@@ -276,8 +295,7 @@ fun DailyHopeScreen(
                         letterSpacing = 1.5.sp,
                     )
                     Text(
-                        HopeCardsViewModel.prompts[verse.category.lowercase()]
-                            ?: "Keep the words that feel meaningful to you today.",
+                        reflectionPrompt(verse.category),
                         color = colors.text,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
@@ -289,7 +307,7 @@ fun DailyHopeScreen(
                     value = note,
                     onValueChange = { if (it.length <= 1_000) note = it },
                     modifier = Modifier.fillMaxWidth().height(120.dp),
-                    placeholder = { Text("Add a few words…", color = colors.textTertiary) },
+                    placeholder = { Text(appString(R.string.add_few_words), color = colors.textTertiary) },
                     shape = RoundedCornerShape(18.dp),
                     textStyle = androidx.compose.ui.text.TextStyle(fontFamily = SourceSerif, fontSize = 18.sp, lineHeight = 27.sp, color = colors.cardText),
                     colors = OutlinedTextFieldDefaults.colors(
@@ -300,7 +318,7 @@ fun DailyHopeScreen(
                     ),
                 )
                 Row(Modifier.fillMaxWidth()) {
-                    Text("Journal entry", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
+                    Text(appString(R.string.journal_entry), color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
                     Text("${note.length} / 1,000", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
                 }
                 if (noteChanged) {
@@ -319,9 +337,9 @@ fun DailyHopeScreen(
                     ) {
                         Text(
                             when {
-                                trimmedNote.isBlank() && existingNote.isNotBlank() -> "Remove from journal"
-                                existingNote.isBlank() -> "Save to journal"
-                                else -> "Save changes"
+                                trimmedNote.isBlank() && existingNote.isNotBlank() -> appString(R.string.remove_from_journal)
+                                existingNote.isBlank() -> appString(R.string.save_to_journal)
+                                else -> appString(R.string.save_changes)
                             },
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -330,8 +348,8 @@ fun DailyHopeScreen(
                     }
                 } else {
                     Text(
-                        if (existingNote.isBlank()) "Add a few words whenever you feel ready."
-                        else "Added to your journal.",
+                        if (existingNote.isBlank()) appString(R.string.add_words_when_ready)
+                        else appString(R.string.added_to_journal),
                         color = colors.textTertiary,
                         fontFamily = Poppins,
                         fontSize = 12.sp,

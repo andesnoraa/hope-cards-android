@@ -1,5 +1,7 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import android.os.Build
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -51,6 +53,12 @@ import androidx.compose.ui.window.Dialog
 import com.aaronsedna.hopecards.model.AppSettings
 import com.aaronsedna.hopecards.model.ThemeName
 import com.aaronsedna.hopecards.model.Translation
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.appString
+import com.aaronsedna.hopecards.ui.languageLabel
+import com.aaronsedna.hopecards.ui.localeTag
+import com.aaronsedna.hopecards.ui.themeDescription
+import com.aaronsedna.hopecards.ui.themeLabel
 import com.aaronsedna.hopecards.ui.components.ResponsiveScrollColumn
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
@@ -58,6 +66,7 @@ import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
+import java.util.Locale
 
 @Composable
 fun SettingsScreen(
@@ -65,6 +74,7 @@ fun SettingsScreen(
     onUpdate: ((AppSettings) -> AppSettings) -> Unit,
     onEnableReminder: () -> Unit,
     onBackup: () -> Unit,
+    onBackupLocation: () -> Unit,
     onExport: () -> Unit,
     onRestore: () -> Unit,
 ) {
@@ -90,7 +100,7 @@ fun SettingsScreen(
         Modifier.padding(horizontal = 24.dp).padding(top = 22.dp, bottom = 40.dp),
     ) {
         Text(
-            "Customize your Hope Cards experience.",
+            appString(R.string.settings_intro),
             color = colors.textSecondary,
             fontFamily = Poppins,
             fontSize = 16.sp,
@@ -98,37 +108,37 @@ fun SettingsScreen(
             modifier = Modifier.padding(bottom = 28.dp),
         )
 
-        SettingsHeader("APPEARANCE", AppIconGlyph.SparklesOutline)
+        SettingsHeader(appString(R.string.settings_appearance), AppIconGlyph.SparklesOutline)
         SettingsRow(
-            title = "Theme",
-            subtitle = settings.themeName.label,
+            title = appString(R.string.settings_theme),
+            subtitle = themeLabel(settings.themeName),
             onClick = { themePicker = true },
             trailing = { ThemePreview(settings.themeName); Chevron() },
         )
         Divider()
         SettingsRow(
-            title = "Draw Button",
-            subtitle = "Show a button for drawing cards, or tap the deck instead.",
+            title = appString(R.string.settings_draw_button),
+            subtitle = appString(R.string.settings_draw_button_body),
             trailing = { HopeSwitch(settings.showDrawButton) { value -> onUpdate { it.copy(showDrawButton = value) } } },
         )
         Divider()
         SettingsRow(
-            title = "Bible Translation",
+            title = appString(R.string.settings_bible_translation),
             subtitle = "${settings.preferredTranslation.label} · ${settings.preferredTranslation.displayName}",
             onClick = { translationPicker = true },
             trailing = { Chevron() },
         )
 
-        SettingsHeader("DAILY HOPE", AppIconGlyph.NotificationsOutline, Modifier.padding(top = 26.dp))
+        SettingsHeader(appString(R.string.settings_daily_hope), AppIconGlyph.NotificationsOutline, Modifier.padding(top = 26.dp))
         SettingsRow(
-            title = "Background Music",
-            subtitle = "Play peaceful music with Daily Hope.",
+            title = appString(R.string.settings_background_music),
+            subtitle = appString(R.string.settings_background_music_body),
             trailing = { HopeSwitch(settings.dailyHopeMusicEnabled) { value -> onUpdate { it.copy(dailyHopeMusicEnabled = value) } } },
         )
         Divider()
         SettingsRow(
-            title = "Daily Reminder",
-            subtitle = "Receive a daily verse reminder.",
+            title = appString(R.string.settings_daily_reminder),
+            subtitle = appString(R.string.settings_daily_reminder_body),
             trailing = {
                 HopeSwitch(
                     checked = settings.dailyHopeReminderEnabled,
@@ -142,37 +152,48 @@ fun SettingsScreen(
         )
         Divider()
         SettingsRow(
-            title = "Reminder Time",
-            subtitle = formatTime(settings.dailyHopeReminderHour, settings.dailyHopeReminderMinute),
+            title = appString(R.string.settings_reminder_time),
+            subtitle = formatTime(settings.dailyHopeReminderHour, settings.dailyHopeReminderMinute, settings.preferredTranslation),
             onClick = { openReminderPicker(enableAfterSave = false) },
             trailing = { Chevron() },
         )
 
-        SettingsHeader("INTERACTION", AppIconGlyph.HandLeftOutline, Modifier.padding(top = 26.dp))
+        SettingsHeader(appString(R.string.settings_interaction), AppIconGlyph.HandLeftOutline, Modifier.padding(top = 26.dp))
         SettingsRow(
-            title = "Haptic Feedback",
-            subtitle = "Use gentle vibration when drawing and saving cards.",
+            title = appString(R.string.settings_haptics),
+            subtitle = appString(R.string.settings_haptics_body),
             trailing = { HopeSwitch(settings.enableHaptics) { value -> onUpdate { it.copy(enableHaptics = value) } } },
         )
 
-        SettingsHeader("BACKUP & RESTORE", AppIconGlyph.CloudUploadOutline, Modifier.padding(top = 26.dp))
+        SettingsHeader(appString(R.string.settings_backup_restore), AppIconGlyph.CloudUploadOutline, Modifier.padding(top = 26.dp))
         SettingsRow(
-            title = "Backup Data",
-            subtitle = "Create a device backup of favorites, journal entries, and settings.",
+            title = appString(R.string.settings_backup_now),
+            subtitle = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                appString(R.string.settings_backup_now_modern_body)
+            } else {
+                appString(R.string.settings_backup_now_legacy_body)
+            },
             onClick = onBackup,
             trailing = { AppIcon(AppIconGlyph.CheckmarkCircleOutline, null, colors.textTertiary) },
         )
         Divider()
         SettingsRow(
-            title = "Export Backup",
-            subtitle = "Save or share a copy outside Hope Cards. Backup files are not encrypted.",
+            title = appString(R.string.settings_cloud_backup),
+            subtitle = appString(R.string.settings_cloud_backup_body),
+            onClick = onBackupLocation,
+            trailing = { Chevron() },
+        )
+        Divider()
+        SettingsRow(
+            title = appString(R.string.settings_export_backup),
+            subtitle = appString(R.string.settings_export_backup_body),
             onClick = onExport,
             trailing = { AppIcon(AppIconGlyph.CloudUploadOutline, null, colors.textTertiary) },
         )
         Divider()
         SettingsRow(
-            title = "Restore Backup",
-            subtitle = "Replace this device’s Hope Cards data from a backup file.",
+            title = appString(R.string.settings_restore_backup),
+            subtitle = appString(R.string.settings_restore_backup_body),
             onClick = onRestore,
             trailing = { AppIcon(AppIconGlyph.RefreshOutline, null, colors.textTertiary) },
         )
@@ -180,12 +201,12 @@ fun SettingsScreen(
 
     if (themePicker) {
         SelectorDialog(
-            title = "Theme",
-            subtitle = "Choose a style that helps you pause and reflect.",
+            title = appString(R.string.settings_theme),
+            subtitle = appString(R.string.theme_picker_body),
             onDismiss = { themePicker = false },
         ) {
             ThemeName.entries.forEach { theme ->
-                PickerRow(theme.label, theme.description, theme == settings.themeName) {
+                PickerRow(themeLabel(theme), themeDescription(theme), theme == settings.themeName) {
                     onUpdate { it.copy(themeName = theme) }
                     themePicker = false
                 }
@@ -246,14 +267,14 @@ fun BibleTranslationDialog(
     onSelect: (Translation) -> Unit,
 ) {
     SelectorDialog(
-        title = "Bible Translation",
-        subtitle = "Choose the translation used throughout Hope Cards.",
+        title = appString(R.string.settings_bible_translation),
+        subtitle = appString(R.string.translation_picker_body),
         onDismiss = onDismiss,
     ) {
         Translation.entries.forEach { translation ->
             PickerRow(
                 "${translation.label} · ${translation.displayName}",
-                translation.language,
+                languageLabel(translation.language),
                 translation == selected,
             ) { onSelect(translation) }
         }
@@ -288,7 +309,7 @@ private fun ReminderTimeDialog(
                 Column(Modifier.padding(22.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
-                            "Reminder Time",
+                            appString(R.string.settings_reminder_time),
                             color = colors.text,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -304,7 +325,7 @@ private fun ReminderTimeDialog(
                             color = colors.accentSoft,
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                AppIcon(AppIconGlyph.Close, "Close reminder time selector", colors.text, size = 21.dp)
+                                AppIcon(AppIconGlyph.Close, appString(R.string.close_reminder_selector), colors.text, size = 21.dp)
                             }
                         }
                     }
@@ -313,7 +334,7 @@ private fun ReminderTimeDialog(
                         horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        TimeUnit(hour, onHourChange, { onStepHour(1) }, { onStepHour(-1) }, "hour")
+                        TimeUnit(hour, onHourChange, { onStepHour(1) }, { onStepHour(-1) }, appString(R.string.hour))
                         Text(
                             ":",
                             color = colors.accent,
@@ -321,7 +342,7 @@ private fun ReminderTimeDialog(
                             fontWeight = FontWeight.Bold,
                             fontSize = 38.sp,
                         )
-                        TimeUnit(minute, onMinuteChange, { onStepMinute(1) }, { onStepMinute(-1) }, "minute")
+                        TimeUnit(minute, onMinuteChange, { onStepMinute(1) }, { onStepMinute(-1) }, appString(R.string.minute))
                         Column(
                             modifier = Modifier.width(64.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -335,7 +356,7 @@ private fun ReminderTimeDialog(
                         horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.End),
                     ) {
                         TextButton(onClick = onDismiss) {
-                            Text("Cancel", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(appString(R.string.cancel), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                         }
                         Button(
                             onClick = onSave,
@@ -343,7 +364,7 @@ private fun ReminderTimeDialog(
                             shape = RoundedCornerShape(10.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = colors.accent, contentColor = colors.buttonText),
                         ) {
-                            Text("Save", fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(appString(R.string.save), fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                         }
                     }
                 }
@@ -364,7 +385,7 @@ private fun TimeUnit(
     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Surface(onClick = onIncrease, color = Color.Transparent, modifier = Modifier.size(48.dp, 40.dp)) {
             Box(contentAlignment = Alignment.Center) {
-                AppIcon(AppIconGlyph.ChevronUp, "Increase reminder $label", colors.accent, size = 24.dp)
+                AppIcon(AppIconGlyph.ChevronUp, appString(R.string.increase_reminder, label), colors.accent, size = 24.dp)
             }
         }
         Surface(color = colors.background, shape = RoundedCornerShape(10.dp), modifier = Modifier.size(76.dp, 62.dp)) {
@@ -387,7 +408,7 @@ private fun TimeUnit(
         }
         Surface(onClick = onDecrease, color = Color.Transparent, modifier = Modifier.size(48.dp, 40.dp)) {
             Box(contentAlignment = Alignment.Center) {
-                AppIcon(AppIconGlyph.ChevronDown, "Decrease reminder $label", colors.accent, size = 24.dp)
+                AppIcon(AppIconGlyph.ChevronDown, appString(R.string.decrease_reminder, label), colors.accent, size = 24.dp)
             }
         }
     }
@@ -464,7 +485,7 @@ private fun SelectorDialog(
                             color = colors.accentSoft,
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                AppIcon(AppIconGlyph.Close, "Close selector", colors.text, size = 21.dp)
+                                AppIcon(AppIconGlyph.Close, appString(R.string.close_selector), colors.text, size = 21.dp)
                             }
                         }
                     }
@@ -590,13 +611,13 @@ private fun PickerRow(title: String, subtitle: String, selected: Boolean, onClic
                 Text(subtitle, color = colors.textSecondary, fontFamily = Poppins, fontSize = 13.sp, lineHeight = 18.sp)
             }
             if (selected) {
-                AppIcon(AppIconGlyph.Checkmark, "Selected", colors.accent, Modifier.padding(start = 12.dp), 22.dp)
+                AppIcon(AppIconGlyph.Checkmark, appString(R.string.selected), colors.accent, Modifier.padding(start = 12.dp), 22.dp)
             }
         }
     }
 }
 
-private fun formatTime(hour: Int, minute: Int): String =
-    LocalTime.of(hour, minute).format(DateTimeFormatter.ofPattern("h:mm a")).lowercase()
+private fun formatTime(hour: Int, minute: Int, translation: Translation): String =
+    LocalTime.of(hour, minute).format(DateTimeFormatter.ofPattern("h:mm a", Locale.forLanguageTag(translation.localeTag)))
 
 private fun sanitizeTimePart(value: String): String = value.filter(Char::isDigit).take(2)

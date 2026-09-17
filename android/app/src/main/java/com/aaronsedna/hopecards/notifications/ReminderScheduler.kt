@@ -14,26 +14,29 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.aaronsedna.hopecards.MainActivity
 import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.model.Translation
+import com.aaronsedna.hopecards.ui.forTranslation
 import java.time.ZonedDateTime
 
 class ReminderScheduler(private val context: Context) {
     private val alarmManager = context.getSystemService(AlarmManager::class.java)
 
-    fun ensureChannel() {
+    fun ensureChannel(translation: Translation) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
+        val localized = context.forTranslation(translation)
         val channel = NotificationChannel(
             CHANNEL_ID,
-            context.getString(R.string.daily_hope_channel_name),
+            localized.getString(R.string.daily_hope_channel_name),
             NotificationManager.IMPORTANCE_DEFAULT,
         ).apply {
-            description = context.getString(R.string.daily_hope_channel_description)
+            description = localized.getString(R.string.daily_hope_channel_description)
             enableVibration(true)
         }
         context.getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
     }
 
-    fun schedule(hour: Int, minute: Int) {
-        ensureChannel()
+    fun schedule(hour: Int, minute: Int, translation: Translation) {
+        ensureChannel(translation)
         val now = ZonedDateTime.now()
         var next = now.withHour(hour).withMinute(minute).withSecond(0).withNano(0)
         if (!next.isAfter(now)) next = next.plusDays(1)
@@ -51,8 +54,9 @@ class ReminderScheduler(private val context: Context) {
         alarmManager.cancel(reminderIntent())
     }
 
-    fun showNotification() {
-        ensureChannel()
+    fun showNotification(translation: Translation) {
+        ensureChannel(translation)
+        val localized = context.forTranslation(translation)
         val openIntent = Intent(context, MainActivity::class.java)
             .putExtra(EXTRA_OPEN_DAILY, true)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
@@ -65,8 +69,8 @@ class ReminderScheduler(private val context: Context) {
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.notification_icon)
             .setColor(0xFF132142.toInt())
-            .setContentTitle(context.getString(R.string.daily_hope_notification_title))
-            .setContentText(context.getString(R.string.daily_hope_notification_body))
+            .setContentTitle(localized.getString(R.string.daily_hope_notification_title))
+            .setContentText(localized.getString(R.string.daily_hope_notification_body))
             .setContentIntent(contentIntent)
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)

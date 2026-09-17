@@ -28,6 +28,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.model.BillingState
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.appString
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.components.ResponsiveScrollColumn
@@ -35,21 +37,21 @@ import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 
 private data class AdFreeBenefit(
-    val title: String,
+    val title: Int,
     val icon: AppIconGlyph,
 )
 
 private val adFreeBenefits = listOf(
     AdFreeBenefit(
-        title = "No banner or full-screen ads",
+        title = R.string.remove_ads_benefit_one,
         icon = AppIconGlyph.EyeOffOutline,
     ),
     AdFreeBenefit(
-        title = "More space for every verse",
+        title = R.string.remove_ads_benefit_two,
         icon = AppIconGlyph.HeartOutline,
     ),
     AdFreeBenefit(
-        title = "One purchase · No subscription",
+        title = R.string.remove_ads_benefit_three,
         icon = AppIconGlyph.CheckmarkCircleOutline,
     ),
 )
@@ -83,7 +85,7 @@ fun RemoveAdsScreen(
                 }
             }
             Text(
-                text = "A quieter Hope Cards",
+                text = appString(R.string.remove_ads_title),
                 color = colors.text,
                 fontFamily = Poppins,
                 fontWeight = FontWeight.Bold,
@@ -93,7 +95,7 @@ fun RemoveAdsScreen(
                 modifier = Modifier.padding(top = 18.dp),
             )
             Text(
-                text = "Every feature stays free. Remove ads once for calmer reading and reflection.",
+                text = appString(R.string.remove_ads_body),
                 color = colors.textSecondary,
                 fontFamily = Poppins,
                 fontSize = 15.sp,
@@ -129,7 +131,7 @@ fun RemoveAdsScreen(
             TextButton(onClick = onRestore, modifier = Modifier.align(Alignment.CenterHorizontally)) {
                 AppIcon(AppIconGlyph.RefreshOutline, null, colors.accent, size = 19.dp)
                 Text(
-                    text = "Restore purchase",
+                    text = appString(R.string.restore_purchase),
                     modifier = Modifier.padding(start = 7.dp),
                     fontFamily = Poppins,
                     fontWeight = FontWeight.SemiBold,
@@ -142,7 +144,7 @@ fun RemoveAdsScreen(
             TextButton(onClick = onPrivacyOptions, modifier = Modifier.align(Alignment.CenterHorizontally)) {
                 AppIcon(AppIconGlyph.ShieldCheckmarkOutline, null, colors.accent, size = 18.dp)
                 Text(
-                    text = "Ad privacy choices",
+                    text = appString(R.string.ad_privacy_choices),
                     modifier = Modifier.padding(start = 7.dp),
                     fontFamily = Poppins,
                     fontWeight = FontWeight.Normal,
@@ -171,7 +173,7 @@ private fun BenefitRow(benefit: AdFreeBenefit) {
             }
         }
         Text(
-            text = benefit.title,
+            text = appString(benefit.title),
             color = colors.text,
             fontFamily = Poppins,
             fontWeight = FontWeight.SemiBold,
@@ -207,7 +209,7 @@ private fun PurchaseAction(
                     strokeWidth = 2.dp,
                 )
                 Text(
-                    text = "Checking Google Play…",
+                    text = appString(R.string.checking_google_play),
                     color = colors.text,
                     fontFamily = Poppins,
                     fontWeight = FontWeight.SemiBold,
@@ -228,7 +230,7 @@ private fun PurchaseAction(
             ) {
                 AppIcon(AppIconGlyph.CheckmarkCircleOutline, null, colors.accent, size = 28.dp)
                 Text(
-                    text = "You’re enjoying Hope Cards ad-free",
+                    text = appString(R.string.ad_free_active),
                     color = colors.text,
                     fontFamily = Poppins,
                     fontWeight = FontWeight.Bold,
@@ -250,7 +252,7 @@ private fun PurchaseAction(
                 ),
             ) {
                 Text(
-                    text = billing.price?.let { "Remove ads forever  ·  $it" } ?: "Remove ads forever",
+                    text = billing.price?.let { appString(R.string.remove_ads_price, it) } ?: appString(R.string.remove_ads_forever),
                     fontFamily = Poppins,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
@@ -259,9 +261,9 @@ private fun PurchaseAction(
             }
             Text(
                 text = if (billing.canPurchase) {
-                    "One-time purchase · No subscription"
+                    appString(R.string.one_time_no_subscription)
                 } else {
-                    "Google Play will show your local one-time price"
+                    appString(R.string.google_play_local_price)
                 },
                 color = colors.textTertiary,
                 fontFamily = Poppins,

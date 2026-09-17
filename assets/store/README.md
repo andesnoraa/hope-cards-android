@@ -11,7 +11,7 @@ This directory contains the production Play Store metadata and artwork for Hope 
 5. Journal — shows notes linked directly to their verses.
 6. Themes — shows visual personalization without suggesting paid feature gating.
 
-The phone set is 1080 × 1920. The tablet set is 1600 × 2560. Each image uses an actual app capture inside a consistent navy, gold, and warm-ivory Play Store layout. The first two tablet images show that the card scales properly on larger screens.
+The phone set is 1080 × 1920. The tablet set is 1600 × 2560. Every listing image is a clean, unframed capture of the actual app with no marketing captions or extra feature text. The first two tablet images show that the card scales properly on larger screens.
 
 ## Locales
 
@@ -25,7 +25,7 @@ The phone set is 1080 × 1920. The tablet set is 1600 × 2560. Each image uses a
 
 Each locale includes a title, short description, full description, screenshot captions and alt text, feature-graphic copy, six phone screenshots, two tablet screenshots, one 1024 × 500 feature graphic, and one 1080p localized promo video.
 
-The brand name remains “Hope Cards” in every market. The localized copy is adapted around the terms users naturally associate with daily Bible verses, encouragement, favorites, notes, and reminders. It does not claim that the entire application interface is localized. The app currently offers Bible translations in these languages while the surrounding interface remains English; complete UI localization should be released before marketing the interface itself as translated.
+The brand name remains “Hope Cards” in every market. The app interface and store copy are meaningfully localized around the terms users naturally associate with daily Bible verses, encouragement, favorites, notes, reminders, and themes. The Bible translation selected in the app also selects the matching interface language.
 
 ## Suggested Play configuration
 

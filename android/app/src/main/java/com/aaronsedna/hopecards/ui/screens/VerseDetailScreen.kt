@@ -29,6 +29,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.appString
+import com.aaronsedna.hopecards.ui.categoryLabel
 import com.aaronsedna.hopecards.ui.components.ActionPill
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
@@ -59,7 +62,7 @@ fun VerseDetailScreen(
         verticalArrangement = Arrangement.Center,
     ) {
         Column(Modifier.fillMaxWidth().widthIn(max = 720.dp).alpha(alpha.value), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(verse.category.uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, letterSpacing = 3.sp, modifier = Modifier.padding(bottom = 10.dp))
+            Text(categoryLabel(verse.category).uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, letterSpacing = 3.sp, modifier = Modifier.padding(bottom = 10.dp))
             Box(Modifier.size(80.dp, 3.dp).background(colors.accent, CircleShape))
             BibleReferenceText(
                 verse = verse,
@@ -80,14 +83,14 @@ fun VerseDetailScreen(
                 modifier = Modifier.padding(top = 34.dp),
             )
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.padding(top = 28.dp, bottom = 18.dp)) {
-                ActionPill(if (favorite) "Saved" else "Save", onFavorite, favorite = favorite)
-                ActionPill("Share", onShare)
+                ActionPill(if (favorite) appString(R.string.saved) else appString(R.string.save), onFavorite, favorite = favorite)
+                ActionPill(appString(R.string.share), onShare)
             }
             if (onEditJournal != null) {
                 TextButton(onClick = onEditJournal) {
                     AppIcon(AppIconGlyph.CreateOutline, null, colors.accent, size = 19.dp)
                     Text(
-                        "Edit journal entry",
+                        appString(R.string.edit_journal_entry),
                         color = colors.accent,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.SemiBold,
@@ -96,7 +99,7 @@ fun VerseDetailScreen(
                 }
             }
             Column(Modifier.padding(top = 34.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("TRANSLATION", color = colors.textTertiary, fontFamily = Poppins, fontSize = 13.sp, letterSpacing = 1.5.sp, modifier = Modifier.padding(bottom = 8.dp))
+                Text(appString(R.string.translation).uppercase(), color = colors.textTertiary, fontFamily = Poppins, fontSize = 13.sp, letterSpacing = 1.5.sp, modifier = Modifier.padding(bottom = 8.dp))
                 Text(
                     verse.translation,
                     color = colors.text,

@@ -1,7 +1,9 @@
 package com.aaronsedna.hopecards.data
 
+import android.provider.MediaStore
 import androidx.core.content.FileProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
 import com.aaronsedna.hopecards.model.AppSettings
 import com.aaronsedna.hopecards.model.JournalEntry
@@ -18,6 +20,45 @@ import java.io.File
 
 @RunWith(AndroidJUnit4::class)
 class BackupManagerInstrumentedTest {
+    @Test
+    @SdkSuppress(minSdkVersion = 29)
+    fun automaticBackupUsesDedicatedDownloadsFolder() = runBlocking {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val repository = AppRepository(context)
+        val manager = BackupManager(context, repository, VerseRepository(context))
+        repository.initialize()
+        val previousInfo = repository.backupInfo()
+        var createdUri: android.net.Uri? = null
+
+        try {
+            val (uri, info) = manager.createAutomaticBackup()
+            createdUri = uri
+            val projection = arrayOf(
+                MediaStore.Downloads.DISPLAY_NAME,
+                MediaStore.Downloads.RELATIVE_PATH,
+            )
+            context.contentResolver.query(uri, projection, null, null, null)?.use { cursor ->
+                assertTrue(cursor.moveToFirst())
+                assertEquals(
+                    info.fileName,
+                    cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Downloads.DISPLAY_NAME)),
+                )
+                assertEquals(
+                    "Download/Hope Cards Backups/",
+                    cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Downloads.RELATIVE_PATH)),
+                )
+            } ?: error("Created backup is not visible through MediaStore.")
+            assertTrue(
+                context.contentResolver.openInputStream(uri)?.bufferedReader()?.use {
+                    it.readText().contains("\"version\": 1")
+                } == true,
+            )
+        } finally {
+            createdUri?.let { context.contentResolver.delete(it, null, null) }
+            repository.setBackupInfo(previousInfo)
+        }
+    }
+
     @Test
     fun backupRoundTripRestoresSettingsFavoritesAndJournal() = runBlocking {
         val context = InstrumentationRegistry.getInstrumentation().targetContext

@@ -19,6 +19,7 @@ class BootReceiver : BroadcastReceiver() {
                     ReminderScheduler(context.applicationContext).schedule(
                         settings.dailyHopeReminderHour,
                         settings.dailyHopeReminderMinute,
+                        settings.preferredTranslation,
                     )
                 }
             } finally {

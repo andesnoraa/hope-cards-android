@@ -1,6 +1,7 @@
 package com.aaronsedna.hopecards.data
 
 import android.content.Context
+import android.net.Uri
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
@@ -159,6 +160,40 @@ class AppRepository(context: Context) {
         }
     }
 
+    suspend fun backupTreeUri(): Uri? =
+        dataStore.data.map { it[Keys.backupTreeUri]?.let(Uri::parse) }.firstValue()
+
+    suspend fun backupDirectoryUri(): Uri? =
+        dataStore.data.map { it[Keys.backupDirectoryUri]?.let(Uri::parse) }.firstValue()
+
+    suspend fun lastRestoreUri(): Uri? =
+        dataStore.data.map { it[Keys.lastRestoreUri]?.let(Uri::parse) }.firstValue()
+
+    suspend fun latestBackupUri(): Uri? =
+        dataStore.data.map { it[Keys.latestBackupUri]?.let(Uri::parse) }.firstValue()
+
+    suspend fun setBackupLocation(treeUri: Uri, directoryUri: Uri) {
+        dataStore.edit { preferences ->
+            preferences[Keys.backupTreeUri] = treeUri.toString()
+            preferences[Keys.backupDirectoryUri] = directoryUri.toString()
+        }
+    }
+
+    suspend fun clearBackupLocation() {
+        dataStore.edit { preferences ->
+            preferences.remove(Keys.backupTreeUri)
+            preferences.remove(Keys.backupDirectoryUri)
+        }
+    }
+
+    suspend fun setLastRestoreUri(uri: Uri) {
+        dataStore.edit { it[Keys.lastRestoreUri] = uri.toString() }
+    }
+
+    suspend fun setLatestBackupUri(uri: Uri) {
+        dataStore.edit { it[Keys.latestBackupUri] = uri.toString() }
+    }
+
     suspend fun setAdFree(value: Boolean) {
         dataStore.edit { it[Keys.adFree] = value }
     }
@@ -289,6 +324,10 @@ class AppRepository(context: Context) {
         val journal = stringPreferencesKey(LEGACY_JOURNAL)
         val dailyHope = stringPreferencesKey(LEGACY_DAILY)
         val backupInfo = stringPreferencesKey(LEGACY_BACKUP_INFO)
+        val backupTreeUri = stringPreferencesKey("backup_tree_uri")
+        val backupDirectoryUri = stringPreferencesKey("backup_directory_uri")
+        val lastRestoreUri = stringPreferencesKey("last_restore_uri")
+        val latestBackupUri = stringPreferencesKey("latest_backup_uri")
         val adFree = booleanPreferencesKey("ad_free_entitlement")
         val adCount = intPreferencesKey(LEGACY_AD_COUNT)
         val lastAdTime = longPreferencesKey(LEGACY_AD_TIME)

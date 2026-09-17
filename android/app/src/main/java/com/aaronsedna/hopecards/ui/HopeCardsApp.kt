@@ -2,14 +2,18 @@ package com.aaronsedna.hopecards.ui
 
 import android.Manifest
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.net.Uri
 import android.os.Build
+import android.provider.DocumentsContract
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.core.graphics.createBitmap
@@ -63,7 +67,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -113,6 +116,25 @@ private const val SHARE_ATTRIBUTION = "Shared from Hope Cards ❤️"
 private const val PLAY_STORE_URL =
     "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
 
+private class OpenBackupDocumentContract : ActivityResultContract<Uri?, Uri?>() {
+    override fun createIntent(context: Context, input: Uri?): Intent =
+        Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "application/json"
+            putExtra(
+                Intent.EXTRA_MIME_TYPES,
+                arrayOf("application/json", "text/plain", "application/octet-stream"),
+            )
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                input?.let { putExtra(DocumentsContract.EXTRA_INITIAL_URI, it) }
+            }
+        }
+
+    override fun parseResult(resultCode: Int, intent: Intent?): Uri? =
+        intent?.data?.takeIf { resultCode == Activity.RESULT_OK }
+}
+
 private val primaryEntries = listOf(
     DrawerEntry(Destination.HOME),
     DrawerEntry(Destination.DAILY),
@@ -141,9 +163,12 @@ fun HopeCardsApp(
     val privacyOptionsRequired by viewModel.ads.privacyOptionsRequired.collectAsStateWithLifecycle()
     val dailyRequest by dailyHopeRequests.collectAsStateWithLifecycle()
     val isUpdateReady by updateReady.collectAsStateWithLifecycle()
-    val updateReadyMessage = stringResource(com.aaronsedna.hopecards.R.string.update_ready)
-    val restartToUpdateLabel = stringResource(com.aaronsedna.hopecards.R.string.restart_to_update)
     val context = LocalContext.current
+    val localizedContext = remember(state.settings.preferredTranslation) {
+        context.forTranslation(state.settings.preferredTranslation)
+    }
+    val updateReadyMessage = localizedContext.getString(com.aaronsedna.hopecards.R.string.update_ready)
+    val restartToUpdateLabel = localizedContext.getString(com.aaronsedna.hopecards.R.string.restart_to_update)
     val activity = LocalActivity.current ?: return
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val scope = rememberCoroutineScope()
@@ -155,6 +180,7 @@ fun HopeCardsApp(
     var journalEntryInDetail by remember { mutableStateOf<JournalEntry?>(null) }
     var editingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
     var deletingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
+    var pendingRestoreUri by remember { mutableStateOf<Uri?>(null) }
     var translationPickerOpen by rememberSaveable { mutableStateOf(false) }
 
     val closeVerse = {
@@ -166,11 +192,47 @@ fun HopeCardsApp(
         ActivityResultContracts.RequestPermission(),
     ) { granted ->
         viewModel.setReminderEnabled(granted)
-        if (!granted) viewModel.showNotice("Notifications are disabled. You can enable them later in Android Settings.")
+        if (!granted) viewModel.showNotice(localizedContext.getString(com.aaronsedna.hopecards.R.string.notifications_disabled))
     }
     val restoreBackup = rememberLauncherForActivityResult(
-        ActivityResultContracts.OpenDocument(),
-    ) { uri -> uri?.let(viewModel::restoreBackup) }
+        OpenBackupDocumentContract(),
+    ) { uri ->
+        uri?.let {
+            runCatching {
+                context.contentResolver.takePersistableUriPermission(
+                    it,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION,
+                )
+            }
+            pendingRestoreUri = it
+        }
+    }
+    val backupFolderPicker = rememberLauncherForActivityResult(
+        ActivityResultContracts.OpenDocumentTree(),
+    ) { uri ->
+        uri?.let {
+            runCatching {
+                context.contentResolver.takePersistableUriPermission(
+                    it,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
+                )
+            }.onFailure {
+                viewModel.showNotice(localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_folder_access_failed))
+                return@let
+            }
+            scope.launch {
+                runCatching { viewModel.createBackupIn(it) }
+                    .onSuccess {
+                        viewModel.showNotice(
+                            localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_cloud_connected),
+                        )
+                    }
+                    .onFailure { error ->
+                        viewModel.showNotice(error.message ?: localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_save_failed))
+                    }
+            }
+        }
+    }
 
     DisposableEffect(lifecycle) {
         val observer = LifecycleEventObserver { _, event ->
@@ -213,6 +275,7 @@ fun HopeCardsApp(
         if (state.selectedVerse != null) closeVerse() else viewModel.navigate(Destination.HOME)
     }
 
+    ProvideAppTranslation(state.settings.preferredTranslation) {
     HopeCardsTheme(state.settings.themeName) {
         val colors = LocalHopeColors.current
         val screenColors = if (state.destination == Destination.DAILY) ClassicHopeColors else colors
@@ -243,9 +306,9 @@ fun HopeCardsApp(
                         }
                         Spacer(Modifier.weight(1f))
                         Column(Modifier.padding(start = 24.dp, end = 24.dp, top = 24.dp, bottom = 8.dp)) {
-                            Text("Hope Cards", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 13.sp, lineHeight = 18.sp)
+                            Text(appString(com.aaronsedna.hopecards.R.string.app_name), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 13.sp, lineHeight = 18.sp)
                             Text(
-                                "Version ${BuildConfig.VERSION_NAME.removeSuffix("-debug")}",
+                                appString(com.aaronsedna.hopecards.R.string.version_format, BuildConfig.VERSION_NAME.removeSuffix("-debug")),
                                 color = colors.textTertiary,
                                 fontFamily = Poppins,
                                 fontWeight = FontWeight.Medium,
@@ -274,7 +337,7 @@ fun HopeCardsApp(
                     if (dailySharePresentation == null) TopAppBar(
                         title = {
                             Text(
-                                if (state.selectedVerse != null) "Verse" else state.destination.title,
+                                if (state.selectedVerse != null) appString(com.aaronsedna.hopecards.R.string.verse) else destinationTitle(state.destination),
                                 fontFamily = Poppins,
                                 fontWeight = FontWeight.Bold,
                             )
@@ -290,7 +353,7 @@ fun HopeCardsApp(
                             }) {
                                 AppIcon(
                                     if (state.selectedVerse != null) AppIconGlyph.ArrowBack else AppIconGlyph.Menu,
-                                    if (state.selectedVerse != null) "Back" else "Open navigation",
+                                    if (state.selectedVerse != null) appString(com.aaronsedna.hopecards.R.string.back) else appString(com.aaronsedna.hopecards.R.string.open_navigation),
                                     screenColors.text,
                                     size = 25.dp,
                                 )
@@ -380,9 +443,9 @@ fun HopeCardsApp(
                                                 snackbarHostState.currentSnackbarData?.dismiss()
                                                 snackbarHostState.showSnackbar(
                                                     when {
-                                                        it.isBlank() -> "Removed from your journal."
-                                                        existing.isBlank() -> "Added to your journal."
-                                                        else -> "Journal entry updated."
+                                                        it.isBlank() -> localizedContext.getString(com.aaronsedna.hopecards.R.string.removed_from_journal)
+                                                        existing.isBlank() -> localizedContext.getString(com.aaronsedna.hopecards.R.string.added_to_journal)
+                                                        else -> localizedContext.getString(com.aaronsedna.hopecards.R.string.journal_updated)
                                                     },
                                                 )
                                             }
@@ -430,19 +493,63 @@ fun HopeCardsApp(
                                     },
                                     onBackup = {
                                         scope.launch {
-                                            runCatching { viewModel.createBackup() }
-                                                .onSuccess { viewModel.showNotice("Your backup is ready and safely stored on this device.") }
-                                                .onFailure { viewModel.showNotice(it.message ?: "Backup could not be created.") }
+                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                                                runCatching { viewModel.createAutomaticBackup() }
+                                                    .onSuccess {
+                                                        val cloudFolder = viewModel.savedBackupFolder()
+                                                        if (cloudFolder == null) {
+                                                            viewModel.showNotice(
+                                                                localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_local_ready),
+                                                            )
+                                                        } else {
+                                                            runCatching { viewModel.createBackupIn(cloudFolder) }
+                                                                .onSuccess {
+                                                                    viewModel.showNotice(localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_local_cloud_ready))
+                                                                }
+                                                                .onFailure { error ->
+                                                                    viewModel.showNotice(
+                                                                        error.message ?: localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_local_cloud_failed),
+                                                                    )
+                                                                }
+                                                        }
+                                                    }
+                                                    .onFailure { error ->
+                                                        viewModel.showNotice(error.message ?: localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_create_failed))
+                                                    }
+                                            } else {
+                                                val savedFolder = viewModel.savedBackupFolder()
+                                                if (savedFolder == null) {
+                                                    backupFolderPicker.launch(null)
+                                                } else {
+                                                    runCatching { viewModel.createBackupIn(savedFolder) }
+                                                        .onSuccess {
+                                                            viewModel.showNotice(localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_folder_ready))
+                                                        }
+                                                        .onFailure { error ->
+                                                            viewModel.showNotice(error.message ?: localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_choose_again))
+                                                            backupFolderPicker.launch(savedFolder)
+                                                        }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    onBackupLocation = {
+                                        scope.launch {
+                                            backupFolderPicker.launch(viewModel.savedBackupFolder())
                                         }
                                     },
                                     onExport = {
                                         scope.launch {
                                             runCatching { viewModel.createBackup() }
-                                                .onSuccess { (uri, _) -> shareBackup(activity, uri) }
-                                                .onFailure { viewModel.showNotice(it.message ?: "Backup could not be exported.") }
+                                                .onSuccess { (uri, _) -> shareBackup(activity, uri, localizedContext.getString(com.aaronsedna.hopecards.R.string.save_backup_title)) }
+                                                .onFailure { viewModel.showNotice(it.message ?: localizedContext.getString(com.aaronsedna.hopecards.R.string.backup_export_failed)) }
                                         }
                                     },
-                                    onRestore = { restoreBackup.launch(arrayOf("application/json", "text/plain")) },
+                                    onRestore = {
+                                        scope.launch {
+                                            restoreBackup.launch(viewModel.restoreInitialUri())
+                                        }
+                                    },
                                 )
                                 Destination.PRIVACY -> PrivacyScreen(
                                     if (privacyOptionsRequired && !billing.isAdFree) {
@@ -465,6 +572,15 @@ fun HopeCardsApp(
                 NoticeDialog(message, viewModel.billing::clearMessage)
             }
         }
+        pendingRestoreUri?.let { uri ->
+            RestoreBackupDialog(
+                onDismiss = { pendingRestoreUri = null },
+                onRestore = {
+                    pendingRestoreUri = null
+                    viewModel.restoreBackup(uri)
+                },
+            )
+        }
         editingJournalEntry?.let { entry ->
             JournalEditorDialog(
                 entry = entry,
@@ -475,7 +591,7 @@ fun HopeCardsApp(
                     editingJournalEntry = null
                     scope.launch {
                         snackbarHostState.currentSnackbarData?.dismiss()
-                        snackbarHostState.showSnackbar("Journal entry updated.")
+                        snackbarHostState.showSnackbar(localizedContext.getString(com.aaronsedna.hopecards.R.string.journal_updated))
                     }
                 },
                 onDeleteRequest = {
@@ -493,7 +609,7 @@ fun HopeCardsApp(
                     closeVerse()
                     scope.launch {
                         snackbarHostState.currentSnackbarData?.dismiss()
-                        snackbarHostState.showSnackbar("Removed from your journal.")
+                        snackbarHostState.showSnackbar(localizedContext.getString(com.aaronsedna.hopecards.R.string.removed_from_journal))
                     }
                 },
             )
@@ -509,6 +625,51 @@ fun HopeCardsApp(
             )
         }
     }
+    }
+}
+
+@Composable
+private fun RestoreBackupDialog(onDismiss: () -> Unit, onRestore: () -> Unit) {
+    val colors = LocalHopeColors.current
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        icon = {
+            Surface(shape = CircleShape, color = colors.accentSoft, modifier = Modifier.size(44.dp)) {
+                Box(contentAlignment = Alignment.Center) {
+                    AppIcon(AppIconGlyph.RefreshOutline, null, colors.accent, size = 22.dp)
+                }
+            }
+        },
+        title = {
+            Text(
+                appString(com.aaronsedna.hopecards.R.string.restore_backup_title),
+                color = colors.text,
+                fontFamily = Poppins,
+                fontWeight = FontWeight.Bold,
+                fontSize = 21.sp,
+            )
+        },
+        text = {
+            Text(
+                appString(com.aaronsedna.hopecards.R.string.restore_backup_message),
+                color = colors.textSecondary,
+                style = MaterialTheme.typography.bodyMedium,
+            )
+        },
+        confirmButton = {
+            TextButton(onClick = onRestore) {
+                Text(appString(com.aaronsedna.hopecards.R.string.restore), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(appString(com.aaronsedna.hopecards.R.string.cancel), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+            }
+        },
+        shape = RoundedCornerShape(28.dp),
+        containerColor = colors.surface,
+        tonalElevation = 0.dp,
+    )
 }
 
 @Composable
@@ -526,7 +687,7 @@ private fun DrawerItems(
 private fun DrawerItem(entry: DrawerEntry, selected: Destination, onSelect: (Destination) -> Unit) {
     val colors = LocalHopeColors.current
     NavigationDrawerItem(
-        label = { Text(entry.destination.title, fontFamily = Poppins, fontWeight = FontWeight.SemiBold) },
+        label = { Text(destinationTitle(entry.destination), fontFamily = Poppins, fontWeight = FontWeight.SemiBold) },
         selected = selected == entry.destination,
         onClick = { onSelect(entry.destination) },
         icon = {
@@ -562,6 +723,20 @@ private fun drawerIcon(destination: Destination) = when (destination) {
 }
 
 @Composable
+private fun destinationTitle(destination: Destination): String = appString(
+    when (destination) {
+        Destination.HOME -> com.aaronsedna.hopecards.R.string.nav_home
+        Destination.DAILY -> com.aaronsedna.hopecards.R.string.nav_daily_hope
+        Destination.FAVORITES -> com.aaronsedna.hopecards.R.string.nav_favorites
+        Destination.JOURNAL -> com.aaronsedna.hopecards.R.string.nav_journal
+        Destination.REMOVE_ADS -> com.aaronsedna.hopecards.R.string.nav_remove_ads
+        Destination.SETTINGS -> com.aaronsedna.hopecards.R.string.nav_settings
+        Destination.PRIVACY -> com.aaronsedna.hopecards.R.string.nav_privacy
+        Destination.ABOUT -> com.aaronsedna.hopecards.R.string.nav_about
+    },
+)
+
+@Composable
 private fun NoticeDialog(message: String, onDismiss: () -> Unit) {
     val colors = LocalHopeColors.current
     val success = message.contains("restored", ignoreCase = true) ||
@@ -583,7 +758,8 @@ private fun NoticeDialog(message: String, onDismiss: () -> Unit) {
         },
         title = {
             Text(
-                if (success) "All set" else "A quick note",
+                if (success) appString(com.aaronsedna.hopecards.R.string.notice_success)
+                else appString(com.aaronsedna.hopecards.R.string.notice_info),
                 color = colors.text,
                 fontFamily = Poppins,
                 fontWeight = FontWeight.Bold,
@@ -593,7 +769,7 @@ private fun NoticeDialog(message: String, onDismiss: () -> Unit) {
         text = { Text(message, color = colors.textSecondary, style = MaterialTheme.typography.bodyMedium) },
         confirmButton = {
             TextButton(onClick = onDismiss) {
-                Text("Done", fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                Text(appString(com.aaronsedna.hopecards.R.string.done), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
             }
         },
         shape = RoundedCornerShape(28.dp),
@@ -640,27 +816,28 @@ private fun CalmSnackbar(data: SnackbarData) {
     }
 }
 
-internal fun verseShareText(verse: Verse): String =
+internal fun verseShareText(verse: Verse, attribution: String = SHARE_ATTRIBUTION): String =
     "${verse.text}\n\n— ${verse.displayReference} • ${verse.translation}\n\n" +
-        "$SHARE_ATTRIBUTION\n" +
+        "$attribution\n" +
         PLAY_STORE_URL
 
-internal fun dailyHopeImageShareText(): String = "$SHARE_ATTRIBUTION\n$PLAY_STORE_URL"
+internal fun dailyHopeImageShareText(attribution: String = SHARE_ATTRIBUTION): String = "$attribution\n$PLAY_STORE_URL"
 
 private fun shareVerse(activity: Activity, verse: Verse) {
+    val localized = activity.forTranslation(verse.edition)
     activity.startActivity(
         Intent.createChooser(
             Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
-                putExtra(Intent.EXTRA_TEXT, verseShareText(verse))
+                putExtra(Intent.EXTRA_TEXT, verseShareText(verse, localized.getString(com.aaronsedna.hopecards.R.string.share_attribution)))
             },
-            "Share Hope Card",
+            localized.getString(com.aaronsedna.hopecards.R.string.share_card_title),
         ),
     )
 }
 
-private fun shareBackup(activity: Activity, uri: android.net.Uri) {
+private fun shareBackup(activity: Activity, uri: android.net.Uri, chooserTitle: String) {
     activity.startActivity(
         Intent.createChooser(
             Intent(Intent.ACTION_SEND).apply {
@@ -668,12 +845,13 @@ private fun shareBackup(activity: Activity, uri: android.net.Uri) {
                 putExtra(Intent.EXTRA_STREAM, uri)
                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             },
-            "Save Hope Cards Backup",
+            chooserTitle,
         ),
     )
 }
 
 private suspend fun shareDailyHopeImage(activity: Activity, verse: Verse) {
+    val localized = activity.forTranslation(verse.edition)
     val bitmap = withContext(Dispatchers.Main.immediate) {
         val view = activity.window.decorView.rootView
         check(view.width > 0 && view.height > 0) { "Daily Hope is not ready to share." }
@@ -707,13 +885,13 @@ private suspend fun shareDailyHopeImage(activity: Activity, verse: Verse) {
                     putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
                     putExtra(
                         Intent.EXTRA_TEXT,
-                        dailyHopeImageShareText(),
+                        dailyHopeImageShareText(localized.getString(com.aaronsedna.hopecards.R.string.share_attribution)),
                     )
                     putExtra(Intent.EXTRA_STREAM, uri)
                     clipData = android.content.ClipData.newRawUri("Daily Hope", uri)
                     addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 },
-                "Share Daily Hope",
+                localized.getString(com.aaronsedna.hopecards.R.string.share_daily_title),
             ),
         )
     }

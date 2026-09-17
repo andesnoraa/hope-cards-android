@@ -2,7 +2,6 @@ package com.aaronsedna.hopecards.ui
 
 import android.graphics.Bitmap
 import androidx.compose.ui.test.junit4.v2.createEmptyComposeRule
-import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.lifecycle.ViewModelProvider
@@ -10,6 +9,7 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.platform.app.InstrumentationRegistry
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.MainActivity
+import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.data.AppRepository
 import com.aaronsedna.hopecards.model.*
 import java.io.File
@@ -35,7 +35,7 @@ class StoreScreenshotCapture {
         val originalJournal = runBlocking { repository.currentJournalEntries() }
         val originalDaily = runBlocking { repository.getDailyHopeRecord() }
         val device = args.getString("captureDevice") ?: "phone"
-        val dailyVerseId = args.getString("captureDailyVerseId") ?: "matthew-11-28"
+        val dailyVerseId = args.getString("captureDailyVerseId") ?: "philippians-4-13"
         val locales = listOf(
             "en-US" to Translation.BSB, "es-419" to Translation.RV1909,
             "fr-FR" to Translation.LSG1910, "de-DE" to Translation.LUT1912,
@@ -60,7 +60,7 @@ class StoreScreenshotCapture {
                     repository.replaceFavorites(setOf("matthew-11-28", "john-14-27", "philippians-4-13"))
                     repository.replaceJournalEntries(listOf(JournalEntry(
                         "$today:matthew-11-28", today, "matthew-11-28", "Matthew 11:28",
-                        HopeCardsViewModel.prompts.getValue("comfort"), notes.getValue(locale), "${today}T08:00:00Z",
+                        "comfort", notes.getValue(locale), "${today}T08:00:00Z",
                     )))
                     repository.setDailyHopeRecord(DailyHopeRecord(today, dailyVerseId, translation.id))
                 }
@@ -70,7 +70,7 @@ class StoreScreenshotCapture {
                     compose.waitUntil(20_000) { vm.uiState.value.initialized && vm.uiState.value.dailyVerse != null }
                     fun capture(name: String) {
                         // Daily Hope deliberately staggers its entrance over 2.7 seconds.
-                        compose.mainClock.advanceTimeBy(3_500)
+                        compose.mainClock.advanceTimeBy(5_000)
                         compose.waitForIdle()
                         Thread.sleep(300)
                         val file = File(context.getExternalFilesDir(null), "store-captures/$device/$locale/$name")
@@ -81,7 +81,8 @@ class StoreScreenshotCapture {
                         println("Captured $device/$locale/$name")
                     }
                     capture("01-card-back.png")
-                    compose.onNodeWithText("Draw a Card").performClick()
+                    val localized = context.forTranslation(translation)
+                    compose.onNodeWithText(localized.getString(R.string.draw_a_card)).performClick()
                     compose.waitForIdle()
                     compose.runOnIdle {
                         // Select the same real, concise verse in every Bible translation.
@@ -92,15 +93,13 @@ class StoreScreenshotCapture {
                     capture("02-card-front.png")
                     if (device == "phone") {
                         compose.runOnIdle { vm.navigate(Destination.DAILY) }
-                        compose.onNodeWithText("Share").assertIsDisplayed()
-                        compose.onNodeWithText("Journal").assertIsDisplayed()
                         capture("03-daily-hope.png")
                         compose.runOnIdle { vm.navigate(Destination.FAVORITES) }
                         capture("04-favorites.png")
                         compose.runOnIdle { vm.navigate(Destination.JOURNAL) }
                         capture("05-journal.png")
                         compose.runOnIdle { vm.navigate(Destination.SETTINGS) }
-                        compose.onNodeWithText("Theme").performClick()
+                        compose.onNodeWithText(localized.getString(R.string.settings_theme)).performClick()
                         capture("06-themes.png")
                     }
                 }

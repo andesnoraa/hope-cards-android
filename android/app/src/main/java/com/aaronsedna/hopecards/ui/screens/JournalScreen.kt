@@ -50,6 +50,13 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ui.LocalAppTranslation
+import com.aaronsedna.hopecards.ui.appQuantityString
+import com.aaronsedna.hopecards.ui.appString
+import com.aaronsedna.hopecards.ui.categoryLabel
+import com.aaronsedna.hopecards.ui.localeTag
+import com.aaronsedna.hopecards.ui.reflectionPrompt
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
@@ -86,8 +93,8 @@ fun JournalScreen(
                     AppIcon(AppIconGlyph.JournalOutline, null, colors.accent, size = 30.dp)
                 }
             }
-            Text("A quiet space is ready", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp))
-            Text("Open Daily Hope and keep a few words from a quiet reflection. They will appear here.", color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 12.dp).widthIn(max = 360.dp))
+            Text(appString(R.string.journal_empty_title), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp))
+            Text(appString(R.string.journal_empty_body), color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 12.dp).widthIn(max = 360.dp))
         }
     } else {
         Column(Modifier.fillMaxSize()) {
@@ -97,8 +104,8 @@ fun JournalScreen(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    if (selectionMode) "${selectedIds.size} selected"
-                    else "${entries.size} journal ${if (entries.size == 1) "entry" else "entries"}",
+                    if (selectionMode) appString(R.string.selected_count, selectedIds.size)
+                    else appQuantityString(R.plurals.journal_count, entries.size, entries.size),
                     color = colors.textTertiary,
                     fontFamily = Poppins,
                     fontWeight = FontWeight.Medium,
@@ -110,7 +117,7 @@ fun JournalScreen(
                         selectedIds = if (selectedIds.size == entries.size) emptySet() else entries.map(JournalEntry::id).toSet()
                     }) {
                         Text(
-                            if (selectedIds.size == entries.size) "Clear" else "Select all",
+                            if (selectedIds.size == entries.size) appString(R.string.clear) else appString(R.string.select_all),
                             color = colors.accent,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.SemiBold,
@@ -120,11 +127,11 @@ fun JournalScreen(
                         selectionMode = false
                         selectedIds = emptySet()
                     }) {
-                        Text("Cancel", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                        Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
                     }
                 } else {
                     TextButton(onClick = { selectionMode = true }) {
-                        Text("Select", color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                        Text(appString(R.string.select), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
@@ -158,7 +165,7 @@ fun JournalScreen(
                     ) {
                     if (verse != null) {
                         Text(
-                            verse.category.uppercase(),
+                            categoryLabel(verse.category).uppercase(),
                             color = colors.accent,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -258,7 +265,7 @@ fun JournalScreen(
                 ) {
                     AppIcon(AppIconGlyph.TrashOutline, null, Color.White, size = 19.dp)
                     Text(
-                        "Delete selected (${selectedIds.size})",
+                        appString(R.string.delete_selected_count, selectedIds.size),
                         color = Color.White,
                         fontFamily = Poppins,
                         fontWeight = FontWeight.Bold,
@@ -280,9 +287,9 @@ fun JournalScreen(
     }
     if (confirmSelectedRemoval) {
         DeleteJournalDialog(
-            title = "Delete selected entries?",
-            message = "${selectedIds.size} journal ${if (selectedIds.size == 1) "entry" else "entries"} will be permanently deleted.",
-            confirmLabel = "Delete",
+            title = appString(R.string.delete_selected_entries_title),
+            message = appString(R.string.delete_selected_entries_message, selectedIds.size),
+            confirmLabel = appString(R.string.delete),
             onDismiss = { confirmSelectedRemoval = false },
             onDelete = {
                 val ids = selectedIds
@@ -335,7 +342,7 @@ fun JournalEditorDialog(
                     }
                     Column(Modifier.padding(start = 13.dp).weight(1f)) {
                         Text(
-                            "Edit journal entry",
+                            appString(R.string.edit_journal_entry),
                             color = colors.text,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
@@ -352,12 +359,12 @@ fun JournalEditorDialog(
                         )
                     }
                     IconButton(onClick = onDismiss) {
-                        AppIcon(AppIconGlyph.Close, "Close journal editor", colors.textTertiary, size = 22.dp)
+                        AppIcon(AppIconGlyph.Close, appString(R.string.close_journal_editor), colors.textTertiary, size = 22.dp)
                     }
                 }
 
                 Text(
-                    "A GENTLE THOUGHT",
+                    appString(R.string.gentle_thought),
                     color = colors.accent,
                     fontFamily = Poppins,
                     fontWeight = FontWeight.Bold,
@@ -380,7 +387,7 @@ fun JournalEditorDialog(
                     modifier = Modifier.fillMaxWidth().height(150.dp).padding(top = 18.dp),
                     placeholder = {
                         Text(
-                            "Add a few words…",
+                            appString(R.string.add_few_words),
                             color = colors.textTertiary,
                             fontFamily = SourceSerif,
                         )
@@ -407,7 +414,7 @@ fun JournalEditorDialog(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        "Journal entry",
+                        appString(R.string.journal_entry),
                         color = colors.textTertiary,
                         fontFamily = Poppins,
                         fontSize = 12.sp,
@@ -434,7 +441,7 @@ fun JournalEditorDialog(
                     TextButton(onClick = onDeleteRequest) {
                         AppIcon(AppIconGlyph.TrashOutline, null, colors.danger, size = 18.dp)
                         Text(
-                            "Delete",
+                            appString(R.string.delete),
                             color = colors.danger,
                             fontFamily = Poppins,
                             fontWeight = FontWeight.Medium,
@@ -443,7 +450,7 @@ fun JournalEditorDialog(
                     }
                     Spacer(Modifier.weight(1f))
                     TextButton(onClick = onDismiss) {
-                        Text("Cancel", color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.Medium)
+                        Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.Medium)
                     }
                     Button(
                         onClick = { onSave(entry.copy(note = trimmedDraft)) },
@@ -454,7 +461,7 @@ fun JournalEditorDialog(
                         shape = RoundedCornerShape(14.dp),
                         modifier = Modifier.padding(start = 6.dp),
                     ) {
-                        Text("Save", fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                        Text(appString(R.string.save), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
@@ -464,19 +471,19 @@ fun JournalEditorDialog(
 
 @Composable
 fun DeleteJournalDialog(
-    title: String = "Delete journal entry?",
-    message: String = "This entry will be permanently removed from your journal.",
-    confirmLabel: String = "Delete",
+    title: String? = null,
+    message: String? = null,
+    confirmLabel: String? = null,
     onDismiss: () -> Unit,
     onDelete: () -> Unit,
 ) {
     val colors = LocalHopeColors.current
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title, fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-        text = { Text(message, fontFamily = Poppins) },
-        confirmButton = { TextButton(onClick = onDelete) { Text(confirmLabel, color = colors.danger, fontFamily = Poppins) } },
-        dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
+        title = { Text(title ?: appString(R.string.delete_journal_title), fontFamily = Poppins, fontWeight = FontWeight.Bold) },
+        text = { Text(message ?: appString(R.string.delete_journal_message), fontFamily = Poppins) },
+        confirmButton = { TextButton(onClick = onDelete) { Text(confirmLabel ?: appString(R.string.delete), color = colors.danger, fontFamily = Poppins) } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(appString(R.string.cancel)) } },
         shape = RoundedCornerShape(28.dp),
         containerColor = colors.surface,
         titleContentColor = colors.text,
@@ -485,11 +492,20 @@ fun DeleteJournalDialog(
     )
 }
 
-private fun formatDate(value: String): String = runCatching {
-    LocalDate.parse(value).format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.getDefault()))
-}.getOrDefault(value)
+@Composable
+private fun formatDate(value: String): String {
+    val locale = Locale.forLanguageTag(LocalAppTranslation.current.localeTag)
+    return runCatching { LocalDate.parse(value).format(DateTimeFormatter.ofPattern("d MMMM yyyy", locale)) }
+        .getOrDefault(value)
+}
 
-private fun calmReflectionText(value: String): String = legacyReflectionQuestions[value] ?: value
+@Composable
+private fun calmReflectionText(value: String): String {
+    val category = value.takeIf { it in reflectionCategories } ?: legacyPromptCategories[value]
+    return category?.let { reflectionPrompt(it) } ?: value
+}
+
+private val reflectionCategories = setOf("comfort", "courage", "faith", "freedom", "grace", "hope", "joy", "life", "love", "peace", "prayer", "strength", "trust", "wisdom")
 
 private const val JOURNAL_CHARACTER_LIMIT = 1_000
 
@@ -510,3 +526,14 @@ private val legacyReflectionQuestions = mapOf(
     "What choice could you approach with greater wisdom today?" to "Pause and choose what is thoughtful and kind.",
     "What is this verse inviting you to notice, trust, or practice today?" to "Keep the words that feel meaningful to you today.",
 )
+
+private val legacyPromptCategories = buildMap {
+    val categories = listOf(
+        "comfort", "courage", "faith", "freedom", "grace", "hope", "joy", "life",
+        "love", "peace", "prayer", "strength", "trust", "wisdom", "hope",
+    )
+    legacyReflectionQuestions.entries.zip(categories).forEach { (entry, category) ->
+        put(entry.key, category)
+        put(entry.value, category)
+    }
+}
