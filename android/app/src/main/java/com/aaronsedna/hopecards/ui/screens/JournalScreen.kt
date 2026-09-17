@@ -494,7 +494,8 @@ fun DeleteJournalDialog(
 
 @Composable
 private fun formatDate(value: String): String {
-    return runCatching { LocalDate.parse(value).format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.US)) }
+    val locale = Locale.forLanguageTag(LocalAppTranslation.current.localeTag)
+    return runCatching { LocalDate.parse(value).format(DateTimeFormatter.ofPattern("d MMMM yyyy", locale)) }
         .getOrDefault(value)
 }
 

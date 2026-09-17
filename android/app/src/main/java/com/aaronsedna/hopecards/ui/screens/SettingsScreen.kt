@@ -618,6 +618,6 @@ private fun PickerRow(title: String, subtitle: String, selected: Boolean, onClic
 }
 
 private fun formatTime(hour: Int, minute: Int, translation: Translation): String =
-    LocalTime.of(hour, minute).format(DateTimeFormatter.ofPattern("h:mm a", Locale.US))
+    LocalTime.of(hour, minute).format(DateTimeFormatter.ofPattern("h:mm a", Locale.forLanguageTag(translation.localeTag)))
 
 private fun sanitizeTimePart(value: String): String = value.filter(Char::isDigit).take(2)

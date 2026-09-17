@@ -34,12 +34,12 @@ class BibleDisplayDateFormatterTest {
             Translation.BBE to "Tuesday • 8 September",
             Translation.KJV to "Tuesday • 8 September",
             Translation.WEB to "Tuesday • 8 September",
-            Translation.LUT1912 to "Tuesday • 8 September",
-            Translation.LSG1910 to "Tuesday • 8 September",
-            Translation.RIV1927 to "Tuesday • 8 September",
-            Translation.RV1909 to "Tuesday • 8 September",
-            Translation.ADB1905 to "Tuesday • 8 September",
-            Translation.MAL1910 to "Tuesday • 8 September",
+            Translation.LUT1912 to "Dienstag • 8. September",
+            Translation.LSG1910 to "mardi • 8 septembre",
+            Translation.RIV1927 to "martedì • 8 settembre",
+            Translation.RV1909 to "martes • 8 de septiembre",
+            Translation.ADB1905 to "Martes • Setyembre 8",
+            Translation.MAL1910 to "സെപ്റ്റംബർ 8 • ചൊവ്വാഴ്ച",
         )
 
         expected.forEach { (translation, formatted) ->
