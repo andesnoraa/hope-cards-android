@@ -1,6 +1,7 @@
 package com.aaronsedna.hopecards.model
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -40,8 +41,9 @@ class BibleReferenceFormatterTest {
             ),
             Translation.MAL1910 to mapOf(
                 "Genesis 1:1" to "ഉല്പത്തി 1:1",
-                "Acts 1:8" to "അപ്പൊ. പ്രവൃത്തികൾ 1:8",
-                "1 Thessalonians 5:16-18" to "1. തെസ്സ. 5:16-18",
+                "Mark 1:1" to "മർക്കൊസ് 1:1",
+                "Acts 1:8" to "അപ്പൊ. പ്ര. 1:8",
+                "1 Thessalonians 5:16-18" to "1 തെസ്സ. 5:16-18",
                 "Revelation 21:4" to "വെളിപ്പാടു 21:4",
             ),
         )
@@ -57,7 +59,22 @@ class BibleReferenceFormatterTest {
     fun normalizesBothPsalmSourceFormsWithoutChangingTheAddress() {
         assertEquals("Psalmen 23:4", BibleReferenceFormatter.format("Psalm 23:4", Translation.LUT1912))
         assertEquals("Psalmen 46:1", BibleReferenceFormatter.format("Psalms 46:1", Translation.LUT1912))
-        assertEquals("സങ്കീർത്തനങ്ങൾ 23:4", BibleReferenceFormatter.format("Psalm 23:4", Translation.MAL1910))
+        assertEquals("സങ്കീ. 23:4", BibleReferenceFormatter.format("Psalm 23:4", Translation.MAL1910))
+    }
+
+    @Test
+    fun exposesFullMalayalamReferenceOnlyWhenCompactTitleIsUsed() {
+        assertEquals(
+            "സങ്കീർത്തനങ്ങൾ 23:4",
+            BibleReferenceFormatter.formatFull("Psalm 23:4", Translation.MAL1910),
+        )
+        assertEquals(
+            "സങ്കീർത്തനങ്ങൾ",
+            BibleReferenceFormatter.fullBookTitle("Psalm 23:4", Translation.MAL1910),
+        )
+        assertTrue(BibleReferenceFormatter.isAbbreviated("Psalm 23:4", Translation.MAL1910))
+        assertFalse(BibleReferenceFormatter.isAbbreviated("Mark 1:1", Translation.MAL1910))
+        assertEquals("മർക്കൊസ് 1:1", BibleReferenceFormatter.format("Mark 1:1", Translation.MAL1910))
     }
 
     @Test

@@ -28,19 +28,30 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.PlainTooltip
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TooltipBox
+import androidx.compose.material3.TooltipAnchorPosition
+import androidx.compose.material3.TooltipDefaults
+import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
@@ -53,6 +64,71 @@ import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
 import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
+import kotlinx.coroutines.launch
+
+/**
+ * Displays the compact, edition-appropriate reference while keeping the complete reference easy
+ * to discover. An abbreviated title reveals the full reference on tap, long press, mouse hover, or
+ * keyboard focus; unabridged titles remain ordinary text.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun BibleReferenceText(
+    verse: Verse,
+    color: Color,
+    fontSize: TextUnit,
+    modifier: Modifier = Modifier,
+    fontFamily: FontFamily = interfaceFontFor(verse.edition),
+    fontWeight: FontWeight = FontWeight.Bold,
+    textAlign: TextAlign = TextAlign.Center,
+) {
+    val referenceModifier = modifier.semantics {
+        contentDescription = verse.fullDisplayReference
+    }
+    if (!verse.hasAbbreviatedDisplayReference) {
+        Text(
+            text = verse.displayReference,
+            color = color,
+            fontFamily = fontFamily,
+            fontWeight = fontWeight,
+            fontSize = fontSize,
+            textAlign = textAlign,
+            modifier = referenceModifier,
+        )
+        return
+    }
+
+    val tooltipState = rememberTooltipState(isPersistent = false)
+    val scope = rememberCoroutineScope()
+    TooltipBox(
+        positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Above),
+        tooltip = {
+            PlainTooltip {
+                Text(
+                    text = verse.fullDisplayReference,
+                    fontFamily = fontFamily,
+                )
+            }
+        },
+        state = tooltipState,
+        enableUserInput = true,
+    ) {
+        Text(
+            text = verse.displayReference,
+            color = color,
+            fontFamily = fontFamily,
+            fontWeight = fontWeight,
+            fontSize = fontSize,
+            textAlign = textAlign,
+            modifier = referenceModifier.clickable(
+                indication = null,
+                interactionSource = remember { MutableInteractionSource() },
+            ) {
+                scope.launch { tooltipState.show() }
+            },
+        )
+    }
+}
 
 @Composable
 fun ActionPill(

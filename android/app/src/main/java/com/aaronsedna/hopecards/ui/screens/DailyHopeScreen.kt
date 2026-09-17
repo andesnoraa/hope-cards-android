@@ -3,13 +3,9 @@ package com.aaronsedna.hopecards.ui.screens
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -37,7 +33,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.VerticalDivider
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -67,8 +63,10 @@ import com.aaronsedna.hopecards.model.AppSettings
 import com.aaronsedna.hopecards.model.BibleDisplayDateFormatter
 import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.HopeCardsViewModel
+import com.aaronsedna.hopecards.ui.components.ActionPill
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
+import com.aaronsedna.hopecards.ui.components.BibleReferenceText
 import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.ClassicHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
@@ -173,8 +171,8 @@ fun DailyHopeScreen(
                 .alpha(verseAlpha.value).offset { IntOffset(0, verseOffset.value.dp.roundToPx()) },
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(
-                verse.displayReference,
+            BibleReferenceText(
+                verse = verse,
                 color = colors.text,
                 fontFamily = interfaceFontFor(verse.edition),
                 fontWeight = FontWeight.Bold,
@@ -205,40 +203,28 @@ fun DailyHopeScreen(
                 .padding(horizontal = 12.dp, vertical = 8.dp),
         )
         Row(
-            modifier = Modifier.fillMaxWidth().widthIn(max = 360.dp)
-                .padding(top = 52.dp).alpha(actionsAlpha.value),
-            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.padding(top = 60.dp).alpha(actionsAlpha.value),
         ) {
-            DailyHopeAction(
-                label = if (favorite) "Saved" else "Save",
-                glyph = if (favorite) AppIconGlyph.Heart else AppIconGlyph.HeartOutline,
-                tint = if (favorite) colors.danger else colors.accent,
-                onClick = onFavorite,
-                modifier = Modifier.weight(1f),
+            ActionPill(
+                if (favorite) "Saved" else "Save",
+                onFavorite,
+                favorite = favorite,
+                accentColor = colors.accent,
+                savedColor = colors.danger,
             )
-            VerticalDivider(
-                modifier = Modifier.height(56.dp),
-                thickness = 1.dp,
-                color = colors.accentLine.copy(alpha = .58f),
-            )
-            DailyHopeAction(
-                label = "Share",
-                glyph = AppIconGlyph.ShareOutline,
-                tint = colors.accent,
-                onClick = onShare,
-                modifier = Modifier.weight(1f),
-            )
-            VerticalDivider(
-                modifier = Modifier.height(56.dp),
-                thickness = 1.dp,
-                color = colors.accentLine.copy(alpha = .58f),
-            )
-            DailyHopeAction(
-                label = "Journal",
-                glyph = AppIconGlyph.JournalOutline,
-                tint = colors.accent,
-                onClick = { reflectionOpen = true },
-                modifier = Modifier.weight(1f),
+            ActionPill("Share", onShare, accentColor = colors.accent)
+        }
+        TextButton(
+            onClick = { reflectionOpen = true },
+            modifier = Modifier.padding(top = 18.dp),
+        ) {
+            Text(
+                if (existingNote.isBlank()) "Add to journal" else "Edit journal entry",
+                color = colors.accent,
+                fontFamily = interfaceFontFor(verse.edition),
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 15.sp,
             )
         }
     }
@@ -355,44 +341,6 @@ fun DailyHopeScreen(
                     )
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun DailyHopeAction(
-    label: String,
-    glyph: AppIconGlyph,
-    tint: androidx.compose.ui.graphics.Color,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val interactionSource = remember { MutableInteractionSource() }
-    val pressed by interactionSource.collectIsPressedAsState()
-    val contentAlpha by animateFloatAsState(
-        targetValue = if (pressed) .58f else 1f,
-        animationSpec = tween(durationMillis = 90),
-        label = "daily hope action press",
-    )
-    Box(
-        modifier = modifier.height(76.dp).alpha(contentAlpha).clickable(
-            interactionSource = interactionSource,
-            indication = null,
-            onClick = onClick,
-        ),
-        contentAlignment = Alignment.Center,
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            AppIcon(glyph, null, tint, size = 27.dp)
-            Text(
-                label,
-                color = tint,
-                fontFamily = Poppins,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
-                modifier = Modifier.padding(top = 6.dp),
-            )
         }
     }
 }

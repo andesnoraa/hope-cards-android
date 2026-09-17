@@ -20,6 +20,25 @@ object BibleReferenceFormatter {
         return "$book ${match.groupValues[2]}"
     }
 
+    fun formatFull(reference: String, translation: Translation): String {
+        if (translation.language == "English") return reference
+
+        val match = referencePattern.matchEntire(reference.trim()) ?: return reference
+        val canonicalBook = canonicalBook(match.groupValues[1])
+        val book = bookTitles[translation]?.get(canonicalBook) ?: return reference
+        return "$book ${match.groupValues[2]}"
+    }
+
+    fun fullBookTitle(reference: String, translation: Translation): String? {
+        val match = referencePattern.matchEntire(reference.trim()) ?: return null
+        return bookTitles[translation]?.get(canonicalBook(match.groupValues[1]))
+    }
+
+    fun isAbbreviated(reference: String, translation: Translation): Boolean {
+        val match = referencePattern.matchEntire(reference.trim()) ?: return false
+        return compactBookTitles[translation]?.containsKey(canonicalBook(match.groupValues[1])) == true
+    }
+
     internal fun hasLocalizedBookTitle(reference: String, translation: Translation): Boolean {
         if (translation.language == "English") return true
         val match = referencePattern.matchEntire(reference.trim()) ?: return false
@@ -55,9 +74,27 @@ object BibleReferenceFormatter {
             "2 Thessalonians" to "2 Tes.",
         ),
         Translation.MAL1910 to mapOf(
-            "Acts" to "അപ്പൊ. പ്രവൃത്തികൾ",
-            "1 Thessalonians" to "1. തെസ്സ.",
-            "2 Thessalonians" to "2. തെസ്സ.",
+            "Leviticus" to "ലേവ്യ.",
+            "Numbers" to "സംഖ്യാ.",
+            "Deuteronomy" to "ആവ.",
+            "Judges" to "ന്യായാ.",
+            "1 Kings" to "1 രാജാ.",
+            "2 Kings" to "2 രാജാ.",
+            "1 Chronicles" to "1 ദിന.",
+            "2 Chronicles" to "2 ദിന.",
+            "Psalms" to "സങ്കീ.",
+            "Proverbs" to "സദൃ.",
+            "Ecclesiastes" to "സഭാ.",
+            "Song of Solomon" to "ഉത്ത.",
+            "Lamentations" to "വിലാ.",
+            "Zechariah" to "സെഖ.",
+            "Acts" to "അപ്പൊ. പ്ര.",
+            "1 Corinthians" to "1 കൊരി.",
+            "2 Corinthians" to "2 കൊരി.",
+            "Philippians" to "ഫിലി.",
+            "Colossians" to "കൊലൊ.",
+            "1 Thessalonians" to "1 തെസ്സ.",
+            "2 Thessalonians" to "2 തെസ്സ.",
         ),
     )
 
@@ -295,23 +332,43 @@ object BibleReferenceFormatter {
         Translation.MAL1910 to mapOf(
             "Genesis" to "ഉല്പത്തി",
             "Exodus" to "പുറപ്പാടു",
+            "Leviticus" to "ലേവ്യപുസ്തകം",
             "Numbers" to "സംഖ്യാപുസ്തകം",
             "Deuteronomy" to "ആവർത്തനപുസ്തകം",
             "Joshua" to "യോശുവ",
+            "Judges" to "ന്യായാധിപന്മാർ",
+            "Ruth" to "രൂത്ത്",
             "1 Samuel" to "1. ശമൂവേൽ",
             "2 Samuel" to "2. ശമൂവേൽ",
+            "1 Kings" to "1. രാജാക്കന്മാർ",
+            "2 Kings" to "2. രാജാക്കന്മാർ",
             "1 Chronicles" to "1. ദിനവൃത്താന്തം",
+            "2 Chronicles" to "2. ദിനവൃത്താന്തം",
+            "Ezra" to "എസ്രാ",
             "Nehemiah" to "നെഹെമ്യാവു",
+            "Esther" to "എസ്ഥേർ",
             "Job" to "ഇയ്യോബ്",
             "Psalms" to "സങ്കീർത്തനങ്ങൾ",
             "Proverbs" to "സദൃശവാക്യങ്ങൾ",
+            "Ecclesiastes" to "സഭാപ്രസംഗി",
+            "Song of Solomon" to "ഉത്തമഗീതം",
             "Isaiah" to "യെശയ്യാവു",
             "Jeremiah" to "യിരെമ്യാവു",
             "Lamentations" to "വിലാപങ്ങൾ",
+            "Ezekiel" to "യെഹെസ്കേൽ",
             "Daniel" to "ദാനീയേൽ",
+            "Hosea" to "ഹോശേയ",
+            "Joel" to "യോവേൽ",
+            "Amos" to "ആമോസ്",
+            "Obadiah" to "ഓബദ്യാവു",
+            "Jonah" to "യോനാ",
             "Micah" to "മീഖാ",
             "Nahum" to "നഹൂം",
-            "Habakkuk" to "ഹബക്കൂൿ",
+            "Habakkuk" to "ഹബക്കൂക്",
+            "Zephaniah" to "സെഫന്യാവു",
+            "Haggai" to "ഹഗ്ഗായി",
+            "Zechariah" to "സെഖർയ്യാവു",
+            "Malachi" to "മലാഖി",
             "Matthew" to "മത്തായി",
             "Mark" to "മർക്കൊസ്",
             "Luke" to "ലൂക്കൊസ്",
@@ -328,6 +385,7 @@ object BibleReferenceFormatter {
             "2 Thessalonians" to "2. തെസ്സലൊനീക്യർ",
             "1 Timothy" to "1. തിമൊഥെയൊസ്",
             "2 Timothy" to "2. തിമൊഥെയൊസ്",
+            "Titus" to "തീത്തൊസ്",
             "Philemon" to "ഫിലേമോൻ",
             "Hebrews" to "എബ്രായർ",
             "James" to "യാക്കോബ്",
@@ -335,6 +393,7 @@ object BibleReferenceFormatter {
             "2 Peter" to "2. പത്രൊസ്",
             "1 John" to "1. യോഹന്നാൻ",
             "2 John" to "2. യോഹന്നാൻ",
+            "3 John" to "3. യോഹന്നാൻ",
             "Jude" to "യൂദാ",
             "Revelation" to "വെളിപ്പാടു",
         ),

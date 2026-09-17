@@ -11,6 +11,15 @@ data class Verse(
 ) {
     val displayReference: String
         get() = BibleReferenceFormatter.format(reference, edition)
+
+    val fullDisplayReference: String
+        get() = BibleReferenceFormatter.formatFull(reference, edition)
+
+    val fullDisplayBookTitle: String?
+        get() = BibleReferenceFormatter.fullBookTitle(reference, edition)
+
+    val hasAbbreviatedDisplayReference: Boolean
+        get() = BibleReferenceFormatter.isAbbreviated(reference, edition)
 }
 
 enum class Translation(

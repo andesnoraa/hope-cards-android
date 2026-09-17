@@ -32,6 +32,7 @@ import com.aaronsedna.hopecards.model.Verse
 import com.aaronsedna.hopecards.ui.components.ActionPill
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
+import com.aaronsedna.hopecards.ui.components.BibleReferenceText
 import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
@@ -60,7 +61,15 @@ fun VerseDetailScreen(
         Column(Modifier.fillMaxWidth().widthIn(max = 720.dp).alpha(alpha.value), horizontalAlignment = Alignment.CenterHorizontally) {
             Text(verse.category.uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, letterSpacing = 3.sp, modifier = Modifier.padding(bottom = 10.dp))
             Box(Modifier.size(80.dp, 3.dp).background(colors.accent, CircleShape))
-            Text(verse.displayReference, color = colors.text, fontFamily = interfaceFontFor(verse.edition), fontWeight = FontWeight.Bold, fontSize = 30.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 26.dp))
+            BibleReferenceText(
+                verse = verse,
+                color = colors.text,
+                fontFamily = interfaceFontFor(verse.edition),
+                fontWeight = FontWeight.Bold,
+                fontSize = 30.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(top = 26.dp),
+            )
             Text(
                 verse.text,
                 color = colors.cardText,
