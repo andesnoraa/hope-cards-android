@@ -7,7 +7,7 @@ import java.util.Locale
 /** Formats Daily Hope's visible date in the language of the selected Bible edition. */
 object BibleDisplayDateFormatter {
     fun dailyHopeTitle(translation: Translation): String =
-        if (translation == Translation.MAL1910) "ദൈവ വചനം" else "Today’s Hope"
+        if (translation == Translation.MAL1910) "ദൈവവചനം" else "Today’s Hope"
 
     fun format(date: LocalDate, translation: Translation): String {
         val (localeTag, pattern) = when (translation) {

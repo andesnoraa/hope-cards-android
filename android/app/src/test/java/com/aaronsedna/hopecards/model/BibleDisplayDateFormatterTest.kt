@@ -6,7 +6,7 @@ import org.junit.Test
 
 class BibleDisplayDateFormatterTest {
     @Test
-    fun `daily hope title stays in English for every Bible edition`() {
+    fun `daily hope title uses the Malayalam compound word for the Malayalam edition`() {
         val expected = mapOf(
             Translation.BSB to "Today’s Hope",
             Translation.BBE to "Today’s Hope",
@@ -17,7 +17,7 @@ class BibleDisplayDateFormatterTest {
             Translation.RIV1927 to "Today’s Hope",
             Translation.RV1909 to "Today’s Hope",
             Translation.ADB1905 to "Today’s Hope",
-            Translation.MAL1910 to "ദൈവ വചനം",
+            Translation.MAL1910 to "ദൈവവചനം",
         )
 
         expected.forEach { (translation, title) ->
