@@ -103,6 +103,7 @@ data class BackupInfo(
 enum class Destination(val title: String) {
     HOME("Hope Cards"),
     DAILY("Daily Hope"),
+    VERSE_ART("Verse Art"),
     FAVORITES("Favorites"),
     JOURNAL("Journal"),
     REMOVE_ADS("Remove Ads"),

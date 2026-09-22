@@ -81,6 +81,8 @@ import com.aaronsedna.hopecards.ads.BannerAd
 import com.aaronsedna.hopecards.model.Destination
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.model.VerseArtCatalog
+import com.aaronsedna.hopecards.ui.screens.VerseArtScreen
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.screens.AboutScreen
@@ -138,6 +140,7 @@ private class OpenBackupDocumentContract : ActivityResultContract<Uri?, Uri?>() 
 private val primaryEntries = listOf(
     DrawerEntry(Destination.HOME),
     DrawerEntry(Destination.DAILY),
+    DrawerEntry(Destination.VERSE_ART),
     DrawerEntry(Destination.FAVORITES),
     DrawerEntry(Destination.JOURNAL),
     DrawerEntry(Destination.SETTINGS),
@@ -182,6 +185,18 @@ fun HopeCardsApp(
     var deletingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
     var pendingRestoreUri by remember { mutableStateOf<Uri?>(null) }
     var translationPickerOpen by rememberSaveable { mutableStateOf(false) }
+    var artCategoryId by rememberSaveable { mutableStateOf<String?>(null) }
+    var artworkId by rememberSaveable { mutableStateOf<String?>(null) }
+    val artHasBack = state.destination == Destination.VERSE_ART && (artCategoryId != null || artworkId != null)
+    val hasBack = state.selectedVerse != null || artHasBack
+    val backFromContent = {
+        when {
+            state.selectedVerse != null -> { journalEntryInDetail = null; viewModel.closeVerse() }
+            state.destination == Destination.VERSE_ART && artworkId != null -> artworkId = null
+            state.destination == Destination.VERSE_ART && artCategoryId != null -> artCategoryId = null
+            else -> viewModel.navigate(Destination.HOME)
+        }
+    }
 
     val closeVerse = {
         journalEntryInDetail = null
@@ -272,7 +287,7 @@ fun HopeCardsApp(
     }
 
     BackHandler(enabled = state.selectedVerse != null || state.destination != Destination.HOME) {
-        if (state.selectedVerse != null) closeVerse() else viewModel.navigate(Destination.HOME)
+        backFromContent()
     }
 
     ProvideAppTranslation(state.settings.preferredTranslation) {
@@ -291,6 +306,8 @@ fun HopeCardsApp(
                         primaryEntries.forEach { entry ->
                             DrawerItem(entry, state.destination) { destination ->
                                 journalEntryInDetail = null
+                                artCategoryId = null
+                                artworkId = null
                                 viewModel.navigate(destination)
                                 scope.launch { drawerState.close() }
                             }
@@ -337,14 +354,18 @@ fun HopeCardsApp(
                     if (dailySharePresentation == null) TopAppBar(
                         title = {
                             Text(
-                                if (state.selectedVerse != null) appString(com.aaronsedna.hopecards.R.string.verse) else destinationTitle(state.destination),
+                                when {
+                                    state.selectedVerse != null -> appString(com.aaronsedna.hopecards.R.string.verse)
+                                    state.destination == Destination.VERSE_ART && artworkId == null -> VerseArtCatalog.title(artCategoryId)
+                                    else -> destinationTitle(state.destination)
+                                },
                                 fontFamily = Poppins,
                                 fontWeight = FontWeight.Bold,
                             )
                         },
                         navigationIcon = {
                             IconButton(onClick = {
-                                if (state.selectedVerse != null) closeVerse()
+                                if (hasBack) backFromContent()
                                 else scope.launch {
                                     drawerLoaded = true
                                     delay(16)
@@ -352,8 +373,8 @@ fun HopeCardsApp(
                                 }
                             }) {
                                 AppIcon(
-                                    if (state.selectedVerse != null) AppIconGlyph.ArrowBack else AppIconGlyph.Menu,
-                                    if (state.selectedVerse != null) appString(com.aaronsedna.hopecards.R.string.back) else appString(com.aaronsedna.hopecards.R.string.open_navigation),
+                                    if (hasBack) AppIconGlyph.ArrowBack else AppIconGlyph.Menu,
+                                    if (hasBack) appString(com.aaronsedna.hopecards.R.string.back) else appString(com.aaronsedna.hopecards.R.string.open_navigation),
                                     screenColors.text,
                                     size = 25.dp,
                                 )
@@ -453,6 +474,15 @@ fun HopeCardsApp(
                                         onChangeTranslation = { translationPickerOpen = true },
                                     )
                                 }
+                                Destination.VERSE_ART -> VerseArtScreen(
+                                    categoryId = artCategoryId,
+                                    artworkId = artworkId,
+                                    favorites = state.favorites,
+                                    onCategory = { artCategoryId = it },
+                                    onArtwork = { artworkId = it },
+                                    onFavorite = viewModel::toggleArtworkFavorite,
+                                    onNotice = viewModel::showNotice,
+                                )
                                 Destination.FAVORITES -> FavoritesScreen(
                                     verses = viewModel.favoriteVerses(),
                                     onOpen = { verse ->
@@ -714,6 +744,7 @@ private fun DrawerItem(entry: DrawerEntry, selected: Destination, onSelect: (Des
 private fun drawerIcon(destination: Destination) = when (destination) {
     Destination.HOME -> AppIconGlyph.HomeOutline
     Destination.DAILY -> AppIconGlyph.SunnyOutline
+    Destination.VERSE_ART -> AppIconGlyph.ImagesOutline
     Destination.FAVORITES -> AppIconGlyph.HeartOutline
     Destination.JOURNAL -> AppIconGlyph.JournalOutline
     Destination.REMOVE_ADS -> AppIconGlyph.SparklesOutline
@@ -727,6 +758,7 @@ private fun destinationTitle(destination: Destination): String = appString(
     when (destination) {
         Destination.HOME -> com.aaronsedna.hopecards.R.string.nav_home
         Destination.DAILY -> com.aaronsedna.hopecards.R.string.nav_daily_hope
+        Destination.VERSE_ART -> com.aaronsedna.hopecards.R.string.nav_verse_art
         Destination.FAVORITES -> com.aaronsedna.hopecards.R.string.nav_favorites
         Destination.JOURNAL -> com.aaronsedna.hopecards.R.string.nav_journal
         Destination.REMOVE_ADS -> com.aaronsedna.hopecards.R.string.nav_remove_ads

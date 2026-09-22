@@ -33,8 +33,8 @@ android {
         applicationId "com.aaronsedna.hopecards"
         minSdk 23
         targetSdk 36
-        versionCode 32
-        versionName "1.0.5"
+        versionCode 33
+        versionName "1.0.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -130,7 +130,9 @@ dependencies {
     implementation "com.android.billingclient:billing-ktx:9.1.0"
     implementation "com.google.android.play:app-update:2.1.0"
     implementation "com.google.android.play:app-update-ktx:2.1.0"
-    implementation "com.google.android.gms:play-services-ads:25.4.0"
+    implementation("com.google.android.gms:play-services-ads:25.4.0") {
+        because "25.5.0 requires API 24; 25.4.0 retains support for existing Android 6 users"
+    }
     implementation "com.google.android.ump:user-messaging-platform:4.0.0"
 
     constraints {

@@ -144,6 +144,10 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch { repository.toggleFavorite(verse.id) }
     }
 
+    fun toggleArtworkFavorite(artwork: com.aaronsedna.hopecards.model.VerseArtwork) {
+        viewModelScope.launch { repository.toggleFavorite(artwork.verseId) }
+    }
+
     fun removeFavorites(ids: Set<String>) {
         viewModelScope.launch { repository.removeFavorites(ids) }
     }

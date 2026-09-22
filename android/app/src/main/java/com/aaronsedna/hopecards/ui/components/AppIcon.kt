@@ -28,6 +28,7 @@ enum class AppIconGlyph(val codePoint: Int) {
     Heart(0xF36A),
     JournalOutline(0xF3A1),
     SparklesOutline(0xF58D),
+    ImagesOutline(0xF392),
     SettingsOutline(0xF56C),
     ShieldCheckmarkOutline(0xF579),
     InformationCircleOutline(0xF399),
