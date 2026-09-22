@@ -322,11 +322,11 @@
     "bodySize": 40
   },
   {
-    "id": "photo-foggy-pines",
+    "id": "photo-misty-bend",
     "edition": "web",
     "font": "bebas_neue",
-    "background": "photo-foggy-pines",
-    "label": "Foggy Pines",
+    "background": "photo-misty-bend",
+    "label": "Misty Bend",
     "group": "photo-woodland",
     "verseId": "psalm-147-3",
     "emphasis": "He heals",
@@ -525,22 +525,6 @@
     "verifiedText": "casting all your worries on him, because he cares for you.",
     "sourceReference": "1 Peter 5:7",
     "textSha256": "7e56c3b97871b3dc176251bd61365ef85b5088feebd5b18b34205fc511a17930",
-    "highlightFont": "caveatbrush",
-    "highlightSize": 110,
-    "bodySize": 40
-  },
-  {
-    "id": "photo-teal-bark",
-    "edition": "web",
-    "font": "bebas_neue",
-    "background": "photo-teal-bark",
-    "label": "Teal Bark",
-    "group": "photo-new",
-    "verseId": "psalm-147-3",
-    "emphasis": "He heals",
-    "verifiedText": "He heals the broken in heart, and binds up their wounds.",
-    "sourceReference": "Psalms 147:3",
-    "textSha256": "5a5040bcb08e06ec5f49d5fba744ff5bb7964922546263f498b3ed21a3b71592",
     "highlightFont": "caveatbrush",
     "highlightSize": 110,
     "bodySize": 40

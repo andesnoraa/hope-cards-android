@@ -17,6 +17,8 @@ import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.core.graphics.createBitmap
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -363,25 +365,26 @@ fun HopeCardsApp(
                     drawerContainerColor = colors.homeBackground,
                 ) {
                     if (drawerLoaded) Column(Modifier.fillMaxHeight()) {
-                        primaryEntries.forEach { entry ->
-                            DrawerItem(entry, state.destination) { destination ->
+                        Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
+                            primaryEntries.forEach { entry ->
+                                DrawerItem(entry, state.destination) { destination ->
+                                    journalEntryInDetail = null
+                                    artCategoryId = null
+                                    artworkId = null
+                                    viewModel.navigate(destination)
+                                    scope.launch { drawerState.close() }
+                                }
+                                if (entry.destination == Destination.SETTINGS) {
+                                    HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
+                                }
+                            }
+                            HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
+                            DrawerItems(informationEntries, state.destination) { destination ->
                                 journalEntryInDetail = null
-                                artCategoryId = null
-                                artworkId = null
                                 viewModel.navigate(destination)
                                 scope.launch { drawerState.close() }
                             }
-                            if (entry.destination == Destination.SETTINGS) {
-                                HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
-                            }
                         }
-                        HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
-                        DrawerItems(informationEntries, state.destination) { destination ->
-                            journalEntryInDetail = null
-                            viewModel.navigate(destination)
-                            scope.launch { drawerState.close() }
-                        }
-                        Spacer(Modifier.weight(1f))
                         Column(Modifier.padding(start = 24.dp, end = 24.dp, top = 24.dp, bottom = 8.dp)) {
                             Text(appString(com.aaronsedna.hopecards.R.string.app_name), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 13.sp, lineHeight = 18.sp)
                             Text(
@@ -784,16 +787,16 @@ private fun DrawerItem(entry: DrawerEntry, selected: Destination, onSelect: (Des
             AppIcon(
                 drawerIcon(entry.destination),
                 null,
-                if (selected == entry.destination) colors.accent else colors.cardText,
+                if (selected == entry.destination) colors.text else colors.cardText,
                 size = 24.dp,
             )
         },
-        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
         shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
         colors = NavigationDrawerItemDefaults.colors(
             selectedContainerColor = colors.drawerActiveBackground,
-            selectedIconColor = colors.accent,
-            selectedTextColor = colors.accent,
+            selectedIconColor = colors.text,
+            selectedTextColor = colors.text,
             unselectedContainerColor = androidx.compose.ui.graphics.Color.Transparent,
             unselectedIconColor = colors.cardText,
             unselectedTextColor = colors.cardText,

@@ -79,6 +79,19 @@ class VerseArtRenderingInstrumentedTest {
 
     @Test fun captureInstalledRendererSamples(): Unit = runBlocking {
         val output = File(context.getExternalFilesDir(null), "verse-art-installed").apply { mkdirs() }
+        if (InstrumentationRegistry.getArguments().getString("backgroundPreview") == "true") {
+            val renderer = VerseArtRenderer(context)
+            val repository = VerseRepository(context)
+            for (edition in listOf(Translation.WEB, Translation.MAL1910)) {
+                val verse = checkNotNull(repository.byId("psalm-56-3", edition))
+                for (background in listOf("photo-quiet-reservoir", "photo-forest-mist", "photo-sunbeam-field", "photo-misty-bend")) {
+                    val bitmap = renderer.render(verse, 1080, renderer.design(verse).copy(background = background))
+                    File(output, "$background-${edition.id}.jpg").outputStream().use { bitmap.compress(Bitmap.CompressFormat.JPEG, 93, it) }
+                    bitmap.recycle()
+                }
+            }
+            return@runBlocking
+        }
         val samples = listOf("peace", "strength", "joy", "hope-faithful")
         for (edition in listOf(Translation.WEB, Translation.MAL1910)) {
             for (id in samples) {

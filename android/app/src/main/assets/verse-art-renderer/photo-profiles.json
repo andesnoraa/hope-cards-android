@@ -40,6 +40,60 @@
     "footerInk": "#214536",
     "family": "foliage"
   },
+  "misty-forest": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 860,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "family": "forest"
+  },
+  "moonlit-mist": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 860,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "family": "night"
+  },
+  "misty-mountains": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 860,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "family": "forest"
+  },
+  "dark-dew-leaf": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 860,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "family": "foliage"
+  },
+  "muted-wheat": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 860,
+    "ink": "#403125",
+    "footerInk": "#403125",
+    "family": "golden"
+  },
+  "muted-flowers": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 860,
+    "ink": "#473445",
+    "footerInk": "#473445",
+    "family": "flowers"
+  },
   "photo-alpine-lake": {
     "centerX": 690,
     "centerY": 225,
@@ -47,15 +101,6 @@
     "width": 640,
     "ink": "#142B36",
     "family": "lake"
-  },
-  "photo-foggy-pines": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 620,
-    "width": 800,
-    "ink": "#FFFFFF",
-    "shadow": true,
-    "family": "forest"
   },
   "photo-quiet-reservoir": {
     "centerX": 540,
@@ -140,8 +185,8 @@
     "height": 350,
     "width": 670,
     "ink": "#FFF8E9",
-    "family": "wood",
-    "shadow": true
+    "shadow": true,
+    "family": "wood"
   },
   "photo-coastal-dawn": {
     "centerX": 540,
@@ -161,24 +206,15 @@
     "citationY": 650,
     "family": "wood"
   },
-  "photo-teal-bark": {
-    "centerX": 540,
-    "centerY": 450,
-    "height": 650,
-    "width": 820,
-    "ink": "#FFF8E9",
-    "shadow": true,
-    "family": "wood"
-  },
   "photo-golden-field": {
     "centerX": 540,
     "centerY": 665,
     "height": 300,
     "width": 820,
     "ink": "#FFF8E9",
+    "shadow": true,
     "citationInk": "#FFF8E9",
-    "family": "golden",
-    "shadow": true
+    "family": "golden"
   },
   "photo-amber-flower": {
     "centerX": 540,
@@ -189,15 +225,24 @@
     "footerInk": "#4B321B",
     "family": "golden"
   },
+  "photo-misty-bend": {
+    "centerX": 420,
+    "centerY": 510,
+    "height": 420,
+    "width": 720,
+    "ink": "#FFF8E9",
+    "citationInk": "#FFF8E9",
+    "family": "forest"
+  },
   "photo-forest-road": {
     "centerX": 540,
     "centerY": 660,
     "height": 280,
     "width": 780,
     "ink": "#FFF8E9",
+    "shadow": true,
     "citationInk": "#FFF8E9",
-    "family": "forest",
-    "shadow": true
+    "family": "forest"
   },
   "photo-sunbeam-field": {
     "centerX": 540,
@@ -215,59 +260,5 @@
     "ink": "#463019",
     "footerInk": "#463019",
     "family": "golden"
-  },
-  "misty-forest": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 660,
-    "width": 860,
-    "ink": "#FFF8E9",
-    "footerInk": "#FFF8E9",
-    "family": "forest"
-  },
-  "moonlit-mist": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 660,
-    "width": 860,
-    "ink": "#FFF8E9",
-    "footerInk": "#FFF8E9",
-    "family": "night"
-  },
-  "misty-mountains": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 660,
-    "width": 860,
-    "ink": "#FFF8E9",
-    "footerInk": "#FFF8E9",
-    "family": "forest"
-  },
-  "dark-dew-leaf": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 660,
-    "width": 860,
-    "ink": "#FFF8E9",
-    "footerInk": "#FFF8E9",
-    "family": "foliage"
-  },
-  "muted-wheat": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 660,
-    "width": 860,
-    "ink": "#403125",
-    "footerInk": "#403125",
-    "family": "golden"
-  },
-  "muted-flowers": {
-    "centerX": 540,
-    "centerY": 470,
-    "height": 660,
-    "width": 860,
-    "ink": "#473445",
-    "footerInk": "#473445",
-    "family": "flowers"
   }
 }

@@ -20,26 +20,6 @@
     "highlightFont": "caveatbrush"
   },
   {
-    "name": "photo-foggy-pines",
-    "sourceFile": "pexels-amel-uzunovic-440739273-35451886.jpg",
-    "sourceSha256": "551f084edba1b0751d1733d610019dca2f2a32d2c3c12fef6cb956b4d30059fb",
-    "crop": [
-      827,
-      0,
-      3590,
-      3590
-    ],
-    "outputSize": [
-      1080,
-      1080
-    ],
-    "webpQuality": 88,
-    "bytes": 320264,
-    "verseId": "psalm-147-3",
-    "emphasis": "He heals",
-    "highlightFont": "caveatbrush"
-  },
-  {
     "name": "photo-quiet-reservoir",
     "sourceFile": "pexels-cecile-hournau-419900900-15499497.jpg",
     "sourceSha256": "b582f0b925dfc587641cd164f077878bedb940d5a82a62dc1779538cbd0f0a8e",
@@ -282,26 +262,6 @@
     "referenceSourceFile": "pexels-raymond-petrik-1448389535-28458039.jpg"
   },
   {
-    "name": "photo-teal-bark",
-    "sourceFile": "pexels-wyxina-tresse-311038210-27595107.jpg",
-    "sourceSha256": "cd8d822e2f00b054f6e726510e8d0c7f83597d87d952ed69d0c5c2ba1a836fbe",
-    "crop": [
-      1160,
-      0,
-      4640,
-      4640
-    ],
-    "outputSize": [
-      1080,
-      1080
-    ],
-    "webpQuality": 88,
-    "bytes": 409808,
-    "verseId": "psalm-147-3",
-    "emphasis": "He heals",
-    "highlightFont": "caveatbrush"
-  },
-  {
     "name": "photo-golden-field",
     "sourceFile": "pexels-gerzon-pinata-470468947-32210525.jpg",
     "sourceSha256": "3943905e31233190a64f3db7fd909cc57012c9145c0ec7bd760ce7d021d41281",
@@ -339,6 +299,26 @@
     "bytes": 46714,
     "verseId": "psalm-37-4",
     "emphasis": "delight yourself in the LORD,",
+    "highlightFont": "caveatbrush"
+  },
+  {
+    "name": "photo-misty-bend",
+    "sourceFile": "pexels-timberly-hawkins-157463692-35000116.jpg",
+    "sourceSha256": "80a515d06fc06816c452643c9d434f9a8bd7463d0aa0b86ced15dce1d35dd0b9",
+    "crop": [
+      0,
+      1700,
+      4016,
+      4016
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 88,
+    "bytes": 102140,
+    "verseId": "psalm-147-3",
+    "emphasis": "He heals",
     "highlightFont": "caveatbrush"
   },
   {

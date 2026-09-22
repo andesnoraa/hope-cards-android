@@ -39,7 +39,7 @@ The test asserts unchanged source text, no omitted text when applying emphasis, 
 
 ## Production integration
 
-The native gallery uses thirty shared WebP backgrounds and a fixed font set. A single cancellable render queue generates only requested thumbnails/details. The bitmap cache is capped at 8 MiB; rendered-image and shared-export disk directories are capped at 32 MiB each. Application memory callbacks clear the bitmap cache. The renderer retains application context only, and creates no periodic job, wake lock, or service. English editorial titles remain stable while the Bible text, citation and edition label follow the selected translation. Reviewed design overrides are used only when their source text still matches exactly. Other entries use the verified verse text, existing matching English emphasis where available, and deterministic phrase/type/background selection.
+The native gallery uses twenty-nine shared WebP backgrounds and a fixed font set. A single cancellable render queue generates only requested thumbnails/details. The bitmap cache is capped at 8 MiB; rendered-image and shared-export disk directories are capped at 32 MiB each. Application memory callbacks clear the bitmap cache. The renderer retains application context only, and creates no periodic job, wake lock, or service. Gallery captions show only the localized citation and favorite control; the Bible text, citation and edition label follow the selected translation. Reviewed design overrides are used only when their source text still matches exactly. Other entries use the verified verse text, existing matching English emphasis where available, and deterministic phrase/type/background selection.
 
 The original baked artwork files live only in `android/app/src/androidTest/assets/verse-art/` for the legacy authoring workflow. They are excluded from both debug and release app packages; the gallery, saving, and sharing use the native renderer.
 
@@ -64,3 +64,7 @@ To reproduce the original three-option greenery comparison, run `GenerateVerseAr
 ### Approved Quiet Branch replacement
 
 Quiet Branch was approved on 2026-09-22. `approved-backgrounds/quiet-branch.webp` replaces `photo-quiet-branch` while preserving its ID and scene family. Its 800 × 490 text region stays above the branch, with an ivory preferred ink and citation at y=650. The source library now contains 19 original photos and 11 generated backgrounds (30 total). `import_photos.py` reapplies `approved-backgrounds/overrides.json` so reimporting does not undo this approval; generation prompts are stored alongside it. The artwork cache version is `artistic-v12-approved-quiet-branch`. Woodland Path and Golden Meadow remain unapproved previews.
+
+### September 23 photo selection
+
+Retained Quiet Reservoir, Forest Mist and Sunbeam Field without duplicate copies. Added Misty Bend from the supplied Timberly Hawkins photograph, cropped to the winding road and dark foliage. Removed Foggy Pines and Teal Bark at the user’s request. The library contains 29 backgrounds (18 original photos and 11 approved generated assets), with no washout filters. The cache version is `artistic-v13-curated-forest-road`.

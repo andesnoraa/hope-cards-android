@@ -2,6 +2,9 @@ package com.aaronsedna.hopecards.ui
 
 import android.graphics.Bitmap
 import androidx.compose.ui.test.junit4.v2.createEmptyComposeRule
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.lifecycle.ViewModelProvider
@@ -23,6 +26,42 @@ import org.junit.Test
 /** Opt-in capture utility. Uses the real app UI and restores user-authored data afterward. */
 class StoreScreenshotCapture {
     @get:Rule val compose = createEmptyComposeRule()
+
+    @Test fun captureDrawerThemes(): Unit = runBlocking {
+        assumeTrue(InstrumentationRegistry.getArguments().getString("captureDrawer") == "true")
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val context = instrumentation.targetContext
+        val repository = AppRepository(context)
+        repository.initialize()
+        val original = repository.currentSettings()
+        val output = File(context.getExternalFilesDir(null), "drawer-review").apply { mkdirs() }
+        fun capture(name: String) {
+            compose.waitForIdle()
+            android.os.SystemClock.sleep(300)
+            val bitmap = checkNotNull(instrumentation.uiAutomation.takeScreenshot())
+            File(output, "$name.png").outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+            bitmap.recycle()
+        }
+        try {
+            for (theme in ThemeName.entries) {
+                repository.updateSettings { it.copy(themeName = theme) }
+                ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+                    lateinit var vm: HopeCardsViewModel
+                    scenario.onActivity { vm = ViewModelProvider(it)[HopeCardsViewModel::class.java] }
+                    compose.waitUntil(15_000) { vm.uiState.value.initialized }
+                    compose.runOnIdle { vm.navigate(Destination.VERSE_ART) }
+                    compose.waitUntil(15_000) {
+                        runCatching { compose.onNodeWithTag("art-browse-saved").assertIsDisplayed() }.isSuccess
+                    }
+                    compose.onNodeWithTag("art-browse-all").assertIsDisplayed()
+                    capture("gallery-${theme.id}")
+                    compose.onNodeWithContentDescription("Open navigation").performClick()
+                    compose.onNodeWithText("Remove ads").assertIsDisplayed()
+                    capture("drawer-${theme.id}")
+                }
+            }
+        } finally { repository.replaceSettings(original) }
+    }
 
     @Test fun captureListingScreenshots() {
         val args = InstrumentationRegistry.getArguments()

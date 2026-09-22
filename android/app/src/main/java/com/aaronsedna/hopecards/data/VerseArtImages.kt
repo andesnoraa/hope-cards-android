@@ -23,7 +23,7 @@ import java.security.MessageDigest
 
 /** One cancellable render queue; no jobs, timers or activity references are retained. */
 object VerseArtImages {
-    private const val VERSION = "artistic-v12-approved-quiet-branch"
+    private const val VERSION = "artistic-v13-curated-forest-road"
     private const val MEMORY_BYTES = 8 * 1024 * 1024
     private const val DISK_BYTES = 32L * 1024 * 1024
     private val mutex = Mutex()

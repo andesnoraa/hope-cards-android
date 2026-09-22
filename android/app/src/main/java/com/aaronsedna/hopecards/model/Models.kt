@@ -101,12 +101,12 @@ data class BackupInfo(
 )
 
 enum class Destination(val title: String) {
-    HOME("Draw a Verse"),
+    HOME("Hope Cards"),
     DAILY("Daily Hope"),
     VERSE_ART("Verse Gallery"),
     FAVORITES("Saved Verses"),
     JOURNAL("My Journal"),
-    REMOVE_ADS("Go Ad-Free"),
+    REMOVE_ADS("Remove ads"),
     SETTINGS("Settings"),
     PRIVACY("Privacy Policy"),
     ABOUT("About Hope Cards"),

@@ -32,7 +32,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.R
@@ -81,47 +80,59 @@ fun VerseArtScreen(
         when {
             gallery == null -> CircularProgressIndicator(Modifier.padding(32.dp))
             artwork != null -> VerseArtDetail(artwork, artwork.verseId in favorites, { onFavorite(artwork) }, onNotice)
-            categoryId == null -> LazyColumn(
-                Modifier.widthIn(max = 760.dp).fillMaxSize(),
-                state = categoryScroll,
-                contentPadding = PaddingValues(horizontal = 20.dp, vertical = 12.dp),
-            ) {
-                item {
-                    Text(appString(R.string.art_choose_category), fontFamily = Poppins, fontSize = 13.sp,
-                        color = colors.textSecondary, modifier = Modifier.padding(bottom = 10.dp))
-                }
-                items(VerseArtCatalog.categories, key = { it.id }) { category ->
-                    Column {
-                        Row(
-                            Modifier.fillMaxWidth().testTag("art-category-${category.id}")
-                                .clickable(role = Role.Button) { onCategory(category.id) }.padding(vertical = 16.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            VerseArtImage(VerseArtCatalog.artwork(category.coverArtworkId.takeIf { it in available }
-                                ?: category.artworkIds.first { it in available })!!,
-                                thumbnail = true, modifier = Modifier.size(60.dp), description = null)
-                            Column(Modifier.weight(1f).padding(horizontal = 16.dp)) {
-                                Text(category.title, color = colors.text, fontFamily = Poppins,
-                                    fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
-                                Text(category.description, color = colors.textSecondary, fontFamily = Poppins,
-                                    fontSize = 12.sp, lineHeight = 19.sp, modifier = Modifier.padding(top = 4.dp))
-                            }
-                            Column(horizontalAlignment = Alignment.End) {
-                                Text(category.artworkIds.count { it in available }.toString(), color = colors.textSecondary,
-                                    fontFamily = Poppins, fontSize = 12.sp)
-                                AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
-                            }
-                        }
-                        HorizontalDivider(color = colors.divider)
+            categoryId == null -> Column(Modifier.widthIn(max = 760.dp).fillMaxSize()) {
+                Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Button(onClick = { onCategory(VerseArtCatalog.ALL) },
+                        modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("art-browse-all"),
+                        shape = RoundedCornerShape(12.dp),
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground, contentColor = colors.buttonText)) {
+                        Text(appString(R.string.art_browse_all), fontFamily = Poppins, fontSize = 14.sp,
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center)
+                    }
+                    OutlinedButton(onClick = { onCategory(VerseArtCatalog.SAVED) },
+                        modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("art-browse-saved"),
+                        shape = RoundedCornerShape(12.dp),
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, colors.textSecondary),
+                        colors = ButtonDefaults.outlinedButtonColors(contentColor = colors.text)) {
+                        Text(appString(R.string.art_saved), fontFamily = Poppins, fontSize = 14.sp,
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center)
                     }
                 }
-                item {
-                    Column(Modifier.fillMaxWidth().padding(top = 12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                        TextButton(onClick = { onCategory(VerseArtCatalog.ALL) }, Modifier.testTag("art-browse-all")) {
-                            Text(appString(R.string.art_browse_all), fontFamily = Poppins, color = colors.text)
-                        }
-                        TextButton(onClick = { onCategory(VerseArtCatalog.SAVED) }, Modifier.testTag("art-browse-saved")) {
-                            Text(appString(R.string.art_saved), fontFamily = Poppins, color = colors.text)
+                LazyColumn(
+                    Modifier.fillMaxWidth().weight(1f),
+                    state = categoryScroll,
+                    contentPadding = PaddingValues(horizontal = 20.dp, vertical = 12.dp),
+                ) {
+                    item {
+                        Text(appString(R.string.art_choose_category), fontFamily = Poppins, fontSize = 13.sp,
+                            color = colors.textSecondary, modifier = Modifier.padding(bottom = 10.dp))
+                    }
+                    items(VerseArtCatalog.categories, key = { it.id }) { category ->
+                        Column {
+                            Row(
+                                Modifier.fillMaxWidth().testTag("art-category-${category.id}")
+                                    .clickable(role = Role.Button) { onCategory(category.id) }.padding(vertical = 16.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                VerseArtImage(VerseArtCatalog.artwork(category.coverArtworkId.takeIf { it in available }
+                                    ?: category.artworkIds.first { it in available })!!,
+                                    thumbnail = true, modifier = Modifier.size(60.dp), description = null)
+                                Column(Modifier.weight(1f).padding(horizontal = 16.dp)) {
+                                    Text(category.title, color = colors.text, fontFamily = Poppins,
+                                        fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+                                    Text(category.description, color = colors.textSecondary, fontFamily = Poppins,
+                                        fontSize = 12.sp, lineHeight = 19.sp, modifier = Modifier.padding(top = 4.dp))
+                                }
+                                Column(horizontalAlignment = Alignment.End) {
+                                    Text(category.artworkIds.count { it in available }.toString(), color = colors.textSecondary,
+                                        fontFamily = Poppins, fontSize = 12.sp)
+                                    AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
+                                }
+                            }
+                            HorizontalDivider(color = colors.divider)
                         }
                     }
                 }
@@ -140,17 +151,15 @@ fun VerseArtScreen(
                     LazyVerticalGrid(GridCells.Adaptive(150.dp), state = galleryScroll, modifier = Modifier.testTag("art-gallery"), contentPadding = PaddingValues(20.dp, 0.dp, 20.dp, 24.dp),
                         verticalArrangement = Arrangement.spacedBy(20.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                         items(artworks, key = { it.id }) { art ->
+                            val reference = available[art.id].orEmpty()
                             Column {
                                 VerseArtImage(art, thumbnail = true,
                                     modifier = Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-open-${art.id}")
-                                        .clickable(role = Role.Button) { onArtwork(art.id) }, description = art.title)
+                                        .clickable(role = Role.Button) { onArtwork(art.id) }, description = reference)
                                 Row(Modifier.fillMaxWidth().padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                                    Column(Modifier.weight(1f)) {
-                                        Text(art.title, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.SemiBold,
-                                            fontSize = 13.sp, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                                        Text(available[art.id].orEmpty(), color = colors.textSecondary,
-                                            fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins, fontSize = 12.sp)
-                                    }
+                                    Text(reference, color = colors.textSecondary,
+                                        fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins,
+                                        fontSize = 12.sp, modifier = Modifier.weight(1f))
                                     ArtFavoriteButton(art.verseId in favorites, { onFavorite(art) },
                                         Modifier.testTag("art-favorite-${art.id}"))
                                 }

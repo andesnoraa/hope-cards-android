@@ -54,7 +54,7 @@ photos = json.loads((ROOT / 'android/app/src/main/assets/verse-art-renderer/phot
 for p in photos:
     name = p['name']
     add(name, 'web', 'bebas_neue', name, name.removeprefix('photo-').replace('-', ' ').title(),
-        'photo-new' if photos.index(p) >= 10 else 'photo-woodland' if name in ['photo-foggy-pines','photo-shadow-ivy','photo-woodland-deer','photo-forest-mist','photo-warm-highlands'] else 'photo-lakes',
+        'photo-new' if photos.index(p) >= 10 else 'photo-woodland' if name in ['photo-misty-bend','photo-shadow-ivy','photo-woodland-deer','photo-forest-mist','photo-warm-highlands'] else 'photo-lakes',
         verse_id=p['verseId'], emphasis=p['emphasis'], highlightFont=p['highlightFont'],
         highlightSize=110, bodySize=40)
 
