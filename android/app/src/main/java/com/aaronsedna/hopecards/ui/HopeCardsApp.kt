@@ -75,6 +75,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.aaronsedna.hopecards.notifications.ReminderScheduler
+import com.aaronsedna.hopecards.notifications.DailyHopeRequest
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.ads.AdPlacementPolicy
 import com.aaronsedna.hopecards.ads.BannerAd
@@ -155,7 +157,7 @@ private val informationEntries = listOf(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HopeCardsApp(
-    dailyHopeRequests: StateFlow<Int>,
+    dailyHopeRequests: StateFlow<DailyHopeRequest?>,
     updateReady: StateFlow<Boolean>,
     onCompleteUpdate: () -> Unit,
     viewModel: HopeCardsViewModel = viewModel(),
@@ -187,12 +189,40 @@ fun HopeCardsApp(
     var translationPickerOpen by rememberSaveable { mutableStateOf(false) }
     var artCategoryId by rememberSaveable { mutableStateOf<String?>(null) }
     var artworkId by rememberSaveable { mutableStateOf<String?>(null) }
+    var artworkSession by rememberSaveable { mutableStateOf(0L) }
+    var artworkCompletionRecorded by rememberSaveable { mutableStateOf(false) }
+    var artworkExitPending by remember { mutableStateOf(false) }
     val artHasBack = state.destination == Destination.VERSE_ART && (artCategoryId != null || artworkId != null)
     val hasBack = state.selectedVerse != null || artHasBack
     val backFromContent = {
         when {
             state.selectedVerse != null -> { journalEntryInDetail = null; viewModel.closeVerse() }
-            state.destination == Destination.VERSE_ART && artworkId != null -> artworkId = null
+            state.destination == Destination.VERSE_ART && artworkId != null -> {
+                if (!artworkExitPending) {
+                    if (artworkCompletionRecorded || adsSuppressed) {
+                        artworkId = null
+                    } else {
+                        val exitingArtwork = artworkId
+                        val exitingSession = artworkSession
+                        // Record once per visit, including across recreation or repeated Back taps.
+                        artworkCompletionRecorded = true
+                        artworkExitPending = true
+                        val stillViewingArtwork = {
+                            artworkSession == exitingSession && artworkId == exitingArtwork &&
+                                viewModel.uiState.value.destination == Destination.VERSE_ART &&
+                                viewModel.uiState.value.selectedVerse == null && !activity.isDestroyed
+                        }
+                        viewModel.completedArtwork(
+                            activity,
+                            isCurrentArtwork = { stillViewingArtwork() && !drawerState.isOpen && !billing.isAdFree },
+                            continueToGallery = {
+                                if (stillViewingArtwork()) artworkId = null
+                                if (artworkSession == exitingSession) artworkExitPending = false
+                            },
+                        )
+                    }
+                }
+            }
             state.destination == Destination.VERSE_ART && artCategoryId != null -> artCategoryId = null
             else -> viewModel.navigate(Destination.HOME)
         }
@@ -208,6 +238,15 @@ fun HopeCardsApp(
     ) { granted ->
         viewModel.setReminderEnabled(granted)
         if (!granted) viewModel.showNotice(localizedContext.getString(com.aaronsedna.hopecards.R.string.notifications_disabled))
+    }
+    LaunchedEffect(state.initialized) {
+        if (state.initialized && !BuildConfig.SCREENSHOT_MODE &&
+            state.settings.dailyHopeReminderEnabled && Build.VERSION.SDK_INT >= 33 &&
+            context.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED &&
+            viewModel.claimReminderPermissionPrompt()
+        ) {
+            notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
     }
     val restoreBackup = rememberLauncherForActivityResult(
         OpenBackupDocumentContract(),
@@ -271,7 +310,13 @@ fun HopeCardsApp(
         }
     }
     LaunchedEffect(dailyRequest, state.initialized) {
-        if (dailyRequest > 0 && state.initialized) viewModel.navigate(Destination.DAILY)
+        if (dailyRequest != null && state.initialized) {
+            drawerState.close()
+            translationPickerOpen = false
+            editingJournalEntry = null
+            deletingJournalEntry = null
+            pendingRestoreUri = null
+        }
     }
     LaunchedEffect(isUpdateReady) {
         if (isUpdateReady) {
@@ -283,6 +328,21 @@ fun HopeCardsApp(
                 duration = SnackbarDuration.Indefinite,
             )
             if (result == SnackbarResult.ActionPerformed) onCompleteUpdate()
+        }
+    }
+
+    LaunchedEffect(state.notice) {
+        val notice = state.notice ?: return@LaunchedEffect
+        snackbarHostState.currentSnackbarData?.dismiss()
+        snackbarHostState.showSnackbar(notice, withDismissAction = true, duration = SnackbarDuration.Long)
+        viewModel.clearNotice(notice)
+    }
+    LaunchedEffect(billing.message, state.destination) {
+        if (state.destination == Destination.REMOVE_ADS) {
+            val message = billing.message ?: return@LaunchedEffect
+            snackbarHostState.currentSnackbarData?.dismiss()
+            snackbarHostState.showSnackbar(message, withDismissAction = true, duration = SnackbarDuration.Long)
+            viewModel.billing.clearMessage()
         }
     }
 
@@ -479,7 +539,12 @@ fun HopeCardsApp(
                                     artworkId = artworkId,
                                     favorites = state.favorites,
                                     onCategory = { artCategoryId = it },
-                                    onArtwork = { artworkId = it },
+                                    onArtwork = {
+                                        artworkSession += 1
+                                        artworkCompletionRecorded = false
+                                        artworkExitPending = false
+                                        artworkId = it
+                                    },
                                     onFavorite = viewModel::toggleArtworkFavorite,
                                     onNotice = viewModel::showNotice,
                                 )
@@ -512,6 +577,9 @@ fun HopeCardsApp(
                                 Destination.SETTINGS -> SettingsScreen(
                                     settings = state.settings,
                                     onUpdate = viewModel::updateSettings,
+                                    onNotificationSettings = {
+                                        ReminderScheduler(context).openSystemSettings(state.settings.preferredTranslation)
+                                    },
                                     onEnableReminder = {
                                         if (Build.VERSION.SDK_INT < 33 ||
                                             context.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
@@ -594,14 +662,6 @@ fun HopeCardsApp(
             }
         }
 
-        state.notice?.let { notice ->
-            NoticeDialog(notice) { viewModel.showNotice(null) }
-        }
-        if (state.destination == Destination.REMOVE_ADS) {
-            billing.message?.let { message ->
-                NoticeDialog(message, viewModel.billing::clearMessage)
-            }
-        }
         pendingRestoreUri?.let { uri ->
             RestoreBackupDialog(
                 onDismiss = { pendingRestoreUri = null },
@@ -769,83 +829,17 @@ private fun destinationTitle(destination: Destination): String = appString(
 )
 
 @Composable
-private fun NoticeDialog(message: String, onDismiss: () -> Unit) {
-    val colors = LocalHopeColors.current
-    val success = message.contains("restored", ignoreCase = true) ||
-        message.contains("ready", ignoreCase = true) ||
-        message.contains("success", ignoreCase = true)
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        icon = {
-            Surface(shape = CircleShape, color = colors.accentSoft, modifier = Modifier.size(44.dp)) {
-                Box(contentAlignment = Alignment.Center) {
-                    AppIcon(
-                        if (success) AppIconGlyph.CheckmarkCircleOutline else AppIconGlyph.InformationCircleOutline,
-                        null,
-                        colors.accent,
-                        size = 22.dp,
-                    )
-                }
-            }
-        },
-        title = {
-            Text(
-                if (success) appString(com.aaronsedna.hopecards.R.string.notice_success)
-                else appString(com.aaronsedna.hopecards.R.string.notice_info),
-                color = colors.text,
-                fontFamily = Poppins,
-                fontWeight = FontWeight.Bold,
-                fontSize = 21.sp,
-            )
-        },
-        text = { Text(message, color = colors.textSecondary, style = MaterialTheme.typography.bodyMedium) },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(appString(com.aaronsedna.hopecards.R.string.done), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
-            }
-        },
-        shape = RoundedCornerShape(28.dp),
-        containerColor = colors.surface,
-        tonalElevation = 0.dp,
-    )
-}
-
-@Composable
 private fun CalmSnackbar(data: SnackbarData) {
     val colors = LocalHopeColors.current
-    Surface(
-        modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp).fillMaxWidth(),
-        shape = RoundedCornerShape(20.dp),
-        color = colors.text,
-        contentColor = colors.buttonText,
-        shadowElevation = 8.dp,
-    ) {
-        Row(
-            Modifier.padding(horizontal = 18.dp, vertical = 14.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            AppIcon(AppIconGlyph.CheckmarkCircleOutline, null, colors.accent, size = 22.dp)
-            Text(
-                data.visuals.message,
-                color = colors.buttonText,
-                fontFamily = Poppins,
-                fontWeight = FontWeight.Medium,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
-                modifier = Modifier.padding(start = 12.dp).weight(1f),
-            )
-            data.visuals.actionLabel?.let { actionLabel ->
-                TextButton(onClick = data::performAction) {
-                    Text(
-                        actionLabel,
-                        color = colors.accent,
-                        fontFamily = Poppins,
-                        fontWeight = FontWeight.Bold,
-                    )
-                }
-            }
-        }
-    }
+    androidx.compose.material3.Snackbar(
+        snackbarData = data,
+        modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+        shape = RoundedCornerShape(14.dp),
+        containerColor = colors.text,
+        contentColor = colors.background,
+        actionColor = colors.background,
+        dismissActionContentColor = colors.background,
+    )
 }
 
 internal fun verseShareText(verse: Verse, attribution: String = SHARE_ATTRIBUTION): String =

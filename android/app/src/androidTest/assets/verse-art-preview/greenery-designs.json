@@ -1,0 +1,47 @@
+[
+  {
+    "id": "preview-sunlit-ferns",
+    "edition": "web",
+    "font": "bebas_neue",
+    "background": "preview-sunlit-ferns",
+    "label": "1 · Sunlit ferns",
+    "group": "greenery",
+    "verseId": "psalm-37-4",
+    "emphasis": "delight yourself in the LORD,",
+    "verifiedText": "Also delight yourself in the LORD, and he will give you the desires of your heart.",
+    "sourceReference": "Psalms 37:4",
+    "textSha256": "d5427bd824ef9df00b88a4fb9d8009093f8994d8a71c5cf4f2b4afb7ecfed52b",
+    "highlightFont": "caveatbrush",
+    "highlightSize": 140
+  },
+  {
+    "id": "preview-fresh-leaves",
+    "edition": "web",
+    "font": "bebas_neue",
+    "background": "preview-fresh-leaves",
+    "label": "2 · Fresh leaves",
+    "group": "greenery",
+    "verseId": "1-peter-5-7",
+    "emphasis": "he cares for you.",
+    "verifiedText": "casting all your worries on him, because he cares for you.",
+    "sourceReference": "1 Peter 5:7",
+    "textSha256": "7e56c3b97871b3dc176251bd61365ef85b5088feebd5b18b34205fc511a17930",
+    "highlightFont": "caveatbrush",
+    "highlightSize": 164
+  },
+  {
+    "id": "preview-woodland-clearing",
+    "edition": "web",
+    "font": "bebas_neue",
+    "background": "preview-woodland-clearing",
+    "label": "3 · Woodland clearing",
+    "group": "greenery",
+    "verseId": "psalm-121-2",
+    "emphasis": "My help comes from the LORD,",
+    "verifiedText": "My help comes from the LORD, who made heaven and earth.",
+    "sourceReference": "Psalms 121:2",
+    "textSha256": "169b1e37353cfb693ddb775ba9e8f4dc0d4a2a408dc154e998e44597e7e0af38",
+    "highlightFont": "caveatbrush",
+    "highlightSize": 145
+  }
+]

@@ -173,9 +173,9 @@ class BackupManager(
         val settings = AppSettings(
             showDrawButton = settingsJson.optBoolean("showDrawButton", true),
             enableHaptics = settingsJson.optBoolean("enableHaptics", true),
-            dailyHopeReminderEnabled = settingsJson.optBoolean("dailyHopeReminderEnabled", false),
+            dailyHopeReminderEnabled = settingsJson.optBoolean("dailyHopeReminderEnabled", AppSettings().dailyHopeReminderEnabled),
             dailyHopeMusicEnabled = settingsJson.optBoolean("dailyHopeMusicEnabled", true),
-            dailyHopeReminderHour = settingsJson.optInt("dailyHopeReminderHour", 8).coerceIn(0, 23),
+            dailyHopeReminderHour = settingsJson.optInt("dailyHopeReminderHour", AppSettings().dailyHopeReminderHour).coerceIn(0, 23),
             dailyHopeReminderMinute = settingsJson.optInt("dailyHopeReminderMinute", 0).coerceIn(0, 59),
             themeName = ThemeName.fromId(settingsJson.optString("themeName", "classic")),
             preferredTranslation = Translation.fromId(settingsJson.optString("preferredTranslation", "bsb")),

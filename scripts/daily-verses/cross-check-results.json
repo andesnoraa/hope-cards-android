@@ -1,0 +1,280 @@
+{
+  "mal1910": {
+    "checkedSourceVerses": 450,
+    "source": "https://github.com/tfbf/Bible-Malayalam-Sathyavedapusthakam-1910/archive/5f0f30ea9726c419d4b5ee53aaab93ff3480a98d.zip",
+    "sha256": "54eeaac9aaac451f9147f28c7bd2807c26687a5c32ce92a222e4e52718bf632b",
+    "layoutSpaceDifferences": [
+      [
+        "PSA",
+        62,
+        8
+      ],
+      [
+        "PSA",
+        32,
+        7
+      ]
+    ]
+  },
+  "lutherNumbering": {
+    "psalmCardsChecked": 222,
+    "source": "https://raw.githubusercontent.com/crosswire/jsword/master/src/main/resources/org/crosswire/jsword/versification/Luther.properties",
+    "sha256": "5a07e22efdf46bc1dfa4a1ff644cc6d11d5b7799d5cd9617196f38388251e1c3",
+    "note": "Text comes from the eBible public-domain Luther 1912 edition. Display numbers follow Luther; source keys are retained separately."
+  },
+  "tagalog": {
+    "replacementCardsChecked": 83,
+    "sourceVersesChecked": 88,
+    "method": "Bulk edition compared with separately downloaded chapter exports from the same distributor.",
+    "chapterExports": [
+      {
+        "url": "https://api.getbible.net/v2/tagalog/13/16.json",
+        "sha256": "d8055987470fbd6ee9a5c03c8144c50af81f6f2c0a7204b8ea3924477132202f"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/46/1.json",
+        "sha256": "e5ed3297d1e454322f9aa3947609f8504d1004e4f31ac4f09d59d115f7a4d6fc"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/46/16.json",
+        "sha256": "b2ae2a4324dd73ea039c52119984b0349d1d1c183d5d11a1429484bad9bef18b"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/62/3.json",
+        "sha256": "ffe8cc11dc16292f87cd9db645755c6061cf583a6c0d9b534dd2868260e30155"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/60/4.json",
+        "sha256": "d4a4a170b528a84102bd60a37b7d1e07d9d24755b1376e6573f3b8a833504db5"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/52/5.json",
+        "sha256": "d4283e7148598dd833d9630a3c9d5b11526d3735fcef78ae68bb50f437664fee"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/47/9.json",
+        "sha256": "b0c65809cca9da30d5c2878b7b9e3496d02c9c00082020bc9155b4c252f8ef2d"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/61/1.json",
+        "sha256": "bc8bed5ef14f18e598d4e69c23102b69a2edcc0da4239ac85ca56b02a6ea36eb"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/53/3.json",
+        "sha256": "b3183847812da11dd5f8e63a4945e6575297b5016ff73b273d2572d3606a8915"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/44/10.json",
+        "sha256": "5b0cca199cc8ea76bdd006c289432518f10a873f27a37240fe494e1f75e79654"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/51/3.json",
+        "sha256": "e18688a21e31f2cd2495da14a258b539425ecc307346c15661164b702e30c9a6"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/49/4.json",
+        "sha256": "1ff1f5cd1bd5870f5da0be43b7b659d1c5050d93581ed89bf6c689fe39545b44"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/48/6.json",
+        "sha256": "9f55e0da500abfea23eb2663ffdff41e5fad759a3426f6be866b42f795f4bce5"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/58/4.json",
+        "sha256": "a25c3b869b11ff727bc2100ed791f487089f15d9d33724dcf22dccf3d14a2517"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/58/10.json",
+        "sha256": "4621468de5db94d07ef859cc5779bb82bcf3d26ad92e53990c6ca07b6c1291f7"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/26.json",
+        "sha256": "35b43d584476a66ca65498aee1f3cacf81435e578c70ab944a214f5e3d86cbd4"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/32.json",
+        "sha256": "f328d9d6b94ced5a2d0b58442802afb2d59be3abf8410a79284dc022cce661ad"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/40.json",
+        "sha256": "f4c0305409b391fd19813d9fa73f1ba7c34d62597ddd1e298bae0732f93a777c"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/41.json",
+        "sha256": "5487f93389c088d236e5b3e8dbfe8bf0355249bcf5f47f99b95cd3f2519b73d2"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/42.json",
+        "sha256": "eff9ae437a32724dc804c533d7c6119b4639244843d4a12b7e1717af08fdfa3d"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/54.json",
+        "sha256": "cce97d9abeb83ef9f606c9f54c98f79ea9cc2f90ccf80e968cf15b4721760120"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/23/66.json",
+        "sha256": "e86a660648f34ce0dcf1d02708a1a4933e05eeba36b59f08591b1148947b1aee"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/59/1.json",
+        "sha256": "e487ca5895a57d833d9d96fee004b219bb70499380907202b2451d1249be0d44"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/59/5.json",
+        "sha256": "f529d009287ef228de4c173daf3c616f5e42358c99d7a5ded6c35d81b92f0aea"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/43/6.json",
+        "sha256": "18b8cc676a9221ae06bcaf3a441dea28a80d75a8367ca6cdf046db94389e02d0"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/43/15.json",
+        "sha256": "2d7b87eb193b5da7581324f36e70d4badd4bfb5c0a706f2798601fe7564fd827"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/25/3.json",
+        "sha256": "1189e92af1dfdf355c3d10d7c8697d2f5a1b4e9fabd63e584817f385a11155d3"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/42/11.json",
+        "sha256": "878b2601ad0e99c0a95da793445f68b04569f2d28af6725fc037074220ea6475"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/50/1.json",
+        "sha256": "42c4cc6628c0b23bac8ee62030530f37c0aa10575d7a2fcbb46b750d413c5b50"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/50/4.json",
+        "sha256": "bb4603730f6c1167c5aee72f23b9eaeab49550abb129d6859c8e4a26c0f2c0b8"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/20/3.json",
+        "sha256": "7ce2c2a9110845a6fab7beae99d7bcd805dac3523ee454aedb3dfd11cb2262f6"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/20/4.json",
+        "sha256": "4358a938894071a61f572305285215a0dcbeea6e730c90639a292526c4c2ffb6"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/20/12.json",
+        "sha256": "2760e5fb667f27ae3f728c899546de924d61582dac8febc572784f506bd6dd01"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/20/16.json",
+        "sha256": "36d153f54629187251b63c1a6d82eafe32b3d28f28ea4bce4e28a1ea7f9285d3"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/9.json",
+        "sha256": "93792f118bc664dd320ac343521d10972331eaf5f8eba3fe5b03ec3bf2878fe3"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/31.json",
+        "sha256": "5a67624ef040596b83e822811548f0533217650663527119e668201459451cd6"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/32.json",
+        "sha256": "cf4a64222c514ba9e435ad1d7c689191d9d89541bfd83323d98ad2086e2e123a"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/33.json",
+        "sha256": "2213bfaadd2da35d5bba0df3ff3e61237c5c6b29e105867b5d6afac261943325"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/34.json",
+        "sha256": "7796ed333e530dd33f13de1d467cb7c46e8e258981bc28b7f2ba5ddc34875e40"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/37.json",
+        "sha256": "554475f0353feecfc1355f5dfbcb7b0730f61c0d3c9b5283727c8a9e4b4cd0f3"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/42.json",
+        "sha256": "18c06e93227c44d1df697b9c3d7fb73a106a6870ee1a17098c70ca53c7795f37"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/61.json",
+        "sha256": "9e81c199232441635b5b5d755cea800a6c6d780ebb39613266aac731ccf2cd1b"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/62.json",
+        "sha256": "504b45d6527d2ed4ceee55ff9fd1f75133d75b71c42c45f34aaddea98f44b227"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/63.json",
+        "sha256": "d5597c4c65c3a8987205cfc3c88013fec87be41a0f104899b11ad6738dbe29c1"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/84.json",
+        "sha256": "8048569bd1f3b4a7820d86dff9494afb04c200542660a823582bfbb629003804"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/89.json",
+        "sha256": "260b9703ee30f8b6ca120d0d3fd88875d23860e065bfdba103cf08f379ebd47a"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/90.json",
+        "sha256": "d2c9702f0cfe8c063e28c139ac79ab040b9d7e32820d4fd9a63898256e5d9abd"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/91.json",
+        "sha256": "9eda23aa7a7e064fc9f1b9e76d9248b5504fbdb043a6b5d1f32bb37ad8e3be82"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/92.json",
+        "sha256": "f3aee589510714ce7ad21cda012ea6dbfef52747454fad5eaa344943d3c443b0"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/94.json",
+        "sha256": "dc3fdaff275dfae7765bc33e7e457a98dd6ae28486beb8de1283f4bb6103d3a3"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/95.json",
+        "sha256": "39d7a2d2c15d8db8e96cde9c765c7382db32484c33f2fd97d7225c45a2a52321"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/96.json",
+        "sha256": "c19bf6a7859790f28b24b7e40e28345fdc143f0226eb3bbeb248affab72ab311"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/100.json",
+        "sha256": "ce16c33033f98eaf2a5c5e06a3b00128f4589bb99c287e2f3d486e544cb9167b"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/112.json",
+        "sha256": "5a0b206642379cb0d7a0006a285382a98cdabba91a3526516887ae1d488083ce"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/118.json",
+        "sha256": "c571c3ca7ce6e6885aa5d807f0092b68e2eabf74d4fc0d5435aa57cfe1d7f1e6"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/119.json",
+        "sha256": "814f788210b46d47c9c1b40ae19c337c4e81735647ce7767beddbebfceed85bc"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/133.json",
+        "sha256": "c035c202480fc114335ec6bc2ff4280a9b7d3233988936482e8547124cab7f7f"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/138.json",
+        "sha256": "88c9a6f8650a4697ed41161d7ba18637ea19a353a158cf735dc3214dd79ec0b2"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/19/145.json",
+        "sha256": "2b384ba4a0723879e7cdb69b54e6ae03ac9474099954905ca5663979f01487b2"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/45/8.json",
+        "sha256": "520bb72610385384dbaba48af5860fb44f345e42159b59c8102581f5cb32bf30"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/45/12.json",
+        "sha256": "1fdecee93b8d71d8edf8043d9d2a52a1d97a14d4547ea9549037c3d124eda3dc"
+      },
+      {
+        "url": "https://api.getbible.net/v2/tagalog/45/15.json",
+        "sha256": "881d84e1846a26daee913099cfba17ae4014aab758913ebe662db73988af09ff"
+      }
+    ]
+  }
+}

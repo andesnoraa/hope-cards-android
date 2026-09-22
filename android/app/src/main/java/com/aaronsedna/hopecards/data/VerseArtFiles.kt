@@ -10,22 +10,23 @@ import android.provider.MediaStore
 import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 import com.aaronsedna.hopecards.model.VerseArtwork
-import java.io.File
+import com.aaronsedna.hopecards.model.Translation
 
 object VerseArtFiles {
-    const val MIME_TYPE = "image/webp"
+    const val MIME_TYPE = "image/jpeg"
 
     /** Call file operations on Dispatchers.IO; no broad storage permission is needed. */
-    fun write(context: Context, artwork: VerseArtwork, uri: Uri) {
+    suspend fun write(context: Context, artwork: VerseArtwork, uri: Uri, edition: Translation = Translation.WEB) {
+        val file = VerseArtImages.jpeg(context, artwork, edition)
         val output = context.contentResolver.openOutputStream(uri) ?: error("Cannot open image destination")
-        output.use { target -> context.assets.open(artwork.assetPath).use { it.copyTo(target) } }
+        output.use { target -> file.inputStream().use { it.copyTo(target) } }
     }
 
     @RequiresApi(29)
-    fun saveToPhotos(context: Context, artwork: VerseArtwork): Uri {
+    suspend fun saveToPhotos(context: Context, artwork: VerseArtwork, edition: Translation = Translation.WEB): Uri {
         val resolver = context.contentResolver
         val values = ContentValues().apply {
-            put(MediaStore.Images.Media.DISPLAY_NAME, "Hope-Cards-${artwork.id}-${System.currentTimeMillis()}.webp")
+            put(MediaStore.Images.Media.DISPLAY_NAME, "Hope-Cards-${artwork.id}-${edition.id}-${System.currentTimeMillis()}.jpg")
             put(MediaStore.Images.Media.MIME_TYPE, MIME_TYPE)
             put(MediaStore.Images.Media.RELATIVE_PATH, "${Environment.DIRECTORY_PICTURES}/Hope Cards")
             put(MediaStore.Images.Media.IS_PENDING, 1)
@@ -33,7 +34,7 @@ object VerseArtFiles {
         val uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
             ?: error("Cannot create image")
         try {
-            write(context, artwork, uri)
+            write(context, artwork, uri, edition)
             check(resolver.update(uri, ContentValues().apply {
                 put(MediaStore.Images.Media.IS_PENDING, 0)
             }, null, null) > 0)
@@ -44,25 +45,15 @@ object VerseArtFiles {
         }
     }
 
-    fun shareIntent(context: Context, artwork: VerseArtwork): Intent {
-        val directory = File(context.cacheDir, "shared/verse-art").apply { mkdirs() }
-        val file = File(directory, "hope-cards-${artwork.id}.webp")
-        // Refresh the cached export after artwork is replaced by an app update.
-        val temporary = File.createTempFile("art-", ".webp", directory)
-        try {
-            context.assets.open(artwork.assetPath).use { source ->
-                temporary.outputStream().use { source.copyTo(it) }
-            }
-            check(temporary.renameTo(file)) { "Cannot prepare image" }
-        } finally {
-            temporary.delete()
-        }
+    suspend fun shareIntent(context: Context, artwork: VerseArtwork, edition: Translation = Translation.WEB): Intent {
+        val file = VerseArtImages.jpeg(context, artwork, edition)
+        val reference = VerseArtImages.verse(context, artwork, edition).displayReference
         val uri = FileProvider.getUriForFile(context, "${context.packageName}.files", file)
         return Intent(Intent.ACTION_SEND).apply {
             type = MIME_TYPE
             putExtra(Intent.EXTRA_STREAM, uri)
-            putExtra(Intent.EXTRA_TEXT, "${artwork.text}\n${artwork.reference} · WEB\nShared from Hope Cards")
-            clipData = ClipData.newUri(context.contentResolver, artwork.reference, uri)
+            putExtra(Intent.EXTRA_TEXT, "Shared from Hope Cards ❤️\nhttps://play.google.com/store/apps/details?id=com.aaronsedna.hopecards")
+            clipData = ClipData.newUri(context.contentResolver, reference, uri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
     }

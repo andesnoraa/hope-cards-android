@@ -33,8 +33,8 @@ android {
         applicationId "com.aaronsedna.hopecards"
         minSdk 23
         targetSdk 36
-        versionCode 33
-        versionName "1.0.6"
+        versionCode 34
+        versionName "1.0.7"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -110,8 +110,8 @@ dependencies {
     androidTestImplementation composeBom
 
     implementation "androidx.activity:activity-compose:1.13.0"
-    implementation "androidx.core:core-ktx:1.17.0"
-    implementation "androidx.core:core-splashscreen:1.0.1"
+    implementation "androidx.core:core-ktx:1.18.0"
+    implementation "androidx.core:core-splashscreen:1.2.0"
     implementation("androidx.fragment:fragment:1.9.0") {
         because "Google Play marks the older Fragment SDK pulled in transitively as outdated"
     }
@@ -119,8 +119,8 @@ dependencies {
     implementation "androidx.compose.material3:material3"
     implementation "androidx.compose.ui:ui"
     implementation "androidx.compose.ui:ui-tooling-preview"
-    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.9.4"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.10.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.10.0"
     implementation "androidx.datastore:datastore-preferences:1.2.1"
     implementation "androidx.documentfile:documentfile:1.1.0"
     implementation("androidx.work:work-runtime:2.11.2") {

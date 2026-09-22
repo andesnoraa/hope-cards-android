@@ -1,7 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -38,6 +37,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.data.VerseArtFiles
+import com.aaronsedna.hopecards.data.VerseArtImages
+import com.aaronsedna.hopecards.model.Translation
+import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.ui.LocalAppTranslation
 import com.aaronsedna.hopecards.model.VerseArtCatalog
 import com.aaronsedna.hopecards.model.VerseArtwork
 import com.aaronsedna.hopecards.ui.appString
@@ -47,6 +50,7 @@ import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
+import com.aaronsedna.hopecards.ui.theme.NotoSansMalayalam
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -63,11 +67,19 @@ fun VerseArtScreen(
     onNotice: (String) -> Unit,
 ) {
     val colors = LocalHopeColors.current
-    val artwork = VerseArtCatalog.artwork(artworkId)
+    val edition = LocalAppTranslation.current
+    val context = LocalContext.current.applicationContext
+    val gallery by produceState<VerseArtImages.Gallery?>(null, edition) {
+        value = null
+        value = VerseArtImages.gallery(context, edition)
+    }
+    val available = gallery?.references.orEmpty()
+    val artwork = VerseArtCatalog.artwork(artworkId)?.takeIf { it.id in available }
     val categoryScroll = rememberLazyListState()
     val galleryScroll = rememberSaveable(categoryId, saver = LazyGridState.Saver) { LazyGridState() }
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
         when {
+            gallery == null -> CircularProgressIndicator(Modifier.padding(32.dp))
             artwork != null -> VerseArtDetail(artwork, artwork.verseId in favorites, { onFavorite(artwork) }, onNotice)
             categoryId == null -> LazyColumn(
                 Modifier.widthIn(max = 760.dp).fillMaxSize(),
@@ -85,7 +97,8 @@ fun VerseArtScreen(
                                 .clickable(role = Role.Button) { onCategory(category.id) }.padding(vertical = 16.dp),
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
-                            VerseArtImage(VerseArtCatalog.artwork(category.artworkIds.first())!!,
+                            VerseArtImage(VerseArtCatalog.artwork(category.coverArtworkId.takeIf { it in available }
+                                ?: category.artworkIds.first { it in available })!!,
                                 thumbnail = true, modifier = Modifier.size(60.dp), description = null)
                             Column(Modifier.weight(1f).padding(horizontal = 16.dp)) {
                                 Text(category.title, color = colors.text, fontFamily = Poppins,
@@ -94,7 +107,7 @@ fun VerseArtScreen(
                                     fontSize = 12.sp, lineHeight = 19.sp, modifier = Modifier.padding(top = 4.dp))
                             }
                             Column(horizontalAlignment = Alignment.End) {
-                                Text(category.artworkIds.size.toString(), color = colors.textSecondary,
+                                Text(category.artworkIds.count { it in available }.toString(), color = colors.textSecondary,
                                     fontFamily = Poppins, fontSize = 12.sp)
                                 AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
                             }
@@ -114,7 +127,9 @@ fun VerseArtScreen(
                 }
             }
             else -> {
-                val artworks = VerseArtCatalog.inCategory(categoryId, favorites)
+                val artworks = remember(gallery, categoryId, favorites) {
+                    gallery?.ordered(VerseArtCatalog.inCategory(categoryId, favorites)).orEmpty()
+                }
                 Column(Modifier.widthIn(max = 760.dp).fillMaxSize()) {
                     Text(appQuantityString(R.plurals.art_count, artworks.size, artworks.size), fontFamily = Poppins,
                         color = colors.textTertiary, fontSize = 13.sp, modifier = Modifier.padding(20.dp))
@@ -133,7 +148,8 @@ fun VerseArtScreen(
                                     Column(Modifier.weight(1f)) {
                                         Text(art.title, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.SemiBold,
                                             fontSize = 13.sp, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                                        Text(art.reference, color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp)
+                                        Text(available[art.id].orEmpty(), color = colors.textSecondary,
+                                            fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins, fontSize = 12.sp)
                                     }
                                     ArtFavoriteButton(art.verseId in favorites, { onFavorite(art) },
                                         Modifier.testTag("art-favorite-${art.id}"))
@@ -150,11 +166,18 @@ fun VerseArtScreen(
 @Composable
 private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite: () -> Unit, onNotice: (String) -> Unit) {
     val context = LocalContext.current
+    val edition = LocalAppTranslation.current
     val colors = LocalHopeColors.current
     val scope = rememberCoroutineScope()
     var busy by remember { mutableStateOf(false) }
     var showText by rememberSaveable(artwork.id) { mutableStateOf(false) }
     var pendingSaveId by rememberSaveable { mutableStateOf<String?>(null) }
+    var pendingSaveEdition by rememberSaveable { mutableStateOf<String?>(null) }
+    val verse by produceState<Verse?>(null, artwork.id, edition) {
+        value = null
+        value = VerseArtImages.verse(context.applicationContext, artwork, edition)
+    }
+    val reference = verse?.displayReference.orEmpty()
     val savedMessage = appString(R.string.art_image_saved)
     val errorMessage = appString(R.string.art_image_error)
     val shareTitle = appString(R.string.share_card_title)
@@ -172,33 +195,36 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
 
     val saveDocument = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument(VerseArtFiles.MIME_TYPE)) { uri ->
         val pending = VerseArtCatalog.artwork(pendingSaveId)
+        val savedEdition = Translation.fromId(pendingSaveEdition)
         pendingSaveId = null
+        pendingSaveEdition = null
         if (uri != null && pending != null) performFileAction {
-            withContext(Dispatchers.IO) { VerseArtFiles.write(context, pending, uri) }
+            withContext(Dispatchers.IO) { VerseArtFiles.write(context, pending, uri, savedEdition) }
             onNotice(savedMessage)
         }
     }
 
     Column(Modifier.widthIn(max = 720.dp).fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp)) {
-        Text("English · WEB", color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp,
+        Text("${edition.language} · ${edition.label}", color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp,
             modifier = Modifier.padding(bottom = 16.dp))
         Box {
-            VerseArtImage(artwork, false, Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-detail-image"), artwork.reference)
+            VerseArtImage(artwork, false, Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-detail-image"), reference)
             ArtFavoriteButton(favorite, onFavorite, Modifier.align(Alignment.TopEnd).padding(8.dp))
         }
-        Text(artwork.reference, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 26.sp,
+        Text(reference, fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins, fontWeight = FontWeight.Bold, fontSize = 26.sp,
             color = colors.text, modifier = Modifier.padding(top = 24.dp))
-        Text("World English Bible", fontFamily = Poppins, fontSize = 13.sp, color = colors.textSecondary,
+        Text(edition.displayName, fontFamily = Poppins, fontSize = 13.sp, color = colors.textSecondary,
             modifier = Modifier.padding(top = 4.dp, bottom = 20.dp))
         FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(enabled = !busy, onClick = {
                 if (Build.VERSION.SDK_INT >= 29) performFileAction {
-                    withContext(Dispatchers.IO) { VerseArtFiles.saveToPhotos(context, artwork) }
+                    withContext(Dispatchers.IO) { VerseArtFiles.saveToPhotos(context, artwork, edition) }
                     onNotice(savedMessage)
                 } else {
                     pendingSaveId = artwork.id
-                    saveDocument.launch("Hope-Cards-${artwork.id}.webp")
+                    pendingSaveEdition = edition.id
+                    saveDocument.launch("Hope-Cards-${artwork.id}-${edition.id}.jpg")
                 }
             }, modifier = Modifier.heightIn(min = 48.dp).testTag("art-save-image"),
                 colors = ButtonDefaults.outlinedButtonColors(contentColor = colors.text)) {
@@ -206,7 +232,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
             }
             Button(enabled = !busy, onClick = {
                 performFileAction {
-                    val intent = withContext(Dispatchers.IO) { VerseArtFiles.shareIntent(context, artwork) }
+                    val intent = withContext(Dispatchers.IO) { VerseArtFiles.shareIntent(context, artwork, edition) }
                     context.startActivity(Intent.createChooser(intent, shareTitle))
                 }
             }, modifier = Modifier.heightIn(min = 48.dp).testTag("art-share"),
@@ -220,7 +246,8 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
         TextButton(onClick = { showText = !showText }, modifier = Modifier.padding(top = 8.dp)) {
             Text(appString(if (showText) R.string.art_hide_verse else R.string.art_read_verse), fontFamily = Poppins, color = colors.text)
         }
-        if (showText) Text(artwork.text, color = colors.cardText, fontFamily = SourceSerif, fontSize = 20.sp, lineHeight = 32.sp)
+        if (showText) verse?.let { Text(it.text, color = colors.cardText,
+            fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else SourceSerif, fontSize = 20.sp, lineHeight = 32.sp) }
     }
 }
 
@@ -240,15 +267,13 @@ private data class ArtImageState(val bitmap: ImageBitmap? = null, val failed: Bo
 private fun VerseArtImage(art: VerseArtwork, thumbnail: Boolean, modifier: Modifier, description: String?) {
     val context = LocalContext.current.applicationContext
     val colors = LocalHopeColors.current
-    val path = if (thumbnail) art.thumbnailPath else art.assetPath
-    val state by produceState(ArtImageState(), path) {
-        value = withContext(Dispatchers.IO) {
-            runCatching {
-                context.assets.open(path).use { stream ->
-                    ArtImageState(checkNotNull(BitmapFactory.decodeStream(stream)).asImageBitmap())
-                }
-            }.getOrElse { ArtImageState(failed = true) }
-        }
+    val edition = LocalAppTranslation.current
+    val state by produceState(ArtImageState(), art.id, edition, thumbnail) {
+        value = ArtImageState()
+        value = try {
+            ArtImageState(VerseArtImages.image(context, art, edition, if (thumbnail) 360 else 1080).asImageBitmap())
+        } catch (error: CancellationException) { throw error }
+          catch (_: Exception) { ArtImageState(failed = true) }
     }
     Box(modifier.clip(RoundedCornerShape(12.dp)).background(colors.accentSoft), contentAlignment = Alignment.Center) {
         state.bitmap?.let { Image(it, description, Modifier.matchParentSize(), contentScale = ContentScale.Fit) }

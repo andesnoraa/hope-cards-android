@@ -1,0 +1,72 @@
+{
+  "en-bsb": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 180,
+    "maxWords": 38
+  },
+  "en-bbe": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 220,
+    "maxWords": 49
+  },
+  "en-kjv": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 209,
+    "maxWords": 42
+  },
+  "en-web": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 200,
+    "maxWords": 41
+  },
+  "de-lut1912": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 210,
+    "maxWords": 38
+  },
+  "fr-lsg1910": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 225,
+    "maxWords": 39
+  },
+  "it-riv1927": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 198,
+    "maxWords": 38
+  },
+  "es-rv1909": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 190,
+    "maxWords": 36
+  },
+  "ml-mal1910": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 210,
+    "maxWords": 25
+  },
+  "tl-adb1905": {
+    "activeCards": 365,
+    "archivedCards": 83,
+    "distinctSourceVersesChecked": 450,
+    "maxCharacters": 246,
+    "maxWords": 42
+  }
+}

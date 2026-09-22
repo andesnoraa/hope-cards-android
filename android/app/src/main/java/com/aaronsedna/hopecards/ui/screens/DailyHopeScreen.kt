@@ -1,7 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
-import android.media.AudioAttributes
-import android.media.MediaPlayer
+import com.aaronsedna.hopecards.audio.DailyHopeAudioPlayer
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
@@ -97,7 +96,7 @@ fun DailyHopeScreen(
     var note by remember(verse.id, existingNote) { mutableStateOf(existingNote) }
     var reflectionOpen by remember(verse.id) { mutableStateOf(false) }
     val reflectionSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    var player by remember(verse.category) { mutableStateOf<MediaPlayer?>(null) }
+    val musicPlayer = remember(context, verse.category) { DailyHopeAudioPlayer(context, musicFor(verse.category)) }
     val headerAlpha = remember(verse.id) { Animatable(0f) }
     val verseAlpha = remember(verse.id) { Animatable(0f) }
     val verseOffset = remember(verse.id) { Animatable(18f) }
@@ -105,25 +104,6 @@ fun DailyHopeScreen(
     val translationAlpha = remember(verse.id) { Animatable(0f) }
     val pageScrollState = rememberScrollState()
     val actionsBringIntoViewRequester = remember(verse.id) { BringIntoViewRequester() }
-
-    fun releasePlayer() {
-        player?.runCatching { stop() }
-        player?.runCatching { release() }
-        player = null
-    }
-
-    fun startPlayer() {
-        if (!settings.dailyHopeMusicEnabled || player != null) return
-        val attributes = AudioAttributes.Builder()
-            .setUsage(AudioAttributes.USAGE_MEDIA)
-            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-            .build()
-        player = MediaPlayer.create(context, musicFor(verse.category), attributes, 0)?.apply {
-            isLooping = true
-            setVolume(.45f, .45f)
-            start()
-        }
-    }
 
     LaunchedEffect(verse.id) {
         headerAlpha.animateTo(1f, tween(600))
@@ -152,16 +132,16 @@ fun DailyHopeScreen(
             actionsBringIntoViewRequester.bringIntoView()
         }
     }
-    DisposableEffect(lifecycle, verse.category, settings.dailyHopeMusicEnabled) {
+    DisposableEffect(lifecycle, musicPlayer, settings.dailyHopeMusicEnabled) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_PAUSE) releasePlayer()
-            if (event == Lifecycle.Event.ON_RESUME) startPlayer()
+            if (event == Lifecycle.Event.ON_PAUSE) musicPlayer.stop()
+            if (event == Lifecycle.Event.ON_RESUME && settings.dailyHopeMusicEnabled) musicPlayer.start()
         }
         lifecycle.addObserver(observer)
-        if (lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) startPlayer()
+        if (settings.dailyHopeMusicEnabled && lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) musicPlayer.start()
         onDispose {
             lifecycle.removeObserver(observer)
-            releasePlayer()
+            musicPlayer.stop()
         }
     }
 

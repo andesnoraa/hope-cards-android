@@ -43,3 +43,6 @@ example
 # Native Android source is tracked. iOS is not part of this Android-only app.
 /ios
 .DS_Store
+
+# Local QA screenshots and release artifacts
+/output/

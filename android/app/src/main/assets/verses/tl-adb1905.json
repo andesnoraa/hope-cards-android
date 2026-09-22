@@ -180,15 +180,13 @@
     ]
   },
   {
-    "id": "2-corinthians-12-9",
-    "category": "Grace",
-    "verse": "At siya'y nagsabi sa akin, Ang aking biyaya ay sapat na sa iyo: sapagka't ang aking kapangyarihan ay nagiging sakdal sa kahinaan. Kaya't bagkus akong magmamapuri na may malaking galak sa aking kahinaan upang manahan nawa sa akin ang kapangyarihan ni Cristo.",
-    "reference": "2 Corinthians 12:9",
+    "id": "hebrews-4-15",
+    "category": "Comfort",
+    "verse": "Sapagka't tayo'y walang isang dakilang saserdote na hindi maaaring mahabag sa ating kahinaan, kundi isa na tinukso sa lahat ng mga paraan gaya rin naman natin gayon ma'y walang kasalanan.",
+    "reference": "Hebrews 4:15",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "strength",
-      "weakness"
+      "comfort"
     ]
   },
   {
@@ -215,15 +213,13 @@
     ]
   },
   {
-    "id": "romans-8-38-39",
-    "category": "Hope",
-    "verse": "Sapagka't ako'y naniniwalang lubos, na kahit ang kamatayan man, kahit ang buhay, kahit ang mga anghel, kahit ang mga pamunuan, kahit ang mga bagay na kasalukuyan, kahit ang mga bagay na darating, kahit ang mga kapangyarihan, Kahit ang kataasan, kahit ang kababaan, kahit ang alin mang ibang nilalang, ay hindi makapaghihiwalay sa atin sa pagibig ng Dios, na nasa kay Cristo Jesus na Panginoon natin.",
-    "reference": "Romans 8:38-39",
+    "id": "romans-8-32",
+    "category": "Love",
+    "verse": "Siya, na hindi ipinagkait ang kaniyang sariling anak kundi ibinigay dahil sa ating lahat, bakit hindi naman ibibigay sa atin ng walang bayad ang lahat ng mga bagay?",
+    "reference": "Romans 8:32",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "love",
-      "assurance"
+      "love"
     ]
   },
   {
@@ -371,15 +367,13 @@
     ]
   },
   {
-    "id": "1-john-3-1",
-    "category": "Love",
-    "verse": "Masdan ninyo kung gaanong pagibig ang ipinagkaloob sa atin ng Ama, upang tayo'y mangatawag na mga anak ng Dios; at tayo'y gayon nga. Dahil dito'y hindi tayo nakikilala ng sanglibutan, sapagka't siya'y hindi nakilala nito.",
-    "reference": "1 John 3:1",
+    "id": "1-john-3-2",
+    "category": "Hope",
+    "verse": "Mga minamahal, ngayon ay mga anak tayo ng Dios, at hindi pa nahahayag kung magiging ano tayo. Nalalaman natin, na kung siya'y mahayag, tayo'y magiging katulad niya: sapagka't siya'y ating makikitang gaya ng kaniyang sarili.",
+    "reference": "1 John 3:2",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "identity",
-      "children-of-god"
+      "hope"
     ]
   },
   {
@@ -443,14 +437,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-5-17",
+    "id": "1-thessalonians-5-16-18",
     "category": "Prayer",
-    "verse": "Magsipanalangin kayong walang patid;",
-    "reference": "1 Thessalonians 5:17",
+    "verse": "Mangagalak kayong lagi; Magsipanalangin kayong walang patid; Sa lahat ng mga bagay ay magpasalamat kayo; sapagka't ito ang kalooban ng Dios kay Cristo tungkol sa inyo.",
+    "reference": "1 Thessalonians 5:16-18",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "prayer",
-      "devotion"
+      "prayer"
     ]
   },
   {
@@ -817,15 +810,13 @@
     ]
   },
   {
-    "id": "isaiah-43-2",
-    "category": "Comfort",
-    "verse": "Pagka ikaw ay dumaraan sa tubig, ako'y sasaiyo; at sa mga ilog ay hindi ka tatakpan niyaon: pagka ikaw ay lumalakad sa apoy, hindi ka masusunog; o magniningas man ang alab sa iyo.",
-    "reference": "Isaiah 43:2",
+    "id": "isaiah-41-13",
+    "category": "Courage",
+    "verse": "Sapagka't akong Panginoon mong Dios, ay hahawak ng iyong kanang kamay, na magsasabi sa iyo, Huwag kang matakot; aking tutulungan ka.",
+    "reference": "Isaiah 41:13",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "comfort",
-      "trials",
-      "presence"
+      "courage"
     ]
   },
   {
@@ -841,27 +832,23 @@
     ]
   },
   {
-    "id": "isaiah-54-10",
-    "category": "Love",
-    "verse": "Sapagka't ang mga bundok ay mangapapaalis, at ang mga burol ay mangapapalipat; nguni't ang aking kagandahang-loob ay hindi hihiwalay sa iyo, o ang akin mang tipan ng kapayapaan ay maalis, sabi ng Panginoon na naaawa sa iyo.",
-    "reference": "Isaiah 54:10",
+    "id": "isaiah-54-13",
+    "category": "Peace",
+    "verse": "At lahat mong anak ay tuturuan ng Panginoon; at magiging malaki ang kapayapaan ng iyong mga anak.",
+    "reference": "Isaiah 54:13",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "peace",
-      "mercy"
+      "peace"
     ]
   },
   {
-    "id": "lamentations-3-23",
-    "category": "Grace",
-    "verse": "Ang mga yao'y bago tuwing umaga, dakila ang inyong pagtatapat.",
-    "reference": "Lamentations 3:23",
+    "id": "lamentations-3-22-23",
+    "category": "Hope",
+    "verse": "Sa mga kaawaan nga ng Panginoon ay hindi tayo nalipol, sapagka't ang kaniyang mga habag ay hindi nauubos. Ang mga yao'y bago tuwing umaga, dakila ang inyong pagtatapat.",
+    "reference": "Lamentations 3:22-23",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "faithfulness",
-      "morning"
+      "hope"
     ]
   },
   {
@@ -877,16 +864,13 @@
     ]
   },
   {
-    "id": "galatians-6-18",
-    "category": "Grace",
-    "verse": "Mga kapatid, ang biyaya ng ating Panginoong Jesucristo ay sumainyo nawang espiritu. Siya nawa.",
-    "reference": "Galatians 6:18",
+    "id": "galatians-6-9",
+    "category": "Hope",
+    "verse": "At huwag tayong mangapagod sa paggawa ng mabuti: sapagka't sa kapanahunan ay magsisipagani tayo, kung hindi tayo manganghihimagod.",
+    "reference": "Galatians 6:9",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
@@ -987,15 +971,13 @@
     ]
   },
   {
-    "id": "1-corinthians-10-13",
-    "category": "Strength",
-    "verse": "Hindi dumating sa inyo ang anomang tukso kundi yaong matitiis ng tao: datapuwa't tapat ang Dios, na hindi niya itutulot na kayo'y tuksuhin ng higit sa inyong makakaya; kundi kalakip din ng tukso ay gagawin naman ang paraan ng pagilag, upang ito'y inyong matiis.",
-    "reference": "1 Corinthians 10:13",
+    "id": "1-corinthians-1-9",
+    "category": "Faith",
+    "verse": "Ang Dios ay tapat, na sa pamamagitan niya ay tinawag kayo sa pakikisama ng kaniyang anak na si Jesucristo na Panginoon natin.",
+    "reference": "1 Corinthians 1:9",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "strength",
-      "testing",
-      "faithfulness"
+      "faith"
     ]
   },
   {
@@ -1035,15 +1017,12 @@
     ]
   },
   {
-    "id": "colossians-4-12",
-    "category": "Grace",
-    "verse": "Binabati kayo ni Epafras, na isa sa inyo, na lingkod ni Cristo Jesus, na siyang laging nagsisikap dahil sa inyo sa kaniyang pananalangin, upang kayo'y magsitatag na mga sakdal at lubos na tiwasay sa lahat na kalooban ng Dios.",
-    "reference": "Colossians 4:12",
+    "id": "colossians-3-12",
+    "category": "Love",
+    "verse": "Mangagbihis nga kayo gaya ng mga hinirang ng Dios, na mga banal at minamahal, ng isang pusong mahabagin, ng kagandahangloob, ng kababaan, ng kaamuan, ng pagpapahinuhod:",
+    "reference": "Colossians 3:12",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -1108,16 +1087,13 @@
     ]
   },
   {
-    "id": "colossians-3-16",
-    "category": "Wisdom",
-    "verse": "Manahanan nawang sagana sa inyo ang salita ni Cristo; ayon sa buong karunungan, kayo'y mangagturuan at mangagpaalalahanan sa isa't isa sa pamamagitan ng mga salmo at ng mga himno at mga awit na ukol sa espiritu, na magsiawit kayong may biyaya sa inyong puso sa Dios.",
-    "reference": "Colossians 3:16",
+    "id": "colossians-3-14",
+    "category": "Love",
+    "verse": "At sa ibabaw ng lahat ng mga bagay na ito ay mangagbihis kayo ng pagibig na siyang tali ng kasakdalan.",
+    "reference": "Colossians 3:14",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "truth"
+      "love"
     ]
   },
   {
@@ -1146,15 +1122,13 @@
     ]
   },
   {
-    "id": "joshua-24-15",
-    "category": "Faith",
-    "verse": "At kung inaakala ninyong masama na maglingkod sa Panginoon, ay piliin ninyo sa araw na ito kung sino ang inyong paglilingkuran; kung ang mga dios ng inyong mga magulang na pinaglingkuran sa dako roon ng Ilog, o ang dios ng mga Amorrheo na ang lupain nila ay inyong tinatahanan: nguni't sa ganang akin at ng aking sangbahayan ay maglilingkod kami sa Panginoon.",
-    "reference": "Joshua 24:15",
+    "id": "psalms-31-3",
+    "category": "Trust",
+    "verse": "Sapagka't ikaw ang aking malaking bato, at aking kuta; alangalang nga sa iyong pangalan ay pangunahan mo ako, at patnubayan mo ako.",
+    "reference": "Psalms 31:3",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "choice",
-      "service"
+      "trust"
     ]
   },
   {
@@ -1206,15 +1180,13 @@
     ]
   },
   {
-    "id": "nehemiah-8-10",
+    "id": "psalms-92-4",
     "category": "Joy",
-    "verse": "Nang magkagayo'y kaniyang sinabi sa kanila, Magsilakad kayo ng inyong lakad, magsikain kayo ng taba, at magsiinom kayo ng matamis; at mangagpadala kayo ng mga bahagi roon sa walang naihanda: sapagka't ang araw na ito ay banal sa ating Panginoon: huwag din kayong mangamanglaw; sapagka't ang kagalakan sa Panginoon ay inyong kalakasan.",
-    "reference": "Nehemiah 8:10",
+    "verse": "Sapagka't ikaw, Panginoon, iyong pinasaya ako sa iyong gawa: ako'y magtatagumpay sa mga gawa ng iyong mga kamay.",
+    "reference": "Psalms 92:4",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "joy",
-      "strength",
-      "lord"
+      "joy"
     ]
   },
   {
@@ -1387,16 +1359,13 @@
     ]
   },
   {
-    "id": "jeremiah-3-23",
-    "category": "Hope",
-    "verse": "Tunay na walang kabuluhan ang tulong na maaasahan sa mga burol, ang kagulo sa mga bundok: tunay na nasa Panginoon naming Dios ang kaligtasan ng Israel.",
-    "reference": "Jeremiah 3:23",
+    "id": "psalms-95-1",
+    "category": "Joy",
+    "verse": "Oh magsiparito kayo, tayo'y magsiawit sa Panginoon: tayo'y magkaingay na may kagalakan sa malaking bato na ating kaligtasan.",
+    "reference": "Psalms 95:1",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "joy"
     ]
   },
   {
@@ -1460,16 +1429,13 @@
     ]
   },
   {
-    "id": "acts-20-21",
-    "category": "Trust",
-    "verse": "Na sinasaksihan ko sa mga Judio at gayon din sa mga Griego ang pagsisisi sa Dios, at ang pananampalataya sa ating Panginoong Jesucristo.",
-    "reference": "Acts 20:21",
+    "id": "romans-12-12",
+    "category": "Hope",
+    "verse": "Mangagalak sa pagasa; magmatiisin sa kapighatian; magmatiyagain sa pananalangin;",
+    "reference": "Romans 12:12",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -1509,16 +1475,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-2-19",
-    "category": "Hope",
-    "verse": "Sapagka't ano ang aming pagasa, o katuwaan, o putong, na ipinagmamapuri? Hindi baga kayo rin sa harapan ng ating Panginoong Jesucristo sa kaniyang pagparito?",
-    "reference": "1 Thessalonians 2:19",
+    "id": "1-thessalonians-5-11",
+    "category": "Comfort",
+    "verse": "Dahil dito kayo'y mangagpangaralan, at mangagpatibayan sa isa't isa sa inyo, gaya ng inyong ginagawa.",
+    "reference": "1 Thessalonians 5:11",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -1570,16 +1533,13 @@
     ]
   },
   {
-    "id": "philippians-2-11",
+    "id": "philippians-1-6",
     "category": "Hope",
-    "verse": "At upang ipahayag ng lahat ng mga dila na si Jesucristo ay Panginoon, sa ikaluluwalhati ng Dios Ama.",
-    "reference": "Philippians 2:11",
+    "verse": "Na ako'y may lubos na pagkakatiwala sa bagay na ito, na ang nagpasimula sa inyo ng mabuting gawa, ay lulubusin hanggang sa araw ni Jesucristo:",
+    "reference": "Philippians 1:6",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1608,15 +1568,13 @@
     ]
   },
   {
-    "id": "jeremiah-17-8",
-    "category": "Hope",
-    "verse": "Sapagka't siya'y magiging parang punong kahoy na itinanim sa tabi ng tubig, at naguugat sa tabi ng ilog, at hindi matatakot pagka ang init ay dumarating, kundi ang kaniyang dahon ay magiging sariwa; at hindi mababalisa sa taon ng pagkatuyu, o maglilikat man ng pagbubunga.",
-    "reference": "Jeremiah 17:8",
+    "id": "psalms-92-12",
+    "category": "Strength",
+    "verse": "Ang matuwid ay giginhawa na parang puno ng palma. Siya'y tutubo na parang cedro sa Libano.",
+    "reference": "Psalms 92:12",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "growth",
-      "fruit"
+      "strength"
     ]
   },
   {
@@ -1680,16 +1638,13 @@
     ]
   },
   {
-    "id": "romans-10-1",
-    "category": "Hope",
-    "verse": "Mga kapatid, ang nais ng aking puso at ang aking panalangin sa Dios ay patungkol sa kanila, upang sila'y mangaligtas.",
-    "reference": "Romans 10:1",
+    "id": "romans-12-10",
+    "category": "Love",
+    "verse": "Sa pagibig sa mga kapatid ay mangagmahalan kayo; sa kapurihan ay ipagpauna ng isa't isa ang iba;",
+    "reference": "Romans 12:10",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -1705,16 +1660,13 @@
     ]
   },
   {
-    "id": "romans-15-6",
+    "id": "romans-15-4",
     "category": "Hope",
-    "verse": "Upang kayo na may isang pagiisip sa pamamagitan ng isang bibig ay luwalhatiin ninyo ang Dios at Ama ng ating Panginoong Jesucristo.",
-    "reference": "Romans 15:6",
+    "verse": "Sapagka't ang anomang mga bagay na isinulat nang una ay nangasulat dahil sa ikatututo natin, upang sa pamamagitan ng pagtitiis at pagaliw ng mga kasulatan ay mangagkaroon tayo ng pagasa.",
+    "reference": "Romans 15:4",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1803,16 +1755,13 @@
     ]
   },
   {
-    "id": "isaiah-30-15",
+    "id": "isaiah-32-17",
     "category": "Peace",
-    "verse": "Sapagka't ganito ang sabi ng Panginoong Dios, ng Banal ng Israel, Sa pagbabalik at sa pagpapahinga ay matitiwasay kayo; sa katahimikan at sa pagasa ay magiging ang inyong lakas. At hindi ninyo inibig.",
-    "reference": "Isaiah 30:15",
+    "verse": "At ang gawain ng katuwiran ay magiging kapayapaan; at ang bunga ng katuwiran ay katahimikan at pagkakatiwala kailan man.",
+    "reference": "Isaiah 32:17",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
+      "peace"
     ]
   },
   {
@@ -1841,16 +1790,13 @@
     ]
   },
   {
-    "id": "1-corinthians-8-6",
-    "category": "Hope",
-    "verse": "Nguni't sa ganang atin ay may isang Dios lamang, ang Ama, na buhat sa kaniya ang lahat ng mga bagay, at tayo'y sa kaniya; at isa lamang Panginoon, si Jesucristo, na sa pamamagitan niya ang lahat ng mga bagay, at tayo'y sa pamamagitan niya.",
-    "reference": "1 Corinthians 8:6",
+    "id": "1-corinthians-16-13",
+    "category": "Courage",
+    "verse": "Magsipagingat kayo, mangagpakatibay kayo sa pananampalataya, kayo'y mangagpakalalake, kayo'y mangagpakalakas.",
+    "reference": "1 Corinthians 16:13",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "courage"
     ]
   },
   {
@@ -1878,16 +1824,13 @@
     ]
   },
   {
-    "id": "philemon-1-25",
-    "category": "Grace",
-    "verse": "Ang biyaya ng ating Panginoong Jesucristo ay sumainyo nawang espiritu. Siya nawa.",
-    "reference": "Philemon 1:25",
+    "id": "2-thessalonians-3-16",
+    "category": "Peace",
+    "verse": "Ngayon ang Panginoon din ng kapayapaan ay magbigay nawa sa inyo ng kapayapaan sa buong panahon at sa lahat ng paraan. Ang Panginoon ay sumainyo nawang lahat.",
+    "reference": "2 Thessalonians 3:16",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "peace"
     ]
   },
   {
@@ -1966,41 +1909,33 @@
     ]
   },
   {
-    "id": "isaiah-25-9",
+    "id": "isaiah-40-8",
     "category": "Hope",
-    "verse": "At sasabihin sa araw na yaon, Narito, ito'y ating Dios; hinintay natin siya, at ililigtas niya tayo: ito ang Panginoon; ating hinintay siya, tayo'y matutuwa at magagalak sa kaniyang pagliligtas.",
-    "reference": "Isaiah 25:9",
+    "verse": "Ang damo ay natutuyo, ang bulaklak ay nalalanta; nguni't ang salita ng ating Dios ay mamamalagi magpakailan man.",
+    "reference": "Isaiah 40:8",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
-    "id": "psalms-108-7",
-    "category": "Hope",
-    "verse": "Nagsalita ang Dios sa kaniyang kabanalan; ako'y magsasaya: aking hahatiin ang Sichem, at susukatin ko ang libis ng Sucoth.",
-    "reference": "Psalms 108:7",
+    "id": "psalms-33-21",
+    "category": "Joy",
+    "verse": "Sapagka't ang aming puso ay magagalak sa kaniya, sapagka't kami ay nagsitiwala sa kaniyang banal na pangalan.",
+    "reference": "Psalms 33:21",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting",
-      "wisdom"
+      "joy"
     ]
   },
   {
-    "id": "psalms-109-20",
+    "id": "psalms-33-22",
     "category": "Hope",
-    "verse": "Ito ang kagantihan sa aking mga kaaway na mula sa Panginoon, at sa kanilang nangagsasalita ng kasamaan laban sa aking kaluluwa.",
-    "reference": "Psalms 109:20",
+    "verse": "Sumaamin nawa ang iyong kagandahang-loob, Oh Panginoon, ayon sa aming pagasa sa iyo.",
+    "reference": "Psalms 33:22",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting"
+      "hope"
     ]
   },
   {
@@ -2299,16 +2234,13 @@
     ]
   },
   {
-    "id": "daniel-10-19",
-    "category": "Courage",
-    "verse": "At kaniyang sinabi, Oh taong minamahal na mainam, huwag kang matakot: kapayapaan ang sumaiyo, magpakalakas ka, oo, magpakalakas ka. At nang siya'y magsalita sa akin, ako'y lumakas, at nagsabi, Magsalita ang aking panginoon; sapagka't iyong pinalakas ako.",
-    "reference": "Daniel 10:19",
+    "id": "psalms-138-3",
+    "category": "Strength",
+    "verse": "Nang araw na ako'y tumawag ay sinagot mo ako, iyong pinatapang ako ng kalakasan sa aking kaluluwa.",
+    "reference": "Psalms 138:3",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "courage",
-      "strength",
-      "fear",
-      "trust"
+      "strength"
     ]
   },
   {
@@ -2377,54 +2309,43 @@
     ]
   },
   {
-    "id": "2-corinthians-9-14",
+    "id": "ephesians-4-32",
     "category": "Love",
-    "verse": "Samantalang sila rin naman, sa panalanging patungkol sa inyo, ay nananabik sa inyo dahil sa saganang biyaya ng Dios sa inyo.",
-    "reference": "2 Corinthians 9:14",
+    "verse": "At magmagandang-loob kayo sa isa't isa, mga mahabagin, na mangagpatawaran kayo sa isa't isa, gaya naman ng pagpapatawad sa inyo ng Dios kay Cristo.",
+    "reference": "Ephesians 4:32",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "love"
     ]
   },
   {
-    "id": "psalms-31-6",
-    "category": "Hope",
-    "verse": "Aking pinagtataniman ang nangagmamasid ng mga walang kabuluhang karayaan: nguni't tumitiwala ako sa Panginoon.",
-    "reference": "Psalms 31:6",
-    "translation": "Ang Dating Biblia (1905)",
-    "tags": [
-      "hope",
-      "promise",
-      "waiting"
-    ]
-  },
-  {
-    "id": "psalms-132-13",
+    "id": "psalms-62-8",
     "category": "Trust",
-    "verse": "Sapagka't pinili ng Panginoon ang Sion; kaniyang ninasa na pinaka tahanan niya.",
-    "reference": "Psalms 132:13",
+    "verse": "Magsitiwala kayo sa kaniya buong panahon, kayong mga bayan; buksan ninyo ang inyong dibdib sa harap niya; Dios ay kanlungan sa atin. (Selah)",
+    "reference": "Psalms 62:8",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "trust"
     ]
   },
   {
-    "id": "psalms-132-8",
-    "category": "Trust",
-    "verse": "Bumangon ka, Oh Panginoon, sa iyong pahingahang dako: ikaw, at ang kaban ng iyong kalakasan.",
-    "reference": "Psalms 132:8",
+    "id": "psalms-91-1",
+    "category": "Comfort",
+    "verse": "Siyang tumatahan sa lihim na dako ng Kataastaasan. Ay mananatili sa lilim ng Makapangyarihan sa lahat.",
+    "reference": "Psalms 91:1",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-63-7",
+    "category": "Comfort",
+    "verse": "Sapagka't naging katulong kita, at sa lilim ng mga pakpak mo'y magagalak ako.",
+    "reference": "Psalms 63:7",
+    "translation": "Ang Dating Biblia (1905)",
+    "tags": [
+      "comfort"
     ]
   },
   {
@@ -2467,16 +2388,13 @@
     ]
   },
   {
-    "id": "psalms-30-7",
-    "category": "Trust",
-    "verse": "Ikaw, Panginoon, sa iyong paglingap ay pinatayo mong matibay ang aking bundok: iyong ikinubli ang iyong mukha; ako'y nabagabag.",
-    "reference": "Psalms 30:7",
+    "id": "psalms-94-18",
+    "category": "Comfort",
+    "verse": "Nang aking sabihin, Ang aking paa ay natitisod; inalalayan ako ng iyong kagandahang-loob, Oh Panginoon.",
+    "reference": "Psalms 94:18",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "strength"
+      "comfort"
     ]
   },
   {
@@ -2545,53 +2463,42 @@
     ]
   },
   {
-    "id": "psalms-61-7",
-    "category": "Trust",
-    "verse": "Siya'y tatahan sa harap ng Dios magpakailan man: Oh maghanda ka ng kagandahang-loob at katotohanan, upang mapalagi siya.",
-    "reference": "Psalms 61:7",
+    "id": "psalms-61-3",
+    "category": "Strength",
+    "verse": "Sapagka't ikaw ay naging aking kanlungan, matibay na moog sa kaaway.",
+    "reference": "Psalms 61:3",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "grace"
+      "strength"
     ]
   },
   {
-    "id": "philippians-4-21",
-    "category": "Grace",
-    "verse": "Batiin ninyo ang bawa't banal kay Cristo Jesus. Binabati kayo ng mga kapatid na kasama ko.",
-    "reference": "Philippians 4:21",
+    "id": "philippians-4-19",
+    "category": "Hope",
+    "verse": "At pupunan ng aking Dios ang bawa't kailangan ninyo ayon sa kaniyang mga kayamanan sa kaluwalhatian kay Cristo Jesus.",
+    "reference": "Philippians 4:19",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
-    "id": "psalms-84-9",
-    "category": "Trust",
-    "verse": "Masdan mo, Oh Dios na aming kalasag, at tingnan mo ang mukha ng iyong pinahiran ng langis.",
-    "reference": "Psalms 84:9",
+    "id": "psalms-84-5",
+    "category": "Strength",
+    "verse": "Mapalad ang tao na ang kalakasan ay nasa iyo; na may mga daan sa kaniyang puso na tungo sa Sion.",
+    "reference": "Psalms 84:5",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge"
+      "strength"
     ]
   },
   {
-    "id": "isaiah-30-29",
-    "category": "Trust",
-    "verse": "Kayo'y mangagkakaroon ng awit na gaya ng sa gabi pagka ang banal na kapistahan ay ipinagdidiwang; at kasayahan ng puso, na gaya ng yumayaon na may plauta upang masok sa bundok ng Panginoon, sa malaking Bato ng Israel.",
-    "reference": "Isaiah 30:29",
+    "id": "psalms-95-2",
+    "category": "Joy",
+    "verse": "Tayo'y magsiharap sa kaniyang harapan na may pagpapasalamat, tayo'y magkaingay na may kagalakan sa kaniya na may mga pagaawitan.",
+    "reference": "Psalms 95:2",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
       "joy"
     ]
   },
@@ -2609,16 +2516,13 @@
     ]
   },
   {
-    "id": "psalms-115-12",
-    "category": "Trust",
-    "verse": "Inalaala tayo ng Panginoon; kaniyang pagpapalain tayo: kaniyang pagpapalain ang sangbahayan ni Israel, kaniyang pagpapalain ang sangbahayan ni Aaron.",
-    "reference": "Psalms 115:12",
+    "id": "psalms-112-5",
+    "category": "Love",
+    "verse": "Ang ikabubuti ng taong mapagbiyaya at nagpapahiram, kaniyang aalalayan ang kaniyang usap sa kahatulan.",
+    "reference": "Psalms 112:5",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "joy"
+      "love"
     ]
   },
   {
@@ -2683,16 +2587,13 @@
     ]
   },
   {
-    "id": "psalms-132-5",
-    "category": "Trust",
-    "verse": "Hanggang sa ako'y makasumpong ng dakong ukol sa Panginoon, ng tabernakulo ukol sa Makapangyarihan ni Jacob.",
-    "reference": "Psalms 132:5",
+    "id": "psalms-32-7",
+    "category": "Comfort",
+    "verse": "Ikaw ay aking kublihang dako; iyong iingatan ako sa kabagabagan; iyong kukulungin ako sa palibot ng mga awit ng kaligtasan. (Selah)",
+    "reference": "Psalms 32:7",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
     ]
   },
   {
@@ -2733,27 +2634,23 @@
     ]
   },
   {
-    "id": "psalms-10-11",
-    "category": "Peace",
-    "verse": "Sinasabi niya sa kaniyang puso: ang Dios ay nakalimot: kaniyang ikinukubli ang kaniyang mukha, hindi na niya makikita kailan man.",
-    "reference": "Psalms 10:11",
+    "id": "psalms-9-10",
+    "category": "Trust",
+    "verse": "At silang nangakakaalam ng iyong pangalan ay maglalagak ng kanilang tiwala sa iyo; sapagka't ikaw, Panginoon, ay hindi mo pinabayaan sila na nagsisihanap sa iyo.",
+    "reference": "Psalms 9:10",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "trust"
     ]
   },
   {
-    "id": "psalms-10-3",
-    "category": "Peace",
-    "verse": "Sapagka't ang masama ay nagmamalaki sa nais ng kaniyang puso, at ang mapagimbot ay nagtatakuwil, oo, nagwawalang kabuluhan sa Panginoon.",
-    "reference": "Psalms 10:3",
+    "id": "psalms-9-9",
+    "category": "Comfort",
+    "verse": "Ang Panginoon naman ay magiging matayog na moog sa napipighati, matayog na moog sa mga panahon ng kabagabagan;",
+    "reference": "Psalms 9:9",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2808,27 +2705,22 @@
     ]
   },
   {
-    "id": "psalms-125-5",
-    "category": "Peace",
-    "verse": "Nguni't sa nagsisiliko sa kanilang mga likong lakad, ilalabas ng Panginoon na kasama ng mga manggagawa ng kasamaan. Kapayapaan nawa ay suma Israel.",
-    "reference": "Psalms 125:5",
+    "id": "proverbs-4-18",
+    "category": "Hope",
+    "verse": "Nguni't ang landas ng matuwid ay parang maliyab na liwanag, na sumisilang ng higit at higit sa sakdal na araw.",
+    "reference": "Proverbs 4:18",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "hope"
     ]
   },
   {
-    "id": "philippians-1-8",
-    "category": "Grace",
-    "verse": "Sapagka't saksi ko ang Dios, kung gaano ang pananabik ko sa inyong lahat sa mahinahong habag ni Cristo Jesus.",
-    "reference": "Philippians 1:8",
+    "id": "philippians-1-9",
+    "category": "Love",
+    "verse": "At ito'y idinadalangin ko, na ang inyong pagibig ay lalo't lalo pang sumagana nawa sa kaalaman at sa lahat ng pagkakilala;",
+    "reference": "Philippians 1:9",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -2846,15 +2738,13 @@
     ]
   },
   {
-    "id": "psalms-143-4",
-    "category": "Peace",
-    "verse": "Kaya't ang aking diwa ay nanglulupaypay sa loob ko; ang puso ko sa loob ko ay bagbag.",
-    "reference": "Psalms 143:4",
+    "id": "psalms-119-50",
+    "category": "Comfort",
+    "verse": "Ito'y aking kaaliwan sa aking pagkapighati: sapagka't binuhay ako ng iyong salita.",
+    "reference": "Psalms 119:50",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2999,16 +2889,13 @@
     ]
   },
   {
-    "id": "psalms-37-4",
-    "category": "Peace",
-    "verse": "Magpakaligaya ka naman sa Panginoon; at bibigyan ka niya ng nasa ng iyong puso.",
-    "reference": "Psalms 37:4",
+    "id": "psalms-37-23",
+    "category": "Trust",
+    "verse": "Ang lakad ng tao ay itinatag ng Panginoon; at siya'y nasasayahan sa kaniyang lakad.",
+    "reference": "Psalms 37:23",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "peace",
-      "rest",
-      "heart",
-      "joy"
+      "trust"
     ]
   },
   {
@@ -3077,41 +2964,33 @@
     ]
   },
   {
-    "id": "2-corinthians-8-7",
+    "id": "2-corinthians-9-8",
     "category": "Grace",
-    "verse": "Datapuwa't yamang kayo'y nagsisisagana sa lahat ng mga bagay, sa pananampalataya, at pananalita, at kaalaman, at sa buong kasipagan, at sa inyong pagibig sa amin ay magsisagana naman kayo sa biyayang ito.",
-    "reference": "2 Corinthians 8:7",
+    "verse": "At maaaring gawin ng Dios na ang lahat ng biyaya ay magsisagana sa inyo; upang kayo, na mayroong laging buong kaya sa lahat ay magsipanagana sa bawa't mabuting gawa:",
+    "reference": "2 Corinthians 9:8",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "grace"
     ]
   },
   {
-    "id": "psalms-110-2",
-    "category": "Strength",
-    "verse": "Pararatingin ng Panginoon ang setro ng iyong kalakasan mula sa Sion: magpuno ka sa gitna ng iyong mga kaaway.",
-    "reference": "Psalms 110:2",
+    "id": "psalms-145-14",
+    "category": "Comfort",
+    "verse": "Inaalalayan ng Panginoon ang lahat na nangabubuwal, at itinatayo yaong nangasusubasob.",
+    "reference": "Psalms 145:14",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
-    "id": "psalms-115-10",
-    "category": "Strength",
-    "verse": "Oh sangbahayan ni Aaron, magsitiwala kayo sa Panginoon: siya'y kanilang saklolo at kanilang kalasag.",
-    "reference": "Psalms 115:10",
+    "id": "psalms-112-4",
+    "category": "Hope",
+    "verse": "Sa matuwid ay bumabangon ang liwanag sa kadiliman: siya'y mapagbiyaya at puspos ng kahabagan, at matuwid.",
+    "reference": "Psalms 112:4",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "strength",
-      "help",
-      "power",
-      "faith"
+      "hope"
     ]
   },
   {
@@ -3154,15 +3033,13 @@
     ]
   },
   {
-    "id": "psalms-143-7",
-    "category": "Strength",
-    "verse": "Magmadali kang sagutin mo ako, Oh Panginoon; ang diwa ko'y nanglulupaypay: huwag mong ikubli ang iyong mukha sa akin; baka ako'y maging gaya nila na nagsibaba sa hukay.",
-    "reference": "Psalms 143:7",
+    "id": "psalms-42-8",
+    "category": "Comfort",
+    "verse": "Gayon ma'y uutusan ng Panginoon ang kaniyang kagandahang-loob sa araw, at sa gabi ay sasa akin ang awit sa kaniya, sa makatuwid baga'y isang dalangin sa Dios ng aking buhay.",
+    "reference": "Psalms 42:8",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
@@ -3294,42 +3171,33 @@
     ]
   },
   {
-    "id": "luke-2-52",
-    "category": "Grace",
-    "verse": "At lumalaki si Jesus sa karunungan at sa pangangatawan, at sa pagbibigay lugod sa Dios at sa mga tao.",
-    "reference": "Luke 2:52",
+    "id": "luke-11-9",
+    "category": "Prayer",
+    "verse": "At sinasabi ko sa inyo, Magsihingi kayo, at kayo'y bibigyan; magsihanap kayo, at kayo'y mangakakasumpong; magsituktok kayo, at kayo'y bubuksan.",
+    "reference": "Luke 11:9",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
+      "prayer"
+    ]
+  },
+  {
+    "id": "ephesians-4-2-3",
+    "category": "Love",
+    "verse": "Ng buong kapakumbabaan at kaamuan, na may pagpapahinuhod, na mangagbatahan kayo-kayo sa pagibig; Na pagsakitan ninyong ingatan ang pakikipagkaisa sa Espiritu sa tali ng kapayapaan.",
+    "reference": "Ephesians 4:2-3",
+    "translation": "Ang Dating Biblia (1905)",
+    "tags": [
       "love"
     ]
   },
   {
-    "id": "2-thessalonians-1-2",
-    "category": "Peace",
-    "verse": "Sumainyo nawa ang biyaya at kapayapaang mula sa Dios Ama at sa Panginoong Jesucristo.",
-    "reference": "2 Thessalonians 1:2",
-    "translation": "Ang Dating Biblia (1905)",
-    "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
-    ]
-  },
-  {
-    "id": "psalms-40-10",
+    "id": "psalms-89-8",
     "category": "Faith",
-    "verse": "Hindi ko ikinubli ang iyong katuwiran sa loob ng aking puso; aking ibinalita ang iyong pagtatapat, at ang iyong pagliligtas: hindi ko inilihim ang iyong kagandahang-loob at ang iyong katotohanan sa dakilang kapisanan.",
-    "reference": "Psalms 40:10",
+    "verse": "Oh Panginoong Dios ng mga hukbo, sino ang makapangyarihang gaya mo, Oh JAH? At ang pagtatapat mo'y nasa palibot mo.",
+    "reference": "Psalms 89:8",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "faith"
     ]
   },
   {
@@ -3385,16 +3253,13 @@
     ]
   },
   {
-    "id": "jeremiah-42-20",
-    "category": "Faith",
-    "verse": "Sapagka't dinaya ninyo ang inyong sarili; sapagka't inyong sinugo ako sa Panginoon ninyong Dios, na inyong sinasabi, Idalangin mo kami sa Panginoon nating Dios: at ayon sa lahat na sasabihin ng Panginoon nating Dios ay gayon mo ipahayag sa amin, at aming gagawin.",
-    "reference": "Jeremiah 42:20",
+    "id": "psalms-119-114",
+    "category": "Hope",
+    "verse": "Ikaw ang kublihan kong dako at kalasag ko: ako'y umaasa sa iyong salita.",
+    "reference": "Psalms 119:114",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "hope"
     ]
   },
   {
@@ -3411,16 +3276,13 @@
     ]
   },
   {
-    "id": "acts-11-17",
-    "category": "Trust",
-    "verse": "Kung ibinigay nga sa kanila ng Dios ang gayon ding kaloob na gaya naman ng kaniyang ibinigay sa atin, nang tayo'y nagsisisampalataya sa Panginoong Jesucristo, sino baga ako, na makahahadlang sa Dios?",
-    "reference": "Acts 11:17",
+    "id": "acts-10-34-35",
+    "category": "Faith",
+    "verse": "At binuka ni Pedro ang kaniyang bibig, at sinabi, Tunay ngang natatalastas ko na hindi nagtatangi ang Dios ng mga tao: Kundi sa bawa't bansa siya na may takot sa kaniya, at gumagawa ng katuwiran, ay kalugodlugod sa kaniya.",
+    "reference": "Acts 10:34-35",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "faith"
     ]
   },
   {
@@ -3502,16 +3364,13 @@
     ]
   },
   {
-    "id": "acts-15-11",
-    "category": "Trust",
-    "verse": "Datapuwa't naniniwala tayo na tayo'y mangaliligtas sa pamamagitan ng biyaya ng Panginoong Jesus, na gaya rin naman nila.",
-    "reference": "Acts 15:11",
+    "id": "hebrews-10-23",
+    "category": "Hope",
+    "verse": "Na ating ingatang matibay ang pagkakilala ng ating pagasa upang huwag magalinlangan: sapagka't tapat ang nangako:",
+    "reference": "Hebrews 10:23",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -3632,15 +3491,13 @@
     ]
   },
   {
-    "id": "psalms-41-10",
-    "category": "Grace",
-    "verse": "Nguni't ikaw, Oh Panginoon, maawa ka sa akin, at ibangon mo ako, upang aking magantihan sila.",
-    "reference": "Psalms 41:10",
+    "id": "psalms-91-4",
+    "category": "Comfort",
+    "verse": "Kaniyang tatakpan ka ng kaniyang mga bagwis, at sa ilalim ng kaniyang mga pakpak ay manganganlong ka: ang kaniyang katotohanan ay kalasag at baluti.",
+    "reference": "Psalms 91:4",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "comfort"
     ]
   },
   {
@@ -3657,54 +3514,43 @@
     ]
   },
   {
-    "id": "psalms-96-13",
-    "category": "Grace",
-    "verse": "Sa harap ng Panginoon; sapagka't siya'y dumarating: sapagka't siya'y dumarating upang hatulan ang lupa: kaniyang hahatulan ng katuwiran ang sanglibutan, at ng kaniyang katotohanan ang mga bayan.",
-    "reference": "Psalms 96:13",
+    "id": "psalms-96-3",
+    "category": "Joy",
+    "verse": "Ipahayag ninyo ang kaniyang kaluwalhatian sa mga bansa ang kagilagilalas niyang mga gawa sa lahat ng mga bayan.",
+    "reference": "Psalms 96:3",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "joy"
     ]
   },
   {
-    "id": "psalms-89-49",
-    "category": "Grace",
-    "verse": "Panginoon, saan nandoon ang iyong dating mga kagandahang-loob, na iyong isinumpa kay David sa iyong pagtatapat?",
-    "reference": "Psalms 89:49",
+    "id": "psalms-33-18",
+    "category": "Hope",
+    "verse": "Narito, ang mata ng Panginoon ay nasa kanila na nangatatakot sa kaniya, sa kanila na nagsisiasa sa kaniyang kagandahang-loob;",
+    "reference": "Psalms 33:18",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "hope"
     ]
   },
   {
-    "id": "proverbs-3-4",
-    "category": "Grace",
-    "verse": "Sa gayo'y makakasumpong ka ng lingap at mabuting kaunawaan, sa paningin ng Dios at ng tao.",
-    "reference": "Proverbs 3:4",
+    "id": "proverbs-3-24",
+    "category": "Peace",
+    "verse": "Pagka ikaw ay nahihiga, hindi ka matatakot: Oo, ikaw ay mahihiga at ang iyong tulog ay magiging mahimbing.",
+    "reference": "Proverbs 3:24",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "peace"
     ]
   },
   {
-    "id": "proverbs-8-35",
-    "category": "Grace",
-    "verse": "Sapagka't sinomang nakakasumpong sa akin, ay nakakasumpong ng buhay. At magtatamo ng lingap ng Panginoon.",
-    "reference": "Proverbs 8:35",
+    "id": "proverbs-16-24",
+    "category": "Wisdom",
+    "verse": "Mga maligayang salita ay parang pulot-pukyutan, matamis sa kaluluwa at kagalingan sa mga buto.",
+    "reference": "Proverbs 16:24",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "life"
+      "wisdom"
     ]
   },
   {
@@ -3759,15 +3605,13 @@
     ]
   },
   {
-    "id": "psalms-118-20",
-    "category": "Grace",
-    "verse": "Ito'y siyang pintuan ng Panginoon; papasukan ng matuwid.",
-    "reference": "Psalms 118:20",
+    "id": "psalms-118-21",
+    "category": "Joy",
+    "verse": "Ako'y magpapasalamat sa iyo, sapagka't sinagot mo ako! At ikaw ay naging aking kaligtasan.",
+    "reference": "Psalms 118:21",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "joy"
     ]
   },
   {
@@ -3810,16 +3654,13 @@
     ]
   },
   {
-    "id": "psalms-22-8",
-    "category": "Faith",
-    "verse": "Magpakatiwala ka sa Panginoon; iligtas niya siya: iligtas niya siya yamang kinaluluguran niya siya:",
-    "reference": "Psalms 22:8",
+    "id": "psalms-34-5",
+    "category": "Hope",
+    "verse": "Sila'y nagsitingin sa kaniya, at nangaliwanagan: at ang kanilang mukha ay hindi malilito kailan man.",
+    "reference": "Psalms 34:5",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "joy"
+      "hope"
     ]
   },
   {
@@ -3885,29 +3726,23 @@
     ]
   },
   {
-    "id": "acts-7-59",
-    "category": "Prayer",
-    "verse": "At kanilang pinagbatuhanan si Esteban, na tumatawag sa Panginoon at nagsasabi, Panginoong Jesus, tanggapin mo ang aking espiritu.",
-    "reference": "Acts 7:59",
+    "id": "1-peter-4-8",
+    "category": "Love",
+    "verse": "Na una sa lahat ay maging maningas kayo sa inyong pagiibigan; sapagka't ang pagibig ay nagtatakip ng karamihang kasalanan:",
+    "reference": "1 Peter 4:8",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "prayer",
-      "answer",
-      "presence",
-      "help"
+      "love"
     ]
   },
   {
-    "id": "psalms-37-5",
-    "category": "Faith",
-    "verse": "Ihabilin mo ang iyong lakad sa Panginoon; tumiwala ka rin naman sa kaniya, at kaniyang papangyayarihin.",
-    "reference": "Psalms 37:5",
+    "id": "psalms-37-24",
+    "category": "Comfort",
+    "verse": "Bagaman siya'y mabuwal, hindi siya lubos na mapapahiga: Sapagka't inaalalayan siya ng Panginoon ng kaniyang kamay.",
+    "reference": "Psalms 37:24",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "life"
+      "comfort"
     ]
   },
   {
@@ -3923,28 +3758,23 @@
     ]
   },
   {
-    "id": "psalms-55-23",
-    "category": "Faith",
-    "verse": "Nguni't ikaw, Oh Dios, ibababa mo sila sa hukay ng kapahamakan: mga mabagsik at magdarayang tao ay hindi darating sa kalahati ng kanilang mga kaarawan; nguni't titiwala ako sa iyo.",
-    "reference": "Psalms 55:23",
+    "id": "psalms-62-7",
+    "category": "Trust",
+    "verse": "Nasa Dios ang aking kaligtasan at aking kaluwalhatian; ang malaking bato ng aking kalakasan, at ang kanlungan ko'y nasa Dios.",
+    "reference": "Psalms 62:7",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "trust"
     ]
   },
   {
-    "id": "psalms-78-22",
-    "category": "Faith",
-    "verse": "Sapagka't sila'y hindi nagsisampalataya sa Dios, at hindi nagsitiwala sa kaniyang pagliligtas.",
-    "reference": "Psalms 78:22",
+    "id": "psalms-119-165",
+    "category": "Peace",
+    "verse": "Dakilang kapayapaan ang tinatamo nila na nagsisiibig ng iyong kautusan. At sila'y walang kadahilanang ikatitisod.",
+    "reference": "Psalms 119:165",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "hope"
+      "peace"
     ]
   },
   {
@@ -3974,15 +3804,13 @@
     ]
   },
   {
-    "id": "isaiah-48-2",
-    "category": "Faith",
-    "verse": "(Sapagka't sila'y tinatawag ayon sa bayang banal, at nagsitiwala sa Dios ng Israel; ang Panginoon ng mga hukbo ang kaniyang pangalan):",
-    "reference": "Isaiah 48:2",
+    "id": "isaiah-26-12",
+    "category": "Peace",
+    "verse": "Panginoon, ikaw ay magaayos ng kapayapaan sa amin: sapagka't ikaw rin ang gumawa ng lahat naming gawa na para sa amin.",
+    "reference": "Isaiah 26:12",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "peace"
     ]
   },
   {
@@ -4024,27 +3852,23 @@
     ]
   },
   {
-    "id": "psalms-87-2",
-    "category": "Love",
-    "verse": "Minahal ng Panginoon ang mga pintuang-bayan ng Sion, ng higit kay sa lahat na tahanan ng Jacob.",
-    "reference": "Psalms 87:2",
+    "id": "psalms-90-14",
+    "category": "Joy",
+    "verse": "Oh busugin mo kami sa kinaumagahan ng iyong kagandahang-loob; upang kami ay mangagalak at mangatuwa sa lahat ng kaarawan namin.",
+    "reference": "Psalms 90:14",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
-    "id": "psalms-55-14",
+    "id": "psalms-133-1",
     "category": "Love",
-    "verse": "Tayo ay maligayang nagpapayuhang magkasama, tayo'y lumalakad na magkaakbay sa bahay ng Dios.",
-    "reference": "Psalms 55:14",
+    "verse": "Masdan ninyo, na pagkabuti at pagkaligaya sa mga magkakapatid na magsitahang magkakasama sa pagkakaisa!",
+    "reference": "Psalms 133:1",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
@@ -4074,28 +3898,23 @@
     ]
   },
   {
-    "id": "john-14-24",
+    "id": "john-15-12",
     "category": "Love",
-    "verse": "Ang hindi umiibig sa akin ay hindi tumutupad ng aking mga salita: at ang salitang inyong narinig ay hindi akin, kundi sa Amang nagsugo sa akin.",
-    "reference": "John 14:24",
+    "verse": "Ito ang aking utos, na kayo'y mangagibigan sa isa't isa, na gaya ng pagibig ko sa inyo.",
+    "reference": "John 15:12",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god",
-      "wisdom"
+      "love"
     ]
   },
   {
-    "id": "john-14-31",
-    "category": "Love",
-    "verse": "Datapuwa't upang maalaman ng sanglibutan na ako'y umiibig sa Ama, at ayon sa kautusang ibinigay sa akin ng Ama, ay gayon din ang aking ginagawa. Magsitindig kayo, at magsialis tayo rito.",
-    "reference": "John 14:31",
+    "id": "john-15-11",
+    "category": "Joy",
+    "verse": "Ang mga bagay na ito ay sinalita ko sa inyo, upang ang aking kagalakan ay mapasa inyo, at upang ang inyong kagalakan ay malubos.",
+    "reference": "John 15:11",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
@@ -4123,39 +3942,33 @@
     ]
   },
   {
-    "id": "john-5-20",
+    "id": "john-15-13",
     "category": "Love",
-    "verse": "Sapagka't sinisinta ng Ama ang Anak, at sa kaniya'y ipinakikita ang lahat ng mga bagay na kaniyang ginagawa: at lalong dakilang mga gawa kay sa mga ito ang sa kaniya'y ipakikita niya, upang kayo'y magsipanggilalas.",
-    "reference": "John 5:20",
+    "verse": "Walang may lalong dakilang pagibig kay sa rito, na ibigay ng isang tao ang kaniyang buhay dahil sa kaniyang mga kaibigan.",
+    "reference": "John 15:13",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
-    "id": "john-8-42",
-    "category": "Love",
-    "verse": "Sinabi sa kanila ni Jesus, Kung ang Dios ang inyong ama, ay inyong iibigin ako: sapagka't ako'y nagmula at nanggaling sa Dios; sapagka't hindi ako naparito sa aking sarili, kundi sinugo niya ako.",
-    "reference": "John 8:42",
+    "id": "john-6-37",
+    "category": "Hope",
+    "verse": "Ang lahat ng ibinibigay sa akin ng Ama ay magsisilapit sa akin; at ang lumalapit sa akin sa anomang paraan ay hindi ko itataboy.",
+    "reference": "John 6:37",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "hope"
     ]
   },
   {
-    "id": "matthew-10-37",
-    "category": "Love",
-    "verse": "Ang umiibig sa ama o sa ina ng higit kay sa akin ay hindi karapatdapat sa akin; at ang umiibig sa anak na lalake o anak na babae ng higit kay sa akin ay hindi karapatdapat sa akin.",
-    "reference": "Matthew 10:37",
+    "id": "james-1-19",
+    "category": "Wisdom",
+    "verse": "Nalalaman ninyo ito, minamahal kong mga kapatid. Nguni't magmaliksi ang bawa't tao sa pakikinig, magmakupad sa pananalita, magmakupad sa pagkagalit;",
+    "reference": "James 1:19",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "wisdom"
     ]
   },
   {
@@ -4183,16 +3996,13 @@
     ]
   },
   {
-    "id": "2-peter-1-14",
-    "category": "Hope",
-    "verse": "Yamang aking nalalaman na dumarating na madali ang paghiwalay ko sa aking tabernakulo, na gaya ng ipinahiwatig sa akin ng Panginoon nating Jesucristo.",
-    "reference": "2 Peter 1:14",
+    "id": "2-peter-1-2",
+    "category": "Grace",
+    "verse": "Biyaya at kapayapaan ang sa inyo'y dumami sa pagkakilala sa Dios at kay Jesus na Panginoon natin;",
+    "reference": "2 Peter 1:2",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "grace"
     ]
   },
   {
@@ -4248,28 +4058,23 @@
     ]
   },
   {
-    "id": "psalms-106-25",
-    "category": "Prayer",
-    "verse": "Kundi nangagsiungol sa kanilang mga tolda, at hindi nangakinig sa tinig ng Panginoon.",
-    "reference": "Psalms 106:25",
+    "id": "psalms-34-10",
+    "category": "Hope",
+    "verse": "Ang mga batang leon ay kinakapos at nagtitiis ng gutom. Nguni't silang nagsisihanap sa Panginoon ay hindi kukulangin ng anomang mabuting bagay.",
+    "reference": "Psalms 34:10",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "prayer",
-      "seeking",
-      "calling"
+      "hope"
     ]
   },
   {
-    "id": "romans-2-16",
-    "category": "Hope",
-    "verse": "Sa araw na hahatulan ng Dios ang mga lihim ng mga tao, ayon sa aking evangelio, sa pamamagitan ni Jesucristo.",
-    "reference": "Romans 2:16",
+    "id": "james-5-13",
+    "category": "Prayer",
+    "verse": "Nagbabata baga ang sinoman sa inyo? siya'y manalangin. Natutuwa ang sinoman? awitin niya ang mga pagpupuri.",
+    "reference": "James 5:13",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "prayer"
     ]
   },
   {
@@ -4348,15 +4153,13 @@
     ]
   },
   {
-    "id": "psalms-105-19",
-    "category": "Wisdom",
-    "verse": "Hanggang sa panahon na nangyari ang kaniyang salita; tinikman siya ng salita ng Panginoon.",
-    "reference": "Psalms 105:19",
+    "id": "psalms-119-76",
+    "category": "Comfort",
+    "verse": "Isinasamo ko sa iyo na maging kaaliwan ko ang iyong kagandahang-loob, ayon sa iyong salita sa iyong lingkod.",
+    "reference": "Psalms 119:76",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word"
+      "comfort"
     ]
   },
   {
@@ -4373,16 +4176,13 @@
     ]
   },
   {
-    "id": "psalms-118-27",
-    "category": "Wisdom",
-    "verse": "Ang Panginoon ay Dios, at binigyan niya kami ng liwanag; talian ninyo ang hain ng mga panali, sa makatuwid baga'y sa mga tila sungay ng dambana.",
-    "reference": "Psalms 118:27",
+    "id": "psalms-100-4",
+    "category": "Joy",
+    "verse": "Magsipasok kayo sa kaniyang mga pintuang-daan na may pagpapasalamat, at sa kaniyang looban na may pagpupuri: mangagpasalamat kayo sa kaniya, at purihin ninyo ang kaniyang pangalan.",
+    "reference": "Psalms 100:4",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "life"
+      "joy"
     ]
   },
   {
@@ -4424,16 +4224,13 @@
     ]
   },
   {
-    "id": "isaiah-26-13",
-    "category": "Hope",
-    "verse": "Oh Panginoon naming Dios, ang ibang mga panginoon, bukod sa iyo ay nagtaglay ng pagkapanginoon sa amin; nguni't ikaw lamang ang babanggitin namin sa pangalan.",
-    "reference": "Isaiah 26:13",
+    "id": "isaiah-66-13",
+    "category": "Comfort",
+    "verse": "Kung paanong ang sinoma'y inaaliw ng ina gayon ko aaliwin kayo; at kayo'y mangaaliw sa Jerusalem.",
+    "reference": "Isaiah 66:13",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -4449,16 +4246,13 @@
     ]
   },
   {
-    "id": "2-corinthians-8-5",
-    "category": "Hope",
-    "verse": "At ito, ay hindi ayon sa aming inaasahan, kundi ibinigay muna nila ang kanilang sarili sa Panginoon, at sa amin sa pamamagitan ng kalooban ng Dios.",
-    "reference": "2 Corinthians 8:5",
+    "id": "hebrews-10-24",
+    "category": "Love",
+    "verse": "At tayo'y mangagtinginan upang tayo'y mangaudyok sa pagiibigan at mabubuting gawa;",
+    "reference": "Hebrews 10:24",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -4486,42 +4280,33 @@
     ]
   },
   {
-    "id": "deuteronomy-13-3",
-    "category": "Love",
-    "verse": "Ay huwag mong didinggin ang mga salita ng manghuhulang yaon, o ng mapanaginiping yaon ng mga panaginip: sapagka't sinusubok kayo ng Panginoon ninyong Dios, upang maalaman kung iniibig ninyo ang Panginoon ninyong Dios ng inyong buong puso at ng inyong buong kaluluwa.",
-    "reference": "Deuteronomy 13:3",
+    "id": "proverbs-12-25",
+    "category": "Comfort",
+    "verse": "Ang kabigatan sa puso ng tao ay nagpapahukot; nguni't ang mabuting salita ay nagpapasaya.",
+    "reference": "Proverbs 12:25",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "comfort"
     ]
   },
   {
-    "id": "isaiah-43-1",
-    "category": "Courage",
-    "verse": "Nguni't ngayo'y ganito ang sabi ng Panginoon na lumalang sa iyo, Oh Jacob, at naganyo sa iyo, Oh Israel, Ikaw ay huwag matakot, sapagka't tinubos kita; tinawag kita sa iyong pangalan, ikaw ay akin.",
-    "reference": "Isaiah 43:1",
+    "id": "isaiah-42-3",
+    "category": "Comfort",
+    "verse": "Ang gapok na tambo ay hindi niya babaliin, ni ang timsim na umuusok ay hindi niya papatayin: siya'y maglalapat ng kahatulan sa katotohanan.",
+    "reference": "Isaiah 42:3",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "courage",
-      "fear",
-      "strength",
-      "life"
+      "comfort"
     ]
   },
   {
-    "id": "1-samuel-2-1",
+    "id": "1-chronicles-16-23",
     "category": "Joy",
-    "verse": "At si Ana ay nanalangin, at nagsabi: Nagagalak ang aking puso sa Panginoon; Ang aking sungay ay pinalaki ng Panginoon; Binigyan ako ng bibig sa aking mga kaaway; Sapagka't ako'y nagagalak sa iyong pagliligtas.",
-    "reference": "1 Samuel 2:1",
+    "verse": "Kayo'y magsiawit sa Panginoon, buong lupa, Ihayag ninyo ang kaniyang pagliligtas sa araw-araw.",
+    "reference": "1 Chronicles 16:23",
     "translation": "Ang Dating Biblia (1905)",
     "tags": [
-      "joy",
-      "delight",
-      "praise",
-      "gratitude"
+      "joy"
     ]
   },
   {

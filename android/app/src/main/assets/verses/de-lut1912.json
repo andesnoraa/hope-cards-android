@@ -98,8 +98,8 @@
   {
     "id": "psalm-46-1",
     "category": "Peace",
-    "verse": "Ein Lied der Kinder Korah, von der Jugend, vorzusingen. Gott ist unsre Zuversicht und Stärke. Eine Hilfe in den großen Nöten, die uns getroffen haben.",
-    "reference": "Psalm 46:1",
+    "verse": "Gott ist unsre Zuversicht und Stärke. Eine Hilfe in den großen Nöten, die uns getroffen haben.",
+    "reference": "Psalm 46:2",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -135,7 +135,7 @@
     "id": "psalm-34-18",
     "category": "Comfort",
     "verse": "Der HERR ist nahe bei denen, die zerbrochnes Herzens sind, und hilft denen, die ein zerschlagen Gemüt haben.",
-    "reference": "Psalm 34:18",
+    "reference": "Psalm 34:19",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "comfort",
@@ -147,7 +147,7 @@
     "id": "psalm-55-22",
     "category": "Trust",
     "verse": "Wirf dein Anliegen auf den HERRN; der wird dich versorgen und wird den Gerechten nicht ewiglich in Unruhe lassen.",
-    "reference": "Psalm 55:22",
+    "reference": "Psalm 55:23",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -180,15 +180,13 @@
     ]
   },
   {
-    "id": "2-corinthians-12-9",
-    "category": "Grace",
-    "verse": "Und er hat zu mir gesagt: Laß dir an meiner Gnade genügen; denn meine Kraft ist in den Schwachen mächtig. Darum will ich mich am allerliebsten rühmen meiner Schwachheit, auf daß die Kraft Christi bei mir wohne.",
-    "reference": "2 Corinthians 12:9",
+    "id": "hebrews-4-15",
+    "category": "Comfort",
+    "verse": "Denn wir haben nicht einen Hohenpriester, der nicht könnte Mitleiden haben mit unsern Schwachheiten, sondern der versucht ist allenthalben gleichwie wir, doch ohne Sünde.",
+    "reference": "Hebrews 4:15",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "strength",
-      "weakness"
+      "comfort"
     ]
   },
   {
@@ -215,15 +213,13 @@
     ]
   },
   {
-    "id": "romans-8-38-39",
-    "category": "Hope",
-    "verse": "Denn ich bin gewiß, daß weder Tod noch Leben, weder Engel noch Fürstentümer noch Gewalten, weder Gegenwärtiges noch Zukünftiges, weder Hohes noch Tiefes noch keine andere Kreatur mag uns scheiden von der Liebe Gottes, die in Christo Jesu ist, unserm HERRN.",
-    "reference": "Romans 8:38-39",
+    "id": "romans-8-32",
+    "category": "Love",
+    "verse": "welcher auch seines eigenen Sohnes nicht hat verschont, sondern hat ihn für uns alle dahingegeben; wie sollte er uns mit ihm nicht alles schenken?",
+    "reference": "Romans 8:32",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "love",
-      "assurance"
+      "love"
     ]
   },
   {
@@ -371,15 +367,13 @@
     ]
   },
   {
-    "id": "1-john-3-1",
-    "category": "Love",
-    "verse": "Sehet, welch eine Liebe hat uns der Vater erzeigt, daß wir Gottes Kinder sollen heißen! Darum kennt euch die Welt nicht; denn sie kennt ihn nicht.",
-    "reference": "1 John 3:1",
+    "id": "1-john-3-2",
+    "category": "Hope",
+    "verse": "Meine Lieben, wir sind nun Gottes Kinder; und es ist noch nicht erschienen, was wir sein werden. Wir wissen aber, wenn es erscheinen wird, daß wir ihm gleich sein werden; denn wir werden ihn sehen, wie er ist.",
+    "reference": "1 John 3:2",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "identity",
-      "children-of-god"
+      "hope"
     ]
   },
   {
@@ -443,14 +437,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-5-17",
+    "id": "1-thessalonians-5-16-18",
     "category": "Prayer",
-    "verse": "betet ohne Unterlaß,",
-    "reference": "1 Thessalonians 5:17",
+    "verse": "Seid allezeit fröhlich, betet ohne Unterlaß, seid dankbar in allen Dingen; denn das ist der Wille Gottes in Christo Jesu an euch.",
+    "reference": "1 Thessalonians 5:16-18",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "prayer",
-      "devotion"
+      "prayer"
     ]
   },
   {
@@ -529,7 +522,7 @@
     "id": "psalm-4-8",
     "category": "Peace",
     "verse": "Ich liege und schlafe ganz mit Frieden; denn allein du, HERR, hilfst mir, daß ich sicher wohne.",
-    "reference": "Psalm 4:8",
+    "reference": "Psalm 4:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -566,7 +559,7 @@
     "id": "psalm-18-2",
     "category": "Strength",
     "verse": "HERR, mein Fels, meine Burg, mein Erretter, mein Gott, mein Hort, auf den ich traue, mein Schild und Horn meines Heils und mein Schutz!",
-    "reference": "Psalm 18:2",
+    "reference": "Psalm 18:3",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -578,7 +571,7 @@
     "id": "psalm-19-14",
     "category": "Prayer",
     "verse": "Laß dir wohl gefallen die Rede meines Mundes und das Gespräch meines Herzens vor dir, HERR, mein Hort und mein Erlöser.",
-    "reference": "Psalm 19:14",
+    "reference": "Psalm 19:15",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "prayer",
@@ -602,7 +595,7 @@
     "id": "psalm-31-24",
     "category": "Courage",
     "verse": "Seid getrost und unverzagt, alle, die ihr des HERRN harret!",
-    "reference": "Psalm 31:24",
+    "reference": "Psalm 31:25",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "courage",
@@ -626,7 +619,7 @@
     "id": "psalm-34-4",
     "category": "Comfort",
     "verse": "Da ich den HERRN suchte, antwortete er mir und errettete mich aus aller meiner Furcht.",
-    "reference": "Psalm 34:4",
+    "reference": "Psalm 34:5",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "comfort",
@@ -638,7 +631,7 @@
     "id": "psalm-46-10",
     "category": "Peace",
     "verse": "Seid stille und erkennet, daß ich GOTT bin. Ich will Ehre einlegen unter den Heiden; ich will Ehre einlegen auf Erden.",
-    "reference": "Psalm 46:10",
+    "reference": "Psalm 46:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -650,7 +643,7 @@
     "id": "psalm-56-3",
     "category": "Trust",
     "verse": "Wenn ich mich fürchte, so hoffe ich auf dich.",
-    "reference": "Psalm 56:3",
+    "reference": "Psalm 56:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -817,15 +810,13 @@
     ]
   },
   {
-    "id": "isaiah-43-2",
-    "category": "Comfort",
-    "verse": "Denn so du durch Wasser gehst, will ich bei dir sein, daß dich die Ströme nicht sollen ersäufen; und so du ins Feuer gehst, sollst du nicht brennen, und die Flamme soll dich nicht versengen.",
-    "reference": "Isaiah 43:2",
+    "id": "isaiah-41-13",
+    "category": "Courage",
+    "verse": "Denn ich bin der HERR, dein Gott, der deine rechte Hand stärkt und zu dir spricht: Fürchte dich nicht, ich helfe dir!",
+    "reference": "Isaiah 41:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "comfort",
-      "trials",
-      "presence"
+      "courage"
     ]
   },
   {
@@ -841,27 +832,23 @@
     ]
   },
   {
-    "id": "isaiah-54-10",
-    "category": "Love",
-    "verse": "Denn es sollen wohl Berge weichen und Hügel hinfallen; aber meine Gnade soll nicht von dir weichen, und der Bund meines Friedens soll nicht hinfallen, spricht der HERR, dein Erbarmer.",
-    "reference": "Isaiah 54:10",
+    "id": "isaiah-54-13",
+    "category": "Peace",
+    "verse": "und alle deine Kinder gelehrt vom HERRN und großen Frieden deinen Kindern.",
+    "reference": "Isaiah 54:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "peace",
-      "mercy"
+      "peace"
     ]
   },
   {
-    "id": "lamentations-3-23",
-    "category": "Grace",
-    "verse": "sondern sie ist alle Morgen neu, und deine Treue ist groß.",
-    "reference": "Lamentations 3:23",
+    "id": "lamentations-3-22-23",
+    "category": "Hope",
+    "verse": "Die Güte des HERRN ist's, daß wir nicht gar aus sind; seine Barmherzigkeit hat noch kein Ende, sondern sie ist alle Morgen neu, und deine Treue ist groß.",
+    "reference": "Lamentations 3:22-23",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "faithfulness",
-      "morning"
+      "hope"
     ]
   },
   {
@@ -877,16 +864,13 @@
     ]
   },
   {
-    "id": "galatians-6-18",
-    "category": "Grace",
-    "verse": "Die Gnade unsers HERRN Jesu Christi sei mit eurem Geist, liebe Brüder! Amen.",
-    "reference": "Galatians 6:18",
+    "id": "galatians-6-9",
+    "category": "Hope",
+    "verse": "Lasset uns aber Gutes tun und nicht müde werden; denn zu seiner Zeit werden wir auch ernten ohne Aufhören.",
+    "reference": "Galatians 6:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
@@ -987,15 +971,13 @@
     ]
   },
   {
-    "id": "1-corinthians-10-13",
-    "category": "Strength",
-    "verse": "Es hat euch noch keine denn menschliche Versuchung betreten; aber Gott ist getreu, der euch nicht läßt versuchen über euer Vermögen, sondern macht, daß die Versuchung so ein Ende gewinne, daß ihr's könnet ertragen.",
-    "reference": "1 Corinthians 10:13",
+    "id": "1-corinthians-1-9",
+    "category": "Faith",
+    "verse": "Denn Gott ist treu, durch welchen ihr berufen seid zur Gemeinschaft seines Sohnes Jesu Christi, unsers HERRN.",
+    "reference": "1 Corinthians 1:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "strength",
-      "testing",
-      "faithfulness"
+      "faith"
     ]
   },
   {
@@ -1035,15 +1017,12 @@
     ]
   },
   {
-    "id": "colossians-4-12",
-    "category": "Grace",
-    "verse": "Es grüßt euch Epaphras, der von den euren ist, ein Knecht Christi, und allezeit ringt für euch mit Gebeten, auf daß ihr bestehet vollkommen und erfüllt mit allem Willen Gottes.",
-    "reference": "Colossians 4:12",
+    "id": "colossians-3-12",
+    "category": "Love",
+    "verse": "So ziehet nun an, als die Auserwählten Gottes, Heiligen und Geliebten, herzliches Erbarmen, Freundlichkeit, Demut, Sanftmut, Geduld;",
+    "reference": "Colossians 3:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -1108,16 +1087,13 @@
     ]
   },
   {
-    "id": "colossians-3-16",
-    "category": "Wisdom",
-    "verse": "Lasset das Wort Christi unter euch reichlich wohnen in aller Weisheit; lehret und vermahnet euch selbst mit Psalmen und Lobgesängen und geistlichen lieblichen Liedern und singt dem HERRN in eurem Herzen.",
-    "reference": "Colossians 3:16",
+    "id": "colossians-3-14",
+    "category": "Love",
+    "verse": "Über alles aber ziehet an die Liebe, die da ist das Band der Vollkommenheit.",
+    "reference": "Colossians 3:14",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "truth"
+      "love"
     ]
   },
   {
@@ -1146,15 +1122,13 @@
     ]
   },
   {
-    "id": "joshua-24-15",
-    "category": "Faith",
-    "verse": "Gefällt es euch aber nicht, daß ihr dem HERRN dient, so erwählt euch heute, wem ihr dienen wollt: den Göttern, denen eure Väter gedient haben jenseit des Stroms, oder den Göttern der Amoriter, in deren Land ihr wohnt. Ich aber und mein Haus wollen dem HERRN dienen.",
-    "reference": "Joshua 24:15",
+    "id": "psalms-31-3",
+    "category": "Trust",
+    "verse": "Denn du bist mein Fels und meine Burg, und um deines Namens willen wolltest du mich leiten und führen.",
+    "reference": "Psalms 31:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "choice",
-      "service"
+      "trust"
     ]
   },
   {
@@ -1206,15 +1180,13 @@
     ]
   },
   {
-    "id": "nehemiah-8-10",
+    "id": "psalms-92-4",
     "category": "Joy",
-    "verse": "Darum sprach er zu ihnen: Geht hin und eßt das Fette und trinkt das Süße und sendet denen auch Teile, die nichts für sich bereitet haben; denn dieser Tag ist heilig unserm HERRN. Und bekümmert euch nicht; denn die Freude am HERRN ist eure Stärke.",
-    "reference": "Nehemiah 8:10",
+    "verse": "Denn, HERR, du lässest mich fröhlich singen von deinen Werken, und ich rühme die Geschäfte deiner Hände.",
+    "reference": "Psalms 92:5",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "joy",
-      "strength",
-      "lord"
+      "joy"
     ]
   },
   {
@@ -1245,7 +1217,7 @@
     "id": "psalm-5-3",
     "category": "Prayer",
     "verse": "HERR, frühe wollest du meine Stimme hören; frühe will ich mich zu dir schicken und aufmerken.",
-    "reference": "Psalm 5:3",
+    "reference": "Psalm 5:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "prayer",
@@ -1269,7 +1241,7 @@
     "id": "psalm-20-7",
     "category": "Trust",
     "verse": "Jene verlassen sich auf Wagen und Rosse; wir aber denken an den Namen des HERRN, unsers Gottes.",
-    "reference": "Psalm 20:7",
+    "reference": "Psalm 20:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -1317,7 +1289,7 @@
     "id": "psalm-30-5",
     "category": "Joy",
     "verse": "Denn sein Zorn währt einen Augenblick, und lebenslang seine Gnade; den Abend lang währt das Weinen, aber des Morgens ist Freude.",
-    "reference": "Psalm 30:5",
+    "reference": "Psalm 30:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "joy",
@@ -1341,7 +1313,7 @@
     "id": "psalm-34-8",
     "category": "Trust",
     "verse": "Schmecket und sehet, wie freundlich der HERR ist. Wohl dem, der auf ihn traut!",
-    "reference": "Psalm 34:8",
+    "reference": "Psalm 34:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -1378,7 +1350,7 @@
     "id": "psalm-51-10",
     "category": "Grace",
     "verse": "Schaffe in mir, Gott, ein reines Herz und gib mir einen neuen, gewissen Geist.",
-    "reference": "Psalm 51:10",
+    "reference": "Psalm 51:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "grace",
@@ -1387,23 +1359,20 @@
     ]
   },
   {
-    "id": "jeremiah-3-23",
-    "category": "Hope",
-    "verse": "Wahrlich, es ist eitel Betrug mit Hügeln und mit allen Bergen. Wahrlich, es hat Israel keine Hilfe denn am HERRN, unserm Gott.",
-    "reference": "Jeremiah 3:23",
+    "id": "psalms-95-1",
+    "category": "Joy",
+    "verse": "Kommt herzu, laßt uns dem HERRN frohlocken und jauchzen dem Hort unsers Heils!",
+    "reference": "Psalms 95:1",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "joy"
     ]
   },
   {
     "id": "psalm-62-5",
     "category": "Hope",
     "verse": "Aber sei nur stille zu Gott, meine Seele; denn er ist meine Hoffnung.",
-    "reference": "Psalm 62:5",
+    "reference": "Psalm 62:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -1415,7 +1384,7 @@
     "id": "psalm-84-11",
     "category": "Grace",
     "verse": "Denn Gott der HERR ist Sonne und Schild; der HERR gibt Gnade und Ehre: er wird kein Gutes mangeln lassen den Frommen.",
-    "reference": "Psalm 84:11",
+    "reference": "Psalm 84:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "grace",
@@ -1460,16 +1429,13 @@
     ]
   },
   {
-    "id": "acts-20-21",
-    "category": "Trust",
-    "verse": "und habe bezeugt, beiden, den Juden und Griechen, die Buße zu Gott und den Glauben an unsern HERRN Jesus Christus.",
-    "reference": "Acts 20:21",
+    "id": "romans-12-12",
+    "category": "Hope",
+    "verse": "Seid fröhlich in Hoffnung, geduldig in Trübsal, haltet an am Gebet.",
+    "reference": "Romans 12:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -1509,16 +1475,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-2-19",
-    "category": "Hope",
-    "verse": "Denn wer ist unsre Hoffnung oder Freude oder Krone des Ruhms? Seid nicht auch ihr es vor unserm HERRN Jesus Christus zu seiner Zukunft?",
-    "reference": "1 Thessalonians 2:19",
+    "id": "1-thessalonians-5-11",
+    "category": "Comfort",
+    "verse": "Darum ermahnet euch untereinander und bauet einer den andern, wie ihr denn tut.",
+    "reference": "1 Thessalonians 5:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -1570,16 +1533,13 @@
     ]
   },
   {
-    "id": "philippians-2-11",
+    "id": "philippians-1-6",
     "category": "Hope",
-    "verse": "und alle Zungen bekennen sollen, daß Jesus Christus der HERR sei, zur Ehre Gottes, des Vaters.",
-    "reference": "Philippians 2:11",
+    "verse": "und bin desselben in guter Zuversicht, daß, der in euch angefangen hat das gute Werk, der wird's auch vollführen bis an den Tag Jesu Christi.",
+    "reference": "Philippians 1:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1608,15 +1568,13 @@
     ]
   },
   {
-    "id": "jeremiah-17-8",
-    "category": "Hope",
-    "verse": "Der ist wie ein Baum, am Wasser gepflanzt und am Bach gewurzelt. Denn obgleich eine Hitze kommt, fürchtet er sich doch nicht, sondern seine Blätter bleiben grün, und sorgt nicht, wenn ein dürres Jahr kommt sondern er bringt ohne Aufhören Früchte.",
-    "reference": "Jeremiah 17:8",
+    "id": "psalms-92-12",
+    "category": "Strength",
+    "verse": "Der Gerechte wird grünen wie ein Palmbaum; er wird wachsen wie eine Zeder auf dem Libanon.",
+    "reference": "Psalms 92:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "growth",
-      "fruit"
+      "strength"
     ]
   },
   {
@@ -1680,16 +1638,13 @@
     ]
   },
   {
-    "id": "romans-10-1",
-    "category": "Hope",
-    "verse": "Liebe Brüder, meines Herzens Wunsch ist, und ich flehe auch zu Gott für Israel, daß sie selig werden.",
-    "reference": "Romans 10:1",
+    "id": "romans-12-10",
+    "category": "Love",
+    "verse": "Die brüderliche Liebe untereinander sei herzlich. Einer komme dem andern mit Ehrerbietung zuvor.",
+    "reference": "Romans 12:10",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -1705,16 +1660,13 @@
     ]
   },
   {
-    "id": "romans-15-6",
+    "id": "romans-15-4",
     "category": "Hope",
-    "verse": "auf daß ihr einmütig mit einem Munde lobet Gott und den Vater unseres HERRN Jesu Christi.",
-    "reference": "Romans 15:6",
+    "verse": "Was aber zuvor geschrieben ist, das ist uns zur Lehre geschrieben, auf daß wir durch Geduld und Trost der Schrift Hoffnung haben.",
+    "reference": "Romans 15:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1803,16 +1755,13 @@
     ]
   },
   {
-    "id": "isaiah-30-15",
+    "id": "isaiah-32-17",
     "category": "Peace",
-    "verse": "Denn so spricht der Herr HERR, der Heilige in Israel: Wenn ihr umkehrtet und stillebliebet, so würde euch geholfen; durch Stillesein und Hoffen würdet ihr stark sein. Aber ihr wollt nicht",
-    "reference": "Isaiah 30:15",
+    "verse": "und der Gerechtigkeit Frucht wird Friede sein, und der Gerechtigkeit Nutzen wird ewige Stille und Sicherheit sein,",
+    "reference": "Isaiah 32:17",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
+      "peace"
     ]
   },
   {
@@ -1841,16 +1790,13 @@
     ]
   },
   {
-    "id": "1-corinthians-8-6",
-    "category": "Hope",
-    "verse": "so haben wir doch nur einen Gott, den Vater, von welchem alle Dinge sind und wir zu ihm; und einen HERRN, Jesus Christus, durch welchen alle Dinge sind und wir durch ihn.",
-    "reference": "1 Corinthians 8:6",
+    "id": "1-corinthians-16-13",
+    "category": "Courage",
+    "verse": "Wachet, stehet im Glauben, seid männlich und seid stark!",
+    "reference": "1 Corinthians 16:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "courage"
     ]
   },
   {
@@ -1878,16 +1824,13 @@
     ]
   },
   {
-    "id": "philemon-1-25",
-    "category": "Grace",
-    "verse": "Die Gnade unsers HERRN Jesu Christi sei mit eurem Geist! Amen.",
-    "reference": "Philemon 1:25",
+    "id": "2-thessalonians-3-16",
+    "category": "Peace",
+    "verse": "Er aber, der HERR des Friedens, gebe euch Frieden allenthalben und auf allerlei Weise. Der HERR sei mit euch allen!",
+    "reference": "2 Thessalonians 3:16",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "peace"
     ]
   },
   {
@@ -1966,41 +1909,33 @@
     ]
   },
   {
-    "id": "isaiah-25-9",
+    "id": "isaiah-40-8",
     "category": "Hope",
-    "verse": "Zu der Zeit wird man sagen: Siehe, das ist unser Gott, auf den wir harren, und er wird uns helfen; das ist der HERR auf den wir harren, daß wir uns freuen und fröhlich seien in seinem Heil.",
-    "reference": "Isaiah 25:9",
+    "verse": "Das Gras verdorrt, die Blume verwelkt; aber das Wort unsres Gottes bleibt ewiglich.",
+    "reference": "Isaiah 40:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
-    "id": "psalms-108-7",
-    "category": "Hope",
-    "verse": "Gott redete in seinem Heiligtum, des bin ich froh, und will Sichem teilen und das Tal Sukkoth abmessen.",
-    "reference": "Psalms 108:7",
+    "id": "psalms-33-21",
+    "category": "Joy",
+    "verse": "Denn unser Herz freut sich sein, und wir trauen auf seinen heiligen Namen.",
+    "reference": "Psalms 33:21",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting",
-      "wisdom"
+      "joy"
     ]
   },
   {
-    "id": "psalms-109-20",
+    "id": "psalms-33-22",
     "category": "Hope",
-    "verse": "So geschehe denen vom HERRN, die mir zuwider sind und reden Böses wider meine Seele.",
-    "reference": "Psalms 109:20",
+    "verse": "Deine Güte, HERR, sei über uns, wie wir auf dich hoffen.",
+    "reference": "Psalms 33:22",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting"
+      "hope"
     ]
   },
   {
@@ -2174,7 +2109,7 @@
     "id": "psalms-140-7",
     "category": "Hope",
     "verse": "HERR Herr, meine starke Hilfe, du beschirmst mein Haupt zur Zeit des Streites.",
-    "reference": "Psalms 140:7",
+    "reference": "Psalms 140:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -2250,7 +2185,7 @@
     "id": "psalms-20-6",
     "category": "Hope",
     "verse": "Nun merke ich, daß der HERR seinem Gesalbten hilft und erhöht ihn in seinen heiligen Himmel; seine rechte Hand hilft mit Macht.",
-    "reference": "Psalms 20:6",
+    "reference": "Psalms 20:7",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -2299,16 +2234,13 @@
     ]
   },
   {
-    "id": "daniel-10-19",
-    "category": "Courage",
-    "verse": "und sprach: Fürchte dich nicht, du lieber Mann! Friede sei mit dir! Und sei getrost, sei getrost! Und als er mit mir redete, ermannte ich mich und sprach: Mein HERR rede! denn du hast mich gestärkt.",
-    "reference": "Daniel 10:19",
+    "id": "psalms-138-3",
+    "category": "Strength",
+    "verse": "Wenn ich dich anrufe, so erhörst du mich und gibst meiner Seele große Kraft.",
+    "reference": "Psalms 138:3",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "courage",
-      "strength",
-      "fear",
-      "trust"
+      "strength"
     ]
   },
   {
@@ -2341,7 +2273,7 @@
     "id": "psalms-3-3",
     "category": "Hope",
     "verse": "Aber du, HERR, bist der Schild für mich und der mich zu Ehren setzt und mein Haupt aufrichtet.",
-    "reference": "Psalms 3:3",
+    "reference": "Psalms 3:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -2367,7 +2299,7 @@
     "id": "psalms-31-23",
     "category": "Hope",
     "verse": "Liebet den HERRN, alle seine Heiligen! Die Gläubigen behütet der HERR und vergilt reichlich dem, der Hochmut übt.",
-    "reference": "Psalms 31:23",
+    "reference": "Psalms 31:24",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -2377,61 +2309,50 @@
     ]
   },
   {
-    "id": "2-corinthians-9-14",
+    "id": "ephesians-4-32",
     "category": "Love",
-    "verse": "indem auch sie nach euch verlangt im Gebet für euch um der überschwenglichen Gnade Gottes willen in euch.",
-    "reference": "2 Corinthians 9:14",
+    "verse": "Seid aber untereinander freundlich, herzlich und vergebet einer dem andern, gleichwie Gott euch auch vergeben hat in Christo.",
+    "reference": "Ephesians 4:32",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "love"
     ]
   },
   {
-    "id": "psalms-31-6",
-    "category": "Hope",
-    "verse": "Ich hasse, die da halten auf eitle Götzen; ich aber hoffe auf den HERRN.",
-    "reference": "Psalms 31:6",
-    "translation": "Lutherbibel (1912)",
-    "tags": [
-      "hope",
-      "promise",
-      "waiting"
-    ]
-  },
-  {
-    "id": "psalms-132-13",
+    "id": "psalms-62-8",
     "category": "Trust",
-    "verse": "Denn der HERR hat Zion erwählt und hat Lust, daselbst zu wohnen.",
-    "reference": "Psalms 132:13",
+    "verse": "Hoffet auf ihn allezeit, liebe Leute, schüttet euer Herz vor ihm aus; Gott ist unsre Zuversicht. (Sela.)",
+    "reference": "Psalms 62:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "trust"
     ]
   },
   {
-    "id": "psalms-132-8",
-    "category": "Trust",
-    "verse": "HERR, mache dich auf zu deiner Ruhe, du und die Lade deiner Macht!",
-    "reference": "Psalms 132:8",
+    "id": "psalms-91-1",
+    "category": "Comfort",
+    "verse": "Wer unter dem Schirm des Höchsten sitzt und unter dem Schatten des Allmächtigen bleibt,",
+    "reference": "Psalms 91:1",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-63-7",
+    "category": "Comfort",
+    "verse": "Denn du bist mein Helfer, und unter dem Schatten deiner Flügel frohlocke ich.",
+    "reference": "Psalms 63:8",
+    "translation": "Lutherbibel (1912)",
+    "tags": [
+      "comfort"
     ]
   },
   {
     "id": "2-corinthians-13-14",
     "category": "Grace",
     "verse": "Die Gnade unsers HERRN Jesu Christi und die Liebe Gottes und die Gemeinschaft des heiligen Geistes sei mit euch allen! Amen.",
-    "reference": "2 Corinthians 13:14",
+    "reference": "2 Corinthians 13:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "grace",
@@ -2457,7 +2378,7 @@
     "id": "psalms-30-3",
     "category": "Trust",
     "verse": "HERR, du hast meine Seele aus der Hölle geführt; du hast mich lebend erhalten, da jene in die Grube fuhren.",
-    "reference": "Psalms 30:3",
+    "reference": "Psalms 30:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2467,23 +2388,20 @@
     ]
   },
   {
-    "id": "psalms-30-7",
-    "category": "Trust",
-    "verse": "Denn, HERR, durch dein Wohlgefallen hattest du meinen Berg stark gemacht; aber da du dein Antlitz verbargest, erschrak ich.",
-    "reference": "Psalms 30:7",
+    "id": "psalms-94-18",
+    "category": "Comfort",
+    "verse": "Ich sprach: Mein Fuß hat gestrauchelt; aber deine Gnade, HERR, hielt mich.",
+    "reference": "Psalms 94:18",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "strength"
+      "comfort"
     ]
   },
   {
     "id": "psalms-36-7",
     "category": "Trust",
     "verse": "Wie teuer ist deine Güte, Gott, daß Menschenkinder unter dem Schatten deiner Flügel Zuflucht haben!",
-    "reference": "Psalms 36:7",
+    "reference": "Psalms 36:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2509,7 +2427,7 @@
     "id": "psalms-40-11",
     "category": "Trust",
     "verse": "Du aber, HERR, wollest deine Barmherzigkeit von mir nicht wenden; laß deine Güte und Treue allewege mich behüten.",
-    "reference": "Psalms 40:11",
+    "reference": "Psalms 40:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2522,7 +2440,7 @@
     "id": "psalms-41-2",
     "category": "Trust",
     "verse": "Der HERR wird ihn bewahren und beim Leben erhalten und es ihm lassen wohl gehen auf Erden und wird ihn nicht geben in seiner Feinde Willen.",
-    "reference": "Psalms 41:2",
+    "reference": "Psalms 41:3",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2535,7 +2453,7 @@
     "id": "psalms-56-13",
     "category": "Trust",
     "verse": "denn du hast meine Seele vom Tode errettet, meine Füße vom Gleiten, daß ich wandle vor Gott im Licht der Lebendigen.",
-    "reference": "Psalms 56:13",
+    "reference": "Psalms 56:14",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2545,53 +2463,42 @@
     ]
   },
   {
-    "id": "psalms-61-7",
-    "category": "Trust",
-    "verse": "daß er immer bleibe vor Gott. Erzeige ihm Güte und Treue, die ihn behüten.",
-    "reference": "Psalms 61:7",
+    "id": "psalms-61-3",
+    "category": "Strength",
+    "verse": "Denn du bist meine Zuversicht, ein starker Turm vor meinen Feinden.",
+    "reference": "Psalms 61:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "grace"
+      "strength"
     ]
   },
   {
-    "id": "philippians-4-21",
-    "category": "Grace",
-    "verse": "Grüßet alle Heiligen in Christo Jesu. Es grüßen euch die Brüder, die bei mir sind.",
-    "reference": "Philippians 4:21",
+    "id": "philippians-4-19",
+    "category": "Hope",
+    "verse": "Mein Gott aber fülle aus alle eure Notdurft nach seinem Reichtum in der Herrlichkeit in Christo Jesu.",
+    "reference": "Philippians 4:19",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
-    "id": "psalms-84-9",
-    "category": "Trust",
-    "verse": "Gott, unser Schild, schaue doch; siehe an das Antlitz deines Gesalbten!",
-    "reference": "Psalms 84:9",
+    "id": "psalms-84-5",
+    "category": "Strength",
+    "verse": "Wohl den Menschen, die dich für ihre Stärke halten und von Herzen dir nachwandeln,",
+    "reference": "Psalms 84:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge"
+      "strength"
     ]
   },
   {
-    "id": "isaiah-30-29",
-    "category": "Trust",
-    "verse": "Da werdet ihr singen wie in der Nacht eines heiligen Festes und euch von Herzen freuen, wie wenn man mit Flötenspiel geht zum Berge des HERRN, zum Hort Israels.",
-    "reference": "Isaiah 30:29",
+    "id": "psalms-95-2",
+    "category": "Joy",
+    "verse": "Lasset uns mit Danken vor sein Angesicht kommen und mit Psalmen ihm jauchzen!",
+    "reference": "Psalms 95:2",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
       "joy"
     ]
   },
@@ -2609,16 +2516,13 @@
     ]
   },
   {
-    "id": "psalms-115-12",
-    "category": "Trust",
-    "verse": "Der HERR denkt an uns und segnet uns; er segnet das Haus Israel, er segnet das Haus Aaron;",
-    "reference": "Psalms 115:12",
+    "id": "psalms-112-5",
+    "category": "Love",
+    "verse": "Wohl dem, der barmherzig ist und gerne leidet und richtet seine Sachen aus, daß er niemand Unrecht tue!",
+    "reference": "Psalms 112:5",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "joy"
+      "love"
     ]
   },
   {
@@ -2662,7 +2566,7 @@
     "id": "psalms-12-7",
     "category": "Trust",
     "verse": "Du, HERR, wollest sie bewahren und uns behüten vor diesem Geschlecht ewiglich!",
-    "reference": "Psalms 12:7",
+    "reference": "Psalms 12:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2683,23 +2587,20 @@
     ]
   },
   {
-    "id": "psalms-132-5",
-    "category": "Trust",
-    "verse": "bis ich eine Stätte finde für den HERRN, zur Wohnung des Mächtigen Jakobs.”",
-    "reference": "Psalms 132:5",
+    "id": "psalms-32-7",
+    "category": "Comfort",
+    "verse": "Du bist mein Schirm; du wirst mich vor Angst behüten, daß ich errettet gar fröhlich rühmen kann. (Sela.)",
+    "reference": "Psalms 32:7",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
     ]
   },
   {
     "id": "psalms-140-4",
     "category": "Trust",
     "verse": "Bewahre mich, HERR, vor der Hand der Gottlosen; behüte mich vor den freveln Leuten, die meinen Gang gedenken umzustoßen.",
-    "reference": "Psalms 140:4",
+    "reference": "Psalms 140:5",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2711,7 +2612,7 @@
     "id": "psalms-18-21",
     "category": "Trust",
     "verse": "Denn ich halte die Wege des HERRN und bin nicht gottlos wider meinen Gott.",
-    "reference": "Psalms 18:21",
+    "reference": "Psalms 18:22",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2723,7 +2624,7 @@
     "id": "psalms-18-3",
     "category": "Trust",
     "verse": "Ich rufe an den HERRN, den Hochgelobten, so werde ich von meinen Feinden erlöst.",
-    "reference": "Psalms 18:3",
+    "reference": "Psalms 18:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "trust",
@@ -2733,27 +2634,23 @@
     ]
   },
   {
-    "id": "psalms-10-11",
-    "category": "Peace",
-    "verse": "Er spricht in seinem Herzen: Gott hat's vergessen; er hat sein Antlitz verborgen, er wird's nimmermehr sehen.",
-    "reference": "Psalms 10:11",
+    "id": "psalms-9-10",
+    "category": "Trust",
+    "verse": "Darum hoffen auf dich, die deinen Namen kennen; denn du verlässest nicht, die dich, HERR, suchen.",
+    "reference": "Psalms 9:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "trust"
     ]
   },
   {
-    "id": "psalms-10-3",
-    "category": "Peace",
-    "verse": "Denn der Gottlose rühmt sich seines Mutwillens, und der Geizige sagt dem Herrn ab und lästert ihn.",
-    "reference": "Psalms 10:3",
+    "id": "psalms-9-9",
+    "category": "Comfort",
+    "verse": "Und der HERR ist des Armen Schutz, ein Schutz in der Not.",
+    "reference": "Psalms 9:10",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2808,27 +2705,22 @@
     ]
   },
   {
-    "id": "psalms-125-5",
-    "category": "Peace",
-    "verse": "Die aber abweichen auf ihre krummen Wege, wird der HERR wegtreiben mit den Übeltätern. Friede sei über Israel!",
-    "reference": "Psalms 125:5",
+    "id": "proverbs-4-18",
+    "category": "Hope",
+    "verse": "Aber der Gerechten Pfad glänzt wie das Licht, das immer heller leuchtet bis auf den vollen Tag.",
+    "reference": "Proverbs 4:18",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "hope"
     ]
   },
   {
-    "id": "philippians-1-8",
-    "category": "Grace",
-    "verse": "Denn Gott ist mein Zeuge, wie mich nach euch allen verlangt von Herzensgrund in Jesu Christo.",
-    "reference": "Philippians 1:8",
+    "id": "philippians-1-9",
+    "category": "Love",
+    "verse": "Und darum bete ich, daß eure Liebe je mehr und mehr reich werde in allerlei Erkenntnis und Erfahrung,",
+    "reference": "Philippians 1:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -2846,22 +2738,20 @@
     ]
   },
   {
-    "id": "psalms-143-4",
-    "category": "Peace",
-    "verse": "Und mein Geist ist in mir geängstet; mein Herz ist mir in meinem Leibe verzehrt.",
-    "reference": "Psalms 143:4",
+    "id": "psalms-119-50",
+    "category": "Comfort",
+    "verse": "Das ist mein Trost in meinem Elend; denn dein Wort erquickt mich.",
+    "reference": "Psalms 119:50",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
     "id": "psalms-19-8",
     "category": "Peace",
     "verse": "Die Befehle des HERRN sind richtig und erfreuen das Herz; die Gebote des HERRN sind lauter und erleuchten die Augen.",
-    "reference": "Psalms 19:8",
+    "reference": "Psalms 19:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -2874,7 +2764,7 @@
     "id": "psalms-22-26",
     "category": "Peace",
     "verse": "Die Elenden sollen essen, daß sie satt werden; und die nach dem HERRN fragen, werden ihn preisen; euer Herz soll ewiglich leben.",
-    "reference": "Psalms 22:26",
+    "reference": "Psalms 22:27",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -2999,23 +2889,20 @@
     ]
   },
   {
-    "id": "psalms-37-4",
-    "category": "Peace",
-    "verse": "Habe Deine Lust am HERRN; der wird dir geben, was dein Herz wünschet.",
-    "reference": "Psalms 37:4",
+    "id": "psalms-37-23",
+    "category": "Trust",
+    "verse": "Von dem HERRN wird solches Mannes Gang gefördert, und er hat Lust an seinem Wege.",
+    "reference": "Psalms 37:23",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "peace",
-      "rest",
-      "heart",
-      "joy"
+      "trust"
     ]
   },
   {
     "id": "psalms-4-7",
     "category": "Peace",
     "verse": "Du erfreuest mein Herz, ob jene gleich viel Wein und Korn haben.",
-    "reference": "Psalms 4:7",
+    "reference": "Psalms 4:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -3028,7 +2915,7 @@
     "id": "psalms-40-8",
     "category": "Peace",
     "verse": "Deinen Willen, mein Gott, tue ich gern, und dein Gesetz habe ich in meinem Herzen.",
-    "reference": "Psalms 40:8",
+    "reference": "Psalms 40:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "peace",
@@ -3077,41 +2964,33 @@
     ]
   },
   {
-    "id": "2-corinthians-8-7",
+    "id": "2-corinthians-9-8",
     "category": "Grace",
-    "verse": "Aber gleichwie ihr in allen Stücken reich seid, im Glauben und im Wort und in der Erkenntnis und in allerlei Fleiß und in eurer Liebe zu uns, also schaffet, daß ihr auch in dieser Wohltat reich seid.",
-    "reference": "2 Corinthians 8:7",
+    "verse": "Gott aber kann machen, daß allerlei Gnade unter euch reichlich sei, daß ihr in allen Dingen volle Genüge habt und reich seid zu allerlei guten Werken;",
+    "reference": "2 Corinthians 9:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "grace"
     ]
   },
   {
-    "id": "psalms-110-2",
-    "category": "Strength",
-    "verse": "Der HERR wird das Zepter deines Reiches senden aus Zion: “Herrsche unter deinen Feinden!”",
-    "reference": "Psalms 110:2",
+    "id": "psalms-145-14",
+    "category": "Comfort",
+    "verse": "Der HERR erhält alle, die da fallen, und richtet auf alle, die niedergeschlagen sind.",
+    "reference": "Psalms 145:14",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
-    "id": "psalms-115-10",
-    "category": "Strength",
-    "verse": "Das Haus Aaron hoffe auf den HERRN! Der ist ihre Hilfe und Schild.",
-    "reference": "Psalms 115:10",
+    "id": "psalms-112-4",
+    "category": "Hope",
+    "verse": "Den Frommen geht das Licht auf in der Finsternis von dem Gnädigen, Barmherzigen und Gerechten.",
+    "reference": "Psalms 112:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "strength",
-      "help",
-      "power",
-      "faith"
+      "hope"
     ]
   },
   {
@@ -3154,15 +3033,13 @@
     ]
   },
   {
-    "id": "psalms-143-7",
-    "category": "Strength",
-    "verse": "HERR, erhöre mich bald, mein Geist vergeht; verbirg dein Antlitz nicht von mir, daß ich nicht gleich werde denen, die in die Grube fahren.",
-    "reference": "Psalms 143:7",
+    "id": "psalms-42-8",
+    "category": "Comfort",
+    "verse": "Der HERR hat des Tages verheißen seine Güte, und des Nachts singe ich ihm und bete zu dem Gott meines Lebens.",
+    "reference": "Psalms 42:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
@@ -3195,7 +3072,7 @@
     "id": "psalms-21-13",
     "category": "Strength",
     "verse": "HERR, erhebe dich in deiner Kraft, so wollen wir singen und loben deine Macht.",
-    "reference": "Psalms 21:13",
+    "reference": "Psalms 21:14",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -3208,7 +3085,7 @@
     "id": "psalms-22-19",
     "category": "Strength",
     "verse": "Aber du, HERR, sei nicht ferne; meine Stärke, eile, mir zu helfen!",
-    "reference": "Psalms 22:19",
+    "reference": "Psalms 22:20",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -3233,7 +3110,7 @@
     "id": "psalms-30-10",
     "category": "Strength",
     "verse": "HERR, höre und sei mir gnädig! HERR, sei mein Helfer!",
-    "reference": "Psalms 30:10",
+    "reference": "Psalms 30:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -3246,7 +3123,7 @@
     "id": "psalms-31-21",
     "category": "Strength",
     "verse": "Gelobt sei der HERR, daß er hat eine wunderbare Güte mir bewiesen in einer festen Stadt.",
-    "reference": "Psalms 31:21",
+    "reference": "Psalms 31:22",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -3259,7 +3136,7 @@
     "id": "psalms-36-5",
     "category": "Strength",
     "verse": "HERR, deine Güte reicht, soweit der Himmel ist, und deine Wahrheit, soweit die Wolken gehen.",
-    "reference": "Psalms 36:5",
+    "reference": "Psalms 36:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -3285,7 +3162,7 @@
     "id": "psalms-41-3",
     "category": "Strength",
     "verse": "Der HERR wird ihn erquicken auf seinem Siechbette; du hilfst ihm von aller Krankheit.",
-    "reference": "Psalms 41:3",
+    "reference": "Psalms 41:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "strength",
@@ -3294,42 +3171,33 @@
     ]
   },
   {
-    "id": "luke-2-52",
-    "category": "Grace",
-    "verse": "Und Jesus nahm zu an Weisheit, Alter und Gnade bei Gott und den Menschen.",
-    "reference": "Luke 2:52",
+    "id": "luke-11-9",
+    "category": "Prayer",
+    "verse": "Und ich sage euch auch: Bittet, so wird euch gegeben; suchet, so werdet ihr finden; klopfet an, so wird euch aufgetan.",
+    "reference": "Luke 11:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
+      "prayer"
+    ]
+  },
+  {
+    "id": "ephesians-4-2-3",
+    "category": "Love",
+    "verse": "mit aller Demut und Sanftmut, mit Geduld, und vertraget einer den andern in der Liebe und seid fleißig, zu halten die Einigkeit im Geist durch das Band des Friedens:",
+    "reference": "Ephesians 4:2-3",
+    "translation": "Lutherbibel (1912)",
+    "tags": [
       "love"
     ]
   },
   {
-    "id": "2-thessalonians-1-2",
-    "category": "Peace",
-    "verse": "Gnade sei mit euch und Friede von Gott, unserm Vater, und dem HERRN Jesus Christus!",
-    "reference": "2 Thessalonians 1:2",
-    "translation": "Lutherbibel (1912)",
-    "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
-    ]
-  },
-  {
-    "id": "psalms-40-10",
+    "id": "psalms-89-8",
     "category": "Faith",
-    "verse": "Deine Gerechtigkeit verberge ich nicht in meinem Herzen; von deiner Wahrheit und von deinem Heil rede ich; ich verhehle deine Güte und Treue nicht vor der großen Gemeinde.",
-    "reference": "Psalms 40:10",
+    "verse": "HERR, Gott Zebaoth, wer ist wie du ein mächtiger Gott? Und deine Wahrheit ist um dich her.",
+    "reference": "Psalms 89:9",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "faith"
     ]
   },
   {
@@ -3349,7 +3217,7 @@
     "id": "psalms-69-13",
     "category": "Prayer",
     "verse": "Ich aber bete, HERR, zu dir zur angenehmen Zeit; Gott durch deine große Güte erhöre mich mit deiner treuen Hilfe.",
-    "reference": "Psalms 69:13",
+    "reference": "Psalms 69:14",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "prayer",
@@ -3385,16 +3253,13 @@
     ]
   },
   {
-    "id": "jeremiah-42-20",
-    "category": "Faith",
-    "verse": "ihr werdet sonst euer Leben verwahrlosen. Denn ihr habt mich gesandt zum HERRN, eurem Gott, und gesagt: Bitte den HERRN, unsern Gott, für uns; und alles, was der HERR, unser Gott, sagen wird, das zeige uns an, so wollen wir darnach tun.",
-    "reference": "Jeremiah 42:20",
+    "id": "psalms-119-114",
+    "category": "Hope",
+    "verse": "Du bist mein Schirm und Schild; ich hoffe auf dein Wort.",
+    "reference": "Psalms 119:114",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "hope"
     ]
   },
   {
@@ -3411,16 +3276,13 @@
     ]
   },
   {
-    "id": "acts-11-17",
-    "category": "Trust",
-    "verse": "So nun Gott ihnen die gleiche Gabe gegeben hat wie auch uns, die da glauben an den HERRN Jesus Christus: wer war ich, daß ich konnte Gott wehren?",
-    "reference": "Acts 11:17",
+    "id": "acts-10-34-35",
+    "category": "Faith",
+    "verse": "Petrus aber tat seinen Mund auf und sprach: Nun erfahr ich mit der Wahrheit, daß Gott die Person nicht ansieht; sondern in allerlei Volk, wer ihn fürchtet und recht tut, der ist ihm angenehm.",
+    "reference": "Acts 10:34-35",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "faith"
     ]
   },
   {
@@ -3502,16 +3364,13 @@
     ]
   },
   {
-    "id": "acts-15-11",
-    "category": "Trust",
-    "verse": "Sondern wir glauben, durch die Gnade des HERRN Jesu Christi selig zu werden, gleicherweise wie auch sie.",
-    "reference": "Acts 15:11",
+    "id": "hebrews-10-23",
+    "category": "Hope",
+    "verse": "und lasset uns halten an dem Bekenntnis der Hoffnung und nicht wanken; denn er ist treu, der sie verheißen hat;",
+    "reference": "Hebrews 10:23",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -3609,7 +3468,7 @@
     "id": "psalms-36-6",
     "category": "Grace",
     "verse": "Deine Gerechtigkeit steht wie die Berge Gottes und dein Recht wie eine große Tiefe. HERR, du hilfst Menschen und Vieh.",
-    "reference": "Psalms 36:6",
+    "reference": "Psalms 36:7",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "grace",
@@ -3622,7 +3481,7 @@
     "id": "psalms-4-5",
     "category": "Grace",
     "verse": "Opfert Gerechtigkeit und hoffet auf den HERRN.",
-    "reference": "Psalms 4:5",
+    "reference": "Psalms 4:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "grace",
@@ -3632,15 +3491,13 @@
     ]
   },
   {
-    "id": "psalms-41-10",
-    "category": "Grace",
-    "verse": "Du aber, HERR, sei mir gnädig und hilf mir auf, so will ich sie bezahlen.",
-    "reference": "Psalms 41:10",
+    "id": "psalms-91-4",
+    "category": "Comfort",
+    "verse": "Er wird dich mit seinen Fittichen decken, und deine Zuversicht wird sein unter seinen Flügeln. Seine Wahrheit ist Schirm und Schild,",
+    "reference": "Psalms 91:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "comfort"
     ]
   },
   {
@@ -3657,54 +3514,43 @@
     ]
   },
   {
-    "id": "psalms-96-13",
-    "category": "Grace",
-    "verse": "vor dem HERRN; denn er kommt, denn er kommt, zu richten das Erdreich. Er wird den Erdboden richten mit Gerechtigkeit und die Völker mit seiner Wahrheit.",
-    "reference": "Psalms 96:13",
+    "id": "psalms-96-3",
+    "category": "Joy",
+    "verse": "Erzählet unter den Heiden seine Ehre, unter allen Völkern seine Wunder.",
+    "reference": "Psalms 96:3",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "joy"
     ]
   },
   {
-    "id": "psalms-89-49",
-    "category": "Grace",
-    "verse": "Herr, wo ist deine vorige Gnade, die du David geschworen hast in deiner Wahrheit?",
-    "reference": "Psalms 89:49",
+    "id": "psalms-33-18",
+    "category": "Hope",
+    "verse": "Siehe, des HERRN Auge sieht auf die, so ihn fürchten, die auf seine Güte hoffen,",
+    "reference": "Psalms 33:18",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "hope"
     ]
   },
   {
-    "id": "proverbs-3-4",
-    "category": "Grace",
-    "verse": "so wirst du Gunst und Klugheit finden, die Gott und Menschen gefällt.",
-    "reference": "Proverbs 3:4",
+    "id": "proverbs-3-24",
+    "category": "Peace",
+    "verse": "Legst du dich, so wirst du dich nicht fürchten, sondern süß schlafen,",
+    "reference": "Proverbs 3:24",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "peace"
     ]
   },
   {
-    "id": "proverbs-8-35",
-    "category": "Grace",
-    "verse": "Wer mich findet, der findet das Leben und wird Wohlgefallen vom HERRN erlangen.",
-    "reference": "Proverbs 8:35",
+    "id": "proverbs-16-24",
+    "category": "Wisdom",
+    "verse": "Die Reden des Freundlichen sind Honigseim, trösten die Seele und erfrischen die Gebeine.",
+    "reference": "Proverbs 16:24",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "life"
+      "wisdom"
     ]
   },
   {
@@ -3759,15 +3605,13 @@
     ]
   },
   {
-    "id": "psalms-118-20",
-    "category": "Grace",
-    "verse": "Das ist das Tor des HERRN; die Gerechten werden dahin eingehen.",
-    "reference": "Psalms 118:20",
+    "id": "psalms-118-21",
+    "category": "Joy",
+    "verse": "Ich danke dir, daß du mich demütigst und hilfst mir.",
+    "reference": "Psalms 118:21",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "joy"
     ]
   },
   {
@@ -3800,7 +3644,7 @@
     "id": "psalms-18-30",
     "category": "Faith",
     "verse": "Gottes Wege sind vollkommen; die Reden des HERRN sind durchläutert. Er ist ein Schild allen, die ihm vertrauen.",
-    "reference": "Psalms 18:30",
+    "reference": "Psalms 18:31",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "faith",
@@ -3810,16 +3654,13 @@
     ]
   },
   {
-    "id": "psalms-22-8",
-    "category": "Faith",
-    "verse": "“Er klage es dem HERRN; der helfe ihm aus und errette ihn, hat er Lust zu ihm.”",
-    "reference": "Psalms 22:8",
+    "id": "psalms-34-5",
+    "category": "Hope",
+    "verse": "Welche auf ihn sehen, die werden erquickt, und ihr Angesicht wird nicht zu Schanden.",
+    "reference": "Psalms 34:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "joy"
+      "hope"
     ]
   },
   {
@@ -3851,7 +3692,7 @@
     "id": "psalms-31-14",
     "category": "Faith",
     "verse": "Ich aber, HERR, hoffe auf dich und spreche: Du bist mein Gott!",
-    "reference": "Psalms 31:14",
+    "reference": "Psalms 31:15",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "faith",
@@ -3876,7 +3717,7 @@
     "id": "psalms-34-22",
     "category": "Faith",
     "verse": "Der HERR erlöst die Seele seiner Knechte; und alle, die auf ihn trauen, werden keine Schuld haben.",
-    "reference": "Psalms 34:22",
+    "reference": "Psalms 34:23",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "faith",
@@ -3885,36 +3726,30 @@
     ]
   },
   {
-    "id": "acts-7-59",
-    "category": "Prayer",
-    "verse": "und steinigten Stephanus, der anrief und sprach: HERR Jesu, nimm meinen Geist auf!",
-    "reference": "Acts 7:59",
+    "id": "1-peter-4-8",
+    "category": "Love",
+    "verse": "So seid nun mäßig und nüchtern zum Gebet. Vor allen Dingen aber habt untereinander eine inbrünstige Liebe; denn die Liebe deckt auch der Sünden Menge.",
+    "reference": "1 Peter 4:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "prayer",
-      "answer",
-      "presence",
-      "help"
+      "love"
     ]
   },
   {
-    "id": "psalms-37-5",
-    "category": "Faith",
-    "verse": "Befiehl dem HERRN deine Wege und hoffe auf ihn; er wird's wohl machen",
-    "reference": "Psalms 37:5",
+    "id": "psalms-37-24",
+    "category": "Comfort",
+    "verse": "Fällt er, so wird er nicht weggeworfen; denn der HERR hält ihn bei der Hand.",
+    "reference": "Psalms 37:24",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "life"
+      "comfort"
     ]
   },
   {
     "id": "psalms-40-4",
     "category": "Faith",
     "verse": "Wohl dem, der seine Hoffnung setzt auf den HERRN und sich nicht wendet zu den Hoffärtigen und zu denen, die mit Lügen umgehen!",
-    "reference": "Psalms 40:4",
+    "reference": "Psalms 40:5",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "faith",
@@ -3923,35 +3758,30 @@
     ]
   },
   {
-    "id": "psalms-55-23",
-    "category": "Faith",
-    "verse": "Aber, Gott, du wirst sie hinunterstoßen in die tiefe Grube: die Blutgierigen und Falschen werden ihr Leben nicht zur Hälfte bringen. Ich aber hoffe auf dich.",
-    "reference": "Psalms 55:23",
+    "id": "psalms-62-7",
+    "category": "Trust",
+    "verse": "Bei Gott ist mein Heil, meine Ehre, der Fels meiner Stärke; meine Zuversicht ist auf Gott.",
+    "reference": "Psalms 62:8",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "trust"
     ]
   },
   {
-    "id": "psalms-78-22",
-    "category": "Faith",
-    "verse": "daß sie nicht glaubten an Gott und hofften nicht auf seine Hilfe.",
-    "reference": "Psalms 78:22",
+    "id": "psalms-119-165",
+    "category": "Peace",
+    "verse": "Großen Frieden haben, die dein Gesetz lieben; sie werden nicht straucheln.",
+    "reference": "Psalms 119:165",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "hope"
+      "peace"
     ]
   },
   {
     "id": "psalms-89-5",
     "category": "Faith",
     "verse": "Und die Himmel werden, HERR, deine Wunder preisen und deine Wahrheit in der Gemeinde der Heiligen.",
-    "reference": "Psalms 89:5",
+    "reference": "Psalms 89:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "faith",
@@ -3964,7 +3794,7 @@
     "id": "psalms-20-5",
     "category": "Hope",
     "verse": "Wir rühmen, daß du uns hilfst, und im Namen unsres Gottes werfen wir Panier auf. Der HERR gewähre dir alle deine Bitten!",
-    "reference": "Psalms 20:5",
+    "reference": "Psalms 20:6",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -3974,15 +3804,13 @@
     ]
   },
   {
-    "id": "isaiah-48-2",
-    "category": "Faith",
-    "verse": "Sie nennen sich aus der heiligen Stadt und trotzen auf den Gott Israels, der da heißt der HERR Zebaoth.",
-    "reference": "Isaiah 48:2",
+    "id": "isaiah-26-12",
+    "category": "Peace",
+    "verse": "Aber uns, HERR, wirst du Frieden schaffen; denn alles, was wir ausrichten, das hast du uns gegeben.",
+    "reference": "Isaiah 26:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "peace"
     ]
   },
   {
@@ -4024,27 +3852,23 @@
     ]
   },
   {
-    "id": "psalms-87-2",
-    "category": "Love",
-    "verse": "Der HERR liebt die Tore Zions über alle Wohnungen Jakobs.",
-    "reference": "Psalms 87:2",
+    "id": "psalms-90-14",
+    "category": "Joy",
+    "verse": "Fülle uns früh mit deiner Gnade, so wollen wir rühmen und fröhlich sein unser Leben lang.",
+    "reference": "Psalms 90:14",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
-    "id": "psalms-55-14",
+    "id": "psalms-133-1",
     "category": "Love",
-    "verse": "die wir freundlich miteinander waren unter uns; wir wandelten im Hause Gottes unter der Menge.",
-    "reference": "Psalms 55:14",
+    "verse": "Ein Lied Davids im höhern Chor. Siehe, wie fein und lieblich ist's, daß Brüder einträchtig beieinander wohnen!",
+    "reference": "Psalms 133:1",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
@@ -4074,28 +3898,23 @@
     ]
   },
   {
-    "id": "john-14-24",
+    "id": "john-15-12",
     "category": "Love",
-    "verse": "Wer mich aber nicht liebt, der hält meine Worte nicht. Und das Wort, das ihr hört, ist nicht mein, sondern des Vaters, der mich gesandt hat.",
-    "reference": "John 14:24",
+    "verse": "Das ist mein Gebot, daß ihr euch untereinander liebet, gleichwie ich euch liebe.",
+    "reference": "John 15:12",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god",
-      "wisdom"
+      "love"
     ]
   },
   {
-    "id": "john-14-31",
-    "category": "Love",
-    "verse": "Aber auf daß die Welt erkenne, daß ich den Vater liebe und ich also tue, wie mir der Vater geboten hat: stehet auf und lasset uns von hinnen gehen.",
-    "reference": "John 14:31",
+    "id": "john-15-11",
+    "category": "Joy",
+    "verse": "Solches rede ich zu euch, auf daß meine Freude in euch bleibe und eure Freude vollkommen werde.",
+    "reference": "John 15:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
@@ -4123,39 +3942,33 @@
     ]
   },
   {
-    "id": "john-5-20",
+    "id": "john-15-13",
     "category": "Love",
-    "verse": "Der Vater aber hat den Sohn lieb und zeigt ihm alles, was er tut, und wird ihm noch größere Werke zeigen, daß ihr euch verwundern werdet.",
-    "reference": "John 5:20",
+    "verse": "Niemand hat größere Liebe denn die, daß er sein Leben läßt für seine Freunde.",
+    "reference": "John 15:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
-    "id": "john-8-42",
-    "category": "Love",
-    "verse": "Jesus sprach zu ihnen: Wäre Gott euer Vater, so liebtet ihr mich; denn ich bin ausgegangen und komme von Gott; denn ich bin nicht von mir selber gekommen, sondern er hat mich gesandt.",
-    "reference": "John 8:42",
+    "id": "john-6-37",
+    "category": "Hope",
+    "verse": "Alles, was mir mein Vater gibt, das kommt zu mir; und wer zu mir kommt, den werde ich nicht hinausstoßen.",
+    "reference": "John 6:37",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "hope"
     ]
   },
   {
-    "id": "matthew-10-37",
-    "category": "Love",
-    "verse": "Wer Vater oder Mutter mehr liebt denn mich, der ist mein nicht wert; und wer Sohn oder Tochter mehr liebt denn mich, der ist mein nicht wert.",
-    "reference": "Matthew 10:37",
+    "id": "james-1-19",
+    "category": "Wisdom",
+    "verse": "Darum, liebe Brüder, ein jeglicher Mensch sei schnell, zu hören, langsam aber, zu reden, und langsam zum Zorn.",
+    "reference": "James 1:19",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "wisdom"
     ]
   },
   {
@@ -4183,16 +3996,13 @@
     ]
   },
   {
-    "id": "2-peter-1-14",
-    "category": "Hope",
-    "verse": "denn ich weiß, daß ich meine Hütte bald ablegen muß, wie mir denn auch unser HERR Jesus Christus eröffnet hat.",
-    "reference": "2 Peter 1:14",
+    "id": "2-peter-1-2",
+    "category": "Grace",
+    "verse": "Gott gebe euch viel Gnade und Frieden durch die Erkenntnis Gottes und Jesu Christi, unsers HERRN!",
+    "reference": "2 Peter 1:2",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "grace"
     ]
   },
   {
@@ -4212,7 +4022,7 @@
     "id": "psalms-89-15",
     "category": "Prayer",
     "verse": "Wohl dem Volk, das jauchzen kann! HERR, sie werden im Licht deines Antlitzes wandeln;",
-    "reference": "Psalms 89:15",
+    "reference": "Psalms 89:16",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "prayer",
@@ -4248,28 +4058,23 @@
     ]
   },
   {
-    "id": "psalms-106-25",
-    "category": "Prayer",
-    "verse": "und murrten in ihren Hütten; sie gehorchten der Stimme des HERRN nicht.",
-    "reference": "Psalms 106:25",
+    "id": "psalms-34-10",
+    "category": "Hope",
+    "verse": "Reiche müssen darben und hungern; aber die den HERRN suchen, haben keinen Mangel an irgend einem Gut.",
+    "reference": "Psalms 34:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "prayer",
-      "seeking",
-      "calling"
+      "hope"
     ]
   },
   {
-    "id": "romans-2-16",
-    "category": "Hope",
-    "verse": "auf den Tag, da Gott das Verborgene der Menschen durch Jesus Christus richten wird laut meines Evangeliums.",
-    "reference": "Romans 2:16",
+    "id": "james-5-13",
+    "category": "Prayer",
+    "verse": "Leidet jemand unter euch, der bete; ist jemand gutes Muts, der singe Psalmen.",
+    "reference": "James 5:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "prayer"
     ]
   },
   {
@@ -4327,7 +4132,7 @@
     "id": "psalms-140-6",
     "category": "Prayer",
     "verse": "Ich aber sage zum HERRN: Du bist mein Gott; HERR, vernimm die Stimme meines Flehens!",
-    "reference": "Psalms 140:6",
+    "reference": "Psalms 140:7",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "prayer",
@@ -4348,15 +4153,13 @@
     ]
   },
   {
-    "id": "psalms-105-19",
-    "category": "Wisdom",
-    "verse": "bis daß sein Wort kam und die Rede des HERRN ihn durchläuterte.",
-    "reference": "Psalms 105:19",
+    "id": "psalms-119-76",
+    "category": "Comfort",
+    "verse": "Deine Gnade müsse mein Trost sein, wie du deinem Knecht zugesagt hast.",
+    "reference": "Psalms 119:76",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word"
+      "comfort"
     ]
   },
   {
@@ -4373,16 +4176,13 @@
     ]
   },
   {
-    "id": "psalms-118-27",
-    "category": "Wisdom",
-    "verse": "der HERR ist Gott, der uns erleuchtet. Schmücket das Fest mit Maien bis an die Hörner des Altars!",
-    "reference": "Psalms 118:27",
+    "id": "psalms-100-4",
+    "category": "Joy",
+    "verse": "Geht zu seinen Toren ein mit Danken, zu seinen Vorhöfen mit Loben; danket ihm, lobet seinen Namen!",
+    "reference": "Psalms 100:4",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "life"
+      "joy"
     ]
   },
   {
@@ -4401,7 +4201,7 @@
     "id": "psalms-64-10",
     "category": "Hope",
     "verse": "Die Gerechten werden sich des HERRN freuen und auf ihn trauen, und alle frommen Herzen werden sich des rühmen.",
-    "reference": "Psalms 64:10",
+    "reference": "Psalms 64:11",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -4414,7 +4214,7 @@
     "id": "psalms-56-4",
     "category": "Hope",
     "verse": "Ich will Gottes Namen rühmen; auf Gott will ich hoffen und mich nicht fürchten; was sollte mir Fleisch tun?",
-    "reference": "Psalms 56:4",
+    "reference": "Psalms 56:5",
     "translation": "Lutherbibel (1912)",
     "tags": [
       "hope",
@@ -4424,16 +4224,13 @@
     ]
   },
   {
-    "id": "isaiah-26-13",
-    "category": "Hope",
-    "verse": "HERR, unser Gott, es herrschen wohl andere Herren über uns denn du; aber wir gedenken doch allein dein und deines Namens.",
-    "reference": "Isaiah 26:13",
+    "id": "isaiah-66-13",
+    "category": "Comfort",
+    "verse": "Ich will euch trösten, wie einen seine Mutter tröstet; ja, ihr sollt an Jerusalem ergötzt werden.",
+    "reference": "Isaiah 66:13",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -4449,16 +4246,13 @@
     ]
   },
   {
-    "id": "2-corinthians-8-5",
-    "category": "Hope",
-    "verse": "und nicht, wie wir hofften, sondern sie ergaben sich selbst, zuerst dem HERRN und darnach uns, durch den Willen Gottes,",
-    "reference": "2 Corinthians 8:5",
+    "id": "hebrews-10-24",
+    "category": "Love",
+    "verse": "und lasset uns untereinander unser selbst wahrnehmen mit Reizen zur Liebe und guten Werken",
+    "reference": "Hebrews 10:24",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -4486,42 +4280,33 @@
     ]
   },
   {
-    "id": "deuteronomy-13-3",
-    "category": "Love",
-    "verse": "so sollst du nicht gehorchen den Worten des Propheten oder Träumers; denn der HERR, euer Gott, versucht euch, daß er erfahre, ob ihr ihn von ganzem Herzen liebhabt.",
-    "reference": "Deuteronomy 13:3",
+    "id": "proverbs-12-25",
+    "category": "Comfort",
+    "verse": "Sorge im Herzen kränkt, aber ein freundliches Wort erfreut.",
+    "reference": "Proverbs 12:25",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "comfort"
     ]
   },
   {
-    "id": "isaiah-43-1",
-    "category": "Courage",
-    "verse": "Und nun spricht der HERR, der dich geschaffen hat, Jakob, und dich gemacht hat, Israel: Fürchte dich nicht, denn ich habe dich erlöst; ich habe dich bei deinem Namen gerufen; du bist mein!",
-    "reference": "Isaiah 43:1",
+    "id": "isaiah-42-3",
+    "category": "Comfort",
+    "verse": "Das zerstoßene Rohr wird er nicht zerbrechen, und den glimmenden Docht wird er nicht auslöschen. Er wird das Recht wahrhaftig halten lehren.",
+    "reference": "Isaiah 42:3",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "courage",
-      "fear",
-      "strength",
-      "life"
+      "comfort"
     ]
   },
   {
-    "id": "1-samuel-2-1",
+    "id": "1-chronicles-16-23",
     "category": "Joy",
-    "verse": "Und Hanna betete und sprach: Mein Herz ist fröhlich in dem HERRN; mein Horn ist erhöht in dem HERRN. Mein Mund hat sich weit aufgetan über meine Feinde; denn ich freue mich deines Heils.",
-    "reference": "1 Samuel 2:1",
+    "verse": "Singet dem HERRN, alle Lande; verkündiget täglich sein Heil!",
+    "reference": "1 Chronicles 16:23",
     "translation": "Lutherbibel (1912)",
     "tags": [
-      "joy",
-      "delight",
-      "praise",
-      "gratitude"
+      "joy"
     ]
   },
   {

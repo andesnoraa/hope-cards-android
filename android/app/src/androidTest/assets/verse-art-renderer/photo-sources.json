@@ -1,0 +1,202 @@
+[
+  {
+    "name": "photo-alpine-lake",
+    "sourceFile": "pexels-alizain-hirani-274856182-12905885.jpg",
+    "sourceSha256": "4538f225db8ce8874b7a38822cb086cfe52659b635c4fe1b1df9f83f317cf5b6",
+    "crop": [
+      963,
+      0,
+      3854,
+      3854
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 426508,
+    "verseId": "psalm-121-2",
+    "emphasis": "My help comes from the LORD,",
+    "highlightFont": "leckerlione"
+  },
+  {
+    "name": "photo-foggy-pines",
+    "sourceFile": "pexels-amel-uzunovic-440739273-35451886.jpg",
+    "sourceSha256": "551f084edba1b0751d1733d610019dca2f2a32d2c3c12fef6cb956b4d30059fb",
+    "crop": [
+      827,
+      0,
+      3590,
+      3590
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 509388,
+    "verseId": "psalm-147-3",
+    "emphasis": "He heals",
+    "highlightFont": "leckerlione"
+  },
+  {
+    "name": "photo-quiet-reservoir",
+    "sourceFile": "pexels-cecile-hournau-419900900-15499497.jpg",
+    "sourceSha256": "b582f0b925dfc587641cd164f077878bedb940d5a82a62dc1779538cbd0f0a8e",
+    "crop": [
+      783,
+      0,
+      3456,
+      3456
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 199552,
+    "verseId": "psalm-56-3",
+    "emphasis": "I will put my trust in you.",
+    "highlightFont": "oleoscript"
+  },
+  {
+    "name": "photo-shadow-ivy",
+    "sourceFile": "pexels-damianapanasowicz-4165348.jpg",
+    "sourceSha256": "4afadaa3b9f66e6e3559b4840ab9aa47b13d985b6ae72ee748da269c29d524a7",
+    "crop": [
+      0,
+      1003,
+      3648,
+      3648
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 133180,
+    "verseId": "john-15-9",
+    "emphasis": "Remain in my love.",
+    "highlightFont": "leckerlione"
+  },
+  {
+    "name": "photo-woodland-deer",
+    "sourceFile": "pexels-davidohboy-6468236.jpg",
+    "sourceSha256": "1204838320be45db2f7720dec682492e661bc3de9ed529b08af9203f1b902c4c",
+    "crop": [
+      0,
+      463,
+      3713,
+      3713
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 400846,
+    "verseId": "psalm-23-1",
+    "emphasis": "The LORD is my shepherd;",
+    "highlightFont": "permanent_marker"
+  },
+  {
+    "name": "photo-still-alpine-lake",
+    "sourceFile": "pexels-enric-cruz-lopez-6272229.jpg",
+    "sourceSha256": "4cd3f1ae6fa39e051c0440e42bc2609d6c2eea20cc652e57dc09679f53169605",
+    "crop": [
+      941,
+      0,
+      3767,
+      3767
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 137508,
+    "verseId": "philippians-4-13",
+    "emphasis": "through Christ",
+    "highlightFont": "leckerlione"
+  },
+  {
+    "name": "photo-forest-mist",
+    "sourceFile": "pexels-jaymantri-4827.jpg",
+    "sourceSha256": "b2c185a8c537dbbde4beae7ed3ac2e314ba3d24696c465753df7dc01673b6560",
+    "crop": [
+      366,
+      0,
+      1467,
+      1467
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 324732,
+    "verseId": "lamentations-3-23",
+    "emphasis": "Great is your faithfulness.",
+    "highlightFont": "leckerlione"
+  },
+  {
+    "name": "photo-warm-highlands",
+    "sourceFile": "pexels-markarronsmith-37022885.jpg",
+    "sourceSha256": "a9917485cc7509f5424501a0349a84b751482c59d7a3f45a49e10d50ce70be21",
+    "crop": [
+      0,
+      0,
+      3921,
+      3921
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 449986,
+    "verseId": "psalm-33-20",
+    "emphasis": "our help and our shield.",
+    "highlightFont": "oleoscript"
+  },
+  {
+    "name": "photo-misty-jetty",
+    "sourceFile": "pexels-simon-s-574087187-30521727.jpg",
+    "sourceSha256": "a044038568603bfc663fbc9bb0198daf6f03827f1f40341fb1e45c403cf52762",
+    "crop": [
+      572,
+      0,
+      3448,
+      3448
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 420142,
+    "verseId": "psalm-62-5",
+    "emphasis": "my expectation is from him.",
+    "highlightFont": "leckerlione"
+  },
+  {
+    "name": "photo-turquoise-mist",
+    "sourceFile": "pexels-theshuttervision-9651387.jpg",
+    "sourceSha256": "d985081490a82b4ec891132ad64878e8c081c8d19c7b1cfe0863aaf94bf0023d",
+    "crop": [
+      681,
+      0,
+      2726,
+      2726
+    ],
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "webpQuality": 95,
+    "bytes": 184948,
+    "verseId": "numbers-6-26",
+    "emphasis": "give you peace.’",
+    "highlightFont": "leckerlione"
+  }
+]

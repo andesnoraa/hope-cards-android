@@ -17,7 +17,7 @@ import org.junit.Test
 import java.io.File
 import java.util.Locale
 
-/** Offline authoring tool. Opt in with -e generateVerseArt true; output is bundled in the app. */
+/** Offline authoring tool. Opt in with -e generateVerseArt true; legacy reference output stays outside the app package. */
 class GenerateVerseArtCollection {
     @Test fun generateCollection() {
         assumeTrue(InstrumentationRegistry.getArguments().getString("generateVerseArt") == "true")
@@ -45,7 +45,7 @@ class GenerateVerseArtCollection {
                 val art = checkNotNull(VerseArtCatalog.artwork(id))
                 val generated = File(output, "$id.webp")
                 val image = if (generated.exists()) BitmapFactory.decodeFile(generated.path)
-                    else context.assets.open(art.assetPath).use { BitmapFactory.decodeStream(it) }
+                    else source.assets.open("verse-art/${art.id}.webp").use { BitmapFactory.decodeStream(it) }
                 val x = index % 5 * 300
                 val y = index / 5 * 300
                 canvas.drawBitmap(image, null, Rect(x, y, x + 300, y + 300), Paint(Paint.FILTER_BITMAP_FLAG))

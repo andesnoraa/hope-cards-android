@@ -1,10 +1,10 @@
 package com.aaronsedna.hopecards.model
 
 /**
- * Converts a stable English reference into the book-title form used by its Bible edition.
+ * Localizes the English book key while preserving the edition's verse numbering.
  *
- * The canonical reference remains unchanged in verse assets, favourites, journals, Daily Hope,
- * and backups. Only presentation text is localized, so existing saved data remains compatible.
+ * Stable verse IDs link favourites, journals, Daily Hope and backups across editions.
+ * Verse assets can have different chapter/verse numbers where their editions differ.
  */
 object BibleReferenceFormatter {
     private val referencePattern = Regex("^(.+?)\\s+(\\d+:\\d+(?:[-–]\\d+)?)$")

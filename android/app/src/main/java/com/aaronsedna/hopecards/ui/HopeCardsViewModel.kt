@@ -13,7 +13,6 @@ import com.aaronsedna.hopecards.data.AppRepository
 import com.aaronsedna.hopecards.data.BackupManager
 import com.aaronsedna.hopecards.data.VerseRepository
 import com.aaronsedna.hopecards.model.AppSettings
-import com.aaronsedna.hopecards.model.DailyHopeRecord
 import com.aaronsedna.hopecards.model.Destination
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
@@ -27,11 +26,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.time.Instant
 import java.time.LocalDate
-import java.time.ZoneOffset
 
 data class HopeUiState(
     val initialized: Boolean = false,
@@ -53,6 +52,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     val backups = BackupManager(application, repository, verseRepository)
     private val reminders = ReminderScheduler(application)
 
+    @Volatile private var notificationVerseId: String? = null
     private val _uiState = MutableStateFlow(HopeUiState())
     val uiState: StateFlow<HopeUiState> = _uiState.asStateFlow()
 
@@ -67,16 +67,18 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
                     val current = previous.currentVerse?.let {
                         verseRepository.byId(it.id, settings.preferredTranslation)
                     } ?: verseRepository.random(settings.preferredTranslation)
-                    _uiState.value = previous.copy(
-                        initialized = true,
-                        settings = settings,
-                        favorites = favorites,
-                        journalEntries = journal.sortedByDescending { it.updatedAt },
-                        currentVerse = current,
-                        selectedVerse = previous.selectedVerse?.let {
-                            verseRepository.byId(it.id, settings.preferredTranslation)
-                        },
-                    )
+                    _uiState.update { latest ->
+                        latest.copy(
+                            initialized = true,
+                            settings = settings,
+                            favorites = favorites,
+                            journalEntries = journal.sortedByDescending { it.updatedAt },
+                            currentVerse = current,
+                            selectedVerse = latest.selectedVerse?.let {
+                                verseRepository.byId(it.id, settings.preferredTranslation)
+                            },
+                        )
+                    }
                     if (
                         previous.dailyVerse == null ||
                         previous.settings.preferredTranslation != settings.preferredTranslation
@@ -86,6 +88,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
                 }
         }
         viewModelScope.launch(Dispatchers.IO) {
+            repository.initialize()
             repository.settings
                 .distinctUntilChanged { old, new ->
                     old.dailyHopeReminderEnabled == new.dailyHopeReminderEnabled &&
@@ -105,8 +108,17 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
+    fun openDailyHopeNotification(verseId: String?) {
+        notificationVerseId = verseId
+        _uiState.update { it.copy(destination = Destination.DAILY, selectedVerse = null, dailyVerse = null) }
+        if (_uiState.value.initialized) {
+            viewModelScope.launch(Dispatchers.IO) { loadDailyHope(_uiState.value.settings) }
+        }
+    }
+
     fun navigate(destination: Destination) {
-        _uiState.value = _uiState.value.copy(destination = destination, selectedVerse = null)
+        notificationVerseId = null
+        _uiState.update { it.copy(destination = destination, selectedVerse = null) }
         if (destination == Destination.DAILY) {
             viewModelScope.launch(Dispatchers.IO) { loadDailyHope(_uiState.value.settings) }
         }
@@ -180,6 +192,8 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch { repository.updateSettings(transform) }
     }
 
+    suspend fun claimReminderPermissionPrompt(): Boolean = repository.claimReminderPermissionPrompt()
+
     fun setReminderEnabled(enabled: Boolean) {
         updateSettings { it.copy(dailyHopeReminderEnabled = enabled) }
     }
@@ -190,6 +204,10 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun completedCard(activity: Activity) {
         ads.recordCompletedCard(activity, billing.state.value.isAdFree)
+    }
+
+    fun completedArtwork(activity: Activity, isCurrentArtwork: () -> Boolean, continueToGallery: () -> Unit) {
+        ads.completeArtwork(activity, billing.state.value.isAdFree, isCurrentArtwork, continueToGallery)
     }
 
     fun purchaseRemoveAds(activity: Activity) {
@@ -226,18 +244,24 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun showNotice(message: String?) {
-        _uiState.value = _uiState.value.copy(notice = message)
+        _uiState.update { it.copy(notice = message) }
+    }
+
+    fun clearNotice(message: String) {
+        _uiState.update { if (it.notice == message) it.copy(notice = null) else it }
     }
 
     private suspend fun loadDailyHope(settings: AppSettings) {
-        val today = LocalDate.now(ZoneOffset.UTC).toString()
-        val saved = repository.getDailyHopeRecord()
-        val verse = if (saved?.date == today) {
-            verseRepository.byId(saved.verseId, settings.preferredTranslation)
-        } else null
-        val daily = verse ?: verseRepository.random(settings.preferredTranslation, saved?.verseId)
-        repository.setDailyHopeRecord(DailyHopeRecord(today, daily.id, settings.preferredTranslation.id))
-        _uiState.value = _uiState.value.copy(dailyVerse = daily)
+        val requestedVerseId = notificationVerseId
+        val daily = requestedVerseId?.let { verseRepository.byId(it, settings.preferredTranslation) }
+            ?: repository.dailyHopeVerse(verseRepository, settings.preferredTranslation)
+        _uiState.update { state ->
+            if (state.settings.preferredTranslation == settings.preferredTranslation &&
+                notificationVerseId == requestedVerseId
+            ) {
+                state.copy(dailyVerse = daily)
+            } else state
+        }
     }
 
     override fun onCleared() {

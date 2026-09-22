@@ -180,15 +180,13 @@
     ]
   },
   {
-    "id": "2-corinthians-12-9",
-    "category": "Grace",
-    "verse": "ed egli mi ha detto: La mia grazia ti basta, perché la mia potenza si dimostra perfetta nella debolezza. Perciò molto volentieri mi glorierò piuttosto delle mie debolezze, onde la potenza di Cristo riposi su me.",
-    "reference": "2 Corinthians 12:9",
+    "id": "hebrews-4-15",
+    "category": "Comfort",
+    "verse": "Perché non abbiamo un Sommo Sacerdote che non possa simpatizzare con noi nelle nostre infermità; ma ne abbiamo uno che in ogni cosa è stato tentato come noi, però senza peccare.",
+    "reference": "Hebrews 4:15",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "strength",
-      "weakness"
+      "comfort"
     ]
   },
   {
@@ -215,15 +213,13 @@
     ]
   },
   {
-    "id": "romans-8-38-39",
-    "category": "Hope",
-    "verse": "Poiché io son persuaso che né morte, né vita, né angeli, né principati, né cose presenti, né cose future, né potestà, né altezza, né profondità, né alcun’altra creatura potranno separarci dall’amore di Dio, che è in Cristo Gesù, nostro Signore.",
-    "reference": "Romans 8:38-39",
+    "id": "romans-8-32",
+    "category": "Love",
+    "verse": "Colui che non ha risparmiato il suo proprio Figliuolo, ma l’ha dato per tutti noi, come non ci donerà egli anche tutte le cose con lui?",
+    "reference": "Romans 8:32",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "love",
-      "assurance"
+      "love"
     ]
   },
   {
@@ -371,15 +367,13 @@
     ]
   },
   {
-    "id": "1-john-3-1",
-    "category": "Love",
-    "verse": "Vedete di quale amore ci è stato largo il Padre, dandoci d’esser chiamati figliuoli di Dio! E tali siamo. Per questo non ci conosce il mondo: perché non ha conosciuto lui.",
-    "reference": "1 John 3:1",
+    "id": "1-john-3-2",
+    "category": "Hope",
+    "verse": "Diletti, ora siamo figliuoli di Dio, e non è ancora reso manifesto quel che saremo. Sappiamo che quand’egli sarà manifestato saremo simili a lui, perché lo vedremo com’egli è.",
+    "reference": "1 John 3:2",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "identity",
-      "children-of-god"
+      "hope"
     ]
   },
   {
@@ -443,14 +437,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-5-17",
+    "id": "1-thessalonians-5-16-18",
     "category": "Prayer",
-    "verse": "non cessate mai di pregare;",
-    "reference": "1 Thessalonians 5:17",
+    "verse": "Siate sempre allegri; non cessate mai di pregare; in ogni cosa rendete grazie, poiché tale è la volontà di Dio in Cristo Gesù verso di voi.",
+    "reference": "1 Thessalonians 5:16-18",
     "translation": "Riveduta (1927)",
     "tags": [
-      "prayer",
-      "devotion"
+      "prayer"
     ]
   },
   {
@@ -817,15 +810,13 @@
     ]
   },
   {
-    "id": "isaiah-43-2",
-    "category": "Comfort",
-    "verse": "Quando passerai per delle acque, io sarò teco; quando traverserai de’ fiumi, non ti sommergeranno; quando camminerai nel fuoco, non ne sarai arso, e la fiamma non ti consumerà.",
-    "reference": "Isaiah 43:2",
+    "id": "isaiah-41-13",
+    "category": "Courage",
+    "verse": "perché io, l’Eterno, il tuo Dio, son quegli che ti prendo per la mia man destra e ti dico: “Non temere, io t’aiuto!”",
+    "reference": "Isaiah 41:13",
     "translation": "Riveduta (1927)",
     "tags": [
-      "comfort",
-      "trials",
-      "presence"
+      "courage"
     ]
   },
   {
@@ -841,27 +832,23 @@
     ]
   },
   {
-    "id": "isaiah-54-10",
-    "category": "Love",
-    "verse": "Quand’anche i monti s’allontanassero e i colli fossero rimossi, l’amor mio non s’allontanerà da te, né il mio patto di pace sarà rimosso, dice l’Eterno, che ha pietà di te.",
-    "reference": "Isaiah 54:10",
+    "id": "isaiah-54-13",
+    "category": "Peace",
+    "verse": "Tutti i tuoi figliuoli saran discepoli dell’Eterno, e grande sarà la pace dei tuoi figliuoli.",
+    "reference": "Isaiah 54:13",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "peace",
-      "mercy"
+      "peace"
     ]
   },
   {
-    "id": "lamentations-3-23",
-    "category": "Grace",
-    "verse": "si rinnovano ogni mattina. Grande è la tua fedeltà!",
-    "reference": "Lamentations 3:23",
+    "id": "lamentations-3-22-23",
+    "category": "Hope",
+    "verse": "E’ una grazia dell’Eterno che non siamo stati interamente distrutti; poiché le sue compassioni non sono esaurite; si rinnovano ogni mattina. Grande è la tua fedeltà!",
+    "reference": "Lamentations 3:22-23",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "faithfulness",
-      "morning"
+      "hope"
     ]
   },
   {
@@ -877,16 +864,13 @@
     ]
   },
   {
-    "id": "galatians-6-18",
-    "category": "Grace",
-    "verse": "La grazia del Signor nostro Gesù Cristo sia col vostro spirito, fratelli. Amen.",
-    "reference": "Galatians 6:18",
+    "id": "galatians-6-9",
+    "category": "Hope",
+    "verse": "E non ci scoraggiamo nel far il bene; perché, se non ci stanchiamo, mieteremo a suo tempo.",
+    "reference": "Galatians 6:9",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
@@ -987,15 +971,13 @@
     ]
   },
   {
-    "id": "1-corinthians-10-13",
-    "category": "Strength",
-    "verse": "Niuna tentazione vi ha còlti, che non sia stata umana; or Iddio è fedele e non permetterà che siate tentati al di là delle vostre forze; ma con la tentazione vi darà anche la via d’uscirne, onde la possiate sopportare.",
-    "reference": "1 Corinthians 10:13",
+    "id": "1-corinthians-1-9",
+    "category": "Faith",
+    "verse": "Fedele è l’Iddio dal quale siete stati chiamati alla comunione del suo Figliuolo Gesù Cristo, nostro Signore.",
+    "reference": "1 Corinthians 1:9",
     "translation": "Riveduta (1927)",
     "tags": [
-      "strength",
-      "testing",
-      "faithfulness"
+      "faith"
     ]
   },
   {
@@ -1035,15 +1017,12 @@
     ]
   },
   {
-    "id": "colossians-4-12",
-    "category": "Grace",
-    "verse": "Epafra, che è dei vostri e servo di Cristo Gesù, vi saluta. Egli lotta sempre per voi nelle sue preghiere affinché perfetti e pienamente accertati stiate fermi in tutta la volontà di Dio.",
-    "reference": "Colossians 4:12",
+    "id": "colossians-3-12",
+    "category": "Love",
+    "verse": "Vestitevi dunque, come eletti di Dio, santi ed amati, di tenera compassione, di benignità, di umiltà, di dolcezza, di longanimità;",
+    "reference": "Colossians 3:12",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -1108,16 +1087,13 @@
     ]
   },
   {
-    "id": "colossians-3-16",
-    "category": "Wisdom",
-    "verse": "La parola di Cristo abiti in voi doviziosamente; ammaestrandovi ed ammonendovi gli uni gli altri con ogni sapienza, cantando di cuore a Dio, sotto l’impulso della grazia, salmi, inni, e cantici spirituali.",
-    "reference": "Colossians 3:16",
+    "id": "colossians-3-14",
+    "category": "Love",
+    "verse": "E sopra tutte queste cose vestitevi della carità che è il vincolo della perfezione.",
+    "reference": "Colossians 3:14",
     "translation": "Riveduta (1927)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "truth"
+      "love"
     ]
   },
   {
@@ -1146,15 +1122,13 @@
     ]
   },
   {
-    "id": "joshua-24-15",
-    "category": "Faith",
-    "verse": "E se vi par mal fatto servire all’Eterno, scegliete oggi a chi volete servire: o agli dèi ai quali i vostri padri servirono di là dal fiume, o agli dèi degli Amorei, nel paese de’ quali abitate; quanto a me e alla casa mia, serviremo all’Eterno”.",
-    "reference": "Joshua 24:15",
+    "id": "psalms-31-3",
+    "category": "Trust",
+    "verse": "Poiché tu sei la mia ròcca e la mia fortezza; per amor del tuo nome guidami e conducimi.",
+    "reference": "Psalms 31:3",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "choice",
-      "service"
+      "trust"
     ]
   },
   {
@@ -1206,15 +1180,13 @@
     ]
   },
   {
-    "id": "nehemiah-8-10",
+    "id": "psalms-92-4",
     "category": "Joy",
-    "verse": "Poi Nehemia disse loro: “Andate, mangiate vivande grasse e bevete vini dolci, e mandate delle porzioni a quelli che nulla hanno di preparato per loro; perché questo giorno è consacrato al Signor nostro; non v’attristate; perché il gaudio dell’Eterno è la vostra forza”.",
-    "reference": "Nehemiah 8:10",
+    "verse": "Poiché, o Eterno, tu m’hai rallegrato col tuo operare; io celebro con giubilo le opere delle tue mani.",
+    "reference": "Psalms 92:4",
     "translation": "Riveduta (1927)",
     "tags": [
-      "joy",
-      "strength",
-      "lord"
+      "joy"
     ]
   },
   {
@@ -1387,16 +1359,13 @@
     ]
   },
   {
-    "id": "jeremiah-3-23",
-    "category": "Hope",
-    "verse": "Sì, certo, vano è il soccorso che s’aspetta dalle alture, dalle feste strepitose sui monti; sì, nell’Eterno, nel nostro Dio, sta la salvezza d’Israele.",
-    "reference": "Jeremiah 3:23",
+    "id": "psalms-95-1",
+    "category": "Joy",
+    "verse": "Venite, cantiamo con giubilo all’Eterno, mandiamo grida di gioia alla ròcca della nostra salvezza!",
+    "reference": "Psalms 95:1",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "joy"
     ]
   },
   {
@@ -1460,16 +1429,13 @@
     ]
   },
   {
-    "id": "acts-20-21",
-    "category": "Trust",
-    "verse": "scongiurando Giudei e Greci a ravvedersi dinanzi a Dio e a credere nel Signor nostro Gesù Cristo.",
-    "reference": "Acts 20:21",
+    "id": "romans-12-12",
+    "category": "Hope",
+    "verse": "siate allegri nella speranza, pazienti nell’afflizione, perseveranti nella preghiera;",
+    "reference": "Romans 12:12",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -1509,16 +1475,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-2-19",
-    "category": "Hope",
-    "verse": "Qual è infatti la nostra speranza, o la nostra allegrezza, o la corona di cui ci gloriamo? Non siete forse voi, nel cospetto del nostro Signor Gesù quand’egli verrà?",
-    "reference": "1 Thessalonians 2:19",
+    "id": "1-thessalonians-5-11",
+    "category": "Comfort",
+    "verse": "Perciò, consolatevi gli uni gli altri, ed edificatevi l’un l’altro, come d’altronde già fate.",
+    "reference": "1 Thessalonians 5:11",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -1570,16 +1533,13 @@
     ]
   },
   {
-    "id": "philippians-2-11",
+    "id": "philippians-1-6",
     "category": "Hope",
-    "verse": "e ogni lingua confessi che Gesù Cristo è il Signore, alla gloria di Dio Padre.",
-    "reference": "Philippians 2:11",
+    "verse": "avendo fiducia in questo: che Colui che ha cominciato in voi un’opera buona, la condurrà a compimento fino al giorno di Cristo Gesù.",
+    "reference": "Philippians 1:6",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1608,15 +1568,13 @@
     ]
   },
   {
-    "id": "jeremiah-17-8",
-    "category": "Hope",
-    "verse": "Egli è come un albero piantato presso all’acque, che distende le sue radici lungo il fiume; non s’accorge quando vien la caldura, e il suo fogliame riman verde; nell’anno della siccità non è in affanno, e non cessa di portar frutto.",
-    "reference": "Jeremiah 17:8",
+    "id": "psalms-92-12",
+    "category": "Strength",
+    "verse": "Il giusto fiorirà come la palma, crescerà come il cedro sul Libano.",
+    "reference": "Psalms 92:12",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "growth",
-      "fruit"
+      "strength"
     ]
   },
   {
@@ -1680,16 +1638,13 @@
     ]
   },
   {
-    "id": "romans-10-1",
-    "category": "Hope",
-    "verse": "Fratelli, il desiderio del mio cuore e la mia preghiera a Dio per loro è che siano salvati.",
-    "reference": "Romans 10:1",
+    "id": "romans-12-10",
+    "category": "Love",
+    "verse": "Quanto all’amor fraterno, siate pieni d’affezione gli uni per gli altri; quanto all’onore, prevenitevi gli uni gli altri;",
+    "reference": "Romans 12:10",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -1705,16 +1660,13 @@
     ]
   },
   {
-    "id": "romans-15-6",
+    "id": "romans-15-4",
     "category": "Hope",
-    "verse": "affinché d’un solo animo e d’una stessa bocca glorifichiate Iddio, il Padre del nostro Signor Gesù Cristo.",
-    "reference": "Romans 15:6",
+    "verse": "Perché tutto quello che fu scritto per l’addietro, fu scritto per nostro ammaestramento, affinché mediante la pazienza e mediante la consolazione delle Scritture noi riteniamo la speranza.",
+    "reference": "Romans 15:4",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1803,16 +1755,13 @@
     ]
   },
   {
-    "id": "isaiah-30-15",
+    "id": "isaiah-32-17",
     "category": "Peace",
-    "verse": "Poiché così avea detto il Signore, l’Eterno, il Santo d’Israele: Nel tornare a me e nel tenervi in riposo starà la vostra salvezza; nella calma e nella fiducia starà la vostra forza; ma voi non l’avete voluto!",
-    "reference": "Isaiah 30:15",
+    "verse": "Il frutto della giustizia sarà la pace, e l’effetto della giustizia, tranquillità e sicurezza per sempre.",
+    "reference": "Isaiah 32:17",
     "translation": "Riveduta (1927)",
     "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
+      "peace"
     ]
   },
   {
@@ -1841,16 +1790,13 @@
     ]
   },
   {
-    "id": "1-corinthians-8-6",
-    "category": "Hope",
-    "verse": "nondimeno, per noi c’è un Dio solo, il Padre, dal quale sono tutte le cose, e noi per la gloria sua, e un solo Signore, Gesù Cristo, mediante il quale sono tutte le cose, e mediante il quale siam noi.",
-    "reference": "1 Corinthians 8:6",
+    "id": "1-corinthians-16-13",
+    "category": "Courage",
+    "verse": "Vegliate, state fermi nella fede, portatevi virilmente, fortificatevi.",
+    "reference": "1 Corinthians 16:13",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "courage"
     ]
   },
   {
@@ -1878,16 +1824,13 @@
     ]
   },
   {
-    "id": "philemon-1-25",
-    "category": "Grace",
-    "verse": "La grazia del Signor Gesù Cristo sia con lo spirito vostro.",
-    "reference": "Philemon 1:25",
+    "id": "2-thessalonians-3-16",
+    "category": "Peace",
+    "verse": "Or il Signore della pace vi dia egli stesso del continuo la pace in ogni maniera. Il Signore sia con tutti voi.",
+    "reference": "2 Thessalonians 3:16",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "peace"
     ]
   },
   {
@@ -1966,41 +1909,33 @@
     ]
   },
   {
-    "id": "isaiah-25-9",
+    "id": "isaiah-40-8",
     "category": "Hope",
-    "verse": "In quel giorno, si dirà: “Ecco, questo è il nostro Dio: in lui abbiamo sperato, ed egli ci ha salvati. Questo è l’Eterno in cui abbiamo sperato; esultiamo, rallegriamoci per la sua salvezza!”",
-    "reference": "Isaiah 25:9",
+    "verse": "L’erba si secca, il fiore appassisce, ma la parola del nostro Dio sussiste in eterno”.",
+    "reference": "Isaiah 40:8",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
-    "id": "psalms-108-7",
-    "category": "Hope",
-    "verse": "Iddio ha parlato nella sua santità: Io trionferò, spartirò Sichem e misurerò la valle di Succot.",
-    "reference": "Psalms 108:7",
+    "id": "psalms-33-21",
+    "category": "Joy",
+    "verse": "In lui, certo, si rallegrerà il cuor nostro, perché abbiam confidato nel nome della sua santità.",
+    "reference": "Psalms 33:21",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting",
-      "wisdom"
+      "joy"
     ]
   },
   {
-    "id": "psalms-109-20",
+    "id": "psalms-33-22",
     "category": "Hope",
-    "verse": "Tal sia, da parte dell’Eterno, la ricompensa dei miei avversari, e di quelli che proferiscono del male contro l’anima mia.",
-    "reference": "Psalms 109:20",
+    "verse": "La tua benignità, o Eterno, sia sopra noi, poiché noi abbiamo sperato in te.",
+    "reference": "Psalms 33:22",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting"
+      "hope"
     ]
   },
   {
@@ -2299,16 +2234,13 @@
     ]
   },
   {
-    "id": "daniel-10-19",
-    "category": "Courage",
-    "verse": "E disse: “O uomo grandemente amato, non temere! La pace sia teco! Sii forte, sii forte”. E quand’egli ebbe parlato meco, io ripresi forza, e dissi: “Il mio signore, parli pure poiché tu m’hai fortificato”.",
-    "reference": "Daniel 10:19",
+    "id": "psalms-138-3",
+    "category": "Strength",
+    "verse": "Nel giorno che ho gridato a te, tu m’hai risposto, m’hai riempito di coraggio, dando forza all’anima mia.",
+    "reference": "Psalms 138:3",
     "translation": "Riveduta (1927)",
     "tags": [
-      "courage",
-      "strength",
-      "fear",
-      "trust"
+      "strength"
     ]
   },
   {
@@ -2377,61 +2309,50 @@
     ]
   },
   {
-    "id": "2-corinthians-9-14",
+    "id": "ephesians-4-32",
     "category": "Love",
-    "verse": "E con le loro preghiere a pro vostro essi mostrano d’esser mossi da vivo affetto per voi a motivo della sovrabbondante grazia di Dio che è sopra voi.",
-    "reference": "2 Corinthians 9:14",
+    "verse": "Siate invece gli uni verso gli altri benigni, misericordiosi, perdonandovi a vicenda, come anche Dio vi ha perdonati in Cristo.",
+    "reference": "Ephesians 4:32",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "love"
     ]
   },
   {
-    "id": "psalms-31-6",
-    "category": "Hope",
-    "verse": "Io odio quelli che attendono alle vanità menzognere; e quanto a me confido nell’Eterno.",
-    "reference": "Psalms 31:6",
-    "translation": "Riveduta (1927)",
-    "tags": [
-      "hope",
-      "promise",
-      "waiting"
-    ]
-  },
-  {
-    "id": "psalms-132-13",
+    "id": "psalms-62-8",
     "category": "Trust",
-    "verse": "Poiché l’Eterno ha scelto Sion, l’ha desiderata per sua dimora.",
-    "reference": "Psalms 132:13",
+    "verse": "Confida in lui ogni tempo, o popolo; espandi il tuo cuore nel suo cospetto; Dio è il nostro rifugio. Sela.",
+    "reference": "Psalms 62:8",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "trust"
     ]
   },
   {
-    "id": "psalms-132-8",
-    "category": "Trust",
-    "verse": "Lèvati, o Eterno, vieni al luogo del tuo riposo, tu e l’Arca della tua forza.",
-    "reference": "Psalms 132:8",
+    "id": "psalms-91-1",
+    "category": "Comfort",
+    "verse": "Chi dimora nel ritiro dell’Altissimo alberga all’ombra dell’Onnipotente.",
+    "reference": "Psalms 91:1",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-63-7",
+    "category": "Comfort",
+    "verse": "Poiché tu sei stato il mio aiuto, ed io giubilo all’ombra delle tue ali.",
+    "reference": "Psalms 63:7",
+    "translation": "Riveduta (1927)",
+    "tags": [
+      "comfort"
     ]
   },
   {
     "id": "2-corinthians-13-14",
     "category": "Grace",
     "verse": "La grazia del Signor Gesù Cristo e l’amore di Dio e la comunione dello Spirito Santo siano con tutti voi.",
-    "reference": "2 Corinthians 13:14",
+    "reference": "2 Corinthians 13:13",
     "translation": "Riveduta (1927)",
     "tags": [
       "grace",
@@ -2467,16 +2388,13 @@
     ]
   },
   {
-    "id": "psalms-30-7",
-    "category": "Trust",
-    "verse": "O Eterno, per il tuo favore, avevi reso forte il mio monte; tu nascondesti la tua faccia, ed io fui smarrito.",
-    "reference": "Psalms 30:7",
+    "id": "psalms-94-18",
+    "category": "Comfort",
+    "verse": "Quand’ho detto: Il mio piè vacilla, la tua benignità, o Eterno, m’ha sostenuto.",
+    "reference": "Psalms 94:18",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "strength"
+      "comfort"
     ]
   },
   {
@@ -2545,53 +2463,42 @@
     ]
   },
   {
-    "id": "psalms-61-7",
-    "category": "Trust",
-    "verse": "Segga sul trono nel cospetto di Dio in perpetuo! Ordina alla benignità e alla verità di guardarlo;",
-    "reference": "Psalms 61:7",
+    "id": "psalms-61-3",
+    "category": "Strength",
+    "verse": "poiché tu mi sei stato un rifugio, una forte torre dinanzi al nemico.",
+    "reference": "Psalms 61:3",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "grace"
+      "strength"
     ]
   },
   {
-    "id": "philippians-4-21",
-    "category": "Grace",
-    "verse": "Salutate ognuno dei santi in Cristo Gesù.",
-    "reference": "Philippians 4:21",
+    "id": "philippians-4-19",
+    "category": "Hope",
+    "verse": "E l’Iddio mio supplirà ad ogni vostro bisogno secondo le sue ricchezze e con gloria, in Cristo Gesù.",
+    "reference": "Philippians 4:19",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
-    "id": "psalms-84-9",
-    "category": "Trust",
-    "verse": "O Dio, scudo nostro, vedi e riguarda la faccia del tuo unto!",
-    "reference": "Psalms 84:9",
+    "id": "psalms-84-5",
+    "category": "Strength",
+    "verse": "Beati quelli che hanno in te la loro forza, che hanno il cuore alle vie del Santuario!",
+    "reference": "Psalms 84:5",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge"
+      "strength"
     ]
   },
   {
-    "id": "isaiah-30-29",
-    "category": "Trust",
-    "verse": "Allora intonerete de’ canti, come la notte quando si celebra una festa; e avrete la gioia nel cuore, come colui che cammina al suon del flauto per andare al monte dell’Eterno, alla Roccia d’Israele.",
-    "reference": "Isaiah 30:29",
+    "id": "psalms-95-2",
+    "category": "Joy",
+    "verse": "Presentiamoci a lui con lodi, celebriamolo con salmi!",
+    "reference": "Psalms 95:2",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
       "joy"
     ]
   },
@@ -2609,16 +2516,13 @@
     ]
   },
   {
-    "id": "psalms-115-12",
-    "category": "Trust",
-    "verse": "L’Eterno si è ricordato di noi; egli benedirà, sì, benedirà la casa d’Israele, benedirà la casa d’Aaronne,",
-    "reference": "Psalms 115:12",
+    "id": "psalms-112-5",
+    "category": "Love",
+    "verse": "Felice l’uomo che ha compassione e presta! Egli guadagnerà la sua causa in giudizio,",
+    "reference": "Psalms 112:5",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "joy"
+      "love"
     ]
   },
   {
@@ -2683,16 +2587,13 @@
     ]
   },
   {
-    "id": "psalms-132-5",
-    "category": "Trust",
-    "verse": "finché abbia trovato un luogo per l’Eterno, una dimora per il Potente di Giacobbe.",
-    "reference": "Psalms 132:5",
+    "id": "psalms-32-7",
+    "category": "Comfort",
+    "verse": "Tu sei il mio ricetto, tu mi guarderai da distretta, tu mi circonderai di canti di liberazione. Sela.",
+    "reference": "Psalms 32:7",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
     ]
   },
   {
@@ -2733,27 +2634,23 @@
     ]
   },
   {
-    "id": "psalms-10-11",
-    "category": "Peace",
-    "verse": "Egli dice nel cuor suo: Iddio dimentica, nasconde la sua faccia, mai lo vedrà.",
-    "reference": "Psalms 10:11",
+    "id": "psalms-9-10",
+    "category": "Trust",
+    "verse": "e quelli che conoscono il tuo nome confideranno in te, perché, o Eterno, tu non abbandoni quelli che ti cercano.",
+    "reference": "Psalms 9:10",
     "translation": "Riveduta (1927)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "trust"
     ]
   },
   {
-    "id": "psalms-10-3",
-    "category": "Peace",
-    "verse": "poiché l’empio si gloria delle brame dell’anima sua, benedice il rapace e disprezza l’Eterno.",
-    "reference": "Psalms 10:3",
+    "id": "psalms-9-9",
+    "category": "Comfort",
+    "verse": "E l’Eterno sarà un alto ricetto all’oppresso, un alto ricetto in tempi di distretta;",
+    "reference": "Psalms 9:9",
     "translation": "Riveduta (1927)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2808,27 +2705,22 @@
     ]
   },
   {
-    "id": "psalms-125-5",
-    "category": "Peace",
-    "verse": "Ma quanto a quelli che deviano per le loro vie tortuose, l’Eterno li farà andare con gli operatori d’iniquità. Pace sia sopra Israele.",
-    "reference": "Psalms 125:5",
+    "id": "proverbs-4-18",
+    "category": "Hope",
+    "verse": "ma il sentiero dei giusti è come la luce che spunta e va vie più risplendendo, finché sia giorno perfetto.",
+    "reference": "Proverbs 4:18",
     "translation": "Riveduta (1927)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "hope"
     ]
   },
   {
-    "id": "philippians-1-8",
-    "category": "Grace",
-    "verse": "Poiché Iddio mi è testimone com’io sospiri per voi tutti con affetto sviscerato in Cristo Gesù.",
-    "reference": "Philippians 1:8",
+    "id": "philippians-1-9",
+    "category": "Love",
+    "verse": "E la mia preghiera è che il vostro amore sempre più abbondi in conoscenza e in ogni discernimento,",
+    "reference": "Philippians 1:9",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -2846,15 +2738,13 @@
     ]
   },
   {
-    "id": "psalms-143-4",
-    "category": "Peace",
-    "verse": "Il mio spirito è abbattuto in me, il mio cuore è tutto smarrito dentro di me.",
-    "reference": "Psalms 143:4",
+    "id": "psalms-119-50",
+    "category": "Comfort",
+    "verse": "Questo è il mio conforto nella mia afflizione; che la tua parola mi vivifica.",
+    "reference": "Psalms 119:50",
     "translation": "Riveduta (1927)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2999,16 +2889,13 @@
     ]
   },
   {
-    "id": "psalms-37-4",
-    "category": "Peace",
-    "verse": "Prendi il tuo diletto nell’Eterno, ed egli ti darà quel che il tuo cuore domanda.",
-    "reference": "Psalms 37:4",
+    "id": "psalms-37-23",
+    "category": "Trust",
+    "verse": "I passi dell’uomo dabbene son diretti dall’Eterno ed egli gradisce le vie di lui.",
+    "reference": "Psalms 37:23",
     "translation": "Riveduta (1927)",
     "tags": [
-      "peace",
-      "rest",
-      "heart",
-      "joy"
+      "trust"
     ]
   },
   {
@@ -3077,41 +2964,33 @@
     ]
   },
   {
-    "id": "2-corinthians-8-7",
+    "id": "2-corinthians-9-8",
     "category": "Grace",
-    "verse": "Ma siccome voi abbondate in ogni cosa, in fede, in parola, in conoscenza, in ogni zelo e nell’amore che avete per noi, vedete d’abbondare anche in quest’opera di carità.",
-    "reference": "2 Corinthians 8:7",
+    "verse": "E Dio è potente da far abbondare su di voi ogni grazia, affinché, avendo sempre in ogni cosa tutto quel che vi è necessario, abbondiate in ogni opera buona;",
+    "reference": "2 Corinthians 9:8",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "grace"
     ]
   },
   {
-    "id": "psalms-110-2",
-    "category": "Strength",
-    "verse": "L’Eterno estenderà da Sion lo scettro della sua potenza: Signoreggia in mezzo ai tuoi nemici!",
-    "reference": "Psalms 110:2",
+    "id": "psalms-145-14",
+    "category": "Comfort",
+    "verse": "L’Eterno sostiene tutti quelli che cadono e rialza tutti quelli che son depressi.",
+    "reference": "Psalms 145:14",
     "translation": "Riveduta (1927)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
-    "id": "psalms-115-10",
-    "category": "Strength",
-    "verse": "O casa d’Aaronne, confida nell’Eterno! Egli è il loro aiuto e il loro scudo.",
-    "reference": "Psalms 115:10",
+    "id": "psalms-112-4",
+    "category": "Hope",
+    "verse": "La luce si leva nelle tenebre per quelli che son retti, per chi è misericordioso, pietoso e giusto.",
+    "reference": "Psalms 112:4",
     "translation": "Riveduta (1927)",
     "tags": [
-      "strength",
-      "help",
-      "power",
-      "faith"
+      "hope"
     ]
   },
   {
@@ -3154,15 +3033,13 @@
     ]
   },
   {
-    "id": "psalms-143-7",
-    "category": "Strength",
-    "verse": "Affrettati a rispondermi, o Eterno; lo spirito mio vien meno; non nascondere da me la tua faccia, che talora io non diventi simile a quelli che scendono nella fossa.",
-    "reference": "Psalms 143:7",
+    "id": "psalms-42-8",
+    "category": "Comfort",
+    "verse": "L’Eterno, di giorno, mandava la sua benignità, e la notte eran meco i suoi cantici, la preghiera all’Iddio della mia vita.",
+    "reference": "Psalms 42:8",
     "translation": "Riveduta (1927)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
@@ -3294,42 +3171,33 @@
     ]
   },
   {
-    "id": "luke-2-52",
-    "category": "Grace",
-    "verse": "E Gesù cresceva in sapienza e in statura, e in grazia dinanzi a Dio e agli uomini.",
-    "reference": "Luke 2:52",
+    "id": "luke-11-9",
+    "category": "Prayer",
+    "verse": "Io altresì vi dico: Chiedete, e vi sarà dato; cercate e troverete; picchiate, e vi sarà aperto.",
+    "reference": "Luke 11:9",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
+      "prayer"
+    ]
+  },
+  {
+    "id": "ephesians-4-2-3",
+    "category": "Love",
+    "verse": "con ogni umiltà e mansuetudine, con longanimità, sopportandovi gli uni gli altri con amore, studiandovi di conservare l’unità dello Spirito col vincolo della pace.",
+    "reference": "Ephesians 4:2-3",
+    "translation": "Riveduta (1927)",
+    "tags": [
       "love"
     ]
   },
   {
-    "id": "2-thessalonians-1-2",
-    "category": "Peace",
-    "verse": "grazia a voi e pace da Dio Padre e dal Signor Gesù Cristo.",
-    "reference": "2 Thessalonians 1:2",
-    "translation": "Riveduta (1927)",
-    "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
-    ]
-  },
-  {
-    "id": "psalms-40-10",
+    "id": "psalms-89-8",
     "category": "Faith",
-    "verse": "Io non ho nascosto la tua giustizia entro il mio cuore; ho narrato la tua fedeltà e la tua salvezza; non ho celato la tua benignità né la tua verità alla grande assemblea.",
-    "reference": "Psalms 40:10",
+    "verse": "O Eterno, Iddio degli eserciti, chi è potente come te, o Eterno? E la tua fedeltà ti circonda da ogni parte.",
+    "reference": "Psalms 89:8",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "faith"
     ]
   },
   {
@@ -3385,16 +3253,13 @@
     ]
   },
   {
-    "id": "jeremiah-42-20",
-    "category": "Faith",
-    "verse": "Voi ingannate voi stessi, a rischio della vostra vita; poiché m’avete mandato dall’Eterno, dal vostro Dio, dicendo: Prega l’Eterno, il nostro Dio, per noi; e tutto quello che l’Eterno, il nostro Dio, dirà, faccelo sapere esattamente, e noi lo faremo.",
-    "reference": "Jeremiah 42:20",
+    "id": "psalms-119-114",
+    "category": "Hope",
+    "verse": "Tu sei il mio rifugio ed il mio scudo; io spero nella tua parola.",
+    "reference": "Psalms 119:114",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "hope"
     ]
   },
   {
@@ -3411,16 +3276,13 @@
     ]
   },
   {
-    "id": "acts-11-17",
-    "category": "Trust",
-    "verse": "Se dunque Iddio ha dato a loro lo stesso dono che ha dato anche a noi che abbiam creduto nel Signor Gesù Cristo, chi ero io da potermi opporre a Dio?",
-    "reference": "Acts 11:17",
+    "id": "acts-10-34-35",
+    "category": "Faith",
+    "verse": "Allora Pietro, prendendo a parlare, disse: In verità io comprendo che Dio non ha riguardo alla qualità delle persone; ma che in qualunque nazione, chi lo teme ed opera giustamente gli e accettevole.",
+    "reference": "Acts 10:34-35",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "faith"
     ]
   },
   {
@@ -3502,16 +3364,13 @@
     ]
   },
   {
-    "id": "acts-15-11",
-    "category": "Trust",
-    "verse": "Anzi, noi crediamo d’esser salvati per la grazia del Signor Gesù, nello stesso modo che loro.",
-    "reference": "Acts 15:11",
+    "id": "hebrews-10-23",
+    "category": "Hope",
+    "verse": "Riteniam fermamente la confessione della nostra speranza, senza vacillare; perché fedele è Colui che ha fatte le promesse.",
+    "reference": "Hebrews 10:23",
     "translation": "Riveduta (1927)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -3632,15 +3491,13 @@
     ]
   },
   {
-    "id": "psalms-41-10",
-    "category": "Grace",
-    "verse": "Ma tu, o Eterno, abbi pietà di me e rialzami, ed io renderò loro quel che si meritano.",
-    "reference": "Psalms 41:10",
+    "id": "psalms-91-4",
+    "category": "Comfort",
+    "verse": "Egli ti coprirà con le sue penne, e sotto le sue ali troverai rifugio. La sua fedeltà ti è scudo e targa.",
+    "reference": "Psalms 91:4",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "comfort"
     ]
   },
   {
@@ -3657,54 +3514,43 @@
     ]
   },
   {
-    "id": "psalms-96-13",
-    "category": "Grace",
-    "verse": "nel cospetto dell’Eterno; poich’egli viene, viene a giudicare la terra. Egli giudicherà il mondo con giustizia, e i popoli secondo la sua fedeltà.",
-    "reference": "Psalms 96:13",
+    "id": "psalms-96-3",
+    "category": "Joy",
+    "verse": "Raccontate la sua gloria fra le nazioni e le sue maraviglie fra tutti i popoli!",
+    "reference": "Psalms 96:3",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "joy"
     ]
   },
   {
-    "id": "psalms-89-49",
-    "category": "Grace",
-    "verse": "Signore, dove sono le tue benignità antiche, le quali giurasti a Davide nella tua fedeltà?",
-    "reference": "Psalms 89:49",
+    "id": "psalms-33-18",
+    "category": "Hope",
+    "verse": "Ecco, l’occhio dell’Eterno è su quelli che lo temono, su quelli che sperano nella sua benignità,",
+    "reference": "Psalms 33:18",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "hope"
     ]
   },
   {
-    "id": "proverbs-3-4",
-    "category": "Grace",
-    "verse": "troverai così grazia e buon senno agli occhi di Dio e degli uomini.",
-    "reference": "Proverbs 3:4",
+    "id": "proverbs-3-24",
+    "category": "Peace",
+    "verse": "Quando ti metterai a giacere non avrai paura; giacerai, e il sonno tuo sarà dolce.",
+    "reference": "Proverbs 3:24",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "peace"
     ]
   },
   {
-    "id": "proverbs-8-35",
-    "category": "Grace",
-    "verse": "Poiché chi mi trova trova la vita, e ottiene favore dall’Eterno.",
-    "reference": "Proverbs 8:35",
+    "id": "proverbs-16-24",
+    "category": "Wisdom",
+    "verse": "Le parole soavi sono un favo di miele: dolcezza all’anima, salute al corpo.",
+    "reference": "Proverbs 16:24",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "life"
+      "wisdom"
     ]
   },
   {
@@ -3759,15 +3605,13 @@
     ]
   },
   {
-    "id": "psalms-118-20",
-    "category": "Grace",
-    "verse": "Questa è la porta dell’Eterno; i giusti entreranno per essa.",
-    "reference": "Psalms 118:20",
+    "id": "psalms-118-21",
+    "category": "Joy",
+    "verse": "Io ti celebrerò perché tu m’hai risposto, e sei stato la mia salvezza.",
+    "reference": "Psalms 118:21",
     "translation": "Riveduta (1927)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "joy"
     ]
   },
   {
@@ -3810,16 +3654,13 @@
     ]
   },
   {
-    "id": "psalms-22-8",
-    "category": "Faith",
-    "verse": "Ei si rimette nell’Eterno; lo liberi dunque; lo salvi, poiché lo gradisce!",
-    "reference": "Psalms 22:8",
+    "id": "psalms-34-5",
+    "category": "Hope",
+    "verse": "Quelli che riguardano a lui sono illuminati, e le loro facce non sono svergognate.",
+    "reference": "Psalms 34:5",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "joy"
+      "hope"
     ]
   },
   {
@@ -3885,29 +3726,23 @@
     ]
   },
   {
-    "id": "acts-7-59",
-    "category": "Prayer",
-    "verse": "E lapidavano Stefano che invocava Gesù e diceva: Signor Gesù, ricevi il mio spirito.",
-    "reference": "Acts 7:59",
+    "id": "1-peter-4-8",
+    "category": "Love",
+    "verse": "Soprattutto, abbiate amore intenso gli uni per gli altri, perché l’amore copre moltitudine di peccati.",
+    "reference": "1 Peter 4:8",
     "translation": "Riveduta (1927)",
     "tags": [
-      "prayer",
-      "answer",
-      "presence",
-      "help"
+      "love"
     ]
   },
   {
-    "id": "psalms-37-5",
-    "category": "Faith",
-    "verse": "Rimetti la tua sorte nell’Eterno; confidati in lui, ed egli opererà",
-    "reference": "Psalms 37:5",
+    "id": "psalms-37-24",
+    "category": "Comfort",
+    "verse": "Se cade, non è però atterrato, perché l’Eterno lo sostiene per la mano.",
+    "reference": "Psalms 37:24",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "life"
+      "comfort"
     ]
   },
   {
@@ -3923,28 +3758,23 @@
     ]
   },
   {
-    "id": "psalms-55-23",
-    "category": "Faith",
-    "verse": "Ma tu, o Dio, farai cader costoro nel profondo della fossa; gli uomini di sangue e di frode non arriveranno alla metà de’ lor giorni; ma io confiderò in te.",
-    "reference": "Psalms 55:23",
+    "id": "psalms-62-7",
+    "category": "Trust",
+    "verse": "In Dio è la mia salvezza e la mia gloria; la mia forte ròcca e il mio rifugio sono in Dio.",
+    "reference": "Psalms 62:7",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "trust"
     ]
   },
   {
-    "id": "psalms-78-22",
-    "category": "Faith",
-    "verse": "perché non aveano creduto in Dio, né avevano avuto fiducia nella sua salvazione;",
-    "reference": "Psalms 78:22",
+    "id": "psalms-119-165",
+    "category": "Peace",
+    "verse": "Gran pace hanno quelli che amano la tua legge, e non c’è nulla che possa farli cadere.",
+    "reference": "Psalms 119:165",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "hope"
+      "peace"
     ]
   },
   {
@@ -3974,15 +3804,13 @@
     ]
   },
   {
-    "id": "isaiah-48-2",
-    "category": "Faith",
-    "verse": "Poiché prendono il loro nome dalla città santa, s’appoggiano sull’Iddio d’Israele, che ha nome l’Eterno degli eserciti!",
-    "reference": "Isaiah 48:2",
+    "id": "isaiah-26-12",
+    "category": "Peace",
+    "verse": "O Eterno, tu ci darai la pace; poiché ogni opera nostra sei tu che la compi per noi.",
+    "reference": "Isaiah 26:12",
     "translation": "Riveduta (1927)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "peace"
     ]
   },
   {
@@ -4024,27 +3852,23 @@
     ]
   },
   {
-    "id": "psalms-87-2",
-    "category": "Love",
-    "verse": "Egli ama le porte di Sion più di tutte le dimore di Giacobbe.",
-    "reference": "Psalms 87:2",
+    "id": "psalms-90-14",
+    "category": "Joy",
+    "verse": "Saziaci al mattino della tua benignità, e noi giubileremo, ci rallegreremo tutti i dì nostri.",
+    "reference": "Psalms 90:14",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
-    "id": "psalms-55-14",
+    "id": "psalms-133-1",
     "category": "Love",
-    "verse": "Insieme avevamo dolci colloqui, insieme ce n’andavamo tra la folla alla casa di Dio.",
-    "reference": "Psalms 55:14",
+    "verse": "Canto dei pellegrinaggi. Di Davide. Ecco, quant’è buono e quant’è piacevole che fratelli dimorino assieme!",
+    "reference": "Psalms 133:1",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
@@ -4074,28 +3898,23 @@
     ]
   },
   {
-    "id": "john-14-24",
+    "id": "john-15-12",
     "category": "Love",
-    "verse": "Chi non mi ama non osserva le mie parole; e la parola che voi udite non è mia, ma è del Padre che mi ha mandato.",
-    "reference": "John 14:24",
+    "verse": "Questo è il mio comandamento: che vi amiate gli uni gli altri, come io ho amato voi.",
+    "reference": "John 15:12",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god",
-      "wisdom"
+      "love"
     ]
   },
   {
-    "id": "john-14-31",
-    "category": "Love",
-    "verse": "ma così avviene, affinché il mondo conosca che amo il Padre, e opero come il Padre m’ha ordinato. Levatevi, andiamo via di qui.",
-    "reference": "John 14:31",
+    "id": "john-15-11",
+    "category": "Joy",
+    "verse": "Queste cose vi ho detto, affinché la mia allegrezza dimori in voi, e la vostra allegrezza sia resa completa.",
+    "reference": "John 15:11",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
@@ -4123,39 +3942,33 @@
     ]
   },
   {
-    "id": "john-5-20",
+    "id": "john-15-13",
     "category": "Love",
-    "verse": "Poiché il Padre ama il Figliuolo, e gli mostra tutto quello che Egli fa; e gli mostrerà delle opere maggiori di queste, affinché ne restiate maravigliati.",
-    "reference": "John 5:20",
+    "verse": "Nessuno ha amore più grande che quello di dar la sua vita per i suoi amici.",
+    "reference": "John 15:13",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
-    "id": "john-8-42",
-    "category": "Love",
-    "verse": "Gesù disse loro: Se Dio fosse vostro Padre, amereste me, perché io son proceduto e vengo da Dio, perché io non son venuto da me, ma è Lui che mi ha mandato.",
-    "reference": "John 8:42",
+    "id": "john-6-37",
+    "category": "Hope",
+    "verse": "Tutto quel che il Padre mi dà, verrà a me; e colui che viene a me, io non lo caccerò fuori;",
+    "reference": "John 6:37",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "hope"
     ]
   },
   {
-    "id": "matthew-10-37",
-    "category": "Love",
-    "verse": "Chi ama padre o madre più di me, non è degno di me; e chi ama figliuolo o figliuola più di me, non è degno di me;",
-    "reference": "Matthew 10:37",
+    "id": "james-1-19",
+    "category": "Wisdom",
+    "verse": "Questo lo sapete, fratelli miei diletti; ma sia ogni uomo pronto ad ascoltare, tardo al parlare, lento all’ira;",
+    "reference": "James 1:19",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "wisdom"
     ]
   },
   {
@@ -4183,16 +3996,13 @@
     ]
   },
   {
-    "id": "2-peter-1-14",
-    "category": "Hope",
-    "verse": "perché so che presto dovrò lasciare questa mia tenda, come il Signor nostro Gesù Cristo me lo ha dichiarato.",
-    "reference": "2 Peter 1:14",
+    "id": "2-peter-1-2",
+    "category": "Grace",
+    "verse": "grazia e pace vi siano moltiplicate nella conoscenza di Dio e di Gesù nostro Signore.",
+    "reference": "2 Peter 1:2",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "grace"
     ]
   },
   {
@@ -4248,28 +4058,23 @@
     ]
   },
   {
-    "id": "psalms-106-25",
-    "category": "Prayer",
-    "verse": "e mormorarono nelle loro tende, e non dettero ascolto alla voce dell’Eterno.",
-    "reference": "Psalms 106:25",
+    "id": "psalms-34-10",
+    "category": "Hope",
+    "verse": "I leoncelli soffron penuria e fame, ma quelli che cercano l’Eterno non mancano d’alcun bene.",
+    "reference": "Psalms 34:10",
     "translation": "Riveduta (1927)",
     "tags": [
-      "prayer",
-      "seeking",
-      "calling"
+      "hope"
     ]
   },
   {
-    "id": "romans-2-16",
-    "category": "Hope",
-    "verse": "Tutto ciò si vedrà nel giorno in cui Dio giudicherà i segreti degli uomini per mezzo di Gesù Cristo, secondo il mio Evangelo.",
-    "reference": "Romans 2:16",
+    "id": "james-5-13",
+    "category": "Prayer",
+    "verse": "C’è fra voi qualcuno che soffre? Preghi. C’è qualcuno d’animo lieto? Salmeggi.",
+    "reference": "James 5:13",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "prayer"
     ]
   },
   {
@@ -4348,15 +4153,13 @@
     ]
   },
   {
-    "id": "psalms-105-19",
-    "category": "Wisdom",
-    "verse": "fino al tempo che avvenne quello che avea detto, e la parola dell’Eterno, nella prova, gli rese giustizia.",
-    "reference": "Psalms 105:19",
+    "id": "psalms-119-76",
+    "category": "Comfort",
+    "verse": "Deh, sia la tua benignità il mio conforto, secondo la tua parola detta al tuo servitore.",
+    "reference": "Psalms 119:76",
     "translation": "Riveduta (1927)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word"
+      "comfort"
     ]
   },
   {
@@ -4373,16 +4176,13 @@
     ]
   },
   {
-    "id": "psalms-118-27",
-    "category": "Wisdom",
-    "verse": "L’Eterno è Dio ed ha fatto risplender su noi la sua luce; legate con funi la vittima della solennità, e menatela ai corni dell’altare.",
-    "reference": "Psalms 118:27",
+    "id": "psalms-100-4",
+    "category": "Joy",
+    "verse": "Entrate nelle sue porte con ringraziamento, e nei suoi cortili con lode; celebratelo, benedite il suo nome.",
+    "reference": "Psalms 100:4",
     "translation": "Riveduta (1927)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "life"
+      "joy"
     ]
   },
   {
@@ -4424,16 +4224,13 @@
     ]
   },
   {
-    "id": "isaiah-26-13",
-    "category": "Hope",
-    "verse": "O Eterno, Dio nostro, altri signori, fuori di te, han dominato su noi; ma, grazie a te solo, noi possiamo celebrare il tuo nome.",
-    "reference": "Isaiah 26:13",
+    "id": "isaiah-66-13",
+    "category": "Comfort",
+    "verse": "Come un uomo cui sua madre consola, così io consolerò voi, e sarete consolati in Gerusalemme.",
+    "reference": "Isaiah 66:13",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -4449,16 +4246,13 @@
     ]
   },
   {
-    "id": "2-corinthians-8-5",
-    "category": "Hope",
-    "verse": "E l’hanno fatto non solo come avevamo sperato; ma prima si sono dati loro stessi al Signore, e poi a noi, per la volontà di Dio.",
-    "reference": "2 Corinthians 8:5",
+    "id": "hebrews-10-24",
+    "category": "Love",
+    "verse": "E facciamo attenzione gli uni agli altri per incitarci a carità e a buone opere,",
+    "reference": "Hebrews 10:24",
     "translation": "Riveduta (1927)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -4486,42 +4280,33 @@
     ]
   },
   {
-    "id": "deuteronomy-13-3",
-    "category": "Love",
-    "verse": "tu non darai retta alle parole di quel profeta o di quel sognatore; perché l’Eterno, il vostro Dio, vi mette alla prova per sapere se amate l’Eterno, il vostro Dio, con tutto il vostro cuore e con tutta l’anima vostra.",
-    "reference": "Deuteronomy 13:3",
+    "id": "proverbs-12-25",
+    "category": "Comfort",
+    "verse": "Il cordoglio ch’è nel cuore dell’uomo l’abbatte, ma la parola buona lo rallegra.",
+    "reference": "Proverbs 12:25",
     "translation": "Riveduta (1927)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "comfort"
     ]
   },
   {
-    "id": "isaiah-43-1",
-    "category": "Courage",
-    "verse": "Ma ora così parla l’Eterno, il tuo Creatore, o Giacobbe, Colui che t’ha formato, o Israele! Non temere, perché io t’ho riscattato, t’ho chiamato per nome; tu sei mio!",
-    "reference": "Isaiah 43:1",
+    "id": "isaiah-42-3",
+    "category": "Comfort",
+    "verse": "Non spezzerà la canna rotta e non spegnerà il lucignolo fumante; insegnerà la giustizia secondo verità.",
+    "reference": "Isaiah 42:3",
     "translation": "Riveduta (1927)",
     "tags": [
-      "courage",
-      "fear",
-      "strength",
-      "life"
+      "comfort"
     ]
   },
   {
-    "id": "1-samuel-2-1",
+    "id": "1-chronicles-16-23",
     "category": "Joy",
-    "verse": "Allora Anna pregò e disse: “Il mio cuore esulta nell’Eterno, l’Eterno mi ha dato una forza vittoriosa, la mia bocca s’apre contro i miei nemici perché gioisco per la liberazione che tu m’hai concessa.",
-    "reference": "1 Samuel 2:1",
+    "verse": "Cantate all’Eterno, abitanti di tutta la terra, annunziate di giorno in giorno la sua salvezza!",
+    "reference": "1 Chronicles 16:23",
     "translation": "Riveduta (1927)",
     "tags": [
-      "joy",
-      "delight",
-      "praise",
-      "gratitude"
+      "joy"
     ]
   },
   {

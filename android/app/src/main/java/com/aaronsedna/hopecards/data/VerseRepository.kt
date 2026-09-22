@@ -7,17 +7,29 @@ import org.json.JSONArray
 import kotlin.random.Random
 
 class VerseRepository(private val context: Context) {
-    private val cache = object : LinkedHashMap<Translation, List<Verse>>(2, 0.75f, true) {
-        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Translation, List<Verse>>?): Boolean =
+    private class Catalog(val active: List<Verse>, var archive: List<Verse>? = null)
+
+    // Active and legacy verses share one bounded cache. The archive is loaded
+    // only when resolving an old favorite, journal entry, artwork or notification.
+    private val cache = object : LinkedHashMap<Translation, Catalog>(2, 0.75f, true) {
+        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Translation, Catalog>?): Boolean =
             size > 2
     }
 
     @Synchronized
     fun verses(translation: Translation): List<Verse> =
-        cache.getOrPut(translation) { load(translation) }
+        catalog(translation).active
 
-    fun byId(id: String, translation: Translation): Verse? =
-        verses(translation).firstOrNull { it.id == id }
+    @Synchronized
+    fun byId(id: String, translation: Translation): Verse? {
+        val catalog = catalog(translation)
+        catalog.active.firstOrNull { it.id == id }?.let { return it }
+        val archive = catalog.archive ?: load(translation, "verses/archive").also { catalog.archive = it }
+        return archive.firstOrNull { it.id == id }
+    }
+
+    private fun catalog(translation: Translation): Catalog =
+        cache.getOrPut(translation) { Catalog(load(translation)) }
 
     fun random(translation: Translation, excludingId: String? = null): Verse {
         val available = verses(translation)
@@ -43,8 +55,8 @@ class VerseRepository(private val context: Context) {
         }
     }
 
-    private fun load(translation: Translation): List<Verse> {
-        val json = context.assets.open("verses/${translation.assetName}")
+    private fun load(translation: Translation, directory: String = "verses"): List<Verse> {
+        val json = context.assets.open("$directory/${translation.assetName}")
             .bufferedReader()
             .use { it.readText() }
         val array = JSONArray(json)

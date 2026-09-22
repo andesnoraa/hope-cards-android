@@ -122,7 +122,7 @@
   {
     "id": "isaiah-40-31",
     "category": "Strength",
-    "verse": "But those who wait for the LORD will renew their strength. They will mount up with wings like eagles. They will run, and not be weary. They will walk, and not faint.",
+    "verse": "but those who wait for the LORD will renew their strength. They will mount up with wings like eagles. They will run, and not be weary. They will walk, and not faint.",
     "reference": "Isaiah 40:31",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -170,7 +170,7 @@
   {
     "id": "2-corinthians-5-7",
     "category": "Faith",
-    "verse": "For we walk by faith, not by sight.",
+    "verse": "for we walk by faith, not by sight.",
     "reference": "2 Corinthians 5:7",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -180,21 +180,19 @@
     ]
   },
   {
-    "id": "2-corinthians-12-9",
-    "category": "Grace",
-    "verse": "He has said to me, “My grace is sufficient for you, for my power is made perfect in weakness.” Most gladly therefore I will rather glory in my weaknesses, that the power of Christ may rest on me.",
-    "reference": "2 Corinthians 12:9",
+    "id": "hebrews-4-15",
+    "category": "Comfort",
+    "verse": "For we don’t have a high priest who can’t be touched with the feeling of our infirmities, but one who has been in all points tempted like we are, yet without sin.",
+    "reference": "Hebrews 4:15",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "strength",
-      "weakness"
+      "comfort"
     ]
   },
   {
     "id": "1-peter-5-7",
     "category": "Trust",
-    "verse": "Casting all your worries on him, because he cares for you.",
+    "verse": "casting all your worries on him, because he cares for you.",
     "reference": "1 Peter 5:7",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -215,15 +213,13 @@
     ]
   },
   {
-    "id": "romans-8-38-39",
-    "category": "Hope",
-    "verse": "For I am persuaded that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come, nor powers, nor height, nor depth, nor any other created thing will be able to separate us from God’s love which is in Christ Jesus our Lord.",
-    "reference": "Romans 8:38-39",
+    "id": "romans-8-32",
+    "category": "Love",
+    "verse": "He who didn’t spare his own Son, but delivered him up for us all, how would he not also with him freely give us all things?",
+    "reference": "Romans 8:32",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "love",
-      "assurance"
+      "love"
     ]
   },
   {
@@ -371,15 +367,13 @@
     ]
   },
   {
-    "id": "1-john-3-1",
-    "category": "Love",
-    "verse": "See how great a love the Father has given to us, that we should be called children of God! For this cause the world doesn’t know us, because it didn’t know him.",
-    "reference": "1 John 3:1",
+    "id": "1-john-3-2",
+    "category": "Hope",
+    "verse": "Beloved, now we are children of God. It is not yet revealed what we will be; but we know that when he is revealed, we will be like him, for we will see him just as he is.",
+    "reference": "1 John 3:2",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "identity",
-      "children-of-god"
+      "hope"
     ]
   },
   {
@@ -443,14 +437,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-5-17",
+    "id": "1-thessalonians-5-16-18",
     "category": "Prayer",
-    "verse": "Pray without ceasing.",
-    "reference": "1 Thessalonians 5:17",
+    "verse": "Always rejoice. Pray without ceasing. In everything give thanks, for this is the will of God in Christ Jesus toward you.",
+    "reference": "1 Thessalonians 5:16-18",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "prayer",
-      "devotion"
+      "prayer"
     ]
   },
   {
@@ -673,7 +666,7 @@
   {
     "id": "2-thessalonians-1-12",
     "category": "Grace",
-    "verse": "That the name of our Lord Jesus may be glorified in you, and you in him, according to the grace of our God and the Lord Jesus Christ.",
+    "verse": "that the name of our Lord Jesus may be glorified in you, and you in him, according to the grace of our God and the Lord Jesus Christ.",
     "reference": "2 Thessalonians 1:12",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -722,7 +715,7 @@
   {
     "id": "romans-8-39",
     "category": "Grace",
-    "verse": "Nor height, nor depth, nor any other created thing will be able to separate us from God’s love which is in Christ Jesus our Lord.",
+    "verse": "nor height, nor depth, nor any other created thing will be able to separate us from God’s love which is in Christ Jesus our Lord.",
     "reference": "Romans 8:39",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -807,7 +800,7 @@
   {
     "id": "isaiah-30-21",
     "category": "Wisdom",
-    "verse": "And when you turn to the right hand, and when you turn to the left, your ears will hear a voice behind you, saying, “This is the way. Walk in it.”",
+    "verse": "and when you turn to the right hand, and when you turn to the left, your ears will hear a voice behind you, saying, “This is the way. Walk in it.”",
     "reference": "Isaiah 30:21",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -817,15 +810,13 @@
     ]
   },
   {
-    "id": "isaiah-43-2",
-    "category": "Comfort",
-    "verse": "When you pass through the waters, I will be with you, and through the rivers, they will not overflow you. When you walk through the fire, you will not be burned, and flame will not scorch you.",
-    "reference": "Isaiah 43:2",
+    "id": "isaiah-41-13",
+    "category": "Courage",
+    "verse": "For I, the LORD your God, will hold your right hand, saying to you, ‘Don’t be afraid. I will help you.’",
+    "reference": "Isaiah 41:13",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "comfort",
-      "trials",
-      "presence"
+      "courage"
     ]
   },
   {
@@ -841,27 +832,23 @@
     ]
   },
   {
-    "id": "isaiah-54-10",
-    "category": "Love",
-    "verse": "For the mountains may depart, and the hills be removed, but my loving kindness will not depart from you, and my covenant of peace will not be removed,” says the LORD who has mercy on you.",
-    "reference": "Isaiah 54:10",
+    "id": "isaiah-54-13",
+    "category": "Peace",
+    "verse": "All your children will be taught by the LORD, and your children’s peace will be great.",
+    "reference": "Isaiah 54:13",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "peace",
-      "mercy"
+      "peace"
     ]
   },
   {
-    "id": "lamentations-3-23",
-    "category": "Grace",
-    "verse": "They are new every morning. Great is your faithfulness.",
-    "reference": "Lamentations 3:23",
+    "id": "lamentations-3-22-23",
+    "category": "Hope",
+    "verse": "It is because of the LORD’s loving kindnesses that we are not consumed, because his mercies don’t fail. They are new every morning. Great is your faithfulness.",
+    "reference": "Lamentations 3:22-23",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "faithfulness",
-      "morning"
+      "hope"
     ]
   },
   {
@@ -877,16 +864,13 @@
     ]
   },
   {
-    "id": "galatians-6-18",
-    "category": "Grace",
-    "verse": "The grace of our Lord Jesus Christ be with your spirit, brothers. Amen.",
-    "reference": "Galatians 6:18",
+    "id": "galatians-6-9",
+    "category": "Hope",
+    "verse": "Let’s not be weary in doing good, for we will reap in due season if we don’t give up.",
+    "reference": "Galatians 6:9",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
@@ -987,15 +971,13 @@
     ]
   },
   {
-    "id": "1-corinthians-10-13",
-    "category": "Strength",
-    "verse": "No temptation has taken you except what is common to man. God is faithful, who will not allow you to be tempted above what you are able, but will with the temptation also make the way of escape, that you may be able to endure it.",
-    "reference": "1 Corinthians 10:13",
+    "id": "1-corinthians-1-9",
+    "category": "Faith",
+    "verse": "God is faithful, through whom you were called into the fellowship of his Son, Jesus Christ our Lord.",
+    "reference": "1 Corinthians 1:9",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "strength",
-      "testing",
-      "faithfulness"
+      "faith"
     ]
   },
   {
@@ -1035,15 +1017,12 @@
     ]
   },
   {
-    "id": "colossians-4-12",
-    "category": "Grace",
-    "verse": "Epaphras, who is one of you, a servant of Christ, salutes you, always striving for you in his prayers, that you may stand perfect and complete in all the will of God.",
-    "reference": "Colossians 4:12",
+    "id": "colossians-3-12",
+    "category": "Love",
+    "verse": "Put on therefore, as God’s chosen ones, holy and beloved, a heart of compassion, kindness, lowliness, humility, and perseverance;",
+    "reference": "Colossians 3:12",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -1108,16 +1087,13 @@
     ]
   },
   {
-    "id": "colossians-3-16",
-    "category": "Wisdom",
-    "verse": "Let the word of Christ dwell in you richly; in all wisdom teaching and admonishing one another with psalms, hymns, and spiritual songs, singing with grace in your heart to the Lord.",
-    "reference": "Colossians 3:16",
+    "id": "colossians-3-14",
+    "category": "Love",
+    "verse": "Above all these things, walk in love, which is the bond of perfection.",
+    "reference": "Colossians 3:14",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "truth"
+      "love"
     ]
   },
   {
@@ -1146,15 +1122,13 @@
     ]
   },
   {
-    "id": "joshua-24-15",
-    "category": "Faith",
-    "verse": "If it seems evil to you to serve the LORD, choose today whom you will serve; whether the gods which your fathers served that were beyond the River, or the gods of the Amorites, in whose land you dwell; but as for me and my house, we will serve the LORD.”",
-    "reference": "Joshua 24:15",
+    "id": "psalms-31-3",
+    "category": "Trust",
+    "verse": "For you are my rock and my fortress, therefore for your name’s sake lead me and guide me.",
+    "reference": "Psalms 31:3",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "choice",
-      "service"
+      "trust"
     ]
   },
   {
@@ -1206,15 +1180,13 @@
     ]
   },
   {
-    "id": "nehemiah-8-10",
+    "id": "psalms-92-4",
     "category": "Joy",
-    "verse": "Then he said to them, “Go your way. Eat the fat, drink the sweet, and send portions to him for whom nothing is prepared, for today is holy to our Lord. Don’t be grieved, for the joy of the LORD is your strength.”",
-    "reference": "Nehemiah 8:10",
+    "verse": "For you, LORD, have made me glad through your work. I will triumph in the works of your hands.",
+    "reference": "Psalms 92:4",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "joy",
-      "strength",
-      "lord"
+      "joy"
     ]
   },
   {
@@ -1387,16 +1359,13 @@
     ]
   },
   {
-    "id": "jeremiah-3-23",
-    "category": "Hope",
-    "verse": "Truly help from the hills, the tumult on the mountains, is in vain. Truly the salvation of Israel is in the LORD our God.",
-    "reference": "Jeremiah 3:23",
+    "id": "psalms-95-1",
+    "category": "Joy",
+    "verse": "Oh come, let’s sing to the LORD. Let’s shout aloud to the rock of our salvation!",
+    "reference": "Psalms 95:1",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "joy"
     ]
   },
   {
@@ -1460,16 +1429,13 @@
     ]
   },
   {
-    "id": "acts-20-21",
-    "category": "Trust",
-    "verse": "Testifying both to Jews and to Greeks repentance toward God and faith toward our Lord Jesus.",
-    "reference": "Acts 20:21",
+    "id": "romans-12-12",
+    "category": "Hope",
+    "verse": "rejoicing in hope, enduring in troubles, continuing steadfastly in prayer,",
+    "reference": "Romans 12:12",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -1509,16 +1475,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-2-19",
-    "category": "Hope",
-    "verse": "For what is our hope, or joy, or crown of rejoicing? Isn’t it even you, before our Lord Jesus at his coming?",
-    "reference": "1 Thessalonians 2:19",
+    "id": "1-thessalonians-5-11",
+    "category": "Comfort",
+    "verse": "Therefore exhort one another, and build each other up, even as you also do.",
+    "reference": "1 Thessalonians 5:11",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -1570,22 +1533,19 @@
     ]
   },
   {
-    "id": "philippians-2-11",
+    "id": "philippians-1-6",
     "category": "Hope",
-    "verse": "And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
-    "reference": "Philippians 2:11",
+    "verse": "being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ.",
+    "reference": "Philippians 1:6",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
     "id": "isaiah-58-11",
     "category": "Wisdom",
-    "verse": "And the LORD will guide you continually, satisfy your soul in dry places, and make your bones strong. You will be like a watered garden, and like a spring of water whose waters don’t fail.",
+    "verse": "and the LORD will guide you continually, satisfy your soul in dry places, and make your bones strong. You will be like a watered garden, and like a spring of water whose waters don’t fail.",
     "reference": "Isaiah 58:11",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -1608,15 +1568,13 @@
     ]
   },
   {
-    "id": "jeremiah-17-8",
-    "category": "Hope",
-    "verse": "For he will be as a tree planted by the waters, who spreads out its roots by the river, and will not fear when heat comes, but its leaf will be green, and will not be concerned in the year of drought. It won’t cease from yielding fruit.",
-    "reference": "Jeremiah 17:8",
+    "id": "psalms-92-12",
+    "category": "Strength",
+    "verse": "The righteous shall flourish like the palm tree. He will grow like a cedar in Lebanon.",
+    "reference": "Psalms 92:12",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "growth",
-      "fruit"
+      "strength"
     ]
   },
   {
@@ -1646,7 +1604,7 @@
   {
     "id": "habakkuk-3-18",
     "category": "Joy",
-    "verse": "Yet I will rejoice in the LORD. I will be joyful in the God of my salvation!",
+    "verse": "yet I will rejoice in the LORD. I will be joyful in the God of my salvation!",
     "reference": "Habakkuk 3:18",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -1680,16 +1638,13 @@
     ]
   },
   {
-    "id": "romans-10-1",
-    "category": "Hope",
-    "verse": "Brothers, my heart’s desire and my prayer to God is for Israel, that they may be saved.",
-    "reference": "Romans 10:1",
+    "id": "romans-12-10",
+    "category": "Love",
+    "verse": "In love of the brothers be tenderly affectionate to one another; in honor prefer one another,",
+    "reference": "Romans 12:10",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -1705,16 +1660,13 @@
     ]
   },
   {
-    "id": "romans-15-6",
+    "id": "romans-15-4",
     "category": "Hope",
-    "verse": "That with one accord you may with one mouth glorify the God and Father of our Lord Jesus Christ.",
-    "reference": "Romans 15:6",
+    "verse": "For whatever things were written before were written for our learning, that through perseverance and through encouragement of the Scriptures we might have hope.",
+    "reference": "Romans 15:4",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1803,16 +1755,13 @@
     ]
   },
   {
-    "id": "isaiah-30-15",
+    "id": "isaiah-32-17",
     "category": "Peace",
-    "verse": "For thus said the Lord GOD, the Holy One of Israel, “You will be saved in returning and rest. Your strength will be in quietness and in confidence.” You refused,",
-    "reference": "Isaiah 30:15",
+    "verse": "The work of righteousness will be peace, and the effect of righteousness, quietness and confidence forever.",
+    "reference": "Isaiah 32:17",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
+      "peace"
     ]
   },
   {
@@ -1841,16 +1790,13 @@
     ]
   },
   {
-    "id": "1-corinthians-8-6",
-    "category": "Hope",
-    "verse": "Yet to us there is one God, the Father, of whom are all things, and we for him; and one Lord, Jesus Christ, through whom are all things, and we live through him.",
-    "reference": "1 Corinthians 8:6",
+    "id": "1-corinthians-16-13",
+    "category": "Courage",
+    "verse": "Watch! Stand firm in the faith! Be courageous! Be strong!",
+    "reference": "1 Corinthians 16:13",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "courage"
     ]
   },
   {
@@ -1878,16 +1824,13 @@
     ]
   },
   {
-    "id": "philemon-1-25",
-    "category": "Grace",
-    "verse": "The grace of our Lord Jesus Christ be with your spirit. Amen.",
-    "reference": "Philemon 1:25",
+    "id": "2-thessalonians-3-16",
+    "category": "Peace",
+    "verse": "Now may the Lord of peace himself give you peace at all times in all ways. The Lord be with you all.",
+    "reference": "2 Thessalonians 3:16",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "peace"
     ]
   },
   {
@@ -1966,41 +1909,33 @@
     ]
   },
   {
-    "id": "isaiah-25-9",
+    "id": "isaiah-40-8",
     "category": "Hope",
-    "verse": "It shall be said in that day, “Behold, this is our God! We have waited for him, and he will save us! This is the LORD! We have waited for him. We will be glad and rejoice in his salvation!”",
-    "reference": "Isaiah 25:9",
+    "verse": "The grass withers, the flower fades; but the word of our God stands forever.”",
+    "reference": "Isaiah 40:8",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
-    "id": "psalms-108-7",
-    "category": "Hope",
-    "verse": "God has spoken from his sanctuary: “In triumph, I will divide Shechem, and measure out the valley of Succoth.",
-    "reference": "Psalms 108:7",
+    "id": "psalms-33-21",
+    "category": "Joy",
+    "verse": "For our heart rejoices in him, because we have trusted in his holy name.",
+    "reference": "Psalms 33:21",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting",
-      "wisdom"
+      "joy"
     ]
   },
   {
-    "id": "psalms-109-20",
+    "id": "psalms-33-22",
     "category": "Hope",
-    "verse": "This is the reward of my adversaries from the LORD, of those who speak evil against my soul.",
-    "reference": "Psalms 109:20",
+    "verse": "Let your loving kindness be on us, LORD, since we have hoped in you.",
+    "reference": "Psalms 33:22",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting"
+      "hope"
     ]
   },
   {
@@ -2299,16 +2234,13 @@
     ]
   },
   {
-    "id": "daniel-10-19",
-    "category": "Courage",
-    "verse": "He said, “Greatly beloved man, don’t be afraid. Peace be to you. Be strong. Yes, be strong.” When he spoke to me, I was strengthened, and said, “Let my lord speak, for you have strengthened me.”",
-    "reference": "Daniel 10:19",
+    "id": "psalms-138-3",
+    "category": "Strength",
+    "verse": "In the day that I called, you answered me. You encouraged me with strength in my soul.",
+    "reference": "Psalms 138:3",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "courage",
-      "strength",
-      "fear",
-      "trust"
+      "strength"
     ]
   },
   {
@@ -2377,54 +2309,43 @@
     ]
   },
   {
-    "id": "2-corinthians-9-14",
+    "id": "ephesians-4-32",
     "category": "Love",
-    "verse": "While they themselves also, with supplication on your behalf, yearn for you by reason of the exceeding grace of God in you.",
-    "reference": "2 Corinthians 9:14",
+    "verse": "And be kind to one another, tender hearted, forgiving each other, just as God also in Christ forgave you.",
+    "reference": "Ephesians 4:32",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "love"
     ]
   },
   {
-    "id": "psalms-31-6",
-    "category": "Hope",
-    "verse": "I hate those who regard lying vanities, but I trust in the LORD.",
-    "reference": "Psalms 31:6",
-    "translation": "World English Bible (WEB)",
-    "tags": [
-      "hope",
-      "promise",
-      "waiting"
-    ]
-  },
-  {
-    "id": "psalms-132-13",
+    "id": "psalms-62-8",
     "category": "Trust",
-    "verse": "For the LORD has chosen Zion. He has desired it for his habitation.",
-    "reference": "Psalms 132:13",
+    "verse": "Trust in him at all times, you people. Pour out your heart before him. God is a refuge for us. Selah.",
+    "reference": "Psalms 62:8",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "trust"
     ]
   },
   {
-    "id": "psalms-132-8",
-    "category": "Trust",
-    "verse": "Arise, LORD, into your resting place, you, and the ark of your strength.",
-    "reference": "Psalms 132:8",
+    "id": "psalms-91-1",
+    "category": "Comfort",
+    "verse": "He who dwells in the secret place of the Most High will rest in the shadow of the Almighty.",
+    "reference": "Psalms 91:1",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-63-7",
+    "category": "Comfort",
+    "verse": "For you have been my help. I will rejoice in the shadow of your wings.",
+    "reference": "Psalms 63:7",
+    "translation": "World English Bible (WEB)",
+    "tags": [
+      "comfort"
     ]
   },
   {
@@ -2467,16 +2388,13 @@
     ]
   },
   {
-    "id": "psalms-30-7",
-    "category": "Trust",
-    "verse": "You, LORD, when you favored me, made my mountain stand strong; but when you hid your face, I was troubled.",
-    "reference": "Psalms 30:7",
+    "id": "psalms-94-18",
+    "category": "Comfort",
+    "verse": "When I said, “My foot is slipping!” Your loving kindness, LORD, held me up.",
+    "reference": "Psalms 94:18",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "strength"
+      "comfort"
     ]
   },
   {
@@ -2545,53 +2463,42 @@
     ]
   },
   {
-    "id": "psalms-61-7",
-    "category": "Trust",
-    "verse": "He shall be enthroned in God’s presence forever. Appoint your loving kindness and truth, that they may preserve him.",
-    "reference": "Psalms 61:7",
+    "id": "psalms-61-3",
+    "category": "Strength",
+    "verse": "For you have been a refuge for me, a strong tower from the enemy.",
+    "reference": "Psalms 61:3",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "grace"
+      "strength"
     ]
   },
   {
-    "id": "philippians-4-21",
-    "category": "Grace",
-    "verse": "Greet every saint in Christ Jesus. The brothers who are with me greet you.",
-    "reference": "Philippians 4:21",
+    "id": "philippians-4-19",
+    "category": "Hope",
+    "verse": "My God will supply every need of yours according to his riches in glory in Christ Jesus.",
+    "reference": "Philippians 4:19",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
-    "id": "psalms-84-9",
-    "category": "Trust",
-    "verse": "Behold, God our shield, look at the face of your anointed.",
-    "reference": "Psalms 84:9",
+    "id": "psalms-84-5",
+    "category": "Strength",
+    "verse": "Blessed are those whose strength is in you, who have set their hearts on a pilgrimage.",
+    "reference": "Psalms 84:5",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge"
+      "strength"
     ]
   },
   {
-    "id": "isaiah-30-29",
-    "category": "Trust",
-    "verse": "You will have a song, as in the night when a holy feast is kept, and gladness of heart, as when one goes with a flute to come to the LORD’s mountain, to Israel’s Rock.",
-    "reference": "Isaiah 30:29",
+    "id": "psalms-95-2",
+    "category": "Joy",
+    "verse": "Let’s come before his presence with thanksgiving. Let’s extol him with songs!",
+    "reference": "Psalms 95:2",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
       "joy"
     ]
   },
@@ -2609,16 +2516,13 @@
     ]
   },
   {
-    "id": "psalms-115-12",
-    "category": "Trust",
-    "verse": "The LORD remembers us. He will bless us. He will bless the house of Israel. He will bless the house of Aaron.",
-    "reference": "Psalms 115:12",
+    "id": "psalms-112-5",
+    "category": "Love",
+    "verse": "It is well with the man who deals graciously and lends. He will maintain his cause in judgment.",
+    "reference": "Psalms 112:5",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "joy"
+      "love"
     ]
   },
   {
@@ -2683,16 +2587,13 @@
     ]
   },
   {
-    "id": "psalms-132-5",
-    "category": "Trust",
-    "verse": "Until I find out a place for the LORD, a dwelling for the Mighty One of Jacob.”",
-    "reference": "Psalms 132:5",
+    "id": "psalms-32-7",
+    "category": "Comfort",
+    "verse": "You are my hiding place. You will preserve me from trouble. You will surround me with songs of deliverance. Selah.",
+    "reference": "Psalms 32:7",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
     ]
   },
   {
@@ -2733,27 +2634,23 @@
     ]
   },
   {
-    "id": "psalms-10-11",
-    "category": "Peace",
-    "verse": "He says in his heart, “God has forgotten. He hides his face. He will never see it.”",
-    "reference": "Psalms 10:11",
+    "id": "psalms-9-10",
+    "category": "Trust",
+    "verse": "Those who know your name will put their trust in you, for you, LORD, have not forsaken those who seek you.",
+    "reference": "Psalms 9:10",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "trust"
     ]
   },
   {
-    "id": "psalms-10-3",
-    "category": "Peace",
-    "verse": "For the wicked boasts of his heart’s cravings. He blesses the greedy and condemns the LORD.",
-    "reference": "Psalms 10:3",
+    "id": "psalms-9-9",
+    "category": "Comfort",
+    "verse": "The LORD will also be a high tower for the oppressed; a high tower in times of trouble.",
+    "reference": "Psalms 9:9",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2808,27 +2705,22 @@
     ]
   },
   {
-    "id": "psalms-125-5",
-    "category": "Peace",
-    "verse": "But as for those who turn away to their crooked ways, the LORD will lead them away with the workers of iniquity. Peace be on Israel.",
-    "reference": "Psalms 125:5",
+    "id": "proverbs-4-18",
+    "category": "Hope",
+    "verse": "But the path of the righteous is like the dawning light that shines more and more until the perfect day.",
+    "reference": "Proverbs 4:18",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "hope"
     ]
   },
   {
-    "id": "philippians-1-8",
-    "category": "Grace",
-    "verse": "For God is my witness, how I long after all of you in the tender mercies of Christ Jesus.",
-    "reference": "Philippians 1:8",
+    "id": "philippians-1-9",
+    "category": "Love",
+    "verse": "This I pray, that your love may abound yet more and more in knowledge and all discernment,",
+    "reference": "Philippians 1:9",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -2846,15 +2738,13 @@
     ]
   },
   {
-    "id": "psalms-143-4",
-    "category": "Peace",
-    "verse": "Therefore my spirit is overwhelmed within me. My heart within me is desolate.",
-    "reference": "Psalms 143:4",
+    "id": "psalms-119-50",
+    "category": "Comfort",
+    "verse": "This is my comfort in my affliction, for your word has revived me.",
+    "reference": "Psalms 119:50",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2912,7 +2802,7 @@
   {
     "id": "galatians-3-14",
     "category": "Trust",
-    "verse": "That the blessing of Abraham might come on the Gentiles through Christ Jesus, that we might receive the promise of the Spirit through faith.",
+    "verse": "that the blessing of Abraham might come on the Gentiles through Christ Jesus, that we might receive the promise of the Spirit through faith.",
     "reference": "Galatians 3:14",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -2999,16 +2889,13 @@
     ]
   },
   {
-    "id": "psalms-37-4",
-    "category": "Peace",
-    "verse": "Also delight yourself in the LORD, and he will give you the desires of your heart.",
-    "reference": "Psalms 37:4",
+    "id": "psalms-37-23",
+    "category": "Trust",
+    "verse": "A man’s steps are established by the LORD. He delights in his way.",
+    "reference": "Psalms 37:23",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "peace",
-      "rest",
-      "heart",
-      "joy"
+      "trust"
     ]
   },
   {
@@ -3077,41 +2964,33 @@
     ]
   },
   {
-    "id": "2-corinthians-8-7",
+    "id": "2-corinthians-9-8",
     "category": "Grace",
-    "verse": "But as you abound in everything—in faith, utterance, knowledge, all earnestness, and in your love to us—see that you also abound in this grace.",
-    "reference": "2 Corinthians 8:7",
+    "verse": "And God is able to make all grace abound to you, that you, always having all sufficiency in everything, may abound to every good work.",
+    "reference": "2 Corinthians 9:8",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "grace"
     ]
   },
   {
-    "id": "psalms-110-2",
-    "category": "Strength",
-    "verse": "The LORD will send out the rod of your strength out of Zion. Rule among your enemies.",
-    "reference": "Psalms 110:2",
+    "id": "psalms-145-14",
+    "category": "Comfort",
+    "verse": "The LORD upholds all who fall, and raises up all those who are bowed down.",
+    "reference": "Psalms 145:14",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
-    "id": "psalms-115-10",
-    "category": "Strength",
-    "verse": "House of Aaron, trust in the LORD! He is their help and their shield.",
-    "reference": "Psalms 115:10",
+    "id": "psalms-112-4",
+    "category": "Hope",
+    "verse": "Light dawns in the darkness for the upright, gracious, merciful, and righteous.",
+    "reference": "Psalms 112:4",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "strength",
-      "help",
-      "power",
-      "faith"
+      "hope"
     ]
   },
   {
@@ -3154,15 +3033,13 @@
     ]
   },
   {
-    "id": "psalms-143-7",
-    "category": "Strength",
-    "verse": "Hurry to answer me, LORD. My spirit fails. Don’t hide your face from me, so that I don’t become like those who go down into the pit.",
-    "reference": "Psalms 143:7",
+    "id": "psalms-42-8",
+    "category": "Comfort",
+    "verse": "The LORD will command his loving kindness in the daytime. In the night his song shall be with me: a prayer to the God of my life.",
+    "reference": "Psalms 42:8",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
@@ -3294,42 +3171,33 @@
     ]
   },
   {
-    "id": "luke-2-52",
-    "category": "Grace",
-    "verse": "And Jesus increased in wisdom and stature, and in favor with God and men.",
-    "reference": "Luke 2:52",
+    "id": "luke-11-9",
+    "category": "Prayer",
+    "verse": "“I tell you, keep asking, and it will be given you. Keep seeking, and you will find. Keep knocking, and it will be opened to you.",
+    "reference": "Luke 11:9",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
+      "prayer"
+    ]
+  },
+  {
+    "id": "ephesians-4-2-3",
+    "category": "Love",
+    "verse": "with all lowliness and humility, with patience, bearing with one another in love, being eager to keep the unity of the Spirit in the bond of peace.",
+    "reference": "Ephesians 4:2-3",
+    "translation": "World English Bible (WEB)",
+    "tags": [
       "love"
     ]
   },
   {
-    "id": "2-thessalonians-1-2",
-    "category": "Peace",
-    "verse": "Grace to you and peace from God our Father and the Lord Jesus Christ.",
-    "reference": "2 Thessalonians 1:2",
-    "translation": "World English Bible (WEB)",
-    "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
-    ]
-  },
-  {
-    "id": "psalms-40-10",
+    "id": "psalms-89-8",
     "category": "Faith",
-    "verse": "I have not hidden your righteousness within my heart. I have declared your faithfulness and your salvation. I have not concealed your loving kindness and your truth from the great assembly.",
-    "reference": "Psalms 40:10",
+    "verse": "LORD, God of Armies, who is a mighty one, like you? LORD, your faithfulness is around you.",
+    "reference": "Psalms 89:8",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "faith"
     ]
   },
   {
@@ -3385,16 +3253,13 @@
     ]
   },
   {
-    "id": "jeremiah-42-20",
-    "category": "Faith",
-    "verse": "For you have dealt deceitfully against your own souls; for you sent me to the LORD your God, saying, ‘Pray for us to the LORD our God; and according to all that the LORD our God says, so declare to us, and we will do it.’",
-    "reference": "Jeremiah 42:20",
+    "id": "psalms-119-114",
+    "category": "Hope",
+    "verse": "You are my hiding place and my shield. I hope in your word.",
+    "reference": "Psalms 119:114",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "hope"
     ]
   },
   {
@@ -3411,16 +3276,13 @@
     ]
   },
   {
-    "id": "acts-11-17",
-    "category": "Trust",
-    "verse": "If then God gave to them the same gift as us when we believed in the Lord Jesus Christ, who was I, that I could withstand God?”",
-    "reference": "Acts 11:17",
+    "id": "acts-10-34-35",
+    "category": "Faith",
+    "verse": "Peter opened his mouth and said, “Truly I perceive that God doesn’t show favoritism; but in every nation he who fears him and works righteousness is acceptable to him.",
+    "reference": "Acts 10:34-35",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "faith"
     ]
   },
   {
@@ -3502,16 +3364,13 @@
     ]
   },
   {
-    "id": "acts-15-11",
-    "category": "Trust",
-    "verse": "But we believe that we are saved through the grace of the Lord Jesus, just as they are.”",
-    "reference": "Acts 15:11",
+    "id": "hebrews-10-23",
+    "category": "Hope",
+    "verse": "let’s hold fast the confession of our hope without wavering; for he who promised is faithful.",
+    "reference": "Hebrews 10:23",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -3595,7 +3454,7 @@
   {
     "id": "1-peter-1-21",
     "category": "Hope",
-    "verse": "Who through him are believers in God, who raised him from the dead and gave him glory, so that your faith and hope might be in God.",
+    "verse": "who through him are believers in God, who raised him from the dead and gave him glory, so that your faith and hope might be in God.",
     "reference": "1 Peter 1:21",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -3632,15 +3491,13 @@
     ]
   },
   {
-    "id": "psalms-41-10",
-    "category": "Grace",
-    "verse": "But you, LORD, have mercy on me, and raise me up, that I may repay them.",
-    "reference": "Psalms 41:10",
+    "id": "psalms-91-4",
+    "category": "Comfort",
+    "verse": "He will cover you with his feathers. Under his wings you will take refuge. His faithfulness is your shield and rampart.",
+    "reference": "Psalms 91:4",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "comfort"
     ]
   },
   {
@@ -3657,54 +3514,43 @@
     ]
   },
   {
-    "id": "psalms-96-13",
-    "category": "Grace",
-    "verse": "Before the LORD; for he comes, for he comes to judge the earth. He will judge the world with righteousness, the peoples with his truth.",
-    "reference": "Psalms 96:13",
+    "id": "psalms-96-3",
+    "category": "Joy",
+    "verse": "Declare his glory among the nations, his marvelous works among all the peoples.",
+    "reference": "Psalms 96:3",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "joy"
     ]
   },
   {
-    "id": "psalms-89-49",
-    "category": "Grace",
-    "verse": "Lord, where are your former loving kindnesses, which you swore to David in your faithfulness?",
-    "reference": "Psalms 89:49",
+    "id": "psalms-33-18",
+    "category": "Hope",
+    "verse": "Behold, the LORD’s eye is on those who fear him, on those who hope in his loving kindness,",
+    "reference": "Psalms 33:18",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "hope"
     ]
   },
   {
-    "id": "proverbs-3-4",
-    "category": "Grace",
-    "verse": "So you will find favor, and good understanding in the sight of God and man.",
-    "reference": "Proverbs 3:4",
+    "id": "proverbs-3-24",
+    "category": "Peace",
+    "verse": "When you lie down, you will not be afraid. Yes, you will lie down, and your sleep will be sweet.",
+    "reference": "Proverbs 3:24",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "peace"
     ]
   },
   {
-    "id": "proverbs-8-35",
-    "category": "Grace",
-    "verse": "For whoever finds me finds life, and will obtain favor from the LORD.",
-    "reference": "Proverbs 8:35",
+    "id": "proverbs-16-24",
+    "category": "Wisdom",
+    "verse": "Pleasant words are a honeycomb, sweet to the soul, and health to the bones.",
+    "reference": "Proverbs 16:24",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "life"
+      "wisdom"
     ]
   },
   {
@@ -3759,21 +3605,19 @@
     ]
   },
   {
-    "id": "psalms-118-20",
-    "category": "Grace",
-    "verse": "This is the gate of the LORD; the righteous will enter into it.",
-    "reference": "Psalms 118:20",
+    "id": "psalms-118-21",
+    "category": "Joy",
+    "verse": "I will give thanks to you, for you have answered me, and have become my salvation.",
+    "reference": "Psalms 118:21",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "joy"
     ]
   },
   {
     "id": "hebrews-3-6",
     "category": "Hope",
-    "verse": "But Christ is faithful as a Son over his house. We are his house, if we hold fast our confidence and the glorying of our hope firm to the end.",
+    "verse": "but Christ is faithful as a Son over his house. We are his house, if we hold fast our confidence and the glorying of our hope firm to the end.",
     "reference": "Hebrews 3:6",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -3810,16 +3654,13 @@
     ]
   },
   {
-    "id": "psalms-22-8",
-    "category": "Faith",
-    "verse": "“He trusts in the LORD. Let him deliver him. Let him rescue him, since he delights in him.”",
-    "reference": "Psalms 22:8",
+    "id": "psalms-34-5",
+    "category": "Hope",
+    "verse": "They looked to him, and were radiant. Their faces shall never be covered with shame.",
+    "reference": "Psalms 34:5",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "joy"
+      "hope"
     ]
   },
   {
@@ -3885,29 +3726,23 @@
     ]
   },
   {
-    "id": "acts-7-59",
-    "category": "Prayer",
-    "verse": "They stoned Stephen as he called out, saying, “Lord Jesus, receive my spirit!”",
-    "reference": "Acts 7:59",
+    "id": "1-peter-4-8",
+    "category": "Love",
+    "verse": "And above all things be earnest in your love among yourselves, for love covers a multitude of sins.",
+    "reference": "1 Peter 4:8",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "prayer",
-      "answer",
-      "presence",
-      "help"
+      "love"
     ]
   },
   {
-    "id": "psalms-37-5",
-    "category": "Faith",
-    "verse": "Commit your way to the LORD. Trust also in him, and he will do this:",
-    "reference": "Psalms 37:5",
+    "id": "psalms-37-24",
+    "category": "Comfort",
+    "verse": "Though he stumble, he shall not fall, for the LORD holds him up with his hand.",
+    "reference": "Psalms 37:24",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "life"
+      "comfort"
     ]
   },
   {
@@ -3923,28 +3758,23 @@
     ]
   },
   {
-    "id": "psalms-55-23",
-    "category": "Faith",
-    "verse": "But you, God, will bring them down into the pit of destruction. Bloodthirsty and deceitful men shall not live out half their days, but I will trust in you.",
-    "reference": "Psalms 55:23",
+    "id": "psalms-62-7",
+    "category": "Trust",
+    "verse": "My salvation and my honor is with God. The rock of my strength, and my refuge, is in God.",
+    "reference": "Psalms 62:7",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "trust"
     ]
   },
   {
-    "id": "psalms-78-22",
-    "category": "Faith",
-    "verse": "Because they didn’t believe in God, and didn’t trust in his salvation.",
-    "reference": "Psalms 78:22",
+    "id": "psalms-119-165",
+    "category": "Peace",
+    "verse": "Those who love your law have great peace. Nothing causes them to stumble.",
+    "reference": "Psalms 119:165",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "hope"
+      "peace"
     ]
   },
   {
@@ -3974,15 +3804,13 @@
     ]
   },
   {
-    "id": "isaiah-48-2",
-    "category": "Faith",
-    "verse": "For they call themselves citizens of the holy city, and rely on the God of Israel; the LORD of Armies is his name.",
-    "reference": "Isaiah 48:2",
+    "id": "isaiah-26-12",
+    "category": "Peace",
+    "verse": "LORD, you will ordain peace for us, for you have also done all our work for us.",
+    "reference": "Isaiah 26:12",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "peace"
     ]
   },
   {
@@ -4024,27 +3852,23 @@
     ]
   },
   {
-    "id": "psalms-87-2",
-    "category": "Love",
-    "verse": "The LORD loves the gates of Zion more than all the dwellings of Jacob.",
-    "reference": "Psalms 87:2",
+    "id": "psalms-90-14",
+    "category": "Joy",
+    "verse": "Satisfy us in the morning with your loving kindness, that we may rejoice and be glad all our days.",
+    "reference": "Psalms 90:14",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
-    "id": "psalms-55-14",
+    "id": "psalms-133-1",
     "category": "Love",
-    "verse": "We took sweet fellowship together. We walked in God’s house with company.",
-    "reference": "Psalms 55:14",
+    "verse": "See how good and how pleasant it is for brothers to live together in unity!",
+    "reference": "Psalms 133:1",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
@@ -4074,28 +3898,23 @@
     ]
   },
   {
-    "id": "john-14-24",
+    "id": "john-15-12",
     "category": "Love",
-    "verse": "He who doesn’t love me doesn’t keep my words. The word which you hear isn’t mine, but the Father’s who sent me.",
-    "reference": "John 14:24",
+    "verse": "“This is my commandment, that you love one another, even as I have loved you.",
+    "reference": "John 15:12",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god",
-      "wisdom"
+      "love"
     ]
   },
   {
-    "id": "john-14-31",
-    "category": "Love",
-    "verse": "But that the world may know that I love the Father, and as the Father commanded me, even so I do. Arise, let’s go from here.",
-    "reference": "John 14:31",
+    "id": "john-15-11",
+    "category": "Joy",
+    "verse": "I have spoken these things to you, that my joy may remain in you, and that your joy may be made full.",
+    "reference": "John 15:11",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
@@ -4123,39 +3942,33 @@
     ]
   },
   {
-    "id": "john-5-20",
+    "id": "john-15-13",
     "category": "Love",
-    "verse": "For the Father has affection for the Son, and shows him all things that he himself does. He will show him greater works than these, that you may marvel.",
-    "reference": "John 5:20",
+    "verse": "Greater love has no one than this, that someone lay down his life for his friends.",
+    "reference": "John 15:13",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
-    "id": "john-8-42",
-    "category": "Love",
-    "verse": "Therefore Jesus said to them, “If God were your father, you would love me, for I came out and have come from God. For I haven’t come of myself, but he sent me.",
-    "reference": "John 8:42",
+    "id": "john-6-37",
+    "category": "Hope",
+    "verse": "All those whom the Father gives me will come to me. He who comes to me I will in no way throw out.",
+    "reference": "John 6:37",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "hope"
     ]
   },
   {
-    "id": "matthew-10-37",
-    "category": "Love",
-    "verse": "He who loves father or mother more than me is not worthy of me; and he who loves son or daughter more than me isn’t worthy of me.",
-    "reference": "Matthew 10:37",
+    "id": "james-1-19",
+    "category": "Wisdom",
+    "verse": "So, then, my beloved brothers, let every man be swift to hear, slow to speak, and slow to anger;",
+    "reference": "James 1:19",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "wisdom"
     ]
   },
   {
@@ -4183,16 +3996,13 @@
     ]
   },
   {
-    "id": "2-peter-1-14",
-    "category": "Hope",
-    "verse": "Knowing that the putting off of my tent comes swiftly, even as our Lord Jesus Christ made clear to me.",
-    "reference": "2 Peter 1:14",
+    "id": "2-peter-1-2",
+    "category": "Grace",
+    "verse": "Grace to you and peace be multiplied in the knowledge of God and of Jesus our Lord,",
+    "reference": "2 Peter 1:2",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "grace"
     ]
   },
   {
@@ -4248,28 +4058,23 @@
     ]
   },
   {
-    "id": "psalms-106-25",
-    "category": "Prayer",
-    "verse": "But murmured in their tents, and didn’t listen to the LORD’s voice.",
-    "reference": "Psalms 106:25",
+    "id": "psalms-34-10",
+    "category": "Hope",
+    "verse": "The young lions do lack, and suffer hunger, but those who seek the LORD shall not lack any good thing.",
+    "reference": "Psalms 34:10",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "prayer",
-      "seeking",
-      "calling"
+      "hope"
     ]
   },
   {
-    "id": "romans-2-16",
-    "category": "Hope",
-    "verse": "In the day when God will judge the secrets of men, according to my Good News, by Jesus Christ.",
-    "reference": "Romans 2:16",
+    "id": "james-5-13",
+    "category": "Prayer",
+    "verse": "Is any among you suffering? Let him pray. Is any cheerful? Let him sing praises.",
+    "reference": "James 5:13",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "prayer"
     ]
   },
   {
@@ -4301,7 +4106,7 @@
   {
     "id": "romans-5-2",
     "category": "Hope",
-    "verse": "Through whom we also have our access by faith into this grace in which we stand. We rejoice in hope of the glory of God.",
+    "verse": "through whom we also have our access by faith into this grace in which we stand. We rejoice in hope of the glory of God.",
     "reference": "Romans 5:2",
     "translation": "World English Bible (WEB)",
     "tags": [
@@ -4348,15 +4153,13 @@
     ]
   },
   {
-    "id": "psalms-105-19",
-    "category": "Wisdom",
-    "verse": "Until the time that his word happened, and the LORD’s word proved him true.",
-    "reference": "Psalms 105:19",
+    "id": "psalms-119-76",
+    "category": "Comfort",
+    "verse": "Please let your loving kindness be for my comfort, according to your word to your servant.",
+    "reference": "Psalms 119:76",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word"
+      "comfort"
     ]
   },
   {
@@ -4373,16 +4176,13 @@
     ]
   },
   {
-    "id": "psalms-118-27",
-    "category": "Wisdom",
-    "verse": "The LORD is God, and he has given us light. Bind the sacrifice with cords, even to the horns of the altar.",
-    "reference": "Psalms 118:27",
+    "id": "psalms-100-4",
+    "category": "Joy",
+    "verse": "Enter into his gates with thanksgiving, and into his courts with praise. Give thanks to him, and bless his name.",
+    "reference": "Psalms 100:4",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "life"
+      "joy"
     ]
   },
   {
@@ -4424,16 +4224,13 @@
     ]
   },
   {
-    "id": "isaiah-26-13",
-    "category": "Hope",
-    "verse": "LORD our God, other lords besides you have had dominion over us, but we will only acknowledge your name.",
-    "reference": "Isaiah 26:13",
+    "id": "isaiah-66-13",
+    "category": "Comfort",
+    "verse": "As one whom his mother comforts, so I will comfort you. You will be comforted in Jerusalem.”",
+    "reference": "Isaiah 66:13",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -4449,16 +4246,13 @@
     ]
   },
   {
-    "id": "2-corinthians-8-5",
-    "category": "Hope",
-    "verse": "This was not as we had expected, but first they gave their own selves to the Lord, and to us through the will of God.",
-    "reference": "2 Corinthians 8:5",
+    "id": "hebrews-10-24",
+    "category": "Love",
+    "verse": "Let’s consider how to provoke one another to love and good works,",
+    "reference": "Hebrews 10:24",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -4486,42 +4280,33 @@
     ]
   },
   {
-    "id": "deuteronomy-13-3",
-    "category": "Love",
-    "verse": "You shall not listen to the words of that prophet, or to that dreamer of dreams; for the LORD your God is testing you, to know whether you love the LORD your God with all your heart and with all your soul.",
-    "reference": "Deuteronomy 13:3",
+    "id": "proverbs-12-25",
+    "category": "Comfort",
+    "verse": "Anxiety in a man’s heart weighs it down, but a kind word makes it glad.",
+    "reference": "Proverbs 12:25",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "comfort"
     ]
   },
   {
-    "id": "isaiah-43-1",
-    "category": "Courage",
-    "verse": "But now the LORD who created you, Jacob, and he who formed you, Israel, says: “Don’t be afraid, for I have redeemed you. I have called you by your name. You are mine.",
-    "reference": "Isaiah 43:1",
+    "id": "isaiah-42-3",
+    "category": "Comfort",
+    "verse": "He won’t break a bruised reed. He won’t quench a dimly burning wick. He will faithfully bring justice.",
+    "reference": "Isaiah 42:3",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "courage",
-      "fear",
-      "strength",
-      "life"
+      "comfort"
     ]
   },
   {
-    "id": "1-samuel-2-1",
+    "id": "1-chronicles-16-23",
     "category": "Joy",
-    "verse": "Hannah prayed, and said, “My heart exults in the LORD! My horn is exalted in the LORD. My mouth is enlarged over my enemies, because I rejoice in your salvation.",
-    "reference": "1 Samuel 2:1",
+    "verse": "Sing to the LORD, all the earth! Display his salvation from day to day.",
+    "reference": "1 Chronicles 16:23",
     "translation": "World English Bible (WEB)",
     "tags": [
-      "joy",
-      "delight",
-      "praise",
-      "gratitude"
+      "joy"
     ]
   },
   {

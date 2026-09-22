@@ -8,8 +8,6 @@ data class VerseArtwork(
     val text: String,
     val categoryId: String = id.substringBefore("-"),
 ) {
-    val assetPath: String get() = "verse-art/$id.webp"
-    val thumbnailPath: String get() = "verse-art/$id-thumb.webp"
 }
 
 data class VerseArtCategory(
@@ -17,9 +15,10 @@ data class VerseArtCategory(
     val title: String,
     val description: String,
     val artworkIds: List<String>,
+    val coverArtworkId: String,
 )
 
-/** Artwork text is permanently English WEB, independent of the reading translation. */
+/** Stable artwork IDs and English editorial titles; rendered Scripture uses the selected edition. */
 object VerseArtCatalog {
     const val ALL = "all"
     const val SAVED = "saved"
@@ -30,6 +29,8 @@ object VerseArtCatalog {
             "The LORD is good, a stronghold in the day of trouble; and he knows those who take refuge in him."),
         VerseArtwork("joy", "psalm-118-24", "We will rejoice", "Psalm 118:24",
             "This is the day that the LORD has made. We will rejoice and be glad in it!"),
+        VerseArtwork("hope-faithful", "hebrews-10-23", "He is faithful", "Hebrews 10:23",
+            "let’s hold fast the confession of our hope without wavering; for he who promised is faithful."),
         VerseArtwork("hope-abound", "romans-15-13", "Abound in hope", "Romans 15:13",
             "Now may the God of hope fill you with all joy and peace in believing, that you may abound in hope in the power of the Holy Spirit."),
         VerseArtwork("peace-safe-at-night", "psalm-4-8", "In peace", "Psalm 4:8",
@@ -43,23 +44,23 @@ object VerseArtCatalog {
         VerseArtwork("gratitude-loving-kindness", "psalm-100-5", "His loving kindness", "Psalm 100:5",
             "For the LORD is good. His loving kindness endures forever, his faithfulness to all generations."),
     ) + expandedVerseArt()
-    private fun category(id: String, title: String, description: String) =
-        VerseArtCategory(id, title, description, artworks.filter { it.categoryId == id }.map { it.id })
+    private fun category(id: String, title: String, description: String, coverArtworkId: String) =
+        VerseArtCategory(id, title, description, artworks.filter { it.categoryId == id }.map { it.id }, coverArtworkId)
 
     val categories = listOf(
-        category("hope", "Hope", "Promises for a brighter tomorrow"),
-        category("peace", "Peace", "Stillness for your heart"),
-        category("strength", "Strength", "Courage for the days ahead"),
-        category("joy", "Joy", "Reasons to rejoice"),
-        category("comfort", "Comfort", "Reassurance in difficult moments"),
-        category("gratitude", "Gratitude", "Give thanks for everyday blessings"),
+        category("hope", "Hope", "Promises for a brighter tomorrow", "hope-faithful"),
+        category("peace", "Peace", "Rest in God’s presence", "peace-john-14-1"),
+        category("strength", "Strength", "Courage for the days ahead", "strength-joshua-1-9"),
+        category("joy", "Joy", "Reasons to rejoice", "joy-psalm-37-4"),
+        category("comfort", "Comfort", "Reassurance in difficult moments", "comfort-psalm-34-18"),
+        category("gratitude", "Gratitude", "Give thanks for everyday blessings", "gratitude-psalms-106-1"),
     )
 
     fun artwork(id: String?): VerseArtwork? = artworks.firstOrNull { it.id == id }
     fun title(categoryId: String?): String = when (categoryId) {
         ALL -> "All artwork"
         SAVED -> "Saved artwork"
-        else -> categories.firstOrNull { it.id == categoryId }?.title ?: "Verse Art"
+        else -> categories.firstOrNull { it.id == categoryId }?.title ?: "Verse Gallery"
     }
 
     fun inCategory(id: String, favoriteVerseIds: Set<String>): List<VerseArtwork> = when (id) {

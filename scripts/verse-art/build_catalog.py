@@ -2,7 +2,8 @@
 import json
 from pathlib import Path
 root = Path(__file__).resolve().parents[2]
-verses = {v['id']: v for v in json.loads((root/'android/app/src/main/assets/verses/en-web.json').read_text())}
+verses = {v['id']: v for path in ['en-web.json', 'archive/en-web.json']
+          for v in json.loads((root/'android/app/src/main/assets/verses'/path).read_text())}
 backgrounds = {
  'hope': ['reference-stars','reference-forest','reference-canyon','reference-leaf','reference-coast','hope-horizon'],
  'peace': ['peace-ocean','peace-moon','peace-mist','reference-coast','reference-leaf','reference-waterfall'],

@@ -180,15 +180,13 @@
     ]
   },
   {
-    "id": "2-corinthians-12-9",
-    "category": "Grace",
-    "verse": "Y me ha dicho: Bástate mi gracia; porque mi potencia en la flaqueza se perfecciona. Por tanto, de buena gana me gloriaré más bien en mis flaquezas, porque habite en mí la potencia de Cristo.",
-    "reference": "2 Corinthians 12:9",
+    "id": "hebrews-4-15",
+    "category": "Comfort",
+    "verse": "Porque no tenemos un Pontífice que no se pueda compadecer de nuestras flaquezas; mas tentado en todo según nuestra semejanza, pero sin pecado.",
+    "reference": "Hebrews 4:15",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "strength",
-      "weakness"
+      "comfort"
     ]
   },
   {
@@ -215,15 +213,13 @@
     ]
   },
   {
-    "id": "romans-8-38-39",
-    "category": "Hope",
-    "verse": "Por lo cual estoy cierto que ni la muerte, ni la vida, ni ángeles, ni principados, ni potestades, ni lo presente, ni lo por venir, Ni lo alto, ni lo bajo, ni ninguna criatura nos podrá apartar del amor de Dios, que es en Cristo Jesús Señor nuestro.",
-    "reference": "Romans 8:38-39",
+    "id": "romans-8-32",
+    "category": "Love",
+    "verse": "El que aun á su propio Hijo no perdonó, antes le entregó por todos nosotros, ¿cómo no nos dará también con él todas las cosas?",
+    "reference": "Romans 8:32",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "love",
-      "assurance"
+      "love"
     ]
   },
   {
@@ -371,15 +367,13 @@
     ]
   },
   {
-    "id": "1-john-3-1",
-    "category": "Love",
-    "verse": "MIRAD cuál amor nos ha dado el Padre, que seamos llamados hijos de Dios: por esto el mundo no nos conoce, porque no le conoce á él.",
-    "reference": "1 John 3:1",
+    "id": "1-john-3-2",
+    "category": "Hope",
+    "verse": "Muy amados, ahora somos hijos de Dios, y aun no se ha manifestado lo que hemos de ser; pero sabemos que cuando él apareciere, seremos semejantes á él, porque le veremos como él es.",
+    "reference": "1 John 3:2",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "identity",
-      "children-of-god"
+      "hope"
     ]
   },
   {
@@ -443,14 +437,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-5-17",
+    "id": "1-thessalonians-5-16-18",
     "category": "Prayer",
-    "verse": "Orad sin cesar.",
-    "reference": "1 Thessalonians 5:17",
+    "verse": "Estad siempre gozosos. Orad sin cesar. Dad gracias en todo; porque esta es la voluntad de Dios para con vosotros en Cristo Jesús.",
+    "reference": "1 Thessalonians 5:16-18",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "prayer",
-      "devotion"
+      "prayer"
     ]
   },
   {
@@ -817,15 +810,13 @@
     ]
   },
   {
-    "id": "isaiah-43-2",
-    "category": "Comfort",
-    "verse": "Cuando pasares por las aguas, yo seré contigo; y por los ríos, no te anegarán. Cuando pasares por el fuego, no te quemarás, ni la llama arderá en ti.",
-    "reference": "Isaiah 43:2",
+    "id": "isaiah-41-13",
+    "category": "Courage",
+    "verse": "Porque yo Jehová soy tu Dios, que te ase de tu mano derecha, y te dice: No temas, yo te ayudé.",
+    "reference": "Isaiah 41:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "comfort",
-      "trials",
-      "presence"
+      "courage"
     ]
   },
   {
@@ -841,27 +832,23 @@
     ]
   },
   {
-    "id": "isaiah-54-10",
-    "category": "Love",
-    "verse": "Porque los montes se moverán, y los collados temblarán; mas no se apartará de ti mi misericordia, ni el pacto de mi paz vacilará, dijo Jehová, el que tiene misericordia de ti.",
-    "reference": "Isaiah 54:10",
+    "id": "isaiah-54-13",
+    "category": "Peace",
+    "verse": "Y todos tus hijos serán enseñados de Jehová; y multiplicará la paz de tus hijos.",
+    "reference": "Isaiah 54:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "peace",
-      "mercy"
+      "peace"
     ]
   },
   {
-    "id": "lamentations-3-23",
-    "category": "Grace",
-    "verse": "Nuevas son cada mañana; grande es tu fidelidad.",
-    "reference": "Lamentations 3:23",
+    "id": "lamentations-3-22-23",
+    "category": "Hope",
+    "verse": "Es por la misericordia de Jehová que no somos consumidos, porque nunca decayeron sus misericordias. Nuevas son cada mañana; grande es tu fidelidad.",
+    "reference": "Lamentations 3:22-23",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "faithfulness",
-      "morning"
+      "hope"
     ]
   },
   {
@@ -877,22 +864,19 @@
     ]
   },
   {
-    "id": "galatians-6-18",
-    "category": "Grace",
-    "verse": "Hermanos, la gracia de nuestro Señor Jesucristo sea con vuestro espíritu. Amén. Enviada de Roma á los Gálatas.",
-    "reference": "Galatians 6:18",
+    "id": "galatians-6-9",
+    "category": "Hope",
+    "verse": "No nos cansemos, pues, de hacer bien; que á su tiempo segaremos, si no hubiéremos desmayado.",
+    "reference": "Galatians 6:9",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
     "id": "matthew-19-26",
     "category": "Faith",
-    "verse": "Y mirándo los Jesús, les dijo: Para con los hombres imposible es esto; mas para con Dios todo es posible.",
+    "verse": "Y mirándolos Jesús, les dijo: Para con los hombres imposible es esto; mas para con Dios todo es posible.",
     "reference": "Matthew 19:26",
     "translation": "Reina-Valera (1909)",
     "tags": [
@@ -987,15 +971,13 @@
     ]
   },
   {
-    "id": "1-corinthians-10-13",
-    "category": "Strength",
-    "verse": "No os ha tomado tentación, sino humana: mas fiel es Dios, que no os dejará ser tentados más de lo que podéis llevar; antes dará también juntamente con la tentación la salida, para que podáis aguantar.",
-    "reference": "1 Corinthians 10:13",
+    "id": "1-corinthians-1-9",
+    "category": "Faith",
+    "verse": "Fiel es Dios, por el cual sois llamados á la participación de su Hijo Jesucristo nuestro Señor.",
+    "reference": "1 Corinthians 1:9",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "strength",
-      "testing",
-      "faithfulness"
+      "faith"
     ]
   },
   {
@@ -1035,15 +1017,12 @@
     ]
   },
   {
-    "id": "colossians-4-12",
-    "category": "Grace",
-    "verse": "Os saluda Epafras, el cual es de vosotros, siervo de Cristo, siempre solícito por vosotros en oraciones, para que estéis firmes, perfectos y cumplidos en todo lo que Dios quiere.",
-    "reference": "Colossians 4:12",
+    "id": "colossians-3-12",
+    "category": "Love",
+    "verse": "Vestíos pues, como escogidos de Dios, santos y amados, de entrañas de misericordia, de benignidad, de humildad, de mansedumbre, de tolerancia;",
+    "reference": "Colossians 3:12",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -1108,16 +1087,13 @@
     ]
   },
   {
-    "id": "colossians-3-16",
-    "category": "Wisdom",
-    "verse": "La palabra de Cristo habite en vosotros en abundancia en toda sabiduría, enseñándoos y exhortándoos los unos á los otros con salmos é himnos y canciones espirituales, con gracia cantando en vuestros corazones al Señor.",
-    "reference": "Colossians 3:16",
+    "id": "colossians-3-14",
+    "category": "Love",
+    "verse": "Y sobre todas estas cosas vestíos de caridad, la cual es el vínculo de la perfección.",
+    "reference": "Colossians 3:14",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "truth"
+      "love"
     ]
   },
   {
@@ -1146,15 +1122,13 @@
     ]
   },
   {
-    "id": "joshua-24-15",
-    "category": "Faith",
-    "verse": "Y si mal os parece servir á Jehová, escogeos hoy á quién sirváis; si á los dioses á quienes sirvieron vuestros padres, cuando estuvieron de esotra parte del río, ó á los dioses de los Amorrheos en cuya tierra habitáis: que yo y mi casa serviremos á Jehová.",
-    "reference": "Joshua 24:15",
+    "id": "psalms-31-3",
+    "category": "Trust",
+    "verse": "Porque tú eres mi roca y mi castillo; y por tu nombre me guiarás, y me encaminarás.",
+    "reference": "Psalms 31:3",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "choice",
-      "service"
+      "trust"
     ]
   },
   {
@@ -1206,15 +1180,13 @@
     ]
   },
   {
-    "id": "nehemiah-8-10",
+    "id": "psalms-92-4",
     "category": "Joy",
-    "verse": "Díjoles luego: Id, comed grosuras, y bebed vino dulce, y enviad porciones á los que no tienen prevenido; porque día santo es á nuestro Señor: y no os entristezcáis, porque el gozo de Jehová es vuestra fortaleza.",
-    "reference": "Nehemiah 8:10",
+    "verse": "Por cuanto me has alegrado, oh Jehová, con tus obras; en las obras de tus manos me gozo.",
+    "reference": "Psalms 92:4",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "joy",
-      "strength",
-      "lord"
+      "joy"
     ]
   },
   {
@@ -1387,16 +1359,13 @@
     ]
   },
   {
-    "id": "jeremiah-3-23",
-    "category": "Hope",
-    "verse": "Ciertamente vanidad son los collados, la multitud de los montes: ciertamente en Jehová nuestro Dios está la salud de Israel.",
-    "reference": "Jeremiah 3:23",
+    "id": "psalms-95-1",
+    "category": "Joy",
+    "verse": "VENID, celebremos alegremente á Jehová: cantemos con júbilo á la roca de nuestra salud.",
+    "reference": "Psalms 95:1",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "joy"
     ]
   },
   {
@@ -1460,16 +1429,13 @@
     ]
   },
   {
-    "id": "acts-20-21",
-    "category": "Trust",
-    "verse": "Testificando á los Judíos y á los Gentiles arrepentimiento para con Dios, y la fe en nuestro Señor Jesucristo.",
-    "reference": "Acts 20:21",
+    "id": "romans-12-12",
+    "category": "Hope",
+    "verse": "Gozosos en la esperanza; sufridos en la tribulación; constantes en la oración;",
+    "reference": "Romans 12:12",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -1509,16 +1475,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-2-19",
-    "category": "Hope",
-    "verse": "Porque ¿cuál es nuestra esperanza, ó gozo, ó corona de que me gloríe? ¿No sois vosotros, delante de nuestro Señor Jesucristo en su venida?",
-    "reference": "1 Thessalonians 2:19",
+    "id": "1-thessalonians-5-11",
+    "category": "Comfort",
+    "verse": "Por lo cual, consolaos los unos á los otros, y edificaos los unos á los otros, así como lo hacéis.",
+    "reference": "1 Thessalonians 5:11",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -1570,16 +1533,13 @@
     ]
   },
   {
-    "id": "philippians-2-11",
+    "id": "philippians-1-6",
     "category": "Hope",
-    "verse": "Y toda lengua confiese que Jesucristo es el Señor, á la gloria de Dios Padre.",
-    "reference": "Philippians 2:11",
+    "verse": "Estando confiado de esto, que el que comenzó en vosotros la buena obra, la perfeccionará hasta el día de Jesucristo;",
+    "reference": "Philippians 1:6",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1608,15 +1568,13 @@
     ]
   },
   {
-    "id": "jeremiah-17-8",
-    "category": "Hope",
-    "verse": "Porque él será como el árbol plantado junto á las aguas, que junto á la corriente echará sus raices, y no verá cuando viniere el calor, sino que su hoja estará verde; y en el año de sequía no se fatigará, ni dejará de hacer fruto.",
-    "reference": "Jeremiah 17:8",
+    "id": "psalms-92-12",
+    "category": "Strength",
+    "verse": "El justo florecerá como la palma: crecerá como cedro en el Líbano.",
+    "reference": "Psalms 92:12",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "growth",
-      "fruit"
+      "strength"
     ]
   },
   {
@@ -1680,16 +1638,13 @@
     ]
   },
   {
-    "id": "romans-10-1",
-    "category": "Hope",
-    "verse": "HERMANOS, ciertamente la voluntad de mi corazón y mi oración á Dios sobre Israel, es para salud.",
-    "reference": "Romans 10:1",
+    "id": "romans-12-10",
+    "category": "Love",
+    "verse": "Amándoos los unos á los otros con caridad fraternal; previniéndoos con honra los unos á los otros;",
+    "reference": "Romans 12:10",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -1705,16 +1660,13 @@
     ]
   },
   {
-    "id": "romans-15-6",
+    "id": "romans-15-4",
     "category": "Hope",
-    "verse": "Para que concordes, á una boca glorifiquéis al Dios y Padre de nuestro Señor Jesucristo.",
-    "reference": "Romans 15:6",
+    "verse": "Porque las cosas que antes fueron escritas, para nuestra enseñanza fueron escritas; para que por la paciencia, y por la consolación de las Escrituras, tengamos esperanza.",
+    "reference": "Romans 15:4",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1803,16 +1755,13 @@
     ]
   },
   {
-    "id": "isaiah-30-15",
+    "id": "isaiah-32-17",
     "category": "Peace",
-    "verse": "Porque así dijo el Señor Jehová, el Santo de Israel: En descanso y en reposo seréis salvos; en quietud y en confianza será vuestra fortaleza. Y no quisisteis,",
-    "reference": "Isaiah 30:15",
+    "verse": "Y el efecto de la justicia será paz; y la labor de justicia, reposo y seguridad para siempre.",
+    "reference": "Isaiah 32:17",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
+      "peace"
     ]
   },
   {
@@ -1841,16 +1790,13 @@
     ]
   },
   {
-    "id": "1-corinthians-8-6",
-    "category": "Hope",
-    "verse": "Nosotros empero no tenemos más de un Dios, el Padre, del cual son todas las cosas, y nosotros en él: y un Señor Jesucristo, por el cual son todas las cosas, y nosotros por él.",
-    "reference": "1 Corinthians 8:6",
+    "id": "1-corinthians-16-13",
+    "category": "Courage",
+    "verse": "Velad, estad firmes en la fe; portaos varonilmente, y esforzaos.",
+    "reference": "1 Corinthians 16:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "courage"
     ]
   },
   {
@@ -1878,16 +1824,13 @@
     ]
   },
   {
-    "id": "philemon-1-25",
-    "category": "Grace",
-    "verse": "La gracia de nuestro Señor Jesucristo sea con vuestro espíritu. Amén. A Filemón fué enviada de Roma por Onésimo, siervo.",
-    "reference": "Philemon 1:25",
+    "id": "2-thessalonians-3-16",
+    "category": "Peace",
+    "verse": "Y el mismo Señor de paz os dé siempre paz en toda manera. El Señor sea con todos vosotros.",
+    "reference": "2 Thessalonians 3:16",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "peace"
     ]
   },
   {
@@ -1966,41 +1909,33 @@
     ]
   },
   {
-    "id": "isaiah-25-9",
+    "id": "isaiah-40-8",
     "category": "Hope",
-    "verse": "Y se dirá en aquel día: He aquí éste es nuestro Dios, le hemos esperado, y nos salvará: éste es Jehová á quien hemos esperado, nos gozaremos y nos alegraremos en su salud.",
-    "reference": "Isaiah 25:9",
+    "verse": "Sécase la hierba, cáese la flor: mas la palabra del Dios nuestro permanece para siempre.",
+    "reference": "Isaiah 40:8",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
-    "id": "psalms-108-7",
-    "category": "Hope",
-    "verse": "Dios habló por su santuario: alegraréme, repartiré á Sichêm, y mediré el valle de Succoth.",
-    "reference": "Psalms 108:7",
+    "id": "psalms-33-21",
+    "category": "Joy",
+    "verse": "Por tanto en él se alegrará nuestro corazón, porque en su santo nombre hemos confiado.",
+    "reference": "Psalms 33:21",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting",
-      "wisdom"
+      "joy"
     ]
   },
   {
-    "id": "psalms-109-20",
+    "id": "psalms-33-22",
     "category": "Hope",
-    "verse": "Este sea el pago de parte de Jehová de los que me calumnian, y de los que hablan mal contra mi alma.",
-    "reference": "Psalms 109:20",
+    "verse": "Sea tu misericordia, oh Jehová, sobre nosotros, como esperamos en ti.",
+    "reference": "Psalms 33:22",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting"
+      "hope"
     ]
   },
   {
@@ -2299,16 +2234,13 @@
     ]
   },
   {
-    "id": "daniel-10-19",
-    "category": "Courage",
-    "verse": "Y díjome: Varón de deseos, no temas: paz á ti; ten buen ánimo, y aliéntate. Y hablando él conmigo cobré yo vigor, y dije: Hable mi señor, porque me has fortalecido.",
-    "reference": "Daniel 10:19",
+    "id": "psalms-138-3",
+    "category": "Strength",
+    "verse": "En el día que clamé, me respondiste; esforzásteme con fortaleza en mi alma.",
+    "reference": "Psalms 138:3",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "courage",
-      "strength",
-      "fear",
-      "trust"
+      "strength"
     ]
   },
   {
@@ -2377,61 +2309,50 @@
     ]
   },
   {
-    "id": "2-corinthians-9-14",
+    "id": "ephesians-4-32",
     "category": "Love",
-    "verse": "Asimismo por la oración de ellos á favor vuestro, los cuales os quieren á causa de la eminente gracia de Dios en vosotros.",
-    "reference": "2 Corinthians 9:14",
+    "verse": "Antes sed los unos con los otros benignos, misericordiosos, perdonándoos los unos á los otros, como también Dios os perdonó en Cristo.",
+    "reference": "Ephesians 4:32",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "love"
     ]
   },
   {
-    "id": "psalms-31-6",
-    "category": "Hope",
-    "verse": "Aborrecí á los que esperan en vanidades ilusorias; mas yo en Jehová he esperado.",
-    "reference": "Psalms 31:6",
-    "translation": "Reina-Valera (1909)",
-    "tags": [
-      "hope",
-      "promise",
-      "waiting"
-    ]
-  },
-  {
-    "id": "psalms-132-13",
+    "id": "psalms-62-8",
     "category": "Trust",
-    "verse": "Porque Jehová ha elegido á Sión; deseóla por habitación para sí.",
-    "reference": "Psalms 132:13",
+    "verse": "Esperad en él en todo tiempo, oh pueblos; derramad delante de él vuestro corazón: Dios es nuestro amparo. (Selah.)",
+    "reference": "Psalms 62:8",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "trust"
     ]
   },
   {
-    "id": "psalms-132-8",
-    "category": "Trust",
-    "verse": "Levántate, oh Jehová, á tu reposo; tú y el arca de tu fortaleza.",
-    "reference": "Psalms 132:8",
+    "id": "psalms-91-1",
+    "category": "Comfort",
+    "verse": "EL que habita al abrigo del Altísimo, morará bajo la sombra del Omnipotente.",
+    "reference": "Psalms 91:1",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-63-7",
+    "category": "Comfort",
+    "verse": "Porque has sido mi socorro; y así en la sombra de tus alas me regocijaré.",
+    "reference": "Psalms 63:7",
+    "translation": "Reina-Valera (1909)",
+    "tags": [
+      "comfort"
     ]
   },
   {
     "id": "2-corinthians-13-14",
     "category": "Grace",
     "verse": "La gracia del Señor Jesucristo, y el amor de Dios, y la participación del Espíritu Santo sea con vosotros todos. Amén.",
-    "reference": "2 Corinthians 13:14",
+    "reference": "2 Corinthians 13:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
       "grace",
@@ -2467,16 +2388,13 @@
     ]
   },
   {
-    "id": "psalms-30-7",
-    "category": "Trust",
-    "verse": "Porque tú, Jehová, por tu benevolencia has asentado mi monte con fortaleza. Escondiste tu rostro, fuí conturbado.",
-    "reference": "Psalms 30:7",
+    "id": "psalms-94-18",
+    "category": "Comfort",
+    "verse": "Cuando yo decía: Mi pie resbala: tu misericordia, oh Jehová, me sustentaba.",
+    "reference": "Psalms 94:18",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "strength"
+      "comfort"
     ]
   },
   {
@@ -2545,53 +2463,42 @@
     ]
   },
   {
-    "id": "psalms-61-7",
-    "category": "Trust",
-    "verse": "Estará para siempre delante de Dios: misericordia y verdad prepara que lo conserven.",
-    "reference": "Psalms 61:7",
+    "id": "psalms-61-3",
+    "category": "Strength",
+    "verse": "Porque tú has sido mi refugio, y torre de fortaleza delante del enemigo.",
+    "reference": "Psalms 61:3",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "grace"
+      "strength"
     ]
   },
   {
-    "id": "philippians-4-21",
-    "category": "Grace",
-    "verse": "Saludad á todos los santos en Cristo Jesús. Los hermanos que están conmigo os saludan.",
-    "reference": "Philippians 4:21",
+    "id": "philippians-4-19",
+    "category": "Hope",
+    "verse": "Mi Dios, pues, suplirá todo lo que os falta conforme á sus riquezas en gloria en Cristo Jesús.",
+    "reference": "Philippians 4:19",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
-    "id": "psalms-84-9",
-    "category": "Trust",
-    "verse": "Mira, oh Dios, escudo nuestro, y pon los ojos en el rostro de tu ungido.",
-    "reference": "Psalms 84:9",
+    "id": "psalms-84-5",
+    "category": "Strength",
+    "verse": "Bienaventurado el hombre que tiene su fortaleza en ti; en cuyo corazón están tus caminos.",
+    "reference": "Psalms 84:5",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge"
+      "strength"
     ]
   },
   {
-    "id": "isaiah-30-29",
-    "category": "Trust",
-    "verse": "Vosotros tendréis canción, como en noche en que se celebra pascua; y alegría de corazón, como el que va con flauta para venir al monte de Jehová, al Fuerte de Israel.",
-    "reference": "Isaiah 30:29",
+    "id": "psalms-95-2",
+    "category": "Joy",
+    "verse": "Lleguemos ante su acatamiento con alabanza; aclamémosle con cánticos.",
+    "reference": "Psalms 95:2",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
       "joy"
     ]
   },
@@ -2609,16 +2516,13 @@
     ]
   },
   {
-    "id": "psalms-115-12",
-    "category": "Trust",
-    "verse": "Jehová se acordó de nosotros: nos bendecirá: bendecirá á la casa de Israel; bendecirá á la casa de Aarón.",
-    "reference": "Psalms 115:12",
+    "id": "psalms-112-5",
+    "category": "Love",
+    "verse": "El hombre de bien tiene misericordia y presta; gobierna sus cosas con juicio.",
+    "reference": "Psalms 112:5",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "joy"
+      "love"
     ]
   },
   {
@@ -2683,16 +2587,13 @@
     ]
   },
   {
-    "id": "psalms-132-5",
-    "category": "Trust",
-    "verse": "Hasta que halle lugar para Jehová, moradas para el Fuerte de Jacob.",
-    "reference": "Psalms 132:5",
+    "id": "psalms-32-7",
+    "category": "Comfort",
+    "verse": "Tú eres mi refugio; me guardarás de angustia; con cánticos de liberación me rodearás. (Selah.)",
+    "reference": "Psalms 32:7",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
     ]
   },
   {
@@ -2733,27 +2634,23 @@
     ]
   },
   {
-    "id": "psalms-10-11",
-    "category": "Peace",
-    "verse": "Dice en su corazón: Dios está olvidado, ha encubierto su rostro; nunca lo verá.",
-    "reference": "Psalms 10:11",
+    "id": "psalms-9-10",
+    "category": "Trust",
+    "verse": "Y en ti confiarán los que conocen tu nombre; por cuanto tú, oh Jehová, no desamparaste á los que te buscaron.",
+    "reference": "Psalms 9:10",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "trust"
     ]
   },
   {
-    "id": "psalms-10-3",
-    "category": "Peace",
-    "verse": "Por cuanto se alaba el malo del deseo de su alma, y bendice al codicioso, á quien Jehová aborrece.",
-    "reference": "Psalms 10:3",
+    "id": "psalms-9-9",
+    "category": "Comfort",
+    "verse": "Y será Jehová refugio al pobre, refugio para el tiempo de angustia.",
+    "reference": "Psalms 9:9",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2808,27 +2705,22 @@
     ]
   },
   {
-    "id": "psalms-125-5",
-    "category": "Peace",
-    "verse": "Mas á los que se apartan tras sus perversidades, Jehová los llevará con los que obran iniquidad: y paz sea sobre Israel.",
-    "reference": "Psalms 125:5",
+    "id": "proverbs-4-18",
+    "category": "Hope",
+    "verse": "Mas la senda de los justos es como la luz de la aurora, que va en aumento hasta que el día es perfecto.",
+    "reference": "Proverbs 4:18",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "hope"
     ]
   },
   {
-    "id": "philippians-1-8",
-    "category": "Grace",
-    "verse": "Porque Dios me es testigo de cómo os amo á todos vosotros en las entrañas de Jesucristo.",
-    "reference": "Philippians 1:8",
+    "id": "philippians-1-9",
+    "category": "Love",
+    "verse": "Y esto ruego, que vuestro amor abunde aun más y más en ciencia y en todo conocimiento,",
+    "reference": "Philippians 1:9",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -2846,15 +2738,13 @@
     ]
   },
   {
-    "id": "psalms-143-4",
-    "category": "Peace",
-    "verse": "Y mi espíritu se angustió dentro de mí; pasmóse mi corazón.",
-    "reference": "Psalms 143:4",
+    "id": "psalms-119-50",
+    "category": "Comfort",
+    "verse": "Esta es mi consuelo en mi aflicción: porque tu dicho me ha vivificado.",
+    "reference": "Psalms 119:50",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2999,16 +2889,13 @@
     ]
   },
   {
-    "id": "psalms-37-4",
-    "category": "Peace",
-    "verse": "Pon asimismo tu delicia en Jehová, y él te dará las peticiones de tu corazón.",
-    "reference": "Psalms 37:4",
+    "id": "psalms-37-23",
+    "category": "Trust",
+    "verse": "Por Jehová son ordenados los pasos del hombre, y aprueba su camino.",
+    "reference": "Psalms 37:23",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "peace",
-      "rest",
-      "heart",
-      "joy"
+      "trust"
     ]
   },
   {
@@ -3040,7 +2927,7 @@
   {
     "id": "psalms-10-14",
     "category": "Strength",
-    "verse": "Tú lo tienes visto: porque tú miras el trabajo, y la vejación, para vengar le por tu mano: á ti se acoge el pobre, tú eres el amparo del huérfano.",
+    "verse": "Tú lo tienes visto: porque tú miras el trabajo, y la vejación, para vengarle por tu mano: á ti se acoge el pobre, tú eres el amparo del huérfano.",
     "reference": "Psalms 10:14",
     "translation": "Reina-Valera (1909)",
     "tags": [
@@ -3077,41 +2964,33 @@
     ]
   },
   {
-    "id": "2-corinthians-8-7",
+    "id": "2-corinthians-9-8",
     "category": "Grace",
-    "verse": "Por tanto, como en todo abundáis, en fe, y en palabra, y en ciencia, y en toda solicitud, y en vuestro amor para con nosotros, que también abundéis en esta gracia.",
-    "reference": "2 Corinthians 8:7",
+    "verse": "Y poderoso es Dios para hacer que abunde en vosotros toda gracia; á fin de que, teniendo siempre en todas las cosas todo lo que basta, abundéis para toda buena obra:",
+    "reference": "2 Corinthians 9:8",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "grace"
     ]
   },
   {
-    "id": "psalms-110-2",
-    "category": "Strength",
-    "verse": "La vara de tu fortaleza enviará Jehová desde Sión: domina en medio de tus enemigos.",
-    "reference": "Psalms 110:2",
+    "id": "psalms-145-14",
+    "category": "Comfort",
+    "verse": "Sostiene Jehová á todos los que caen, y levanta á todos los oprimidos.",
+    "reference": "Psalms 145:14",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
-    "id": "psalms-115-10",
-    "category": "Strength",
-    "verse": "Casa de Aarón, confiad en Jehová: él es su ayuda y su escudo.",
-    "reference": "Psalms 115:10",
+    "id": "psalms-112-4",
+    "category": "Hope",
+    "verse": "Resplandeció en las tinieblas luz á los rectos: es clemente, y misericordioso, y justo.",
+    "reference": "Psalms 112:4",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "strength",
-      "help",
-      "power",
-      "faith"
+      "hope"
     ]
   },
   {
@@ -3154,15 +3033,13 @@
     ]
   },
   {
-    "id": "psalms-143-7",
-    "category": "Strength",
-    "verse": "Respóndeme presto, oh Jehová que desmaya mi espíritu: no escondas de mí tu rostro, y venga yo á ser semejante á los que descienden á la sepultura.",
-    "reference": "Psalms 143:7",
+    "id": "psalms-42-8",
+    "category": "Comfort",
+    "verse": "De día mandará Jehová su misericordia, y de noche su canción será conmigo, y oración al Dios de mi vida.",
+    "reference": "Psalms 42:8",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
@@ -3294,42 +3171,33 @@
     ]
   },
   {
-    "id": "luke-2-52",
-    "category": "Grace",
-    "verse": "Y Jesús crecía en sabiduría, y en edad, y en gracia para con Dios y los hombres.",
-    "reference": "Luke 2:52",
+    "id": "luke-11-9",
+    "category": "Prayer",
+    "verse": "Y yo os digo: Pedid, y se os dará; buscad, y hallaréis; llamad, y os será abierto.",
+    "reference": "Luke 11:9",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
+      "prayer"
+    ]
+  },
+  {
+    "id": "ephesians-4-2-3",
+    "category": "Love",
+    "verse": "Con toda humildad y mansedumbre, con paciencia soportando los unos á los otros en amor; Solícitos á guardar la unidad del Espíritu en el vínculo de la paz.",
+    "reference": "Ephesians 4:2-3",
+    "translation": "Reina-Valera (1909)",
+    "tags": [
       "love"
     ]
   },
   {
-    "id": "2-thessalonians-1-2",
-    "category": "Peace",
-    "verse": "Gracia y paz á vosotros de Dios nuestro Padre y del Señor Jesucristo.",
-    "reference": "2 Thessalonians 1:2",
-    "translation": "Reina-Valera (1909)",
-    "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
-    ]
-  },
-  {
-    "id": "psalms-40-10",
+    "id": "psalms-89-8",
     "category": "Faith",
-    "verse": "No encubrí tu justicia dentro de mi corazón: tu verdad y tu salvación he dicho: no oculté tu misericordia y tu verdad en grande concurso.",
-    "reference": "Psalms 40:10",
+    "verse": "Oh Jehová, Dios de los ejércitos, ¿quién como tú? Poderoso eres, Jehová, y tu verdad está en torno de ti.",
+    "reference": "Psalms 89:8",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "faith"
     ]
   },
   {
@@ -3385,16 +3253,13 @@
     ]
   },
   {
-    "id": "jeremiah-42-20",
-    "category": "Faith",
-    "verse": "¿Por qué hicisteis errar vuestras almas? porque vosotros me enviasteis á Jehová vuestro Dios, diciendo: Ora por nosotros á Jehová nuestro Dios; y conforme á todas las cosas que Jehová nuestro Dios dijere, háznoslo saber así, y lo pondremos por obra.",
-    "reference": "Jeremiah 42:20",
+    "id": "psalms-119-114",
+    "category": "Hope",
+    "verse": "Mi escondedero y mi escudo eres tú: en tu palabra he esperado.",
+    "reference": "Psalms 119:114",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "hope"
     ]
   },
   {
@@ -3411,16 +3276,13 @@
     ]
   },
   {
-    "id": "acts-11-17",
-    "category": "Trust",
-    "verse": "Así que, si Dios les dió el mismo don también como á nosotros que hemos creído en el Señor Jesucristo, ¿quién era yo que pudiese estorbar á Dios?",
-    "reference": "Acts 11:17",
+    "id": "acts-10-34-35",
+    "category": "Faith",
+    "verse": "Entonces Pedro, abriendo su boca, dijo: Por verdad hallo que Dios no hace acepción de personas; Sino que de cualquiera nación que le teme y obra justicia, se agrada.",
+    "reference": "Acts 10:34-35",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "faith"
     ]
   },
   {
@@ -3502,16 +3364,13 @@
     ]
   },
   {
-    "id": "acts-15-11",
-    "category": "Trust",
-    "verse": "Antes por la gracia del Señor Jesús creemos que seremos salvos, como también ellos.",
-    "reference": "Acts 15:11",
+    "id": "hebrews-10-23",
+    "category": "Hope",
+    "verse": "Mantengamos firme la profesión de nuestra fe sin fluctuar; que fiel es el que prometió:",
+    "reference": "Hebrews 10:23",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -3632,15 +3491,13 @@
     ]
   },
   {
-    "id": "psalms-41-10",
-    "category": "Grace",
-    "verse": "Mas tú, Jehová, ten misericordia de mí, y hazme levantar, y daréles el pago.",
-    "reference": "Psalms 41:10",
+    "id": "psalms-91-4",
+    "category": "Comfort",
+    "verse": "Con sus plumas te cubrirá, y debajo de sus alas estarás seguro: escudo y adarga es su verdad.",
+    "reference": "Psalms 91:4",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "comfort"
     ]
   },
   {
@@ -3657,54 +3514,43 @@
     ]
   },
   {
-    "id": "psalms-96-13",
-    "category": "Grace",
-    "verse": "Delante de Jehová que vino: porque vino á juzgar la tierra. Juzgará al mundo con justicia, y á los pueblos con su verdad.",
-    "reference": "Psalms 96:13",
+    "id": "psalms-96-3",
+    "category": "Joy",
+    "verse": "Contad entre las gentes su gloria, en todos los pueblos sus maravillas.",
+    "reference": "Psalms 96:3",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "joy"
     ]
   },
   {
-    "id": "psalms-89-49",
-    "category": "Grace",
-    "verse": "Señor, ¿dónde están tus antiguas misericordias, que juraste á David por tu verdad?",
-    "reference": "Psalms 89:49",
+    "id": "psalms-33-18",
+    "category": "Hope",
+    "verse": "He aquí, el ojo de Jehová sobre los que le temen, sobre los que esperan en su misericordia;",
+    "reference": "Psalms 33:18",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "hope"
     ]
   },
   {
-    "id": "proverbs-3-4",
-    "category": "Grace",
-    "verse": "Y hallarás gracia y buena opinión en los ojos de Dios y de los hombres.",
-    "reference": "Proverbs 3:4",
+    "id": "proverbs-3-24",
+    "category": "Peace",
+    "verse": "Cuando te acostares, no tendrás temor; antes te acostarás, y tu sueño será suave.",
+    "reference": "Proverbs 3:24",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "peace"
     ]
   },
   {
-    "id": "proverbs-8-35",
-    "category": "Grace",
-    "verse": "Porque el que me hallare, hallará la vida, y alcanzará el favor de Jehová.",
-    "reference": "Proverbs 8:35",
+    "id": "proverbs-16-24",
+    "category": "Wisdom",
+    "verse": "Panal de miel son los dichos suaves: suavidad al alma y medicina á los huesos.",
+    "reference": "Proverbs 16:24",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "life"
+      "wisdom"
     ]
   },
   {
@@ -3759,15 +3605,13 @@
     ]
   },
   {
-    "id": "psalms-118-20",
-    "category": "Grace",
-    "verse": "Esta puerta de Jehová, por ella entrarán los justos.",
-    "reference": "Psalms 118:20",
+    "id": "psalms-118-21",
+    "category": "Joy",
+    "verse": "Te alabaré, porque me has oído, y me fuiste por salud.",
+    "reference": "Psalms 118:21",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "joy"
     ]
   },
   {
@@ -3810,16 +3654,13 @@
     ]
   },
   {
-    "id": "psalms-22-8",
-    "category": "Faith",
-    "verse": "Remítese á Jehová, líbrelo; sálvele, puesto que en él se complacía.",
-    "reference": "Psalms 22:8",
+    "id": "psalms-34-5",
+    "category": "Hope",
+    "verse": "A él miraron y fueron alumbrados: y sus rostros no se avergonzaron.",
+    "reference": "Psalms 34:5",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "joy"
+      "hope"
     ]
   },
   {
@@ -3885,29 +3726,23 @@
     ]
   },
   {
-    "id": "acts-7-59",
-    "category": "Prayer",
-    "verse": "Y apedrearon á Esteban, invocando él y diciendo: Señor Jesús, recibe mi espíritu.",
-    "reference": "Acts 7:59",
+    "id": "1-peter-4-8",
+    "category": "Love",
+    "verse": "Y sobre todo, tened entre vosotros ferviente caridad; porque la caridad cubrirá multitud de pecados.",
+    "reference": "1 Peter 4:8",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "prayer",
-      "answer",
-      "presence",
-      "help"
+      "love"
     ]
   },
   {
-    "id": "psalms-37-5",
-    "category": "Faith",
-    "verse": "Encomienda á Jehová tu camino, y espera en él; y él hará.",
-    "reference": "Psalms 37:5",
+    "id": "psalms-37-24",
+    "category": "Comfort",
+    "verse": "Cuando cayere, no quedará postrado; porque Jehová sostiene su mano.",
+    "reference": "Psalms 37:24",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "life"
+      "comfort"
     ]
   },
   {
@@ -3923,28 +3758,23 @@
     ]
   },
   {
-    "id": "psalms-55-23",
-    "category": "Faith",
-    "verse": "Mas tú, oh Dios, harás descender aquéllos al pozo de la sepultura: los hombres sanguinarios y engañadores no demediarán sus días: empero yo confiaré en ti.",
-    "reference": "Psalms 55:23",
+    "id": "psalms-62-7",
+    "category": "Trust",
+    "verse": "En Dios está mi salvación y mi gloria: en Dios está la roca de mi fortaleza, y mi refugio.",
+    "reference": "Psalms 62:7",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "trust"
     ]
   },
   {
-    "id": "psalms-78-22",
-    "category": "Faith",
-    "verse": "Por cuanto no habían creído á Dios, ni habían confiado en su salud:",
-    "reference": "Psalms 78:22",
+    "id": "psalms-119-165",
+    "category": "Peace",
+    "verse": "Mucha paz tienen los que aman tu ley; y no hay para ellos tropiezo.",
+    "reference": "Psalms 119:165",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "hope"
+      "peace"
     ]
   },
   {
@@ -3974,15 +3804,13 @@
     ]
   },
   {
-    "id": "isaiah-48-2",
-    "category": "Faith",
-    "verse": "Porque de la santa ciudad se nombran, y en el Dios de Israel confían: su nombre, Jehová de los ejércitos.",
-    "reference": "Isaiah 48:2",
+    "id": "isaiah-26-12",
+    "category": "Peace",
+    "verse": "Jehová, tú nos depararás paz; porque también obraste en nosotros todas nuestras obras.",
+    "reference": "Isaiah 26:12",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "peace"
     ]
   },
   {
@@ -4024,27 +3852,23 @@
     ]
   },
   {
-    "id": "psalms-87-2",
-    "category": "Love",
-    "verse": "Ama Jehová las puertas de Sión más que todas las moradas de Jacob.",
-    "reference": "Psalms 87:2",
+    "id": "psalms-90-14",
+    "category": "Joy",
+    "verse": "Sácianos presto de tu misericordia: y cantaremos y nos alegraremos todos nuestros días.",
+    "reference": "Psalms 90:14",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
-    "id": "psalms-55-14",
+    "id": "psalms-133-1",
     "category": "Love",
-    "verse": "Que juntos comunicábamos dulcemente los secretos, á la casa de Dios andábamos en compañía.",
-    "reference": "Psalms 55:14",
+    "verse": "Cántico gradual: de David. ¡MIRAD cuán bueno y cuán delicioso es habitar los hermanos igualmente en uno!",
+    "reference": "Psalms 133:1",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
@@ -4074,28 +3898,23 @@
     ]
   },
   {
-    "id": "john-14-24",
+    "id": "john-15-12",
     "category": "Love",
-    "verse": "El que no me ama, no guarda mis palabras: y la palabra que habéis oído, no es mía, sino del Padre que me envió.",
-    "reference": "John 14:24",
+    "verse": "Este es mi mandamiento: Que os améis los unos á los otros, como yo os he amado.",
+    "reference": "John 15:12",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god",
-      "wisdom"
+      "love"
     ]
   },
   {
-    "id": "john-14-31",
-    "category": "Love",
-    "verse": "Empero para que conozca el mundo que amo al Padre, y como el Padre me dió el mandamiento, así hago. Levantaos, vamos de aquí.",
-    "reference": "John 14:31",
+    "id": "john-15-11",
+    "category": "Joy",
+    "verse": "Estas cosas os he hablado, para que mi gozo esté en vosotros, y vuestro gozo sea cumplido.",
+    "reference": "John 15:11",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
@@ -4123,39 +3942,33 @@
     ]
   },
   {
-    "id": "john-5-20",
+    "id": "john-15-13",
     "category": "Love",
-    "verse": "Porque el Padre ama al Hijo, y le muestra todas las cosas que él hace; y mayores obras que éstas le mostrará, de suerte que vosotros os maravilléis.",
-    "reference": "John 5:20",
+    "verse": "Nadie tiene mayor amor que este, que ponga alguno su vida por sus amigos.",
+    "reference": "John 15:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
-    "id": "john-8-42",
-    "category": "Love",
-    "verse": "Jesús entonces les dijo: Si vuestro padre fuera Dios, ciertamente me amaríais: porque yo de Dios he salido, y he venido; que no he venido de mí mismo, mas él me envió.",
-    "reference": "John 8:42",
+    "id": "john-6-37",
+    "category": "Hope",
+    "verse": "Todo lo que el Padre me da, vendrá á mí; y al que á mí viene, no le hecho fuera.",
+    "reference": "John 6:37",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "hope"
     ]
   },
   {
-    "id": "matthew-10-37",
-    "category": "Love",
-    "verse": "El que ama padre ó madre más que á mí, no es digno de mí; y el que ama hijo ó hija más que á mí, no es digno de mí.",
-    "reference": "Matthew 10:37",
+    "id": "james-1-19",
+    "category": "Wisdom",
+    "verse": "Por esto, mis amados hermanos, todo hombre sea pronto para oir, tardío para hablar, tardío para airarse:",
+    "reference": "James 1:19",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "wisdom"
     ]
   },
   {
@@ -4183,16 +3996,13 @@
     ]
   },
   {
-    "id": "2-peter-1-14",
-    "category": "Hope",
-    "verse": "Sabiendo que brevemente tengo de dejar mi tabernáculo, como nuestro Señor Jesucristo me ha declarado.",
-    "reference": "2 Peter 1:14",
+    "id": "2-peter-1-2",
+    "category": "Grace",
+    "verse": "Gracia y paz os sea multiplicada en el conocimiento de Dios, y de nuestro Señor Jesús.",
+    "reference": "2 Peter 1:2",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "grace"
     ]
   },
   {
@@ -4248,28 +4058,23 @@
     ]
   },
   {
-    "id": "psalms-106-25",
-    "category": "Prayer",
-    "verse": "Antes murmuraron en sus tiendas, y no oyeron la voz de Jehová.",
-    "reference": "Psalms 106:25",
+    "id": "psalms-34-10",
+    "category": "Hope",
+    "verse": "Los leoncillos necesitaron, y tuvieron hambre; pero los que buscan á Jehová, no tendrán falta de ningún bien.",
+    "reference": "Psalms 34:10",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "prayer",
-      "seeking",
-      "calling"
+      "hope"
     ]
   },
   {
-    "id": "romans-2-16",
-    "category": "Hope",
-    "verse": "En el día que juzgará el Señor lo encubierto de los hombres, conforme á mi evangelio, por Jesucristo.",
-    "reference": "Romans 2:16",
+    "id": "james-5-13",
+    "category": "Prayer",
+    "verse": "¿Está alguno entre vosotros afligido? haga oración. ¿Está alguno alegre? cante salmos.",
+    "reference": "James 5:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "prayer"
     ]
   },
   {
@@ -4348,15 +4153,13 @@
     ]
   },
   {
-    "id": "psalms-105-19",
-    "category": "Wisdom",
-    "verse": "Hasta la hora que llegó su palabra, el dicho de Jehová le probó.",
-    "reference": "Psalms 105:19",
+    "id": "psalms-119-76",
+    "category": "Comfort",
+    "verse": "Sea ahora tu misericordia para consolarme, conforme á lo que has dicho á tu siervo.",
+    "reference": "Psalms 119:76",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word"
+      "comfort"
     ]
   },
   {
@@ -4373,16 +4176,13 @@
     ]
   },
   {
-    "id": "psalms-118-27",
-    "category": "Wisdom",
-    "verse": "Dios es Jehová que nos ha resplandecido: atad víctimas con cuerdas á los cuernos del altar.",
-    "reference": "Psalms 118:27",
+    "id": "psalms-100-4",
+    "category": "Joy",
+    "verse": "Entrad por sus puertas con reconocimiento, por sus atrios con alabanza: alabadle, bendecid su nombre.",
+    "reference": "Psalms 100:4",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "life"
+      "joy"
     ]
   },
   {
@@ -4424,16 +4224,13 @@
     ]
   },
   {
-    "id": "isaiah-26-13",
-    "category": "Hope",
-    "verse": "Jehová Dios nuestro, señores se han enseñoreado de nosotros fuera de ti; mas en ti solamente nos acordaremos de tu nombre.",
-    "reference": "Isaiah 26:13",
+    "id": "isaiah-66-13",
+    "category": "Comfort",
+    "verse": "Como aquel á quien consuela su madre, así os consolaré yo á vosotros, y en Jerusalem tomaréis consuelo.",
+    "reference": "Isaiah 66:13",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -4449,16 +4246,13 @@
     ]
   },
   {
-    "id": "2-corinthians-8-5",
-    "category": "Hope",
-    "verse": "Y no como lo esperábamos, mas aun á sí mismos se dieron primeramente al Señor, y á nosotros por la voluntad de Dios.",
-    "reference": "2 Corinthians 8:5",
+    "id": "hebrews-10-24",
+    "category": "Love",
+    "verse": "Y considerémonos los unos á los otros para provocarnos al amor y á las buenas obras;",
+    "reference": "Hebrews 10:24",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -4486,42 +4280,33 @@
     ]
   },
   {
-    "id": "deuteronomy-13-3",
-    "category": "Love",
-    "verse": "No darás oído á las palabras de tal profeta, ni al tal soñador de sueños: porque Jehová vuestro Dios os prueba, para saber si amáis á Jehová vuestro Dios con todo vuestro corazón, y con toda vuestra alma.",
-    "reference": "Deuteronomy 13:3",
+    "id": "proverbs-12-25",
+    "category": "Comfort",
+    "verse": "El cuidado congojoso en el corazón del hombre, lo abate; mas la buena palabra lo alegra.",
+    "reference": "Proverbs 12:25",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "comfort"
     ]
   },
   {
-    "id": "isaiah-43-1",
-    "category": "Courage",
-    "verse": "Y AHORA, así dice Jehová Criador tuyo, oh Jacob, y Formador tuyo, oh Israel: No temas, porque yo te redimí; te puse nombre, mío eres tú.",
-    "reference": "Isaiah 43:1",
+    "id": "isaiah-42-3",
+    "category": "Comfort",
+    "verse": "No quebrará la caña cascada, ni apagará el pábilo que humeare: sacará el juicio á verdad.",
+    "reference": "Isaiah 42:3",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "courage",
-      "fear",
-      "strength",
-      "life"
+      "comfort"
     ]
   },
   {
-    "id": "1-samuel-2-1",
+    "id": "1-chronicles-16-23",
     "category": "Joy",
-    "verse": "Y ANNA oró y dijo: mi corazón se regocija en Jehová, mi cuerno es ensalzado en Jehová; mi boca se ensanchó sobre mis enemigos, por cuanto me alegré en tu salud.",
-    "reference": "1 Samuel 2:1",
+    "verse": "Cantad á Jehová, toda la tierra, anunciad de día en día su salud.",
+    "reference": "1 Chronicles 16:23",
     "translation": "Reina-Valera (1909)",
     "tags": [
-      "joy",
-      "delight",
-      "praise",
-      "gratitude"
+      "joy"
     ]
   },
   {

@@ -1,0 +1,14 @@
+[
+  {
+    "family": "knewave",
+    "source": "https://github.com/google/fonts/tree/main/ofl/knewave",
+    "file": "knewave.ttf",
+    "sha256": "ed3bac761d755b89ab3082c844d4a623d63c7d6eef85d22ba1fb6c680e6a4436"
+  },
+  {
+    "family": "berkshireswash",
+    "source": "https://github.com/google/fonts/tree/main/ofl/berkshireswash",
+    "file": "berkshireswash.ttf",
+    "sha256": "f0c80837dc6f32b89b10894a7e39295db4a00ab697cada682a3f5942c342fe00"
+  }
+]

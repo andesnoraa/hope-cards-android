@@ -1,0 +1,174 @@
+{
+  "photo-alpine-lake": {
+    "centerX": 690,
+    "centerY": 225,
+    "height": 320,
+    "width": 640,
+    "ink": "#142B36"
+  },
+  "photo-foggy-pines": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 620,
+    "width": 800,
+    "ink": "#FFFFFF",
+    "shadow": true
+  },
+  "photo-quiet-reservoir": {
+    "centerX": 540,
+    "centerY": 230,
+    "height": 330,
+    "width": 840,
+    "ink": "#263A36"
+  },
+  "photo-shadow-ivy": {
+    "centerX": 540,
+    "centerY": 490,
+    "height": 620,
+    "width": 780,
+    "ink": "#FFF8E9",
+    "shadow": true
+  },
+  "photo-woodland-deer": {
+    "centerX": 270,
+    "centerY": 445,
+    "height": 580,
+    "width": 430,
+    "ink": "#FFF8E9",
+    "shadow": true
+  },
+  "photo-still-alpine-lake": {
+    "centerX": 540,
+    "centerY": 245,
+    "height": 360,
+    "width": 770,
+    "ink": "#19313D"
+  },
+  "photo-forest-mist": {
+    "centerX": 540,
+    "centerY": 210,
+    "height": 280,
+    "width": 800,
+    "ink": "#263A36"
+  },
+  "photo-warm-highlands": {
+    "centerX": 540,
+    "centerY": 245,
+    "height": 350,
+    "width": 820,
+    "ink": "#302F2A"
+  },
+  "photo-misty-jetty": {
+    "centerX": 540,
+    "centerY": 325,
+    "height": 460,
+    "width": 830,
+    "ink": "#FFF8E9",
+    "shadow": true,
+    "supportingInk": "#1D302F"
+  },
+  "photo-turquoise-mist": {
+    "centerX": 540,
+    "centerY": 230,
+    "height": 330,
+    "width": 740,
+    "ink": "#173D3F"
+  },
+  "bright-meadow": {
+    "centerX": 540,
+    "centerY": 390,
+    "height": 580,
+    "width": 840,
+    "ink": "#193C33",
+    "footerInk": "#FFF8E9",
+    "citationY": 710,
+    "citationInk": "#193C33"
+  },
+  "bright-wildflowers": {
+    "centerX": 540,
+    "centerY": 390,
+    "height": 580,
+    "width": 840,
+    "ink": "#513824",
+    "footerInk": "#FFF8E9",
+    "citationY": 710,
+    "citationInk": "#513824"
+  },
+  "preview-sunlit-ferns": {
+    "centerX": 540,
+    "centerY": 300,
+    "height": 420,
+    "width": 780,
+    "ink": "#214536",
+    "footerInk": "#214536",
+    "citationY": 740
+  },
+  "preview-fresh-leaves": {
+    "centerX": 470,
+    "centerY": 470,
+    "height": 480,
+    "width": 680,
+    "ink": "#214536",
+    "footerInk": "#214536"
+  },
+  "preview-woodland-clearing": {
+    "centerX": 540,
+    "centerY": 450,
+    "height": 430,
+    "width": 700,
+    "ink": "#214536",
+    "footerInk": "#FFF8E9",
+    "citationY": 740,
+    "citationInk": "#214536"
+  },
+  "replacement-greenery": {
+    "centerX": 540,
+    "centerY": 450,
+    "height": 620,
+    "width": 810,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "citationY": 800,
+    "family": "forest"
+  },
+  "replacement-meadow": {
+    "centerX": 540,
+    "centerY": 345,
+    "height": 490,
+    "width": 800,
+    "ink": "#382D22",
+    "footerInk": "#FFF8E9",
+    "citationY": 645,
+    "family": "golden"
+  },
+  "replacement-quiet-branch-v2": {
+    "centerX": 540,
+    "centerY": 350,
+    "height": 490,
+    "width": 800,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "citationY": 650,
+    "family": "foliage"
+  },
+  "replacement-woodland-path-v2": {
+    "centerX": 540,
+    "centerY": 285,
+    "height": 400,
+    "width": 650,
+    "ink": "#214536",
+    "footerInk": "#FFF8E9",
+    "citationY": 530,
+    "family": "forest"
+  },
+  "replacement-golden-meadow-v2": {
+    "centerX": 455,
+    "centerY": 275,
+    "height": 390,
+    "width": 710,
+    "ink": "#382D22",
+    "footerInk": "#FFF8E9",
+    "citationY": 470,
+    "family": "golden"
+  }
+}

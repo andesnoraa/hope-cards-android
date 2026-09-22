@@ -1,0 +1,12 @@
+[
+  {
+    "id": "quiet-branch-v2",
+    "args": {
+      "referenced_image_paths": [
+        "/Users/aaronsedna/Downloads/pexels-raymond-petrik-1448389535-28458039.jpg",
+        "/Users/aaronsedna/Downloads/pexels-wyxina-tresse-311038210-27595107.jpg"
+      ],
+      "prompt": "Generate a new premium square photorealistic nature background, based on the subjects and natural moody colors in these references. NOT an edit of them. Fresh alternative for a Bible verse sharing card. A single finely detailed small lichen-covered oak branch extends diagonally across only the bottom quarter of frame, with a few tiny fresh leaves near the lower right. Behind it is natural woodland depth in rich deep olive and teal green. Upper 70% and central 75% of frame are quiet, evenly DARK forest shadow with soft subtle naturally receding detail; absolutely no white bokeh spots, bright patches, branch lines or trunk edges cross the future text region. The focus branch is genuinely crisp with organic lichen texture, photography looks like a beautiful authentic 85mm macro nature photograph, no excessive digital grain. Keep the woodland subtle, not an artificial blank painted rectangle. Asymmetric elegant composition, no symmetrical botanical border or wreath. No text, letters, logos, watermark, border, vignette, washout overlay, fog filter, or mockup. Must support clean WHITE upright verse text added later across upper/middle area. One standalone square background, no collage."
+    }
+  }
+]

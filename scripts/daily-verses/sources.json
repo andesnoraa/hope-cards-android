@@ -1,0 +1,114 @@
+{
+  "en-bsb": {
+    "edition": "Berean Standard Bible (BSB)",
+    "url": "https://ebible.org/Scriptures/engbsb_usfx.zip",
+    "file": "engbsb_usfx.zip",
+    "sha256": "7ec2e485d4127fa6b6f49a02dc1f1ab8faf7aca94294a0501cd338a66258577e",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/engbsb_vpl.zip",
+      "sha256": "51d4d53b37d3ba2147b8eeb0697eb36d339d08acdda97baec8c4ed606faf2361"
+    }
+  },
+  "en-bbe": {
+    "edition": "Bible in Basic English (BBE)",
+    "url": "https://ebible.org/Scriptures/engBBE_usfx.zip",
+    "file": "engBBE_usfx.zip",
+    "sha256": "b416308a33141dcd2bad22652441103f70698ee9a29aab198781d0e0d9db3b24",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/engBBE_vpl.zip",
+      "sha256": "9752f2ead93ba500182c071014d59131a5b61f98b8efd43789e9f6b1f2a77f86"
+    }
+  },
+  "en-kjv": {
+    "edition": "King James Version (KJV)",
+    "url": "https://ebible.org/Scriptures/eng-kjv2006_usfx.zip",
+    "file": "eng-kjv2006_usfx.zip",
+    "sha256": "4ffc59aee7be6eac10ef274e1b4e245e4e720c86ede556d986216d32078e4c7d",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/eng-kjv2006_vpl.zip",
+      "sha256": "fadc061065f420044a98d092037cf606e102a230abd74527b4f216cbb219f4e6"
+    }
+  },
+  "en-web": {
+    "edition": "World English Bible (WEB)",
+    "url": "https://ebible.org/Scriptures/engwebu_usfx.zip",
+    "file": "engwebu_usfx.zip",
+    "sha256": "e53878c25a10adc6c258cc7871defb541045494aedb85171ca358d64193f5546",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/engwebu_vpl.zip",
+      "sha256": "1007fb45782a4abd9444d4225fd768fb00a150466b9fb9fcf6f6ad175b73feb6"
+    }
+  },
+  "de-lut1912": {
+    "edition": "Lutherbibel (1912)",
+    "url": "https://ebible.org/Scriptures/deu1912_usfx.zip",
+    "file": "deu1912_usfx.zip",
+    "sha256": "c289e07aa5ca717d2071509c3617b96a5ab37cbd5823cc61e4e09fc4da8315c4",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/deu1912_vpl.zip",
+      "sha256": "62977ec165164def0f4815b846ca4af20fcd141fcc6c347ce791b59c2eca6678"
+    }
+  },
+  "fr-lsg1910": {
+    "edition": "Louis Segond (1910)",
+    "url": "https://ebible.org/Scriptures/fraLSG_usfx.zip",
+    "file": "fraLSG_usfx.zip",
+    "sha256": "ae52c29fe5779125888a787d399cadb24e227ee2d35d2c81f5274422ce216f0d",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/fraLSG_vpl.zip",
+      "sha256": "a78fef5c2264b277f993b17a1560904c29cc830047a02027667306c874f8f8c5"
+    }
+  },
+  "it-riv1927": {
+    "edition": "Riveduta (1927)",
+    "url": "https://ebible.org/Scriptures/ita1927_usfx.zip",
+    "file": "ita1927_usfx.zip",
+    "sha256": "b0332f79afd25ca84cbe5324fa80393db795012feee1ff903fddcbb7d0ecbf09",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/ita1927_vpl.zip",
+      "sha256": "53832e54a6a265f3f49551f095cb6592a235d91319548b1769b66e1c7e9b08d3"
+    }
+  },
+  "es-rv1909": {
+    "edition": "Reina-Valera (1909)",
+    "url": "https://ebible.org/Scriptures/spaRV1909_usfx.zip",
+    "file": "spaRV1909_usfx.zip",
+    "sha256": "2ca64656e7c06773480049201816b408ef3d937bd372db28ab7b05b543da66ac",
+    "license": "Public domain",
+    "retrieved": "2026-09-22",
+    "crossCheck": {
+      "url": "https://ebible.org/Scriptures/spaRV1909_vpl.zip",
+      "sha256": "e5c553f8044e676375e5f13719493f7f47c54b5f145cc33cb65f12eb6f4dc8e5"
+    }
+  },
+  "ml-mal1910": {
+    "edition": "Sathyavedapusthakam (1910)",
+    "url": "https://api.getbible.net/v2/mal1910.json",
+    "file": "mal1910.json",
+    "sha256": "06ba15279621c1517547e647f7da28ad294d36fa30950c938a0033e7679a1550",
+    "license": "Public domain",
+    "retrieved": "2026-09-22"
+  },
+  "tl-adb1905": {
+    "edition": "Ang Dating Biblia (1905)",
+    "url": "https://api.getbible.net/v2/tagalog.json",
+    "file": "tagalog.json",
+    "sha256": "50f653ec89312b0c104788d6abda9693ea4eb69cf85c019d63a67090716ceef0",
+    "license": "Public domain",
+    "retrieved": "2026-09-22"
+  }
+}

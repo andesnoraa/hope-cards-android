@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Product navigation remains English; artwork is explicitly the WEB English edition. -->
-    <string translatable="false" name="nav_verse_art">Verse Art</string>
+    <string translatable="false" name="nav_verse_art">Verse Gallery</string>
     <string translatable="false" name="art_choose_category">Choose a category</string>
     <string translatable="false" name="art_browse_all">Browse all artwork</string>
     <string translatable="false" name="art_saved">Saved artwork</string>
-    <string translatable="false" name="art_saved_empty">Tap a heart on an artwork to keep it here. Its verse is also saved in Favorites.</string>
+    <string translatable="false" name="art_saved_empty">Tap a heart on an artwork to keep it here. Its verse is also saved in Saved Verses.</string>
     <plurals translatable="false" name="art_count"><item quantity="one">%1$d artwork</item><item quantity="other">%1$d artworks</item></plurals>
     <string translatable="false" name="art_save_image">Save image</string>
     <string translatable="false" name="art_image_saved">Image saved.</string>
@@ -13,6 +13,6 @@
     <string translatable="false" name="art_image_unavailable">Artwork unavailable</string>
     <string translatable="false" name="art_read_verse">Read verse</string>
     <string translatable="false" name="art_hide_verse">Hide verse</string>
-    <string translatable="false" name="art_favorite">Save artwork to Favorites</string>
-    <string translatable="false" name="art_unfavorite">Remove artwork from Favorites</string>
+    <string translatable="false" name="art_favorite">Save artwork to Saved Verses</string>
+    <string translatable="false" name="art_unfavorite">Remove artwork from Saved Verses</string>
 </resources>

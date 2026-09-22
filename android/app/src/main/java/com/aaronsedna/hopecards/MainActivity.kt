@@ -6,9 +6,13 @@ import android.os.StrictMode
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import com.aaronsedna.hopecards.ui.HopeCardsApp
+import com.aaronsedna.hopecards.ui.HopeCardsViewModel
+import com.aaronsedna.hopecards.model.Destination
+import com.aaronsedna.hopecards.notifications.DailyHopeRequest
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.appupdate.AppUpdateOptions
@@ -19,7 +23,8 @@ import com.google.android.play.core.install.model.UpdateAvailability
 import kotlinx.coroutines.flow.MutableStateFlow
 
 class MainActivity : ComponentActivity() {
-    private val dailyHopeRequests = MutableStateFlow(0)
+    private val hopeViewModel: HopeCardsViewModel by viewModels()
+    private val dailyHopeRequests = MutableStateFlow<DailyHopeRequest?>(null)
     private val updateReady = MutableStateFlow(false)
     private lateinit var appUpdateManager: AppUpdateManager
     private var updateCheckInFlight = false
@@ -52,10 +57,14 @@ class MainActivity : ComponentActivity() {
                     .build(),
             )
         }
-        installSplashScreen()
+        val splash = installSplashScreen()
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         handleIntent(intent)
+        splash.setKeepOnScreenCondition {
+            val state = hopeViewModel.uiState.value
+            !state.initialized || (state.destination == Destination.DAILY && state.dailyVerse == null)
+        }
         appUpdateManager = AppUpdateManagerFactory.create(this)
 
         setContent {
@@ -63,6 +72,7 @@ class MainActivity : ComponentActivity() {
                 dailyHopeRequests = dailyHopeRequests,
                 updateReady = updateReady,
                 onCompleteUpdate = ::completeAppUpdate,
+                viewModel = hopeViewModel,
             )
         }
     }
@@ -96,8 +106,14 @@ class MainActivity : ComponentActivity() {
 
     private fun handleIntent(intent: Intent?) {
         if (intent?.getBooleanExtra(EXTRA_OPEN_DAILY_HOPE, false) == true) {
-            dailyHopeRequests.value += 1
+            // Route before the first Compose frame (and before resuming an existing activity).
+            hopeViewModel.openDailyHopeNotification(intent.getStringExtra(EXTRA_DAILY_VERSE_ID))
+            dailyHopeRequests.value = DailyHopeRequest(
+                sequence = (dailyHopeRequests.value?.sequence ?: 0) + 1,
+                verseId = intent.getStringExtra(EXTRA_DAILY_VERSE_ID),
+            )
             intent.removeExtra(EXTRA_OPEN_DAILY_HOPE)
+            intent.removeExtra(EXTRA_DAILY_VERSE_ID)
         }
     }
 
@@ -144,6 +160,7 @@ class MainActivity : ComponentActivity() {
 
     companion object {
         const val EXTRA_OPEN_DAILY_HOPE = "open_daily_hope"
+        const val EXTRA_DAILY_VERSE_ID = "daily_verse_id"
     }
 }
 

@@ -15,6 +15,8 @@ import com.aaronsedna.hopecards.model.DailyHopeRecord
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.ThemeName
 import com.aaronsedna.hopecards.model.Translation
+import com.aaronsedna.hopecards.model.Verse
+import java.time.LocalDate
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
@@ -42,6 +44,18 @@ class AppRepository(context: Context) {
     val cachedAdFree: Flow<Boolean> = dataStore.data.map { it[Keys.adFree] ?: false }.distinctUntilChanged()
 
     suspend fun currentSettings(): AppSettings = settings.first()
+
+    /** Persist before launching the dialog, so dismissing it does not prompt on every launch. */
+    suspend fun claimReminderPermissionPrompt(): Boolean {
+        var shouldPrompt = false
+        dataStore.edit { preferences ->
+            if (preferences[Keys.reminderPermissionRequested] != true) {
+                preferences[Keys.reminderPermissionRequested] = true
+                shouldPrompt = true
+            }
+        }
+        return shouldPrompt
+    }
     suspend fun currentFavorites(): Set<String> = favorites.first()
     suspend fun currentJournalEntries(): List<JournalEntry> = journalEntries.first()
 
@@ -140,6 +154,29 @@ class AppRepository(context: Context) {
     suspend fun getDailyHopeRecord(): DailyHopeRecord? =
         dataStore.data.map { decodeDailyHope(it[Keys.dailyHope]) }.firstValue()
 
+    /** The receiver and UI select one verse atomically for the user's local calendar day. */
+    suspend fun dailyHopeVerse(
+        verses: VerseRepository,
+        translation: Translation,
+        date: LocalDate = LocalDate.now(),
+    ): Verse {
+        // Load assets before taking the DataStore transaction.
+        verses.verses(translation)
+        lateinit var selected: Verse
+        dataStore.edit { preferences ->
+            val saved = decodeDailyHope(preferences[Keys.dailyHope])
+            selected = saved?.takeIf { it.date == date.toString() }
+                ?.let { verses.byId(it.verseId, translation) }
+                ?: verses.random(translation, saved?.verseId)
+            preferences[Keys.dailyHope] = JSONObject()
+                .put("date", date.toString())
+                .put("verseId", selected.id)
+                .put("translation", translation.id)
+                .toString()
+        }
+        return selected
+    }
+
     suspend fun setDailyHopeRecord(record: DailyHopeRecord) {
         dataStore.edit { preferences ->
             preferences[Keys.dailyHope] = JSONObject()
@@ -222,14 +259,14 @@ class AppRepository(context: Context) {
     private fun decodeSettings(preferences: Preferences): AppSettings =
         decodeSettings(preferences[Keys.settings])
 
-    private fun decodeSettings(json: String?): AppSettings = runCatching {
+    internal fun decodeSettings(json: String?): AppSettings = runCatching {
         val value = JSONObject(json ?: "{}")
         AppSettings(
             showDrawButton = value.optBoolean("showDrawButton", true),
             enableHaptics = value.optBoolean("enableHaptics", true),
-            dailyHopeReminderEnabled = value.optBoolean("dailyHopeReminderEnabled", false),
+            dailyHopeReminderEnabled = value.optBoolean("dailyHopeReminderEnabled", AppSettings().dailyHopeReminderEnabled),
             dailyHopeMusicEnabled = value.optBoolean("dailyHopeMusicEnabled", true),
-            dailyHopeReminderHour = value.optInt("dailyHopeReminderHour", 8).coerceIn(0, 23),
+            dailyHopeReminderHour = value.optInt("dailyHopeReminderHour", AppSettings().dailyHopeReminderHour).coerceIn(0, 23),
             dailyHopeReminderMinute = value.optInt("dailyHopeReminderMinute", 0).coerceIn(0, 59),
             themeName = ThemeName.fromId(value.optString("themeName", "classic")),
             preferredTranslation = Translation.fromId(value.optString("preferredTranslation", "bsb")),
@@ -318,6 +355,7 @@ class AppRepository(context: Context) {
         .toString()
 
     private object Keys {
+        val reminderPermissionRequested = booleanPreferencesKey("reminder_permission_requested")
         val migrated = booleanPreferencesKey("legacy_migrated")
         val settings = stringPreferencesKey(LEGACY_SETTINGS)
         val favorites = stringPreferencesKey(LEGACY_FAVORITES)

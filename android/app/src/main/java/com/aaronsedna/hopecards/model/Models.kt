@@ -68,9 +68,9 @@ enum class ThemeName(val id: String, val label: String, val description: String)
 data class AppSettings(
     val showDrawButton: Boolean = true,
     val enableHaptics: Boolean = true,
-    val dailyHopeReminderEnabled: Boolean = false,
+    val dailyHopeReminderEnabled: Boolean = true,
     val dailyHopeMusicEnabled: Boolean = true,
-    val dailyHopeReminderHour: Int = 8,
+    val dailyHopeReminderHour: Int = 6,
     val dailyHopeReminderMinute: Int = 0,
     val themeName: ThemeName = ThemeName.CLASSIC,
     val preferredTranslation: Translation = Translation.BSB,
@@ -101,15 +101,15 @@ data class BackupInfo(
 )
 
 enum class Destination(val title: String) {
-    HOME("Hope Cards"),
+    HOME("Draw a Verse"),
     DAILY("Daily Hope"),
-    VERSE_ART("Verse Art"),
-    FAVORITES("Favorites"),
-    JOURNAL("Journal"),
-    REMOVE_ADS("Remove Ads"),
+    VERSE_ART("Verse Gallery"),
+    FAVORITES("Saved Verses"),
+    JOURNAL("My Journal"),
+    REMOVE_ADS("Go Ad-Free"),
     SETTINGS("Settings"),
     PRIVACY("Privacy Policy"),
-    ABOUT("About"),
+    ABOUT("About Hope Cards"),
 }
 
 data class BillingState(

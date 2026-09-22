@@ -1,0 +1,73 @@
+[
+  {
+    "family": "lora",
+    "filename": "Lora[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/lora/Lora%5Bwght%5D.ttf",
+    "sourceGitBlobSha": "ee1914c3746140523de2940d267ec2215bd85d5b",
+    "downloadSha256": "822a6621ccbe8d97d20ac88c1c41f5615c9c2c202eaa75f272cd452aac6475a7",
+    "instanceAxes": {
+      "wght": 500
+    },
+    "file": "lora.ttf",
+    "sha256": "d03a47bfd61ee0ba7a6f0c7df3056a696adc209f87f612ba0328eb0c93eff78b"
+  },
+  {
+    "family": "dmsans",
+    "filename": "DMSans[opsz,wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz%2Cwght%5D.ttf",
+    "sourceGitBlobSha": "c672f98060af9b2c85fca704ebd5ad9a8717c1df",
+    "downloadSha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d",
+    "instanceAxes": {
+      "wght": 600,
+      "opsz": 36
+    },
+    "file": "dm_sans.ttf",
+    "sha256": "5858f3770b0c3ce6ebc264b0c190fa2bbc16b3ca05cbe45b247c5c8052b5e571"
+  },
+  {
+    "family": "oswald",
+    "filename": "Oswald[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/oswald/Oswald%5Bwght%5D.ttf",
+    "sourceGitBlobSha": "d1a3b9cb1325bf20b3a06ef9849d21c411212a3b",
+    "downloadSha256": "5b38c246e255a12f5712d640d56bcced0472466fc68983d2d0410ec0457c2817",
+    "instanceAxes": {
+      "wght": 500
+    },
+    "file": "oswald.ttf",
+    "sha256": "d48cb8fc2605196425c3c061bc293c0b236866a4e8034752cf2cac0adee8b0b2"
+  },
+  {
+    "family": "caveat",
+    "filename": "Caveat[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/Caveat%5Bwght%5D.ttf",
+    "sourceGitBlobSha": "f84acf2ce2d1b3329b194749530dbaec047e6df6",
+    "downloadSha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988",
+    "instanceAxes": {
+      "wght": 600
+    },
+    "file": "caveat.ttf",
+    "sha256": "856d6d4089a2496420920fea1c373c2a74263781ae279e5c6d079af1a4282b86"
+  },
+  {
+    "family": "manjari",
+    "filename": "Manjari-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/manjari/Manjari-Regular.ttf",
+    "sourceGitBlobSha": "f91af96ce1928cee89c07f28017a7978bdd7cb20",
+    "downloadSha256": "16460924696bfea2a2f71b4201d8786867c6413b548ecbd22bc6bfe55be90f95",
+    "instanceAxes": {},
+    "file": "manjari.ttf",
+    "sha256": "16460924696bfea2a2f71b4201d8786867c6413b548ecbd22bc6bfe55be90f95"
+  },
+  {
+    "family": "baloochettan2",
+    "filename": "BalooChettan2[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/baloochettan2/BalooChettan2%5Bwght%5D.ttf",
+    "sourceGitBlobSha": "4b483cc0701374d652a85df9f4af392ad42dde27",
+    "downloadSha256": "8f0de4f81b40d314a129c55a3a9e58411868ca9a452edb57537488853f46db86",
+    "instanceAxes": {
+      "wght": 500
+    },
+    "file": "baloo_chettan.ttf",
+    "sha256": "737aaa7d83b80f4c931790a420af6464f6d2debf485c941bf8494504a8d75104"
+  }
+]

@@ -180,15 +180,13 @@
     ]
   },
   {
-    "id": "2-corinthians-12-9",
-    "category": "Grace",
-    "verse": "അവൻ എന്നോടു: എന്റെ കൃപ നിനക്കുമതി; എന്റെ ശക്തി ബലഹീനതയിൽ തികഞ്ഞുവരുന്നു എന്നു പറഞ്ഞു. ആകയാൽ ക്രിസ്തുവിന്റെ ശക്തി എന്റെമേൽ ആവസിക്കേണ്ടതിന്നു ഞാൻ അതിസന്തോഷത്തോടെ എന്റെ ബലഹീനതകളിൽ പ്രശംസിക്കും.",
-    "reference": "2 Corinthians 12:9",
+    "id": "hebrews-4-15",
+    "category": "Comfort",
+    "verse": "നമുക്കുള്ള മഹാപുരോഹിതൻ നമ്മുടെ ബലഹീനതകളിൽ സഹതാപം കാണിപ്പാൻ കഴിയാത്തവനല്ല; പാപം ഒഴികെ സൎവ്വത്തിലും നമുക്കു തുല്യമായി പരീക്ഷിക്കപ്പെട്ടവനത്രേ നമുക്കുള്ളതു.",
+    "reference": "Hebrews 4:15",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "strength",
-      "weakness"
+      "comfort"
     ]
   },
   {
@@ -215,15 +213,13 @@
     ]
   },
   {
-    "id": "romans-8-38-39",
-    "category": "Hope",
-    "verse": "മരണത്തിന്നോ ജീവന്നോ ദൂതന്മാൎക്കോ വാഴ്ചകൾക്കോ അധികാരങ്ങൾക്കോ ഇപ്പോഴുള്ളതിന്നോ വരുവാനുള്ളതിന്നോ ഉയരത്തിന്നോ ആഴത്തിന്നോ മറ്റു യാതൊരു സൃഷ്ടിക്കോ നമ്മുടെ കൎത്താവായ യേശുക്രിസ്തുവിലുള്ള ദൈവസ്നേഹത്തിൽ നിന്നു നമ്മെ വേറുപിരിപ്പാൻ കഴികയില്ല എന്നു ഞാൻ ഉറെച്ചിരിക്കുന്നു.",
-    "reference": "Romans 8:38-39",
+    "id": "romans-8-32",
+    "category": "Love",
+    "verse": "സ്വന്തപുത്രനെ ആദരിക്കാതെ നമുക്കു എല്ലാവൎക്കും വേണ്ടി ഏല്പിച്ചുതന്നവൻ അവനോടുകൂടെ സകലവും നമുക്കു നല്കാതിരിക്കുമോ?",
+    "reference": "Romans 8:32",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "love",
-      "assurance"
+      "love"
     ]
   },
   {
@@ -371,15 +367,13 @@
     ]
   },
   {
-    "id": "1-john-3-1",
-    "category": "Love",
-    "verse": "കാണ്മിൻ, നാം ദൈവമക്കൾ എന്നു വിളിക്കപ്പെടുവാൻ പിതാവു നമുക്കു എത്ര വലിയ സ്നേഹം നല്കിയിരിക്കുന്നു; അങ്ങനെ തന്നേ നാം ആകുന്നു. ലോകം അവനെ അറിഞ്ഞിട്ടില്ലായ്കകൊണ്ടു നമ്മെയും അറിയുന്നില്ല.",
-    "reference": "1 John 3:1",
+    "id": "1-john-3-2",
+    "category": "Hope",
+    "verse": "പ്രിയമുള്ളവരേ, നാം ഇപ്പോൾ ദൈവമക്കൾ ആകുന്നു. നാം ഇന്നതു ആകും എന്നു ഇതുവരെ പ്രത്യക്ഷമായില്ല. അവൻ പ്രത്യക്ഷനാകുമ്പോൾ നാം അവനെ താൻ ഇരിക്കുംപോലെ തന്നേ കാണുന്നതാകകൊണ്ടു അവനോടു സദൃശന്മാർ ആകും എന്നു നാം അറിയുന്നു.",
+    "reference": "1 John 3:2",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "identity",
-      "children-of-god"
+      "hope"
     ]
   },
   {
@@ -443,14 +437,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-5-17",
+    "id": "1-thessalonians-5-16-18",
     "category": "Prayer",
-    "verse": "ഇടവിടാതെ പ്രാൎത്ഥിപ്പിൻ",
-    "reference": "1 Thessalonians 5:17",
+    "verse": "എപ്പോഴും സന്തോഷിപ്പിൻ; ഇടവിടാതെ പ്രാൎത്ഥിപ്പിൻ എല്ലാറ്റിന്നും സ്തോത്രം ചെയ്‌വിൻ; ഇതല്ലോ നിങ്ങളെക്കുറിച്ചു ക്രിസ്തുയേശുവിൽ ദൈവേഷ്ടം.",
+    "reference": "1 Thessalonians 5:16-18",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "prayer",
-      "devotion"
+      "prayer"
     ]
   },
   {
@@ -817,15 +810,13 @@
     ]
   },
   {
-    "id": "isaiah-43-2",
-    "category": "Comfort",
-    "verse": "നീ വെള്ളത്തിൽകൂടി കടക്കുമ്പോൾ ഞാൻ നിന്നോടുകൂടി ഇരിക്കും; നീ നദികളിൽകൂടി കടക്കുമ്പോൾ അവ നിന്റെമീതെ കവികയില്ല; നീ തീയിൽകൂടി നടന്നാൽ വെന്തു പോകയില്ല; അഗ്നിജ്വാല നിന്നെ ദഹിപ്പിക്കയുമില്ല.",
-    "reference": "Isaiah 43:2",
+    "id": "isaiah-41-13",
+    "category": "Courage",
+    "verse": "നിന്റെ ദൈവമായ യഹോവ എന്ന ഞാൻ നിന്റെ വലങ്കൈ പിടിച്ചു നിന്നോടു: ഭയപ്പെടേണ്ടാ, ഞാൻ നിന്നെ സഹായിക്കും എന്നു പറയുന്നു.",
+    "reference": "Isaiah 41:13",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "comfort",
-      "trials",
-      "presence"
+      "courage"
     ]
   },
   {
@@ -841,27 +832,23 @@
     ]
   },
   {
-    "id": "isaiah-54-10",
-    "category": "Love",
-    "verse": "പൎവ്വതങ്ങൾ മാറിപ്പോകും, കുന്നുകൾ നീങ്ങിപ്പോകും; എങ്കിലും എന്റെ ദയ നിന്നെ വിട്ടുമാറുകയില്ല; എന്റെ സമാധാനനിയമം നീങ്ങിപ്പോകയുമില്ല എന്നു നിന്നോടു കരുണയുള്ള യഹോവ അരുളിച്ചെയ്യുന്നു.",
-    "reference": "Isaiah 54:10",
+    "id": "isaiah-54-13",
+    "category": "Peace",
+    "verse": "നിന്റെ മക്കൾ എല്ലാവരും യഹോവയാൽ ഉപദേശിക്കപ്പെട്ടവരും നിന്റെ മക്കളുടെ സമാധാനം വലിയതും ആയിരിക്കും.",
+    "reference": "Isaiah 54:13",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "peace",
-      "mercy"
+      "peace"
     ]
   },
   {
-    "id": "lamentations-3-23",
-    "category": "Grace",
-    "verse": "അതു രാവിലെതോറും പുതിയതും നിന്റെ വിശ്വസ്ഥത വലിയതും ആകുന്നു.",
-    "reference": "Lamentations 3:23",
+    "id": "lamentations-3-22-23",
+    "category": "Hope",
+    "verse": "നാം മുടിഞ്ഞുപോകാതിരിക്കുന്നതു യഹോവയുടെ ദയ ആകുന്നു; അവന്റെ കരുണ തീൎന്നു പോയിട്ടില്ലല്ലോ; അതു രാവിലെതോറും പുതിയതും നിന്റെ വിശ്വസ്ഥത വലിയതും ആകുന്നു.",
+    "reference": "Lamentations 3:22-23",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "faithfulness",
-      "morning"
+      "hope"
     ]
   },
   {
@@ -877,16 +864,13 @@
     ]
   },
   {
-    "id": "galatians-6-18",
-    "category": "Grace",
-    "verse": "സഹോദരന്മാരേ, നമ്മുടെ കൎത്താവായ യേശുക്രിസ്തുവിന്റെ കൃപ നിങ്ങളുടെ ആത്മാവിനോടുകൂടെ ഇരിക്കുമാറാകട്ടെ. ആമേൻ.",
-    "reference": "Galatians 6:18",
+    "id": "galatians-6-9",
+    "category": "Hope",
+    "verse": "നന്മ ചെയ്കയിൽ നാം മടുത്തുപോകരുതു; തളൎന്നുപോകാഞ്ഞാൽ തക്കസമയത്തു നാം കൊയ്യും.",
+    "reference": "Galatians 6:9",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
@@ -987,15 +971,13 @@
     ]
   },
   {
-    "id": "1-corinthians-10-13",
-    "category": "Strength",
-    "verse": "മനുഷ്യൎക്കു നടപ്പല്ലാത്ത പരീക്ഷ നിങ്ങൾക്കു നേരിട്ടിട്ടില്ല; ദൈവം വിശ്വസ്തൻ; നിങ്ങൾക്കു കഴിയുന്നതിന്നു മീതെ പരീക്ഷ നേരിടുവാൻ സമ്മതിക്കാതെ നിങ്ങൾക്കു സഹിപ്പാൻ കഴിയേണ്ടതിന്നു പരീക്ഷയോടുകൂടെ അവൻ പോക്കുവഴിയും ഉണ്ടാക്കും.",
-    "reference": "1 Corinthians 10:13",
+    "id": "1-corinthians-1-9",
+    "category": "Faith",
+    "verse": "തന്റെ പുത്രനും നമ്മുടെ കൎത്താവായ യേശുക്രിസ്തുവിന്റെ കൂട്ടായ്മയിലേക്കു നിങ്ങളെ വിളിച്ചിരിക്കുന്ന ദൈവം വിശ്വസ്തൻ.",
+    "reference": "1 Corinthians 1:9",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "strength",
-      "testing",
-      "faithfulness"
+      "faith"
     ]
   },
   {
@@ -1035,15 +1017,12 @@
     ]
   },
   {
-    "id": "colossians-4-12",
-    "category": "Grace",
-    "verse": "നിങ്ങളിൽ ഒരുത്തനായി ക്രിസ്തുയേശുവിന്റെ ദാസനായ എപ്പഫ്രാസ് നിങ്ങളെ വന്ദനം ചെയ്യുന്നു; നിങ്ങൾ തികഞ്ഞവരും ദൈവഹിതം സംബന്ധിച്ചൊക്കെയും പൂൎണ്ണനിശ്ചയമുള്ളവരുമായി നില്ക്കേണ്ടതിന്നു അവൻ പ്രാൎത്ഥനയിൽ നിങ്ങൾക്കു വേണ്ടി എപ്പോഴും പോരാടുന്നു.",
-    "reference": "Colossians 4:12",
+    "id": "colossians-3-12",
+    "category": "Love",
+    "verse": "അതുകൊണ്ടു ദൈവത്തിന്റെ വൃതന്മാരും വിശുദ്ധന്മാരും പ്രിയരുമായി മനസ്സലിവു, ദയ, താഴ്മ, സൌമ്യത, ദീൎഘക്ഷമ എന്നിവ ധരിച്ചുകൊണ്ടു",
+    "reference": "Colossians 3:12",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -1108,16 +1087,13 @@
     ]
   },
   {
-    "id": "colossians-3-16",
-    "category": "Wisdom",
-    "verse": "സങ്കീൎത്തനങ്ങളാലും സ്തുതികളാലും ആത്മികഗീതങ്ങളാലും തമ്മിൽ പഠിപ്പിച്ചും ബുദ്ധിയുപദേശിച്ചും നന്ദിയോടെ നിങ്ങളുടെ ഹൃദയങ്ങളിൽ ദൈവത്തിന്നു പാടിയും ഇങ്ങനെ ക്രിസ്തുവിന്റെ വചനം ഐശ്വൎയ്യമായി സകലജ്ഞാനത്തോടുംകൂടെ നിങ്ങളിൽ വസിക്കട്ടെ.",
-    "reference": "Colossians 3:16",
+    "id": "colossians-3-14",
+    "category": "Love",
+    "verse": "എല്ലാറ്റിന്നും മീതെ സമ്പൂൎണ്ണതയുടെ ബന്ധമായ സ്നേഹം ധരിപ്പിൻ.",
+    "reference": "Colossians 3:14",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "truth"
+      "love"
     ]
   },
   {
@@ -1146,15 +1122,13 @@
     ]
   },
   {
-    "id": "joshua-24-15",
-    "category": "Faith",
-    "verse": "യഹോവയെ സേവിക്കുന്നതു നന്നല്ലെന്നു നിങ്ങൾക്കു തോന്നുന്നെങ്കിൽ നദിക്കക്കരെവെച്ചു നിങ്ങളുടെ പിതാക്കന്മാർ സേവിച്ച ദേവന്മാരെയോ നിങ്ങൾ പാൎത്തുവരുന്ന ദേശത്തിലെ അമോൎയ്യരുടെ ദേവന്മാരെയോ ആരെ സേവിക്കും എന്നു ഇന്നു തിരഞ്ഞെടുത്തുകൊൾവിൻ. ഞാനും എന്റെ കുടുംബവുമോ, ഞങ്ങൾ യഹോവയെ സേവിക്കും.",
-    "reference": "Joshua 24:15",
+    "id": "psalms-31-3",
+    "category": "Trust",
+    "verse": "നീ എന്റെ പാറയും എന്റെ കോട്ടയുമല്ലോ; നിന്റെ നാമംനിമിത്തം എന്നെ നടത്തി പാലിക്കേണമേ.",
+    "reference": "Psalms 31:3",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "choice",
-      "service"
+      "trust"
     ]
   },
   {
@@ -1206,15 +1180,13 @@
     ]
   },
   {
-    "id": "nehemiah-8-10",
+    "id": "psalms-92-4",
     "category": "Joy",
-    "verse": "അനന്തരം അവർ അവരോടു: നിങ്ങൾ ചെന്നു മൃഷ്ടാന്നഭോജനവും മധുരപാനീയവും കഴിച്ചു തങ്ങൾക്കായി വട്ടംകൂട്ടീട്ടില്ലാത്തവൎക്കു പകൎച്ച കൊടുത്തയപ്പിൻ; ഈ ദിവസം നമ്മുടെ കൎത്താവിന്നു വിശുദ്ധമാകുന്നു; നിങ്ങൾ ദുഃഖിക്കരുതു; യഹോവയിങ്കലെ സന്തോഷം നിങ്ങളുടെ ബലം ആകുന്നുവല്ലോ എന്നു പറഞ്ഞു.",
-    "reference": "Nehemiah 8:10",
+    "verse": "യഹോവേ, നിന്റെ പ്രവൃത്തികൊണ്ടു നീ എന്നെ സന്തോഷിപ്പിക്കുന്നു; ഞാൻ നിന്റെ കൈകളുടെ പ്രവൃത്തികളെ കുറിച്ചു ഘോഷിച്ചുല്ലസിക്കുന്നു.",
+    "reference": "Psalms 92:4",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "joy",
-      "strength",
-      "lord"
+      "joy"
     ]
   },
   {
@@ -1387,16 +1359,13 @@
     ]
   },
   {
-    "id": "jeremiah-3-23",
-    "category": "Hope",
-    "verse": "കുന്നുകളും പൎവ്വതങ്ങളിലെ കോലാഹലവും വ്യൎത്ഥം; ഞങ്ങളുടെ ദൈവമായ യഹോവയിൽ മാത്രമേ യിസ്രായേലിന്നു രക്ഷയുള്ളു.",
-    "reference": "Jeremiah 3:23",
+    "id": "psalms-95-1",
+    "category": "Joy",
+    "verse": "വരുവിൻ, നാം യഹോവെക്കു ഉല്ലസിച്ചു ഘോഷിക്ക; നമ്മുടെ രക്ഷയുടെ പാറെക്കു ആൎപ്പിടുക.",
+    "reference": "Psalms 95:1",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "joy"
     ]
   },
   {
@@ -1460,16 +1429,13 @@
     ]
   },
   {
-    "id": "acts-20-21",
-    "category": "Trust",
-    "verse": "ദൈവത്തിങ്കലേക്കുള്ള മാനസാന്തരവും നമ്മുടെ കൎത്താവായ യേശുക്രിസ്തുവിലുള്ള വിശ്വാസവും യെഹൂദന്മാൎക്കും യവനന്മാൎക്കും സാക്ഷീകരിച്ചു എന്നും നിങ്ങൾ അറിയുന്നുവല്ലോ.",
-    "reference": "Acts 20:21",
+    "id": "romans-12-12",
+    "category": "Hope",
+    "verse": "ആശയിൽ സന്തോഷിപ്പിൻ;",
+    "reference": "Romans 12:12",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -1509,16 +1475,13 @@
     ]
   },
   {
-    "id": "1-thessalonians-2-19",
-    "category": "Hope",
-    "verse": "നമ്മുടെ കൎത്താവായ യേശുവിന്റെ മുമ്പാകെ അവന്റെ പ്രത്യക്ഷതയിൽ ഞങ്ങളുടെ ആശയോ സന്തോഷമോ പ്രശംസാകിരീടമോ ആർ ആകുന്നു? നിങ്ങളും അല്ലയോ?",
-    "reference": "1 Thessalonians 2:19",
+    "id": "1-thessalonians-5-11",
+    "category": "Comfort",
+    "verse": "ആകയാൽ നിങ്ങൾ ചെയ്തുവരുന്നതുപോലെ അന്യോന്യം പ്രബോധിപ്പിച്ചും തമ്മിൽ ആത്മിക വൎദ്ധനവരുത്തിയും പോരുവിൻ.",
+    "reference": "1 Thessalonians 5:11",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -1570,16 +1533,13 @@
     ]
   },
   {
-    "id": "philippians-2-11",
+    "id": "philippians-1-6",
     "category": "Hope",
-    "verse": "എല്ലാനാവും “യേശുക്രിസ്തു കൎത്താവു” എന്നു പിതാവായ ദൈവത്തിന്റെ മഹത്വത്തിന്നായി ഏറ്റുപറകയും ചെയ്യേണ്ടിവരും.",
-    "reference": "Philippians 2:11",
+    "verse": "നിങ്ങളിൽ നല്ല പ്രവൃത്തിയെ ആരംഭിച്ചവൻ യേശുക്രിസ്തുവിന്റെ നാളോളം അതിനെ തികെക്കും എന്നു ഉറപ്പായി വിശ്വസിച്ചുമിരിക്കുന്നു.",
+    "reference": "Philippians 1:4",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1608,15 +1568,13 @@
     ]
   },
   {
-    "id": "jeremiah-17-8",
-    "category": "Hope",
-    "verse": "അവൻ വെള്ളത്തിന്നരികെ നട്ടിരിക്കുന്നതും ആറ്റരികെ വേരൂന്നിയിരിക്കുന്നതുമായ വൃക്ഷംപോലെയാകും; ഉഷ്ണം തട്ടുമ്പോൾ അതു പേടിക്കയില്ല; അതിന്റെ ഇല പച്ചയായിരിക്കും; വരൾച്ചയുള്ള കാലത്തും വാട്ടം തട്ടാതെ ഫലം കായിച്ചുകൊണ്ടിരിക്കും.",
-    "reference": "Jeremiah 17:8",
+    "id": "psalms-92-12",
+    "category": "Strength",
+    "verse": "നീതിമാൻ പനപോലെ തഴെക്കും; ലെബാനോനിലെ ദേവദാരുപോലെ വളരും.",
+    "reference": "Psalms 92:12",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "growth",
-      "fruit"
+      "strength"
     ]
   },
   {
@@ -1680,16 +1638,13 @@
     ]
   },
   {
-    "id": "romans-10-1",
-    "category": "Hope",
-    "verse": "സഹോദരന്മാരേ, അവർ രക്ഷിക്കപ്പെടേണം എന്നു തന്നേ എന്റെ ഹൃദയവാഞ്ഛയും അവൎക്കുവേണ്ടി ദൈവത്തോടുള്ള യാചനയും ആകുന്നു.",
-    "reference": "Romans 10:1",
+    "id": "romans-12-10",
+    "category": "Love",
+    "verse": "സഹോദരപ്രീതിയിൽ തമ്മിൽ സ്ഥായിപൂണ്ടു ബഹുമാനിക്കുന്നതിൽ അന്യോന്യം മുന്നിട്ടു കൊൾവിൻ.",
+    "reference": "Romans 12:10",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -1705,16 +1660,13 @@
     ]
   },
   {
-    "id": "romans-15-6",
+    "id": "romans-15-4",
     "category": "Hope",
-    "verse": "സ്ഥിരതയും ആശ്വാസവും നല്കുന്ന ദൈവം നിങ്ങൾക്കു ക്രിസ്തുയേശുവിന്നു അനുരൂപമായി തമ്മിൽ ഏകചിന്തയോടിരിപ്പാൻ കൃപ നല്കുമാറാകട്ടെ.",
-    "reference": "Romans 15:6",
+    "verse": "എന്നാൽ മുന്നെഴുതിയിരിക്കുന്നതു ഒക്കെയും നമ്മുടെ ഉപദേശത്തിന്നായിട്ടു, നമുക്കു തിരുവെഴുത്തുകളാൽ ഉളവാകുന്ന സ്ഥിരതയാലും ആശ്വാസത്താലും പ്രത്യാശ ഉണ്ടാകേണ്ടതിന്നു തന്നേ എഴുതിയിരിക്കുന്നു.",
+    "reference": "Romans 15:4",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
@@ -1803,16 +1755,13 @@
     ]
   },
   {
-    "id": "isaiah-30-15",
+    "id": "isaiah-32-17",
     "category": "Peace",
-    "verse": "യിസ്രായേലിന്റെ പരിശുദ്ധനായി യഹോവയായ കൎത്താവു ഇപ്രകാരം അരുളിച്ചെയ്യുന്നു: മനംതിരിഞ്ഞു അടങ്ങിയിരുന്നാൽ നിങ്ങൾ രക്ഷിക്കപ്പെടും. വിശ്രമിക്കുന്നതിലും ആശ്രയിക്കുന്നതിലും നിങ്ങളുടെ ബലം; എങ്കിലും നിങ്ങൾക്കു മനസ്സാകാതെ: അല്ല;",
-    "reference": "Isaiah 30:15",
+    "verse": "നീതിയുടെ പ്രവൃത്തി സമാധാനവും നീതിയുടെ ഫലം ശാശ്വതവിശ്രാമവും നിൎഭയതയും ആയിരിക്കും.",
+    "reference": "Isaiah 32:17",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
+      "peace"
     ]
   },
   {
@@ -1841,16 +1790,13 @@
     ]
   },
   {
-    "id": "1-corinthians-8-6",
-    "category": "Hope",
-    "verse": "പിതാവായ ഏക ദൈവമേ നമുക്കുള്ളു; അവൻ സകലത്തിന്നും കാരണഭൂതനും നാം അവന്നായി ജീവിക്കേണ്ടതും ആകുന്നു. യേശുക്രിസ്തു എന്ന ഏക കൎത്താവും നമുക്കു ഉണ്ടു; അവൻ മുഖാന്തരം സകലവും അവൻ മുഖാന്തരം നാമും ആകുന്നു.",
-    "reference": "1 Corinthians 8:6",
+    "id": "1-corinthians-16-13",
+    "category": "Courage",
+    "verse": "ഉണൎന്നിരിപ്പിൻ; വിശ്വാസത്തിൽ നിലനില്പിൻ; പുരുഷത്വം കാണിപ്പിൻ; ശക്തിപ്പെടുവിൻ.",
+    "reference": "1 Corinthians 16:13",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "courage"
     ]
   },
   {
@@ -1878,16 +1824,13 @@
     ]
   },
   {
-    "id": "philemon-1-25",
-    "category": "Grace",
-    "verse": "നമ്മുടെ കൎത്താവായ യേശുക്രിസ്തുവിന്റെ കൃപ നിങ്ങളുടെ ആത്മാവോടുകൂടെ ഇരിക്കുമാറാകട്ടെ. ആമേൻ.",
-    "reference": "Philemon 1:25",
+    "id": "2-thessalonians-3-16",
+    "category": "Peace",
+    "verse": "സമാധാനത്തിന്റെ കൎത്താവായവൻ താൻ നിങ്ങൾക്കു എല്ലായ്പോഴും സകലവിധത്തിലും സമാധാനം നല്കുമാറാകട്ടെ; കൎത്താവു നിങ്ങളെല്ലാവരോടും കൂടെ ഇരിക്കുമാറാകട്ടെ.",
+    "reference": "2 Thessalonians 3:16",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "peace"
     ]
   },
   {
@@ -1905,7 +1848,7 @@
   {
     "id": "1-john-1-9",
     "category": "Grace",
-    "verse": "നമ്മുടെ പാപങ്ങളെ ഏറ്റുപറയുന്നു എങ്കിൽ അവൻ നമ്മോടു പാപങ്ങളെ ക്ഷമിച്ചു സകല അനീതിയും പോക്കി നമ്മെ ശുദ്ധീകരിപ്പാൻ തക്കവണ്ണം വിശ്വസ്തനും നീതിമാനും ആകുന്നു.",
+    "verse": "നമ്മുടെ പാപങ്ങളെ ഏറ്റുപറയുന്നു എങ്കിൽ അവൻ നമ്മോടു പാപങ്ങളെ ക്ഷമിച്ചു സകലഅനീതിയും പോക്കി നമ്മെ ശുദ്ധീകരിപ്പാൻ തക്കവണ്ണം വിശ്വസ്തനും നീതിമാനും ആകുന്നു.",
     "reference": "1 John 1:9",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
@@ -1966,41 +1909,33 @@
     ]
   },
   {
-    "id": "isaiah-25-9",
+    "id": "isaiah-40-8",
     "category": "Hope",
-    "verse": "അന്നാളിൽ: ഇതാ, നമ്മുടെ ദൈവം; അവനെയത്രേ നാം കാത്തിരുന്നതു; അവൻ നമ്മെ രക്ഷിക്കും; അവൻ തന്നേ യഹോവ; അവനെയത്രേ നാം കാത്തിരുന്നതു; അവന്റെ രക്ഷയിൽ നമുക്കു ആനന്ദിച്ചു സന്തോഷിക്കാം എന്നു അവർ പറയും.",
-    "reference": "Isaiah 25:9",
+    "verse": "പുല്ലുണങ്ങുന്നു, പൂ വാടുന്നു; നമ്മുടെ ദൈവത്തിന്റെ വചനമോ എന്നേക്കും നിലനില്ക്കും.",
+    "reference": "Isaiah 40:8",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "hope"
     ]
   },
   {
-    "id": "psalms-108-7",
-    "category": "Hope",
-    "verse": "ദൈവം തന്റെ വിശുദ്ധിയിൽ അരുളിച്ചെയ്തതുകൊണ്ടു ഞാൻ ആനന്ദിക്കും; ഞാൻ ശെഖേമിനെ വിഭാഗിച്ചു സുക്കോത്ത് താഴ്വരയെ അളക്കും.",
-    "reference": "Psalms 108:7",
+    "id": "psalms-33-21",
+    "category": "Joy",
+    "verse": "അവന്റെ വിശുദ്ധനാമത്തിൽ നാം ആശ്രയിക്കയാൽ നമ്മുടെ ഹൃദയം അവനിൽ സന്തോഷിക്കും.",
+    "reference": "Psalms 33:21",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting",
-      "wisdom"
+      "joy"
     ]
   },
   {
-    "id": "psalms-109-20",
+    "id": "psalms-33-22",
     "category": "Hope",
-    "verse": "ഇതു എന്റെ എതിരാളികൾക്കും എനിക്കു വിരോധമായി ദോഷം പറയുന്നവൎക്കും യഹോവ കൊടുക്കുന്ന പ്രതിഫലം ആകുന്നു.",
-    "reference": "Psalms 109:20",
+    "verse": "യഹോവേ, ഞങ്ങൾ നിങ്കൽ പ്രത്യാശവെക്കുന്നതുപോലെ നിന്റെ ദയ ഞങ്ങളുടെമേൽ ഉണ്ടാകുമാറാകട്ടെ.",
+    "reference": "Psalms 33:22",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "waiting"
+      "hope"
     ]
   },
   {
@@ -2299,16 +2234,13 @@
     ]
   },
   {
-    "id": "daniel-10-19",
-    "category": "Courage",
-    "verse": "ഏറ്റവും പ്രിയപുരുഷാ, ഭയപ്പെടേണ്ടാ; നിനക്കു സമാധാനം! ബലപ്പെട്ടിരിക്ക, ബലപ്പെട്ടിരിക്ക എന്നു പറഞ്ഞു; അവൻ എന്നോടു സംസാരിച്ചപ്പോൾ ഞാൻ ബലപ്പെട്ടു: യജമാനനേ, സംസാരിക്കേണമേ; നീ എന്നെ ബലപ്പെടുത്തിയിരിക്കുന്നുവല്ലോ എന്നു പറഞ്ഞു.",
-    "reference": "Daniel 10:19",
+    "id": "psalms-138-3",
+    "category": "Strength",
+    "verse": "ഞാൻ വിളിച്ചപേക്ഷിച്ച നാളിൽ നീ എനിക്കുത്തരം അരുളി; എന്റെ ഉള്ളിൽ ബലം നല്കി എന്നെ ധൈൎയ്യപ്പെടുത്തിയിരിക്കുന്നു.",
+    "reference": "Psalms 138:3",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "courage",
-      "strength",
-      "fear",
-      "trust"
+      "strength"
     ]
   },
   {
@@ -2377,54 +2309,43 @@
     ]
   },
   {
-    "id": "2-corinthians-9-14",
+    "id": "ephesians-4-32",
     "category": "Love",
-    "verse": "നിങ്ങൾക്കു ലഭിച്ച അതിമഹത്തായ ദൈവകൃപനിമിത്തം അവർ നിങ്ങളെ കാണ്മാൻ വാഞ്ഛിച്ചു നിങ്ങൾക്കു വേണ്ടി പ്രാൎത്ഥിക്കും.",
-    "reference": "2 Corinthians 9:14",
+    "verse": "നിങ്ങൾ തമ്മിൽ ദയയും മനസ്സലിവുമുള്ളവരായി ദൈവം ക്രിസ്തുവിൽ നിങ്ങളോടു ക്ഷമിച്ചതുപോലെ അന്യോന്യം ക്ഷമിപ്പിൻ.",
+    "reference": "Ephesians 4:32",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "love"
     ]
   },
   {
-    "id": "psalms-31-6",
-    "category": "Hope",
-    "verse": "മിത്ഥ്യാമൂൎത്തികളെ സേവിക്കുന്നവരെ ഞാൻ പകെക്കുന്നു; ഞാനോ യഹോവയിൽ ആശ്രയിക്കുന്നു.",
-    "reference": "Psalms 31:6",
-    "translation": "Sathyavedapusthakam (1910)",
-    "tags": [
-      "hope",
-      "promise",
-      "waiting"
-    ]
-  },
-  {
-    "id": "psalms-132-13",
+    "id": "psalms-62-8",
     "category": "Trust",
-    "verse": "യഹോവ സീയോനെ തിരഞ്ഞെടുക്കയും അതിനെ തന്റെ വാസസ്ഥലമായി ഇച്ഛിക്കയും ചെയ്തു.",
-    "reference": "Psalms 132:13",
+    "verse": "ജനമേ, എല്ലാകാലത്തും അവനിൽ ആശ്രയിപ്പിൻ; നിങ്ങളുടെ ഹൃദയം അവന്റെ മുമ്പിൽ പകരുവിൻ; ദൈവം നമുക്കു സങ്കേതമാകുന്നു.സേലാ.",
+    "reference": "Psalms 62:8",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "trust"
     ]
   },
   {
-    "id": "psalms-132-8",
-    "category": "Trust",
-    "verse": "യഹോവേ, നീ നിന്റെ ബലത്തിന്റെ പെട്ടകവുമായി നിന്റെ വിശ്രാമത്തിലേക്കു എഴുന്നെള്ളേണമേ.",
-    "reference": "Psalms 132:8",
+    "id": "psalms-91-1",
+    "category": "Comfort",
+    "verse": "അത്യുന്നതന്റെ മറവിൽ വസിക്കയും സൎവ്വശക്തന്റെ നിഴലിൻ കീഴിൽ പാൎക്കയും ചെയ്യുന്നവൻ",
+    "reference": "Psalms 91:1",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
+    ]
+  },
+  {
+    "id": "psalms-63-7",
+    "category": "Comfort",
+    "verse": "നീ എനിക്കു സഹായമായിത്തീൎന്നുവല്ലോ; നിന്റെ ചിറകിൻ നിഴലിൽ ഞാൻ ഘോഷിച്ചാനന്ദിക്കുന്നു.",
+    "reference": "Psalms 63:7",
+    "translation": "Sathyavedapusthakam (1910)",
+    "tags": [
+      "comfort"
     ]
   },
   {
@@ -2467,16 +2388,13 @@
     ]
   },
   {
-    "id": "psalms-30-7",
-    "category": "Trust",
-    "verse": "യഹോവേ, നിന്റെ പ്രസാദത്താൽ നീ എന്റെ പൎവ്വതത്തെ ഉറെച്ചു നില്ക്കുമാറാക്കി; നീ നിന്റെ മുഖത്തെ മറെച്ചു, ഞാൻ ഭ്രമിച്ചുപോയി.",
-    "reference": "Psalms 30:7",
+    "id": "psalms-94-18",
+    "category": "Comfort",
+    "verse": "എന്റെ കാൽ വഴുതുന്നു എന്നു ഞാൻ പറഞ്ഞപ്പോൾ യഹോവേ, നിന്റെ ദയ എന്നെ താങ്ങി.",
+    "reference": "Psalms 94:18",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "strength"
+      "comfort"
     ]
   },
   {
@@ -2545,53 +2463,42 @@
     ]
   },
   {
-    "id": "psalms-61-7",
-    "category": "Trust",
-    "verse": "അവൻ എന്നേക്കും ദൈവസന്നിധിയിൽ വസിക്കും; അവനെ പരിപാലിക്കേണ്ടതിന്നു ദയയും വിശ്വസ്തതയും കല്പിക്കേണമേ,",
-    "reference": "Psalms 61:7",
+    "id": "psalms-61-3",
+    "category": "Strength",
+    "verse": "നീ എനിക്കൊരു സങ്കേതവും ശത്രുവിന്റെ നേരെ ഉറപ്പുള്ള ഗോപുരവും ആയിരിക്കുന്നുവല്ലോ.",
+    "reference": "Psalms 61:3",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "grace"
+      "strength"
     ]
   },
   {
-    "id": "philippians-4-21",
-    "category": "Grace",
-    "verse": "ക്രിസ്തു യേശുവിൽ ഓരോ വിശുദ്ധനെയും വന്ദനം ചെയ്‌വിൻ. എന്നോടുകൂടെയുള്ള സഹോദരന്മാർ നിങ്ങളെ വന്ദനം ചെയ്യുന്നു.",
-    "reference": "Philippians 4:21",
+    "id": "philippians-4-19",
+    "category": "Hope",
+    "verse": "എന്റെ ദൈവമോ നിങ്ങളുടെ ബുദ്ധിമുട്ടു ഒക്കെയും മഹത്വത്തോടെ തന്റെ ധനത്തിന്നൊത്തവണ്ണം ക്രിസ്തുയേശുവിൽ പൂൎണ്ണമായി തീൎത്തുതരും.",
+    "reference": "Philippians 4:19",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "hope"
     ]
   },
   {
-    "id": "psalms-84-9",
-    "category": "Trust",
-    "verse": "ഞങ്ങളുടെ പരിചയായ ദൈവമേ, നോക്കേണമേ; നിന്റെ അഭിഷിക്തന്റെ മുഖത്തെ കടാക്ഷിക്കേണമേ;",
-    "reference": "Psalms 84:9",
+    "id": "psalms-84-5",
+    "category": "Strength",
+    "verse": "ബലം നിന്നിൽ ഉള്ള മനുഷ്യൻ ഭാഗ്യവാൻ; ഇങ്ങിനെയുള്ളവരുടെ മനസ്സിൽ സീയോനിലേക്കുള്ള പെരുവഴികൾ ഉണ്ടു.",
+    "reference": "Psalms 84:5",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge"
+      "strength"
     ]
   },
   {
-    "id": "isaiah-30-29",
-    "category": "Trust",
-    "verse": "നിങ്ങൾ ഉത്സവാഘോഷരാത്രിയിൽ എന്നപോലെ പാട്ടുപാടുകയും യഹോവയുടെ പൎവ്വതത്തിൽ യിസ്രായേലിൻ പാറയായവന്റെ അടുക്കൽ ചെല്ലേണ്ടതിന്നു കുഴലോടുകൂടെ പോകുംപോലെ ഹൃദയപൂൎവ്വം സന്തോഷിക്കയും ചെയ്യും.",
-    "reference": "Isaiah 30:29",
+    "id": "psalms-95-2",
+    "category": "Joy",
+    "verse": "നാം സ്തോത്രത്തോടെ അവന്റെ സന്നിധിയിൽ ചെല്ലുക; സങ്കീൎത്തനങ്ങളോടെ അവന്നു ഘോഷിക്ക.",
+    "reference": "Psalms 95:2",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
       "joy"
     ]
   },
@@ -2609,16 +2516,13 @@
     ]
   },
   {
-    "id": "psalms-115-12",
-    "category": "Trust",
-    "verse": "യഹോവ നമ്മെ ഓൎത്തിരിക്കുന്നു; അവൻ അനുഗ്രഹിക്കും; അവൻ യിസ്രായേൽഗൃഹത്തെ അനുഗ്രഹിക്കും; അവൻ അഹരോൻഗൃഹത്തെ അനുഗ്രഹിക്കും.",
-    "reference": "Psalms 115:12",
+    "id": "psalms-112-5",
+    "category": "Love",
+    "verse": "കൃപതോന്നി വായ്പകൊടുക്കുന്നവൻ ശുഭമായിരിക്കും; വ്യവഹാരത്തിൽ അവൻ തന്റെ കാൎയ്യം നേടും.",
+    "reference": "Psalms 112:5",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "joy"
+      "love"
     ]
   },
   {
@@ -2683,16 +2587,13 @@
     ]
   },
   {
-    "id": "psalms-132-5",
-    "category": "Trust",
-    "verse": "ഞാൻ എന്റെ കണ്ണിന്നു ഉറക്കവും എന്റെ കൺപോളെക്കു മയക്കവും കൊടുക്കയില്ല.",
-    "reference": "Psalms 132:5",
+    "id": "psalms-32-7",
+    "category": "Comfort",
+    "verse": "നീ എനിക്കു മറവിടമാകുന്നു; നീ എന്നെ കഷ്ടത്തിൽനിന്നു സൂക്ഷിക്കും; രക്ഷയുടെ ഉല്ലാസഘോഷംകൊണ്ടു നീ എന്നെ ചുറ്റിക്കൊള്ളും.സേലാ.",
+    "reference": "Psalms 32:7",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "confidence",
-      "refuge",
-      "peace"
+      "comfort"
     ]
   },
   {
@@ -2733,27 +2634,23 @@
     ]
   },
   {
-    "id": "psalms-10-11",
-    "category": "Peace",
-    "verse": "ദൈവം മറന്നിരിക്കുന്നു, അവൻ തന്റെ മുഖം മറെച്ചിരിക്കുന്നു; അവൻ ഒരുനാളും കാണുകയില്ല എന്നു അവൻ ഹൃദയത്തിൽ പറയുന്നു.",
-    "reference": "Psalms 10:11",
+    "id": "psalms-9-10",
+    "category": "Trust",
+    "verse": "നിന്റെ നാമത്തെ അറിയുന്നവർ നിങ്കൽ ആശ്രയിക്കും; യഹോവേ, നിന്നെ അന്വേഷിക്കുന്നവരെ നീ ഉപേക്ഷിക്കുന്നില്ലല്ലോ.",
+    "reference": "Psalms 9:10",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "trust"
     ]
   },
   {
-    "id": "psalms-10-3",
-    "category": "Peace",
-    "verse": "ദുഷ്ടൻ തന്റെ മനോരഥത്തിൽ പ്രശംസിക്കുന്നു; ദുരാഗ്രഹി യഹോവയെ ത്യജിച്ചു നിന്ദിക്കുന്നു.",
-    "reference": "Psalms 10:3",
+    "id": "psalms-9-9",
+    "category": "Comfort",
+    "verse": "യഹോവ പീഡിതന്നു ഒരു അഭയസ്ഥാനം; കഷ്ടകാലത്തു ഒരഭയസ്ഥാനം തന്നേ.",
+    "reference": "Psalms 9:9",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2808,27 +2705,22 @@
     ]
   },
   {
-    "id": "psalms-125-5",
-    "category": "Peace",
-    "verse": "എന്നാൽ വളഞ്ഞവഴികളിലേക്കു തിരിയുന്നവരെ യഹോവ ദുഷ്പ്രവൃത്തിക്കാരോടുകൂടെ പോകുമാറാക്കട്ടെ. യിസ്രായേലിന്മേൽ സമാധാനം വരുമാറാകട്ടെ.",
-    "reference": "Psalms 125:5",
+    "id": "proverbs-4-18",
+    "category": "Hope",
+    "verse": "നീതിമാന്മാരുടെ പാതയോ പ്രഭാതത്തിന്റെ വെളിച്ചംപോലെ; അതു നട്ടുച്ചവരെ അധികമധികം ശോഭിച്ചു വരുന്നു.",
+    "reference": "Proverbs 4:18",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "hope"
     ]
   },
   {
-    "id": "philippians-1-8",
-    "category": "Grace",
-    "verse": "ക്രിസ്തുയേശുവിന്റെ ആൎദ്രതയോടെ ഞാൻ നിങ്ങളെ എല്ലാവരെയും കാണ്മാൻ എത്ര വാഞ്ഛിക്കുന്നു എന്നതിന്നു ദൈവം സാക്ഷി.",
-    "reference": "Philippians 1:8",
+    "id": "philippians-1-9",
+    "category": "Love",
+    "verse": "നിങ്ങളുടെ സ്നേഹം മേല്ക്കുമേൽ പരിജ്ഞാനത്തിലും സകലവിവേകത്തിലും വൎദ്ധിച്ചു വന്നിട്ടു",
+    "reference": "Philippians 1:9",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
       "love"
     ]
   },
@@ -2846,15 +2738,13 @@
     ]
   },
   {
-    "id": "psalms-143-4",
-    "category": "Peace",
-    "verse": "ആകയാൽ എന്റെ മനം എന്റെ ഉള്ളിൽ വിഷാദിച്ചിരിക്കുന്നു; എന്റെ ഹൃദയം എന്റെ ഉള്ളിൽ സ്തംഭിച്ചിരിക്കുന്നു.",
-    "reference": "Psalms 143:4",
+    "id": "psalms-119-50",
+    "category": "Comfort",
+    "verse": "നിന്റെ വചനം എന്നെ ജീവിപ്പിച്ചിരിക്കുന്നതു എന്റെ കഷ്ടതയിൽ എനിക്കു ആശ്വാസമാകുന്നു.",
+    "reference": "Psalms 119:50",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "peace",
-      "rest",
-      "heart"
+      "comfort"
     ]
   },
   {
@@ -2999,16 +2889,13 @@
     ]
   },
   {
-    "id": "psalms-37-4",
-    "category": "Peace",
-    "verse": "അവൻ നിന്റെ ഹൃദയത്തിലെ ആഗ്രഹങ്ങളെ നിനക്കു തരും.",
-    "reference": "Psalms 37:4",
+    "id": "psalms-37-23",
+    "category": "Trust",
+    "verse": "ഒരു മനുഷ്യന്റെ വഴിയിൽ പ്രസാദം തോന്നിയാൽ യഹോവ അവന്റെ ഗമനം സ്ഥിരമാക്കുന്നു.",
+    "reference": "Psalms 37:23",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "peace",
-      "rest",
-      "heart",
-      "joy"
+      "trust"
     ]
   },
   {
@@ -3077,41 +2964,33 @@
     ]
   },
   {
-    "id": "2-corinthians-8-7",
+    "id": "2-corinthians-9-8",
     "category": "Grace",
-    "verse": "എന്നാൽ വിശ്വാസം, വചനം, പരിജ്ഞാനം, പൂൎണ്ണജാഗ്രത, ഞങ്ങളോടുള്ള സ്നേഹം ഇങ്ങനെ എല്ലാറ്റിലും നിങ്ങൾ മുന്തിയിരിക്കുന്നതുപോലെ ഈ ധൎമ്മകാൎയ്യത്തിലും മുന്തിവരുവിൻ.",
-    "reference": "2 Corinthians 8:7",
+    "verse": "നിങ്ങൾ സകലത്തിലും എപ്പോഴും പൂൎണ്ണതൃപ്തിയുള്ളവരായി സകല സൽപ്രവൃത്തിയിലും പെരുകി വരുമാറു നിങ്ങളിൽ സകലകൃപയും പെരുക്കുവാൻ ദൈവം ശക്തൻ ആകുന്നു.",
+    "reference": "2 Corinthians 9:8",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "love"
+      "grace"
     ]
   },
   {
-    "id": "psalms-110-2",
-    "category": "Strength",
-    "verse": "നിന്റെ ബലമുള്ള ചെങ്കോൽ യഹോവ സീയോനിൽനിന്നു നീട്ടും; നീ നിന്റെ ശത്രുക്കളുടെ മദ്ധ്യേ വാഴുക.",
-    "reference": "Psalms 110:2",
+    "id": "psalms-145-14",
+    "category": "Comfort",
+    "verse": "വീഴുന്നവരെ ഒക്കെയും യഹോവ താങ്ങുന്നു; കുനിഞ്ഞിരിക്കുന്നവരെ ഒക്കെയും അവൻ നിവിൎത്തുന്നു.",
+    "reference": "Psalms 145:14",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
-    "id": "psalms-115-10",
-    "category": "Strength",
-    "verse": "അഹരോൻഗൃഹമേ, യഹോവയിൽ ആശ്രയിക്ക; അവൻ അവരുടെ സഹായവും പരിചയും ആകുന്നു.",
-    "reference": "Psalms 115:10",
+    "id": "psalms-112-4",
+    "category": "Hope",
+    "verse": "നേരുള്ളവൎക്കു ഇരുട്ടിൽ വെളിച്ചം ഉദിക്കുന്നു; അവൻ കൃപയും കരുണയും നീതിയും ഉള്ളവനാകുന്നു.",
+    "reference": "Psalms 112:4",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "strength",
-      "help",
-      "power",
-      "faith"
+      "hope"
     ]
   },
   {
@@ -3154,15 +3033,13 @@
     ]
   },
   {
-    "id": "psalms-143-7",
-    "category": "Strength",
-    "verse": "യഹോവേ, വേഗം എനിക്കു ഉത്തരമരുളേണമേ; എന്റെ ആത്മാവു കാംക്ഷിക്കുന്നു. ഞാൻ കുഴിയിൽ ഇറങ്ങുന്നവരെപ്പോലെ ആകാതിരിപ്പാൻ നിന്റെ മുഖത്തെ എനിക്കു മറെക്കരുതേ.",
-    "reference": "Psalms 143:7",
+    "id": "psalms-42-8",
+    "category": "Comfort",
+    "verse": "യഹോവ പകൽനേരത്തു തന്റെ ദയ കല്പിക്കും; രാത്രിസമയത്തു ഞാൻ അവന്നു പാട്ടു പാടിക്കൊണ്ടിരിക്കും; എന്റെ ജീവന്റെ ദൈവത്തോടുള്ള പ്രാൎത്ഥന തന്നേ.",
+    "reference": "Psalms 42:8",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "strength",
-      "help",
-      "power"
+      "comfort"
     ]
   },
   {
@@ -3294,42 +3171,33 @@
     ]
   },
   {
-    "id": "luke-2-52",
-    "category": "Grace",
-    "verse": "യേശുവോ ജ്ഞാനത്തിലും വളൎച്ചയിലും ദൈവത്തിന്റെയും മനുഷ്യരുടെയും കൃപയിലും മുതിൎന്നു വന്നു.",
-    "reference": "Luke 2:52",
+    "id": "luke-11-9",
+    "category": "Prayer",
+    "verse": "യാചിപ്പിൻ, എന്നാൽ നിങ്ങൾക്കു കിട്ടും; അന്വേഷിപ്പിൻ, എന്നാൽ നിങ്ങൾ കണ്ടെത്തും; മുട്ടുവിൻ എന്നാൽ നിങ്ങൾക്കു തുറക്കും.",
+    "reference": "Luke 11:9",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
+      "prayer"
+    ]
+  },
+  {
+    "id": "ephesians-4-2-3",
+    "category": "Love",
+    "verse": "പൂൎണ്ണവിനയത്തോടും സൌമ്യതയോടും ദീൎഘക്ഷമയോടുംകൂടെ നടക്കയും സ്നേഹത്തിൽ അന്യോന്യം പൊറുക്കയും ആത്മാവിന്റെ ഐക്യത സമാധാനബന്ധത്തിൽ കാപ്പാൻ ശ്രമിക്കയും ചെയ്‌വിൻ.",
+    "reference": "Ephesians 4:2-3",
+    "translation": "Sathyavedapusthakam (1910)",
+    "tags": [
       "love"
     ]
   },
   {
-    "id": "2-thessalonians-1-2",
-    "category": "Peace",
-    "verse": "പിതാവായ ദൈവത്തിങ്കൽ നിന്നും കൎത്താവായ യേശുക്രിസ്തുവിങ്കൽ നിന്നും നിങ്ങൾക്കു കൃപയും സമാധാനവും ഉണ്ടാകട്ടെ.",
-    "reference": "2 Thessalonians 1:2",
-    "translation": "Sathyavedapusthakam (1910)",
-    "tags": [
-      "peace",
-      "rest",
-      "comfort",
-      "calm"
-    ]
-  },
-  {
-    "id": "psalms-40-10",
+    "id": "psalms-89-8",
     "category": "Faith",
-    "verse": "ഞാൻ നിന്റെ നീതിയെ എന്റെ ഹൃദയത്തിൽ മറച്ചുവെച്ചില്ല; നിന്റെ വിശ്വസ്തതയും രക്ഷയും ഞാൻ പ്രസ്താവിച്ചു; നിന്റെ ദയയും സത്യവും ഞാൻ മഹാസഭെക്കു മറെച്ചതുമില്ല.",
-    "reference": "Psalms 40:10",
+    "verse": "സൈന്യങ്ങളുടെ ദൈവമായ യഹോവേ, നിന്നെപ്പോലെ ബലവാൻ ആരുള്ളു? യഹോവേ, നിന്റെ വിശ്വസ്തത നിന്നെ ചുറ്റിയിരിക്കുന്നു.",
+    "reference": "Psalms 89:8",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "faith"
     ]
   },
   {
@@ -3385,16 +3253,13 @@
     ]
   },
   {
-    "id": "jeremiah-42-20",
-    "category": "Faith",
-    "verse": "നീ ഞങ്ങളുടെ ദൈവമായ യഹോവയോടു ഞങ്ങൾക്കു വേണ്ടി പ്രാൎത്ഥിക്കേണം; ഞങ്ങളുടെ ദൈവമായ യഹോവ കല്പിക്കുന്നതൊക്കെയും നീ ഞങ്ങളോടു അറിയിക്കേണം; ഞങ്ങൾ അതുപോലെ ചെയ്യും എന്നു പറഞ്ഞു നിങ്ങൾ എന്നെ നിങ്ങളുടെ ദൈവമായ യഹോവയുടെ അടുക്കൽ അയച്ചു.",
-    "reference": "Jeremiah 42:20",
+    "id": "psalms-119-114",
+    "category": "Hope",
+    "verse": "നീ എന്റെ മറവിടവും എന്റെ പരിചയും ആകുന്നു; ഞാൻ തിരുവചനത്തിൽ പ്രത്യാശ വെച്ചിരിക്കുന്നു.",
+    "reference": "Psalms 119:114",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "trust",
-      "word"
+      "hope"
     ]
   },
   {
@@ -3411,16 +3276,13 @@
     ]
   },
   {
-    "id": "acts-11-17",
-    "category": "Trust",
-    "verse": "ആകയാൽ കൎത്താവായ യേശുക്രിസ്തുവിൽ വിശ്വസിച്ചവരായ നമുക്കു തന്നതുപോലെ അതേ ദാനത്തെ അവൎക്കും ദൈവം കൊടുത്തു എങ്കിൽ ദൈവത്തെ തടുപ്പാൻ തക്കവണ്ണം ഞാൻ ആർ?",
-    "reference": "Acts 11:17",
+    "id": "acts-10-34-35",
+    "category": "Faith",
+    "verse": "അപ്പോൾ പത്രൊസ് വായി തുറന്നു പറഞ്ഞു തുടങ്ങിയതു: ദൈവത്തിന്നു മുഖപക്ഷമില്ല എന്നും ഏതു ജാതിയിലും അവനെ ഭയപ്പെട്ടു നീതി പ്രവൎത്തിക്കുന്നവനെ അവൻ അംഗീകരിക്കുന്നു എന്നും ഞാൻ ഇപ്പോൾ യാഥാൎത്ഥമായി ഗ്രഹിക്കുന്നു.",
+    "reference": "Acts 10:34-35",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "faith"
     ]
   },
   {
@@ -3502,16 +3364,13 @@
     ]
   },
   {
-    "id": "acts-15-11",
-    "category": "Trust",
-    "verse": "കൎത്താവായ യേശുവിന്റെ കൃപയാൽ രക്ഷപ്രാപിക്കും എന്നു നാം വിശ്വസിക്കുന്നതുപോലെ അവരും വിശ്വസിക്കുന്നു.",
-    "reference": "Acts 15:11",
+    "id": "hebrews-10-23",
+    "category": "Hope",
+    "verse": "പ്രത്യാശയുടെ സ്വീകാരം നാം മുറുകെ പിടിച്ചുകൊൾക; വാഗ്ദത്തം ചെയ്തവൻ വിശ്വസ്തനല്ലോ.",
+    "reference": "Hebrews 10:23",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "trust",
-      "faith",
-      "safety",
-      "presence"
+      "hope"
     ]
   },
   {
@@ -3632,15 +3491,13 @@
     ]
   },
   {
-    "id": "psalms-41-10",
-    "category": "Grace",
-    "verse": "ഞാൻ അവൎക്കു പകരം ചെയ്യേണ്ടതിന്നു യഹോവേ, കൃപ തോന്നി എന്നെ എഴുന്നേല്പിക്കേണമേ.",
-    "reference": "Psalms 41:10",
+    "id": "psalms-91-4",
+    "category": "Comfort",
+    "verse": "തന്റെ തൂവലുകൾകൊണ്ടു അവൻ നിന്നെ മറെക്കും; അവന്റെ ചിറകിൻ കീഴിൽ നീ ശരണം പ്രാപിക്കും; അവന്റെ വിശ്വസ്തത നിനക്കു പരിചയും പലകയും ആകുന്നു.",
+    "reference": "Psalms 91:4",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "comfort"
     ]
   },
   {
@@ -3657,54 +3514,43 @@
     ]
   },
   {
-    "id": "psalms-96-13",
-    "category": "Grace",
-    "verse": "യഹോവയുടെ സന്നിധിയിൽ തന്നേ; അവൻ വരുന്നുവല്ലോ; അവൻ ഭൂമിയെ വിധിപ്പാൻ വരുന്നു; അവൻ ഭൂലോകത്തെ നീതിയോടും ജാതികളെ വിശ്വസ്തതയോടുംകൂടെ വിധിക്കും.",
-    "reference": "Psalms 96:13",
+    "id": "psalms-96-3",
+    "category": "Joy",
+    "verse": "ജാതികളുടെ ഇടയിൽ അവന്റെ മഹത്വവും സകലവംശങ്ങളുടെയും ഇടയിൽ അവന്റെ അത്ഭുതങ്ങളും വിവരിപ്പിൻ.",
+    "reference": "Psalms 96:3",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "joy"
     ]
   },
   {
-    "id": "psalms-89-49",
-    "category": "Grace",
-    "verse": "കൎത്താവേ, നിന്റെ വിശ്വസ്തതയിൽ നി ദാവീദിനോടു സത്യംചെയ്ത നിന്റെ പണ്ടത്തെ കൃപകൾ എവിടെ?",
-    "reference": "Psalms 89:49",
+    "id": "psalms-33-18",
+    "category": "Hope",
+    "verse": "യഹോവയുടെ ദൃഷ്ടി തന്റെ ഭക്തന്മാരുടെമേലും തന്റെ ദയെക്കായി പ്രത്യാശിക്കുന്നവരുടെമേലും ഇരിക്കുന്നു;",
+    "reference": "Psalms 33:18",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "faith"
+      "hope"
     ]
   },
   {
-    "id": "proverbs-3-4",
-    "category": "Grace",
-    "verse": "അങ്ങനെ നീ ദൈവത്തിന്നും മനുഷ്യൎക്കും ബോദ്ധ്യമായ ലാവണ്യവും സൽബുദ്ധിയും പ്രാപിക്കും.",
-    "reference": "Proverbs 3:4",
+    "id": "proverbs-3-24",
+    "category": "Peace",
+    "verse": "നീ കിടപ്പാൻ പോകുമ്പോൾ നിനക്കു പേടി ഉണ്ടാകയില്ല; കിടക്കുമ്പോൾ നിന്റെ ഉറക്കം സുഖകരമായിരിക്കും.",
+    "reference": "Proverbs 3:24",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "peace"
     ]
   },
   {
-    "id": "proverbs-8-35",
-    "category": "Grace",
-    "verse": "എന്നെ കണ്ടെത്തുന്നവൻ ജീവനെ കണ്ടെത്തുന്നു; അവൻ യഹോവയുടെ കടാക്ഷം പ്രാപിക്കുന്നു.",
-    "reference": "Proverbs 8:35",
+    "id": "proverbs-16-24",
+    "category": "Wisdom",
+    "verse": "ഇമ്പമുള്ള വാക്കു തേൻകട്ടയാകുന്നു; മനസ്സിന്നു മധുരവും അസ്ഥികൾക്കു ഔഷധവും തന്നേ;",
+    "reference": "Proverbs 16:24",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness",
-      "life"
+      "wisdom"
     ]
   },
   {
@@ -3759,15 +3605,13 @@
     ]
   },
   {
-    "id": "psalms-118-20",
-    "category": "Grace",
-    "verse": "യഹോവയുടെ വാതിൽ ഇതു തന്നേ; നീതിമാന്മാർ അതിൽകൂടി കടക്കും.",
-    "reference": "Psalms 118:20",
+    "id": "psalms-118-21",
+    "category": "Joy",
+    "verse": "നീ എനിക്കു ഉത്തരമരുളി എന്റെ രക്ഷയായി തീൎന്നിരിക്കയാൽ ഞാൻ നിനക്കു സ്തോത്രം ചെയ്യും.",
+    "reference": "Psalms 118:21",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "grace",
-      "mercy",
-      "forgiveness"
+      "joy"
     ]
   },
   {
@@ -3810,16 +3654,13 @@
     ]
   },
   {
-    "id": "psalms-22-8",
-    "category": "Faith",
-    "verse": "യഹോവയിങ്കൽ നിന്നെത്തന്നേ സമൎപ്പിക്ക! അവൻ അവനെ രക്ഷിക്കട്ടെ! അവൻ അവനെ വിടുവിക്കട്ടെ! അവനിൽ പ്രസാദമുണ്ടല്ലോ.",
-    "reference": "Psalms 22:8",
+    "id": "psalms-34-5",
+    "category": "Hope",
+    "verse": "അവങ്കലേക്കു നോക്കിയവർ പ്രകാശിതരായി; അവരുടെ മുഖം ലജ്ജിച്ചുപോയതുമില്ല.",
+    "reference": "Psalms 34:5",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "joy"
+      "hope"
     ]
   },
   {
@@ -3885,29 +3726,23 @@
     ]
   },
   {
-    "id": "acts-7-59",
-    "category": "Prayer",
-    "verse": "കൎത്താവായ യേശുവേ, എന്റെ ആത്മാവിനെ കൈക്കൊള്ളേണമേ എന്നു സ്തെഫാനോസ് വിളിച്ചപേക്ഷിക്കയിൽ അവർ അവനെ കല്ലെറിഞ്ഞു.",
-    "reference": "Acts 7:59",
+    "id": "1-peter-4-8",
+    "category": "Love",
+    "verse": "സകലത്തിന്നും മുമ്പെ തമ്മിൽ ഉറ്റസ്നേഹം ഉള്ളവരായിരിപ്പിൻ. സ്നേഹം പാപങ്ങളുടെ ബഹുത്വത്തെ മറെക്കുന്നു.",
+    "reference": "1 Peter 4:8",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "prayer",
-      "answer",
-      "presence",
-      "help"
+      "love"
     ]
   },
   {
-    "id": "psalms-37-5",
-    "category": "Faith",
-    "verse": "നിന്റെ വഴി യഹോവയെ ഭരമേല്പിക്ക; അവനിൽ തന്നേ ആശ്രയിക്ക; അവൻ അതു നിൎവ്വഹിക്കും.",
-    "reference": "Psalms 37:5",
+    "id": "psalms-37-24",
+    "category": "Comfort",
+    "verse": "അവൻ വീണാലും നിലംപരിചാകയില്ല; യഹോവ അവനെ കൈ പിടിച്ചു താങ്ങുന്നു.",
+    "reference": "Psalms 37:24",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "life"
+      "comfort"
     ]
   },
   {
@@ -3923,28 +3758,23 @@
     ]
   },
   {
-    "id": "psalms-55-23",
-    "category": "Faith",
-    "verse": "ദൈവമേ, നീ അവരെ നാശത്തിന്റെ കുഴിയിലേക്കു ഇറക്കും; രക്തപ്രിയവും വഞ്ചനയും ഉള്ളവർ ആയുസ്സിന്റെ പകുതിയോളം ജീവിക്കയില്ല; ഞാനോ നിന്നിൽ ആശ്രയിക്കും.",
-    "reference": "Psalms 55:23",
+    "id": "psalms-62-7",
+    "category": "Trust",
+    "verse": "എന്റെ രക്ഷയും എന്റെ മഹിമയും ദൈവത്തിന്റെ പക്കൽ ആകുന്നു; എന്റെ ഉറപ്പുള്ള പാറയും എന്റെ സങ്കേതവും ദൈവത്തിങ്കലാകുന്നു.",
+    "reference": "Psalms 62:7",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "trust"
     ]
   },
   {
-    "id": "psalms-78-22",
-    "category": "Faith",
-    "verse": "അവർ ദൈവത്തിൽ വിശ്വസിക്കയും അവന്റെ രക്ഷയിൽ ആശ്രയിക്കയും ചെയ്യായ്കയാൽ തന്നേ.",
-    "reference": "Psalms 78:22",
+    "id": "psalms-119-165",
+    "category": "Peace",
+    "verse": "നിന്റെ ന്യായപ്രമാണത്തോടു പ്രിയം ഉള്ളവൎക്കു മഹാസമാധാനം ഉണ്ടു; അവൎക്കു വീഴ്ചെക്കു സംഗതി ഏതുമില്ല.",
+    "reference": "Psalms 119:165",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence",
-      "hope"
+      "peace"
     ]
   },
   {
@@ -3974,15 +3804,13 @@
     ]
   },
   {
-    "id": "isaiah-48-2",
-    "category": "Faith",
-    "verse": "അവർ തങ്ങളെ തന്നേ വിശുദ്ധനഗരം എന്നു വിളിച്ചു യിസ്രായേലിന്റെ ദൈവത്തിൽ ആശ്രയിക്കുന്നുവല്ലോ; അവന്റെ നാമം സൈന്യങ്ങളുടെ യഹോവ എന്നാകുന്നു.",
-    "reference": "Isaiah 48:2",
+    "id": "isaiah-26-12",
+    "category": "Peace",
+    "verse": "യഹോവേ, നീ ഞങ്ങൾക്കായിട്ടു സമാധാനം നിയമിക്കും; ഞങ്ങളുടെ സകലപ്രവൃത്തികളെയും നീ ഞങ്ങൾക്കു വേണ്ടി നിവൎത്തിച്ചിരിക്കുന്നുവല്ലോ.",
+    "reference": "Isaiah 26:12",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "faith",
-      "belief",
-      "confidence"
+      "peace"
     ]
   },
   {
@@ -4024,27 +3852,23 @@
     ]
   },
   {
-    "id": "psalms-87-2",
-    "category": "Love",
-    "verse": "സീയോന്റെ പടിവാതിലുകളെ തന്നേ, യാക്കോബിന്റെ സകലനിവാസങ്ങളെക്കാളും അധികം സ്നേഹിക്കുന്നു.",
-    "reference": "Psalms 87:2",
+    "id": "psalms-90-14",
+    "category": "Joy",
+    "verse": "കാലത്തു തന്നേ ഞങ്ങളെ നിന്റെ ദയകൊണ്ടു തൃപ്തരാക്കേണമേ; എന്നാൽ ഞങ്ങളുടെ ആയുഷ്കാലമൊക്കെയും ഞങ്ങൾ ഘോഷിച്ചാനന്ദിക്കും.",
+    "reference": "Psalms 90:14",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
-    "id": "psalms-55-14",
+    "id": "psalms-133-1",
     "category": "Love",
-    "verse": "നാം തമ്മിൽ മധുരസമ്പൎക്കം ചെയ്തു പുരുഷാരവുമായി ദൈവാലയത്തിലേക്കു പോയല്ലോ.",
-    "reference": "Psalms 55:14",
+    "verse": "ഇതാ, സഹോദരന്മാർ ഒത്തൊരുമിച്ചു വസിക്കുന്നതു എത്ര ശുഭവും എത്ര മനോഹരവും ആകുന്നു!",
+    "reference": "Psalms 133:1",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
@@ -4074,28 +3898,23 @@
     ]
   },
   {
-    "id": "john-14-24",
+    "id": "john-15-12",
     "category": "Love",
-    "verse": "എന്നെ സ്നേഹിക്കാത്തവൻ എന്റെ വചനം പ്രമാണിക്കുന്നില്ല; നിങ്ങൾ കേൾക്കുന്ന വചനം എന്റേതല്ല എന്നെ അയച്ച പിതാവിന്റെതത്രേ എന്നു ഉത്തരം പറഞ്ഞു.",
-    "reference": "John 14:24",
+    "verse": "ഞാൻ നിങ്ങളെ സ്നേഹിച്ചിരിക്കുന്നതുപോലെ നിങ്ങളും തമ്മിൽ തമ്മിൽ സ്നേഹിക്കേണം എന്നാകുന്നു എന്റെ കല്പന.",
+    "reference": "John 15:12",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god",
-      "wisdom"
+      "love"
     ]
   },
   {
-    "id": "john-14-31",
-    "category": "Love",
-    "verse": "എങ്കിലും ഞാൻ പിതാവിനെ സ്നേഹിക്കുന്നു എന്നും പിതാവു എന്നോടു കല്പിച്ചതുപോലെ ഞാൻ ചെയ്യുന്നു എന്നും ലോകം അറിയട്ടെ. എഴുന്നേല്പിൻ; നാം പോക.",
-    "reference": "John 14:31",
+    "id": "john-15-11",
+    "category": "Joy",
+    "verse": "എന്റെ സന്തോഷം നിങ്ങളിൽ ഇരിപ്പാനും നിങ്ങളുടെ സന്തോഷം പൂൎണ്ണമാകുവാനും ഞാൻ ഇതു നിങ്ങളോടു സംസാരിച്ചിരിക്കുന്നു.",
+    "reference": "John 15:11",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "joy"
     ]
   },
   {
@@ -4123,39 +3942,33 @@
     ]
   },
   {
-    "id": "john-5-20",
+    "id": "john-15-13",
     "category": "Love",
-    "verse": "പിതാവു പുത്രനെ സ്നേഹിക്കയും താൻ ചെയ്യുന്നതു ഒക്കെയും അവന്നു കാണിച്ചുകൊടുക്കയും ചെയ്യുന്നു; നിങ്ങൾ ആശ്ചൎയ്യപ്പെടുമാറു ഇവയിൽ വലിയ പ്രവൃത്തികളും അവന്നു കാണിച്ചുകൊടുക്കും.",
-    "reference": "John 5:20",
+    "verse": "സ്നേഹിതന്മാൎക്കുവേണ്ടി ജീവനെ കൊടുക്കുന്നതിലും അധികമുള്ള സ്നേഹം ആൎക്കും ഇല്ല.",
+    "reference": "John 15:13",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "love"
     ]
   },
   {
-    "id": "john-8-42",
-    "category": "Love",
-    "verse": "യേശു അവരോടു പറഞ്ഞതു: ദൈവം നിങ്ങളുടെ പിതാവു എങ്കിൽ നിങ്ങൾ എന്നെ സ്നേഹിക്കുമായിരുന്നു; ഞാൻ ദൈവത്തിന്റെ അടുക്കൽനിന്നു വന്നിരിക്കുന്നു; ഞാൻ സ്വയമായി വന്നതല്ല, അവൻ എന്നെ അയച്ചതാകുന്നു.",
-    "reference": "John 8:42",
+    "id": "john-6-37",
+    "category": "Hope",
+    "verse": "പിതാവു എനിക്കു തരുന്നതു ഒക്കെയും എന്റെ അടുക്കൽ വരും; എന്റെ അടുക്കൽ വരുന്നവനെ ഞാൻ ഒരുനാളും തള്ളിക്കളകയില്ല.",
+    "reference": "John 6:37",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "hope"
     ]
   },
   {
-    "id": "matthew-10-37",
-    "category": "Love",
-    "verse": "എന്നെക്കാൾ അധികം അപ്പനെയോ അമ്മയെയോ പ്രിയപ്പെടുന്നവൻ എനിക്കു യോഗ്യനല്ല; എന്നെക്കാൾ അധികം മകനെയോ മകളെയോ പ്രിയപ്പെടുന്നവൻ എനിക്കു യോഗ്യനല്ല.",
-    "reference": "Matthew 10:37",
+    "id": "james-1-19",
+    "category": "Wisdom",
+    "verse": "പ്രിയസഹോദരന്മാരേ, നിങ്ങൾ അതു അറിയുന്നുവല്ലോ. എന്നാൽ ഏതു മനുഷ്യനും കേൾപ്പാൻ വേഗതയും പറവാൻ താമസവും കോപത്തിന്നു താമസവുമുള്ളവൻ ആയിരിക്കട്ടെ.",
+    "reference": "James 1:19",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "god"
+      "wisdom"
     ]
   },
   {
@@ -4183,16 +3996,13 @@
     ]
   },
   {
-    "id": "2-peter-1-14",
-    "category": "Hope",
-    "verse": "ഞാൻ ഈ കൂടാരത്തിൽ ഇരിക്കുന്നേടത്തോളം നിങ്ങളെ ഓൎപ്പിച്ചുണൎത്തുക യുക്തം എന്നു വിചാരിക്കുന്നു.",
-    "reference": "2 Peter 1:14",
+    "id": "2-peter-1-2",
+    "category": "Grace",
+    "verse": "ദൈവത്തിന്റെയും നമ്മുടെ കൎത്താവായ യേശുവിന്റെയും പരിജ്ഞാനത്തിൽ നിങ്ങൾക്കു കൃപയും സമാധാനവും വൎദ്ധിക്കുമാറാകട്ടെ.",
+    "reference": "2 Peter 1:2",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "grace"
     ]
   },
   {
@@ -4248,28 +4058,23 @@
     ]
   },
   {
-    "id": "psalms-106-25",
-    "category": "Prayer",
-    "verse": "അവർ തങ്ങളുടെ കൂടാരങ്ങളിൽവെച്ചു പിറുപിറുത്തു; യഹോവയുടെ വചനം കേൾക്കാതെയിരുന്നു.",
-    "reference": "Psalms 106:25",
+    "id": "psalms-34-10",
+    "category": "Hope",
+    "verse": "ബാലസിംഹങ്ങളും ഇരകിട്ടാതെ വിശന്നിരിക്കും; യഹോവയെ അന്വേഷിക്കുന്നവൎക്കോ ഒരു നന്മെക്കും കുറവില്ല.",
+    "reference": "Psalms 34:10",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "prayer",
-      "seeking",
-      "calling"
+      "hope"
     ]
   },
   {
-    "id": "romans-2-16",
-    "category": "Hope",
-    "verse": "ദൈവം യേശുക്രിസ്തു മുഖാന്തരം മനുഷ്യരുടെ രഹസ്യങ്ങളെ എന്റെ സുവിശേഷപ്രകാരം ന്യായം വിധിക്കുന്ന നാളിൽ തന്നേ.",
-    "reference": "Romans 2:16",
+    "id": "james-5-13",
+    "category": "Prayer",
+    "verse": "നിങ്ങളിൽ കഷ്ടമനുഭവിക്കുന്നവൻ പ്രാൎത്ഥിക്കട്ടെ; സുഖം അനുഭവിക്കുന്നവൻ പാട്ടു പാടട്ടെ.",
+    "reference": "James 5:13",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "prayer"
     ]
   },
   {
@@ -4348,15 +4153,13 @@
     ]
   },
   {
-    "id": "psalms-105-19",
-    "category": "Wisdom",
-    "verse": "അവർ അവന്റെ കാലുകളെ വിലങ്ങുകൊണ്ടു ബന്ധിക്കയും അവൻ ഇരിമ്പു ചങ്ങലയിൽ കുടുങ്ങുകയും ചെയ്തു.",
-    "reference": "Psalms 105:19",
+    "id": "psalms-119-76",
+    "category": "Comfort",
+    "verse": "അടിയനോടുള്ള നിന്റെ വാഗ്ദാനപ്രകാരം നിന്റെ ദയ എന്റെ ആശ്വാസത്തിന്നായി ഭവിക്കുമാറാകട്ടെ.",
+    "reference": "Psalms 119:76",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word"
+      "comfort"
     ]
   },
   {
@@ -4373,16 +4176,13 @@
     ]
   },
   {
-    "id": "psalms-118-27",
-    "category": "Wisdom",
-    "verse": "യഹോവ തന്നേ ദൈവം; അവൻ നമുക്കു പ്രകാശം തന്നിരിക്കുന്നു; യാഗപീഠത്തിന്റെ കൊമ്പുകളോളം യാഗപശുവിനെ കയറുകൊണ്ടു കെട്ടുവിൻ.",
-    "reference": "Psalms 118:27",
+    "id": "psalms-100-4",
+    "category": "Joy",
+    "verse": "അവന്റെ വാതിലുകളിൽ സ്തോത്രത്തോടും അവന്റെ പ്രാകാരങ്ങളിൽ സ്തുതിയോടും കൂടെ വരുവിൻ; അവന്നു സ്തോത്രം ചെയ്തു അവന്റെ നാമത്തെ വാഴ്ത്തുവിൻ.",
+    "reference": "Psalms 100:4",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "wisdom",
-      "guidance",
-      "word",
-      "life"
+      "joy"
     ]
   },
   {
@@ -4424,16 +4224,13 @@
     ]
   },
   {
-    "id": "isaiah-26-13",
-    "category": "Hope",
-    "verse": "ഞങ്ങളുടെ ദൈവമായ യഹോവേ, നീയല്ലാതെ വേറെ കർത്താക്കന്മാർ ഞങ്ങളുടെമേൽ കൎത്തൃത്വം നടത്തീട്ടുണ്ടു; എന്നാൽ നിന്നെ മാത്രം, നിന്റെ നാമത്തെ തന്നേ, ഞങ്ങൾ സ്വീകരിക്കുന്നു.",
-    "reference": "Isaiah 26:13",
+    "id": "isaiah-66-13",
+    "category": "Comfort",
+    "verse": "അമ്മ ആശ്വസിപ്പിക്കുന്നതുപോലെ ഞാൻ നിങ്ങളെ ആശ്വസിപ്പിക്കും; നിങ്ങൾ യെരൂശലേമിൽ ആശ്വാസം പ്രാപിക്കും.",
+    "reference": "Isaiah 66:13",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "comfort"
     ]
   },
   {
@@ -4449,16 +4246,13 @@
     ]
   },
   {
-    "id": "2-corinthians-8-5",
-    "category": "Hope",
-    "verse": "അതും ഞങ്ങൾ വിചാരിച്ചിരുന്നതുപോലെയല്ല; അവർ മുമ്പെ തങ്ങളെത്തന്നേ കൎത്താവിന്നും പിന്നെ ദൈവേഷ്ടത്തിന്നൊത്തവണ്ണം ഞങ്ങൾക്കും ഏല്പിച്ചു.",
-    "reference": "2 Corinthians 8:5",
+    "id": "hebrews-10-24",
+    "category": "Love",
+    "verse": "ചിലർ ചെയ്യുന്നതുപോലെ നമ്മുടെ സഭായോഗങ്ങളെ ഉപേക്ഷിക്കാതെ തമ്മിൽ പ്രബോധിപ്പിച്ചുകൊണ്ടു സ്നേഹത്തിന്നും",
+    "reference": "Hebrews 10:24",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "hope",
-      "promise",
-      "trust",
-      "daily"
+      "love"
     ]
   },
   {
@@ -4486,42 +4280,33 @@
     ]
   },
   {
-    "id": "deuteronomy-13-3",
-    "category": "Love",
-    "verse": "നീ അറിഞ്ഞിട്ടില്ലാത്ത അന്യദൈവങ്ങളെ നാം ചെന്നു സേവിക്ക എന്നു പറഞ്ഞുംകൊണ്ടു ഒരു അടയാളമോ അത്ഭുതമോ മുന്നറിയിക്കയും അവൻ പറഞ്ഞ അടയാളമോ അത്ഭുതമോ സംഭവിക്കയും ചെയ്താൽ",
-    "reference": "Deuteronomy 13:3",
+    "id": "proverbs-12-25",
+    "category": "Comfort",
+    "verse": "മനോവ്യസനം ഹേതുവായി മനുഷ്യന്റെ മനസ്സിടിയുന്നു; ഒരു നല്ല വാക്കോ അതിനെ സന്തോഷിപ്പിക്കുന്നു.",
+    "reference": "Proverbs 12:25",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "love",
-      "mercy",
-      "heart",
-      "grace"
+      "comfort"
     ]
   },
   {
-    "id": "isaiah-43-1",
-    "category": "Courage",
-    "verse": "ഇപ്പോഴോ യാക്കോബേ, നിന്നെ സൃഷ്ടിച്ചവനും, യിസ്രായേലേ, നിന്നെ നിൎമ്മിച്ചവനുമായ യഹോവ ഇപ്രകാരം അരുളിച്ചെയ്യുന്നു: ഭയപ്പെടേണ്ടാ, ഞാൻ നിന്നെ വീണ്ടെടുത്തിരിക്കുന്നു; ഞാൻ നിന്നെ പേർ ചൊല്ലി വിളിച്ചിരിക്കുന്നു; നീ എനിക്കുള്ളവൻ തന്നേ.",
-    "reference": "Isaiah 43:1",
+    "id": "isaiah-42-3",
+    "category": "Comfort",
+    "verse": "ചതഞ്ഞ ഓട അവൻ ഒടിച്ചുകളകയില്ല; പുകയുന്ന തിരി കെടുത്തുകളകയില്ല; അവൻ സത്യത്തോടെ ന്യായം പ്രസ്താവിക്കും.",
+    "reference": "Isaiah 42:3",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "courage",
-      "fear",
-      "strength",
-      "life"
+      "comfort"
     ]
   },
   {
-    "id": "1-samuel-2-1",
+    "id": "1-chronicles-16-23",
     "category": "Joy",
-    "verse": "അനന്തരം ഹന്നാ പ്രാൎത്ഥിച്ചു പറഞ്ഞതെന്തെന്നാൽ: എന്റെ ഹൃദയം യഹോവയിൽ ആനന്ദിക്കുന്നു; എന്റെ കൊമ്പു യഹോവയാൽ ഉയൎന്നിരിക്കുന്നു; എന്റെ വായ് ശത്രുക്കളുടെ നേരെ വിശാലമാകുന്നു; നിന്റെ രക്ഷയിൽ ഞാൻ സന്തോഷിക്കുന്നു.",
-    "reference": "1 Samuel 2:1",
+    "verse": "സൎവ്വഭൂവാസികളേ, യഹോവെക്കു പാടുവിൻ; നാൾക്കുനാൾ അവന്റെ രക്ഷയെ പ്രസ്താവിപ്പിൻ.",
+    "reference": "1 Chronicles 16:23",
     "translation": "Sathyavedapusthakam (1910)",
     "tags": [
-      "joy",
-      "delight",
-      "praise",
-      "gratitude"
+      "joy"
     ]
   },
   {

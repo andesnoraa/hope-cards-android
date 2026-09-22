@@ -1,0 +1,20 @@
+[
+  {
+    "family": "caveatbrush",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveatbrush/CaveatBrush-Regular.ttf",
+    "sha256": "e565bd7bffd895ca64f8d1cb77c816b9b38d9c010246386a07c9648592f6f282",
+    "license": "caveatbrush-OFL.txt"
+  },
+  {
+    "family": "oleoscript",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/oleoscript/OleoScript-Bold.ttf",
+    "sha256": "7e4843c9d74233f00a2815954177e33758c1c42a08d218b11c131cf7d818f1d5",
+    "license": "oleoscript-OFL.txt"
+  },
+  {
+    "family": "leckerlione",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/leckerlione/LeckerliOne-Regular.ttf",
+    "sha256": "3f38ed99a07ab426eaa64c7d5773850a5dc8e6719b03125efce2cfbc82b083d7",
+    "license": "leckerlione-OFL.txt"
+  }
+]

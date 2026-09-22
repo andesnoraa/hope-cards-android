@@ -6,6 +6,7 @@ import android.os.SystemClock
 import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.lifecycleScope
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.data.AppRepository
 import com.google.android.gms.ads.AdError
@@ -20,6 +21,7 @@ import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.FormError
 import com.google.android.ump.UserMessagingPlatform
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
@@ -139,6 +141,43 @@ class AdsManager(
                 }
             } else if (_ready.value) {
                 loadInterstitial()
+            }
+        }
+    }
+
+    fun completeArtwork(
+        activity: Activity,
+        isAdFree: Boolean,
+        isCurrentArtwork: () -> Boolean,
+        continueToGallery: () -> Unit,
+    ) {
+        if (isAdFree || closed) {
+            continueToGallery()
+            return
+        }
+        val requestGeneration = ++presentationGeneration
+        val cachedAd = interstitial
+        val readyAtStart = _ready.value && cachedAd != null &&
+            SystemClock.elapsedRealtime() - interstitialLoadedAt < INTERSTITIAL_EXPIRATION_MS
+        // A pending storage operation must not retain a destroyed activity after rotation/exit.
+        val transitionScope = (activity as? LifecycleOwner)?.lifecycleScope ?: scope
+        transitionScope.launch {
+            try {
+                completeContentBreak(
+                    adReadyAtStart = readyAtStart,
+                    recordCompletion = { repository.recordCompletedCard(System.currentTimeMillis()) },
+                    canStillPresent = {
+                        requestGeneration == presentationGeneration && interstitial === cachedAd &&
+                            _ready.value && isCurrentArtwork() && activity.hasWindowFocus()
+                    },
+                    showAd = { showInterstitial(activity) },
+                    continueNavigation = continueToGallery,
+                )
+                if (_ready.value) loadInterstitial()
+            } catch (error: CancellationException) {
+                throw error
+            } catch (error: Exception) {
+                Log.w(TAG, "Could not record completed artwork", error)
             }
         }
     }

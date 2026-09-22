@@ -1,0 +1,33 @@
+{
+  "photo-quiet-branch": {
+    "asset": "quiet-branch.webp",
+    "profile": {
+      "centerX": 540,
+      "centerY": 350,
+      "height": 490,
+      "width": 800,
+      "ink": "#FFF8E9",
+      "footerInk": "#FFF8E9",
+      "citationY": 650,
+      "family": "wood"
+    },
+    "metadata": {
+      "sourceFile": "Approved generated Quiet Branch",
+      "sourceSha256": "0d8f70292547dffbb0ea6a2c9db673a07a6b58076e59a46d2ff1d1d16cd49970",
+      "sourceType": "generated",
+      "referenceSourceFile": "pexels-raymond-petrik-1448389535-28458039.jpg",
+      "crop": [
+        0,
+        0,
+        1080,
+        1080
+      ],
+      "bytes": 39330,
+      "outputSize": [
+        1080,
+        1080
+      ],
+      "webpQuality": 88
+    }
+  }
+}

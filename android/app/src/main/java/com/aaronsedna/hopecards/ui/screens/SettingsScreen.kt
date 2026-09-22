@@ -2,6 +2,8 @@ package com.aaronsedna.hopecards.ui.screens
 
 import android.os.Build
 
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -14,6 +16,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -24,6 +27,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -33,6 +37,9 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.withFrameNanos
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -40,8 +47,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusDirection
+import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -77,15 +92,16 @@ fun SettingsScreen(
     onBackupLocation: () -> Unit,
     onExport: () -> Unit,
     onRestore: () -> Unit,
+    onNotificationSettings: () -> Unit = {},
 ) {
     val colors = LocalHopeColors.current
     var themePicker by remember { mutableStateOf(false) }
     var translationPicker by remember { mutableStateOf(false) }
-    var reminderPicker by remember { mutableStateOf(false) }
-    var pickerHour by remember { mutableStateOf("08") }
-    var pickerMinute by remember { mutableStateOf("00") }
-    var pickerIsPm by remember { mutableStateOf(false) }
-    var enableReminderAfterSave by remember { mutableStateOf(false) }
+    var reminderPicker by rememberSaveable { mutableStateOf(false) }
+    var pickerHour by rememberSaveable { mutableStateOf("06") }
+    var pickerMinute by rememberSaveable { mutableStateOf("00") }
+    var pickerIsPm by rememberSaveable { mutableStateOf(false) }
+    var enableReminderAfterSave by rememberSaveable { mutableStateOf(false) }
 
     fun openReminderPicker(enableAfterSave: Boolean) {
         val hour12 = settings.dailyHopeReminderHour % 12
@@ -155,6 +171,14 @@ fun SettingsScreen(
             title = appString(R.string.settings_reminder_time),
             subtitle = formatTime(settings.dailyHopeReminderHour, settings.dailyHopeReminderMinute, settings.preferredTranslation),
             onClick = { openReminderPicker(enableAfterSave = false) },
+            trailing = { Chevron() },
+        )
+
+        Divider()
+        SettingsRow(
+            title = appString(R.string.settings_notification_display),
+            subtitle = appString(R.string.settings_notification_display_body),
+            onClick = onNotificationSettings,
             trailing = { Chevron() },
         )
 
@@ -228,8 +252,8 @@ fun SettingsScreen(
             hour = pickerHour,
             minute = pickerMinute,
             isPm = pickerIsPm,
-            onHourChange = { pickerHour = sanitizeTimePart(it) },
-            onMinuteChange = { pickerMinute = sanitizeTimePart(it) },
+            onHourChange = { pickerHour = it },
+            onMinuteChange = { pickerMinute = it },
             onStepHour = { amount ->
                 val current = pickerHour.toIntOrNull()?.coerceIn(1, 12) ?: 12
                 pickerHour = (((current - 1 + amount + 12) % 12) + 1).toString().padStart(2, '0')
@@ -297,7 +321,7 @@ private fun ReminderTimeDialog(
     val colors = LocalHopeColors.current
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
         Box(
-            Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 38.dp),
+            Modifier.fillMaxSize().imePadding().padding(horizontal = 24.dp, vertical = 12.dp),
             contentAlignment = Alignment.Center,
         ) {
             Surface(
@@ -306,7 +330,7 @@ private fun ReminderTimeDialog(
                 color = colors.surface,
                 shadowElevation = 14.dp,
             ) {
-                Column(Modifier.padding(22.dp)) {
+                Column(Modifier.verticalScroll(rememberScrollState()).padding(22.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
                             appString(R.string.settings_reminder_time),
@@ -334,7 +358,7 @@ private fun ReminderTimeDialog(
                         horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        TimeUnit(hour, onHourChange, { onStepHour(1) }, { onStepHour(-1) }, appString(R.string.hour))
+                        TimeUnit(hour, onHourChange, { onStepHour(1) }, { onStepHour(-1) }, appString(R.string.hour), "reminder_hour", 12, ImeAction.Next)
                         Text(
                             ":",
                             color = colors.accent,
@@ -342,7 +366,7 @@ private fun ReminderTimeDialog(
                             fontWeight = FontWeight.Bold,
                             fontSize = 38.sp,
                         )
-                        TimeUnit(minute, onMinuteChange, { onStepMinute(1) }, { onStepMinute(-1) }, appString(R.string.minute))
+                        TimeUnit(minute, onMinuteChange, { onStepMinute(1) }, { onStepMinute(-1) }, appString(R.string.minute), "reminder_minute", 59, ImeAction.Done)
                         Column(
                             modifier = Modifier.width(64.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -361,6 +385,7 @@ private fun ReminderTimeDialog(
                         Button(
                             onClick = onSave,
                             modifier = Modifier.testTag("reminder_time_save"),
+                            enabled = hour.toIntOrNull() in 1..12 && minute.toIntOrNull() in 0..59,
                             shape = RoundedCornerShape(10.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = colors.accent, contentColor = colors.buttonText),
                         ) {
@@ -380,8 +405,34 @@ private fun TimeUnit(
     onIncrease: () -> Unit,
     onDecrease: () -> Unit,
     label: String,
+    tag: String,
+    maximum: Int,
+    imeAction: ImeAction,
 ) {
     val colors = LocalHopeColors.current
+    val focusManager = LocalFocusManager.current
+    val interactions = remember { MutableInteractionSource() }
+    var focused by remember { mutableStateOf(false) }
+    var field by rememberSaveable(stateSaver = TextFieldValue.Saver) { mutableStateOf(TextFieldValue(value)) }
+    LaunchedEffect(value) {
+        // Arrow buttons and restored state update the text without retaining an old cursor.
+        if (field.text != value) field = TextFieldValue(value, TextRange(0, value.length))
+    }
+    LaunchedEffect(focused) {
+        if (focused) {
+            withFrameNanos { }
+            field = field.copy(selection = TextRange(0, field.text.length))
+        }
+    }
+    LaunchedEffect(interactions) {
+        interactions.interactions.collect { interaction ->
+            if (interaction is PressInteraction.Release && focused) {
+                // Run after the field's tap handler places its cursor, including repeated taps.
+                withFrameNanos { }
+                field = field.copy(selection = TextRange(0, field.text.length))
+            }
+        }
+    }
     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Surface(onClick = onIncrease, color = Color.Transparent, modifier = Modifier.size(48.dp, 40.dp)) {
             Box(contentAlignment = Alignment.Center) {
@@ -391,10 +442,21 @@ private fun TimeUnit(
         Surface(color = colors.background, shape = RoundedCornerShape(10.dp), modifier = Modifier.size(76.dp, 62.dp)) {
             Box(contentAlignment = Alignment.Center) {
                 BasicTextField(
-                    value = value,
-                    onValueChange = onValueChange,
+                    value = field,
+                    onValueChange = { edit ->
+                        if (edit.text.length <= 2 && edit.text.all { it in '0'..'9' } &&
+                            (edit.text.isEmpty() || edit.text.toInt() <= maximum)) {
+                            field = edit
+                            onValueChange(edit.text)
+                        }
+                    },
+                    interactionSource = interactions,
                     singleLine = true,
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = imeAction),
+                    keyboardActions = KeyboardActions(
+                        onNext = { focusManager.moveFocus(FocusDirection.Next) },
+                        onDone = { focusManager.clearFocus() },
+                    ),
                     textStyle = TextStyle(
                         color = colors.text,
                         fontFamily = Poppins,
@@ -402,7 +464,8 @@ private fun TimeUnit(
                         fontSize = 38.sp,
                         textAlign = TextAlign.Center,
                     ),
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().testTag(tag).semantics { contentDescription = label }
+                        .onFocusChanged { focused = it.isFocused },
                 )
             }
         }
@@ -619,5 +682,3 @@ private fun PickerRow(title: String, subtitle: String, selected: Boolean, onClic
 
 private fun formatTime(hour: Int, minute: Int, translation: Translation): String =
     LocalTime.of(hour, minute).format(DateTimeFormatter.ofPattern("h:mm a", Locale.forLanguageTag(translation.localeTag)))
-
-private fun sanitizeTimePart(value: String): String = value.filter(Char::isDigit).take(2)
