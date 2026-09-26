@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.R
@@ -58,7 +59,9 @@ internal fun QuizResultActions(translation: Translation, session: QuizSession, q
             finally { file?.delete(); busy = false }
         }
     }
-    Box(Modifier.fillMaxWidth()) {
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
+        val menuWidth = minOf(maxWidth, 280.dp)
+        val menuOffset = DpOffset((maxWidth - menuWidth) / 2, 4.dp)
         OutlinedButton(onClick = { menu = true }, enabled = !busy && pendingPath == null,
             shape = RoundedCornerShape(28.dp), border = BorderStroke(1.dp, colors.divider),
             colors = ButtonDefaults.outlinedButtonColors(contentColor = colors.text),
@@ -70,7 +73,9 @@ internal fun QuizResultActions(translation: Translation, session: QuizSession, q
                     fontFamily = interfaceFontFor(translation), fontSize = 16.sp)
             }
         }
-        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, containerColor = colors.surface) {
+        DropdownMenu(expanded = menu, onDismissRequest = { menu = false },
+            modifier = Modifier.width(menuWidth), offset = menuOffset,
+            shape = RoundedCornerShape(16.dp), containerColor = colors.surface) {
             @Composable fun Action(id: Int, tag: String, action: () -> Unit) {
                 DropdownMenuItem(text = { Text(resources.getString(id), fontFamily = interfaceFontFor(translation), color = colors.text) },
                     modifier = Modifier.testTag(tag), onClick = { menu = false; action() })
