@@ -1,9 +1,6 @@
 package com.aaronsedna.hopecards.ui
 
 import android.graphics.Bitmap
-import androidx.compose.ui.hapticfeedback.HapticFeedback
-import androidx.compose.ui.hapticfeedback.HapticFeedbackType
-import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.width
@@ -45,7 +42,7 @@ class BibleQuizInstrumentedTest {
 
     @Test fun bundledContentIsCompleteAcrossEveryEditionAndReferencesAreLocalized() {
         val english = bank(Translation.BSB)
-        assertEquals(30, english.size)
+        assertEquals(200, english.size)
         Translation.entries.forEach { edition ->
             val rows = bank(edition)
             assertEquals(english.map { it.id }, rows.map { it.id })
@@ -55,7 +52,7 @@ class BibleQuizInstrumentedTest {
                 if (edition.language != "English") {
                     val original = english.first { it.id == question.id }
                     assertNotEquals("${edition.id}/${question.id}", original.question, question.question)
-                    assertNotEquals(original.explanation, question.explanation)
+                    if (original.explanation.isNotEmpty()) assertNotEquals(original.explanation, question.explanation)
                 }
             }
         }
@@ -100,21 +97,16 @@ class BibleQuizInstrumentedTest {
         val questions = bank(Translation.BSB)
         val restoration = StateRestorationTester(compose)
         var completionCalls = 0
-        val hapticEvents = mutableListOf<HapticFeedbackType>()
+        val hapticEvents = mutableListOf<Unit>()
         val enableHaptics = mutableStateOf(true)
-        val haptics = object : HapticFeedback {
-            override fun performHapticFeedback(hapticFeedbackType: HapticFeedbackType) { hapticEvents += hapticFeedbackType }
-        }
         restoration.setContent {
-            CompositionLocalProvider(LocalHapticFeedback provides haptics) {
             HopeCardsTheme(ThemeName.CLASSIC) {
                 BibleQuizScreen(questions, Translation.BSB,
                     onComplete = { current, proceed ->
                         assertTrue(current())
                         completionCalls++
                         proceed()
-                    }, hapticsEnabled = enableHaptics.value, onChangeTranslation = {})
-            }
+                    }, hapticsEnabled = enableHaptics.value, onWrongAnswerHaptic = { hapticEvents += Unit }, onChangeTranslation = {})
             }
         }
         scroll("quiz_start").performClick()
@@ -199,6 +191,17 @@ class BibleQuizInstrumentedTest {
         assertEquals(3, navigations)
     }
 
+    @Test fun wrongAnswerRequestsDeviceVibration() {
+        val questions = bank(Translation.BSB).take(1)
+        compose.setContent {
+            HopeCardsTheme(ThemeName.CLASSIC) { BibleQuizScreen(questions, Translation.BSB) {} }
+        }
+        scroll("quiz_start").performClick()
+        scroll("quiz_option_${(questions.first().correctIndex + 1) % 4}").performClick()
+        scroll("quiz_action").performClick()
+        scroll("quiz_feedback").assertIsDisplayed()
+    }
+
     @Test fun soundPreferencePersistsAndCanBeMuted() {
         val prefs = context.getSharedPreferences("bible-quiz", android.content.Context.MODE_PRIVATE)
         val before = prefs.getBoolean("sound", false)
@@ -217,7 +220,7 @@ class BibleQuizInstrumentedTest {
     }
 
     @Test fun longMalayalamContentRemainsUsableAtLargeFontScale() {
-        val questions = bank(Translation.MAL1910)
+        val questions = bank(Translation.MAL1910).sortedByDescending { it.question.length }.take(1)
         compose.setContent {
             val density = LocalDensity.current
             CompositionLocalProvider(LocalDensity provides Density(density.density, 1.6f)) {

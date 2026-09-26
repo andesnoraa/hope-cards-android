@@ -2,9 +2,6 @@ package com.aaronsedna.hopecards.ui.screens
 
 import android.content.res.Configuration
 import android.content.Context
-import android.os.Build
-import androidx.compose.ui.hapticfeedback.HapticFeedbackType
-import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
@@ -16,6 +13,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.aaronsedna.hopecards.audio.QuizSoundPlayer
+import com.aaronsedna.hopecards.audio.QuizVibration
 import androidx.annotation.StringRes
 import androidx.compose.foundation.relocation.BringIntoViewRequester
 import androidx.compose.foundation.relocation.bringIntoViewRequester
@@ -69,10 +67,15 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.ParagraphStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.data.BibleQuizRepository
+import com.aaronsedna.hopecards.data.QuizRoundHistory
 import com.aaronsedna.hopecards.model.BibleReferenceFormatter
 import com.aaronsedna.hopecards.model.QuizLanguage
 import com.aaronsedna.hopecards.model.QuizQuestion
@@ -118,6 +121,7 @@ fun BibleQuizRoute(
 ) {
     val context = LocalContext.current
     val language = QuizLanguage.forTranslation(translation)
+    val roundHistory = remember(context) { QuizRoundHistory(context) }
     var retry by remember { mutableIntStateOf(0) }
     val loaded by produceState<Result<List<QuizQuestion>>?>(null, language, retry) {
         value = null
@@ -135,7 +139,8 @@ fun BibleQuizRoute(
             QuizText(quizString(translation, R.string.quiz_loading), translation)
         }
         loaded?.isFailure == true -> QuizMessage(translation, R.string.quiz_error, R.string.quiz_retry, { retry++ })
-        else -> BibleQuizScreen(loaded!!.getOrThrow(), translation, onComplete, hapticsEnabled, onExitHandlerChanged, onChangeTranslation)
+        else -> BibleQuizScreen(loaded!!.getOrThrow(), translation, onComplete, hapticsEnabled, onExitHandlerChanged,
+            onStartRound = { roundHistory.nextRound(language, loaded!!.getOrThrow()) }, onChangeTranslation = onChangeTranslation)
     }
 }
 
@@ -153,11 +158,12 @@ fun BibleQuizScreen(
     onComplete: (() -> Boolean, () -> Unit) -> Unit = { _, proceed -> proceed() },
     hapticsEnabled: Boolean = true,
     onExitHandlerChanged: (((() -> Unit) -> Unit)?) -> Unit = {},
+    onStartRound: (() -> QuizSession)? = null,
+    onWrongAnswerHaptic: (() -> Unit)? = null,
     onChangeTranslation: () -> Unit,
 ) {
     val colors = LocalHopeColors.current
     val language = QuizLanguage.forTranslation(translation)
-    val haptics = LocalHapticFeedback.current
     val byId = remember(questions) { questions.associateBy { it.id } }
     var savedSession by rememberSaveable(language, stateSaver = SessionSaver) { mutableStateOf(QuizSession()) }
     // A future content update may retire IDs; do not restore a broken or mismatched round.
@@ -169,14 +175,15 @@ fun BibleQuizScreen(
     var confirmEnd by rememberSaveable { mutableStateOf(false) }
     var review by rememberSaveable(language) { mutableStateOf(false) }
     val context = LocalContext.current.applicationContext
+    val vibration = remember(context) { QuizVibration(context) }
     val preferences = remember(context) { context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE) }
     var soundEnabled by remember(preferences) { mutableStateOf(preferences.getBoolean("sound", false)) }
     val sound = remember(soundEnabled, context) { if (soundEnabled) runCatching { QuizSoundPlayer(context) }.getOrNull() else null }
     val lifecycle = LocalLifecycleOwner.current.lifecycle
-    DisposableEffect(sound, lifecycle) {
-        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_STOP) sound?.stop() }
+    DisposableEffect(sound, vibration, lifecycle) {
+        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_STOP) { sound?.stop(); vibration.stop() } }
         lifecycle.addObserver(observer)
-        onDispose { lifecycle.removeObserver(observer); sound?.release() }
+        onDispose { lifecycle.removeObserver(observer); sound?.release(); vibration.stop() }
     }
     val success = Color(0xFF237447)
     val successSurface = Color(0xFFEAF5EE)
@@ -259,7 +266,7 @@ fun BibleQuizScreen(
                             }
                         }
                     }
-                    item { QuizButton(quizString(translation, R.string.quiz_start), translation, { review = false; completionRecorded = false; savedSession = QuizSession.start(questions) }, tag = "quiz_start") }
+                    item { QuizButton(quizString(translation, R.string.quiz_start), translation, { review = false; completionRecorded = false; savedSession = onStartRound?.invoke() ?: QuizSession.start(questions) }, tag = "quiz_start") }
                 }
                 session.finished -> {
                     item {
@@ -276,7 +283,7 @@ fun BibleQuizScreen(
                                     }
                                 }
                                 QuizButton(quizString(translation, R.string.quiz_review), translation, { review = true }, tag = "quiz_review")
-                                TextButton(onClick = { leaveCompletedQuiz { review = false; completionRecorded = false; savedSession = QuizSession.start(questions) } }, enabled = !completing,
+                                TextButton(onClick = { leaveCompletedQuiz { review = false; completionRecorded = false; savedSession = onStartRound?.invoke() ?: QuizSession.start(questions) } }, enabled = !completing,
                                     modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("quiz_restart")) {
                                     QuizText(quizString(translation, R.string.quiz_play_again), translation)
                                 }
@@ -315,7 +322,7 @@ fun BibleQuizScreen(
                             )
                         }
                     }
-                    item(key = "question") { QuizText(q.question, translation, heading = true, modifier = Modifier.testTag("quiz_question")) }
+                    item(key = "question") { QuizQuestionText(q.question, translation) }
                     item(key = "options") {
                         Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             q.options.forEachIndexed { index, answer ->
@@ -366,7 +373,7 @@ fun BibleQuizScreen(
                                         val correct = session.selectedIndex == q.correctIndex
                                         sound?.play(correct)
                                         if (!correct && hapticsEnabled) {
-                                            haptics.performHapticFeedback(if (Build.VERSION.SDK_INT >= 30) HapticFeedbackType.Reject else HapticFeedbackType.LongPress)
+                                            if (onWrongAnswerHaptic != null) onWrongAnswerHaptic() else vibration.wrongAnswer()
                                         }
                                     }
                                 }
@@ -384,6 +391,25 @@ fun BibleQuizScreen(
             }
         }
     }
+}
+
+@Composable
+private fun QuizQuestionText(question: String, translation: Translation) {
+    val passageStart = question.indexOf("\n\n")
+    val content = buildAnnotatedString {
+        if (passageStart < 0) append(question)
+        else {
+            append(question.substring(0, passageStart + 2))
+            withStyle(ParagraphStyle(lineHeight = 27.sp)) {
+                withStyle(SpanStyle(fontSize = 17.sp, fontWeight = FontWeight.Normal)) {
+                    append(question.substring(passageStart + 2))
+                }
+            }
+        }
+    }
+    Text(content, Modifier.testTag("quiz_question").semantics { heading() },
+        color = LocalHopeColors.current.text, fontFamily = interfaceFontFor(translation),
+        fontSize = 23.sp, lineHeight = 32.sp, fontWeight = FontWeight.SemiBold)
 }
 
 @Composable
@@ -405,7 +431,7 @@ private fun QuizTranslation(translation: Translation, onChange: () -> Unit) {
 private fun QuizExplanation(question: QuizQuestion, translation: Translation) {
     // Keep the explanation and its citation together; allow natural wrapping for long languages.
     val reference = BibleReferenceFormatter.formatFull(question.reference, translation)
-    QuizText("${question.explanation} ($reference)", translation, small = true)
+    QuizText(if (question.explanation.isBlank()) reference else "${question.explanation} ($reference)", translation, small = true)
 }
 
 @Composable

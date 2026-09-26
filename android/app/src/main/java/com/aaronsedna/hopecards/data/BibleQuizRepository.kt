@@ -20,7 +20,7 @@ class BibleQuizRepository(context: Context) {
             val options = text.getJSONArray("options")
             QuizQuestion(
                 id = row.getString("id"),
-                reference = row.getString("reference"),
+                reference = text.optString("reference", row.getString("reference")),
                 question = text.getString("question"),
                 options = List(options.length()) { options.getString(it) },
                 correctIndex = row.getInt("correctIndex"),

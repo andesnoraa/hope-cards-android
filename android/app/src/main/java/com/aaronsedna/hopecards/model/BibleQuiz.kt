@@ -29,7 +29,7 @@ data class QuizQuestion(
     val explanation: String,
 ) {
     init {
-        require(id.isNotBlank() && reference.isNotBlank() && question.isNotBlank() && explanation.isNotBlank())
+        require(id.isNotBlank() && reference.isNotBlank() && question.isNotBlank())
         require(options.size == 4 && options.all { it.isNotBlank() } && options.distinct().size == 4)
         require(correctIndex in options.indices)
     }
