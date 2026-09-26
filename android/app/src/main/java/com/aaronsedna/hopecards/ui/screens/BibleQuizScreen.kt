@@ -20,6 +20,8 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -347,12 +349,8 @@ fun BibleQuizScreen(
                     }
                     if (session.checked) item(key = "feedback") {
                         LaunchedEffect(q.id) { feedbackRequester.bringIntoView() }
-                        Surface(color = colors.surface, shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, colors.divider), modifier = Modifier.bringIntoViewRequester(feedbackRequester).testTag("quiz_feedback").semantics { liveRegion = LiveRegionMode.Polite }) {
-                            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                QuizText(quizString(translation, if (session.selectedIndex == q.correctIndex) R.string.quiz_correct else R.string.quiz_correct_answer, q.options[q.correctIndex]), translation, small = true, color = success)
-                                QuizExplanation(q, translation)
-                            }
-                        }
+                        QuizAnswerFeedback(q, translation, session.selectedIndex == q.correctIndex,
+                            modifier = Modifier.bringIntoViewRequester(feedbackRequester))
                     }
                     item(key = "action") {
                         QuizButton(
@@ -403,6 +401,33 @@ private fun QuizQuestionText(question: String, translation: Translation) {
     Text(content, Modifier.testTag("quiz_question").semantics { heading() },
         color = LocalHopeColors.current.text, fontFamily = interfaceFontFor(translation),
         fontSize = 23.sp, lineHeight = 32.sp, fontWeight = FontWeight.SemiBold)
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun QuizAnswerFeedback(question: QuizQuestion, translation: Translation, correct: Boolean, modifier: Modifier = Modifier) {
+    val colors = LocalHopeColors.current
+    val success = Color(0xFF237447)
+    Surface(color = colors.surface, shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, colors.divider),
+        modifier = modifier.fillMaxWidth().testTag("quiz_feedback").semantics { liveRegion = LiveRegionMode.Polite }) {
+        Column(Modifier.heightIn(min = 58.dp).padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically)) {
+            // Keep short references beside the result. Long translations and large fonts wrap naturally.
+            FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+                verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(quizString(translation, if (correct) R.string.quiz_correct else R.string.quiz_incorrect),
+                    modifier = Modifier.padding(end = 16.dp).alignByBaseline(),
+                    color = if (correct) success else colors.danger, fontFamily = interfaceFontFor(translation),
+                    fontSize = 16.sp, lineHeight = 25.sp, fontWeight = FontWeight.SemiBold)
+                Text(BibleReferenceFormatter.formatFull(question.reference, translation),
+                    modifier = Modifier.alignByBaseline(), color = colors.textSecondary,
+                    fontFamily = interfaceFontFor(translation), fontSize = 14.sp, lineHeight = 21.sp)
+            }
+            if (!correct) QuizText(quizString(translation, R.string.quiz_correct_answer, question.options[question.correctIndex]),
+                translation, small = true, color = success)
+            if (question.explanation.isNotBlank()) QuizText(question.explanation, translation, small = true)
+        }
+    }
 }
 
 @Composable
