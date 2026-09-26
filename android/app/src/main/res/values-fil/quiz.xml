@@ -14,7 +14,6 @@
     <string name="quiz_review">Balikan ang mga sagot</string>
     <string name="quiz_your_answer">Iyong sagot: %1$s</string>
     <string name="quiz_play_again">Bagong pagsusulit</string>
-    <string name="quiz_change_translation">Palitan ang salin ng Bibliya</string>
     <string name="quiz_progress">Tanong %1$d sa %2$d</string>
     <string name="quiz_loading">Inihahanda ang pagsusulit…</string>
     <string name="quiz_error">Hindi maihanda ang pagsusulit. Subukang muli.</string>

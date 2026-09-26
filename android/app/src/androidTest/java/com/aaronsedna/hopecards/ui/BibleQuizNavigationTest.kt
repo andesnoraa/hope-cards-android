@@ -18,7 +18,7 @@ import org.junit.Test
 class BibleQuizNavigationTest {
     @get:Rule val compose = createAndroidComposeRule<MainActivity>()
 
-    @Test fun drawerAndSharedTranslationPickerKeepTheQuizInSyncWithSettings() {
+    @Test fun drawerAndSettingsKeepTheQuizLanguageInSync() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val repository = AppRepository(context)
         val before = runBlocking { repository.currentSettings() }
@@ -28,14 +28,16 @@ class BibleQuizNavigationTest {
             waitFor("quiz_start")
             scroll("quiz_start").performClick()
             assertQuestionLanguage(Translation.BSB)
-            scroll("quiz_change_translation").performClick()
+            openDestination("Settings")
+            compose.onNodeWithText("Bible Translation").performScrollTo().performClick()
             compose.onNodeWithText("MAL · Sathyavedapusthakam (1910)").performScrollTo().performClick()
+            openDestination("Bible Quiz")
             waitFor("quiz_start")
             scroll("quiz_start").assertTextEquals("ആരംഭിക്കാം").performClick()
             assertQuestionLanguage(Translation.MAL1910)
             capture("quiz-app-malayalam.png")
 
-            // Exercise the existing Settings path, not just the quiz's shortcut.
+            // Changing the shared setting updates the quiz while retaining each language’s round.
             openDestination("Settings")
             compose.onNodeWithText("Bible Translation").performScrollTo().performClick()
             compose.onNodeWithText("LUT · Lutherbibel (1912)").performScrollTo().performClick()

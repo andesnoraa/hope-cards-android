@@ -60,12 +60,11 @@ class BibleQuizInstrumentedTest {
 
     @Test fun languageChangesRefreshQuestionsAndControlsAndReturningPreservesTheRound() {
         val edition = mutableStateOf(Translation.BSB)
-        var changeRequested = false
         compose.setContent {
             val holder = rememberSaveableStateHolder()
             HopeCardsTheme(ThemeName.CLASSIC) {
                 holder.SaveableStateProvider(QuizLanguage.forTranslation(edition.value).code) {
-                    BibleQuizRoute(edition.value) { changeRequested = true }
+                    BibleQuizRoute(edition.value)
                 }
             }
         }
@@ -89,8 +88,6 @@ class BibleQuizInstrumentedTest {
         waitFor("bible_quiz")
         assertEquals(firstEnglishQuestion, questionText())
         node("quiz_option_0").assertIsNotEnabled()
-        scroll("quiz_change_translation").performClick()
-        compose.runOnIdle { assertTrue(changeRequested) }
     }
 
     @Test fun completeRoundScoresCorrectlyAndSurvivesSavedStateRestoration() {
@@ -106,7 +103,7 @@ class BibleQuizInstrumentedTest {
                         assertTrue(current())
                         completionCalls++
                         proceed()
-                    }, hapticsEnabled = enableHaptics.value, onWrongAnswerHaptic = { hapticEvents += Unit }, onChangeTranslation = {})
+                    }, hapticsEnabled = enableHaptics.value, onWrongAnswerHaptic = { hapticEvents += Unit })
             }
         }
         scroll("quiz_start").performClick()
@@ -165,7 +162,7 @@ class BibleQuizInstrumentedTest {
             HopeCardsTheme(ThemeName.CLASSIC) {
                 BibleQuizScreen(questions, Translation.BSB,
                     onComplete = { _, proceed -> completions++; resume = proceed },
-                    onExitHandlerChanged = { exit = it }, onChangeTranslation = {})
+                    onExitHandlerChanged = { exit = it })
             }
         }
         compose.runOnIdle { exit!!.invoke { navigations++ } }
@@ -198,7 +195,7 @@ class BibleQuizInstrumentedTest {
         restoration.setContent {
             HopeCardsTheme(ThemeName.CLASSIC) {
                 BibleQuizScreen(questions, Translation.BSB,
-                    onComplete = { _, proceed -> completions++; proceed() }, onChangeTranslation = {})
+                    onComplete = { _, proceed -> completions++; proceed() })
             }
         }
         scroll("quiz_start").performClick()
@@ -221,7 +218,7 @@ class BibleQuizInstrumentedTest {
         compose.setContent {
             HopeCardsTheme(ThemeName.CLASSIC) {
                 BibleQuizScreen(questions, Translation.BSB,
-                    onComplete = { _, proceed -> completions++; proceed() }, onChangeTranslation = {})
+                    onComplete = { _, proceed -> completions++; proceed() })
             }
         }
         scroll("quiz_start").performClick()
@@ -286,7 +283,7 @@ class BibleQuizInstrumentedTest {
     @Test fun wrongAnswerRequestsDeviceVibration() {
         val questions = bank(Translation.BSB).take(1)
         compose.setContent {
-            HopeCardsTheme(ThemeName.CLASSIC) { BibleQuizScreen(questions, Translation.BSB) {} }
+            HopeCardsTheme(ThemeName.CLASSIC) { BibleQuizScreen(questions, Translation.BSB) }
         }
         scroll("quiz_start").performClick()
         scroll("quiz_option_${(questions.first().correctIndex + 1) % 4}").performClick()
@@ -301,7 +298,7 @@ class BibleQuizInstrumentedTest {
         try {
             val restoration = StateRestorationTester(compose)
             restoration.setContent {
-                HopeCardsTheme(ThemeName.CLASSIC) { BibleQuizScreen(bank(Translation.BSB), Translation.BSB) {} }
+                HopeCardsTheme(ThemeName.CLASSIC) { BibleQuizScreen(bank(Translation.BSB), Translation.BSB) }
             }
             node("quiz_sound").assertIsOff().performClick().assertIsOn()
             compose.runOnIdle { assertTrue(prefs.getBoolean("sound", false)) }
@@ -317,7 +314,7 @@ class BibleQuizInstrumentedTest {
             val density = LocalDensity.current
             CompositionLocalProvider(LocalDensity provides Density(density.density, 1.6f)) {
                 HopeCardsTheme(ThemeName.SERENITY) {
-                    Box(Modifier.width(320.dp).fillMaxSize()) { BibleQuizScreen(questions, Translation.MAL1910) {} }
+                    Box(Modifier.width(320.dp).fillMaxSize()) { BibleQuizScreen(questions, Translation.MAL1910) }
                 }
             }
         }

@@ -14,7 +14,6 @@
     <string name="quiz_review">Review answers</string>
     <string name="quiz_your_answer">Your answer: %1$s</string>
     <string name="quiz_play_again">New quiz</string>
-    <string name="quiz_change_translation">Change Bible translation</string>
     <string name="quiz_progress">Question %1$d of %2$d</string>
     <string name="quiz_loading">Loading quiz…</string>
     <string name="quiz_error">The quiz could not be loaded. Please try again.</string>

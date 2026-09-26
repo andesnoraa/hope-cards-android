@@ -5,7 +5,6 @@ import android.content.Context
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.stateDescription
@@ -117,7 +116,6 @@ fun BibleQuizRoute(
     onComplete: (() -> Boolean, () -> Unit) -> Unit = { _, proceed -> proceed() },
     hapticsEnabled: Boolean = true,
     onExitHandlerChanged: (((() -> Unit) -> Unit)?) -> Unit = {},
-    onChangeTranslation: () -> Unit,
 ) {
     val context = LocalContext.current
     val language = QuizLanguage.forTranslation(translation)
@@ -140,7 +138,7 @@ fun BibleQuizRoute(
         }
         loaded?.isFailure == true -> QuizMessage(translation, R.string.quiz_error, R.string.quiz_retry, { retry++ })
         else -> BibleQuizScreen(loaded!!.getOrThrow(), translation, onComplete, hapticsEnabled, onExitHandlerChanged,
-            onStartRound = { roundHistory.nextRound(language, loaded!!.getOrThrow()) }, onChangeTranslation = onChangeTranslation)
+            onStartRound = { roundHistory.nextRound(language, loaded!!.getOrThrow()) })
     }
 }
 
@@ -160,7 +158,6 @@ fun BibleQuizScreen(
     onExitHandlerChanged: (((() -> Unit) -> Unit)?) -> Unit = {},
     onStartRound: (() -> QuizSession)? = null,
     onWrongAnswerHaptic: (() -> Unit)? = null,
-    onChangeTranslation: () -> Unit,
 ) {
     val colors = LocalHopeColors.current
     val language = QuizLanguage.forTranslation(translation)
@@ -236,9 +233,6 @@ fun BibleQuizScreen(
             contentPadding = PaddingValues(horizontal = 24.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(18.dp),
         ) {
-            if (session.started) item(key = "language") {
-                QuizTranslation(translation) { leaveCompletedQuiz(onChangeTranslation) }
-            }
             when {
                 !session.started -> {
                     item {
@@ -250,8 +244,6 @@ fun BibleQuizScreen(
                     item {
                         Surface(color = colors.surface, shape = RoundedCornerShape(20.dp), border = BorderStroke(1.dp, colors.divider)) {
                             Column(Modifier.padding(horizontal = 18.dp, vertical = 6.dp)) {
-                                QuizTranslation(translation) { leaveCompletedQuiz(onChangeTranslation) }
-                                HorizontalDivider(color = colors.divider)
                                 Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).testTag("quiz_sound")
                                     .toggleable(soundEnabled, role = Role.Switch) {
                                         soundEnabled = it
@@ -411,21 +403,6 @@ private fun QuizQuestionText(question: String, translation: Translation) {
     Text(content, Modifier.testTag("quiz_question").semantics { heading() },
         color = LocalHopeColors.current.text, fontFamily = interfaceFontFor(translation),
         fontSize = 23.sp, lineHeight = 32.sp, fontWeight = FontWeight.SemiBold)
-}
-
-@Composable
-private fun QuizTranslation(translation: Translation, onChange: () -> Unit) {
-    val colors = LocalHopeColors.current
-    val language = QuizLanguage.forTranslation(translation)
-    Surface(onClick = onChange, color = Color.Transparent,
-        modifier = Modifier.fillMaxWidth().testTag("quiz_change_translation"), shape = RoundedCornerShape(12.dp)) {
-        Row(Modifier.heightIn(min = 52.dp).padding(vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            QuizText(quizString(translation, R.string.quiz_selected_edition, language.nativeName, translation.label),
-                translation, small = true, modifier = Modifier.weight(1f), color = colors.textSecondary)
-            AppIcon(AppIconGlyph.ChevronDown, quizString(translation, R.string.quiz_change_translation), colors.textSecondary, size = 18.dp)
-        }
-    }
 }
 
 @Composable

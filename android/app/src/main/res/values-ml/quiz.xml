@@ -14,7 +14,6 @@
     <string name="quiz_review">ഉത്തരങ്ങൾ പരിശോധിക്കുക</string>
     <string name="quiz_your_answer">നിങ്ങളുടെ ഉത്തരം: %1$s</string>
     <string name="quiz_play_again">പുതിയ ക്വിസ്</string>
-    <string name="quiz_change_translation">ബൈബിൾ പരിഭാഷ മാറ്റുക</string>
     <string name="quiz_progress">ചോദ്യം %1$d / %2$d</string>
     <string name="quiz_loading">ക്വിസ് തയ്യാറാക്കുന്നു…</string>
     <string name="quiz_error">ക്വിസ് ലഭ്യമാക്കാൻ കഴിഞ്ഞില്ല. വീണ്ടും ശ്രമിക്കുക.</string>

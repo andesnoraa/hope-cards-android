@@ -577,8 +577,7 @@ fun HopeCardsApp(
                                                             viewModel.uiState.value.destination == Destination.BIBLE_QUIZ &&
                                                             !translationPickerOpen
                                                     }, continueNavigation = proceed)
-                                            },
-                                            onChangeTranslation = { translationPickerOpen = true })
+                                            })
                                     }
                                 }
                                 Destination.FAVORITES -> FavoritesScreen(

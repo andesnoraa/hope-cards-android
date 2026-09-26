@@ -1,6 +1,6 @@
 # Bible Quiz
 
-Bible Quiz is available from the navigation drawer. It follows the existing Bible translation setting, including changes made through Settings or the quiz's “Change Bible translation” shortcut. Product navigation continues to use English; all quiz content and controls use the selected Bible's language.
+Bible Quiz is available from the navigation drawer. It follows the existing Bible translation setting, including changes made through Settings. There is no language switcher in the quiz or its title bar. Product navigation continues to use English; all quiz content and controls use the selected Bible's language.
 
 The bank contains 200 multiple-choice questions in each of English, Malayalam, German, French, Italian, Spanish, and Filipino/Tagalog (1,400 localized entries). There are 130 original story questions and 70 passage-recognition questions using scripture already bundled in the app. All four English editions share the English quiz. Ten distinct questions are drawn per round from a shuffled, persisted language-specific deck. Each 200-question cycle is exhausted before refilling, with the last round deferred at cycle boundaries. Answers lock when checked. Feedback shows a localized scripture reference and an explanation where one is provided; reference-only feedback avoids filler text. Results show the score and a review of every answer.
 
@@ -32,7 +32,7 @@ Quiz language mapping and scoring live in `model/BibleQuiz.kt`. `data/BibleQuizR
 
 - JVM tests: language mapping for every edition, unique rounds, score accuracy, answer locking, invalid/restored state handling.
 - Instrumented tests: all localized assets and references, live language changes, per-language saved progress, a complete scored round, saved-state restoration, large Malayalam text, and end-round cancellation/confirmation.
-- App integration test: navigation drawer, translation selection inside the quiz, changing translation in Settings, and returning to an unfinished round.
+- App integration test: navigation drawer, changing Bible translation in Settings, and returning to an unfinished round.
 - Build and lint: debug only. No Play release bundle, release version increment, publication, or signing change is part of this feature implementation.
 
 Verified on 2026-09-26: all 49 JVM tests passed; `lintDebug` passed (existing warnings and two pluralization suggestions for quiz counts); debug app and instrumented-test APKs built. All four quiz instrumented tests passed on the phone emulator. The full-app navigation/translation integration test passed on both phone and tablet emulators. Phone screenshots were visually inspected, including Malayalam; the tablet screenshot was obscured by an Android system tutorial, so no tablet visual sign-off is claimed. A normal debug APK was subsequently built for device installation.
@@ -44,7 +44,7 @@ The quiz uses the app's HopeTheme colors, Poppins and Noto Sans Malayalam, pill 
 
 “Enable sound” appears only in the start screen’s grouped setup card. It is off by default and is remembered on the device. Two original 300 ms PCM chimes are bundled in `res/raw/quiz_correct.wav` and `quiz_incorrect.wav` (22,050 Hz mono, 16 bit). SoundPool uses one stream, plays only on an explicit answer submission, honors silent/vibrate and system volume, pauses when the app is backgrounded, and releases when disabled or the quiz leaves composition. Recreating or reviewing a round does not replay sounds.
 
-Each completed ten-question quiz displays the score immediately. The ad opportunity is deferred until the user starts a new quiz or leaves the completed quiz using Back, the navigation drawer, or the translation control. Opening answer review and returning to results never show an ad. A saveable per-round marker consumes the exit opportunity once, and repeated taps are ignored while the transition is pending. Incomplete rounds and app backgrounding do not trigger it.
+Each completed ten-question quiz displays the score immediately. The ad opportunity is deferred until the user starts a new quiz or leaves the completed quiz using Back or the navigation drawer. Opening answer review and returning to results never show an ad. A saveable per-round marker consumes the exit opportunity once, and repeated taps are ignored while the transition is pending. Incomplete rounds and app backgrounding do not trigger it.
 
 The existing AdsManager, consent handling, ad-free entitlement and app-wide ten-minute cooldown are retained. A loaded ad must already exist at the exit tap; absent/expired ads are skipped and late loads cannot interrupt the next screen. No new advertising SDK or ad unit is introduced.
 
