@@ -191,6 +191,98 @@ class BibleQuizInstrumentedTest {
         assertEquals(3, navigations)
     }
 
+    @Test fun resultExportMenuKeepsTheScoreAndDoesNotTriggerCompletionAd() {
+        val questions = bank(Translation.BSB).take(1)
+        var completions = 0
+        val restoration = StateRestorationTester(compose)
+        restoration.setContent {
+            HopeCardsTheme(ThemeName.CLASSIC) {
+                BibleQuizScreen(questions, Translation.BSB,
+                    onComplete = { _, proceed -> completions++; proceed() }, onChangeTranslation = {})
+            }
+        }
+        scroll("quiz_start").performClick()
+        scroll("quiz_option_${questions.first().correctIndex}").performClick()
+        scroll("quiz_action").performClick()
+        scroll("quiz_action").performClick()
+        scroll("quiz_export").performClick()
+        node("quiz_share").assertIsDisplayed()
+        node("quiz_save_pdf").assertIsDisplayed()
+        node("quiz_print").assertIsDisplayed()
+        androidx.test.espresso.Espresso.pressBack()
+        restoration.emulateSavedInstanceStateRestore()
+        scroll("quiz_score").assertTextEquals("1 of 1 correct")
+        assertEquals(0, completions)
+    }
+
+    @Test fun systemShareSaveAndPrintReturnToTheCompletedRoundWithoutAds() {
+        val questions = bank(Translation.BSB).take(1)
+        var completions = 0
+        compose.setContent {
+            HopeCardsTheme(ThemeName.CLASSIC) {
+                BibleQuizScreen(questions, Translation.BSB,
+                    onComplete = { _, proceed -> completions++; proceed() }, onChangeTranslation = {})
+            }
+        }
+        scroll("quiz_start").performClick()
+        scroll("quiz_option_${questions.first().correctIndex}").performClick()
+        scroll("quiz_action").performClick()
+        scroll("quiz_action").performClick()
+        val automation = InstrumentationRegistry.getInstrumentation().uiAutomation
+        fun awaitPackage(part: String) {
+            val deadline = android.os.SystemClock.uptimeMillis() + 15000
+            while (android.os.SystemClock.uptimeMillis() < deadline) {
+                if (automation.rootInActiveWindow?.packageName?.toString()?.contains(part) == true) return
+                compose.mainClock.advanceTimeBy(100)
+                android.os.SystemClock.sleep(100)
+            }
+            fail("System screen not opened: $part. Actual: ${automation.rootInActiveWindow?.packageName}")
+        }
+        fun back() {
+            automation.performGlobalAction(android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_BACK)
+            awaitPackage("hopecards")
+            scroll("quiz_score").assertTextEquals("1 of 1 correct")
+            assertEquals(0, completions)
+        }
+        capture("export-results")
+        scroll("quiz_export").performClick()
+        capture("export-menu")
+        node("quiz_share").performClick()
+        awaitPackage("intentresolver")
+        back()
+        scroll("quiz_export").performClick()
+        node("quiz_save_pdf").performClick()
+        awaitPackage("documentsui")
+        back()
+        scroll("quiz_export").assertIsEnabled().performClick()
+        node("quiz_save_pdf").performClick()
+        awaitPackage("documentsui")
+        val filename = automation.rootInActiveWindow.findAccessibilityNodeInfosByText("Hope-Cards-Quiz-en.pdf").firstOrNull { it.isEditable }
+        filename?.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_SET_TEXT, android.os.Bundle().apply {
+            putCharSequence(android.view.accessibility.AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, "Hope-Cards-Quiz-test-${System.currentTimeMillis()}.pdf")
+        })
+        val saveButton = automation.rootInActiveWindow.findAccessibilityNodeInfosByText("Save")
+            .first { it.isClickable && it.text?.toString()?.equals("Save", ignoreCase = true) == true }
+        assertTrue(saveButton.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK))
+        awaitPackage("hopecards")
+        scroll("quiz_score").assertTextEquals("1 of 1 correct")
+        assertEquals(0, completions)
+        compose.waitUntil(10_000) {
+            compose.onAllNodes(hasTestTag("quiz_export") and isEnabled()).fetchSemanticsNodes().isNotEmpty()
+        }
+        scroll("quiz_export").assertIsEnabled().performClick()
+        node("quiz_print").performClick()
+        awaitPackage("printspooler")
+        android.os.SystemClock.sleep(1000)
+        automation.takeScreenshot()?.let { bitmap ->
+            File(context.getExternalFilesDir(null), "quiz-print-preview.png").outputStream().use {
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
+            }
+            bitmap.recycle()
+        }
+        back()
+    }
+
     @Test fun wrongAnswerRequestsDeviceVibration() {
         val questions = bank(Translation.BSB).take(1)
         compose.setContent {

@@ -29,4 +29,13 @@
     <string name="quiz_enable_sound">Ton aktivieren</string>
     <string name="quiz_incorrect">Falsch</string>
     <string name="quiz_back_results">Zurück zum Ergebnis</string>
+    <string name="quiz_report_title">Quiz-Ergebnis</string>
+    <string name="quiz_share_export">Teilen oder exportieren</string>
+    <string name="quiz_share_results">Ergebnis teilen</string>
+    <string name="quiz_save_pdf">Als PDF speichern</string>
+    <string name="quiz_print">Drucken</string>
+    <string name="quiz_preparing_pdf">PDF wird erstellt…</string>
+    <string name="quiz_pdf_saved">PDF gespeichert</string>
+    <string name="quiz_export_error">Das Ergebnis konnte nicht exportiert werden. Bitte erneut versuchen.</string>
+    <string name="quiz_export_close">Schließen</string>
 </resources>

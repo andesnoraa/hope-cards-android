@@ -29,4 +29,13 @@
     <string name="quiz_enable_sound">Paganahin ang tunog</string>
     <string name="quiz_incorrect">Maling sagot</string>
     <string name="quiz_back_results">Bumalik sa resulta</string>
+    <string name="quiz_report_title">Mga resulta ng pagsusulit</string>
+    <string name="quiz_share_export">Ibahagi o i-export</string>
+    <string name="quiz_share_results">Ibahagi ang mga resulta</string>
+    <string name="quiz_save_pdf">I-save bilang PDF</string>
+    <string name="quiz_print">I-print</string>
+    <string name="quiz_preparing_pdf">Inihahanda ang PDF…</string>
+    <string name="quiz_pdf_saved">Na-save ang PDF</string>
+    <string name="quiz_export_error">Hindi ma-export ang mga resulta. Pakisubukang muli.</string>
+    <string name="quiz_export_close">Isara</string>
 </resources>

@@ -283,6 +283,7 @@ fun BibleQuizScreen(
                                     }
                                 }
                                 QuizButton(quizString(translation, R.string.quiz_review), translation, { review = true }, tag = "quiz_review")
+                                QuizResultActions(translation, session, questions)
                                 TextButton(onClick = { leaveCompletedQuiz { review = false; completionRecorded = false; savedSession = onStartRound?.invoke() ?: QuizSession.start(questions) } }, enabled = !completing,
                                     modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("quiz_restart")) {
                                     QuizText(quizString(translation, R.string.quiz_play_again), translation)

@@ -29,4 +29,13 @@
     <string name="quiz_enable_sound">ശബ്ദം പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="quiz_incorrect">തെറ്റായ ഉത്തരം</string>
     <string name="quiz_back_results">ഫലത്തിലേക്ക് മടങ്ങുക</string>
+    <string name="quiz_report_title">ക്വിസ് ഫലം</string>
+    <string name="quiz_share_export">പങ്കിടുക അല്ലെങ്കിൽ എക്സ്പോർട്ട് ചെയ്യുക</string>
+    <string name="quiz_share_results">ഫലം പങ്കിടുക</string>
+    <string name="quiz_save_pdf">PDF ആയി സംരക്ഷിക്കുക</string>
+    <string name="quiz_print">പ്രിന്റ് ചെയ്യുക</string>
+    <string name="quiz_preparing_pdf">PDF തയ്യാറാക്കുന്നു…</string>
+    <string name="quiz_pdf_saved">PDF സംരക്ഷിച്ചു</string>
+    <string name="quiz_export_error">ഫലം എക്സ്പോർട്ട് ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="quiz_export_close">അടയ്ക്കുക</string>
 </resources>
