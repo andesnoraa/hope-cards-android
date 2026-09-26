@@ -39,7 +39,7 @@ The test asserts unchanged source text, no omitted text when applying emphasis, 
 
 ## Production integration
 
-The native gallery uses twenty-nine shared WebP backgrounds and a fixed font set. A single cancellable render queue generates only requested thumbnails/details. The bitmap cache is capped at 8 MiB; rendered-image and shared-export disk directories are capped at 32 MiB each. Application memory callbacks clear the bitmap cache. The renderer retains application context only, and creates no periodic job, wake lock, or service. Gallery captions show only the localized citation and favorite control; the Bible text, citation and edition label follow the selected translation. Reviewed design overrides are used only when their source text still matches exactly. Other entries use the verified verse text, existing matching English emphasis where available, and deterministic phrase/type/background selection.
+The native gallery uses thirty-seven shared WebP backgrounds and a fixed font set. A single cancellable render queue generates only requested thumbnails/details. The bitmap cache is capped at 8 MiB; rendered-image and shared-export disk directories are capped at 32 MiB each. Application memory callbacks clear the bitmap cache. The renderer retains application context only, and creates no periodic job, wake lock, or service. Gallery captions show only the localized citation and favorite control; the Bible text, citation and edition label follow the selected translation. Reviewed design overrides are used only when their source text still matches exactly. Other entries use the verified verse text, existing matching English emphasis where available, and deterministic phrase/type/background selection.
 
 The original baked artwork files live only in `android/app/src/androidTest/assets/verse-art/` for the legacy authoring workflow. They are excluded from both debug and release app packages; the gallery, saving, and sharing use the native renderer.
 
@@ -59,7 +59,7 @@ To reproduce the original three-option greenery comparison, run `GenerateVerseAr
 
 ### Stable visual shuffle
 
-`VerseArtOrder` separates scene families and recent repeated backgrounds using the actual selected-edition design. It is deterministic across reopening and recomposition, applies to categories and Saved, and preserves artwork/favorite IDs. Photos remain on disk once; no extra bitmap cache is allocated for ordering. Closely related alpine lakes, forest scenes, golden fields and botanical textures share families. A small or visually homogeneous Saved selection can still repeat a family when no alternative remains.
+`VerseArtOrder` separates scene families and recent repeated backgrounds using the actual selected-edition design. It is deterministic within a gallery visit and across recomposition, applies to categories and Saved, and preserves artwork/favorite IDs. Photos remain on disk once; no extra bitmap cache is allocated for ordering. Closely related alpine lakes, forest scenes, golden fields and botanical textures share families. A small or visually homogeneous Saved selection can still repeat a family when no alternative remains.
 
 ### Approved Quiet Branch replacement
 
@@ -68,3 +68,16 @@ Quiet Branch was approved on 2026-09-22. `approved-backgrounds/quiet-branch.webp
 ### September 23 photo selection
 
 Retained Quiet Reservoir, Forest Mist and Sunbeam Field without duplicate copies. Added Misty Bend from the supplied Timberly Hawkins photograph, cropped to the winding road and dark foliage. Removed Foggy Pines and Teal Bark at the user’s request. The library contains 29 backgrounds (18 original photos and 11 approved generated assets), with no washout filters. The cache version is `artistic-v13-curated-forest-road`.
+
+
+### September 26 additions and gallery rotation
+
+Added exactly the eight PNG files supplied in the final user selection: starry desert, magnolia, olive grove, snowy valley, autumn lake, ferns, songbird on blossoms and starry alpine lake. The existing 29 backgrounds remain, for a total of 37. The eight 1080 × 1080 WebP files total 720,002 bytes (0.69 MiB). They are resized and encoded from those exact source files without cropping, recoloring, tinting or overlays. Other new candidates are excluded from production assets.
+
+`selected-backgrounds-2026-09-26.json` records the final prompt set, built-in image-generation provenance, selected source paths, source/asset hashes, encoding settings and individual text regions. Run `python3 scripts/verse-art/preview/import_additional_backgrounds.py` with the original PNGs available to reproduce the encoding. Existing `import_photos.py` preserves the new `scene-` profiles and assets. Unselected generated candidates are preview files only, outside the APK.
+
+Each new gallery visit advances a persisted shuffled cycle for each verse. The cycle uses compatible roomy profiles plus that verse's original layout, preserves every verse's existing typography, and avoids immediate background repeats. Compose saves the visit through activity recreation. Browsing categories, scrolling, opening details, saving and sharing retain the same visit. Opening the gallery again from another app section advances it. There are no timers, network fetches, background jobs, wake locks or eager bitmap generation for rotation.
+
+The cache key contains the selected background, not an ever-increasing visit number, so repeats reuse cached renders. The existing 8 MiB bitmap cache and two 32 MiB disk limits are unchanged. Cache limits are not a claim about total process memory or measured battery consumption. The implementation uses cache version `artistic-v15-selected-background-rotation`.
+
+Verification includes `VerseArtRotationTest`, `VerseArtRotationInstrumentedTest` (all new files at 1080px, long and short verses across ten editions, cache reuse and sharing consistency), the full existing edition-rendering regression and gallery navigation/recreation checks. Native English and Malayalam previews are written to the debug app's external `verse-art-new-backgrounds` directory by the rotation instrumentation test.

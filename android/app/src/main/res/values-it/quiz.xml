@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_bible_quiz">Quiz biblico</string>
+    <string name="quiz_intro">Metti alla prova la tua conoscenza della Bibbia</string>
+    <string name="quiz_description">Scopri persone, luoghi ed eventi della Bibbia.</string>
+    <string name="quiz_start">Inizia il quiz</string>
+    <string name="quiz_check">Verifica la risposta</string>
+    <string name="quiz_next">Prossima domanda</string>
+    <string name="quiz_results">Vedi il risultato</string>
+    <string name="quiz_correct">Risposta corretta!</string>
+    <string name="quiz_correct_answer">Risposta corretta: %1$s</string>
+    <string name="quiz_complete">Quiz completato</string>
+    <string name="quiz_score">%1$d risposte corrette su %2$d</string>
+    <string name="quiz_review">Rivedi le risposte</string>
+    <string name="quiz_your_answer">La tua risposta: %1$s</string>
+    <string name="quiz_play_again">Nuovo quiz</string>
+    <string name="quiz_change_translation">Cambia traduzione biblica</string>
+    <string name="quiz_progress">Domanda %1$d di %2$d</string>
+    <string name="quiz_loading">Caricamento del quiz…</string>
+    <string name="quiz_error">Impossibile caricare il quiz. Riprova.</string>
+    <string name="quiz_retry">Riprova</string>
+    <string name="quiz_exit_title">Terminare il quiz?</string>
+    <string name="quiz_exit_message">I progressi di questo turno saranno cancellati.</string>
+    <string name="quiz_keep_playing">Continua il quiz</string>
+    <string name="quiz_end_round">Termina il quiz</string>
+    <string name="quiz_bank_size">%1$d domande da esplorare</string>
+    <string name="quiz_reference">Riferimento biblico</string>
+    <string name="quiz_selected_edition">%1$s (%2$s)</string>
+    <string name="quiz_enable_sound">Attiva audio</string>
+    <string name="quiz_incorrect">Risposta errata</string>
+    <string name="quiz_back_results">Torna al risultato</string>
+</resources>

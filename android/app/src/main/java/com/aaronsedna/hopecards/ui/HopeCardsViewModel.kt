@@ -210,6 +210,10 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         ads.completeArtwork(activity, billing.state.value.isAdFree, isCurrentArtwork, continueToGallery)
     }
 
+    fun completedQuiz(activity: Activity, isCurrentQuiz: () -> Boolean, continueNavigation: () -> Unit) {
+        ads.completeQuiz(activity, billing.state.value.isAdFree, isCurrentQuiz, continueNavigation)
+    }
+
     fun purchaseRemoveAds(activity: Activity) {
         billing.launchPurchase(activity)
     }

@@ -40,8 +40,9 @@ class VerseArtInstrumentedTest {
         val reference = checkNotNull(VerseRepository(context).byId("psalm-46-10", runBlocking { settings.currentSettings().preferredTranslation })).displayReference
         val gallery = runBlocking { VerseArtImages.gallery(context, settings.currentSettings().preferredTranslation) }
         val available = gallery.references
+        val rotationSettings = context.getSharedPreferences("verse-art-rotation", android.content.Context.MODE_PRIVATE)
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
-            scenario.onActivity { it.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) }
+                scenario.onActivity { it.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) }
             composeRule.waitUntil(15_000) {
                 runCatching { composeRule.onNodeWithContentDescription("Open navigation").assertIsDisplayed() }.isSuccess
             }
@@ -49,6 +50,7 @@ class VerseArtInstrumentedTest {
             capture("drawer")
             composeRule.onNodeWithText("Verse Gallery").performClick()
             composeRule.waitUntil(15_000) { runCatching { composeRule.onNodeWithTag("art-category-peace").assertIsDisplayed() }.isSuccess }
+            val visit = rotationSettings.getLong("visit", -1)
             capture("categories")
             composeRule.onNodeWithTag("art-category-peace").assertIsDisplayed().performClick()
             composeRule.onNodeWithText("${VerseArtCatalog.inCategory("peace", emptySet()).count { it.id in available }} artworks").assertIsDisplayed()
@@ -65,6 +67,7 @@ class VerseArtInstrumentedTest {
             composeRule.waitUntil(5_000) { runCatching { composeRule.onNodeWithContentDescription(after).assertIsDisplayed() }.isSuccess }
             scenario.recreate()
             composeRule.waitUntil(15_000) { runCatching { composeRule.onNodeWithContentDescription(after).assertIsDisplayed() }.isSuccess }
+            assertEquals("Recreation must preserve the displayed background", visit, rotationSettings.getLong("visit", -1))
             composeRule.onNodeWithContentDescription(after).assertIsDisplayed().performClick()
             composeRule.waitUntil(5_000) { runCatching { composeRule.onNodeWithContentDescription(before).assertIsDisplayed() }.isSuccess }
             // Isolate navigation assertions from a network-delivered interstitial overlay.
@@ -83,8 +86,18 @@ class VerseArtInstrumentedTest {
             composeRule.onNodeWithTag("art-category-hope").performClick()
             composeRule.onNodeWithText("${VerseArtCatalog.inCategory("hope", emptySet()).count { it.id in available }} artworks").assertIsDisplayed()
             val firstHope = gallery.ordered(VerseArtCatalog.inCategory("hope", emptySet())).first()
-            composeRule.waitUntil(5_000) { runCatching { composeRule.onNodeWithTag("art-open-${firstHope.id}").assertIsDisplayed() }.isSuccess }
+            composeRule.onNodeWithTag("art-gallery").performScrollToNode(hasTestTag("art-open-${firstHope.id}"))
+            composeRule.onNodeWithTag("art-open-${firstHope.id}").assertIsDisplayed()
             capture("hope-gallery")
+            assertEquals("Browsing categories must preserve the visit", visit, rotationSettings.getLong("visit", -1))
+            composeRule.onNodeWithContentDescription("Back").performClick()
+            composeRule.onNodeWithTag("art-category-peace").assertIsDisplayed()
+            composeRule.onNodeWithContentDescription("Open navigation").performClick()
+            composeRule.onNodeWithText("Bible Quiz").performClick()
+            composeRule.onNodeWithContentDescription("Open navigation").performClick()
+            composeRule.onNodeWithText("Verse Gallery").performClick()
+            composeRule.waitUntil(15_000) { rotationSettings.getLong("visit", -1) != visit }
+            assertEquals(visit + 1, rotationSettings.getLong("visit", -1))
         }
     }
 

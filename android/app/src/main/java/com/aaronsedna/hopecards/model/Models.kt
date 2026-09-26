@@ -104,6 +104,7 @@ enum class Destination(val title: String) {
     HOME("Hope Cards"),
     DAILY("Daily Hope"),
     VERSE_ART("Verse Gallery"),
+    BIBLE_QUIZ("Bible Quiz"),
     FAVORITES("Saved Verses"),
     JOURNAL("My Journal"),
     REMOVE_ADS("Remove ads"),

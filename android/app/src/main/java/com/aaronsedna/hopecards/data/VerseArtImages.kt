@@ -23,7 +23,7 @@ import java.security.MessageDigest
 
 /** One cancellable render queue; no jobs, timers or activity references are retained. */
 object VerseArtImages {
-    private const val VERSION = "artistic-v13-curated-forest-road"
+    private const val VERSION = "artistic-v15-selected-background-rotation"
     private const val MEMORY_BYTES = 8 * 1024 * 1024
     private const val DISK_BYTES = 32L * 1024 * 1024
     private val mutex = Mutex()
@@ -33,6 +33,17 @@ object VerseArtImages {
     }
     private var renderer: VerseArtRenderer? = null
     private var verses: VerseRepository? = null
+
+    /** Once per new gallery visit, on IO. No clock, timer, service, or background refresh. */
+    suspend fun nextRotation(context: Context): Long = mutex.withLock {
+        withContext(Dispatchers.IO) {
+            val preferences = context.applicationContext.getSharedPreferences("verse-art-rotation", Context.MODE_PRIVATE)
+            val previous = preferences.getLong("visit", kotlin.random.Random.nextLong(1_000_000))
+            val next = if (previous == Long.MAX_VALUE) 0 else previous + 1
+            preferences.edit().putLong("visit", next).apply()
+            next
+        }
+    }
 
     private fun initialize(context: Context) {
         if (renderer != null) return
@@ -57,7 +68,7 @@ object VerseArtImages {
 
     suspend fun references(context: Context, edition: Translation): Map<String, String> = gallery(context, edition).references
 
-    suspend fun gallery(context: Context, edition: Translation): Gallery = mutex.withLock {
+    suspend fun gallery(context: Context, edition: Translation, rotation: Long? = null): Gallery = mutex.withLock {
         withContext(Dispatchers.IO) {
             initialize(context)
             val references = linkedMapOf<String, String>()
@@ -65,7 +76,7 @@ object VerseArtImages {
             for (art in VerseArtCatalog.artworks) {
                 val verse = checkNotNull(checkNotNull(verses).byId(art.verseId, edition))
                 if (VerseArtEligibility.includes(verse)) {
-                    val background = checkNotNull(renderer).design(verse).background
+                    val background = checkNotNull(renderer).design(verse, rotation).background
                     references[art.id] = verse.displayReference
                     scenes[art.id] = VerseArtOrder.Scene(background, checkNotNull(renderer).family(background))
                 }
@@ -74,18 +85,19 @@ object VerseArtImages {
         }
     }
 
-    private fun key(verse: Verse, size: Int): String {
-        val input = "$VERSION|${verse.id}|${verse.edition.id}|${verse.text}|${verse.displayReference}|$size"
+    private fun key(verse: Verse, size: Int, background: String): String {
+        val input = "$VERSION|${verse.id}|${verse.edition.id}|${verse.text}|${verse.displayReference}|$background|$size"
         return MessageDigest.getInstance("SHA-256").digest(input.toByteArray()).joinToString("") { "%02x".format(it) }
     }
 
     @Suppress("DEPRECATION")
-    suspend fun image(context: Context, art: VerseArtwork, edition: Translation, size: Int): Bitmap = mutex.withLock {
+    suspend fun image(context: Context, art: VerseArtwork, edition: Translation, size: Int, rotation: Long? = null): Bitmap = mutex.withLock {
         require(size == 360 || size == 1080)
         withContext(Dispatchers.IO) {
             initialize(context)
             val verse = checkNotNull(checkNotNull(verses).byId(art.verseId, edition))
-            val key = key(verse, size)
+            val design = checkNotNull(renderer).design(verse, rotation)
+            val key = key(verse, size, design.background)
             memory.get(key)?.let { return@withContext it }
             currentCoroutineContext().ensureActive()
             val directory = File(context.cacheDir, "verse-art-rendered").apply { mkdirs() }
@@ -98,7 +110,7 @@ object VerseArtImages {
                 }
                 decoded?.recycle(); cached.delete()
             }
-            val bitmap = withContext(Dispatchers.Default) { checkNotNull(renderer).render(verse, size) }
+            val bitmap = withContext(Dispatchers.Default) { checkNotNull(renderer).render(verse, size, design) }
             try {
                 currentCoroutineContext().ensureActive()
                 atomicWrite(cached) { file -> file.outputStream().use { check(bitmap.compress(Bitmap.CompressFormat.WEBP, 88, it)) } }
@@ -109,12 +121,12 @@ object VerseArtImages {
         }
     }
 
-    suspend fun jpeg(context: Context, art: VerseArtwork, edition: Translation): File {
+    suspend fun jpeg(context: Context, art: VerseArtwork, edition: Translation, rotation: Long? = null): File {
         val verse = verse(context, art, edition)
-        val id = key(verse, 1080)
+        val id = key(verse, 1080, checkNotNull(renderer).design(verse, rotation).background)
         val directory = File(context.cacheDir, "shared/verse-art").apply { mkdirs() }
         val file = File(directory, "hope-cards-${art.verseId}-${edition.id}-$id.jpg")
-        val bitmap = image(context, art, edition, 1080)
+        val bitmap = image(context, art, edition, 1080, rotation)
         return mutex.withLock {
             withContext(Dispatchers.IO) {
                 currentCoroutineContext().ensureActive()

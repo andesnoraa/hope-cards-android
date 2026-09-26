@@ -1,0 +1,20 @@
+[
+  {
+    "name": "scene-songbird-blossom",
+    "family": "birds",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic Bible verse background for Hope Cards. A beautiful small blue-and-gold songbird perched naturally on a slender cherry blossom branch along the LOWER RIGHT edge, anatomically accurate feet gripping the branch. Small ivory and pale pink blossoms frame the bottom edge. The bird is a tasteful small focal point, occupying at most 12 percent of the square. Broad softly blurred deep teal garden background through the entire center and upper two thirds, warm gentle dawn light on the feathers. Real bird photography. Reserve x12%-88%, y14%-70% as a broad quiet area for several lines of real Bible text that the app renders later. Natural rich colors, serene mood, believable detail and lighting. No washed-out filter, no added tint. No words, lettering, logo, symbol, watermark, collage, border, humans or buildings. One finished square image.",
+    "sourcePath": "/Users/aaronsedna/.codex/generated_images/01a0dbf4-6a1d-70c1-b290-649dcdb9fccc/exec-595ae8d6-e06e-4ffb-8a64-4c6f7480c252.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "User requested birds, flowers and stars"
+  },
+  {
+    "name": "scene-stars-over-lake",
+    "family": "night",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic Bible verse background for Hope Cards. A tranquil dark alpine lake under a beautiful starry midnight-blue sky. Sparse delicate realistic stars, subtly denser at the TOP corners only, no giant bright moon or saturated nebula. Low small dark mountains and pine silhouettes confined to the bottom fifth, a faint soft blue horizon and muted reflections on still water at the very bottom. The broad middle is clean deep indigo sky. Elegant realistic long-exposure night landscape photography. Reserve x12%-88%, y14%-70% as a broad quiet area for several lines of real Bible text that the app renders later. Natural rich colors, serene mood, believable detail and lighting. No washed-out filter, no added tint. No words, lettering, logo, symbol, watermark, collage, border, humans or buildings. One finished square image.",
+    "sourcePath": "/Users/aaronsedna/.codex/generated_images/01a0dbf4-6a1d-70c1-b290-649dcdb9fccc/exec-ab02f19c-70f2-4f11-a64b-a1b63fef1aa5.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "User requested birds, flowers and stars"
+  }
+]

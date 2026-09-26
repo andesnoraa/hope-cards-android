@@ -260,5 +260,77 @@
     "ink": "#463019",
     "footerInk": "#463019",
     "family": "golden"
+  },
+  "scene-autumn-stillness": {
+    "centerX": 540,
+    "centerY": 530,
+    "height": 580,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "citationY": 870,
+    "family": "autumn"
+  },
+  "scene-winter-silence": {
+    "centerX": 540,
+    "centerY": 390,
+    "height": 580,
+    "width": 840,
+    "ink": "#1E304A",
+    "citationY": 740,
+    "family": "winter"
+  },
+  "scene-magnolia-morning": {
+    "centerX": 540,
+    "centerY": 375,
+    "height": 580,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "citationY": 725,
+    "family": "flowers"
+  },
+  "scene-olive-sunlight": {
+    "centerX": 540,
+    "centerY": 505,
+    "height": 620,
+    "width": 840,
+    "ink": "#203B29",
+    "citationY": 865,
+    "family": "foliage"
+  },
+  "scene-desert-stars": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "citationY": 856,
+    "family": "night"
+  },
+  "scene-rainy-fern": {
+    "centerX": 540,
+    "centerY": 435,
+    "height": 620,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "citationY": 805,
+    "family": "foliage"
+  },
+  "scene-songbird-blossom": {
+    "centerX": 540,
+    "centerY": 355,
+    "height": 580,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "citationY": 700,
+    "family": "birds"
+  },
+  "scene-stars-over-lake": {
+    "centerX": 540,
+    "centerY": 470,
+    "height": 660,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "citationY": 856,
+    "family": "night"
   }
 }

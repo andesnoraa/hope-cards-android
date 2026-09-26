@@ -64,6 +64,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -82,6 +83,8 @@ import com.aaronsedna.hopecards.notifications.DailyHopeRequest
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.ads.AdPlacementPolicy
 import com.aaronsedna.hopecards.ads.BannerAd
+import com.aaronsedna.hopecards.model.QuizLanguage
+import com.aaronsedna.hopecards.ui.screens.BibleQuizRoute
 import com.aaronsedna.hopecards.model.Destination
 import com.aaronsedna.hopecards.model.JournalEntry
 import com.aaronsedna.hopecards.model.Verse
@@ -145,6 +148,7 @@ private val primaryEntries = listOf(
     DrawerEntry(Destination.HOME),
     DrawerEntry(Destination.DAILY),
     DrawerEntry(Destination.VERSE_ART),
+    DrawerEntry(Destination.BIBLE_QUIZ),
     DrawerEntry(Destination.FAVORITES),
     DrawerEntry(Destination.JOURNAL),
     DrawerEntry(Destination.SETTINGS),
@@ -180,6 +184,15 @@ fun HopeCardsApp(
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val scope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val quizStateHolder = rememberSaveableStateHolder()
+    var quizExitHandler by remember { mutableStateOf<((() -> Unit) -> Unit)?>(null) }
+    val registerQuizExitHandler = remember { { handler: ((() -> Unit) -> Unit)? -> quizExitHandler = handler } }
+    val navigate: (Destination) -> Unit = { destination ->
+        val proceed = { viewModel.navigate(destination) }
+        if (state.destination == Destination.BIBLE_QUIZ && destination != Destination.BIBLE_QUIZ) {
+            quizExitHandler?.invoke(proceed) ?: proceed()
+        } else proceed()
+    }
     val snackbarHostState = remember { SnackbarHostState() }
     val adsSuppressed = billing.isAdFree || BuildConfig.SCREENSHOT_MODE
     var drawerLoaded by rememberSaveable { mutableStateOf(false) }
@@ -226,7 +239,7 @@ fun HopeCardsApp(
                 }
             }
             state.destination == Destination.VERSE_ART && artCategoryId != null -> artCategoryId = null
-            else -> viewModel.navigate(Destination.HOME)
+            else -> navigate(Destination.HOME)
         }
     }
 
@@ -371,8 +384,7 @@ fun HopeCardsApp(
                                     journalEntryInDetail = null
                                     artCategoryId = null
                                     artworkId = null
-                                    viewModel.navigate(destination)
-                                    scope.launch { drawerState.close() }
+                                    scope.launch { drawerState.close(); navigate(destination) }
                                 }
                                 if (entry.destination == Destination.SETTINGS) {
                                     HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
@@ -381,8 +393,7 @@ fun HopeCardsApp(
                             HorizontalDivider(Modifier.padding(horizontal = 24.dp, vertical = 6.dp), color = colors.divider)
                             DrawerItems(informationEntries, state.destination) { destination ->
                                 journalEntryInDetail = null
-                                viewModel.navigate(destination)
-                                scope.launch { drawerState.close() }
+                                scope.launch { drawerState.close(); navigate(destination) }
                             }
                         }
                         Column(Modifier.padding(start = 24.dp, end = 24.dp, top = 24.dp, bottom = 8.dp)) {
@@ -551,6 +562,25 @@ fun HopeCardsApp(
                                     onFavorite = viewModel::toggleArtworkFavorite,
                                     onNotice = viewModel::showNotice,
                                 )
+                                Destination.BIBLE_QUIZ -> {
+                                    val translation = state.settings.preferredTranslation
+                                    // Keep each language’s round when visiting settings or changing editions.
+                                    quizStateHolder.SaveableStateProvider("quiz-${QuizLanguage.forTranslation(translation).code}") {
+                                        BibleQuizRoute(translation,
+                                            hapticsEnabled = state.settings.enableHaptics,
+                                            onExitHandlerChanged = registerQuizExitHandler,
+                                            onComplete = { isCurrent, proceed ->
+                                                if (adsSuppressed) proceed()
+                                                else viewModel.completedQuiz(activity,
+                                                    isCurrentQuiz = {
+                                                        isCurrent() && !drawerState.isOpen &&
+                                                            viewModel.uiState.value.destination == Destination.BIBLE_QUIZ &&
+                                                            !translationPickerOpen
+                                                    }, continueNavigation = proceed)
+                                            },
+                                            onChangeTranslation = { translationPickerOpen = true })
+                                    }
+                                }
                                 Destination.FAVORITES -> FavoritesScreen(
                                     verses = viewModel.favoriteVerses(),
                                     onOpen = { verse ->
@@ -808,6 +838,7 @@ private fun drawerIcon(destination: Destination) = when (destination) {
     Destination.HOME -> AppIconGlyph.HomeOutline
     Destination.DAILY -> AppIconGlyph.SunnyOutline
     Destination.VERSE_ART -> AppIconGlyph.ImagesOutline
+    Destination.BIBLE_QUIZ -> AppIconGlyph.PuzzleOutline
     Destination.FAVORITES -> AppIconGlyph.HeartOutline
     Destination.JOURNAL -> AppIconGlyph.JournalOutline
     Destination.REMOVE_ADS -> AppIconGlyph.SparklesOutline
@@ -822,6 +853,7 @@ private fun destinationTitle(destination: Destination): String = appString(
         Destination.HOME -> com.aaronsedna.hopecards.R.string.nav_home
         Destination.DAILY -> com.aaronsedna.hopecards.R.string.nav_daily_hope
         Destination.VERSE_ART -> com.aaronsedna.hopecards.R.string.nav_verse_art
+        Destination.BIBLE_QUIZ -> com.aaronsedna.hopecards.R.string.nav_bible_quiz
         Destination.FAVORITES -> com.aaronsedna.hopecards.R.string.nav_favorites
         Destination.JOURNAL -> com.aaronsedna.hopecards.R.string.nav_journal
         Destination.REMOVE_ADS -> com.aaronsedna.hopecards.R.string.nav_remove_ads

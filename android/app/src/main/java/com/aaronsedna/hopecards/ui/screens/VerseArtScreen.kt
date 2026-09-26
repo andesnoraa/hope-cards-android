@@ -68,9 +68,11 @@ fun VerseArtScreen(
     val colors = LocalHopeColors.current
     val edition = LocalAppTranslation.current
     val context = LocalContext.current.applicationContext
-    val gallery by produceState<VerseArtImages.Gallery?>(null, edition) {
+    var rotation by rememberSaveable { mutableStateOf<Long?>(null) }
+    LaunchedEffect(Unit) { if (rotation == null) rotation = VerseArtImages.nextRotation(context) }
+    val gallery by produceState<VerseArtImages.Gallery?>(null, edition, rotation) {
         value = null
-        value = VerseArtImages.gallery(context, edition)
+        rotation?.let { value = VerseArtImages.gallery(context, edition, it) }
     }
     val available = gallery?.references.orEmpty()
     val artwork = VerseArtCatalog.artwork(artworkId)?.takeIf { it.id in available }
@@ -79,7 +81,7 @@ fun VerseArtScreen(
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
         when {
             gallery == null -> CircularProgressIndicator(Modifier.padding(32.dp))
-            artwork != null -> VerseArtDetail(artwork, artwork.verseId in favorites, { onFavorite(artwork) }, onNotice)
+            artwork != null -> VerseArtDetail(artwork, artwork.verseId in favorites, { onFavorite(artwork) }, onNotice, checkNotNull(rotation))
             categoryId == null -> Column(Modifier.widthIn(max = 760.dp).fillMaxSize()) {
                 Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -119,7 +121,7 @@ fun VerseArtScreen(
                             ) {
                                 VerseArtImage(VerseArtCatalog.artwork(category.coverArtworkId.takeIf { it in available }
                                     ?: category.artworkIds.first { it in available })!!,
-                                    thumbnail = true, modifier = Modifier.size(60.dp), description = null)
+                                    thumbnail = true, modifier = Modifier.size(60.dp), description = null, rotation = checkNotNull(rotation))
                                 Column(Modifier.weight(1f).padding(horizontal = 16.dp)) {
                                     Text(category.title, color = colors.text, fontFamily = Poppins,
                                         fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
@@ -155,7 +157,7 @@ fun VerseArtScreen(
                             Column {
                                 VerseArtImage(art, thumbnail = true,
                                     modifier = Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-open-${art.id}")
-                                        .clickable(role = Role.Button) { onArtwork(art.id) }, description = reference)
+                                        .clickable(role = Role.Button) { onArtwork(art.id) }, description = reference, rotation = checkNotNull(rotation))
                                 Row(Modifier.fillMaxWidth().padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                                     Text(reference, color = colors.textSecondary,
                                         fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins,
@@ -173,7 +175,7 @@ fun VerseArtScreen(
 }
 
 @Composable
-private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite: () -> Unit, onNotice: (String) -> Unit) {
+private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite: () -> Unit, onNotice: (String) -> Unit, rotation: Long) {
     val context = LocalContext.current
     val edition = LocalAppTranslation.current
     val colors = LocalHopeColors.current
@@ -182,6 +184,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
     var showText by rememberSaveable(artwork.id) { mutableStateOf(false) }
     var pendingSaveId by rememberSaveable { mutableStateOf<String?>(null) }
     var pendingSaveEdition by rememberSaveable { mutableStateOf<String?>(null) }
+    var pendingSaveRotation by rememberSaveable { mutableStateOf<Long?>(null) }
     val verse by produceState<Verse?>(null, artwork.id, edition) {
         value = null
         value = VerseArtImages.verse(context.applicationContext, artwork, edition)
@@ -205,19 +208,21 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
     val saveDocument = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument(VerseArtFiles.MIME_TYPE)) { uri ->
         val pending = VerseArtCatalog.artwork(pendingSaveId)
         val savedEdition = Translation.fromId(pendingSaveEdition)
+        val savedRotation = pendingSaveRotation
         pendingSaveId = null
         pendingSaveEdition = null
+        pendingSaveRotation = null
         if (uri != null && pending != null) performFileAction {
-            withContext(Dispatchers.IO) { VerseArtFiles.write(context, pending, uri, savedEdition) }
+            withContext(Dispatchers.IO) { VerseArtFiles.write(context, pending, uri, savedEdition, savedRotation) }
             onNotice(savedMessage)
         }
     }
 
     Column(Modifier.widthIn(max = 720.dp).fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp)) {
-        Text("${edition.language} · ${edition.label}", color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp,
+        Text("${edition.language} (${edition.label})", color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp,
             modifier = Modifier.padding(bottom = 16.dp))
         Box {
-            VerseArtImage(artwork, false, Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-detail-image"), reference)
+            VerseArtImage(artwork, false, Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-detail-image"), reference, rotation)
             ArtFavoriteButton(favorite, onFavorite, Modifier.align(Alignment.TopEnd).padding(8.dp))
         }
         Text(reference, fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins, fontWeight = FontWeight.Bold, fontSize = 26.sp,
@@ -228,11 +233,12 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(enabled = !busy, onClick = {
                 if (Build.VERSION.SDK_INT >= 29) performFileAction {
-                    withContext(Dispatchers.IO) { VerseArtFiles.saveToPhotos(context, artwork, edition) }
+                    withContext(Dispatchers.IO) { VerseArtFiles.saveToPhotos(context, artwork, edition, rotation) }
                     onNotice(savedMessage)
                 } else {
                     pendingSaveId = artwork.id
                     pendingSaveEdition = edition.id
+                    pendingSaveRotation = rotation
                     saveDocument.launch("Hope-Cards-${artwork.id}-${edition.id}.jpg")
                 }
             }, modifier = Modifier.heightIn(min = 48.dp).testTag("art-save-image"),
@@ -241,7 +247,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
             }
             Button(enabled = !busy, onClick = {
                 performFileAction {
-                    val intent = withContext(Dispatchers.IO) { VerseArtFiles.shareIntent(context, artwork, edition) }
+                    val intent = withContext(Dispatchers.IO) { VerseArtFiles.shareIntent(context, artwork, edition, rotation) }
                     context.startActivity(Intent.createChooser(intent, shareTitle))
                 }
             }, modifier = Modifier.heightIn(min = 48.dp).testTag("art-share"),
@@ -273,14 +279,14 @@ private fun ArtFavoriteButton(saved: Boolean, onClick: () -> Unit, modifier: Mod
 private data class ArtImageState(val bitmap: ImageBitmap? = null, val failed: Boolean = false)
 
 @Composable
-private fun VerseArtImage(art: VerseArtwork, thumbnail: Boolean, modifier: Modifier, description: String?) {
+private fun VerseArtImage(art: VerseArtwork, thumbnail: Boolean, modifier: Modifier, description: String?, rotation: Long) {
     val context = LocalContext.current.applicationContext
     val colors = LocalHopeColors.current
     val edition = LocalAppTranslation.current
-    val state by produceState(ArtImageState(), art.id, edition, thumbnail) {
+    val state by produceState(ArtImageState(), art.id, edition, thumbnail, rotation) {
         value = ArtImageState()
         value = try {
-            ArtImageState(VerseArtImages.image(context, art, edition, if (thumbnail) 360 else 1080).asImageBitmap())
+            ArtImageState(VerseArtImages.image(context, art, edition, if (thumbnail) 360 else 1080, rotation).asImageBitmap())
         } catch (error: CancellationException) { throw error }
           catch (_: Exception) { ArtImageState(failed = true) }
     }

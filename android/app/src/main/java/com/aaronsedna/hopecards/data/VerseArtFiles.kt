@@ -16,14 +16,14 @@ object VerseArtFiles {
     const val MIME_TYPE = "image/jpeg"
 
     /** Call file operations on Dispatchers.IO; no broad storage permission is needed. */
-    suspend fun write(context: Context, artwork: VerseArtwork, uri: Uri, edition: Translation = Translation.WEB) {
-        val file = VerseArtImages.jpeg(context, artwork, edition)
+    suspend fun write(context: Context, artwork: VerseArtwork, uri: Uri, edition: Translation = Translation.WEB, rotation: Long? = null) {
+        val file = VerseArtImages.jpeg(context, artwork, edition, rotation)
         val output = context.contentResolver.openOutputStream(uri) ?: error("Cannot open image destination")
         output.use { target -> file.inputStream().use { it.copyTo(target) } }
     }
 
     @RequiresApi(29)
-    suspend fun saveToPhotos(context: Context, artwork: VerseArtwork, edition: Translation = Translation.WEB): Uri {
+    suspend fun saveToPhotos(context: Context, artwork: VerseArtwork, edition: Translation = Translation.WEB, rotation: Long? = null): Uri {
         val resolver = context.contentResolver
         val values = ContentValues().apply {
             put(MediaStore.Images.Media.DISPLAY_NAME, "Hope-Cards-${artwork.id}-${edition.id}-${System.currentTimeMillis()}.jpg")
@@ -34,7 +34,7 @@ object VerseArtFiles {
         val uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
             ?: error("Cannot create image")
         try {
-            write(context, artwork, uri, edition)
+            write(context, artwork, uri, edition, rotation)
             check(resolver.update(uri, ContentValues().apply {
                 put(MediaStore.Images.Media.IS_PENDING, 0)
             }, null, null) > 0)
@@ -45,8 +45,8 @@ object VerseArtFiles {
         }
     }
 
-    suspend fun shareIntent(context: Context, artwork: VerseArtwork, edition: Translation = Translation.WEB): Intent {
-        val file = VerseArtImages.jpeg(context, artwork, edition)
+    suspend fun shareIntent(context: Context, artwork: VerseArtwork, edition: Translation = Translation.WEB, rotation: Long? = null): Intent {
+        val file = VerseArtImages.jpeg(context, artwork, edition, rotation)
         val reference = VerseArtImages.verse(context, artwork, edition).displayReference
         val uri = FileProvider.getUriForFile(context, "${context.packageName}.files", file)
         return Intent(Intent.ACTION_SEND).apply {

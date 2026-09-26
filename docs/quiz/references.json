@@ -1,0 +1,335 @@
+{
+  "checkedOn": "2026-09-26",
+  "references": [
+    {
+      "id": "noah-ark",
+      "reference": "Genesis 6:13-14",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/GEN/6.json",
+        "de": "https://bible.helloao.org/api/deu_l12/GEN/6.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/GEN/6.json",
+        "it": "https://bible.helloao.org/api/ita_riv/GEN/6.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/GEN/6.json"
+      }
+    },
+    {
+      "id": "rainbow-covenant",
+      "reference": "Genesis 9:13",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/GEN/9.json",
+        "de": "https://bible.helloao.org/api/deu_l12/GEN/9.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/GEN/9.json",
+        "it": "https://bible.helloao.org/api/ita_riv/GEN/9.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/GEN/9.json"
+      }
+    },
+    {
+      "id": "isaac-parents",
+      "reference": "Genesis 21:3",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/GEN/21.json",
+        "de": "https://bible.helloao.org/api/deu_l12/GEN/21.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/GEN/21.json",
+        "it": "https://bible.helloao.org/api/ita_riv/GEN/21.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/GEN/21.json"
+      }
+    },
+    {
+      "id": "moses-basket",
+      "reference": "Exodus 2:3",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/EXO/2.json",
+        "de": "https://bible.helloao.org/api/deu_l12/EXO/2.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/EXO/2.json",
+        "it": "https://bible.helloao.org/api/ita_riv/EXO/2.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/EXO/2.json"
+      }
+    },
+    {
+      "id": "burning-bush",
+      "reference": "Exodus 3:2",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/EXO/3.json",
+        "de": "https://bible.helloao.org/api/deu_l12/EXO/3.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/EXO/3.json",
+        "it": "https://bible.helloao.org/api/ita_riv/EXO/3.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/EXO/3.json"
+      }
+    },
+    {
+      "id": "moses-brother",
+      "reference": "Exodus 4:14",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/EXO/4.json",
+        "de": "https://bible.helloao.org/api/deu_l12/EXO/4.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/EXO/4.json",
+        "it": "https://bible.helloao.org/api/ita_riv/EXO/4.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/EXO/4.json"
+      }
+    },
+    {
+      "id": "manna",
+      "reference": "Exodus 16:15",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/EXO/16.json",
+        "de": "https://bible.helloao.org/api/deu_l12/EXO/16.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/EXO/16.json",
+        "it": "https://bible.helloao.org/api/ita_riv/EXO/16.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/EXO/16.json"
+      }
+    },
+    {
+      "id": "jericho-walls",
+      "reference": "Joshua 6:20",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/JOS/6.json",
+        "de": "https://bible.helloao.org/api/deu_l12/JOS/6.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/JOS/6.json",
+        "it": "https://bible.helloao.org/api/ita_riv/JOS/6.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/JOS/6.json"
+      }
+    },
+    {
+      "id": "david-goliath",
+      "reference": "1 Samuel 17:49",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/1SA/17.json",
+        "de": "https://bible.helloao.org/api/deu_l12/1SA/17.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/1SA/17.json",
+        "it": "https://bible.helloao.org/api/ita_riv/1SA/17.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/1SA/17.json"
+      }
+    },
+    {
+      "id": "daniel-lions",
+      "reference": "Daniel 6:22",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/DAN/6.json",
+        "de": "https://bible.helloao.org/api/deu_l12/DAN/6.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/DAN/6.json",
+        "it": "https://bible.helloao.org/api/ita_riv/DAN/6.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/DAN/6.json"
+      }
+    },
+    {
+      "id": "joseph-brothers",
+      "reference": "Genesis 37:28",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/GEN/37.json",
+        "de": "https://bible.helloao.org/api/deu_l12/GEN/37.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/GEN/37.json",
+        "it": "https://bible.helloao.org/api/ita_riv/GEN/37.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/GEN/37.json"
+      }
+    },
+    {
+      "id": "samuel-call",
+      "reference": "1 Samuel 3:10",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/1SA/3.json",
+        "de": "https://bible.helloao.org/api/deu_l12/1SA/3.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/1SA/3.json",
+        "it": "https://bible.helloao.org/api/ita_riv/1SA/3.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/1SA/3.json"
+      }
+    },
+    {
+      "id": "jesus-birthplace",
+      "reference": "Matthew 2:1",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/2.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/2.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/2.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/2.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/2.json"
+      }
+    },
+    {
+      "id": "jesus-baptism",
+      "reference": "Matthew 3:13",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/3.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/3.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/3.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/3.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/3.json"
+      }
+    },
+    {
+      "id": "twelve-apostles",
+      "reference": "Luke 6:13",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/LUK/6.json",
+        "de": "https://bible.helloao.org/api/deu_l12/LUK/6.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/LUK/6.json",
+        "it": "https://bible.helloao.org/api/ita_riv/LUK/6.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/LUK/6.json"
+      }
+    },
+    {
+      "id": "cana-sign",
+      "reference": "John 2:9",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/JHN/2.json",
+        "de": "https://bible.helloao.org/api/deu_l12/JHN/2.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/JHN/2.json",
+        "it": "https://bible.helloao.org/api/ita_riv/JHN/2.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/JHN/2.json"
+      }
+    },
+    {
+      "id": "five-loaves",
+      "reference": "Matthew 14:17",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/14.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/14.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/14.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/14.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/14.json"
+      }
+    },
+    {
+      "id": "zacchaeus-tree",
+      "reference": "Luke 19:4",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/LUK/19.json",
+        "de": "https://bible.helloao.org/api/deu_l12/LUK/19.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/LUK/19.json",
+        "it": "https://bible.helloao.org/api/ita_riv/LUK/19.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/LUK/19.json"
+      }
+    },
+    {
+      "id": "lazarus",
+      "reference": "John 11:43-44",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/JHN/11.json",
+        "de": "https://bible.helloao.org/api/deu_l12/JHN/11.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/JHN/11.json",
+        "it": "https://bible.helloao.org/api/ita_riv/JHN/11.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/JHN/11.json"
+      }
+    },
+    {
+      "id": "peter-water",
+      "reference": "Matthew 14:29",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/14.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/14.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/14.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/14.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/14.json"
+      }
+    },
+    {
+      "id": "kind-samaritan",
+      "reference": "Luke 10:33-34",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/LUK/10.json",
+        "de": "https://bible.helloao.org/api/deu_l12/LUK/10.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/LUK/10.json",
+        "it": "https://bible.helloao.org/api/ita_riv/LUK/10.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/LUK/10.json"
+      }
+    },
+    {
+      "id": "younger-son",
+      "reference": "Luke 15:12",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/LUK/15.json",
+        "de": "https://bible.helloao.org/api/deu_l12/LUK/15.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/LUK/15.json",
+        "it": "https://bible.helloao.org/api/ita_riv/LUK/15.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/LUK/15.json"
+      }
+    },
+    {
+      "id": "lost-sheep",
+      "reference": "Luke 15:4",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/LUK/15.json",
+        "de": "https://bible.helloao.org/api/deu_l12/LUK/15.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/LUK/15.json",
+        "it": "https://bible.helloao.org/api/ita_riv/LUK/15.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/LUK/15.json"
+      }
+    },
+    {
+      "id": "mustard-seed",
+      "reference": "Matthew 13:31-32",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/13.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/13.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/13.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/13.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/13.json"
+      }
+    },
+    {
+      "id": "daily-bread",
+      "reference": "Matthew 6:11",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/6.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/6.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/6.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/6.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/6.json"
+      }
+    },
+    {
+      "id": "judas-silver",
+      "reference": "Matthew 26:15",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/MAT/26.json",
+        "de": "https://bible.helloao.org/api/deu_l12/MAT/26.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/MAT/26.json",
+        "it": "https://bible.helloao.org/api/ita_riv/MAT/26.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/MAT/26.json"
+      }
+    },
+    {
+      "id": "mary-tomb",
+      "reference": "John 20:1",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/JHN/20.json",
+        "de": "https://bible.helloao.org/api/deu_l12/JHN/20.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/JHN/20.json",
+        "it": "https://bible.helloao.org/api/ita_riv/JHN/20.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/JHN/20.json"
+      }
+    },
+    {
+      "id": "thomas-wounds",
+      "reference": "John 20:27",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/JHN/20.json",
+        "de": "https://bible.helloao.org/api/deu_l12/JHN/20.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/JHN/20.json",
+        "it": "https://bible.helloao.org/api/ita_riv/JHN/20.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/JHN/20.json"
+      }
+    },
+    {
+      "id": "prison-songs",
+      "reference": "Acts 16:25",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/ACT/16.json",
+        "de": "https://bible.helloao.org/api/deu_l12/ACT/16.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/ACT/16.json",
+        "it": "https://bible.helloao.org/api/ita_riv/ACT/16.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/ACT/16.json"
+      }
+    },
+    {
+      "id": "spirit-fruit",
+      "reference": "Galatians 5:22",
+      "checkedChapterUrls": {
+        "en": "https://bible.helloao.org/api/BSB/GAL/5.json",
+        "de": "https://bible.helloao.org/api/deu_l12/GAL/5.json",
+        "fr": "https://bible.helloao.org/api/fra_lsg/GAL/5.json",
+        "it": "https://bible.helloao.org/api/ita_riv/GAL/5.json",
+        "ml": "https://bible.helloao.org/api/mal_fbf/GAL/5.json"
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import android.text.TextPaint
 import androidx.core.content.res.ResourcesCompat
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.VerseArtContrast
+import com.aaronsedna.hopecards.model.VerseArtRotation
 import com.aaronsedna.hopecards.model.Translation
 import com.aaronsedna.hopecards.model.Verse
 import org.json.JSONArray
@@ -29,7 +30,18 @@ internal class VerseArtRenderer(private val context: Context) {
     internal data class Design(val background: String, val bodyFont: String, val highlightFont: String,
         val emphasis: String, val highlightText: String, val bodySize: Float, val highlightSize: Float)
 
-    internal fun design(verse: Verse): Design {
+    internal fun design(verse: Verse, rotation: Long? = null): Design {
+        val base = baseDesign(verse)
+        if (rotation == null) return base
+        // Keep reviewed typography and exact emphasis; rotate only through roomy photo profiles.
+        val candidates = photoNames.filter { name ->
+            val profile = photos.getJSONObject(name)
+            profile.getInt("height") >= 580 && profile.getInt("width") >= 780
+        }
+        return base.copy(background = VerseArtRotation.background(candidates + base.background, verse.id, rotation))
+    }
+
+    private fun baseDesign(verse: Verse): Design {
         val selected = (0 until reviewed.length()).map { reviewed.getJSONObject(it) }.firstOrNull {
             it.getString("edition") == verse.edition.id && it.getString("verseId") == verse.id &&
                 it.getString("verifiedText") == verse.text
@@ -193,7 +205,7 @@ internal class VerseArtRenderer(private val context: Context) {
                 drawReadableLayout(l, centerX-l.width/2f, top, l.paint.color)
                 top += l.height + 22
             }
-            val ref = verse.displayReference + " · " + verse.edition.label
+            val ref = "${verse.displayReference} (${verse.edition.label})"
             val footerInk = if (photo != null) Color.parseColor(photo.optString("footerInk", "#FFF8E9")) else ink
             val citationInk = photo?.optString("citationInk")?.takeIf { it.isNotEmpty() }?.let(Color::parseColor) ?: footerInk
             val refPaint = paint(if (ml) "noto_malayalam" else "dm_sans", if (ml) 30f else 26f, citationInk)

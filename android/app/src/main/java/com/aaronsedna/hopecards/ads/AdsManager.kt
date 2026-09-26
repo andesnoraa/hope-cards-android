@@ -150,9 +150,28 @@ class AdsManager(
         isAdFree: Boolean,
         isCurrentArtwork: () -> Boolean,
         continueToGallery: () -> Unit,
+    ) = completeActivity(activity, isAdFree, isCurrentArtwork, continueToGallery) {
+        repository.recordCompletedCard(System.currentTimeMillis())
+    }
+
+    fun completeQuiz(
+        activity: Activity,
+        isAdFree: Boolean,
+        isCurrentQuiz: () -> Boolean,
+        continueNavigation: () -> Unit,
+    ) = completeActivity(activity, isAdFree, isCurrentQuiz, continueNavigation) {
+        repository.recordCompletedQuiz(System.currentTimeMillis())
+    }
+
+    private fun completeActivity(
+        activity: Activity,
+        isAdFree: Boolean,
+        isCurrentContent: () -> Boolean,
+        continueNavigation: () -> Unit,
+        recordCompletion: suspend () -> Boolean,
     ) {
         if (isAdFree || closed) {
-            continueToGallery()
+            continueNavigation()
             return
         }
         val requestGeneration = ++presentationGeneration
@@ -165,19 +184,19 @@ class AdsManager(
             try {
                 completeContentBreak(
                     adReadyAtStart = readyAtStart,
-                    recordCompletion = { repository.recordCompletedCard(System.currentTimeMillis()) },
+                    recordCompletion = recordCompletion,
                     canStillPresent = {
                         requestGeneration == presentationGeneration && interstitial === cachedAd &&
-                            _ready.value && isCurrentArtwork() && activity.hasWindowFocus()
+                            _ready.value && isCurrentContent() && activity.hasWindowFocus()
                     },
                     showAd = { showInterstitial(activity) },
-                    continueNavigation = continueToGallery,
+                    continueNavigation = continueNavigation,
                 )
                 if (_ready.value) loadInterstitial()
             } catch (error: CancellationException) {
                 throw error
             } catch (error: Exception) {
-                Log.w(TAG, "Could not record completed artwork", error)
+                Log.w(TAG, "Could not record completed content", error)
             }
         }
     }

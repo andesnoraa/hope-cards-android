@@ -1,0 +1,226 @@
+[
+  {
+    "name": "scene-desert-stars",
+    "family": "night",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square background photograph for Hope Cards Bible verse artwork, 1080x1080 composition. Scene: A quiet desert night under a clear indigo sky with sparse tiny stars. A low silhouette of distant dunes occupies only the bottom fifth. Center and upper sky are clean deep blue, no bright moon and no dense Milky Way across the text area. Astrophotography feel. Composition: keep the broad center area x=12%-88%, y=14%-73% calm and sufficiently uniform for several lines of independently rendered Bible text; scenery details frame this area, do not place a strong subject in its center. Natural editorial landscape photography, refined and restful, beautiful full natural colors. No washed-out filter, no added tint, no text, no lettering, no symbols, no logos, no border, no collage, no watermark, no people, no buildings. Generate ONE distinct finished square image only.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_15_58 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 470,
+      "height": 660,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "citationY": 856,
+      "family": "night"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-desert-stars.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 35624,
+    "assetSha256": "b7ee9b4e917371df5a1e9449f8347839af7e54e2022bfdac5796ed9b8da4891f",
+    "sourceSha256": "c794a5858a6463488010b1a38ea17205d3650af1935b4c47ddca717e31760568"
+  },
+  {
+    "name": "scene-magnolia-morning",
+    "family": "flowers",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square background photograph for Hope Cards Bible verse artwork, 1080x1080 composition. Scene: A delicate ivory and blush magnolia branch enters the lower right and bottom edge, shallow photographic depth of field. Center and upper area are deep muted plum-brown garden bokeh, clean and even for ivory lettering. Natural flower detail, no artificial glow. Composition: keep the broad center area x=12%-88%, y=14%-73% calm and sufficiently uniform for several lines of independently rendered Bible text; scenery details frame this area, do not place a strong subject in its center. Natural editorial landscape photography, refined and restful, beautiful full natural colors. No washed-out filter, no added tint, no text, no lettering, no symbols, no logos, no border, no collage, no watermark, no people, no buildings. Generate ONE distinct finished square image only.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_16_06 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 375,
+      "height": 580,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "citationY": 725,
+      "family": "flowers"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-magnolia-morning.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 36428,
+    "assetSha256": "272eb6873c8ed5d093da03b32fe4b099b508d72f3bced6f6d14db0a34a175e00",
+    "sourceSha256": "d94c5cc8f308f42c5c699bcd1c9e9423565a9f93c3dd97470b2ced06dd25923c"
+  },
+  {
+    "name": "scene-olive-sunlight",
+    "family": "foliage",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square background photograph for Hope Cards Bible verse artwork, 1080x1080 composition. Scene: Sunlight through an olive grove, silver-green olive leaves frame only the upper right and bottom left edges. The center is a large softly focused warm ivory and sage garden clearing, natural dappled light restrained to margins. Detailed natural leaves. Composition: keep the broad center area x=12%-88%, y=14%-73% calm and sufficiently uniform for several lines of independently rendered Bible text; scenery details frame this area, do not place a strong subject in its center. Natural editorial landscape photography, refined and restful, beautiful full natural colors. No washed-out filter, no added tint, no text, no lettering, no symbols, no logos, no border, no collage, no watermark, no people, no buildings. Generate ONE distinct finished square image only.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_16_11 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 505,
+      "height": 620,
+      "width": 840,
+      "ink": "#203B29",
+      "citationY": 865,
+      "family": "foliage"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-olive-sunlight.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 143712,
+    "assetSha256": "4bb44bb42ab5804da7afc7f47b1e0bd8b847dce5579afb13f3652b33f1560408",
+    "sourceSha256": "16039c361469ad58587fd3c624a8b3e642f4fef83148bc7f03c11391436893c9"
+  },
+  {
+    "name": "scene-winter-silence",
+    "family": "winter",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square background photograph for Hope Cards Bible verse artwork, 1080x1080 composition. Scene: A quiet snow-covered valley at blue hour with a few snow-covered spruce trees small along the lower corners. Broad pale blue-gray misty sky and smooth snow through the center. Fine snow detail at the edges, restrained luminous winter color. Composition: keep the broad center area x=12%-88%, y=14%-73% calm and sufficiently uniform for several lines of independently rendered Bible text; scenery details frame this area, do not place a strong subject in its center. Natural editorial landscape photography, refined and restful, beautiful full natural colors. No washed-out filter, no added tint, no text, no lettering, no symbols, no logos, no border, no collage, no watermark, no people, no buildings. Generate ONE distinct finished square image only.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_16_22 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 390,
+      "height": 580,
+      "width": 840,
+      "ink": "#1E304A",
+      "citationY": 740,
+      "family": "winter"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-winter-silence.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 67474,
+    "assetSha256": "a1fd642f924593f37b936c46f3cbb2e69057e6f9c15a013f301bbc069661960a",
+    "sourceSha256": "b7ed6fe459a39c16df26b5178926a6858598a9b6b498b28af9d29f892b1fa344"
+  },
+  {
+    "name": "scene-autumn-stillness",
+    "family": "autumn",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square background photograph for Hope Cards Bible verse artwork, 1080x1080 composition. Scene: A still autumn pond reflecting copper and amber leaves. Golden foliage frames the far right and bottom edges. Broad quiet dark olive water through the middle and upper half, soft distant woodland in light fog. Autumn color, photographic realism. Composition: keep the broad center area x=12%-88%, y=14%-73% calm and sufficiently uniform for several lines of independently rendered Bible text; scenery details frame this area, do not place a strong subject in its center. Natural editorial landscape photography, refined and restful, beautiful full natural colors. No washed-out filter, no added tint, no text, no lettering, no symbols, no logos, no border, no collage, no watermark, no people, no buildings. Generate ONE distinct finished square image only.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_16_27 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 530,
+      "height": 580,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "citationY": 870,
+      "family": "autumn"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-autumn-stillness.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 199040,
+    "assetSha256": "f847848428878e99e5571d4ad2a4d164050b1a702e99b604bc78c5261aacd3fd",
+    "sourceSha256": "2eb07e126606466c5fd3e3cd33c7c6993c126dd63ce67c9cc1a75735c75eebdd"
+  },
+  {
+    "name": "scene-rainy-fern",
+    "family": "foliage",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square background for a Bible verse image in Hope Cards. Generate ONE new finished square photograph. The three input images are style and photographic-quality references only: approved lavender dawn, autumn lake, and magnolia. Match their natural richness, beautiful photographic detail and quiet composition, but create this DIFFERENT scene: Exquisite fresh fern fronds carrying tiny raindrops frame the lower left and right margins. Deep emerald woodland softly out of focus across the broad center and upper two thirds. Gentle natural morning light, detailed real leaves, restorative rich greens, no waterfall. Composition: verse text will later occupy x12%-88%, y14%-70%; keep that area calm and broadly uniform, place sharply detailed subjects at the margins or below it. Let the image itself still feel complete and beautiful. Genuine natural color, no artificial washed-out filter or added tint. No text, lettering, logos, symbols, people, buildings, collage, border or watermark.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_22_14 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 435,
+      "height": 620,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "citationY": 805,
+      "family": "foliage"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-rainy-fern.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 136666,
+    "assetSha256": "d0d0c3c722945125e5504dbeddb6d1a5378203ddfff4cb322e347da1b552624e",
+    "sourceSha256": "dc5c556922ed6479fe29da9265f393da3876a35f60c32463c1a870b3753d3195"
+  },
+  {
+    "name": "scene-songbird-blossom",
+    "family": "birds",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic Bible verse background for Hope Cards. A beautiful small blue-and-gold songbird perched naturally on a slender cherry blossom branch along the LOWER RIGHT edge, anatomically accurate feet gripping the branch. Small ivory and pale pink blossoms frame the bottom edge. The bird is a tasteful small focal point, occupying at most 12 percent of the square. Broad softly blurred deep teal garden background through the entire center and upper two thirds, warm gentle dawn light on the feathers. Real bird photography. Reserve x12%-88%, y14%-70% as a broad quiet area for several lines of real Bible text that the app renders later. Natural rich colors, serene mood, believable detail and lighting. No washed-out filter, no added tint. No words, lettering, logo, symbol, watermark, collage, border, humans or buildings. One finished square image.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_25_48 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 355,
+      "height": 580,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "citationY": 700,
+      "family": "birds"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-songbird-blossom.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 55548,
+    "assetSha256": "252c953072c7c97a1046006d8ca51780eb25f62274133ec9f91c25471ffed008",
+    "sourceSha256": "9b43d72510467de810a53e649f16074b79e8040851b68fb5f78d588bd0463a9b"
+  },
+  {
+    "name": "scene-stars-over-lake",
+    "family": "night",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic Bible verse background for Hope Cards. A tranquil dark alpine lake under a beautiful starry midnight-blue sky. Sparse delicate realistic stars, subtly denser at the TOP corners only, no giant bright moon or saturated nebula. Low small dark mountains and pine silhouettes confined to the bottom fifth, a faint soft blue horizon and muted reflections on still water at the very bottom. The broad middle is clean deep indigo sky. Elegant realistic long-exposure night landscape photography. Reserve x12%-88%, y14%-70% as a broad quiet area for several lines of real Bible text that the app renders later. Natural rich colors, serene mood, believable detail and lighting. No washed-out filter, no added tint. No words, lettering, logo, symbol, watermark, collage, border, humans or buildings. One finished square image.",
+    "sourcePath": "/Users/aaronsedna/Downloads/ChatGPT Image Sep 26, 2026, 04_25_53 PM.png",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-26",
+    "selection": "Exact supplied file selected by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 470,
+      "height": 660,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "citationY": 856,
+      "family": "night"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-stars-over-lake.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 45510,
+    "assetSha256": "57a9a7df853b50ee04702812f5abd6e33df1289c14383fcc20232dd7a5ab5ce0",
+    "sourceSha256": "90d7774ebe23b8540a7b49ea49b924c1f56421d1a69c78617c74d6885e5b02ae"
+  }
+]

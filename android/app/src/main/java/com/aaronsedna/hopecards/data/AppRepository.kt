@@ -34,6 +34,12 @@ internal object InterstitialPolicy {
         completedCards >= COMPLETED_CARDS_BETWEEN_ADS && elapsedMs >= MIN_INTERVAL_MS
 }
 
+internal object QuizInterstitialPolicy {
+    const val COMPLETED_QUIZZES_BETWEEN_ADS = 1
+    fun shouldShow(completedQuizzes: Int, elapsedMs: Long): Boolean =
+        completedQuizzes >= COMPLETED_QUIZZES_BETWEEN_ADS && elapsedMs >= InterstitialPolicy.MIN_INTERVAL_MS
+}
+
 class AppRepository(context: Context) {
     private val appContext = context.applicationContext
     private val dataStore = appContext.hopeCardsDataStore
@@ -249,9 +255,21 @@ class AppRepository(context: Context) {
         return shouldShow
     }
 
+    suspend fun recordCompletedQuiz(now: Long): Boolean {
+        var shouldShow = false
+        dataStore.edit { preferences ->
+            val count = ((preferences[Keys.quizAdCount] ?: 0) + 1)
+                .coerceAtMost(QuizInterstitialPolicy.COMPLETED_QUIZZES_BETWEEN_ADS)
+            shouldShow = QuizInterstitialPolicy.shouldShow(count, now - (preferences[Keys.lastAdTime] ?: 0L))
+            preferences[Keys.quizAdCount] = count
+        }
+        return shouldShow
+    }
+
     suspend fun recordInterstitialShown(now: Long) {
         dataStore.edit { preferences ->
             preferences[Keys.adCount] = 0
+            preferences[Keys.quizAdCount] = 0
             preferences[Keys.lastAdTime] = now
         }
     }
@@ -368,6 +386,7 @@ class AppRepository(context: Context) {
         val latestBackupUri = stringPreferencesKey("latest_backup_uri")
         val adFree = booleanPreferencesKey("ad_free_entitlement")
         val adCount = intPreferencesKey(LEGACY_AD_COUNT)
+        val quizAdCount = intPreferencesKey("completed_quizzes_since_interstitial")
         val lastAdTime = longPreferencesKey(LEGACY_AD_TIME)
     }
 

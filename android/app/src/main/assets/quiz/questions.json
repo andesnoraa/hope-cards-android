@@ -1,0 +1,2317 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "authorship": "Original Hope Cards questions and localized explanations; scripture references identify factual sources. No third-party quiz bank imported.",
+  "questions": [
+    {
+      "id": "noah-ark",
+      "reference": "Genesis 6:13-14",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "Who was told by God to build an ark?",
+          "options": [
+            "Noah",
+            "Moses",
+            "Abraham",
+            "David"
+          ],
+          "explanation": "God instructed Noah to build an ark before the flood."
+        },
+        "de": {
+          "question": "Wem gab Gott den Auftrag, eine Arche zu bauen?",
+          "options": [
+            "Noah",
+            "Mose",
+            "Abraham",
+            "David"
+          ],
+          "explanation": "Gott beauftragte Noah vor der Sintflut mit dem Bau einer Arche."
+        },
+        "fr": {
+          "question": "À qui Dieu a-t-il demandé de construire une arche ?",
+          "options": [
+            "Noé",
+            "Moïse",
+            "Abraham",
+            "David"
+          ],
+          "explanation": "Dieu a demandé à Noé de construire une arche avant le déluge."
+        },
+        "it": {
+          "question": "A chi Dio ordinò di costruire un’arca?",
+          "options": [
+            "Noè",
+            "Mosè",
+            "Abramo",
+            "Davide"
+          ],
+          "explanation": "Dio ordinò a Noè di costruire un’arca prima del diluvio."
+        },
+        "ml": {
+          "question": "പെട്ടകം നിർമിക്കാൻ ദൈവം ആരോടാണ് കല്പിച്ചത്?",
+          "options": [
+            "നോഹ",
+            "മോശെ",
+            "അബ്രാഹാം",
+            "ദാവീദ്"
+          ],
+          "explanation": "ജലപ്രളയത്തിനു മുമ്പ് ഒരു പെട്ടകം നിർമിക്കാൻ ദൈവം നോഹയോടു കല്പിച്ചു."
+        },
+        "es": {
+          "question": "¿A quién le pidió Dios que construyera un arca?",
+          "options": [
+            "Noé",
+            "Moisés",
+            "Abraham",
+            "David"
+          ],
+          "explanation": "Dios le indicó a Noé que construyera un arca antes del diluvio."
+        },
+        "fil": {
+          "question": "Sino ang inutusan ng Diyos na gumawa ng arka?",
+          "options": [
+            "Noe",
+            "Moises",
+            "Abraham",
+            "David"
+          ],
+          "explanation": "Inutusan ng Diyos si Noe na gumawa ng arka bago ang baha."
+        }
+      }
+    },
+    {
+      "id": "rainbow-covenant",
+      "reference": "Genesis 9:13",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "What did God place in the clouds as a sign of His covenant?",
+          "options": [
+            "A ladder",
+            "A rainbow",
+            "A crown",
+            "A scroll"
+          ],
+          "explanation": "God identified the rainbow as the sign of His covenant with the earth."
+        },
+        "de": {
+          "question": "Was setzte Gott als Zeichen seines Bundes in die Wolken?",
+          "options": [
+            "Eine Leiter",
+            "Einen Regenbogen",
+            "Eine Krone",
+            "Eine Schriftrolle"
+          ],
+          "explanation": "Gott bezeichnete den Regenbogen als Zeichen seines Bundes mit der Erde."
+        },
+        "fr": {
+          "question": "Qu’a placé Dieu dans les nuages comme signe de son alliance ?",
+          "options": [
+            "Une échelle",
+            "Un arc-en-ciel",
+            "Une couronne",
+            "Un rouleau"
+          ],
+          "explanation": "Dieu a désigné l’arc-en-ciel comme signe de son alliance avec la terre."
+        },
+        "it": {
+          "question": "Che cosa pose Dio tra le nuvole come segno del suo patto?",
+          "options": [
+            "Una scala",
+            "Un arcobaleno",
+            "Una corona",
+            "Un rotolo"
+          ],
+          "explanation": "Dio indicò l’arcobaleno come segno del suo patto con la terra."
+        },
+        "ml": {
+          "question": "തന്റെ നിയമത്തിന്റെ അടയാളമായി ദൈവം മേഘത്തിൽ വെച്ചത് എന്താണ്?",
+          "options": [
+            "ഗോവണി",
+            "മഴവില്ല്",
+            "കിരീടം",
+            "പുസ്തകച്ചുരുൾ"
+          ],
+          "explanation": "ഭൂമിയോടുള്ള തന്റെ നിയമത്തിന്റെ അടയാളമായി ദൈവം മഴവില്ലിനെ നിശ്ചയിച്ചു."
+        },
+        "es": {
+          "question": "¿Qué puso Dios en las nubes como señal de su pacto?",
+          "options": [
+            "Una escalera",
+            "Un arcoíris",
+            "Una corona",
+            "Un rollo"
+          ],
+          "explanation": "Dios señaló el arcoíris como la señal de su pacto con la tierra."
+        },
+        "fil": {
+          "question": "Ano ang inilagay ng Diyos sa mga ulap bilang tanda ng Kanyang tipan?",
+          "options": [
+            "Isang hagdan",
+            "Isang bahaghari",
+            "Isang korona",
+            "Isang balumbon"
+          ],
+          "explanation": "Itinakda ng Diyos ang bahaghari bilang tanda ng Kanyang tipan sa lupa."
+        }
+      }
+    },
+    {
+      "id": "isaac-parents",
+      "reference": "Genesis 21:3",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "What name did Abraham give the son born to Sarah?",
+          "options": [
+            "Ishmael",
+            "Jacob",
+            "Isaac",
+            "Joseph"
+          ],
+          "explanation": "Abraham named the son born to Sarah Isaac."
+        },
+        "de": {
+          "question": "Wie nannte Abraham den Sohn, den Sara ihm gebar?",
+          "options": [
+            "Ismael",
+            "Jakob",
+            "Isaak",
+            "Josef"
+          ],
+          "explanation": "Abraham gab dem Sohn, den Sara ihm gebar, den Namen Isaak."
+        },
+        "fr": {
+          "question": "Quel nom Abraham a-t-il donné au fils né de Sara ?",
+          "options": [
+            "Ismaël",
+            "Jacob",
+            "Isaac",
+            "Joseph"
+          ],
+          "explanation": "Abraham a nommé Isaac le fils que Sara lui a donné."
+        },
+        "it": {
+          "question": "Come chiamò Abramo il figlio che Sara gli aveva partorito?",
+          "options": [
+            "Ismaele",
+            "Giacobbe",
+            "Isacco",
+            "Giuseppe"
+          ],
+          "explanation": "Abramo chiamò Isacco il figlio nato da Sara."
+        },
+        "ml": {
+          "question": "സാറായിൽ ജനിച്ച മകന് അബ്രാഹാം എന്തു പേരിട്ടു?",
+          "options": [
+            "യിശ്മായേൽ",
+            "യാക്കോബ്",
+            "യിസ്ഹാക്ക്",
+            "യോസേഫ്"
+          ],
+          "explanation": "സാറാ പ്രസവിച്ച മകന് അബ്രാഹാം യിസ്ഹാക്ക് എന്നു പേരിട്ടു."
+        },
+        "es": {
+          "question": "¿Qué nombre le dio Abraham al hijo que le nació de Sara?",
+          "options": [
+            "Ismael",
+            "Jacob",
+            "Isaac",
+            "José"
+          ],
+          "explanation": "Abraham llamó Isaac al hijo que le nació de Sara."
+        },
+        "fil": {
+          "question": "Ano ang ipinangalan ni Abraham sa anak na ipinanganak ni Sara?",
+          "options": [
+            "Ismael",
+            "Jacob",
+            "Isaac",
+            "Jose"
+          ],
+          "explanation": "Isaac ang ipinangalan ni Abraham sa anak na ipinanganak ni Sara."
+        }
+      }
+    },
+    {
+      "id": "moses-basket",
+      "reference": "Exodus 2:3",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "Where did Moses’ mother place his basket?",
+          "options": [
+            "On a mountain",
+            "Inside the temple",
+            "At a city gate",
+            "Among the reeds by the river"
+          ],
+          "explanation": "She placed the basket among the reeds beside the Nile."
+        },
+        "de": {
+          "question": "Wohin legte Moses Mutter sein Körbchen?",
+          "options": [
+            "Auf einen Berg",
+            "In den Tempel",
+            "An ein Stadttor",
+            "Ins Schilf am Fluss"
+          ],
+          "explanation": "Sie legte das Körbchen ins Schilf am Ufer des Nils."
+        },
+        "fr": {
+          "question": "Où la mère de Moïse a-t-elle déposé sa corbeille ?",
+          "options": [
+            "Sur une montagne",
+            "Dans le temple",
+            "À une porte de la ville",
+            "Parmi les roseaux du fleuve"
+          ],
+          "explanation": "Elle a déposé la corbeille parmi les roseaux au bord du Nil."
+        },
+        "it": {
+          "question": "Dove depose la madre di Mosè il suo cestello?",
+          "options": [
+            "Su un monte",
+            "Nel tempio",
+            "Alla porta della città",
+            "Tra i canneti del fiume"
+          ],
+          "explanation": "Depose il cestello tra i canneti lungo il Nilo."
+        },
+        "ml": {
+          "question": "മോശെയുടെ അമ്മ അവന്റെ പെട്ടകം എവിടെയാണ് വെച്ചത്?",
+          "options": [
+            "മലമുകളിൽ",
+            "ദൈവാലയത്തിൽ",
+            "നഗരവാതിൽക്കൽ",
+            "നദീതീരത്തെ ഞാങ്ങണയുടെ ഇടയിൽ"
+          ],
+          "explanation": "അവൾ നൈൽ നദീതീരത്തെ ഞാങ്ങണയുടെ ഇടയിൽ പെട്ടകം വെച്ചു."
+        },
+        "es": {
+          "question": "¿Dónde colocó la madre de Moisés su canasta?",
+          "options": [
+            "En una montaña",
+            "Dentro del templo",
+            "En una puerta de la ciudad",
+            "Entre los juncos del río"
+          ],
+          "explanation": "Colocó la canasta entre los juncos a la orilla del Nilo."
+        },
+        "fil": {
+          "question": "Saan inilagay ng ina ni Moises ang kanyang basket?",
+          "options": [
+            "Sa isang bundok",
+            "Sa loob ng templo",
+            "Sa pintuan ng lungsod",
+            "Sa mga tambo sa tabi ng ilog"
+          ],
+          "explanation": "Inilagay niya ang basket sa mga tambo sa pampang ng Nilo."
+        }
+      }
+    },
+    {
+      "id": "burning-bush",
+      "reference": "Exodus 3:2",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "What was burning without being consumed when Moses saw it?",
+          "options": [
+            "A bush",
+            "A house",
+            "An altar",
+            "A boat"
+          ],
+          "explanation": "Moses saw a bush on fire that was not being consumed."
+        },
+        "de": {
+          "question": "Was brannte, ohne zu verbrennen, als Mose es sah?",
+          "options": [
+            "Ein Busch",
+            "Ein Haus",
+            "Ein Altar",
+            "Ein Boot"
+          ],
+          "explanation": "Mose sah einen brennenden Busch, der vom Feuer nicht verzehrt wurde."
+        },
+        "fr": {
+          "question": "Qu’est-ce qui brûlait sans se consumer lorsque Moïse l’a vu ?",
+          "options": [
+            "Un buisson",
+            "Une maison",
+            "Un autel",
+            "Un bateau"
+          ],
+          "explanation": "Moïse a vu un buisson en feu qui ne se consumait pas."
+        },
+        "it": {
+          "question": "Che cosa ardeva senza consumarsi quando Mosè lo vide?",
+          "options": [
+            "Un pruno",
+            "Una casa",
+            "Un altare",
+            "Una barca"
+          ],
+          "explanation": "Mosè vide un pruno in fiamme che non si consumava."
+        },
+        "ml": {
+          "question": "മോശെ കണ്ടപ്പോൾ കത്തിയിട്ടും വെന്തുപോകാതിരുന്നത് എന്താണ്?",
+          "options": [
+            "ഒരു മുൾപ്പടർപ്പ്",
+            "ഒരു വീട്",
+            "ഒരു യാഗപീഠം",
+            "ഒരു പടവ്"
+          ],
+          "explanation": "തീയിൽ കത്തിയിട്ടും വെന്തുപോകാത്ത ഒരു മുൾപ്പടർപ്പ് മോശെ കണ്ടു."
+        },
+        "es": {
+          "question": "¿Qué ardía sin consumirse cuando Moisés lo vio?",
+          "options": [
+            "Una zarza",
+            "Una casa",
+            "Un altar",
+            "Una barca"
+          ],
+          "explanation": "Moisés vio una zarza que ardía sin consumirse."
+        },
+        "fil": {
+          "question": "Ano ang nagliliyab ngunit hindi nasusunog nang makita ito ni Moises?",
+          "options": [
+            "Isang mababang punongkahoy",
+            "Isang bahay",
+            "Isang dambana",
+            "Isang bangka"
+          ],
+          "explanation": "Nakita ni Moises ang isang mababang punongkahoy na nagliliyab ngunit hindi natutupok."
+        }
+      }
+    },
+    {
+      "id": "moses-brother",
+      "reference": "Exodus 4:14",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "Who was Moses’ brother, whom God said could speak well?",
+          "options": [
+            "Joshua",
+            "Aaron",
+            "Caleb",
+            "Samuel"
+          ],
+          "explanation": "God named Aaron, Moses’ brother, as someone who could speak well."
+        },
+        "de": {
+          "question": "Welchen Bruder von Mose bezeichnete Gott als einen guten Redner?",
+          "options": [
+            "Josua",
+            "Aaron",
+            "Kaleb",
+            "Samuel"
+          ],
+          "explanation": "Gott nannte Moses Bruder Aaron als jemanden, der gut reden konnte."
+        },
+        "fr": {
+          "question": "Quel frère de Moïse Dieu a-t-il désigné comme sachant bien parler ?",
+          "options": [
+            "Josué",
+            "Aaron",
+            "Caleb",
+            "Samuel"
+          ],
+          "explanation": "Dieu a nommé Aaron, le frère de Moïse, comme sachant bien parler."
+        },
+        "it": {
+          "question": "Quale fratello di Mosè fu indicato da Dio come capace di parlare bene?",
+          "options": [
+            "Giosuè",
+            "Aaronne",
+            "Caleb",
+            "Samuele"
+          ],
+          "explanation": "Dio indicò Aaronne, fratello di Mosè, come una persona capace di parlare bene."
+        },
+        "ml": {
+          "question": "നന്നായി സംസാരിക്കാൻ കഴിയുമെന്ന് ദൈവം പറഞ്ഞ മോശെയുടെ സഹോദരൻ ആരാണ്?",
+          "options": [
+            "യോശുവ",
+            "അഹരോൻ",
+            "കാലേബ്",
+            "ശമൂവേൽ"
+          ],
+          "explanation": "മോശെയുടെ സഹോദരനായ അഹരോന് നന്നായി സംസാരിക്കാൻ കഴിയുമെന്ന് ദൈവം പറഞ്ഞു."
+        },
+        "es": {
+          "question": "¿Qué hermano de Moisés dijo Dios que sabía hablar bien?",
+          "options": [
+            "Josué",
+            "Aarón",
+            "Caleb",
+            "Samuel"
+          ],
+          "explanation": "Dios mencionó a Aarón, hermano de Moisés, como alguien que sabía hablar bien."
+        },
+        "fil": {
+          "question": "Sinong kapatid ni Moises ang sinabi ng Diyos na mahusay magsalita?",
+          "options": [
+            "Josue",
+            "Aaron",
+            "Caleb",
+            "Samuel"
+          ],
+          "explanation": "Sinabi ng Diyos na si Aaron, ang kapatid ni Moises, ay mahusay magsalita."
+        }
+      }
+    },
+    {
+      "id": "manna",
+      "reference": "Exodus 16:15",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "What did Moses call the food the Israelites found in the wilderness?",
+          "options": [
+            "Grapes from Egypt",
+            "Fish from the sea",
+            "Bread given by the Lord",
+            "Olives from Jericho"
+          ],
+          "explanation": "Moses explained that the manna was bread the Lord had given them to eat."
+        },
+        "de": {
+          "question": "Wie beschrieb Mose die Nahrung, die die Israeliten in der Wüste fanden?",
+          "options": [
+            "Als Trauben aus Ägypten",
+            "Als Fische aus dem Meer",
+            "Als Brot vom Herrn",
+            "Als Oliven aus Jericho"
+          ],
+          "explanation": "Mose erklärte, dass das Manna Brot war, das der Herr ihnen zu essen gab."
+        },
+        "fr": {
+          "question": "Comment Moïse a-t-il décrit la nourriture trouvée par les Israélites dans le désert ?",
+          "options": [
+            "Des raisins d’Égypte",
+            "Des poissons de la mer",
+            "Du pain donné par l’Éternel",
+            "Des olives de Jéricho"
+          ],
+          "explanation": "Moïse a expliqué que la manne était le pain que l’Éternel leur donnait à manger."
+        },
+        "it": {
+          "question": "Come descrisse Mosè il cibo trovato dagli Israeliti nel deserto?",
+          "options": [
+            "Uva dall’Egitto",
+            "Pesci del mare",
+            "Pane dato dall’Eterno",
+            "Olive di Gerico"
+          ],
+          "explanation": "Mosè spiegò che la manna era il pane che l’Eterno aveva dato loro da mangiare."
+        },
+        "ml": {
+          "question": "മരുഭൂമിയിൽ യിസ്രായേൽക്കാർ കണ്ട ആഹാരത്തെ മോശെ എങ്ങനെ വിവരിച്ചു?",
+          "options": [
+            "മിസ്രയീമിലെ മുന്തിരിപ്പഴം",
+            "കടലിലെ മത്സ്യം",
+            "യഹോവ നൽകിയ അപ്പം",
+            "യെരീഹോയിലെ ഒലിവുപഴം"
+          ],
+          "explanation": "അവർക്ക് ഭക്ഷിക്കാൻ യഹോവ നൽകിയ അപ്പമാണ് മന്നാ എന്ന് മോശെ വിശദീകരിച്ചു."
+        },
+        "es": {
+          "question": "¿Cómo describió Moisés el alimento que los israelitas encontraron en el desierto?",
+          "options": [
+            "Uvas de Egipto",
+            "Peces del mar",
+            "Pan dado por el Señor",
+            "Aceitunas de Jericó"
+          ],
+          "explanation": "Moisés explicó que el maná era el pan que el Señor les había dado para comer."
+        },
+        "fil": {
+          "question": "Paano inilarawan ni Moises ang pagkaing nakita ng mga Israelita sa ilang?",
+          "options": [
+            "Mga ubas mula sa Egipto",
+            "Mga isda mula sa dagat",
+            "Tinapay na ibinigay ng Panginoon",
+            "Mga olibo mula sa Jerico"
+          ],
+          "explanation": "Ipinaliwanag ni Moises na ang mana ay tinapay na ibinigay ng Panginoon upang kainin nila."
+        }
+      }
+    },
+    {
+      "id": "jericho-walls",
+      "reference": "Joshua 6:20",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "Which city’s walls fell after the people shouted and the trumpets sounded?",
+          "options": [
+            "Bethlehem",
+            "Nineveh",
+            "Nazareth",
+            "Jericho"
+          ],
+          "explanation": "The walls of Jericho fell when the people shouted at the trumpet blast."
+        },
+        "de": {
+          "question": "Welche Stadtmauer fiel, als das Volk jubelte und die Posaunen ertönten?",
+          "options": [
+            "Die Mauer von Bethlehem",
+            "Die Mauer von Ninive",
+            "Die Mauer von Nazareth",
+            "Die Mauer von Jericho"
+          ],
+          "explanation": "Die Mauer von Jericho fiel, als das Volk beim Posaunenschall laut rief."
+        },
+        "fr": {
+          "question": "Les murailles de quelle ville sont tombées au son des trompettes et aux cris du peuple ?",
+          "options": [
+            "Bethléhem",
+            "Ninive",
+            "Nazareth",
+            "Jéricho"
+          ],
+          "explanation": "Les murailles de Jéricho sont tombées lorsque le peuple a crié au son des trompettes."
+        },
+        "it": {
+          "question": "Le mura di quale città caddero al suono delle trombe e alle grida del popolo?",
+          "options": [
+            "Betlemme",
+            "Ninive",
+            "Nazaret",
+            "Gerico"
+          ],
+          "explanation": "Le mura di Gerico caddero quando il popolo gridò al suono delle trombe."
+        },
+        "ml": {
+          "question": "കാഹളം മുഴങ്ങുകയും ജനം ആർപ്പിടുകയും ചെയ്തപ്പോൾ ഏതു നഗരത്തിന്റെ മതിലാണ് വീണത്?",
+          "options": [
+            "ബേത്ത്ലെഹെം",
+            "നിനവേ",
+            "നസറത്ത്",
+            "യെരീഹോ"
+          ],
+          "explanation": "കാഹളനാദത്തോടൊപ്പം ജനം ആർപ്പിട്ടപ്പോൾ യെരീഹോയുടെ മതിൽ വീണു."
+        },
+        "es": {
+          "question": "¿De qué ciudad cayeron las murallas al sonar las trompetas y gritar el pueblo?",
+          "options": [
+            "Belén",
+            "Nínive",
+            "Nazaret",
+            "Jericó"
+          ],
+          "explanation": "Las murallas de Jericó cayeron cuando el pueblo gritó al sonido de las trompetas."
+        },
+        "fil": {
+          "question": "Anong lungsod ang gumuho ang mga pader nang sumigaw ang mga tao at tumunog ang mga trumpeta?",
+          "options": [
+            "Betlehem",
+            "Ninive",
+            "Nazaret",
+            "Jerico"
+          ],
+          "explanation": "Gumuho ang mga pader ng Jerico nang sumigaw ang mga tao sa tunog ng mga trumpeta."
+        }
+      }
+    },
+    {
+      "id": "david-goliath",
+      "reference": "1 Samuel 17:49",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "What struck Goliath on the forehead when David used his sling?",
+          "options": [
+            "A stone",
+            "An arrow",
+            "A spear",
+            "A sword"
+          ],
+          "explanation": "David slung a stone that struck Goliath on the forehead."
+        },
+        "de": {
+          "question": "Was traf Goliath an der Stirn, als David seine Schleuder benutzte?",
+          "options": [
+            "Ein Stein",
+            "Ein Pfeil",
+            "Ein Speer",
+            "Ein Schwert"
+          ],
+          "explanation": "David schleuderte einen Stein, der Goliath an der Stirn traf."
+        },
+        "fr": {
+          "question": "Qu’est-ce qui a frappé Goliath au front lorsque David a utilisé sa fronde ?",
+          "options": [
+            "Une pierre",
+            "Une flèche",
+            "Une lance",
+            "Une épée"
+          ],
+          "explanation": "David a lancé avec sa fronde une pierre qui a frappé Goliath au front."
+        },
+        "it": {
+          "question": "Che cosa colpì Goliath alla fronte quando Davide usò la fionda?",
+          "options": [
+            "Una pietra",
+            "Una freccia",
+            "Una lancia",
+            "Una spada"
+          ],
+          "explanation": "Davide lanciò una pietra con la fionda e colpì Goliath alla fronte."
+        },
+        "ml": {
+          "question": "ദാവീദ് കവിണ ഉപയോഗിച്ചപ്പോൾ ഗൊല്യാത്തിന്റെ നെറ്റിയിൽ കൊണ്ടത് എന്താണ്?",
+          "options": [
+            "ഒരു കല്ല്",
+            "ഒരു അമ്പ്",
+            "ഒരു കുന്തം",
+            "ഒരു വാൾ"
+          ],
+          "explanation": "ദാവീദ് കവിണയിൽ എറിഞ്ഞ കല്ല് ഗൊല്യാത്തിന്റെ നെറ്റിയിൽ കൊണ്ടു."
+        },
+        "es": {
+          "question": "¿Qué golpeó a Goliat en la frente cuando David usó su honda?",
+          "options": [
+            "Una piedra",
+            "Una flecha",
+            "Una lanza",
+            "Una espada"
+          ],
+          "explanation": "David lanzó una piedra con la honda que golpeó a Goliat en la frente."
+        },
+        "fil": {
+          "question": "Ano ang tumama sa noo ni Goliat nang gumamit ng tirador si David?",
+          "options": [
+            "Isang bato",
+            "Isang palaso",
+            "Isang sibat",
+            "Isang tabak"
+          ],
+          "explanation": "Nagpakawala si David ng isang bato na tumama sa noo ni Goliat."
+        }
+      }
+    },
+    {
+      "id": "daniel-lions",
+      "reference": "Daniel 6:22",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "Who said God sent an angel to shut the lions’ mouths?",
+          "options": [
+            "Joseph",
+            "Daniel",
+            "Jonah",
+            "Elijah"
+          ],
+          "explanation": "Daniel told the king that God’s angel had shut the lions’ mouths."
+        },
+        "de": {
+          "question": "Wer sagte, Gott habe einen Engel gesandt, um den Löwen das Maul zu verschließen?",
+          "options": [
+            "Josef",
+            "Daniel",
+            "Jona",
+            "Elia"
+          ],
+          "explanation": "Daniel erklärte dem König, dass Gottes Engel den Löwen das Maul verschlossen hatte."
+        },
+        "fr": {
+          "question": "Qui a dit que Dieu avait envoyé un ange pour fermer la gueule des lions ?",
+          "options": [
+            "Joseph",
+            "Daniel",
+            "Jonas",
+            "Élie"
+          ],
+          "explanation": "Daniel a expliqué au roi que l’ange de Dieu avait fermé la gueule des lions."
+        },
+        "it": {
+          "question": "Chi disse che Dio aveva mandato un angelo a chiudere la bocca dei leoni?",
+          "options": [
+            "Giuseppe",
+            "Daniele",
+            "Giona",
+            "Elia"
+          ],
+          "explanation": "Daniele disse al re che l’angelo di Dio aveva chiuso la bocca dei leoni."
+        },
+        "ml": {
+          "question": "സിംഹങ്ങളുടെ വായ് അടയ്ക്കാൻ ദൈവം ദൂതനെ അയച്ചെന്ന് പറഞ്ഞത് ആരാണ്?",
+          "options": [
+            "യോസേഫ്",
+            "ദാനീയേൽ",
+            "യോനാ",
+            "ഏലീയാവ്"
+          ],
+          "explanation": "ദൈവത്തിന്റെ ദൂതൻ സിംഹങ്ങളുടെ വായ് അടച്ചെന്ന് ദാനീയേൽ രാജാവിനോടു പറഞ്ഞു."
+        },
+        "es": {
+          "question": "¿Quién dijo que Dios había enviado un ángel para cerrar la boca de los leones?",
+          "options": [
+            "José",
+            "Daniel",
+            "Jonás",
+            "Elías"
+          ],
+          "explanation": "Daniel le dijo al rey que el ángel de Dios había cerrado la boca de los leones."
+        },
+        "fil": {
+          "question": "Sino ang nagsabing nagsugo ang Diyos ng anghel upang isara ang bibig ng mga leon?",
+          "options": [
+            "Jose",
+            "Daniel",
+            "Jonas",
+            "Elias"
+          ],
+          "explanation": "Sinabi ni Daniel sa hari na isinara ng anghel ng Diyos ang bibig ng mga leon."
+        }
+      }
+    },
+    {
+      "id": "joseph-brothers",
+      "reference": "Genesis 37:28",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "Which son of Jacob was sold by his brothers and taken to Egypt?",
+          "options": [
+            "Benjamin",
+            "Judah",
+            "Joseph",
+            "Reuben"
+          ],
+          "explanation": "Joseph’s brothers sold him, and the traders took him to Egypt."
+        },
+        "de": {
+          "question": "Welcher Sohn Jakobs wurde von seinen Brüdern verkauft und nach Ägypten gebracht?",
+          "options": [
+            "Benjamin",
+            "Juda",
+            "Josef",
+            "Ruben"
+          ],
+          "explanation": "Josefs Brüder verkauften ihn, und die Händler brachten ihn nach Ägypten."
+        },
+        "fr": {
+          "question": "Quel fils de Jacob a été vendu par ses frères et emmené en Égypte ?",
+          "options": [
+            "Benjamin",
+            "Juda",
+            "Joseph",
+            "Ruben"
+          ],
+          "explanation": "Les frères de Joseph l’ont vendu, et les marchands l’ont emmené en Égypte."
+        },
+        "it": {
+          "question": "Quale figlio di Giacobbe fu venduto dai fratelli e portato in Egitto?",
+          "options": [
+            "Beniamino",
+            "Giuda",
+            "Giuseppe",
+            "Ruben"
+          ],
+          "explanation": "I fratelli vendettero Giuseppe e i mercanti lo portarono in Egitto."
+        },
+        "ml": {
+          "question": "സഹോദരന്മാർ വിറ്റതിനെത്തുടർന്ന് മിസ്രയീമിലേക്ക് കൊണ്ടുപോകപ്പെട്ട യാക്കോബിന്റെ മകൻ ആരാണ്?",
+          "options": [
+            "ബെന്യാമീൻ",
+            "യെഹൂദാ",
+            "യോസേഫ്",
+            "രൂബേൻ"
+          ],
+          "explanation": "സഹോദരന്മാർ യോസേഫിനെ വിറ്റു; വ്യാപാരികൾ അവനെ മിസ്രയീമിലേക്ക് കൊണ്ടുപോയി."
+        },
+        "es": {
+          "question": "¿Qué hijo de Jacob fue vendido por sus hermanos y llevado a Egipto?",
+          "options": [
+            "Benjamín",
+            "Judá",
+            "José",
+            "Rubén"
+          ],
+          "explanation": "Los hermanos de José lo vendieron y los mercaderes lo llevaron a Egipto."
+        },
+        "fil": {
+          "question": "Sinong anak ni Jacob ang ipinagbili ng kanyang mga kapatid at dinala sa Egipto?",
+          "options": [
+            "Benjamin",
+            "Juda",
+            "Jose",
+            "Ruben"
+          ],
+          "explanation": "Ipinagbili ng mga kapatid si Jose, at dinala siya ng mga mangangalakal sa Egipto."
+        }
+      }
+    },
+    {
+      "id": "samuel-call",
+      "reference": "1 Samuel 3:10",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "Which boy answered the Lord’s call by saying that His servant was listening?",
+          "options": [
+            "David",
+            "Solomon",
+            "Isaac",
+            "Samuel"
+          ],
+          "explanation": "Samuel answered the Lord and said that His servant was listening."
+        },
+        "de": {
+          "question": "Welcher Junge antwortete auf Gottes Ruf, dass sein Knecht höre?",
+          "options": [
+            "David",
+            "Salomo",
+            "Isaak",
+            "Samuel"
+          ],
+          "explanation": "Samuel antwortete dem Herrn, dass sein Knecht höre."
+        },
+        "fr": {
+          "question": "Quel garçon a répondu à l’appel de l’Éternel en disant que son serviteur écoutait ?",
+          "options": [
+            "David",
+            "Salomon",
+            "Isaac",
+            "Samuel"
+          ],
+          "explanation": "Samuel a répondu à l’Éternel que son serviteur écoutait."
+        },
+        "it": {
+          "question": "Quale ragazzo rispose alla chiamata dell’Eterno dicendo che il suo servo ascoltava?",
+          "options": [
+            "Davide",
+            "Salomone",
+            "Isacco",
+            "Samuele"
+          ],
+          "explanation": "Samuele rispose all’Eterno dicendo che il suo servo ascoltava."
+        },
+        "ml": {
+          "question": "ദൈവത്തിന്റെ വിളിക്ക് അടിയൻ കേൾക്കുന്നു എന്ന് മറുപടി പറഞ്ഞ ബാലൻ ആരാണ്?",
+          "options": [
+            "ദാവീദ്",
+            "ശലോമോൻ",
+            "യിസ്ഹാക്ക്",
+            "ശമൂവേൽ"
+          ],
+          "explanation": "അടിയൻ കേൾക്കുന്നു എന്ന് ശമൂവേൽ യഹോവയോട് മറുപടി പറഞ്ഞു."
+        },
+        "es": {
+          "question": "¿Qué niño respondió al llamado del Señor diciendo que su siervo escuchaba?",
+          "options": [
+            "David",
+            "Salomón",
+            "Isaac",
+            "Samuel"
+          ],
+          "explanation": "Samuel respondió al Señor que su siervo escuchaba."
+        },
+        "fil": {
+          "question": "Sinong bata ang sumagot sa tawag ng Panginoon na nakikinig ang Kanyang lingkod?",
+          "options": [
+            "David",
+            "Solomon",
+            "Isaac",
+            "Samuel"
+          ],
+          "explanation": "Sumagot si Samuel sa Panginoon na nakikinig ang Kanyang lingkod."
+        }
+      }
+    },
+    {
+      "id": "jesus-birthplace",
+      "reference": "Matthew 2:1",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "In which town was Jesus born?",
+          "options": [
+            "Bethlehem",
+            "Nazareth",
+            "Jerusalem",
+            "Capernaum"
+          ],
+          "explanation": "Matthew places Jesus’ birth in Bethlehem of Judea."
+        },
+        "de": {
+          "question": "In welcher Stadt wurde Jesus geboren?",
+          "options": [
+            "Bethlehem",
+            "Nazareth",
+            "Jerusalem",
+            "Kapernaum"
+          ],
+          "explanation": "Matthäus nennt Bethlehem in Judäa als Geburtsort Jesu."
+        },
+        "fr": {
+          "question": "Dans quelle ville Jésus est-il né ?",
+          "options": [
+            "Bethléhem",
+            "Nazareth",
+            "Jérusalem",
+            "Capernaüm"
+          ],
+          "explanation": "Matthieu situe la naissance de Jésus à Bethléhem en Judée."
+        },
+        "it": {
+          "question": "In quale città nacque Gesù?",
+          "options": [
+            "Betlemme",
+            "Nazaret",
+            "Gerusalemme",
+            "Capernaum"
+          ],
+          "explanation": "Matteo colloca la nascita di Gesù a Betlemme, in Giudea."
+        },
+        "ml": {
+          "question": "യേശു ജനിച്ച പട്ടണം ഏതാണ്?",
+          "options": [
+            "ബേത്ത്ലെഹെം",
+            "നസറത്ത്",
+            "യെരൂശലേം",
+            "കഫർന്നഹൂം"
+          ],
+          "explanation": "യേശു യെഹൂദ്യയിലെ ബേത്ത്ലെഹെമിൽ ജനിച്ചതായി മത്തായി പറയുന്നു."
+        },
+        "es": {
+          "question": "¿En qué pueblo nació Jesús?",
+          "options": [
+            "Belén",
+            "Nazaret",
+            "Jerusalén",
+            "Capernaúm"
+          ],
+          "explanation": "Mateo sitúa el nacimiento de Jesús en Belén de Judea."
+        },
+        "fil": {
+          "question": "Saang bayan ipinanganak si Jesus?",
+          "options": [
+            "Betlehem",
+            "Nazaret",
+            "Jerusalem",
+            "Capernaum"
+          ],
+          "explanation": "Ayon kay Mateo, ipinanganak si Jesus sa Betlehem ng Judea."
+        }
+      }
+    },
+    {
+      "id": "jesus-baptism",
+      "reference": "Matthew 3:13",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "Who did Jesus come to at the Jordan to be baptized?",
+          "options": [
+            "Peter",
+            "John the Baptist",
+            "Andrew",
+            "Philip"
+          ],
+          "explanation": "Jesus came from Galilee to John at the Jordan to be baptized."
+        },
+        "de": {
+          "question": "Zu wem kam Jesus an den Jordan, um sich taufen zu lassen?",
+          "options": [
+            "Zu Petrus",
+            "Zu Johannes dem Täufer",
+            "Zu Andreas",
+            "Zu Philippus"
+          ],
+          "explanation": "Jesus kam aus Galiläa zu Johannes an den Jordan, um sich taufen zu lassen."
+        },
+        "fr": {
+          "question": "Auprès de qui Jésus est-il venu au Jourdain pour être baptisé ?",
+          "options": [
+            "Pierre",
+            "Jean-Baptiste",
+            "André",
+            "Philippe"
+          ],
+          "explanation": "Jésus est venu de Galilée auprès de Jean au Jourdain pour être baptisé."
+        },
+        "it": {
+          "question": "Da chi andò Gesù al Giordano per essere battezzato?",
+          "options": [
+            "Pietro",
+            "Giovanni Battista",
+            "Andrea",
+            "Filippo"
+          ],
+          "explanation": "Gesù venne dalla Galilea da Giovanni al Giordano per essere battezzato."
+        },
+        "ml": {
+          "question": "സ്നാനം ഏൽക്കാൻ യേശു യോർദ്ദാനിൽ ആരുടെ അടുക്കലാണ് വന്നത്?",
+          "options": [
+            "പത്രൊസ്",
+            "യോഹന്നാൻ സ്നാപകൻ",
+            "അന്ത്രെയാസ്",
+            "ഫിലിപ്പൊസ്"
+          ],
+          "explanation": "യേശു സ്നാനം ഏൽക്കാൻ ഗലീലയിൽനിന്ന് യോർദ്ദാനിൽ യോഹന്നാന്റെ അടുക്കൽ വന്നു."
+        },
+        "es": {
+          "question": "¿A quién acudió Jesús en el Jordán para ser bautizado?",
+          "options": [
+            "Pedro",
+            "Juan el Bautista",
+            "Andrés",
+            "Felipe"
+          ],
+          "explanation": "Jesús fue de Galilea al Jordán para que Juan lo bautizara."
+        },
+        "fil": {
+          "question": "Kanino lumapit si Jesus sa Jordan upang magpabautismo?",
+          "options": [
+            "Pedro",
+            "Juan Bautista",
+            "Andres",
+            "Felipe"
+          ],
+          "explanation": "Dumating si Jesus mula sa Galilea upang magpabautismo kay Juan sa Jordan."
+        }
+      }
+    },
+    {
+      "id": "twelve-apostles",
+      "reference": "Luke 6:13",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "How many disciples did Jesus choose and name apostles?",
+          "options": [
+            "Seven",
+            "Ten",
+            "Twelve",
+            "Forty"
+          ],
+          "explanation": "Jesus chose twelve of His disciples and named them apostles."
+        },
+        "de": {
+          "question": "Wie viele Jünger wählte Jesus aus und nannte sie Apostel?",
+          "options": [
+            "Sieben",
+            "Zehn",
+            "Zwölf",
+            "Vierzig"
+          ],
+          "explanation": "Jesus wählte zwölf seiner Jünger aus und nannte sie Apostel."
+        },
+        "fr": {
+          "question": "Combien de disciples Jésus a-t-il choisis et nommés apôtres ?",
+          "options": [
+            "Sept",
+            "Dix",
+            "Douze",
+            "Quarante"
+          ],
+          "explanation": "Jésus a choisi douze de ses disciples et les a nommés apôtres."
+        },
+        "it": {
+          "question": "Quanti discepoli scelse Gesù chiamandoli apostoli?",
+          "options": [
+            "Sette",
+            "Dieci",
+            "Dodici",
+            "Quaranta"
+          ],
+          "explanation": "Gesù scelse dodici dei suoi discepoli e li chiamò apostoli."
+        },
+        "ml": {
+          "question": "യേശു എത്ര ശിഷ്യന്മാരെ തിരഞ്ഞെടുത്ത് അപ്പൊസ്തലന്മാർ എന്നു വിളിച്ചു?",
+          "options": [
+            "ഏഴ്",
+            "പത്ത്",
+            "പന്ത്രണ്ട്",
+            "നാല്പത്"
+          ],
+          "explanation": "യേശു തന്റെ ശിഷ്യന്മാരിൽ പന്ത്രണ്ടുപേരെ തിരഞ്ഞെടുത്ത് അപ്പൊസ്തലന്മാർ എന്നു വിളിച്ചു."
+        },
+        "es": {
+          "question": "¿A cuántos discípulos eligió Jesús y llamó apóstoles?",
+          "options": [
+            "Siete",
+            "Diez",
+            "Doce",
+            "Cuarenta"
+          ],
+          "explanation": "Jesús eligió a doce de sus discípulos y los llamó apóstoles."
+        },
+        "fil": {
+          "question": "Ilang alagad ang pinili ni Jesus at tinawag na mga apostol?",
+          "options": [
+            "Pito",
+            "Sampu",
+            "Labindalawa",
+            "Apatnapu"
+          ],
+          "explanation": "Pumili si Jesus ng labindalawa sa Kanyang mga alagad at tinawag silang mga apostol."
+        }
+      }
+    },
+    {
+      "id": "cana-sign",
+      "reference": "John 2:9",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "At the wedding in Cana, what had the water become?",
+          "options": [
+            "Milk",
+            "Oil",
+            "Honey",
+            "Wine"
+          ],
+          "explanation": "The master of the banquet tasted the water that had become wine."
+        },
+        "de": {
+          "question": "Was war bei der Hochzeit in Kana aus dem Wasser geworden?",
+          "options": [
+            "Milch",
+            "Öl",
+            "Honig",
+            "Wein"
+          ],
+          "explanation": "Der Speisemeister kostete das Wasser, das zu Wein geworden war."
+        },
+        "fr": {
+          "question": "Aux noces de Cana, en quoi l’eau avait-elle été changée ?",
+          "options": [
+            "En lait",
+            "En huile",
+            "En miel",
+            "En vin"
+          ],
+          "explanation": "Le maître du repas a goûté l’eau qui avait été changée en vin."
+        },
+        "it": {
+          "question": "Alle nozze di Cana, in che cosa era stata trasformata l’acqua?",
+          "options": [
+            "Latte",
+            "Olio",
+            "Miele",
+            "Vino"
+          ],
+          "explanation": "Il maestro di tavola assaggiò l’acqua che era stata trasformata in vino."
+        },
+        "ml": {
+          "question": "കാനാവിലെ കല്യാണത്തിൽ വെള്ളം എന്തായി മാറി?",
+          "options": [
+            "പാൽ",
+            "എണ്ണ",
+            "തേൻ",
+            "വീഞ്ഞ്"
+          ],
+          "explanation": "വീഞ്ഞായി മാറിയ വെള്ളം വിരുന്നുവാഴി രുചിച്ചു നോക്കി."
+        },
+        "es": {
+          "question": "¿En qué se había convertido el agua en la boda de Caná?",
+          "options": [
+            "Leche",
+            "Aceite",
+            "Miel",
+            "Vino"
+          ],
+          "explanation": "El encargado del banquete probó el agua que se había convertido en vino."
+        },
+        "fil": {
+          "question": "Sa kasalan sa Cana, ano ang naging anyo ng tubig?",
+          "options": [
+            "Gatas",
+            "Langis",
+            "Pulot",
+            "Alak"
+          ],
+          "explanation": "Tinikman ng namamahala sa handaan ang tubig na naging alak."
+        }
+      }
+    },
+    {
+      "id": "five-loaves",
+      "reference": "Matthew 14:17",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "How many loaves did the disciples report having before Jesus fed the five thousand?",
+          "options": [
+            "Five",
+            "Two",
+            "Seven",
+            "Twelve"
+          ],
+          "explanation": "The disciples reported having five loaves and two fish."
+        },
+        "de": {
+          "question": "Wie viele Brote hatten die Jünger vor der Speisung der Fünftausend?",
+          "options": [
+            "Fünf",
+            "Zwei",
+            "Sieben",
+            "Zwölf"
+          ],
+          "explanation": "Die Jünger berichteten, dass sie fünf Brote und zwei Fische hatten."
+        },
+        "fr": {
+          "question": "Combien de pains les disciples avaient-ils avant que Jésus nourrisse les cinq mille hommes ?",
+          "options": [
+            "Cinq",
+            "Deux",
+            "Sept",
+            "Douze"
+          ],
+          "explanation": "Les disciples ont indiqué qu’ils avaient cinq pains et deux poissons."
+        },
+        "it": {
+          "question": "Quanti pani avevano i discepoli prima che Gesù sfamasse i cinquemila?",
+          "options": [
+            "Cinque",
+            "Due",
+            "Sette",
+            "Dodici"
+          ],
+          "explanation": "I discepoli riferirono di avere cinque pani e due pesci."
+        },
+        "ml": {
+          "question": "യേശു അയ്യായിരം പേരെ പോഷിപ്പിക്കുന്നതിനു മുമ്പ് ശിഷ്യന്മാരുടെ കൈയിൽ എത്ര അപ്പം ഉണ്ടായിരുന്നു?",
+          "options": [
+            "അഞ്ച്",
+            "രണ്ട്",
+            "ഏഴ്",
+            "പന്ത്രണ്ട്"
+          ],
+          "explanation": "തങ്ങളുടെ കൈയിൽ അഞ്ച് അപ്പവും രണ്ടു മത്സ്യവും ഉണ്ടെന്ന് ശിഷ്യന്മാർ പറഞ്ഞു."
+        },
+        "es": {
+          "question": "¿Cuántos panes dijeron tener los discípulos antes de que Jesús alimentara a los cinco mil?",
+          "options": [
+            "Cinco",
+            "Dos",
+            "Siete",
+            "Doce"
+          ],
+          "explanation": "Los discípulos dijeron que tenían cinco panes y dos peces."
+        },
+        "fil": {
+          "question": "Ilang tinapay ang sinabi ng mga alagad na mayroon sila bago pakainin ni Jesus ang limang libo?",
+          "options": [
+            "Lima",
+            "Dalawa",
+            "Pito",
+            "Labindalawa"
+          ],
+          "explanation": "Sinabi ng mga alagad na mayroon silang limang tinapay at dalawang isda."
+        }
+      }
+    },
+    {
+      "id": "zacchaeus-tree",
+      "reference": "Luke 19:4",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "What did Zacchaeus climb to see Jesus?",
+          "options": [
+            "A tower",
+            "A sycamore tree",
+            "A roof",
+            "A hill"
+          ],
+          "explanation": "Zacchaeus climbed a sycamore tree because Jesus was passing that way."
+        },
+        "de": {
+          "question": "Worauf kletterte Zachäus, um Jesus zu sehen?",
+          "options": [
+            "Auf einen Turm",
+            "Auf einen Maulbeerfeigenbaum",
+            "Auf ein Dach",
+            "Auf einen Hügel"
+          ],
+          "explanation": "Zachäus kletterte auf einen Maulbeerfeigenbaum, weil Jesus dort vorbeikam."
+        },
+        "fr": {
+          "question": "Sur quoi Zachée est-il monté pour voir Jésus ?",
+          "options": [
+            "Une tour",
+            "Un sycomore",
+            "Un toit",
+            "Une colline"
+          ],
+          "explanation": "Zachée est monté sur un sycomore parce que Jésus devait passer par là."
+        },
+        "it": {
+          "question": "Su che cosa salì Zaccheo per vedere Gesù?",
+          "options": [
+            "Una torre",
+            "Un sicomoro",
+            "Un tetto",
+            "Una collina"
+          ],
+          "explanation": "Zaccheo salì su un sicomoro perché Gesù doveva passare di là."
+        },
+        "ml": {
+          "question": "യേശുവിനെ കാണാൻ സക്കായി എന്തിന്മേലാണ് കയറിയത്?",
+          "options": [
+            "ഒരു ഗോപുരം",
+            "ഒരു കാട്ടത്തിമരം",
+            "ഒരു മേൽക്കൂര",
+            "ഒരു കുന്ന്"
+          ],
+          "explanation": "യേശു ആ വഴിയിലൂടെ വരുന്നതിനാൽ സക്കായി ഒരു കാട്ടത്തിമരത്തിൽ കയറി."
+        },
+        "es": {
+          "question": "¿A qué se subió Zaqueo para ver a Jesús?",
+          "options": [
+            "A una torre",
+            "A un sicómoro",
+            "A un techo",
+            "A una colina"
+          ],
+          "explanation": "Zaqueo se subió a un sicómoro porque Jesús iba a pasar por allí."
+        },
+        "fil": {
+          "question": "Ano ang inakyat ni Zaqueo upang makita si Jesus?",
+          "options": [
+            "Isang tore",
+            "Isang punong sikomoro",
+            "Isang bubong",
+            "Isang burol"
+          ],
+          "explanation": "Umakyat si Zaqueo sa isang punong sikomoro dahil doon dadaan si Jesus."
+        }
+      }
+    },
+    {
+      "id": "lazarus",
+      "reference": "John 11:43-44",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "Who came out of the tomb after Jesus called him by name?",
+          "options": [
+            "Nicodemus",
+            "Zacchaeus",
+            "Lazarus",
+            "Stephen"
+          ],
+          "explanation": "Jesus called Lazarus, and the man who had died came out."
+        },
+        "de": {
+          "question": "Wer kam aus dem Grab, nachdem Jesus ihn beim Namen gerufen hatte?",
+          "options": [
+            "Nikodemus",
+            "Zachäus",
+            "Lazarus",
+            "Stephanus"
+          ],
+          "explanation": "Jesus rief Lazarus, und der Verstorbene kam heraus."
+        },
+        "fr": {
+          "question": "Qui est sorti du tombeau après que Jésus l’a appelé par son nom ?",
+          "options": [
+            "Nicodème",
+            "Zachée",
+            "Lazare",
+            "Étienne"
+          ],
+          "explanation": "Jésus a appelé Lazare, et l’homme qui était mort est sorti."
+        },
+        "it": {
+          "question": "Chi uscì dal sepolcro dopo che Gesù lo chiamò per nome?",
+          "options": [
+            "Nicodemo",
+            "Zaccheo",
+            "Lazzaro",
+            "Stefano"
+          ],
+          "explanation": "Gesù chiamò Lazzaro e l’uomo che era morto uscì dal sepolcro."
+        },
+        "ml": {
+          "question": "യേശു പേരു വിളിച്ചപ്പോൾ കല്ലറയിൽനിന്ന് പുറത്തുവന്നത് ആരാണ്?",
+          "options": [
+            "നിക്കൊദേമൊസ്",
+            "സക്കായി",
+            "ലാസർ",
+            "സ്തെഫാനൊസ്"
+          ],
+          "explanation": "യേശു ലാസറിനെ വിളിച്ചപ്പോൾ മരിച്ചവൻ പുറത്തുവന്നു."
+        },
+        "es": {
+          "question": "¿Quién salió del sepulcro después de que Jesús lo llamara por su nombre?",
+          "options": [
+            "Nicodemo",
+            "Zaqueo",
+            "Lázaro",
+            "Esteban"
+          ],
+          "explanation": "Jesús llamó a Lázaro y el hombre que había muerto salió."
+        },
+        "fil": {
+          "question": "Sino ang lumabas sa libingan matapos tawagin ni Jesus sa pangalan?",
+          "options": [
+            "Nicodemo",
+            "Zaqueo",
+            "Lazaro",
+            "Esteban"
+          ],
+          "explanation": "Tinawag ni Jesus si Lazaro, at lumabas ang lalaking namatay."
+        }
+      }
+    },
+    {
+      "id": "peter-water",
+      "reference": "Matthew 14:29",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "Which disciple stepped out of the boat and walked on the water toward Jesus?",
+          "options": [
+            "Thomas",
+            "Matthew",
+            "James",
+            "Peter"
+          ],
+          "explanation": "Peter got out of the boat and walked on the water toward Jesus."
+        },
+        "de": {
+          "question": "Welcher Jünger stieg aus dem Boot und ging auf dem Wasser zu Jesus?",
+          "options": [
+            "Thomas",
+            "Matthäus",
+            "Jakobus",
+            "Petrus"
+          ],
+          "explanation": "Petrus stieg aus dem Boot und ging auf dem Wasser auf Jesus zu."
+        },
+        "fr": {
+          "question": "Quel disciple est sorti de la barque et a marché sur l’eau vers Jésus ?",
+          "options": [
+            "Thomas",
+            "Matthieu",
+            "Jacques",
+            "Pierre"
+          ],
+          "explanation": "Pierre est sorti de la barque et a marché sur l’eau pour aller vers Jésus."
+        },
+        "it": {
+          "question": "Quale discepolo uscì dalla barca e camminò sull’acqua verso Gesù?",
+          "options": [
+            "Tommaso",
+            "Matteo",
+            "Giacomo",
+            "Pietro"
+          ],
+          "explanation": "Pietro uscì dalla barca e camminò sull’acqua verso Gesù."
+        },
+        "ml": {
+          "question": "പടവിൽനിന്ന് ഇറങ്ങി വെള്ളത്തിന്മേൽ നടന്ന് യേശുവിന്റെ അടുക്കലേക്കു പോയ ശിഷ്യൻ ആരാണ്?",
+          "options": [
+            "തോമസ്",
+            "മത്തായി",
+            "യാക്കോബ്",
+            "പത്രൊസ്"
+          ],
+          "explanation": "പത്രൊസ് പടവിൽനിന്ന് ഇറങ്ങി വെള്ളത്തിന്മേൽ നടന്ന് യേശുവിന്റെ അടുക്കലേക്കു പോയി."
+        },
+        "es": {
+          "question": "¿Qué discípulo salió de la barca y caminó sobre el agua hacia Jesús?",
+          "options": [
+            "Tomás",
+            "Mateo",
+            "Jacobo",
+            "Pedro"
+          ],
+          "explanation": "Pedro salió de la barca y caminó sobre el agua hacia Jesús."
+        },
+        "fil": {
+          "question": "Sinong alagad ang bumaba sa bangka at lumakad sa tubig patungo kay Jesus?",
+          "options": [
+            "Tomas",
+            "Mateo",
+            "Santiago",
+            "Pedro"
+          ],
+          "explanation": "Bumaba si Pedro sa bangka at lumakad sa tubig patungo kay Jesus."
+        }
+      }
+    },
+    {
+      "id": "kind-samaritan",
+      "reference": "Luke 10:33-34",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "In Jesus’ parable, who cared for the wounded traveler?",
+          "options": [
+            "A Samaritan",
+            "A priest",
+            "A Levite",
+            "An innkeeper’s son"
+          ],
+          "explanation": "The Samaritan had compassion and bandaged the traveler’s wounds."
+        },
+        "de": {
+          "question": "Wer versorgte in Jesu Gleichnis den verwundeten Reisenden?",
+          "options": [
+            "Ein Samariter",
+            "Ein Priester",
+            "Ein Levit",
+            "Der Sohn eines Wirtes"
+          ],
+          "explanation": "Der Samariter hatte Mitleid und verband die Wunden des Reisenden."
+        },
+        "fr": {
+          "question": "Dans la parabole de Jésus, qui a soigné le voyageur blessé ?",
+          "options": [
+            "Un Samaritain",
+            "Un prêtre",
+            "Un Lévite",
+            "Le fils d’un aubergiste"
+          ],
+          "explanation": "Le Samaritain a eu compassion du voyageur et a bandé ses plaies."
+        },
+        "it": {
+          "question": "Nella parabola di Gesù, chi si prese cura del viaggiatore ferito?",
+          "options": [
+            "Un Samaritano",
+            "Un sacerdote",
+            "Un levita",
+            "Il figlio di un albergatore"
+          ],
+          "explanation": "Il Samaritano ebbe compassione e fasciò le ferite del viaggiatore."
+        },
+        "ml": {
+          "question": "യേശുവിന്റെ ഉപമയിൽ മുറിവേറ്റ യാത്രക്കാരനെ പരിചരിച്ചത് ആരാണ്?",
+          "options": [
+            "ഒരു ശമര്യക്കാരൻ",
+            "ഒരു പുരോഹിതൻ",
+            "ഒരു ലേവ്യൻ",
+            "വഴിയമ്പലക്കാരന്റെ മകൻ"
+          ],
+          "explanation": "ശമര്യക്കാരന് മനസ്സലിവു തോന്നി; അവൻ യാത്രക്കാരന്റെ മുറിവുകൾ കെട്ടി."
+        },
+        "es": {
+          "question": "¿Quién cuidó al viajero herido en la parábola de Jesús?",
+          "options": [
+            "Un samaritano",
+            "Un sacerdote",
+            "Un levita",
+            "El hijo de un posadero"
+          ],
+          "explanation": "El samaritano sintió compasión y vendó las heridas del viajero."
+        },
+        "fil": {
+          "question": "Sa talinghaga ni Jesus, sino ang nag-alaga sa sugatang manlalakbay?",
+          "options": [
+            "Isang Samaritano",
+            "Isang pari",
+            "Isang Levita",
+            "Anak ng may-ari ng bahay-panuluyan"
+          ],
+          "explanation": "Nahabag ang Samaritano at tinalian ang mga sugat ng manlalakbay."
+        }
+      }
+    },
+    {
+      "id": "younger-son",
+      "reference": "Luke 15:12",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "In the parable of the two sons, which son asked for his share of the property?",
+          "options": [
+            "The older son",
+            "The younger son",
+            "Both sons together",
+            "Neither son"
+          ],
+          "explanation": "The younger son asked his father for his share of the property."
+        },
+        "de": {
+          "question": "Welcher Sohn bat im Gleichnis von den zwei Söhnen um seinen Anteil am Vermögen?",
+          "options": [
+            "Der ältere Sohn",
+            "Der jüngere Sohn",
+            "Beide Söhne zusammen",
+            "Keiner der Söhne"
+          ],
+          "explanation": "Der jüngere Sohn bat seinen Vater um seinen Anteil am Vermögen."
+        },
+        "fr": {
+          "question": "Dans la parabole des deux fils, lequel a demandé sa part des biens ?",
+          "options": [
+            "Le fils aîné",
+            "Le plus jeune fils",
+            "Les deux fils ensemble",
+            "Aucun des deux"
+          ],
+          "explanation": "Le plus jeune fils a demandé à son père sa part des biens."
+        },
+        "it": {
+          "question": "Nella parabola dei due figli, quale chiese la sua parte dei beni?",
+          "options": [
+            "Il figlio maggiore",
+            "Il figlio minore",
+            "Entrambi insieme",
+            "Nessuno dei due"
+          ],
+          "explanation": "Il figlio minore chiese al padre la propria parte dei beni."
+        },
+        "ml": {
+          "question": "രണ്ടു പുത്രന്മാരുടെ ഉപമയിൽ സ്വത്തിന്റെ ഓഹരി ചോദിച്ചത് ഏതു മകനാണ്?",
+          "options": [
+            "മൂത്ത മകൻ",
+            "ഇളയ മകൻ",
+            "രണ്ടുപേരും ഒരുമിച്ച്",
+            "രണ്ടുപേരുമല്ല"
+          ],
+          "explanation": "ഇളയ മകൻ തനിക്കുള്ള സ്വത്തിന്റെ ഓഹരി പിതാവിനോടു ചോദിച്ചു."
+        },
+        "es": {
+          "question": "¿Quién pidió su parte de los bienes en la parábola de los dos hijos?",
+          "options": [
+            "El hijo mayor",
+            "El hijo menor",
+            "Los dos juntos",
+            "Ninguno"
+          ],
+          "explanation": "El hijo menor le pidió a su padre la parte de los bienes que le correspondía."
+        },
+        "fil": {
+          "question": "Sa talinghaga ng dalawang anak, sino ang humingi ng kanyang bahagi ng ari-arian?",
+          "options": [
+            "Ang nakatatandang anak",
+            "Ang nakababatang anak",
+            "Sabay na humingi ang dalawa",
+            "Wala sa dalawa"
+          ],
+          "explanation": "Hiningi ng nakababatang anak sa kanyang ama ang bahagi niya sa ari-arian."
+        }
+      }
+    },
+    {
+      "id": "lost-sheep",
+      "reference": "Luke 15:4",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "In the parable of the lost sheep, how many sheep did the man have before losing one?",
+          "options": [
+            "Ten",
+            "Twelve",
+            "One hundred",
+            "Fifty"
+          ],
+          "explanation": "The man had one hundred sheep and went to look for the one that was lost."
+        },
+        "de": {
+          "question": "Wie viele Schafe hatte der Mann im Gleichnis, bevor er eines verlor?",
+          "options": [
+            "Zehn",
+            "Zwölf",
+            "Hundert",
+            "Fünfzig"
+          ],
+          "explanation": "Der Mann hatte hundert Schafe und suchte das eine, das verloren war."
+        },
+        "fr": {
+          "question": "Dans la parabole de la brebis perdue, combien de brebis l’homme avait-il avant d’en perdre une ?",
+          "options": [
+            "Dix",
+            "Douze",
+            "Cent",
+            "Cinquante"
+          ],
+          "explanation": "L’homme avait cent brebis et est parti chercher celle qui était perdue."
+        },
+        "it": {
+          "question": "Nella parabola della pecora smarrita, quante pecore aveva l’uomo prima di perderne una?",
+          "options": [
+            "Dieci",
+            "Dodici",
+            "Cento",
+            "Cinquanta"
+          ],
+          "explanation": "L’uomo aveva cento pecore e andò a cercare quella che si era smarrita."
+        },
+        "ml": {
+          "question": "കാണാതെപോയ ആടിന്റെ ഉപമയിൽ ഒരാടിനെ നഷ്ടപ്പെടുന്നതിനു മുമ്പ് ആ മനുഷ്യന് എത്ര ആടുകൾ ഉണ്ടായിരുന്നു?",
+          "options": [
+            "പത്ത്",
+            "പന്ത്രണ്ട്",
+            "നൂറ്",
+            "അമ്പത്"
+          ],
+          "explanation": "നൂറ് ആടുകൾ ഉണ്ടായിരുന്ന മനുഷ്യൻ കാണാതെപോയ ഒരാടിനെ അന്വേഷിച്ചു പോയി."
+        },
+        "es": {
+          "question": "¿Cuántas ovejas tenía el hombre de la parábola antes de perder una?",
+          "options": [
+            "Diez",
+            "Doce",
+            "Cien",
+            "Cincuenta"
+          ],
+          "explanation": "El hombre tenía cien ovejas y fue a buscar la que se había perdido."
+        },
+        "fil": {
+          "question": "Sa talinghaga ng nawawalang tupa, ilang tupa ang mayroon ang lalaki bago mawala ang isa?",
+          "options": [
+            "Sampu",
+            "Labindalawa",
+            "Isang daan",
+            "Limampu"
+          ],
+          "explanation": "May isang daang tupa ang lalaki at hinanap niya ang isang nawala."
+        }
+      }
+    },
+    {
+      "id": "mustard-seed",
+      "reference": "Matthew 13:31-32",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "Which seed did Jesus compare to the kingdom of heaven as it grows?",
+          "options": [
+            "An olive pit",
+            "A date seed",
+            "An apple seed",
+            "A mustard seed"
+          ],
+          "explanation": "Jesus described a mustard seed growing into a plant where birds could nest."
+        },
+        "de": {
+          "question": "Mit welchem wachsenden Samenkorn verglich Jesus das Himmelreich?",
+          "options": [
+            "Mit einem Olivenkern",
+            "Mit einem Dattelkern",
+            "Mit einem Apfelkern",
+            "Mit einem Senfkorn"
+          ],
+          "explanation": "Jesus beschrieb, wie ein Senfkorn zu einer Pflanze wächst, in der Vögel nisten können."
+        },
+        "fr": {
+          "question": "À quelle graine qui grandit Jésus a-t-il comparé le royaume des cieux ?",
+          "options": [
+            "Un noyau d’olive",
+            "Un noyau de datte",
+            "Un pépin de pomme",
+            "Un grain de sénevé"
+          ],
+          "explanation": "Jésus a décrit un grain de sénevé qui grandit jusqu’à abriter les oiseaux."
+        },
+        "it": {
+          "question": "A quale seme che cresce paragonò Gesù il regno dei cieli?",
+          "options": [
+            "Un nocciolo d’oliva",
+            "Un nocciolo di dattero",
+            "Un seme di mela",
+            "Un granello di senape"
+          ],
+          "explanation": "Gesù descrisse un granello di senape che cresce fino a ospitare gli uccelli."
+        },
+        "ml": {
+          "question": "വളരുന്ന ഏതു വിത്തിനോടാണ് യേശു സ്വർഗ്ഗരാജ്യത്തെ ഉപമിച്ചത്?",
+          "options": [
+            "ഒലിവിൻകുരു",
+            "ഈന്തപ്പഴക്കുരു",
+            "ആപ്പിൾ വിത്ത്",
+            "കടുകുമണി"
+          ],
+          "explanation": "കടുകുമണി വളർന്ന് പക്ഷികൾക്ക് കൂടുകൂട്ടാൻ കഴിയുന്ന ചെടിയാകുന്നതിനെക്കുറിച്ച് യേശു പറഞ്ഞു."
+        },
+        "es": {
+          "question": "¿Con qué semilla que crece comparó Jesús el reino de los cielos?",
+          "options": [
+            "Un hueso de aceituna",
+            "Un hueso de dátil",
+            "Una semilla de manzana",
+            "Un grano de mostaza"
+          ],
+          "explanation": "Jesús describió un grano de mostaza que crece hasta dar cobijo a las aves."
+        },
+        "fil": {
+          "question": "Anong butong lumalaki ang inihalintulad ni Jesus sa kaharian ng langit?",
+          "options": [
+            "Isang buto ng olibo",
+            "Isang buto ng datiles",
+            "Isang buto ng mansanas",
+            "Isang buto ng mustasa"
+          ],
+          "explanation": "Inilarawan ni Jesus ang buto ng mustasa na lumalaki hanggang makapugad dito ang mga ibon."
+        }
+      }
+    },
+    {
+      "id": "daily-bread",
+      "reference": "Matthew 6:11",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "In the Lord’s Prayer, what food do we ask God to give us each day?",
+          "options": [
+            "Bread",
+            "Fish",
+            "Grapes",
+            "Honey"
+          ],
+          "explanation": "Jesus taught His disciples to ask for their daily bread."
+        },
+        "de": {
+          "question": "Um welche Nahrung bitten wir Gott im Vaterunser für jeden Tag?",
+          "options": [
+            "Brot",
+            "Fisch",
+            "Trauben",
+            "Honig"
+          ],
+          "explanation": "Jesus lehrte seine Jünger, um ihr tägliches Brot zu bitten."
+        },
+        "fr": {
+          "question": "Dans le Notre Père, quelle nourriture demandons-nous à Dieu pour chaque jour ?",
+          "options": [
+            "Du pain",
+            "Du poisson",
+            "Des raisins",
+            "Du miel"
+          ],
+          "explanation": "Jésus a enseigné à ses disciples à demander leur pain quotidien."
+        },
+        "it": {
+          "question": "Nel Padre nostro, quale cibo chiediamo a Dio per ogni giorno?",
+          "options": [
+            "Il pane",
+            "Il pesce",
+            "L’uva",
+            "Il miele"
+          ],
+          "explanation": "Gesù insegnò ai discepoli a chiedere il pane quotidiano."
+        },
+        "ml": {
+          "question": "കർത്തൃപ്രാർത്ഥനയിൽ ദിവസവും നൽകാൻ നാം ദൈവത്തോട് ചോദിക്കുന്ന ആഹാരം എന്താണ്?",
+          "options": [
+            "അപ്പം",
+            "മത്സ്യം",
+            "മുന്തിരിപ്പഴം",
+            "തേൻ"
+          ],
+          "explanation": "അന്നന്നുള്ള അപ്പം ചോദിക്കാൻ യേശു ശിഷ്യന്മാരെ പഠിപ്പിച്ചു."
+        },
+        "es": {
+          "question": "¿Qué alimento le pedimos a Dios para cada día en el Padre nuestro?",
+          "options": [
+            "Pan",
+            "Pescado",
+            "Uvas",
+            "Miel"
+          ],
+          "explanation": "Jesús enseñó a sus discípulos a pedir el pan de cada día."
+        },
+        "fil": {
+          "question": "Sa Panalangin ng Panginoon, anong pagkain ang hinihiling natin sa Diyos araw-araw?",
+          "options": [
+            "Tinapay",
+            "Isda",
+            "Ubas",
+            "Pulot"
+          ],
+          "explanation": "Itinuro ni Jesus sa mga alagad na hingin ang kanilang tinapay sa araw-araw."
+        }
+      }
+    },
+    {
+      "id": "judas-silver",
+      "reference": "Matthew 26:15",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "How many silver coins did the chief priests agree to give Judas?",
+          "options": [
+            "Ten",
+            "Thirty",
+            "Twenty",
+            "Fifty"
+          ],
+          "explanation": "They agreed to give Judas thirty silver coins."
+        },
+        "de": {
+          "question": "Wie viele Silberstücke versprachen die Hohenpriester Judas?",
+          "options": [
+            "Zehn",
+            "Dreißig",
+            "Zwanzig",
+            "Fünfzig"
+          ],
+          "explanation": "Sie vereinbarten, Judas dreißig Silberstücke zu geben."
+        },
+        "fr": {
+          "question": "Combien de pièces d’argent les principaux sacrificateurs ont-ils promis à Judas ?",
+          "options": [
+            "Dix",
+            "Trente",
+            "Vingt",
+            "Cinquante"
+          ],
+          "explanation": "Ils ont convenu de donner trente pièces d’argent à Judas."
+        },
+        "it": {
+          "question": "Quante monete d’argento promisero i capi sacerdoti a Giuda?",
+          "options": [
+            "Dieci",
+            "Trenta",
+            "Venti",
+            "Cinquanta"
+          ],
+          "explanation": "Si accordarono per dare a Giuda trenta monete d’argento."
+        },
+        "ml": {
+          "question": "പ്രധാനപുരോഹിതന്മാർ യൂദായ്ക്ക് എത്ര വെള്ളിക്കാശ് നൽകാമെന്ന് സമ്മതിച്ചു?",
+          "options": [
+            "പത്ത്",
+            "മുപ്പത്",
+            "ഇരുപത്",
+            "അമ്പത്"
+          ],
+          "explanation": "യൂദായ്ക്ക് മുപ്പത് വെള്ളിക്കാശ് നൽകാമെന്ന് അവർ സമ്മതിച്ചു."
+        },
+        "es": {
+          "question": "¿Cuántas monedas de plata acordaron darle a Judas los principales sacerdotes?",
+          "options": [
+            "Diez",
+            "Treinta",
+            "Veinte",
+            "Cincuenta"
+          ],
+          "explanation": "Acordaron darle a Judas treinta monedas de plata."
+        },
+        "fil": {
+          "question": "Ilang pilak na barya ang ipinangakong ibibigay kay Judas ng mga punong pari?",
+          "options": [
+            "Sampu",
+            "Tatlumpu",
+            "Dalawampu",
+            "Limampu"
+          ],
+          "explanation": "Nagkasundo silang bigyan si Judas ng tatlumpung pilak na barya."
+        }
+      }
+    },
+    {
+      "id": "mary-tomb",
+      "reference": "John 20:1",
+      "correctIndex": 2,
+      "locales": {
+        "en": {
+          "question": "Who went to Jesus’ tomb early while it was still dark, according to John?",
+          "options": [
+            "Martha",
+            "Elizabeth",
+            "Mary Magdalene",
+            "Anna"
+          ],
+          "explanation": "John names Mary Magdalene as arriving at the tomb while it was still dark."
+        },
+        "de": {
+          "question": "Wer kam laut Johannes früh zum Grab Jesu, als es noch dunkel war?",
+          "options": [
+            "Marta",
+            "Elisabeth",
+            "Maria Magdalena",
+            "Hanna"
+          ],
+          "explanation": "Johannes nennt Maria Magdalena als diejenige, die im Dunkeln zum Grab kam."
+        },
+        "fr": {
+          "question": "Selon Jean, qui est venu au tombeau de Jésus tôt, alors qu’il faisait encore sombre ?",
+          "options": [
+            "Marthe",
+            "Élisabeth",
+            "Marie de Magdala",
+            "Anne"
+          ],
+          "explanation": "Jean nomme Marie de Magdala comme étant venue au tombeau alors qu’il faisait encore sombre."
+        },
+        "it": {
+          "question": "Secondo Giovanni, chi andò al sepolcro di Gesù di buon mattino, quando era ancora buio?",
+          "options": [
+            "Marta",
+            "Elisabetta",
+            "Maria Maddalena",
+            "Anna"
+          ],
+          "explanation": "Giovanni nomina Maria Maddalena come colei che arrivò al sepolcro quando era ancora buio."
+        },
+        "ml": {
+          "question": "യോഹന്നാന്റെ വിവരണപ്രകാരം ഇരുട്ടുള്ളപ്പോൾ തന്നെ യേശുവിന്റെ കല്ലറയിലേക്കു വന്നത് ആരാണ്?",
+          "options": [
+            "മാർത്ത",
+            "എലീശബെത്ത്",
+            "മഗ്ദലക്കാരത്തി മറിയ",
+            "അന്ന"
+          ],
+          "explanation": "ഇരുട്ടുള്ളപ്പോൾ തന്നെ മഗ്ദലക്കാരത്തി മറിയ കല്ലറയിലേക്കു വന്നതായി യോഹന്നാൻ പറയുന്നു."
+        },
+        "es": {
+          "question": "¿Quién fue al sepulcro de Jesús temprano, cuando aún estaba oscuro, según Juan?",
+          "options": [
+            "Marta",
+            "Elisabet",
+            "María Magdalena",
+            "Ana"
+          ],
+          "explanation": "Juan menciona a María Magdalena como quien llegó al sepulcro cuando aún estaba oscuro."
+        },
+        "fil": {
+          "question": "Ayon kay Juan, sino ang pumunta sa libingan ni Jesus nang maaga at madilim pa?",
+          "options": [
+            "Marta",
+            "Elisabet",
+            "Maria Magdalena",
+            "Ana"
+          ],
+          "explanation": "Pinangalanan ni Juan si Maria Magdalena bilang dumating sa libingan habang madilim pa."
+        }
+      }
+    },
+    {
+      "id": "thomas-wounds",
+      "reference": "John 20:27",
+      "correctIndex": 3,
+      "locales": {
+        "en": {
+          "question": "Which disciple did Jesus invite to examine His hands and side?",
+          "options": [
+            "Andrew",
+            "Philip",
+            "John",
+            "Thomas"
+          ],
+          "explanation": "Jesus invited Thomas to look at His hands and reach toward His side."
+        },
+        "de": {
+          "question": "Welchen Jünger lud Jesus ein, seine Hände und seine Seite zu untersuchen?",
+          "options": [
+            "Andreas",
+            "Philippus",
+            "Johannes",
+            "Thomas"
+          ],
+          "explanation": "Jesus forderte Thomas auf, seine Hände anzusehen und seine Seite zu berühren."
+        },
+        "fr": {
+          "question": "Quel disciple Jésus a-t-il invité à examiner ses mains et son côté ?",
+          "options": [
+            "André",
+            "Philippe",
+            "Jean",
+            "Thomas"
+          ],
+          "explanation": "Jésus a invité Thomas à regarder ses mains et à toucher son côté."
+        },
+        "it": {
+          "question": "Quale discepolo Gesù invitò a esaminare le sue mani e il suo fianco?",
+          "options": [
+            "Andrea",
+            "Filippo",
+            "Giovanni",
+            "Tommaso"
+          ],
+          "explanation": "Gesù invitò Tommaso a guardare le sue mani e a toccare il suo fianco."
+        },
+        "ml": {
+          "question": "തന്റെ കൈകളും വിലാപ്പുറവും പരിശോധിക്കാൻ യേശു ക്ഷണിച്ച ശിഷ്യൻ ആരാണ്?",
+          "options": [
+            "അന്ത്രെയാസ്",
+            "ഫിലിപ്പൊസ്",
+            "യോഹന്നാൻ",
+            "തോമസ്"
+          ],
+          "explanation": "തന്റെ കൈകൾ കാണാനും വിലാപ്പുറത്ത് കൈ വെക്കാനും യേശു തോമസിനെ ക്ഷണിച്ചു."
+        },
+        "es": {
+          "question": "¿A qué discípulo invitó Jesús a examinar sus manos y su costado?",
+          "options": [
+            "Andrés",
+            "Felipe",
+            "Juan",
+            "Tomás"
+          ],
+          "explanation": "Jesús invitó a Tomás a mirar sus manos y a tocar su costado."
+        },
+        "fil": {
+          "question": "Sinong alagad ang inanyayahan ni Jesus na suriin ang Kanyang mga kamay at tagiliran?",
+          "options": [
+            "Andres",
+            "Felipe",
+            "Juan",
+            "Tomas"
+          ],
+          "explanation": "Inanyayahan ni Jesus si Tomas na tingnan ang Kanyang mga kamay at hawakan ang Kanyang tagiliran."
+        }
+      }
+    },
+    {
+      "id": "prison-songs",
+      "reference": "Acts 16:25",
+      "correctIndex": 0,
+      "locales": {
+        "en": {
+          "question": "Who were praying and singing hymns in prison around midnight?",
+          "options": [
+            "Paul and Silas",
+            "Peter and Andrew",
+            "James and John",
+            "Moses and Aaron"
+          ],
+          "explanation": "Paul and Silas prayed and sang hymns while the other prisoners listened."
+        },
+        "de": {
+          "question": "Wer betete und sang um Mitternacht im Gefängnis?",
+          "options": [
+            "Paulus und Silas",
+            "Petrus und Andreas",
+            "Jakobus und Johannes",
+            "Mose und Aaron"
+          ],
+          "explanation": "Paulus und Silas beteten und sangen Loblieder, während die anderen Gefangenen zuhörten."
+        },
+        "fr": {
+          "question": "Qui priait et chantait des cantiques en prison vers minuit ?",
+          "options": [
+            "Paul et Silas",
+            "Pierre et André",
+            "Jacques et Jean",
+            "Moïse et Aaron"
+          ],
+          "explanation": "Paul et Silas priaient et chantaient des cantiques pendant que les autres prisonniers écoutaient."
+        },
+        "it": {
+          "question": "Chi pregava e cantava inni in prigione verso mezzanotte?",
+          "options": [
+            "Paolo e Sila",
+            "Pietro e Andrea",
+            "Giacomo e Giovanni",
+            "Mosè e Aaronne"
+          ],
+          "explanation": "Paolo e Sila pregavano e cantavano inni mentre gli altri prigionieri ascoltavano."
+        },
+        "ml": {
+          "question": "അർധരാത്രിയിൽ തടവറയിൽ പ്രാർത്ഥിക്കുകയും സ്തുതിഗീതങ്ങൾ പാടുകയും ചെയ്തത് ആരാണ്?",
+          "options": [
+            "പൗലൊസും ശീലാസും",
+            "പത്രൊസും അന്ത്രെയാസും",
+            "യാക്കോബും യോഹന്നാനും",
+            "മോശെയും അഹരോനും"
+          ],
+          "explanation": "മറ്റു തടവുകാർ കേൾക്കുമ്പോൾ പൗലൊസും ശീലാസും പ്രാർത്ഥിക്കുകയും സ്തുതിഗീതങ്ങൾ പാടുകയും ചെയ്തു."
+        },
+        "es": {
+          "question": "¿Quiénes oraban y cantaban himnos en la cárcel cerca de la medianoche?",
+          "options": [
+            "Pablo y Silas",
+            "Pedro y Andrés",
+            "Jacobo y Juan",
+            "Moisés y Aarón"
+          ],
+          "explanation": "Pablo y Silas oraban y cantaban himnos mientras los otros presos escuchaban."
+        },
+        "fil": {
+          "question": "Sino ang nananalangin at umaawit ng mga himno sa bilangguan nang maghahatinggabi?",
+          "options": [
+            "Pablo at Silas",
+            "Pedro at Andres",
+            "Santiago at Juan",
+            "Moises at Aaron"
+          ],
+          "explanation": "Nananalangin at umaawit sina Pablo at Silas habang nakikinig ang ibang bilanggo."
+        }
+      }
+    },
+    {
+      "id": "spirit-fruit",
+      "reference": "Galatians 5:22",
+      "correctIndex": 1,
+      "locales": {
+        "en": {
+          "question": "Which of these is named among the fruit of the Spirit?",
+          "options": [
+            "Envy",
+            "Love",
+            "Pride",
+            "Greed"
+          ],
+          "explanation": "Paul lists love among the fruit of the Spirit in Galatians."
+        },
+        "de": {
+          "question": "Was gehört nach Paulus zur Frucht des Geistes?",
+          "options": [
+            "Neid",
+            "Liebe",
+            "Hochmut",
+            "Habgier"
+          ],
+          "explanation": "Paulus nennt im Galaterbrief die Liebe als Frucht des Geistes."
+        },
+        "fr": {
+          "question": "Lequel de ces éléments fait partie du fruit de l’Esprit ?",
+          "options": [
+            "L’envie",
+            "L’amour",
+            "L’orgueil",
+            "L’avidité"
+          ],
+          "explanation": "Dans l’épître aux Galates, Paul cite l’amour parmi le fruit de l’Esprit."
+        },
+        "it": {
+          "question": "Quale di questi è indicato tra i frutti dello Spirito?",
+          "options": [
+            "L’invidia",
+            "L’amore",
+            "L’orgoglio",
+            "L’avidità"
+          ],
+          "explanation": "Nella lettera ai Galati Paolo include l’amore nel frutto dello Spirito."
+        },
+        "ml": {
+          "question": "ഇവയിൽ ആത്മാവിന്റെ ഫലമായി പറയുന്നത് ഏതാണ്?",
+          "options": [
+            "അസൂയ",
+            "സ്നേഹം",
+            "അഹങ്കാരം",
+            "അത്യാഗ്രഹം"
+          ],
+          "explanation": "ഗലാത്യർക്കുള്ള ലേഖനത്തിൽ ആത്മാവിന്റെ ഫലങ്ങളിൽ പൗലൊസ് സ്നേഹം ഉൾപ്പെടുത്തുന്നു."
+        },
+        "es": {
+          "question": "¿Cuál de estos se menciona como fruto del Espíritu?",
+          "options": [
+            "La envidia",
+            "El amor",
+            "El orgullo",
+            "La codicia"
+          ],
+          "explanation": "En Gálatas, Pablo incluye el amor entre el fruto del Espíritu."
+        },
+        "fil": {
+          "question": "Alin dito ang binanggit bilang bunga ng Espiritu?",
+          "options": [
+            "Inggit",
+            "Pag-ibig",
+            "Pagmamataas",
+            "Kasakiman"
+          ],
+          "explanation": "Isinama ni Pablo ang pag-ibig sa bunga ng Espiritu sa sulat sa mga taga-Galacia."
+        }
+      }
+    }
+  ]
+}

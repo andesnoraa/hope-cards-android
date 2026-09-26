@@ -37,6 +37,8 @@ enum class AppIconGlyph(val codePoint: Int) {
     ChevronDown(0xF232),
     Checkmark(0xF21D),
     CheckmarkCircleOutline(0xF21F),
+    PuzzleOutline(0xF2E4),
+    BookOutline(0xF1A6),
     CloudUploadOutline(0xF260),
     RefreshOutline(0xF518),
     NotificationsOutline(0xF47F),
