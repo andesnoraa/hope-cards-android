@@ -64,7 +64,7 @@ class ArtisticGalleryDeviceTest {
                     compose.onNodeWithTag("art-category-${sample.category}").performClick()
                     compose.onNodeWithTag("art-gallery").performScrollToNode(hasTestTag("art-open-${sample.artwork}"))
                     compose.onNodeWithTag("art-open-${sample.artwork}").performClick()
-                    compose.onNodeWithText("${edition.language} · ${edition.label}").assertIsDisplayed()
+                    compose.onNodeWithText("${edition.language} (${edition.label})").assertIsDisplayed()
                     val reference = checkNotNull(VerseRepository(context).byId(sample.verse, edition)).displayReference
                     compose.waitUntil(15_000) {
                         runCatching { compose.onNodeWithContentDescription(reference).assertIsDisplayed() }.isSuccess
