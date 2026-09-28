@@ -44,7 +44,7 @@ class BibleQuizInstrumentedTest {
 
     @Test fun bundledContentIsCompleteAcrossEveryEditionAndReferencesAreLocalized() {
         val english = bank(Translation.BSB)
-        assertEquals(200, english.size)
+        assertEquals(400, english.size)
         Translation.entries.forEach { edition ->
             val rows = bank(edition)
             assertEquals(english.map { it.id }, rows.map { it.id })

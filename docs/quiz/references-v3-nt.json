@@ -1,0 +1,1166 @@
+{
+  "checkedOn": "2026-09-28",
+  "sourceTranslation": "Berean Standard Bible (BSB)",
+  "sourceAccess": "Chapter JSON fetched successfully over HTTPS from bible.helloao.org. The generic web open tool could not access the JSON endpoints; the read-only Python HTTPS fetch succeeded.",
+  "verificationMethod": "Read each cited source passage and reviewed the correct answer and all three alternatives against the precise question. Source excerpts retain words from the chapter API with footnote markers omitted. Reviewed all existing 130 story questions and the new batch for repeated tested facts; new questions about previously used episodes test different facts. Reviewed the seven localized prompts and answer labels for meaning and checked completeness and distinct options programmatically. This is model-led content review, not an independent human translation certification. Final review also excludes all source-verse overlap with the existing 70 passage-recognition questions. Three draft facts were replaced following independent content review.",
+  "storyQuestions": [
+    {
+      "id": "v3-newborn-manger",
+      "reference": "Luke 2:7",
+      "answer": "A manger",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/LUK/2.json",
+      "sourceVerses": {
+        "7": "And she gave birth to her firstborn, a Son. She wrapped Him in swaddling cloths and laid Him in a manger, because there was no room for them in the inn."
+      },
+      "question": "Where did Mary lay the newborn Jesus after wrapping Him in cloths?",
+      "distractors": [
+        "A basket",
+        "A boat",
+        "A chariot"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-joseph-escape-country",
+      "reference": "Matthew 2:13-14",
+      "answer": "Egypt",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/2.json",
+      "sourceVerses": {
+        "13": "When the Magi had gone, an angel of the Lord appeared to Joseph in a dream. “Get up!” he said. “Take the Child and His mother and flee to Egypt. Stay there until I tell you, for Herod is going to search for the Child to kill Him.”",
+        "14": "So he got up, took the Child and His mother by night, and withdrew to Egypt,"
+      },
+      "question": "To which country did Joseph take Mary and Jesus to escape Herod?",
+      "distractors": [
+        "Israel",
+        "Crete",
+        "Cyprus"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-magi-sky-sign",
+      "reference": "Matthew 2:2",
+      "answer": "A star",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/2.json",
+      "sourceVerses": {
+        "2": "asking, “Where is the One who has been born King of the Jews? We saw His star in the east and have come to worship Him.”"
+      },
+      "question": "What had the Magi seen in the sky that led them to seek the newborn King?",
+      "distractors": [
+        "A rainbow",
+        "A crown",
+        "A scroll"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-john-clothing-material",
+      "reference": "Matthew 3:4",
+      "answer": "Camel hair",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/3.json",
+      "sourceVerses": {
+        "4": "John wore a garment of camel’s hair, with a leather belt around his waist. His food was locusts and wild honey."
+      },
+      "question": "What material was John the Baptist's clothing made from?",
+      "distractors": [
+        "Linen",
+        "Silk",
+        "Wool"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-temptation-stones-food",
+      "reference": "Matthew 4:3",
+      "answer": "Bread",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/4.json",
+      "sourceVerses": {
+        "3": "The tempter came to Him and said, “If You are the Son of God, tell these stones to become bread.”"
+      },
+      "question": "The tempter challenged Jesus to turn stones into what food?",
+      "distractors": [
+        "Fish",
+        "Grapes",
+        "Honey"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-wise-builder-foundation",
+      "reference": "Matthew 7:24",
+      "answer": "Rock",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/7.json",
+      "sourceVerses": {
+        "24": "Therefore everyone who hears these words of Mine and acts on them is like a wise man who built his house on the rock."
+      },
+      "question": "On what did the wise man build his house in Jesus' teaching?",
+      "distractors": [
+        "Sand",
+        "Mud",
+        "Grass"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-parent-bread-stone",
+      "reference": "Matthew 7:9",
+      "answer": "A stone",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/7.json",
+      "sourceVerses": {
+        "9": "Which of you, if his son asks for bread, will give him a stone?"
+      },
+      "question": "When a child asks for bread, what object does Jesus say a parent would not give instead?",
+      "distractors": [
+        "A crown",
+        "A scroll",
+        "A ladder"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-centurion-patient",
+      "reference": "Matthew 8:5-6",
+      "answer": "His servant",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/8.json",
+      "sourceVerses": {
+        "5": "When Jesus had entered Capernaum, a centurion came and pleaded with Him,",
+        "6": "“Lord, my servant lies at home, paralyzed and in terrible agony.”"
+      },
+      "question": "For whom did the centurion at Capernaum ask Jesus' help because of paralysis?",
+      "distractors": [
+        "His son",
+        "His father",
+        "His brother"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-disciples-among-wolves",
+      "reference": "Matthew 10:16",
+      "answer": "Sheep",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/10.json",
+      "sourceVerses": {
+        "16": "Behold, I am sending you out like sheep among wolves; therefore be as shrewd as snakes and as innocent as doves."
+      },
+      "question": "To which animal did Jesus compare the disciples He sent out among wolves?",
+      "distractors": [
+        "Dove",
+        "Lion",
+        "Camel"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "The passage also mentions doves, but the question specifically asks for the comparison used when sending the disciples among wolves; only sheep answers it."
+    },
+    {
+      "id": "v3-enemy-sown-crop",
+      "reference": "Matthew 13:25",
+      "answer": "Weeds",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/13.json",
+      "sourceVerses": {
+        "25": "But while everyone was asleep, his enemy came and sowed weeds among the wheat, and slipped away."
+      },
+      "question": "What did the enemy sow among the wheat while people slept in Jesus' parable?",
+      "distractors": [
+        "Grapes",
+        "Olives",
+        "Figs"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-hidden-treasure-place",
+      "reference": "Matthew 13:44",
+      "answer": "A field",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/13.json",
+      "sourceVerses": {
+        "44": "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and in his joy he went and sold all he had and bought that field."
+      },
+      "question": "Where was the treasure hidden in Jesus' parable about a man who sold everything to buy that place?",
+      "distractors": [
+        "A boat",
+        "A house",
+        "A tower"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-merchant-precious-search",
+      "reference": "Matthew 13:45-46",
+      "answer": "Pearls",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/13.json",
+      "sourceVerses": {
+        "45": "Again, the kingdom of heaven is like a merchant in search of fine pearls.",
+        "46": "When he found one very precious pearl, he went away and sold all he had and bought it."
+      },
+      "question": "What valuable items was the merchant seeking in Jesus' parable before finding one of great worth?",
+      "distractors": [
+        "Olives",
+        "Figs",
+        "Grapes"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-temple-tax-coin",
+      "reference": "Matthew 17:27",
+      "answer": "Fish",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/17.json",
+      "sourceVerses": {
+        "27": "“But so that we may not offend them, go to the sea, cast a hook, and take the first fish you catch. When you open its mouth, you will find a four-drachma coin. Take it and give it to them for My tax and yours.”"
+      },
+      "question": "In the mouth of which creature did Jesus tell Peter he would find a coin for the temple tax?",
+      "distractors": [
+        "Dove",
+        "Camel",
+        "Donkey"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-landowner-workplace",
+      "reference": "Matthew 20:1",
+      "answer": "A vineyard",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/20.json",
+      "sourceVerses": {
+        "1": "“For the kingdom of heaven is like a landowner who went out early in the morning to hire workers for his vineyard."
+      },
+      "question": "For what workplace did the landowner hire laborers early in the morning in Jesus' parable?",
+      "distractors": [
+        "A boat",
+        "A tower",
+        "A house"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-wise-virgins-count",
+      "reference": "Matthew 25:1-2",
+      "answer": "5",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/25.json",
+      "sourceVerses": {
+        "1": "“At that time the kingdom of heaven will be like ten virgins who took their lamps and went out to meet the bridegroom.",
+        "2": "Five of them were foolish, and five were wise."
+      },
+      "question": "How many of the ten virgins in Jesus' parable were wise?",
+      "distractors": [
+        "2",
+        "7",
+        "12"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-one-talent-hiding",
+      "reference": "Matthew 25:18",
+      "answer": "In the ground",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAT/25.json",
+      "sourceVerses": {
+        "18": "But the servant who had received the one talent went off, dug a hole in the ground, and hid his master’s money."
+      },
+      "question": "Where did the servant with one talent hide his master's money?",
+      "distractors": [
+        "In a boat",
+        "In a basket",
+        "In a jar"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-malchus-ear",
+      "reference": "John 18:10",
+      "answer": "Malchus",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/18.json",
+      "sourceVerses": {
+        "10": "Then Simon Peter drew his sword and struck the servant of the high priest, cutting off his right ear. The servant’s name was Malchus."
+      },
+      "question": "What was the name of the high priest's servant whose ear Peter cut off?",
+      "distractors": [
+        "Barabbas",
+        "Cornelius",
+        "Zacchaeus"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-widow-offering-coins",
+      "reference": "Mark 12:42",
+      "answer": "2",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MRK/12.json",
+      "sourceVerses": {
+        "42": "Then one poor widow came and put in two small copper coins, which amounted to a small fraction of a denarius."
+      },
+      "question": "How many small coins did the poor widow put into the temple treasury?",
+      "distractors": [
+        "5",
+        "7",
+        "10"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-paralytic-entry",
+      "reference": "Mark 2:4",
+      "answer": "The roof",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MRK/2.json",
+      "sourceVerses": {
+        "4": "Since they were unable to get to Jesus through the crowd, they uncovered the roof above Him, made an opening, and lowered the paralytic on his mat."
+      },
+      "question": "What part of the house did the men open to lower the paralyzed man to Jesus?",
+      "distractors": [
+        "The city gate",
+        "The garden",
+        "The well"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-jairus-daughter-age",
+      "reference": "Mark 5:42",
+      "answer": "12",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MRK/5.json",
+      "sourceVerses": {
+        "42": "Immediately the girl got up and began to walk around (she was twelve years old). And at once they were utterly astounded."
+      },
+      "question": "How old was Jairus' daughter when Jesus raised her and she began to walk?",
+      "distractors": [
+        "7",
+        "18",
+        "30"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-storm-sleeping-place",
+      "reference": "Mark 4:38",
+      "answer": "The stern",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MRK/4.json",
+      "sourceVerses": {
+        "38": "But Jesus was in the stern, sleeping on the cushion. So they woke Him and said, “Teacher, don’t You care that we are perishing?”"
+      },
+      "question": "In which part of the boat was Jesus sleeping on a cushion during the storm?",
+      "distractors": [
+        "The bow",
+        "The shore",
+        "The mountain"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-zacchaeus-occupation",
+      "reference": "Luke 19:2",
+      "answer": "Chief tax collector",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/LUK/19.json",
+      "sourceVerses": {
+        "2": "And there was a man named Zacchaeus, a chief tax collector, who was very wealthy."
+      },
+      "question": "What was Zacchaeus' occupation in Jericho?",
+      "distractors": [
+        "Fisherman",
+        "Shepherd",
+        "Carpenter"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "This asks his occupation, not the tree he climbed in the existing question."
+    },
+    {
+      "id": "v3-healed-lepers-return",
+      "reference": "Luke 17:15-18",
+      "answer": "1",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/LUK/17.json",
+      "sourceVerses": {
+        "15": "When one of them saw that he was healed, he came back, praising God in a loud voice.",
+        "16": "He fell facedown at Jesus’ feet in thanksgiving to Him—and he was a Samaritan.",
+        "17": "“Were not all ten cleansed?” Jesus asked. “Where then are the other nine?",
+        "18": "Was no one found except this foreigner to return and give glory to God?”"
+      },
+      "question": "How many of the ten healed lepers returned to give glory to God?",
+      "distractors": [
+        "2",
+        "5",
+        "10"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-prodigal-feeding-animals",
+      "reference": "Luke 15:15",
+      "answer": "Pigs",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/LUK/15.json",
+      "sourceVerses": {
+        "15": "So he went and hired himself out to a citizen of that country, who sent him into his fields to feed the pigs."
+      },
+      "question": "What animals did the younger son feed after spending his inheritance?",
+      "distractors": [
+        "Sheep",
+        "Doves",
+        "Eagles"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-lost-coin-original-count",
+      "reference": "Luke 15:8",
+      "answer": "10",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/LUK/15.json",
+      "sourceVerses": {
+        "8": "Or what woman who has ten silver coins and loses one of them does not light a lamp, sweep her house, and search carefully until she finds it?"
+      },
+      "question": "How many silver coins did the woman have before losing one in Jesus' parable?",
+      "distractors": [
+        "2",
+        "7",
+        "12"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-wounded-traveler-destination",
+      "reference": "Luke 10:30",
+      "answer": "Jericho",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/LUK/10.json",
+      "sourceVerses": {
+        "30": "Jesus took up this question and said, “A man was going down from Jerusalem to Jericho when he fell into the hands of robbers. They stripped him, beat him, and went away, leaving him half dead."
+      },
+      "question": "To which town was the traveler going from Jerusalem when robbers attacked him in Jesus' parable?",
+      "distractors": [
+        "Bethlehem",
+        "Cana",
+        "Nazareth"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-nicodemus-night-visit",
+      "reference": "John 3:1-2",
+      "answer": "Nicodemus",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/3.json",
+      "sourceVerses": {
+        "1": "Now there was a man of the Pharisees named Nicodemus, a leader of the Jews.",
+        "2": "He came to Jesus at night and said, “Rabbi, we know that You are a teacher who has come from God. For no one could perform the signs You are doing if God were not with him.”"
+      },
+      "question": "Which Pharisee came to Jesus at night?",
+      "distractors": [
+        "Lazarus",
+        "Zacchaeus",
+        "Cornelius"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-well-woman-husbands",
+      "reference": "John 4:18",
+      "answer": "5",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/4.json",
+      "sourceVerses": {
+        "18": "In fact, you have had five husbands, and the man you now have is not your husband. You have spoken truthfully.”"
+      },
+      "question": "How many husbands had the woman at the well previously had, according to Jesus?",
+      "distractors": [
+        "2",
+        "3",
+        "7"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-andrew-boy-meal",
+      "reference": "John 6:8-9",
+      "answer": "Andrew",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/6.json",
+      "sourceVerses": {
+        "8": "One of His disciples, Andrew, Simon Peter’s brother, said to Him,",
+        "9": "“Here is a boy with five barley loaves and two small fish. But what difference will these make among so many?”"
+      },
+      "question": "Which disciple told Jesus about the boy with five barley loaves and two fish?",
+      "distractors": [
+        "Peter",
+        "Thomas",
+        "John"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "This asks which disciple introduced the boy, not the bread/fish counts tested by existing questions."
+    },
+    {
+      "id": "v3-lazarus-tomb-days",
+      "reference": "John 11:17",
+      "answer": "4",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/11.json",
+      "sourceVerses": {
+        "17": "When Jesus arrived, He found that Lazarus had already spent four days in the tomb."
+      },
+      "question": "How many days had Lazarus been in the tomb when Jesus arrived?",
+      "distractors": [
+        "2",
+        "7",
+        "12"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "This asks the duration in the tomb, not the identity of the person Jesus raised tested by the existing Lazarus question."
+    },
+    {
+      "id": "v3-resurrection-fish-count",
+      "reference": "John 21:11",
+      "answer": "153",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/21.json",
+      "sourceVerses": {
+        "11": "So Simon Peter went aboard and dragged the net ashore. It was full of large fish, 153, but even with so many, the net was not torn."
+      },
+      "question": "How many large fish were in the net after the risen Jesus directed the disciples' catch?",
+      "distractors": [
+        "120",
+        "100",
+        "40"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-vine-disciples-image",
+      "reference": "John 15:5",
+      "answer": "Branches",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JHN/15.json",
+      "sourceVerses": {
+        "5": "I am the vine and you are the branches. The one who remains in Me, and I in him, will bear much fruit. For apart from Me you can do nothing."
+      },
+      "question": "When Jesus called Himself the vine, what did He call His disciples?",
+      "distractors": [
+        "Roots",
+        "Seeds",
+        "Flowers"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-ascension-messengers-clothes",
+      "reference": "Acts 1:10",
+      "answer": "White",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/1.json",
+      "sourceVerses": {
+        "10": "They were looking intently into the sky as He was going, when suddenly two men dressed in white stood beside them."
+      },
+      "question": "What color were the clothes of the two men who stood beside the disciples as Jesus ascended?",
+      "distractors": [
+        "Purple",
+        "Red",
+        "Black"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-pentecost-tongues-image",
+      "reference": "Acts 2:3",
+      "answer": "Fire",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/2.json",
+      "sourceVerses": {
+        "3": "They saw tongues like flames of fire that separated and came to rest on each of them."
+      },
+      "question": "What did the divided tongues that appeared at Pentecost resemble?",
+      "distractors": [
+        "Water",
+        "Oil",
+        "Honey"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-temple-gate-name",
+      "reference": "Acts 3:2",
+      "answer": "Beautiful Gate",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/3.json",
+      "sourceVerses": {
+        "2": "And a man who was lame from birth was being carried to the temple gate called Beautiful, where he was put every day to beg from those entering the temple courts."
+      },
+      "question": "What was the temple gate called where the man lame from birth was carried to beg?",
+      "distractors": [
+        "Golden Gate",
+        "Eastern Gate",
+        "Sheep Gate"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-barnabas-birthplace",
+      "reference": "Acts 4:36",
+      "answer": "Cyprus",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/4.json",
+      "sourceVerses": {
+        "36": "Joseph, a Levite from Cyprus, whom the apostles called Barnabas (meaning Son of Encouragement),"
+      },
+      "question": "From which island did Barnabas come?",
+      "distractors": [
+        "Crete",
+        "Malta",
+        "Patmos"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "Wording is deliberately from Cyprus, matching the cited text without inferring a place of birth."
+    },
+    {
+      "id": "v3-ananias-wife",
+      "reference": "Acts 5:1",
+      "answer": "Sapphira",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/5.json",
+      "sourceVerses": {
+        "1": "Now a man named Ananias, together with his wife Sapphira, also sold a piece of property."
+      },
+      "question": "Who was the wife of Ananias, the man who sold a piece of property?",
+      "distractors": [
+        "Priscilla",
+        "Lydia",
+        "Phoebe"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-seven-chosen-service",
+      "reference": "Acts 6:1-3",
+      "answer": "7",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/6.json",
+      "sourceVerses": {
+        "1": "In those days when the disciples were increasing in number, the Grecian Jews among them began to grumble against the Hebraic Jews because their widows were being overlooked in the daily distribution of food.",
+        "2": "So the Twelve summoned all the disciples and said, “It is unacceptable for us to neglect the word of God in order to wait on tables.",
+        "3": "Therefore, brothers, select from among you seven men confirmed to be full of the Spirit and wisdom. We will assign this responsibility to them"
+      },
+      "question": "How many men did the apostles ask the believers to choose to oversee the daily distribution?",
+      "distractors": [
+        "3",
+        "10",
+        "12"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-ethiopian-reading-prophet",
+      "reference": "Acts 8:30",
+      "answer": "Isaiah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/8.json",
+      "sourceVerses": {
+        "30": "So Philip ran up and heard the man reading Isaiah the prophet. “Do you understand what you are reading?” Philip asked."
+      },
+      "question": "Which prophet's writings was the Ethiopian official reading when Philip approached?",
+      "distractors": [
+        "Jeremiah",
+        "Daniel",
+        "Jonah"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-ethiopian-guide",
+      "reference": "Acts 8:35",
+      "answer": "Philip",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/8.json",
+      "sourceVerses": {
+        "35": "Then Philip began with this very Scripture and told him the good news about Jesus."
+      },
+      "question": "Who explained the good news about Jesus to the Ethiopian official in his chariot?",
+      "distractors": [
+        "Peter",
+        "Paul",
+        "Barnabas"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-saul-visitor-damascus",
+      "reference": "Acts 9:10-17",
+      "answer": "Ananias",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/9.json",
+      "sourceVerses": {
+        "10": "In Damascus there was a disciple named Ananias. The Lord spoke to him in a vision, “Ananias!” “Here I am, Lord,” he answered.",
+        "11": "“Get up!” the Lord told him. “Go to the house of Judas on Straight Street and ask for a man from Tarsus named Saul, for he is praying.",
+        "12": "In a vision he has seen a man named Ananias come and place his hands on him to restore his sight.”",
+        "13": "But Ananias answered, “Lord, many people have told me about this man and all the harm he has done to Your saints in Jerusalem.",
+        "14": "And now he is here with authority from the chief priests to arrest all who call on Your name.”",
+        "15": "“Go!” said the Lord. “This man is My chosen instrument to carry My name before the Gentiles and their kings, and before the people of Israel.",
+        "16": "I will show him how much he must suffer for My name.”",
+        "17": "So Ananias went to the house, and when he arrived, he placed his hands on Saul. “Brother Saul,” he said, “the Lord Jesus, who appeared to you on the road as you were coming here, has sent me so that you may see again and be filled with the Holy Spirit.”"
+      },
+      "question": "Which disciple in Damascus was sent to lay hands on Saul so that he could see again?",
+      "distractors": [
+        "Barnabas",
+        "Silas",
+        "Timothy"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-saul-escape-container",
+      "reference": "Acts 9:25",
+      "answer": "A basket",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/9.json",
+      "sourceVerses": {
+        "25": "One night, however, his disciples took him and lowered him in a basket through a window in the wall."
+      },
+      "question": "In what did Saul's disciples lower him through an opening in the city wall at night?",
+      "distractors": [
+        "A boat",
+        "A chariot",
+        "A jar"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-peter-joppa-host",
+      "reference": "Acts 9:43",
+      "answer": "Simon",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/9.json",
+      "sourceVerses": {
+        "43": "And Peter stayed for several days in Joppa with a tanner named Simon."
+      },
+      "question": "What was the name of the tanner with whom Peter stayed in Joppa?",
+      "distractors": [
+        "Cornelius",
+        "Zacchaeus",
+        "Lazarus"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-peter-vision-sheet",
+      "reference": "Acts 10:11",
+      "answer": "A large sheet",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/10.json",
+      "sourceVerses": {
+        "11": "He saw heaven open and something like a large sheet being let down to earth by its four corners."
+      },
+      "question": "What object did Peter see being lowered from heaven by its four corners in his vision?",
+      "distractors": [
+        "A boat",
+        "A ladder",
+        "A crown"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-first-called-christians",
+      "reference": "Acts 11:26",
+      "answer": "Antioch",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/11.json",
+      "sourceVerses": {
+        "26": "and when he found him, he brought him back to Antioch. So for a full year they met together with the church and taught large numbers of people. The disciples were first called Christians at Antioch."
+      },
+      "question": "In which city were the disciples first called Christians?",
+      "distractors": [
+        "Jerusalem",
+        "Damascus",
+        "Bethlehem"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-rhoda-door",
+      "reference": "Acts 12:13-14",
+      "answer": "Rhoda",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/12.json",
+      "sourceVerses": {
+        "13": "He knocked at the outer gate, and a servant girl named Rhoda came to answer it.",
+        "14": "When she recognized Peter’s voice, she was so overjoyed that she forgot to open the gate, but ran inside and announced, “Peter is standing at the gate!”"
+      },
+      "question": "Which servant girl recognized Peter's voice at the gate after his release from prison?",
+      "distractors": [
+        "Lydia",
+        "Priscilla",
+        "Dorcas"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-peter-prison-visitor",
+      "reference": "Acts 12:7",
+      "answer": "An angel",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/12.json",
+      "sourceVerses": {
+        "7": "Suddenly an angel of the Lord appeared and a light shone in the cell. He tapped Peter on the side and woke him up, saying, “Get up quickly.” And the chains fell off his wrists."
+      },
+      "question": "Who struck Peter on the side to wake him when light shone in his prison cell?",
+      "distractors": [
+        "A soldier",
+        "A priest",
+        "A merchant"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-john-mark-departure",
+      "reference": "Acts 13:13",
+      "answer": "John Mark",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/13.json",
+      "sourceVerses": {
+        "13": "After setting sail from Paphos, Paul and his companions came to Perga in Pamphylia, where John left them to return to Jerusalem."
+      },
+      "supportingReference": "Acts 12:12",
+      "supportingChapterUrl": "https://bible.helloao.org/api/BSB/ACT/12.json",
+      "supportingVerse": "And when he had realized this, he went to the house of Mary the mother of John, also called Mark, where many people had gathered together and were praying.",
+      "question": "Who left Paul and his companions at Perga and returned to Jerusalem?",
+      "distractors": [
+        "Silas",
+        "Timothy",
+        "Titus"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "Acts 13 calls him John; Acts 12:12 explicitly supplies his other name, Mark."
+    },
+    {
+      "id": "v3-paul-vision-region",
+      "reference": "Acts 16:9",
+      "answer": "Macedonia",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/16.json",
+      "sourceVerses": {
+        "9": "During the night, Paul had a vision of a man of Macedonia standing and pleading with him, “Come over to Macedonia and help us.”"
+      },
+      "question": "From which region was the man who appeared in Paul's vision asking for help?",
+      "distractors": [
+        "Egypt",
+        "Israel",
+        "Crete"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-berean-scripture-search",
+      "reference": "Acts 17:10-11",
+      "answer": "Berea",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/17.json",
+      "sourceVerses": {
+        "10": "As soon as night had fallen, the brothers sent Paul and Silas away to Berea. On arriving there, they went into the Jewish synagogue.",
+        "11": "Now the Bereans were more noble-minded than the Thessalonians, for they received the message with great eagerness and examined the Scriptures every day to see if these teachings were true."
+      },
+      "question": "In which city did people examine the Scriptures daily to test what Paul taught?",
+      "distractors": [
+        "Jericho",
+        "Bethlehem",
+        "Cana"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-paul-shared-trade",
+      "reference": "Acts 18:2-3",
+      "answer": "Tentmaking",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/18.json",
+      "sourceVerses": {
+        "2": "There he found a Jew named Aquila, a native of Pontus, who had recently come from Italy with his wife Priscilla because Claudius had ordered all the Jews to leave Rome. Paul went to visit them,",
+        "3": "and he stayed and worked with them because they were tentmakers by trade, just as he was."
+      },
+      "question": "What trade did Paul share with Aquila and Priscilla?",
+      "distractors": [
+        "Fishing",
+        "Carpentry",
+        "Farming"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-apollos-instruction",
+      "reference": "Acts 18:24-26",
+      "answer": "Apollos",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/18.json",
+      "sourceVerses": {
+        "24": "Meanwhile a Jew named Apollos, a native of Alexandria, came to Ephesus. He was an eloquent man, well versed in the Scriptures.",
+        "25": "He had been instructed in the way of the Lord and was fervent in spirit. He spoke and taught accurately about Jesus, though he knew only the baptism of John.",
+        "26": "And he began to speak boldly in the synagogue. When Priscilla and Aquila heard him, they took him aside and explained to him the way of God more accurately."
+      },
+      "question": "To whom did Priscilla and Aquila explain the way of God more accurately?",
+      "distractors": [
+        "Timothy",
+        "Titus",
+        "Silas"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-demetrius-silversmith",
+      "reference": "Acts 19:24",
+      "answer": "Demetrius",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/19.json",
+      "sourceVerses": {
+        "24": "It began with a silversmith named Demetrius who made silver shrines of Artemis, bringing much business to the craftsmen."
+      },
+      "question": "Which silversmith made silver shrines of Artemis in Ephesus?",
+      "distractors": [
+        "Cornelius",
+        "Zacchaeus",
+        "Nicodemus"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-philip-daughters",
+      "reference": "Acts 21:8-9",
+      "answer": "4",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/21.json",
+      "sourceVerses": {
+        "8": "Leaving the next day, we went on to Caesarea and stayed at the home of Philip the evangelist, who was one of the Seven.",
+        "9": "He had four unmarried daughters who prophesied."
+      },
+      "question": "How many unmarried daughters who prophesied did Philip the evangelist have?",
+      "distractors": [
+        "2",
+        "7",
+        "12"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-paul-citizenship-birth",
+      "reference": "Acts 22:27-28",
+      "answer": "Roman",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/22.json",
+      "sourceVerses": {
+        "27": "The commander went to Paul and asked, “Tell me, are you a Roman citizen?” “Yes,” he answered.",
+        "28": "“I paid a high price for my citizenship,” said the commander. “But I was born a citizen,” Paul replied."
+      },
+      "question": "What citizenship did Paul say he had by birth?",
+      "distractors": [
+        "Greek",
+        "Egyptian",
+        "Persian"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-shipwreck-island",
+      "reference": "Acts 28:1",
+      "answer": "Malta",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ACT/28.json",
+      "sourceVerses": {
+        "1": "Once we were safely ashore, we learned that the island was called Malta."
+      },
+      "question": "On which island did Paul and the others discover they had landed after their shipwreck?",
+      "distractors": [
+        "Cyprus",
+        "Crete",
+        "Patmos"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-phoebe-cenchreae",
+      "reference": "Romans 16:1",
+      "answer": "Phoebe",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ROM/16.json",
+      "sourceVerses": {
+        "1": "I commend to you our sister Phoebe, a servant of the church in Cenchrea."
+      },
+      "question": "Which woman did Paul commend as a servant of the church in Cenchreae?",
+      "distractors": [
+        "Lydia",
+        "Priscilla",
+        "Dorcas"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-greatest-of-three",
+      "reference": "1 Corinthians 13:13",
+      "answer": "Love",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1CO/13.json",
+      "sourceVerses": {
+        "13": "And now these three remain: faith, hope, and love; but the greatest of these is love."
+      },
+      "question": "Which did Paul call the greatest of faith, hope, and love?",
+      "distractors": [
+        "Faith",
+        "Hope",
+        "Knowledge"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "This asks which virtue is greatest in 1 Corinthians 13, a different fact from the existing fruit-of-the-Spirit question."
+    },
+    {
+      "id": "v3-christ-body-members",
+      "reference": "1 Corinthians 12:27",
+      "answer": "Body",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1CO/12.json",
+      "sourceVerses": {
+        "27": "Now you are the body of Christ, and each of you is a member of it."
+      },
+      "question": "What did Paul say the believers were, with each person being a member of it, in relation to Christ?",
+      "distractors": [
+        "Tower",
+        "Boat",
+        "Field"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-armor-shield",
+      "reference": "Ephesians 6:16",
+      "answer": "Faith",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EPH/6.json",
+      "sourceVerses": {
+        "16": "In addition to all this, take up the shield of faith, with which you can extinguish all the flaming arrows of the evil one."
+      },
+      "question": "What does the shield represent in Paul's description of God's armor?",
+      "distractors": [
+        "Hope",
+        "Knowledge",
+        "Patience"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-armor-helmet",
+      "reference": "Ephesians 6:17",
+      "answer": "Salvation",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EPH/6.json",
+      "sourceVerses": {
+        "17": "And take the helmet of salvation and the sword of the Spirit, which is the word of God."
+      },
+      "question": "What does the helmet represent in Paul's description of God's armor?",
+      "distractors": [
+        "Wealth",
+        "Fame",
+        "Power"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-philippians-gift-messenger",
+      "reference": "Philippians 4:18",
+      "answer": "Epaphroditus",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PHP/4.json",
+      "sourceVerses": {
+        "18": "I have all I need and more, now that I have received your gifts from Epaphroditus. They are a fragrant offering, an acceptable sacrifice, well-pleasing to God."
+      },
+      "question": "Who delivered the Philippians' gifts to Paul?",
+      "distractors": [
+        "Titus",
+        "Silas",
+        "Apollos"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-beloved-physician",
+      "reference": "Colossians 4:14",
+      "answer": "Luke",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/COL/4.json",
+      "sourceVerses": {
+        "14": "Luke, the beloved physician, and Demas send you greetings."
+      },
+      "question": "Whom did Paul call the beloved physician?",
+      "distractors": [
+        "Titus",
+        "Silas",
+        "Timothy"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-timothy-grandmother",
+      "reference": "2 Timothy 1:5",
+      "answer": "Lois",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2TI/1.json",
+      "sourceVerses": {
+        "5": "I am reminded of your sincere faith, which first dwelt in your grandmother Lois and your mother Eunice, and I am convinced is in you as well."
+      },
+      "question": "What was the name of Timothy's grandmother, whose sincere faith Paul remembered?",
+      "distractors": [
+        "Lydia",
+        "Phoebe",
+        "Priscilla"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-philemon-appeal-person",
+      "reference": "Philemon 1:10",
+      "answer": "Onesimus",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PHM/1.json",
+      "sourceVerses": {
+        "10": "I appeal to you for my child Onesimus, whose father I became while I was in chains."
+      },
+      "question": "For whom did Paul appeal to Philemon, calling him his child while in chains?",
+      "distractors": [
+        "Apollos",
+        "Silas",
+        "Titus"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-james-tongue-fire",
+      "reference": "James 3:6",
+      "answer": "Tongue",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JAS/3.json",
+      "sourceVerses": {
+        "6": "The tongue also is a fire, a world of wickedness among the parts of the body. It pollutes the whole person, sets the course of his life on fire, and is itself set on fire by hell."
+      },
+      "question": "Which part of the body does James compare to fire?",
+      "distractors": [
+        "Eye",
+        "Hand",
+        "Foot"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "corroboratingUrl": "https://biblehub.com/james/3-6.htm"
+    },
+    {
+      "id": "v3-throne-elders-count",
+      "reference": "Revelation 4:4",
+      "answer": "24",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/REV/4.json",
+      "sourceVerses": {
+        "4": "Surrounding the throne were twenty-four other thrones, and on these thrones sat twenty-four elders dressed in white, with golden crowns on their heads."
+      },
+      "question": "How many elders did John see seated on thrones around the central throne?",
+      "distractors": [
+        "7",
+        "12",
+        "40"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-lion-tribe",
+      "reference": "Revelation 5:5",
+      "answer": "Judah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/REV/5.json",
+      "sourceVerses": {
+        "5": "Then one of the elders said to me, “Do not weep! Behold, the Lion of the tribe of Judah, the Root of David, has triumphed to open the scroll and its seven seals.”"
+      },
+      "question": "From which tribe is the Lion who is said to have conquered in John's vision?",
+      "distractors": [
+        "Levi",
+        "Benjamin",
+        "Reuben"
+      ],
+      "answerAndDistractorsReviewed": true
+    },
+    {
+      "id": "v3-city-gates-material",
+      "reference": "Revelation 21:21",
+      "answer": "Pearls",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/REV/21.json",
+      "sourceVerses": {
+        "21": "And the twelve gates were twelve pearls, with each gate consisting of a single pearl. The main street of the city was pure gold, as clear as glass."
+      },
+      "question": "What were the twelve gates of the new Jerusalem made from?",
+      "distractors": [
+        "Gold",
+        "Silver",
+        "Bronze"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "Gold describes the street in the same verse, whereas the question specifically asks about the gates."
+    },
+    {
+      "id": "v3-tree-leaves-healing",
+      "reference": "Revelation 22:2",
+      "answer": "Leaves",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/REV/22.json",
+      "sourceVerses": {
+        "2": "down the middle of the main street of the city. On either side of the river stood a tree of life, bearing twelve kinds of fruit and yielding a fresh crop for each month. And the leaves of the tree are for the healing of the nations."
+      },
+      "question": "Which part of the tree of life is for the healing of the nations in John's vision?",
+      "distractors": [
+        "Branches",
+        "Roots",
+        "Seeds"
+      ],
+      "answerAndDistractorsReviewed": true,
+      "reviewNote": "Asks about the leaves used for healing nations, avoiding differences across editions in the description of twelve kinds or crops of fruit."
+    }
+  ]
+}

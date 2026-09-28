@@ -1,0 +1,670 @@
+{
+  "checkedOn": "2026-09-28",
+  "scope": "70 original story questions from Genesis through 2 Kings. All seven language prompts and labels authored for Hope Cards.",
+  "verificationMethod": "Retrieved 63 distinct public BSB chapter JSON documents; read the 70 cited verse extracts and checked answers and distractors. Scripture is the factual source, not a third-party quiz bank.",
+  "duplicateReview": "Compared the tested facts against all 130 pre-existing story questions and all 70 questions in this batch; no rephrased or reversed versions of an existing tested fact were retained. Coordinated parallel-account overlap with the later-OT batch: replaced Hilkiah finding the Law book and Hezekiah receiving fifteen extra years with distinct questions about Josiah tearing his clothes and the shadow moving backward ten steps.",
+  "localizationReview": "Reviewed each prompt and answer choice for the same meaning across en, ml, de, fr, it, es, fil. Reused base-bank and shared answer labels where available. This is an authored multilingual review, not a claim of independent native-speaker review.",
+  "localeReferenceOverrides": {
+    "v3-egypt-frogs": {
+      "de": "Exodus 8:2"
+    },
+    "v3-aaron-staff-fruit": {
+      "de": "Numbers 17:23"
+    },
+    "v3-david-cave-proof": {
+      "de": "1 Samuel 24:5"
+    }
+  },
+  "referenceNumberingVerification": {
+    "url": "https://raw.githubusercontent.com/crosswire/jsword/master/src/main/resources/org/crosswire/jsword/versification/Luther.properties",
+    "sha256": "5a07e22efdf46bc1dfa4a1ff644cc6d11d5b7799d5cd9617196f38388251e1c3",
+    "mappings": [
+      "Exod.7.26-Exod.8.28=Exod.8.1-Exod.8.32",
+      "Num.17.1-Num.17.28=Num.16.36-Num.17.13",
+      "1Sam.24.1-1Sam.24.23=1Sam.23.29-1Sam.24.22"
+    ],
+    "interpretation": "The left side uses printed Luther numbering; the right side uses English/KJV numbering. These are the only affected references in this batch."
+  },
+  "storyQuestions": [
+    {
+      "id": "v3-creation-light",
+      "reference": "Genesis 1:3",
+      "answer": "Light",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/1.json",
+      "chapterSha256": "8a49118a8f1531f142deb314c0a57ae4eb1db917d2e4d573607e7a90a2322639",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What appeared when God first spoke in the creation account?"
+    },
+    {
+      "id": "v3-creation-rest-day",
+      "reference": "Genesis 2:2-3",
+      "answer": "7",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/2.json",
+      "chapterSha256": "a2429ee2fc6096839d9c12969d39e59c30cf1f444620cdf1e3347c62101d80cf",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "On which day did God rest from His work of creation?"
+    },
+    {
+      "id": "v3-eden-river-branches",
+      "reference": "Genesis 2:10",
+      "answer": "4",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/2.json",
+      "chapterSha256": "a2429ee2fc6096839d9c12969d39e59c30cf1f444620cdf1e3347c62101d80cf",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Into how many rivers did the river flowing out of Eden divide?"
+    },
+    {
+      "id": "v3-cain-work",
+      "reference": "Genesis 4:2",
+      "answer": "Farmer",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/4.json",
+      "chapterSha256": "a8877ca7d10f95b827f4c87510d729174e0dd4f9a40278a4dc9625b4bac537d1",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What work did Cain do?"
+    },
+    {
+      "id": "v3-ark-decks",
+      "reference": "Genesis 6:16",
+      "answer": "3",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/6.json",
+      "chapterSha256": "bd5e18de2fdd73ccf4f75a79116a47b89d4dca6eea46bf717dce98d7bd70007b",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "How many levels did God tell Noah to build in the ark?"
+    },
+    {
+      "id": "v3-ark-resting-mountains",
+      "reference": "Genesis 8:4",
+      "answer": "Ararat",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/8.json",
+      "chapterSha256": "11ce778689317d1da4f9f157c1c660bdc12b328b1631ff0fc0685582a0947eca",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "On which mountains did the ark come to rest?"
+    },
+    {
+      "id": "v3-noah-planted",
+      "reference": "Genesis 9:20",
+      "answer": "Vineyard",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/9.json",
+      "chapterSha256": "f9ddce547a25d5264c153079968d31b8a12744fab7db141efa3b82370b41f0f4",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Noah plant after the flood?"
+    },
+    {
+      "id": "v3-abram-nephew",
+      "reference": "Genesis 12:5",
+      "answer": "Lot",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/12.json",
+      "chapterSha256": "e87b96e1a41df3b4173a2fc49b26a5cb6778580f1e0a5981ed070ac36b3f5000",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which nephew traveled with Abram when he left Haran?"
+    },
+    {
+      "id": "v3-melchizedek-city",
+      "reference": "Genesis 14:18",
+      "answer": "Salem",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/14.json",
+      "chapterSha256": "2e97a3c8756a635ebe607a7d7bff96385054076b1ac64518908716568f1f4c44",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Of which city was Melchizedek king?"
+    },
+    {
+      "id": "v3-ishmael-mother",
+      "reference": "Genesis 16:15",
+      "answer": "Hagar",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/16.json",
+      "chapterSha256": "3bf6a2dd929621ea35101db73156b243fcf70a069be44abf21b75ef50b232928",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Who was Ishmael’s mother?"
+    },
+    {
+      "id": "v3-abraham-age-isaac",
+      "reference": "Genesis 21:5",
+      "answer": "100",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/21.json",
+      "chapterSha256": "bf45bd1b15deaef43afb1bf9eef9c0b559dcdde2da3bed83f230fefaa5fbf61f",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "How old was Abraham when Isaac was born?"
+    },
+    {
+      "id": "v3-isaac-substitute",
+      "reference": "Genesis 22:13",
+      "answer": "Ram",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/22.json",
+      "chapterSha256": "4b3efcd4f0f310a19e123326ecd1208cfc4b0166391898def51d035e00034382",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which animal did Abraham offer instead of Isaac?"
+    },
+    {
+      "id": "v3-rebekah-brother",
+      "reference": "Genesis 24:29",
+      "answer": "Laban",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/24.json",
+      "chapterSha256": "143f95eae98a45d9fc44b10453db9c63c1cffa982389ee93250cad8df16813cf",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What was the name of Rebekah’s brother?"
+    },
+    {
+      "id": "v3-esau-stew",
+      "reference": "Genesis 25:34",
+      "answer": "Lentils",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/25.json",
+      "chapterSha256": "7082c638b7c680d33df638e92970f04a9978c6becc105817319b9fbd9dac48e1",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What was the stew Jacob gave Esau in exchange for his birthright made from?"
+    },
+    {
+      "id": "v3-jacob-first-wife",
+      "reference": "Genesis 29:23-25",
+      "answer": "Leah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/29.json",
+      "chapterSha256": "425c726dbdd4f7fdff3eb7674ac4e36906b8ca7eeb50527a4a34de8e3e5e72f8",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Whom did Laban give to Jacob as his first wife?"
+    },
+    {
+      "id": "v3-rachel-service-years",
+      "reference": "Genesis 29:18-20",
+      "answer": "7",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/29.json",
+      "chapterSha256": "425c726dbdd4f7fdff3eb7674ac4e36906b8ca7eeb50527a4a34de8e3e5e72f8",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "For how many years did Jacob first agree to serve Laban in order to marry Rachel?"
+    },
+    {
+      "id": "v3-joseph-field-dream",
+      "reference": "Genesis 37:7",
+      "answer": "Grain sheaves",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/37.json",
+      "chapterSha256": "df04f2203c6740a0a397b30331830bdb409885ed87e8c0d3284bffc8f66e12a4",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "In Joseph’s dream about a field, what bowed down to his sheaf?"
+    },
+    {
+      "id": "v3-reuben-rescue-plan",
+      "reference": "Genesis 37:21-22",
+      "answer": "Reuben",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/37.json",
+      "chapterSha256": "df04f2203c6740a0a397b30331830bdb409885ed87e8c0d3284bffc8f66e12a4",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which brother planned to rescue Joseph from the pit and return him to their father?"
+    },
+    {
+      "id": "v3-judah-sale-proposal",
+      "reference": "Genesis 37:26-27",
+      "answer": "Judah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/37.json",
+      "chapterSha256": "df04f2203c6740a0a397b30331830bdb409885ed87e8c0d3284bffc8f66e12a4",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which brother suggested selling Joseph to the Ishmaelites?"
+    },
+    {
+      "id": "v3-joseph-cup-sack",
+      "reference": "Genesis 44:12",
+      "answer": "Benjamin",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/GEN/44.json",
+      "chapterSha256": "471ee3049eba2f3df49fd143d21efd39c740da6363848f5c647f3a3471228fed",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "In whose sack was Joseph’s silver cup found?"
+    },
+    {
+      "id": "v3-moses-son-gershom",
+      "reference": "Exodus 2:22",
+      "answer": "Gershom",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/2.json",
+      "chapterSha256": "cf4a6d976228944d027b00ff2b603befdae349cec3dd9702656dd4fcc2d55db6",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Moses name the son born to him in Midian, recalling that he was a foreigner there?"
+    },
+    {
+      "id": "v3-moses-holy-ground",
+      "reference": "Exodus 3:5",
+      "answer": "Sandals",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/3.json",
+      "chapterSha256": "e465a6931a57368130c08f3649b944c97e6421fd7a5070b44c7a1e9fcd067275",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did God tell Moses to remove because he was standing on holy ground?"
+    },
+    {
+      "id": "v3-moses-staff-sign",
+      "reference": "Exodus 4:3",
+      "answer": "Snake",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/4.json",
+      "chapterSha256": "8be9bfdd3c5f9997af57021404926e539341490cb3cb28493e91ed23ecd42150",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Moses’ staff become when he threw it on the ground at God’s command?"
+    },
+    {
+      "id": "v3-egypt-frogs",
+      "reference": "Exodus 8:6",
+      "answer": "Frogs",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/8.json",
+      "chapterSha256": "aab28ac69a416c21a2b3ac01c54b2e62d1ec16ba447d7743f5406e17e7c05d8d",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What creatures covered Egypt when Aaron stretched his hand over its waters?"
+    },
+    {
+      "id": "v3-egypt-darkness-days",
+      "reference": "Exodus 10:22",
+      "answer": "3",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/10.json",
+      "chapterSha256": "a31a8612763e5c13c20c69d84c44da81665bbbc0c165e050fe8d48ec9a1fbe55",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "For how many days did thick darkness cover Egypt during the plague?"
+    },
+    {
+      "id": "v3-wilderness-night-guide",
+      "reference": "Exodus 13:21",
+      "answer": "Pillar of fire",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/13.json",
+      "chapterSha256": "f2d7cc555499a2d1f7fe58763a2c49f41439b867a2667061080187586d6d93ca",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What gave the Israelites light as the Lord led them at night in the wilderness?"
+    },
+    {
+      "id": "v3-moses-supported-hands",
+      "reference": "Exodus 17:12",
+      "answer": "Aaron and Hur",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/17.json",
+      "chapterSha256": "3310517dc8d4013db51655bbeff2caf6e95c26ec3b6e3fe9f47584a82ffd1344",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Who supported Moses’ hands during the battle with Amalek?"
+    },
+    {
+      "id": "v3-moses-jethro",
+      "reference": "Exodus 18:1",
+      "answer": "Jethro",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/18.json",
+      "chapterSha256": "29a3b2aa3ee17d5a4af77183bc0f7947dd2a2224ef37d89fdd9baded975a073d",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which priest of Midian was Moses’ father-in-law?"
+    },
+    {
+      "id": "v3-tabernacle-craftsman",
+      "reference": "Exodus 31:2-5",
+      "answer": "Bezalel",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/31.json",
+      "chapterSha256": "4a3f723dfa30cc30d3bef60b0087a8ab1a25fe30cb6107d788b15025b388e1a8",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Whom did God choose by name and fill with skill to craft gold, silver, bronze, stone, and wood for the tabernacle?"
+    },
+    {
+      "id": "v3-manna-sixth-day",
+      "reference": "Exodus 16:22",
+      "answer": "2",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EXO/16.json",
+      "chapterSha256": "3a1206e7ba2a857c35a68d38c1160477d2c24bcd8b2258801893aff096b4d0a0",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "How many times the usual amount of food did the Israelites gather on the sixth day?"
+    },
+    {
+      "id": "v3-trumpets-metal",
+      "reference": "Numbers 10:2",
+      "answer": "Silver",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NUM/10.json",
+      "chapterSha256": "45fc30cdd4f0806634d2496cc0d3a581fd080ad3d974a98a4f9625dd941d8db1",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "From which metal did God tell Moses to make two trumpets for assembling the people?"
+    },
+    {
+      "id": "v3-aaron-staff-fruit",
+      "reference": "Numbers 17:8",
+      "answer": "Almonds",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NUM/17.json",
+      "chapterSha256": "825e768c48e46909cd454b818b8529f64053709f375c03d99b0e130ab6752189",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What fruit did Aaron’s staff produce when it budded?"
+    },
+    {
+      "id": "v3-bronze-serpent",
+      "reference": "Numbers 21:9",
+      "answer": "Bronze serpent",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NUM/21.json",
+      "chapterSha256": "f8b65f48416115f5929eb86c9b2b7fa626eb05a9a7a9a20aa4dbb31c6ac7ea64",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Moses place on a pole so that people bitten by snakes could look at it and live?"
+    },
+    {
+      "id": "v3-balaam-summoned",
+      "reference": "Numbers 22:4-5",
+      "answer": "Balak",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NUM/22.json",
+      "chapterSha256": "f08ff979fae40890e900e4c6bd89ce57a8868c102db9f118e553bd7f0f0dc6ca",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which king of Moab sent messengers to summon Balaam?"
+    },
+    {
+      "id": "v3-moses-last-mountain",
+      "reference": "Deuteronomy 34:1",
+      "answer": "Nebo",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/DEU/34.json",
+      "chapterSha256": "720543eaab817633b15fa3f57c8cd97d178d02520d995b0bc63548f4852959d3",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which mountain did Moses climb to view the promised land before his death?"
+    },
+    {
+      "id": "v3-rahab-cord-color",
+      "reference": "Joshua 2:18",
+      "answer": "Scarlet",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOS/2.json",
+      "chapterSha256": "2abfaaf3883fcac4d680bcbdb4df7b7361e6147a1c743af53f4283fc02c08bb8",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What color was the cord Rahab was told to tie in her window?"
+    },
+    {
+      "id": "v3-jordan-memorial-stones",
+      "reference": "Joshua 4:8",
+      "answer": "12",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOS/4.json",
+      "chapterSha256": "8540ee2feb4e422ef9567eb7f0f5f8d993b5bb2495428e777b6ee4c63de6b0bb",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "How many stones did the Israelites take from the Jordan to set up at their camp as a memorial?"
+    },
+    {
+      "id": "v3-ai-strategy",
+      "reference": "Joshua 8:2",
+      "answer": "Ambush",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOS/8.json",
+      "chapterSha256": "1f1afd07c936e1cb8ebaf3320c0fee2e748f7fbe08f44bb2b02210fe0c5ea1dc",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What military tactic did God tell Joshua to prepare behind the city of Ai?"
+    },
+    {
+      "id": "v3-sun-gibeon",
+      "reference": "Joshua 10:12-13",
+      "answer": "Gibeon",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOS/10.json",
+      "chapterSha256": "80b805b3c6e12e680dd3d26436435c39a535790e722eb0eba56c8d66df914412",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Over which place did Joshua ask the sun to stand still?"
+    },
+    {
+      "id": "v3-caleb-inheritance",
+      "reference": "Joshua 14:13-14",
+      "answer": "Hebron",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOS/14.json",
+      "chapterSha256": "55abff5c5db2b682e80acad61e5d5257f2e1ce76674b57fcc8dcaedcf3ff1e5a",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which city did Joshua give Caleb as his inheritance?"
+    },
+    {
+      "id": "v3-deborah-summoned-barak",
+      "reference": "Judges 4:6",
+      "answer": "Barak",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JDG/4.json",
+      "chapterSha256": "426b1ebc1088e9845be4db75d20f64ac2c547ce211ca9032511afe2d594c8fd0",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Whom did Deborah summon to lead troops to Mount Tabor?"
+    },
+    {
+      "id": "v3-jael-sisera",
+      "reference": "Judges 4:21",
+      "answer": "Jael",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JDG/4.json",
+      "chapterSha256": "426b1ebc1088e9845be4db75d20f64ac2c547ce211ca9032511afe2d594c8fd0",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which woman killed Sisera with a tent peg?"
+    },
+    {
+      "id": "v3-gideon-fleece",
+      "reference": "Judges 6:37",
+      "answer": "Wool fleece",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JDG/6.json",
+      "chapterSha256": "97dd5e1805c23948bc8f82b28a5f4acff48e1eb04ea3bd59d1155e15b279be60",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Gideon place on the threshing floor when he asked for a sign involving dew?"
+    },
+    {
+      "id": "v3-samson-honey",
+      "reference": "Judges 14:8-9",
+      "answer": "Honey",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JDG/14.json",
+      "chapterSha256": "9208b329277c8f40cccaaeeffffae4fc1014bed2e578f1dcbe348ecfceb3ea8c",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Samson take from the lion’s carcass and eat?"
+    },
+    {
+      "id": "v3-delilah-betrayal",
+      "reference": "Judges 16:18",
+      "answer": "Delilah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JDG/16.json",
+      "chapterSha256": "60cb101f7d80356213262740005d3eb36009c8fa11d9e9635baf21422c56f9a7",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which woman told the Philistine rulers that Samson had revealed his whole secret to her?"
+    },
+    {
+      "id": "v3-ruth-homeland",
+      "reference": "Ruth 1:4",
+      "answer": "Moab",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/RUT/1.json",
+      "chapterSha256": "8e56f2674999b519d1595850c78217feb21ff0cab30357ba75d928a3d59ac0d9",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "From which country did Ruth come?"
+    },
+    {
+      "id": "v3-naomi-husband",
+      "reference": "Ruth 1:2-3",
+      "answer": "Elimelech",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/RUT/1.json",
+      "chapterSha256": "8e56f2674999b519d1595850c78217feb21ff0cab30357ba75d928a3d59ac0d9",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What was the name of Naomi’s husband?"
+    },
+    {
+      "id": "v3-ruth-boaz-son",
+      "reference": "Ruth 4:17",
+      "answer": "Obed",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/RUT/4.json",
+      "chapterSha256": "3e2bc005a89bfcc021367193051368643f095af8e6c3e8a7c185ba7332ac837d",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What was the name of the son born to Ruth and Boaz?"
+    },
+    {
+      "id": "v3-hannah-yearly-gift",
+      "reference": "1 Samuel 2:19",
+      "answer": "A small robe",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/2.json",
+      "chapterSha256": "9b3a94022b97bb5274f4922066a694abb4ac3cd2ea7850f52b63d81164786026",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Hannah make and bring Samuel each year?"
+    },
+    {
+      "id": "v3-eli-sons",
+      "reference": "1 Samuel 2:34",
+      "answer": "Hophni and Phinehas",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/2.json",
+      "chapterSha256": "9b3a94022b97bb5274f4922066a694abb4ac3cd2ea7850f52b63d81164786026",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What were the names of Eli’s two sons?"
+    },
+    {
+      "id": "v3-ark-dagon",
+      "reference": "1 Samuel 5:2",
+      "answer": "Dagon",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/5.json",
+      "chapterSha256": "2f889b60480737cb6660f2cf485f604cf74a397d462bf9c3ec01778988fea7a7",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Beside which idol did the Philistines place the captured ark of God?"
+    },
+    {
+      "id": "v3-ebenezer-stone",
+      "reference": "1 Samuel 7:12",
+      "answer": "Samuel",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/7.json",
+      "chapterSha256": "d4c94d6f7f9b40cc2463f51aa25efba3014c8b8a3137f116112576bbad179212",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Who set up a stone and named it Ebenezer to remember the Lord’s help?"
+    },
+    {
+      "id": "v3-saul-lost-animals",
+      "reference": "1 Samuel 9:3",
+      "answer": "Donkeys",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/9.json",
+      "chapterSha256": "220930e8764c80c5ecf13e5da876c13446b5d41e5c24b5ed165fd4ee91397554",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What lost animals was Saul sent to find before he met Samuel?"
+    },
+    {
+      "id": "v3-saul-hiding",
+      "reference": "1 Samuel 10:22",
+      "answer": "Among the baggage",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/10.json",
+      "chapterSha256": "c096e8605d2f4e58c9df7b203bea46a0ec390e330be4899b23b2dcbec86aa755",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Where was Saul hiding when the people searched for him after he was chosen by lot?"
+    },
+    {
+      "id": "v3-david-instrument",
+      "reference": "1 Samuel 16:23",
+      "answer": "Harp",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/16.json",
+      "chapterSha256": "297189ad2640558f68cc48bf98dabf35d587516928348d1e92d03359079a0591",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which instrument did David play to bring Saul relief?"
+    },
+    {
+      "id": "v3-david-michal",
+      "reference": "1 Samuel 18:27",
+      "answer": "Michal",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/18.json",
+      "chapterSha256": "7f515002d54cb51b5095800051c580966136b72c9519c9392dc3a64450e33ed4",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which daughter of Saul became David’s wife?"
+    },
+    {
+      "id": "v3-nabal-wife",
+      "reference": "1 Samuel 25:3",
+      "answer": "Abigail",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/25.json",
+      "chapterSha256": "fa9d15e9c8c67c3f2f20bbcba8ba67b94761697e281a1e1a617a9c522cc8cd34",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Who was Nabal’s wise wife?"
+    },
+    {
+      "id": "v3-david-cave-proof",
+      "reference": "1 Samuel 24:4",
+      "answer": "Corner of his robe",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1SA/24.json",
+      "chapterSha256": "0eb91c15048680b88777eeb8d9f7dd044c412c7746a32ab0aee6a3f0d98be4ce",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did David secretly cut off while Saul was in the cave?"
+    },
+    {
+      "id": "v3-jonathan-son",
+      "reference": "2 Samuel 9:6",
+      "answer": "Mephibosheth",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2SA/9.json",
+      "chapterSha256": "37559207ea122ea81d9f25471d7a0ded74027896da6cb15be8f9a9d91f27d927",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which son of Jonathan came before David and bowed down?"
+    },
+    {
+      "id": "v3-nathan-confronts-david",
+      "reference": "2 Samuel 12:7",
+      "answer": "Nathan",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2SA/12.json",
+      "chapterSha256": "189b213f500d17b4c444fd0ea835bbeff024d6fa648693c89fcc72b7543cf862",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which prophet told David, “You are the man,” after telling a story about a stolen lamb?"
+    },
+    {
+      "id": "v3-david-age-king",
+      "reference": "2 Samuel 5:4",
+      "answer": "30",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2SA/5.json",
+      "chapterSha256": "1359d3f8cf5d7d69b0b7e443b3f4be84a1b319d12d970d6ef84e5f75fe1afbbf",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "How old was David when he became king?"
+    },
+    {
+      "id": "v3-solomon-mother",
+      "reference": "1 Kings 1:11",
+      "answer": "Bathsheba",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1KI/1.json",
+      "chapterSha256": "9508f0a55533fa22188366e736e49568c352c71c09cec0ecc52fbdf33dd67b28",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Who was Solomon’s mother?"
+    },
+    {
+      "id": "v3-temple-build-years",
+      "reference": "1 Kings 6:38",
+      "answer": "7",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1KI/6.json",
+      "chapterSha256": "38610f3a2626a49176960528e3a62a1624e89b19cde99e421fdb5379e2210e43",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "How many years did Solomon take to build the temple?"
+    },
+    {
+      "id": "v3-solomon-visiting-queen",
+      "reference": "1 Kings 10:1",
+      "answer": "Queen of Sheba",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1KI/10.json",
+      "chapterSha256": "6617db4c2a83ddf0131549cef331dd0933aad6744c0b84fdfe767975a3354fe7",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which queen visited Solomon to test him with difficult questions?"
+    },
+    {
+      "id": "v3-solomon-successor",
+      "reference": "1 Kings 11:43",
+      "answer": "Rehoboam",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1KI/11.json",
+      "chapterSha256": "eeb0bea0a47305b5a58a20897622f8f28a93685671c47623dced16606433f2b5",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Which son succeeded Solomon as king?"
+    },
+    {
+      "id": "v3-elijah-brook",
+      "reference": "1 Kings 17:3",
+      "answer": "Cherith",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1KI/17.json",
+      "chapterSha256": "09de52b6c962fa8f70e3b074bfbeb52df40881986807df110a46d5d2bc6a060f",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "By which brook did God tell Elijah to hide?"
+    },
+    {
+      "id": "v3-naboth-vineyard",
+      "reference": "1 Kings 21:1-2",
+      "answer": "Naboth",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1KI/21.json",
+      "chapterSha256": "204b4f4dac0cd121c768051cf4315a8c4c4e5450ccb3aef8685524098dbedd73",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "Who owned the vineyard beside Ahab’s palace in Jezreel that the king wanted?"
+    },
+    {
+      "id": "v3-elisha-axe-metal",
+      "reference": "2 Kings 6:5-6",
+      "answer": "Iron",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2KI/6.json",
+      "chapterSha256": "f1888102591fedc775606dcdfb610eb9a376555932b12cfe70d0ba015b420c13",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What metal was the borrowed axe head that floated after Elisha threw a stick into the water?"
+    },
+    {
+      "id": "v3-hezekiah-shadow-steps",
+      "reference": "2 Kings 20:9-11",
+      "answer": "10",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2KI/20.json",
+      "chapterSha256": "7a55498db14dc62f40fee072ce2dc6f8c387a7200af8c4e1e282f0f0b35d0f70",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "By how many steps did the shadow move backward as a sign for Hezekiah?"
+    },
+    {
+      "id": "v3-josiah-response",
+      "reference": "2 Kings 22:11",
+      "answer": "He tore his clothes",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2KI/22.json",
+      "chapterSha256": "af235a3ee4864956614b3ab2c185c4475efa98ad190e2290ef708d7856bd2a7f",
+      "verification": "Read the cited BSB verses from the retrieved chapter. Confirmed the intended answer and that none of the three distractors answers the stated question.",
+      "factTested": "What did Josiah do when he heard the words of the Book of the Law?"
+    }
+  ],
+  "combinedBankDuplicateAudit": {
+    "reviewedOn": "2026-09-28",
+    "scope": "All 130 original story questions, all 200 new story questions across the three v3 TSVs, and the role of the 70 preserved passage-reference items. Read every original and new English story prompt, answer, and reference.",
+    "result": "No remaining semantic duplicate found among story questions. No repeated event-detail answer through a parallel biblical account remains in the reviewed additions.",
+    "clarifications": [
+      "A shared person or scene is not automatically the same fact. Existing Joseph-sale identity and new Judah-proposal identity ask different roles; existing five-loaves count and new Andrew-report identity ask different details.",
+      "Hilkiah finding the book is only in the later-OT batch; the early-OT question asks Josiah’s response. Hezekiah’s fifteen extra years is only in the later-OT batch; the early-OT question asks the shadow’s ten steps.",
+      "The 70 preserved passage-reference items test identifying a scripture location rather than rephrasing the story-fact question."
+    ]
+  }
+}

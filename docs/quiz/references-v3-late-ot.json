@@ -1,0 +1,1899 @@
+{
+  "contentVersion": 3,
+  "batch": "late-ot",
+  "questionCount": 60,
+  "reviewedDate": "2026-09-28",
+  "authorship": "Original Hope Cards prompts and seven-language choices; no external quiz bank copied.",
+  "verification": {
+    "method": "Fetched each cited BSB chapter directly from bible.helloao.org and inspected its verse text against the correct answer, wording, and three distractors. Fetched the same source-key passages in the public-domain Luther 1912 edition to check German wording. Source text, exact chapter URLs, and SHA-256 hashes are retained below.",
+    "uniqueness": "Reviewed all 200 pre-existing prompts and quoted passage-recognition texts plus all 60 additions for repeated facts, inverse questions, and rephrased duplicates. New questions sharing a narrative ask different facts: Esther’s other name vs who raised her, Jonah’s chosen destination vs his commanded destination, and David’s temple plans vs Solomon’s temple construction.",
+    "options": "Each question has one correct option under its cited passage and question wording. Similar episodes and wider biblical metaphors were checked when choosing distractors. Mount Zion was excluded as a distractor for Mount Moriah to avoid geographic ambiguity.",
+    "translationScope": "All seven prompt/answer locales authored and checked for matching meaning. German facts were additionally compared directly with the cited Luther 1912 text. This is a content review, not independent native-speaker certification.",
+    "wordingAdjustments": [
+      "Song of Solomon 2:1 asks about the place in a flower comparison because Luther 1912 uses Blume and Rose rather than the same flower names as BSB.",
+      "Jeremiah 1:11 uses Ein erwachender Zweig in the German answer to match Luther 1912’s rendering of the almond-branch wordplay.",
+      "Ezekiel 37:1-2 uses weites Feld in German where BSB uses valley.",
+      "Ecclesiastes 10:1 German asks which insects spoil good ointments, matching the Luther wording.",
+      "Proverbs 25:21 uses Food as the answer so BSB food and the other editions’ bread both support it."
+    ],
+    "numberingNote": "The API’s German source keys use KJV verse numbering. The app uses the Luther printed references below, following its existing daily-verse reference policy."
+  },
+  "printedNumberingOverrides": {
+    "v3-wall-builders-swords": {
+      "de": "Nehemiah 4:12"
+    },
+    "v3-daniel-daily-prayer": {
+      "de": "Daniel 6:11"
+    }
+  },
+  "printedNumberingSource": {
+    "url": "https://raw.githubusercontent.com/crosswire/jsword/master/src/main/resources/org/crosswire/jsword/versification/Luther.properties",
+    "rules": [
+      "Neh.3.33-Neh.4.17=Neh.4.1-Neh.4.23",
+      "Dan.6.1-Dan.6.29=Dan.5.31-Dan.6.28"
+    ],
+    "direction": "German printed references = English KJV references. Psalms 23, 119 and 150 have no numbering offset in this mapping."
+  },
+  "storyQuestions": [
+    {
+      "id": "v3-jabez-prayer",
+      "reference": "1 Chronicles 4:10",
+      "answer": "Jabez",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1CH/4.json",
+      "sourceSha256": "597abdd987007b3b5808ea621e06bcdd633e2c9b1590ed0fdef4bea3f003b18c",
+      "evidence": [
+        {
+          "verse": 10,
+          "text": "And Jabez called out to the God of Israel, “If only You would bless me and enlarge my territory! May Your hand be with me and keep me from harm, so that I will be free from pain.” And God granted the request of Jabez."
+        }
+      ],
+      "distractors": [
+        "Ezra",
+        "Nehemiah",
+        "Daniel"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/1CH/4.json",
+        "sourceSha256": "b11650eac57044b111c2971402d20b3eedd36aff6babc09f5dfcdb2c727f23f5",
+        "sourceReference": "1 Chronicles 4:10",
+        "evidence": [
+          {
+            "verse": 10,
+            "text": "Und Jaebez rief den Gott Israels an und sprach: Ach, daß du mich segnetest und meine Grenze mehrtest und deine Hand mit mir wäre und schafftest mit dem Übel, daß mich's nicht bekümmere! Und Gott ließ kommen, was er bat."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-joab-commander",
+      "reference": "1 Chronicles 11:6",
+      "answer": "Joab",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1CH/11.json",
+      "sourceSha256": "3689be8f68bcb5c9c53c036c70945e554a40215bf05354d7d57b9f39b7df5e7f",
+      "evidence": [
+        {
+          "verse": 6,
+          "text": "Now David had said, “Whoever is the first to strike down a Jebusite will become chief commander.” And Joab son of Zeruiah went up first, and he became the chief."
+        }
+      ],
+      "distractors": [
+        "Absalom",
+        "Jonathan",
+        "Saul"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/1CH/11.json",
+        "sourceSha256": "f93a3c3b9c287e16387c5149e593282a9a212f813c5fa5d4df4624081f172e67",
+        "sourceReference": "1 Chronicles 11:6",
+        "evidence": [
+          {
+            "verse": 6,
+            "text": "Und David sprach: Wer die Jebusiter am ersten schlägt, der soll ein Haupt und Oberster sein. Da erstieg sie am ersten Joab, der Zeruja Sohn, und ward Hauptmann."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-levites-ark-shoulders",
+      "reference": "1 Chronicles 15:15",
+      "answer": "Shoulders",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1CH/15.json",
+      "sourceSha256": "343d8afdb134ac02012f3152ef9afa75b1882d862615cce4113230fcbdaab9fa",
+      "evidence": [
+        {
+          "verse": 15,
+          "text": "And the Levites carried the ark of God on their shoulders with the poles, as Moses had commanded in accordance with the word of the LORD."
+        }
+      ],
+      "distractors": [
+        "Hands",
+        "Heads",
+        "Backs"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/1CH/15.json",
+        "sourceSha256": "e4241d6d346fa7d826badefa6d4395c9ba46a3f4719158810de481923575f905",
+        "sourceReference": "1 Chronicles 15:15",
+        "evidence": [
+          {
+            "verse": 15,
+            "text": "Und die Kinder Levi trugen die Lade Gottes auf ihren Achseln mit den Stangen daran, wie Mose geboten hatte nach dem Wort des HERRN."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-david-temple-plans",
+      "reference": "1 Chronicles 28:11",
+      "answer": "David",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/1CH/28.json",
+      "sourceSha256": "fecd78c87a8de8a8207cfc0f3eaa0e82acb2ba2f359066a560e6781055c85cb4",
+      "evidence": [
+        {
+          "verse": 11,
+          "text": "Then David gave his son Solomon the plans for the portico of the temple, its buildings, storehouses, upper rooms, inner rooms, and the room for the mercy seat."
+        }
+      ],
+      "distractors": [
+        "Samuel",
+        "Nathan",
+        "Ezra"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/1CH/28.json",
+        "sourceSha256": "b9f04ac7d3a087c2c62e266b7f465ff5292e8829194fa8d33e4b168d9b4af5f5",
+        "sourceReference": "1 Chronicles 28:11",
+        "evidence": [
+          {
+            "verse": 11,
+            "text": "Und David gab seinem Sohn Salomo ein Vorbild der Halle des Tempels und seiner Häuser und der Gemächer und Söller und Kammern inwendig und des Hauses Gnadenstuhls,"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-temple-moriah",
+      "reference": "2 Chronicles 3:1",
+      "answer": "Moriah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2CH/3.json",
+      "sourceSha256": "0154aecdb2af7aa48252dc6c1203623ddeb1824571c20a09a0128536388ea6bc",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "Then Solomon began to build the house of the LORD in Jerusalem on Mount Moriah, where the LORD had appeared to his father David. This was the place that David had prepared on the threshing floor of Ornan the Jebusite."
+        }
+      ],
+      "distractors": [
+        "Sinai",
+        "Carmel",
+        "Ararat"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/2CH/3.json",
+        "sourceSha256": "182bfb7ae122493c66f2906f8296ed10b19c1aeeb54346fbaba0ab5c07142dd7",
+        "sourceReference": "2 Chronicles 3:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Und Salomo fing an zu bauen das Haus des HERRN zu Jerusalem auf dem Berge Morija, der David, seinem Vater, gezeigt war, welchen David zubereitet hatte zum Raum auf der Tenne Ornans, des Jebusiters."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-jehoshaphat-singers",
+      "reference": "2 Chronicles 20:21",
+      "answer": "Jehoshaphat",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2CH/20.json",
+      "sourceSha256": "998be43dab097f4c58239bad91953b69fccc40b286905a52c78657c90b0e972c",
+      "evidence": [
+        {
+          "verse": 21,
+          "text": "Then Jehoshaphat consulted with the people and appointed those who would sing to the LORD and praise the splendor of His holiness. As they went out before the army, they were singing: “Give thanks to the LORD, for His loving devotion endures forever.”"
+        }
+      ],
+      "distractors": [
+        "Uzziah",
+        "Josiah",
+        "Saul"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/2CH/20.json",
+        "sourceSha256": "18f9a8a7ee226fd4b2bf8f2b1702e2a9f78bd6b1df3141722df683307b50bdd8",
+        "sourceReference": "2 Chronicles 20:21",
+        "evidence": [
+          {
+            "verse": 21,
+            "text": "Und er unterwies das Volk und bestellte die Sänger dem HERRN, daß sie lobten in heiligem Schmuck und vor den Gerüsteten her zögen und sprächen: Danket dem HERRN; denn sein Barmherzigkeit währet ewiglich."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-uzziah-incense",
+      "reference": "2 Chronicles 26:16",
+      "answer": "Uzziah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2CH/26.json",
+      "sourceSha256": "c47976897ca454d1249533a967cc2df4d9c5a7db31c413ce3bc26b297fd639a9",
+      "evidence": [
+        {
+          "verse": 16,
+          "text": "But when Uzziah became powerful, his arrogance led to his own destruction. He was unfaithful to the LORD his God, for he entered the temple of the LORD to burn incense on the altar of incense."
+        }
+      ],
+      "distractors": [
+        "Jehoshaphat",
+        "David",
+        "Saul"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/2CH/26.json",
+        "sourceSha256": "542f4a45ebe0d3f2307d9b12e7f28278a2cc0101065ed885a18716e106b23db1",
+        "sourceReference": "2 Chronicles 26:16",
+        "evidence": [
+          {
+            "verse": 16,
+            "text": "Und da er mächtig geworden war, überhob sich sein Herz zu seinem Verderben; denn er vergriff sich an dem HERRN, seinem Gott, und ging in den Tempel des HERRN, zu räuchern auf dem Räucheraltar."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-hilkiah-law-book",
+      "reference": "2 Chronicles 34:14",
+      "answer": "Hilkiah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/2CH/34.json",
+      "sourceSha256": "b98dd09b09cbb61ee6e44924bc519cbf31227d307f179e08bd78e1709d917f4b",
+      "evidence": [
+        {
+          "verse": 14,
+          "text": "While they were bringing out the money that had been taken into the house of the LORD, Hilkiah the priest found the Book of the Law of the LORD given by Moses."
+        }
+      ],
+      "distractors": [
+        "Ezra",
+        "Samuel",
+        "Aaron"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/2CH/34.json",
+        "sourceSha256": "691a580511c92cbfdb18b6bfd341f2ba98430ae182415c431ad672232527ca4b",
+        "sourceReference": "2 Chronicles 34:14",
+        "evidence": [
+          {
+            "verse": 14,
+            "text": "Und da sie das Geld herausnahmen, das zum Hause des HERRN eingelegt war, fand Hilkia, der Priester, das Buch des Gesetzes des HERRN, das durch Mose gegeben war."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-cyrus-proclamation",
+      "reference": "Ezra 1:1-3",
+      "answer": "Cyrus",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EZR/1.json",
+      "sourceSha256": "690b74450b2a584337104ccb65b613538fcd68c5b9c88af33141905977da578d",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "In the first year of Cyrus king of Persia, to fulfill the word of the LORD spoken through Jeremiah, the LORD stirred the spirit of Cyrus king of Persia to send a proclamation throughout his kingdom and to put it in writing as follows:"
+        },
+        {
+          "verse": 2,
+          "text": "“This is what Cyrus king of Persia says: ‘The LORD, the God of heaven, who has given me all the kingdoms of the earth, has appointed me to build a house for Him at Jerusalem in Judah."
+        },
+        {
+          "verse": 3,
+          "text": "Whoever among you belongs to His people, may his God be with him, and may he go to Jerusalem in Judah and build the house of the LORD, the God of Israel; He is the God who is in Jerusalem."
+        }
+      ],
+      "distractors": [
+        "Pharaoh",
+        "Saul",
+        "Uzziah"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EZR/1.json",
+        "sourceSha256": "be9021e5facee05c03991b2b63ece75e3bd15c93404d3556d92a1039572d0dee",
+        "sourceReference": "Ezra 1:1-3",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Im ersten Jahr des Kores, des Königs in Persien (daß erfüllt würde das Wort des HERRN durch den Mund Jeremia's geredet), erweckte der HERR den Geist des Kores, des Königs in Persien, daß er ausrufen ließ durch sein ganzes Königreich, auch durch Schrift, und sagen:"
+          },
+          {
+            "verse": 2,
+            "text": "So spricht Kores, der König in Persien: Der HERR, der Gott des Himmels, hat mir alle Königreiche der Erde gegeben, und hat mir befohlen, ihm ein Haus zu bauen zu Jerusalem in Juda."
+          },
+          {
+            "verse": 3,
+            "text": "Wer nun unter euch seine Volkes ist, mit dem Sei Gott, und er ziehe hinauf gen Jerusalem in Juda und baue das Haus des HERRN, des Gottes Israels. Er ist der Gott, der zu Jerusalem ist."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ezra-scribe",
+      "reference": "Ezra 7:6",
+      "answer": "Ezra",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EZR/7.json",
+      "sourceSha256": "1324bfdd97b528856926df1b36332ab0af00b9083084651a20a88faaa3d5b4a4",
+      "evidence": [
+        {
+          "verse": 6,
+          "text": "this Ezra came up from Babylon. He was a scribe skilled in the Law of Moses, which the LORD, the God of Israel, had given. The king had granted Ezra all his requests, for the hand of the LORD his God was upon him."
+        }
+      ],
+      "distractors": [
+        "Nehemiah",
+        "Mordecai",
+        "Joab"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EZR/7.json",
+        "sourceSha256": "a315bfd57bd643a8865e4d5b3f6f38e98dbd9b0231780cbeac4be05aaaca6aae",
+        "sourceReference": "Ezra 7:6",
+        "evidence": [
+          {
+            "verse": 6,
+            "text": "Esra aber war ein geschickter Schriftgelehrter im Gesetz Mose's, das der HERR, der Gott Israels gegeben hatte. Und der König gab ihm alles, was er forderte, nach der Hand des HERRN, seines Gottes, über ihm."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ezra-fast-river",
+      "reference": "Ezra 8:21",
+      "answer": "Ahava",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EZR/8.json",
+      "sourceSha256": "f3a8686ee65abcd853ebbc438742e5a3ce956b2ce4116989237e8a40087bed2a",
+      "evidence": [
+        {
+          "verse": 21,
+          "text": "And there by the Ahava Canal I proclaimed a fast, so that we might humble ourselves before our God and ask Him for a safe journey for us and our children, with all our possessions."
+        }
+      ],
+      "distractors": [
+        "Jordan",
+        "Nile",
+        "Euphrates"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EZR/8.json",
+        "sourceSha256": "021b7e8447ec4d66f82ee0131c8bd0e3495c1003f4464662e4099a1c13decd88",
+        "sourceReference": "Ezra 8:21",
+        "evidence": [
+          {
+            "verse": 21,
+            "text": "Und ich ließ daselbst am Wasser bei Ahava ein Fasten ausrufen, daß wir uns demütigten vor unserm Gott, zu suchen von ihm einen richtigen Weg für uns und unsre Kinder und alle unsre Habe."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-nehemiah-cupbearer",
+      "reference": "Nehemiah 1:11",
+      "answer": "Cupbearer",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NEH/1.json",
+      "sourceSha256": "fbf46005a70df5c22e5f7bc981cd456d75f4c281bc2a00f4cb36785451a12576",
+      "evidence": [
+        {
+          "verse": 11,
+          "text": "O Lord, may Your ear be attentive to my prayer and to the prayers of Your servants who delight to revere Your name. Give Your servant success this day, I pray, and grant him mercy in the sight of this man.” (At that time I was the cupbearer to the king.)"
+        }
+      ],
+      "distractors": [
+        "Baker",
+        "Shepherd",
+        "Potter"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/NEH/1.json",
+        "sourceSha256": "66bdd42f4ca3ee5e4b9fc9fa910f3a8c3aca2819dc8e22fbae1fb30f4cdd817e",
+        "sourceReference": "Nehemiah 1:11",
+        "evidence": [
+          {
+            "verse": 11,
+            "text": "Ach Herr, laß deine Ohren aufmerken auf das Gebet deines Knechtes und auf das Gebet deiner Knechte, die da begehren deinen Namen zu fürchten; und laß es deinem Knecht heute gelingen und gib ihm Barmherzigkeit vor diesem Manne! Denn ich war des Königs Schenke."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-nehemiah-night-inspection",
+      "reference": "Nehemiah 2:13",
+      "answer": "At night",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NEH/2.json",
+      "sourceSha256": "a26ab461ad59950c26c0dd683c5ebf2e8708c144c3a8ff65f230c46b7c04c680",
+      "evidence": [
+        {
+          "verse": 13,
+          "text": "So I went out at night through the Valley Gate toward the Well of the Serpent and the Dung Gate, and I inspected the walls of Jerusalem that had been broken down and the gates that had been destroyed by fire."
+        }
+      ],
+      "distractors": [
+        "At dawn",
+        "At noon",
+        "At sunset"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/NEH/2.json",
+        "sourceSha256": "68115d6e23511427904c0b6e8228810c227c3fa6f95c1bdeccf5c4013dc2725b",
+        "sourceReference": "Nehemiah 2:13",
+        "evidence": [
+          {
+            "verse": 13,
+            "text": "Und ich ritt zum Taltor aus bei der Nacht und gegen den Drachenbrunnen und an das Misttor; und es tat mir wehe, daß die Mauern Jerusalems eingerissen waren und die Tore mit Feuer verzehrt."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-wall-builders-swords",
+      "reference": "Nehemiah 4:18",
+      "answer": "A sword",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NEH/4.json",
+      "sourceSha256": "431ea4840c7609d2583eb1091504a13557361ec1060d3e668f92a52bbd1cc285",
+      "evidence": [
+        {
+          "verse": 18,
+          "text": "And each of the builders worked with his sword strapped at his side. But the trumpeter stayed beside me."
+        }
+      ],
+      "distractors": [
+        "A spear",
+        "An arrow",
+        "A stone"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/NEH/4.json",
+        "sourceSha256": "d27612c41d04fccde3ff1325c7dd335a67b09727858f958ba65af8c0c8857dff",
+        "sourceReference": "Nehemiah 4:18",
+        "evidence": [
+          {
+            "verse": 18,
+            "text": "Und ein jeglicher, der da baute, hatte sein Schwert an seine Lenden gegürtet und baute also; und der mit der Posaune blies, war neben mir."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-nehemiah-wall-days",
+      "reference": "Nehemiah 6:15",
+      "answer": "52",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/NEH/6.json",
+      "sourceSha256": "d72ccd6899ad57f11b65462e1e511afb170bd3ab3f8d045918174e80e4e6db32",
+      "evidence": [
+        {
+          "verse": 15,
+          "text": "So the wall was completed in fifty-two days, on the twenty-fifth of Elul."
+        }
+      ],
+      "distractors": [
+        "40",
+        "70",
+        "100"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/NEH/6.json",
+        "sourceSha256": "eed91216a58c9702a385600e9297508a943ca07c2b95f66eb5afd4073f0928c3",
+        "sourceReference": "Nehemiah 6:15",
+        "evidence": [
+          {
+            "verse": 15,
+            "text": "Und die Mauer ward fertig am fünfundzwanzigsten Tage des Monats Elul in zweiundfünfzig Tagen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-vashti-banquet",
+      "reference": "Esther 1:9",
+      "answer": "Vashti",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EST/1.json",
+      "sourceSha256": "3a04a72084f1e650177effb51872a06404c4d3fa55590652a853cd3bc76c3a48",
+      "evidence": [
+        {
+          "verse": 9,
+          "text": "Queen Vashti also gave a banquet for the women in the royal palace of King Xerxes."
+        }
+      ],
+      "distractors": [
+        "Esther",
+        "Sarah",
+        "Hannah"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EST/1.json",
+        "sourceSha256": "a401cd3e16a88856477975c12a51de4a29c59cc75019138a740aae7f5a61115e",
+        "sourceReference": "Esther 1:9",
+        "evidence": [
+          {
+            "verse": 9,
+            "text": "Und die Königin Vasthi machte auch ein Mahl für die Weiber im königlichen Hause des Königs Ahasveros."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-esther-hebrew-name",
+      "reference": "Esther 2:7",
+      "answer": "Hadassah",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EST/2.json",
+      "sourceSha256": "991065e019788c598f0005bed816a2c434e4abfc525226ff74e6666956f26899",
+      "evidence": [
+        {
+          "verse": 7,
+          "text": "And Mordecai had brought up Hadassah (that is, Esther), the daughter of his uncle, because she did not have a father or mother. The young woman was lovely in form and appearance, and when her father and mother had died, Mordecai had taken her as his own daughter."
+        }
+      ],
+      "distractors": [
+        "Vashti",
+        "Miriam",
+        "Ruth"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EST/2.json",
+        "sourceSha256": "335ea21e46d9b11dae6d33d0262007156a227fb2c01228304b9e893ab2296e0b",
+        "sourceReference": "Esther 2:7",
+        "evidence": [
+          {
+            "verse": 7,
+            "text": "Und er war ein Vormund der Hadassa, das ist Esther, eine Tochter seines Oheims; denn sie hatte weder Vater noch Mutter. Und sie war eine schöne und feine Dirne. Und da ihr Vater und ihre Mutter starb, nahm sie Mardochai auf zur Tochter."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-esther-fast-days",
+      "reference": "Esther 4:16",
+      "answer": "3",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EST/4.json",
+      "sourceSha256": "8887f8923ce2aa33c333f34f9a16b751143e197f2d0d39b481e6e46889c8a57e",
+      "evidence": [
+        {
+          "verse": 16,
+          "text": "“Go and assemble all the Jews who can be found in Susa, and fast for me. Do not eat or drink for three days, night or day, and I and my maidens will fast as you do. After that, I will go to the king, even though it is against the law. And if I perish, I perish! ”"
+        }
+      ],
+      "distractors": [
+        "7",
+        "10",
+        "40"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EST/4.json",
+        "sourceSha256": "7fec7d1d1b273fd3e9c358a605cd84a0aec1d9c2c8dc2ee485aaae32ae25cbef",
+        "sourceReference": "Esther 4:16",
+        "evidence": [
+          {
+            "verse": 16,
+            "text": "So gehe hin und versammle alle Juden, die zu Susan vorhanden sind, und fastet für mich, daß ihr nicht esset und trinket in drei Tagen, weder Tag noch Nacht; ich und meine Dirnen wollen auch also fasten. Und ich will zum König hineingehen wider das Gebot; komme ich um, so komme ich um."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-esther-scepter",
+      "reference": "Esther 5:2",
+      "answer": "A golden scepter",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EST/5.json",
+      "sourceSha256": "dde81962fd2859a0bdff03497b334e3e9f9c4fad54a35dd59b596ea1251698c4",
+      "evidence": [
+        {
+          "verse": 2,
+          "text": "As soon as the king saw Queen Esther standing in the court, she found favor in his sight. The king extended the gold scepter in his hand toward Esther, and she approached and touched the tip of the scepter."
+        }
+      ],
+      "distractors": [
+        "A silver cup",
+        "A royal robe",
+        "A crown"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EST/5.json",
+        "sourceSha256": "ab062491ffe9f7961dac1d89415d434e5eccd88062d0c35e894371777349108b",
+        "sourceReference": "Esther 5:2",
+        "evidence": [
+          {
+            "verse": 2,
+            "text": "Und da der König sah Esther, die Königin, stehen im Hofe, fand sie Gnade vor seinen Augen. Und der König reckte das goldene Zepter in seiner Hand gegen Esther. Da trat Esther herzu und rührte die Spitze des Zepters an."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-esther-sleepless-records",
+      "reference": "Esther 6:1",
+      "answer": "Book of chronicles",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EST/6.json",
+      "sourceSha256": "7670c149ebfa92dbd1d20202d8b9f138a32897f2c049dfbd048544f1687f41dc",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "That night sleep escaped the king; so he ordered the Book of Records, the Chronicles, to be brought in and read to him."
+        }
+      ],
+      "distractors": [
+        "Book of the Law",
+        "Book of songs",
+        "Book of proverbs"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EST/6.json",
+        "sourceSha256": "05111f2c062d2ec3349b7f64cfa98a487600f2345f761b6927a83d1678013bc6",
+        "sourceReference": "Esther 6:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "In derselben Nacht konnte der König nicht schlafen und hieß die Chronik mit den Historien bringen. Da die wurden vor dem König gelesen,"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-purim-name",
+      "reference": "Esther 9:24-26",
+      "answer": "Purim",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EST/9.json",
+      "sourceSha256": "93c5ca559f67d89c0aa4b2d2a49943c3b2fb85a6a542287e66915fe6a3325407",
+      "evidence": [
+        {
+          "verse": 24,
+          "text": "For Haman son of Hammedatha, the Agagite, the enemy of all the Jews, had plotted against the Jews to destroy them and had cast the Pur (that is, the lot) to crush and destroy them."
+        },
+        {
+          "verse": 25,
+          "text": "But when it came before the king, he commanded by letter that the wicked scheme which Haman had devised against the Jews should come back upon his own head, and that he and his sons should be hanged on the gallows."
+        },
+        {
+          "verse": 26,
+          "text": "Therefore these days are called Purim, from the word Pur. Because of all the instructions in this letter, and because of all they had seen and experienced,"
+        }
+      ],
+      "distractors": [
+        "Passover",
+        "Pentecost",
+        "Tabernacles"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EST/9.json",
+        "sourceSha256": "e2afc908929c9c94928d3636205252fb0f0703b5f3fb13043470eb5aa1c89c9d",
+        "sourceReference": "Esther 9:24-26",
+        "evidence": [
+          {
+            "verse": 24,
+            "text": "wie Haman, der Sohn Hammedathas, der Agagiter, aller Juden Feind, gedacht hatte, alle Juden umzubringen, und das Pur, das ist das Los, werfen lassen, sie zu erschrecken und umzubringen;"
+          },
+          {
+            "verse": 25,
+            "text": "und wie Esther zum König gegangen war und derselbe durch Briefe geboten hatte, daß seine bösen Anschläge, die er wider die Juden gedacht, auf seinen Kopf gekehrt würden; und wie man ihn und seine Söhne an den Baum gehängt hatte."
+          },
+          {
+            "verse": 26,
+            "text": "Daher sie diese Tage Purim nannten nach dem Namen des Loses. Und nach allen Worten dieses Briefes und dem, was sie selbst gesehen hatten und was an sie gelangt war,"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-job-land",
+      "reference": "Job 1:1",
+      "answer": "Uz",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOB/1.json",
+      "sourceSha256": "43b5ab92917429d3611da0dcb0dd217eb22ab1dfba255c3787e4b3f53ee3fada",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "There was a man in the land of Uz whose name was Job. And this man was blameless and upright, fearing God and shunning evil."
+        }
+      ],
+      "distractors": [
+        "Egypt",
+        "Moab",
+        "Edom"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JOB/1.json",
+        "sourceSha256": "30054150e7ba976eeca1d7c3582a68829a640c4f1f07d9f78f110de0e4b1e429",
+        "sourceReference": "Job 1:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Es war ein Mann im Lande Uz, der hieß Hiob. Derselbe war schlecht und recht, gottesfürchtig und mied das Böse."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-job-sons",
+      "reference": "Job 1:2",
+      "answer": "7",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOB/1.json",
+      "sourceSha256": "43b5ab92917429d3611da0dcb0dd217eb22ab1dfba255c3787e4b3f53ee3fada",
+      "evidence": [
+        {
+          "verse": 2,
+          "text": "He had seven sons and three daughters,"
+        }
+      ],
+      "distractors": [
+        "3",
+        "10",
+        "12"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JOB/1.json",
+        "sourceSha256": "30054150e7ba976eeca1d7c3582a68829a640c4f1f07d9f78f110de0e4b1e429",
+        "sourceReference": "Job 1:2",
+        "evidence": [
+          {
+            "verse": 2,
+            "text": "Und zeugte sieben Söhne und drei Töchter;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-job-potsherd",
+      "reference": "Job 2:8",
+      "answer": "A piece of broken pottery",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOB/2.json",
+      "sourceSha256": "79a73b1eaea876a6636d291b14ec414d832070a2423b0f7dab2cbfefb315d1e2",
+      "evidence": [
+        {
+          "verse": 8,
+          "text": "And Job took a piece of broken pottery to scrape himself as he sat among the ashes."
+        }
+      ],
+      "distractors": [
+        "A stone",
+        "A sword",
+        "A spear"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JOB/2.json",
+        "sourceSha256": "8209786cbaf8898175354bce54d4552b2f1ce051083c0ebf8a5669cecd0c6f4c",
+        "sourceReference": "Job 2:8",
+        "evidence": [
+          {
+            "verse": 8,
+            "text": "Und er nahm eine Scherbe und schabte sich und saß in der Asche."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-job-later-years",
+      "reference": "Job 42:16",
+      "answer": "140",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JOB/42.json",
+      "sourceSha256": "087bb05ba86fc9eae716d7080efdd5068b2a58dec15174209f8556d0a3a474f2",
+      "evidence": [
+        {
+          "verse": 16,
+          "text": "After this, Job lived 140 years and saw his children and their children to the fourth generation."
+        }
+      ],
+      "distractors": [
+        "40",
+        "70",
+        "120"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JOB/42.json",
+        "sourceSha256": "decbd001a627cfe3837e936e9842d55419a9f194ff058157e18156b67b3211a2",
+        "sourceReference": "Job 42:16",
+        "evidence": [
+          {
+            "verse": 16,
+            "text": "Und Hiob lebte nach diesem hundert und vierzig Jahre, daß er sah Kinder und Kindeskinder bis ins vierte Glied."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-psalm-shepherd",
+      "reference": "Psalms 23:1",
+      "answer": "Shepherd",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PSA/23.json",
+      "sourceSha256": "fd0574739f34fdae381ad0da863ca42fc7db0cc2af1675af5683341c90d34624",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "The LORD is my shepherd; I shall not want."
+        }
+      ],
+      "distractors": [
+        "Potter",
+        "Baker",
+        "Cupbearer"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PSA/23.json",
+        "sourceSha256": "bb0448566bc0f5140e8bd66bb913321258954c31543245c4b6b1fbe124c180e9",
+        "sourceReference": "Psalms 23:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Ein Psalm Davids. Der HERR ist mein Hirte; mir wird nichts mangeln."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-word-lamp",
+      "reference": "Psalms 119:105",
+      "answer": "A lamp",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PSA/119.json",
+      "sourceSha256": "22c5e2e2a527e9d6c3744e249acbfca8c012d17bb04e1a1f85e938d986ae2531",
+      "evidence": [
+        {
+          "verse": 105,
+          "text": "Your word is a lamp to my feet and a light to my path."
+        }
+      ],
+      "distractors": [
+        "A crown",
+        "A ladder",
+        "A sword"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PSA/119.json",
+        "sourceSha256": "2282b8ed60a7877b6109b2bfcd262a48d3f6d2c19cf2f2de34ea2f86a717502a",
+        "sourceReference": "Psalms 119:105",
+        "evidence": [
+          {
+            "verse": 105,
+            "text": "Dein Wort ist meine Fußes Leuchte und ein Licht auf meinem Wege."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-psalm-every-breath",
+      "reference": "Psalms 150:6",
+      "answer": "Everything that has breath",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PSA/150.json",
+      "sourceSha256": "9c332d460623daf6ade2530a07a9e7a18645a459c63a2376e97c3bfe9bfb6610",
+      "evidence": [
+        {
+          "verse": 6,
+          "text": "Let everything that has breath praise the LORD! Hallelujah!"
+        }
+      ],
+      "distractors": [
+        "Only the priests",
+        "Only the kings",
+        "Only the musicians"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PSA/150.json",
+        "sourceSha256": "f13cb4caad8d58fee85937e833427f23a8cd3ae090ec34256060287669e30136",
+        "sourceReference": "Psalms 150:6",
+        "evidence": [
+          {
+            "verse": 6,
+            "text": "Alles, was Odem hat, lobe den HERRN! Halleluja!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-proverbs-ant",
+      "reference": "Proverbs 6:6",
+      "answer": "Ant",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PRO/6.json",
+      "sourceSha256": "e19102c8839ee3e156b9d19f291d7b33d0ecbfb34523db03ff2ecfd215f5283a",
+      "evidence": [
+        {
+          "verse": 6,
+          "text": "Walk in the manner of the ant, O slacker; observe its ways and become wise."
+        }
+      ],
+      "distractors": [
+        "Dove",
+        "Lion",
+        "Camel"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PRO/6.json",
+        "sourceSha256": "3815a99e4cd2a3a5eb5ab7445cdc3c875ef5afaba2065a59111d04572130df25",
+        "sourceReference": "Proverbs 6:6",
+        "evidence": [
+          {
+            "verse": 6,
+            "text": "Gehe hin zur Ameise, du Fauler; siehe ihre Weise an und lerne!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-proverbs-friend",
+      "reference": "Proverbs 17:17",
+      "answer": "A friend",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PRO/17.json",
+      "sourceSha256": "c09ba7a1314bcbe8e4d2fa9add610ef0cdedcd7a5a0add7a4c5c58904875b407",
+      "evidence": [
+        {
+          "verse": 17,
+          "text": "A friend loves at all times, and a brother is born for adversity."
+        }
+      ],
+      "distractors": [
+        "A stranger",
+        "An enemy",
+        "A merchant"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PRO/17.json",
+        "sourceSha256": "f7e6f4631be20435c85cd1263b5d8bc0a59ca3b6b2ac3956362c950959dd4096",
+        "sourceReference": "Proverbs 17:17",
+        "evidence": [
+          {
+            "verse": 17,
+            "text": "Ein Freund liebt allezeit, und als ein Bruder wird er in Not erfunden."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-proverbs-feed-enemy",
+      "reference": "Proverbs 25:21",
+      "answer": "Food",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PRO/25.json",
+      "sourceSha256": "dbd9038caae4f9ee7004b6f0ab6d0dfc5fc9746ee30693095ff13f060f4edd15",
+      "evidence": [
+        {
+          "verse": 21,
+          "text": "If your enemy is hungry, give him food to eat, and if he is thirsty, give him water to drink."
+        }
+      ],
+      "distractors": [
+        "Gold",
+        "A crown",
+        "A sword"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PRO/25.json",
+        "sourceSha256": "bcf1f17f54dd87f6851770c4ac3d70051147f9863a09162a94a5dcfcda41d25c",
+        "sourceReference": "Proverbs 25:21",
+        "evidence": [
+          {
+            "verse": 21,
+            "text": "Hungert deinen Feind, so speise ihn mit Brot; dürstet ihn, so tränke ihn mit Wasser."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-proverbs-locusts",
+      "reference": "Proverbs 30:27",
+      "answer": "Locusts",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/PRO/30.json",
+      "sourceSha256": "239363b7f8795ecd2ef7ef44d76df141094ffcab148b8845cd4af0cc9a78bb76",
+      "evidence": [
+        {
+          "verse": 27,
+          "text": "the locusts have no king, yet they all advance in formation;"
+        }
+      ],
+      "distractors": [
+        "Ravens",
+        "Doves",
+        "Eagles"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/PRO/30.json",
+        "sourceSha256": "f8bdab0a719c63c9fbc582b5ed3a3fdc4bee776c4d61519c218b5d831ef4bf13",
+        "sourceReference": "Proverbs 30:27",
+        "evidence": [
+          {
+            "verse": 27,
+            "text": "Heuschrecken, haben keinen König; dennoch ziehen sie aus ganz in Haufen,"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ecclesiastes-cord",
+      "reference": "Ecclesiastes 4:12",
+      "answer": "3",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ECC/4.json",
+      "sourceSha256": "b84fb7f886e453affedeb458cc347ad363bcc5f3913cb283ddb770ad1c016325",
+      "evidence": [
+        {
+          "verse": 12,
+          "text": "And though one may be overpowered, two can resist. Moreover, a cord of three strands is not quickly broken."
+        }
+      ],
+      "distractors": [
+        "2",
+        "5",
+        "7"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ECC/4.json",
+        "sourceSha256": "87657f6834c7bbab1f953138c9e205074308048192a595108a26c3c9dd2c9e8a",
+        "sourceReference": "Ecclesiastes 4:12",
+        "evidence": [
+          {
+            "verse": 12,
+            "text": "Einer mag überwältigt werden, aber zwei mögen widerstehen; und eine dreifältige Schnur reißt nicht leicht entzwei."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ecclesiastes-bread-waters",
+      "reference": "Ecclesiastes 11:1",
+      "answer": "Bread",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ECC/11.json",
+      "sourceSha256": "9b439acf6ffec7ddaacbbb0951ede37159e27043a460d139269363e8391b128c",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "Cast your bread upon the waters, for after many days you will find it again."
+        }
+      ],
+      "distractors": [
+        "Oil",
+        "Milk",
+        "Honey"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ECC/11.json",
+        "sourceSha256": "e31bbbd0d4d6a005037b9bfa5c20bb1dfe632f95601070ba242ad818dea6c73a",
+        "sourceReference": "Ecclesiastes 11:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Laß dein Brot über das Wasser fahren, so wirst du es finden nach langer Zeit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ecclesiastes-dead-flies",
+      "reference": "Ecclesiastes 10:1",
+      "answer": "Flies",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ECC/10.json",
+      "sourceSha256": "3f7d7c6cf58c61449c203b631bdc83e6c4f034b3b5a29a84d2cfb67f0ec82f8b",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "As dead flies bring a stench to the perfumer’s oil, so a little folly outweighs wisdom and honor."
+        }
+      ],
+      "distractors": [
+        "Locusts",
+        "Ants",
+        "Bees"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ECC/10.json",
+        "sourceSha256": "73f5ece601bf46092687f35406a2f8e27ba35332e85bf80136c5c210bec58824",
+        "sourceReference": "Ecclesiastes 10:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Schädliche Fliegen verderben gute Salben; also wiegt ein wenig Torheit schwerer denn Weisheit und Ehre."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-song-sharon",
+      "reference": "Song of Solomon 2:1",
+      "answer": "Sharon",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/SNG/2.json",
+      "sourceSha256": "c03c55b56df836363f2b1c7c7c0b762deb707444e6513686263c93e7262c2fd3",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "I am a rose of Sharon, a lily of the valley."
+        }
+      ],
+      "distractors": [
+        "Carmel",
+        "Sinai",
+        "Ararat"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/SNG/2.json",
+        "sourceSha256": "ff693a68d5149ee0183f1534faf917c886833850eba256312ee9ebb509b76efb",
+        "sourceReference": "Song of Solomon 2:1",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Ich bin eine Blume zu Saron und eine Rose im Tal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-song-little-foxes",
+      "reference": "Song of Solomon 2:15",
+      "answer": "Foxes",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/SNG/2.json",
+      "sourceSha256": "c03c55b56df836363f2b1c7c7c0b762deb707444e6513686263c93e7262c2fd3",
+      "evidence": [
+        {
+          "verse": 15,
+          "text": "Catch for us the foxes— the little foxes that ruin the vineyards— for our vineyards are in bloom."
+        }
+      ],
+      "distractors": [
+        "Locusts",
+        "Ravens",
+        "Doves"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/SNG/2.json",
+        "sourceSha256": "ff693a68d5149ee0183f1534faf917c886833850eba256312ee9ebb509b76efb",
+        "sourceReference": "Song of Solomon 2:15",
+        "evidence": [
+          {
+            "verse": 15,
+            "text": "Fanget uns die Füchse, die kleinen Füchse, die die Weinberge verderben; denn unsere Weinberge haben Blüten gewonnen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-isaiah-seraph-wings",
+      "reference": "Isaiah 6:2",
+      "answer": "6",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ISA/6.json",
+      "sourceSha256": "0341142506a88346516044b053bbbf2f2bc17050ca451f14a205e893e595d13b",
+      "evidence": [
+        {
+          "verse": 2,
+          "text": "Above Him stood seraphim, each having six wings: With two wings they covered their faces, with two they covered their feet, and with two they were flying."
+        }
+      ],
+      "distractors": [
+        "2",
+        "4",
+        "8"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ISA/6.json",
+        "sourceSha256": "2ddc0c7b945902b24d21fcf0c5fca10183a9b5e0247823b74834e6aa1e764b82",
+        "sourceReference": "Isaiah 6:2",
+        "evidence": [
+          {
+            "verse": 2,
+            "text": "Seraphim standen über ihm; ein jeglicher hatte sechs Flügel: mit zweien deckten sie ihr Antlitz, mit zweien deckten sie ihre Füße, und mit zweien flogen sie."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-isaiah-coal-lips",
+      "reference": "Isaiah 6:6-7",
+      "answer": "A burning coal",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ISA/6.json",
+      "sourceSha256": "0341142506a88346516044b053bbbf2f2bc17050ca451f14a205e893e595d13b",
+      "evidence": [
+        {
+          "verse": 6,
+          "text": "Then one of the seraphim flew to me, and in his hand was a glowing coal that he had taken with tongs from the altar."
+        },
+        {
+          "verse": 7,
+          "text": "And with it he touched my mouth and said: “Now that this has touched your lips, your iniquity is removed and your sin is atoned for.”"
+        }
+      ],
+      "distractors": [
+        "A stone",
+        "A sword",
+        "A scroll"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ISA/6.json",
+        "sourceSha256": "2ddc0c7b945902b24d21fcf0c5fca10183a9b5e0247823b74834e6aa1e764b82",
+        "sourceReference": "Isaiah 6:6-7",
+        "evidence": [
+          {
+            "verse": 6,
+            "text": "Da flog der Seraphim einer zu mir und hatte eine glühende Kohle in der Hand, die er mit der Zange vom Altar nahm,"
+          },
+          {
+            "verse": 7,
+            "text": "und rührte meinen Mund an und sprach: Siehe, hiermit sind deine Lippen gerührt, daß deine Missetat von dir genommen werde und deine Sünde versöhnt sei."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-isaiah-wolf-lamb",
+      "reference": "Isaiah 11:6",
+      "answer": "Wolf",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ISA/11.json",
+      "sourceSha256": "f709882c9a78ed3f44326aab413c1f9472f8c90ce78f55d7e0316a8fcf47c4f1",
+      "evidence": [
+        {
+          "verse": 6,
+          "text": "The wolf will live with the lamb, and the leopard will lie down with the goat; the calf and young lion and fatling will be together, and a little child will lead them."
+        }
+      ],
+      "distractors": [
+        "Lion",
+        "Eagle",
+        "Camel"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ISA/11.json",
+        "sourceSha256": "47a31175036971bac215e19ea41b64c2573626210fd4bec2f3f68dd889c3e27d",
+        "sourceReference": "Isaiah 11:6",
+        "evidence": [
+          {
+            "verse": 6,
+            "text": "Die Wölfe werden bei den Lämmern wohnen und die Parder bei den Böcken liegen. Ein kleiner Knabe wird Kälber und junge Löwen und Mastvieh miteinander treiben."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-hezekiah-added-years",
+      "reference": "Isaiah 38:5",
+      "answer": "15",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ISA/38.json",
+      "sourceSha256": "d462f6e2ee249c112737d740296a964eea62f7017f4c69db42608fa7f038626d",
+      "evidence": [
+        {
+          "verse": 5,
+          "text": "“Go and tell Hezekiah that this is what the LORD, the God of your father David, says: ‘I have heard your prayer; I have seen your tears. Behold, I will add fifteen years to your life."
+        }
+      ],
+      "distractors": [
+        "7",
+        "10",
+        "20"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ISA/38.json",
+        "sourceSha256": "443778458811dffa2742013ea80a7301440d2a42ff1c656fb45dea180badc146",
+        "sourceReference": "Isaiah 38:5",
+        "evidence": [
+          {
+            "verse": 5,
+            "text": "Gehe hin und sage Hiskia: So spricht der HERR, der Gott deines Vaters David: Ich habe dein Gebet gehört und deine Tränen gesehen. Siehe, ich will deinen Tagen noch fünfzehn Jahre zulegen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-jeremiah-almond-branch",
+      "reference": "Jeremiah 1:11",
+      "answer": "An almond branch",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JER/1.json",
+      "sourceSha256": "23251736819be2db4f876490a2cdd5e446b2f7945463d6e681cfcc65dd199768",
+      "evidence": [
+        {
+          "verse": 11,
+          "text": "And the word of the LORD came to me, asking, “Jeremiah, what do you see?” “I see a branch of an almond tree,” I replied."
+        }
+      ],
+      "distractors": [
+        "Palm branch",
+        "Olive leaf",
+        "Fig leaf"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JER/1.json",
+        "sourceSha256": "78e88aaa1485ccd94c9939d7dfac1e486e2ed713ea221e7e10023a840ef5f3a3",
+        "sourceReference": "Jeremiah 1:11",
+        "evidence": [
+          {
+            "verse": 11,
+            "text": "Und es geschah des HERRN Wort zu mir und sprach: Jeremia, was siehst du? Ich sprach: Ich sehe einen erwachenden Zweig."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-jeremiah-potter",
+      "reference": "Jeremiah 18:2-3",
+      "answer": "Potter",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JER/18.json",
+      "sourceSha256": "ff214914031f15e34396dbbd51cac82f1e332c841819834eefd0b7913ad7820c",
+      "evidence": [
+        {
+          "verse": 2,
+          "text": "“Go down at once to the potter’s house, and there I will give you My message.”"
+        },
+        {
+          "verse": 3,
+          "text": "So I went down to the potter’s house and saw him working at the wheel."
+        }
+      ],
+      "distractors": [
+        "Baker",
+        "Shepherd",
+        "Cupbearer"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JER/18.json",
+        "sourceSha256": "531cf61d676547a4eb43abf684b3b890b8ccd4b32a58ad8ea5124163e5684f35",
+        "sourceReference": "Jeremiah 18:2-3",
+        "evidence": [
+          {
+            "verse": 2,
+            "text": "Mache dich auf und gehe hinab in des Töpfers Haus; daselbst will ich dich meine Worte hören lassen."
+          },
+          {
+            "verse": 3,
+            "text": "Und ich ging hinab in des Töpfers Haus, und siehe, er arbeitete eben auf der Scheibe."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-baruch-scroll",
+      "reference": "Jeremiah 36:4",
+      "answer": "Baruch",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JER/36.json",
+      "sourceSha256": "7f289593926e595693e267b1b67acdd52024391a4ed66228aceedd90dd1ab04d",
+      "evidence": [
+        {
+          "verse": 4,
+          "text": "So Jeremiah called Baruch son of Neriah, and at the dictation of Jeremiah, Baruch wrote on a scroll all the words that the LORD had spoken to Jeremiah."
+        }
+      ],
+      "distractors": [
+        "Ezra",
+        "Nehemiah",
+        "Mordecai"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JER/36.json",
+        "sourceSha256": "02831a59d82c1935124d76235ad8b77c1475959f71e5cdf14beb355a7a994f21",
+        "sourceReference": "Jeremiah 36:4",
+        "evidence": [
+          {
+            "verse": 4,
+            "text": "Da rief Jeremia Baruch, den Sohn Nerias. Derselbe Baruch schrieb in ein Buch aus dem Munde Jeremia's alle Reden des HERRN, die er zu ihm geredet hatte."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ebed-melech-rescue",
+      "reference": "Jeremiah 38:7-13",
+      "answer": "Ebed-melech",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JER/38.json",
+      "sourceSha256": "2a6461423433093464f763a780498c0a91bf507f67fdccc8741cde69c11c622c",
+      "evidence": [
+        {
+          "verse": 7,
+          "text": "Now Ebed-melech the Cushite, a court official in the royal palace, heard that Jeremiah had been put into the cistern. While the king was sitting at the Gate of Benjamin,"
+        },
+        {
+          "verse": 8,
+          "text": "Ebed-melech went out from the king’s palace and said to the king,"
+        },
+        {
+          "verse": 9,
+          "text": "“My lord the king, these men have acted wickedly in all that they have done to Jeremiah the prophet. They have dropped him into the cistern, where he will starve to death, for there is no more bread in the city.”"
+        },
+        {
+          "verse": 10,
+          "text": "So the king commanded Ebed-melech the Cushite, “Take thirty men from here with you and pull Jeremiah the prophet out of the cistern before he dies.”"
+        },
+        {
+          "verse": 11,
+          "text": "Then Ebed-melech took the men with him and went to the king’s palace, to a place below the storehouse. From there he took old rags and worn-out clothes and lowered them with ropes to Jeremiah in the cistern."
+        },
+        {
+          "verse": 12,
+          "text": "Ebed-melech the Cushite cried out to Jeremiah, “Put these worn-out rags and clothes under your arms to pad the ropes.” Jeremiah did so,"
+        },
+        {
+          "verse": 13,
+          "text": "and they pulled him up with the ropes and lifted him out of the cistern. And Jeremiah remained in the courtyard of the guard."
+        }
+      ],
+      "distractors": [
+        "Baruch",
+        "Mordecai",
+        "Joab"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JER/38.json",
+        "sourceSha256": "0afc8855eef52c80e7da48790289149ff96d5e4a7c46090c76a325adaf2a01ee",
+        "sourceReference": "Jeremiah 38:7-13",
+        "evidence": [
+          {
+            "verse": 7,
+            "text": "Als aber Ebed-Melech, der Mohr, ein Kämmerer in des Königs Hause, hörte, daß man Jeremia hatte in die Grube geworfen, und der König eben saß im Tor Benjamin,"
+          },
+          {
+            "verse": 8,
+            "text": "da ging Ebed-Melech aus des Königs Hause und redete mit dem König und sprach:"
+          },
+          {
+            "verse": 9,
+            "text": "Mein Herr König, die Männer handeln übel an dem Propheten Jeremia, daß sie ihn haben in die Grube geworfen, da er muß Hungers sterben; denn es ist kein Brot mehr in der Stadt."
+          },
+          {
+            "verse": 10,
+            "text": "Da befahl der König Ebed-Melech, dem Mohren, und sprach: Nimm dreißig Männer mit dir von diesen und zieh den Propheten Jeremia aus der Grube, ehe denn er sterbe."
+          },
+          {
+            "verse": 11,
+            "text": "Und Ebed-Melech nahm die Männer mit sich und ging in des Königs Haus unter die Schatzkammer und nahm daselbst zerrissene und vertragene alte Lumpen und ließ sie an einem Seil hinab zu Jeremia in die Grube."
+          },
+          {
+            "verse": 12,
+            "text": "Und Ebed-Melech, der Mohr, sprach zu Jeremia: Lege diese zerrissenen und vertragenen alten Lumpen unter deine Achseln um das Seil. Und Jeremia tat also."
+          },
+          {
+            "verse": 13,
+            "text": "Und sie zogen Jeremia herauf aus der Grube an den Stricken; und blieb also Jeremia im Vorhof des Gefängnisses."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ezekiel-living-creatures",
+      "reference": "Ezekiel 1:4-5",
+      "answer": "4",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EZK/1.json",
+      "sourceSha256": "805baceb84a469bb1ff156fb7555ddade6a2ff6175e02b270b0aeaa266855f53",
+      "evidence": [
+        {
+          "verse": 4,
+          "text": "I looked and saw a whirlwind coming from the north, a great cloud with fire flashing back and forth and brilliant light all around it. In the center of the fire was a gleam like amber,"
+        },
+        {
+          "verse": 5,
+          "text": "and within it was the form of four living creatures. And this was their appearance: They had a human form,"
+        }
+      ],
+      "distractors": [
+        "2",
+        "6",
+        "7"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EZK/1.json",
+        "sourceSha256": "7f87f42167327f62f8e248995bd9f57dfbb9d61b02115a5582e257ebef9d3a36",
+        "sourceReference": "Ezekiel 1:4-5",
+        "evidence": [
+          {
+            "verse": 4,
+            "text": "Und ich sah, und siehe, es kam ein ungestümer Wind von Mitternacht her mit einer großen Wolke voll Feuer, das allenthalben umher glänzte; und mitten in dem Feuer war es lichthell."
+          },
+          {
+            "verse": 5,
+            "text": "Und darin war es gestaltet wie vier Tiere, und dieselben waren anzusehen wie Menschen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ezekiel-scroll-taste",
+      "reference": "Ezekiel 3:3",
+      "answer": "Honey",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EZK/3.json",
+      "sourceSha256": "3130e4392f1837d65c7108f6a55c15a8e5f4adc26e7865caeb67f9a661d4fd7a",
+      "evidence": [
+        {
+          "verse": 3,
+          "text": "“Son of man,” He said to me, “eat and fill your stomach with this scroll I am giving you.” So I ate, and it was as sweet as honey in my mouth."
+        }
+      ],
+      "distractors": [
+        "Milk",
+        "Wine",
+        "Oil"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EZK/3.json",
+        "sourceSha256": "47dc602fa87b1503944edd3b8a5b62194acb9312a2ad07a49f119e4a3eea74e6",
+        "sourceReference": "Ezekiel 3:3",
+        "evidence": [
+          {
+            "verse": 3,
+            "text": "und sprach zu mir: Du Menschenkind, du mußt diesen Brief, den ich dir gebe, in deinen Leib essen und deinen Bauch damit füllen. Da aß ich ihn, und er war in meinem Munde so süß wie Honig."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-ezekiel-valley-bones",
+      "reference": "Ezekiel 37:1-2",
+      "answer": "Dry bones",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/EZK/37.json",
+      "sourceSha256": "4bbc82de68b00b82b58eff90736c80dd902f81834ad75a356ce7dfeda9203812",
+      "evidence": [
+        {
+          "verse": 1,
+          "text": "The hand of the LORD was upon me, and He brought me out by His Spirit and set me down in the middle of the valley, and it was full of bones."
+        },
+        {
+          "verse": 2,
+          "text": "He led me all around among them, and I saw a great many bones on the floor of the valley, and indeed, they were very dry."
+        }
+      ],
+      "distractors": [
+        "Gold",
+        "Bread",
+        "Water"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/EZK/37.json",
+        "sourceSha256": "478b7b5e209297dfee2803fe7aac585fec34068251c4f174dd9b7bc3888aa30f",
+        "sourceReference": "Ezekiel 37:1-2",
+        "evidence": [
+          {
+            "verse": 1,
+            "text": "Und des HERRN Wort kam über mich, und er führte mich hinaus im Geist des HERRN und stellte mich auf ein weites Feld, das voller Totengebeine lag."
+          },
+          {
+            "verse": 2,
+            "text": "Und er führte mich allenthalben dadurch. Und siehe, des Gebeins lag sehr viel auf dem Feld; und siehe, sie waren sehr verdorrt."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-daniel-food-test",
+      "reference": "Daniel 1:12",
+      "answer": "10",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/DAN/1.json",
+      "sourceSha256": "0fa1e6460e6064a5a90a3342e0a5adb4b0ded96f35b6571be63970ba210744fe",
+      "evidence": [
+        {
+          "verse": 12,
+          "text": "“Please test your servants for ten days. Let us be given only vegetables to eat and water to drink."
+        }
+      ],
+      "distractors": [
+        "3",
+        "7",
+        "40"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/DAN/1.json",
+        "sourceSha256": "a4687869431ce053331d0af64de71bc51cf7bb7ecec0b7684727286db0709506",
+        "sourceReference": "Daniel 1:12",
+        "evidence": [
+          {
+            "verse": 12,
+            "text": "Versuche es doch mit deinen Knechten zehn Tage und laß uns geben Gemüse zu essen und Wasser zu trinken."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-daniel-statue-head",
+      "reference": "Daniel 2:32",
+      "answer": "Gold",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/DAN/2.json",
+      "sourceSha256": "89806952c635254a9c898648c6ec995bc817455b652db686d7cae63319fda37b",
+      "evidence": [
+        {
+          "verse": 32,
+          "text": "The head of the statue was pure gold, its chest and arms were silver, its belly and thighs were bronze,"
+        }
+      ],
+      "distractors": [
+        "Silver",
+        "Bronze",
+        "Iron"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/DAN/2.json",
+        "sourceSha256": "aad550efe55658495f3a46d26b841bd6d73d5db16b9a34a225c57452b0f6ce5e",
+        "sourceReference": "Daniel 2:32",
+        "evidence": [
+          {
+            "verse": 32,
+            "text": "Des Bildes Haupt war von feinem Golde, seine Brust und Arme waren von Silber, sein Bauch und seine Lenden waren von Erz,"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-furnace-four-men",
+      "reference": "Daniel 3:25",
+      "answer": "4",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/DAN/3.json",
+      "sourceSha256": "c290c634d3d9a55cd389ce4877fa6b59f5c8b0860455c324afa459e269bb13bc",
+      "evidence": [
+        {
+          "verse": 25,
+          "text": "“Look!” he exclaimed. “I see four men, unbound and unharmed, walking around in the fire—and the fourth looks like a son of the gods! ”"
+        }
+      ],
+      "distractors": [
+        "3",
+        "2",
+        "7"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/DAN/3.json",
+        "sourceSha256": "2e109469de13b829b988712f9a1783342019ed0b5bd7a5712e800f023f6eda6f",
+        "sourceReference": "Daniel 3:25",
+        "evidence": [
+          {
+            "verse": 25,
+            "text": "Er antwortete und sprach: Sehe ich doch vier Männer frei im Feuer gehen, und sie sind unversehrt; und der vierte ist gleich, als wäre er ein Sohn der Götter."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-belshazzar-wall-writing",
+      "reference": "Daniel 5:5",
+      "answer": "Fingers of a human hand",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/DAN/5.json",
+      "sourceSha256": "8d601a57acd73540048e5c0c882407efaa26619b9fbf76cbd06d6f1764e0efef",
+      "evidence": [
+        {
+          "verse": 5,
+          "text": "At that moment the fingers of a human hand appeared and wrote on the plaster of the wall, near the lampstand in the royal palace. As the king watched the hand that was writing,"
+        }
+      ],
+      "distractors": [
+        "A burning coal",
+        "An arrow",
+        "A sword"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/DAN/5.json",
+        "sourceSha256": "fd50a4ca8ce428429d42c3ac8c0a4f3553fbac9a2edf3b71f2c3bfa2d9809d8e",
+        "sourceReference": "Daniel 5:5",
+        "evidence": [
+          {
+            "verse": 5,
+            "text": "Eben zu derselben Stunde gingen hervor Finger wie einer Menschenhand, die schrieben, gegenüber dem Leuchter, auf die getünchte Wand in dem königlichen Saal; und der König ward gewahr der Hand, die da schrieb."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-daniel-daily-prayer",
+      "reference": "Daniel 6:10",
+      "answer": "3",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/DAN/6.json",
+      "sourceSha256": "2a2b19032e901fe33cd936345f23181b0ad7d4b3ffdad3b165f7f4e22997e050",
+      "evidence": [
+        {
+          "verse": 10,
+          "text": "Now when Daniel learned that the document had been signed, he went into his house, where the windows of his upper room opened toward Jerusalem, and three times a day he got down on his knees, prayed, and gave thanks to his God, just as he had done before."
+        }
+      ],
+      "distractors": [
+        "2",
+        "7",
+        "12"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/DAN/6.json",
+        "sourceSha256": "abc6616c1aec242aa298f973fcbf9e5566ed021f55734e60df577dcafcca2352",
+        "sourceReference": "Daniel 6:10",
+        "evidence": [
+          {
+            "verse": 10,
+            "text": "Als nun Daniel erfuhr, daß solch Gebot unterschrieben wäre, ging er hinein in sein Haus (er hatte aber an seinem Söller offene Fenster gegen Jerusalem); und er fiel des Tages dreimal auf seine Kniee, betete, lobte und dankte seinem Gott, wie er denn bisher zu tun pflegte."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-hosea-wife",
+      "reference": "Hosea 1:3",
+      "answer": "Gomer",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/HOS/1.json",
+      "sourceSha256": "82b63c8065a04edf011f7c9df55d581e330d39240743a69fa89a927c7060cb24",
+      "evidence": [
+        {
+          "verse": 3,
+          "text": "So Hosea went and married Gomer daughter of Diblaim, and she conceived and bore him a son."
+        }
+      ],
+      "distractors": [
+        "Ruth",
+        "Esther",
+        "Leah"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/HOS/1.json",
+        "sourceSha256": "b0b806b2b5ef5a818a2a6142b5572e03437dd6ebc480e21a572dfe3860fe9d40",
+        "sourceReference": "Hosea 1:3",
+        "evidence": [
+          {
+            "verse": 3,
+            "text": "Und er ging hin und nahm Gomer, die Tochter Diblaims, die ward schwanger und gebar ihm einen Sohn."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-amos-plumb-line",
+      "reference": "Amos 7:7-8",
+      "answer": "A plumb line",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/AMO/7.json",
+      "sourceSha256": "f9795cc8833b39d25acec0274974691a6dcaf62aea69d22804e68de96d4a1cca",
+      "evidence": [
+        {
+          "verse": 7,
+          "text": "This is what He showed me: Behold, the Lord was standing by a wall true to plumb, with a plumb line in His hand."
+        },
+        {
+          "verse": 8,
+          "text": "“Amos, what do you see?” asked the LORD. “A plumb line,” I replied. “Behold,” said the Lord, “I am setting a plumb line among My people Israel; I will no longer spare them:"
+        }
+      ],
+      "distractors": [
+        "A sword",
+        "A scroll",
+        "A crown"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/AMO/7.json",
+        "sourceSha256": "b924e104a025232e4eb6ead8281678f2c3f299f383fdd0e52cf166c640226157",
+        "sourceReference": "Amos 7:7-8",
+        "evidence": [
+          {
+            "verse": 7,
+            "text": "Er zeigte mir abermals ein Gesicht, und siehe, der Herr stand auf einer Mauer, mit einer Bleischnur gemessen; und er hatte die Bleischnur in seiner Hand."
+          },
+          {
+            "verse": 8,
+            "text": "Und der HERR sprach zu mir: Was siehst du, Amos? Ich sprach: Eine Bleischnur. Da sprach der Herr zu mir: Siehe, ich will eine Bleischnur ziehen mitten durch mein Volk Israel und ihm nichts mehr übersehen;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-jonah-tarshish",
+      "reference": "Jonah 1:3",
+      "answer": "Tarshish",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JON/1.json",
+      "sourceSha256": "ecb73d8e043a4d7fb265613a5de9911e47c828f5fc2fe89ea027345782693324",
+      "evidence": [
+        {
+          "verse": 3,
+          "text": "Jonah, however, got up to flee to Tarshish, away from the presence of the LORD. He went down to Joppa and found a ship bound for Tarshish. So he paid the fare and went aboard to sail for Tarshish, away from the presence of the LORD."
+        }
+      ],
+      "distractors": [
+        "Nineveh",
+        "Jerusalem",
+        "Bethlehem"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JON/1.json",
+        "sourceSha256": "8fbb35722ae12e90c0f8757ce69b07992574bcffc31ead78b3964123f67ac205",
+        "sourceReference": "Jonah 1:3",
+        "evidence": [
+          {
+            "verse": 3,
+            "text": "Aber Jona machte sich auf und floh vor dem HERRN und wollte gen Tharsis und kam hinab gen Japho. Und da er ein Schiff fand, das gen Tharsis wollte fahren, gab er Fährgeld und trat hinein, daß er mit ihnen gen Tharsis führe vor dem HERRN."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-jonah-plant-worm",
+      "reference": "Jonah 4:7",
+      "answer": "Worm",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/JON/4.json",
+      "sourceSha256": "e461155cebee90254727646a98a13920fe47b5ed64be4642886933676212370b",
+      "evidence": [
+        {
+          "verse": 7,
+          "text": "When dawn came the next day, God appointed a worm that attacked the plant so that it withered."
+        }
+      ],
+      "distractors": [
+        "Lion",
+        "Raven",
+        "Dove"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/JON/4.json",
+        "sourceSha256": "7d78640048796d1b7b448baddc554354d02537f5718e131d269ce93a1bb0435e",
+        "sourceReference": "Jonah 4:7",
+        "evidence": [
+          {
+            "verse": 7,
+            "text": "Aber Gott verschaffte einen Wurm des Morgens, da die Morgenröte anbrach; der stach den Rizinus, daß er verdorrte."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-haggai-timber",
+      "reference": "Haggai 1:8",
+      "answer": "Timber",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/HAG/1.json",
+      "sourceSha256": "e247593ea6295666367e926bd9d08cdbc742b980a887c811437ac5a1cd306996",
+      "evidence": [
+        {
+          "verse": 8,
+          "text": "Go up into the hills, bring down lumber, and build the house, so that I may take pleasure in it and be glorified, says the LORD."
+        }
+      ],
+      "distractors": [
+        "Gold",
+        "Silver",
+        "Oil"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/HAG/1.json",
+        "sourceSha256": "f42308bed899377853c3c992c4ac0cfc05c52cccdba5ea30352bd4ec16c659a5",
+        "sourceReference": "Haggai 1:8",
+        "evidence": [
+          {
+            "verse": 8,
+            "text": "Gehet hin auf das Gebirge und holet Holz und bauet das Haus; das soll mir angenehm sein, und ich will meine Ehre erzeigen, spricht der HERR."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-zechariah-olive-trees",
+      "reference": "Zechariah 4:3",
+      "answer": "2",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/ZEC/4.json",
+      "sourceSha256": "9bdfbf5076794290a72e8b9aa49ab045a025a2d7c72b81d2828a45d3bedcf7b4",
+      "evidence": [
+        {
+          "verse": 3,
+          "text": "There are also two olive trees beside it, one on the right side of the bowl and the other on its left.”"
+        }
+      ],
+      "distractors": [
+        "3",
+        "7",
+        "12"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/ZEC/4.json",
+        "sourceSha256": "f65e1f493162943a046f47e8f06b312bd54238fbc3149ed7dab259cf20afbca4",
+        "sourceReference": "Zechariah 4:3",
+        "evidence": [
+          {
+            "verse": 3,
+            "text": "und zwei Ölbäume dabei, einer zur Rechten der Schale, der andere zur Linken."
+          }
+        ]
+      }
+    },
+    {
+      "id": "v3-malachi-storehouse",
+      "reference": "Malachi 3:10",
+      "answer": "Storehouse",
+      "chapterUrl": "https://bible.helloao.org/api/BSB/MAL/3.json",
+      "sourceSha256": "666fa5bc269c649bf0a87dacc88eabf136f6dc633b1a1a3fad201c60073e8537",
+      "evidence": [
+        {
+          "verse": 10,
+          "text": "Bring the full tithe into the storehouse, so that there may be food in My house. Test Me in this,” says the LORD of Hosts. “See if I will not open the windows of heaven and pour out for you blessing without measure."
+        }
+      ],
+      "distractors": [
+        "City gate",
+        "Palace",
+        "Threshing floor"
+      ],
+      "germanWordingCheck": {
+        "sourceUrl": "https://bible.helloao.org/api/deu_l12/MAL/3.json",
+        "sourceSha256": "3a0fb93a847b8d02faef425713390fe6c2e2b8b718d3f02448979edc8edb8a51",
+        "sourceReference": "Malachi 3:10",
+        "evidence": [
+          {
+            "verse": 10,
+            "text": "Bringt mir den Zehnten ganz in mein Kornhaus, auf daß in meinem Hause Speise sei, und prüft mich hierin, spricht der HERR Zebaoth, ob ich euch nicht des Himmels Fenster auftun werde und Segen herabschütten die Fülle."
+          }
+        ]
+      }
+    }
+  ]
+}

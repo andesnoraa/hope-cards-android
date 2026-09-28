@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.model
 
+import java.io.File
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -17,6 +18,9 @@ class BibleReferenceFormatterTest {
             ),
             Translation.LSG1910 to mapOf(
                 "Isaiah 41:10" to "Ésaïe 41:10",
+                "Ezekiel 3:3" to "Ézéchiel 3:3",
+                "Song of Solomon 2:1" to "Cantique des Cantiques 2:1",
+                "2 Chronicles 3:1" to "2 Chroniques 3:1",
                 "James 1:5" to "Jacques 1:5",
                 "1 Thessalonians 5:16-18" to "1 Th 5:16-18",
             ),
@@ -100,6 +104,31 @@ class BibleReferenceFormatterTest {
 
         assertEquals("1 Thessalonians 5:18", verse.reference)
         assertEquals("1 Thess 5:18", verse.displayReference)
+    }
+
+    @Test
+    fun coversEveryReferenceInTheBundledQuizBankForEveryEdition() {
+        val quizSource = File("src/main/assets/quiz/questions.json").readText()
+        // Include canonical references and edition-specific reference overrides.
+        val references = Regex("\"reference\"\\s*:\\s*\"([^\"]+)\"")
+            .findAll(quizSource)
+            .map { it.groupValues[1] }
+            .toSet()
+        assertTrue("Quiz reference coverage must read the bundled bank", references.isNotEmpty())
+
+        Translation.entries.forEach { translation ->
+            references.forEach { reference ->
+                assertTrue(
+                    "Missing $reference for ${translation.id}",
+                    BibleReferenceFormatter.hasLocalizedBookTitle(reference, translation),
+                )
+                assertTrue(
+                    "Changed verse address for $reference in ${translation.id}",
+                    BibleReferenceFormatter.formatFull(reference, translation)
+                        .endsWith(reference.substringAfterLast(' ')),
+                )
+            }
+        }
     }
 
     @Test

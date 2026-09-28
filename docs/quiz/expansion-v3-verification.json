@@ -1,0 +1,57 @@
+{
+  "checkedOn": "2026-09-28",
+  "contentVersion": 3,
+  "totalQuestions": 400,
+  "addedQuestions": 200,
+  "locales": [
+    "en",
+    "ml",
+    "de",
+    "fr",
+    "it",
+    "es",
+    "fil"
+  ],
+  "localizedEntries": 2800,
+  "bankSha256": "05f293b46729e10c857db7f0485df250295a38558701870cb2f852665ad4c57a",
+  "assetBytes": 996133,
+  "original200QuestionObjectsUnchanged": true,
+  "checks": {
+    "uniqueIds": true,
+    "uniqueNormalizedPromptsPerLocale": true,
+    "fourDistinctNormalizedOptionsPerQuestionPerLocale": true,
+    "storyReferencesDoNotOverlapRecognitionPassages": true,
+    "all200AdditionsMatchSourceRecords": true,
+    "deterministicRebuild": true,
+    "duplicateRejectionVerifiedInEveryLocale": true,
+    "recognitionPassageOverlapRejectionVerified": true,
+    "debugApkContainsVerifiedAsset": true
+  },
+  "semanticReview": "Reviewed all original and new story prompts, answers and references for repeated tested facts and parallel-account rephrasings. Replaced overlapping drafts. Final two recognition-passage overlaps were replaced with fresh facts; no remaining duplicate identified. Model-led review, not independent human editorial certification.",
+  "unitTests": {
+    "tests": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentedTests": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentedDevice": "Isolated Medium Tablet emulator, Android 15 (API 35)",
+  "instrumentedCoverage": [
+    "400-question deck persistence and independent language queues",
+    "complete localized bank and book references for all ten Bible editions",
+    "full round scoring and saved-state restoration",
+    "large Malayalam text"
+  ],
+  "lintDebug": "passed",
+  "debugBuild": "passed",
+  "releaseArtifactProduced": false,
+  "verificationNotes": [
+    "The initial emulator run exposed missing book-title mappings; 50 mappings were added and asset-driven JVM coverage now checks every quiz reference.",
+    "The initial full-round UI check was interrupted by another project running tests on the shared phone emulator. The final four checks passed on an isolated tablet instance."
+  ]
+}

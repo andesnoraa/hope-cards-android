@@ -5,13 +5,13 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class QuizQuestionRotationTest {
-    private val bank = (1..200).map { "q$it" }
+    private val bank = (1..400).map { "q$it" }
 
-    @Test fun twentyRoundsUseEveryQuestionBeforeRepeating() {
+    @Test fun fortyRoundsUseEveryQuestionBeforeRepeating() {
         var deck = QuizQuestionRotation()
         val seen = mutableSetOf<String>()
         var previous = emptyList<String>()
-        repeat(20) {
+        repeat(40) {
             val (round, next) = deck.draw(bank, Random(it))
             assertEquals(10, round.size)
             assertEquals(10, round.distinct().size)
@@ -21,8 +21,24 @@ class QuizQuestionRotationTest {
             deck = next
         }
         assertEquals(bank.toSet(), seen)
-        val (nextRound, _) = deck.draw(bank, Random(21))
+        val (nextRound, _) = deck.draw(bank, Random(41))
         assertTrue(nextRound.none { it in previous })
+    }
+
+    @Test fun expandingFromTwoHundredToFourHundredPreservesProgressWithoutRepeats() {
+        val original = bank.take(200)
+        val (first, savedDeck) = QuizQuestionRotation().draw(original, Random(7))
+        var deck = savedDeck
+        val seen = first.toMutableSet()
+        repeat(39) { seed ->
+            val (round, next) = deck.draw(bank, Random(seed))
+            assertEquals(10, round.size)
+            assertTrue(round.none { it in seen })
+            seen.addAll(round)
+            deck = next
+        }
+        assertEquals(bank.toSet(), seen)
+        assertTrue(deck.remaining.isEmpty())
     }
 
     @Test fun contentUpdatesRetainUnseenQuestionsAndIncludeAdditions() {
