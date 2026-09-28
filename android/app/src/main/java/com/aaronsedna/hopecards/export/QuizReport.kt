@@ -11,17 +11,18 @@ import android.text.TextPaint
 import androidx.core.content.res.ResourcesCompat
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.*
-import com.aaronsedna.hopecards.ui.forQuizTranslation
+import com.aaronsedna.hopecards.ui.QuizReviewContent
+import kotlin.math.ceil
 import java.io.OutputStream
 
 /** Immutable, localized snapshot. Sharing never changes the completed quiz. */
 class QuizReport(context: Context, translation: Translation, session: QuizSession, questions: List<QuizQuestion>) {
-    val resources = context.forQuizTranslation(translation).resources
-    val title = resources.getString(R.string.quiz_report_title)
+    val review = QuizReviewContent(context, translation, session, questions)
+    val resources = review.resources
+    val title = review.title
     private val language = QuizLanguage.forTranslation(translation)
-    private val edition = resources.getString(R.string.quiz_selected_edition, language.nativeName, translation.label)
-    private val byId = questions.associateBy { it.id }
-    val score = resources.getString(R.string.quiz_score, session.score(byId), session.questionIds.size)
+    private val edition = review.edition
+    val score = review.score
     private val invitation = resources.getString(R.string.quiz_share_invite)
     private val install = resources.getString(R.string.quiz_report_install)
     private val attribution = resources.getString(R.string.quiz_pdf_share_attribution)
@@ -41,35 +42,30 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
         val fill: Int? = null,
         val inset: Int = 0,
         val brand: Boolean = false,
+        val compact: Boolean = false,
     )
 
     private val groups: List<List<Block>>
     init {
-        require(session.finished && session.questionIds.isNotEmpty() && session.answers.size == session.questionIds.size)
-        groups = session.questionIds.mapIndexed { index, id ->
-            val q = byId.getValue(id)
-            val selected = session.answers[index]
-            val unanswered = selected == -1
-            val correct = selected == q.correctIndex
+        groups = review.answers.map { answer ->
+            val unanswered = answer.outcome == QuizReviewContent.Outcome.UNANSWERED
+            val correct = answer.outcome == QuizReviewContent.Outcome.CORRECT
             val answerColor = when { unanswered -> MUTED; correct -> GREEN; else -> RED }
             buildList {
-                val passageStart = q.question.indexOf("\n\n")
-                if (passageStart >= 0) {
-                    add(Block("${index + 1}. ${q.question.substring(0, passageStart)}", size = 12f, bold = true, gap = 9))
-                    // Keep the question prominent without making a long quoted passage visually heavy.
-                    add(Block(q.question.substring(passageStart + 2), size = 11f, gap = 9))
-                } else add(Block("${index + 1}. ${q.question}", size = 12f, bold = true, gap = 7))
-                add(Block(resources.getString(when { unanswered -> R.string.quiz_unanswered; correct -> R.string.quiz_correct; else -> R.string.quiz_incorrect }),
-                    size = 9.5f, bold = true, color = answerColor, gap = 9))
-                add(Block(resources.getString(R.string.quiz_your_answer,
-                    if (unanswered) resources.getString(R.string.quiz_unanswered) else q.options[selected]),
+                add(Block(answer.prompt, size = 12f, bold = true, gap = 9))
+                answer.passage?.let { add(Block(it, size = 11f, gap = 9)) }
+                add(Block(answer.status, size = 9.5f, bold = true, color = answerColor, gap = 9,
+                    fill = when { unanswered -> IVORY; correct -> GREEN_WASH; else -> RED_WASH }, inset = 8, compact = true))
+                add(Block(answer.selectedAnswer,
                     color = answerColor,
                     fill = when { unanswered -> IVORY; correct -> GREEN_WASH; else -> RED_WASH }, inset = 10, gap = 5))
-                add(Block(resources.getString(R.string.quiz_correct_answer, q.options[q.correctIndex]),
+                add(Block(answer.correctAnswer,
                     bold = true, color = GREEN, fill = GREEN_WASH, inset = 10, gap = 10))
-                if (q.explanation.isNotBlank()) add(Block(q.explanation, color = MUTED, gap = 8))
-                add(Block("${resources.getString(R.string.quiz_reference)}: ${BibleReferenceFormatter.formatFull(q.reference, translation)}",
-                    size = 9.5f, bold = true, color = INK, gap = 0))
+                if (answer.explanation.isNotBlank()) {
+                    add(Block(review.explanationLabel, size = 9.5f, bold = true, gap = 3))
+                    add(Block(answer.explanation, gap = 8))
+                }
+                add(Block(answer.reference, size = 9.5f, bold = true, color = INK, gap = 0, fill = IVORY, inset = 10))
             }
         }
     }
@@ -81,14 +77,17 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
     data class Panel(val left: Int, val top: Int, val width: Int, val height: Int, val color: Int, val border: Boolean = false, val radius: Float = 10f)
     data class Pages(val paper: Paper, val content: List<List<Fragment>>, val panels: List<List<Panel>>)
 
-    private fun textLayout(block: Block, width: Int): StaticLayout =
-        StaticLayout.Builder.obtain(block.text, 0, block.text.length, TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
+    private fun textLayout(block: Block, width: Int): StaticLayout {
+        val paint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
             textSize = block.size
             typeface = if (block.brand) brandFont else if (block.bold) semibold else regular
             color = block.color
-        }, width).setAlignment(Layout.Alignment.ALIGN_NORMAL)
+        }
+        val layoutWidth = if (block.compact) minOf(width, ceil(Layout.getDesiredWidth(block.text, paint).toDouble()).toInt() + 1) else width
+        return StaticLayout.Builder.obtain(block.text, 0, block.text.length, paint, layoutWidth).setAlignment(Layout.Alignment.ALIGN_NORMAL)
             .setLineSpacing(if (language == QuizLanguage.MALAYALAM) 4f else 2.5f, 1f)
             .setIncludePad(true).build()
+    }
 
     fun layout(paper: Paper = Paper(), signal: CancellationSignal = CancellationSignal()): Pages {
         signal.throwIfCanceled()
@@ -124,6 +123,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
                 panels.last().add(Panel(paper.left, top, width, y - top, INK, radius = 14f))
                 panels.last().add(Panel(paper.left + padding, top + 7, 28, 2, GOLD, radius = 1f))
                 y += 15
+                place(Block(review.reviewTitle, 13f, bold = true, gap = 12), paper.left, width)
             } else {
                 place(Block(title, 14f, bold = true, gap = 2), paper.left, width)
                 place(Block(edition, 9f, color = MUTED, gap = 10), paper.left, width)
@@ -165,6 +165,10 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
                 signal.throwIfCanceled()
                 var first = 0
                 val insetY = if (block.fill != null) 6 else 0
+                // Keep each answer panel whole whenever it fits on a clean continuation page.
+                val blockHeight = text.height + insetY * 2
+                val continuationRoom = limit - bodyTop - padding * 2
+                if (cardHasText && blockHeight <= continuationRoom && y + blockHeight > limit - padding) continueCard()
                 while (first < text.lineCount) {
                     val available = limit - padding - y - insetY * 2
                     var end = first
@@ -172,7 +176,9 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
                     if (end == first) { continueCard(); continue }
                     val height = text.getLineBottom(end - 1) - text.getLineTop(first)
                     block.fill?.let { fill ->
-                        panels.last().add(Panel(paper.left + padding, y, textWidth, height + insetY * 2, fill, radius = 6f))
+                        panels.last().add(Panel(paper.left + padding, y,
+                            if (block.compact) text.width + block.inset * 2 else textWidth,
+                            height + insetY * 2, fill, radius = 6f))
                     }
                     content.last().add(Fragment(text, first, end, y + insetY, paper.left + padding + block.inset))
                     y += height + insetY * 2

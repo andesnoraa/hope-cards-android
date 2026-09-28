@@ -1,0 +1,149 @@
+{
+  "base_commit": "ba5687c1176f704bfb97f2e6a47e36fe06c7c9e8",
+  "branch": "codex/quiz-review-pdf-parity",
+  "build": "PASS",
+  "unit_tests": {
+    "passed": 82,
+    "failed": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 51,
+    "new_warning_ids_or_counts": false
+  },
+  "pdf_and_content_tests": {
+    "passed": 9,
+    "failed": 0,
+    "languages": 7,
+    "paper_sizes": [
+      "A4 portrait",
+      "A4 landscape",
+      "A6 portrait"
+    ],
+    "coverage": [
+      "selected and correct answer parity",
+      "question and choice order",
+      "unanswered questions",
+      "oversized content without missing or repeated lines",
+      "whole normal answer panels",
+      "temporary PDF read permission",
+      "cancellation"
+    ]
+  },
+  "native_screen_checks": {
+    "pre_final_width_fix": {
+      "passed": [
+        "Malayalam default font",
+        "Malayalam 200% font"
+      ],
+      "failed": [
+        "English default font",
+        "Midnight theme"
+      ],
+      "failure_detail": "Text node shrink-wrapped to 851px while paragraph width was 860px; last glyph ended at 851px. Strict overflow assertion retained. Body and heading text now use full column width."
+    },
+    "after_final_width_fix": "PENDING: release-audit task owns the four QuizReviewScreenTest reruns on the shared emulator. Do not report these final checks as passed yet."
+  },
+  "pdf_visual_review": {
+    "status": "PASS",
+    "pages_inspected": 4,
+    "sample_documents": 2,
+    "issues": []
+  },
+  "contrast_ratio": {
+    "unanswered": 5.44,
+    "correct": 6.26,
+    "incorrect": 6.57,
+    "white_summary_text": 14.74
+  },
+  "sources": [
+    {
+      "path": "android/app/src/main/java/com/aaronsedna/hopecards/export/QuizReport.kt",
+      "bytes": 13916,
+      "sha256": "a53c69a34aee348af2aad8f6d1c19e68fe513dd5e4e60d9a1aeedd7105a11538"
+    },
+    {
+      "path": "android/app/src/main/java/com/aaronsedna/hopecards/ui/screens/BibleQuizScreen.kt",
+      "bytes": 39111,
+      "sha256": "d5fc335fbffa52da65afee4841ed6834950407c1a558e843b27dc7719b6e061e"
+    },
+    {
+      "path": "android/app/src/main/java/com/aaronsedna/hopecards/ui/QuizReviewContent.kt",
+      "bytes": 3015,
+      "sha256": "a7a9e646f93c2ee72bdeea8205e8cea061e1b697e019db0b2df6530763833118"
+    },
+    {
+      "path": "android/app/src/main/java/com/aaronsedna/hopecards/ui/screens/QuizReviewCards.kt",
+      "bytes": 5870,
+      "sha256": "ec19c51759e1852451d55365abe2f3ee2271f0fbb0423a7bd19023790ed5f058"
+    },
+    {
+      "path": "android/app/src/androidTest/java/com/aaronsedna/hopecards/ui/QuizReviewParityTest.kt",
+      "bytes": 4232,
+      "sha256": "a9f2a909059d02e518800366a21016217e228ff7c6376486568f549ba65fcc39"
+    },
+    {
+      "path": "android/app/src/androidTest/java/com/aaronsedna/hopecards/ui/QuizReviewScreenTest.kt",
+      "bytes": 5470,
+      "sha256": "1d3931f3d991429684ab62bca22f64de390751b036a5ffcbdeae211f7cf9ea36"
+    },
+    {
+      "path": "android/app/src/main/res/values/quiz_review.xml",
+      "bytes": 128,
+      "sha256": "de2bc5bfe97d290e6bc3a62f03d2304494619b27f27929cb6cbbacde3d2c840b"
+    },
+    {
+      "path": "android/app/src/main/res/values-ml/quiz_review.xml",
+      "bytes": 144,
+      "sha256": "fca7ac8a56478f8c6c91b5d98bff420b38ffa1b8cbf11aaad72bdad0c20e591a"
+    },
+    {
+      "path": "android/app/src/main/res/values-de/quiz_review.xml",
+      "bytes": 127,
+      "sha256": "a40f9b4e9155e54f31e91ce96406a8e591ab03d1ba6c7f8634ccbf71b03d427d"
+    },
+    {
+      "path": "android/app/src/main/res/values-es/quiz_review.xml",
+      "bytes": 129,
+      "sha256": "67ec104da51a04579ecd07d6cbf30bccaa895c58568c7346d502310d2df2851c"
+    },
+    {
+      "path": "android/app/src/main/res/values-fr/quiz_review.xml",
+      "bytes": 128,
+      "sha256": "8edbfa2e93be48b4401cf6e02557a5316d28a636cde8917b3b0b10a2a08f23c0"
+    },
+    {
+      "path": "android/app/src/main/res/values-it/quiz_review.xml",
+      "bytes": 128,
+      "sha256": "8895f37797dd92fbc5c9567fd4865749a73498b873790ffe1216b298b55321db"
+    },
+    {
+      "path": "android/app/src/main/res/values-fil/quiz_review.xml",
+      "bytes": 126,
+      "sha256": "1b3a31047ff6293b8e7b1a003c18172391a514f37bd26c342233407744661a2d"
+    }
+  ],
+  "local_artifacts": [
+    {
+      "path": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 50620793,
+      "sha256": "0ec294e68f3bdf6774668c0c9975697ff7732556714f6ff0436b0acde48f50bc"
+    },
+    {
+      "path": "android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+      "bytes": 50952200,
+      "sha256": "4fb9a9f0ea3a147b79c0e2fccf0c8849e74816a79022fe49bf4718c26460ce6c"
+    },
+    {
+      "path": "output/quiz-review-2026-09-28/quiz-review/english.pdf",
+      "bytes": 17385,
+      "sha256": "b4eae2f8e50eec81a4722712b59d0f1564d7b738235cf6898cae26a5cd174b34"
+    },
+    {
+      "path": "output/quiz-review-2026-09-28/quiz-review/malayalam.pdf",
+      "bytes": 65491,
+      "sha256": "0105134d280a12e1ff2a7c3e8a2a6f564925f2eefa8c8c870a966519fc3df510"
+    }
+  ],
+  "device_scope": "Only isolated emulator debug package modified; no physical-device installation or Play artifact produced by this task."
+}

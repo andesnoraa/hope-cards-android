@@ -94,6 +94,7 @@ import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import com.aaronsedna.hopecards.ui.quizString
+import com.aaronsedna.hopecards.ui.QuizReviewContent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
@@ -173,6 +174,9 @@ fun BibleQuizScreen(
     var review by rememberSaveable(language) { mutableStateOf(false) }
     var showCertificates by rememberSaveable(language) { mutableStateOf(false) }
     val context = LocalContext.current.applicationContext
+    val reviewContent = remember(context, translation, session, questions) {
+        if (session.finished) QuizReviewContent(context, translation, session, questions) else null
+    }
     val vibration = remember(context) { QuizVibration(context) }
     val preferences = remember(context) { context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE) }
     var soundEnabled by remember(preferences) { mutableStateOf(preferences.getBoolean("sound", true)) }
@@ -399,7 +403,10 @@ fun BibleQuizScreen(
                     session.finished -> {
                         item {
                             Column(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                                if (review) QuizText(quizString(translation, R.string.quiz_review), translation, heading = true)
+                                if (review) {
+                                    QuizReviewSummary(requireNotNull(reviewContent), translation)
+                                    QuizText(reviewContent.reviewTitle, translation, heading = true)
+                                }
                                 if (!review) {
                                     Surface(color = colors.surface, shape = RoundedCornerShape(20.dp), border = BorderStroke(1.dp, colors.divider)) {
                                         Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -425,22 +432,11 @@ fun BibleQuizScreen(
                                 }
                             }
                         }
-                        if (review) itemsIndexed(session.questionIds, key = { _, id -> id }) { index, id ->
-                            val q = byId.getValue(id)
-                            Surface(color = colors.surface, shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, colors.divider)) {
-                                Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                    QuizText("${index + 1}. ${q.question}", translation)
-                                    val correct = session.answers[index] == q.correctIndex
-                                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                        AppIcon(if (correct) AppIconGlyph.CheckmarkCircleOutline else AppIconGlyph.Close, null, if (correct) success else colors.danger)
-                                        QuizText(quizString(translation, R.string.quiz_your_answer,
-                                            q.options.getOrNull(session.answers[index]) ?: quizString(translation, R.string.quiz_unanswered)),
-                                            translation, small = true, modifier = Modifier.weight(1f), color = if (correct) success else colors.danger)
-                                    }
-                                    if (!correct) QuizText(quizString(translation, R.string.quiz_correct_answer, q.options[q.correctIndex]), translation, small = true, color = success)
-                                    QuizExplanation(q, translation)
-                                }
-                            }
+                        if (review) itemsIndexed(requireNotNull(reviewContent).answers, key = { _, answer -> answer.id }) { _, answer ->
+                            QuizReviewCard(answer, reviewContent.explanationLabel, translation)
+                        }
+                        if (review) item {
+                            QuizResultActions(translation, session, questions)
                         }
                         if (review) item {
                             QuizButton(quizString(translation, R.string.quiz_back_results), translation, { review = false }, tag = "quiz_back_results")
@@ -611,13 +607,6 @@ private fun QuizAnswerFeedback(question: QuizQuestion, translation: Translation,
             if (question.explanation.isNotBlank()) QuizText(question.explanation, translation, small = true)
         }
     }
-}
-
-@Composable
-private fun QuizExplanation(question: QuizQuestion, translation: Translation) {
-    // Keep the explanation and its citation together; allow natural wrapping for long languages.
-    val reference = BibleReferenceFormatter.formatFull(question.reference, translation)
-    QuizText(if (question.explanation.isBlank()) reference else "${question.explanation} ($reference)", translation, small = true)
 }
 
 @Composable
