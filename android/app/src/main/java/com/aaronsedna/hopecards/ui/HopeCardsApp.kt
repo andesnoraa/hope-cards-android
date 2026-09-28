@@ -109,6 +109,7 @@ import com.aaronsedna.hopecards.ui.theme.HopeCardsTheme
 import com.aaronsedna.hopecards.ui.theme.ClassicHopeColors
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.Poppins
+import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.Dispatchers
@@ -431,9 +432,11 @@ fun HopeCardsApp(
                                 when {
                                     state.selectedVerse != null -> appString(com.aaronsedna.hopecards.R.string.verse)
                                     state.destination == Destination.VERSE_ART && artworkId == null -> VerseArtCatalog.title(artCategoryId)
+                                    state.destination == Destination.BIBLE_QUIZ -> quizString(state.settings.preferredTranslation, com.aaronsedna.hopecards.R.string.nav_bible_quiz)
                                     else -> destinationTitle(state.destination)
                                 },
-                                fontFamily = Poppins,
+                                fontFamily = if (state.destination == Destination.BIBLE_QUIZ) interfaceFontFor(state.settings.preferredTranslation) else Poppins,
+                                fontSize = if (state.destination == Destination.BIBLE_QUIZ) 21.sp else androidx.compose.ui.unit.TextUnit.Unspecified,
                                 fontWeight = FontWeight.Bold,
                             )
                         },
@@ -454,6 +457,7 @@ fun HopeCardsApp(
                                 )
                             }
                         },
+                        expandedHeight = if (state.destination == Destination.BIBLE_QUIZ) 56.dp else TopAppBarDefaults.TopAppBarExpandedHeight,
                         colors = TopAppBarDefaults.topAppBarColors(
                             containerColor = when (state.destination) {
                                 Destination.HOME -> colors.homeBackground

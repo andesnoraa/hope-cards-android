@@ -7,18 +7,23 @@ import com.aaronsedna.hopecards.model.Translation
 import com.aaronsedna.hopecards.model.VerseArtCatalog
 import com.aaronsedna.hopecards.model.VerseArtEligibility
 import kotlinx.coroutines.runBlocking
+import org.json.JSONArray
+import org.json.JSONObject
 import org.junit.Assert.*
 import org.junit.Test
 import java.io.File
 
 class VerseArtRotationInstrumentedTest {
     private val context get() = InstrumentationRegistry.getInstrumentation().targetContext
+    private val september27Backgrounds = setOf("scene-water-lily-stillness", "scene-coast-after-rain",
+        "scene-vineyard-light", "scene-firefly-evening")
 
     @Test fun newBackgroundsDecodeAndFitEachEdition() {
         val backgrounds = context.assets.list("verse-art-renderer/backgrounds")!!.filter { it.startsWith("scene-") }
         assertEquals(setOf("scene-desert-stars", "scene-magnolia-morning", "scene-olive-sunlight",
             "scene-winter-silence", "scene-autumn-stillness", "scene-rainy-fern", "scene-songbird-blossom",
-            "scene-stars-over-lake"), backgrounds.map { it.removeSuffix(".webp") }.toSet())
+            "scene-stars-over-lake") + september27Backgrounds,
+            backgrounds.map { it.removeSuffix(".webp") }.toSet())
         val renderer = VerseArtRenderer(context)
         val repository = VerseRepository(context)
         val output = File(context.getExternalFilesDir(null), "verse-art-new-backgrounds").apply { mkdirs() }
@@ -45,6 +50,47 @@ class VerseArtRotationInstrumentedTest {
                 bitmap.recycle()
             }
         }
+    }
+
+    @Test fun approvedBackgroundsAppearInRotationAndShareTheSelectedEdition(): Unit = runBlocking {
+        val renderer = VerseArtRenderer(context)
+        val art = checkNotNull(VerseArtCatalog.artwork("peace-psalm-56-3"))
+        val output = File(context.getExternalFilesDir(null), "verse-art-approved-september-27").apply { mkdirs() }
+        val previews = JSONArray()
+        for (edition in listOf(Translation.WEB, Translation.MAL1910)) {
+            val verse = VerseArtImages.verse(context, art, edition)
+            val baseDesign = renderer.design(verse)
+            assertTrue(VerseArtEligibility.includes(verse))
+            for (background in september27Backgrounds) {
+                val visit = checkNotNull((0L..99L).firstOrNull { renderer.design(verse, it).background == background }) {
+                    "Approved background is missing from gallery rotation: $background"
+                }
+                val rotated = renderer.design(verse, visit)
+                assertEquals("Rotation must preserve native verse typography", baseDesign,
+                    rotated.copy(background = baseDesign.background))
+                assertEquals(background, VerseArtImages.gallery(context, edition, visit).scenes.getValue(art.id).background)
+                val thumbnail = VerseArtImages.image(context, art, edition, 360, visit)
+                assertEquals(360, thumbnail.width)
+                assertEquals(360, thumbnail.height)
+                val jpeg = VerseArtImages.jpeg(context, art, edition, visit)
+                val share = VerseArtFiles.shareIntent(context, art, edition, visit)
+                val uri = checkNotNull(share.clipData).getItemAt(0).uri
+                val sharedBytes = context.contentResolver.openInputStream(uri)!!.use { it.readBytes() }
+                assertArrayEquals("Share must export the background shown in the gallery", jpeg.readBytes(), sharedBytes)
+                val sharedBitmap = checkNotNull(BitmapFactory.decodeByteArray(sharedBytes, 0, sharedBytes.size))
+                assertEquals(1080, sharedBitmap.width)
+                assertEquals(1080, sharedBitmap.height)
+                sharedBitmap.recycle()
+                val previewName = "$background-${edition.id}.jpg"
+                File(output, previewName).writeBytes(sharedBytes)
+                previews.put(JSONObject().put("background", background).put("edition", edition.id)
+                    .put("artworkId", art.id).put("verseId", verse.id).put("rotation", visit)
+                    .put("reference", verse.displayReference).put("text", verse.text).put("file", previewName))
+            }
+        }
+        File(output, "manifest.json").writeText(previews.toString(2))
+        assertTrue(VerseArtImages.memoryBytes() <= 8 * 1024 * 1024)
+        VerseArtImages.clearMemory()
     }
 
     @Test fun rotationUsesBoundedCachesAndExportsTheDisplayedBackground(): Unit = runBlocking {

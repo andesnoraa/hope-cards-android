@@ -2,31 +2,43 @@ Découvrez chaque jour un verset biblique pour avancer avec espérance, réflexi
 
 Hope Cards est une application de versets bibliques conçue pour vous aider à créer une habitude simple autour de la Parole. Tirez une carte, lisez le verset du jour, enregistrez vos passages favoris et ajoutez des notes de journal liées à l’Écriture. Aucun programme de lecture compliqué et aucun compte ne sont nécessaires.
 
-CARTES DE VERSETS BIBLIQUES
+Quiz biblique dans votre langue
+
+Explorez les personnages, les lieux et les événements de la Bible dans des séries de questions aléatoires. Le quiz suit la langue de la traduction biblique choisie. Vérifiez les réponses avec leurs références bibliques et partagez un rapport PDF comprenant les questions, vos réponses et les bonnes réponses. Les questions sont disponibles hors connexion. Jouez à votre rythme ou activez un compte à rebours de 30 secondes par question. Le quiz passe automatiquement à la suite lorsque le temps est écoulé. Le minuteur est désactivé au départ et mémorise votre choix. Le son est activé au départ, peut être désactivé et émet des bips pendant les cinq dernières secondes.
+
+Création d’attestations de participation au quiz biblique
+
+Créez des attestations de participation au format PDF A4. Saisissez plusieurs noms à la fois pour générer un document distinct pour chaque personne. Choisissez l’anglais ou une autre langue biblique prise en charge, indiquez le nom du concours et sélectionnez la date. Le nom de l’organisation est facultatif. Partagez une attestation ou tous les PDF ensemble.
+
+Images de versets à partager
+
+Créez des images de versets sur des fonds naturels : fleurs, oiseaux, littoraux et ciels étoilés. Les arrière-plans changent à l’ouverture de la galerie. Enregistrez les images ou partagez-les avec vos proches.
+
+Cartes de versets bibliques
 
 Tirez un verset encourageant lorsque vous avez besoin d’un moment calme. Chaque carte offre un espace clair et soigné pour lire et réfléchir.
 
-VERSET DU JOUR ET RAPPELS
+Daily Hope et rappels
 
 Commencez la journée avec un nouveau verset. Programmez un rappel biblique quotidien à l’heure qui convient à votre rythme.
 
-FAVORIS ET JOURNAL BIBLIQUE
+Favoris et journal biblique
 
 Gardez les versets importants dans vos favoris. Ajoutez une pensée, une prière ou une note personnelle à un passage, puis retrouvez ensemble le verset et votre journal.
 
-TRADUCTIONS ET LANGUES DE LA BIBLE
+Traductions et langues de la Bible
 
 Choisissez parmi BSB, BBE, King James Version (KJV), World English Bible (WEB) et les traductions prises en charge en français, espagnol, allemand, italien, malayalam et tagalog.
 
-AUTRES FONCTIONNALITÉS
+Autres fonctionnalités
 
-• Partager des versets avec vos proches
-• Choisir parmi des thèmes de cartes élégants
-• Sauvegarder et restaurer favoris, journal et réglages
-• Écouter, si vous le souhaitez, une musique paisible pendant la lecture
-• Lire confortablement sur téléphone et tablette
+Partager des versets avec vos proches
+Choisir parmi des thèmes de cartes élégants
+Sauvegarder et restaurer favoris, journal et réglages
+Écouter, si vous le souhaitez, une musique paisible dans Daily Hope
+Lire confortablement sur téléphone et tablette
 
-TOUTES LES FONCTIONNALITÉS SONT ACCESSIBLES
+Toutes les fonctionnalités sont accessibles
 
 La lecture, les thèmes, les rappels, les favoris et le journal sont accessibles à tous. Quelques publicités contribuent au maintien de Hope Cards. Un achat unique sur Google Play peut supprimer définitivement les publicités ; aucun abonnement n’est nécessaire.
 

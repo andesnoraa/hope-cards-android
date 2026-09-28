@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_language_label">സർട്ടിഫിക്കറ്റിന്റെ ഭാഷ</string>
+    <string name="quiz_certificate_language_hint">പേരുകളും നിങ്ങൾ നൽകിയ വിവരങ്ങളും അതേപടി നിലനിൽക്കും. സർട്ടിഫിക്കറ്റിൽ വേണ്ട ഭാഷയിൽ അവ നൽകുക.</string>
+    <string name="quiz_certificate_language_ready">സർട്ടിഫിക്കറ്റിന്റെ ഭാഷ: %1$s</string>
+    <string name="quiz_certificate_date_confirm">തീയതി സജ്ജമാക്കുക</string>
+    <string name="quiz_certificate_date_cancel">റദ്ദാക്കുക</string>
+    <string name="quiz_certificate_date_picker_title">സർട്ടിഫിക്കറ്റിന്റെ തീയതി തിരഞ്ഞെടുക്കുക</string>
+</resources>

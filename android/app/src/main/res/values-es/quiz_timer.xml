@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_enable_timer">Temporizador de cuenta atrás</string>
+    <string name="quiz_timer_description">%1$d segundos por pregunta. Al agotarse el tiempo, pasa a la siguiente pregunta.</string>
+    <string name="quiz_elapsed_time">Tiempo empleado: %1$s</string>
+    <string name="quiz_time_remaining">Tiempo restante: %1$s</string>
+    <string name="quiz_time_up">Se acabó el tiempo</string>
+    <string name="quiz_unanswered">Sin responder</string>
+</resources>

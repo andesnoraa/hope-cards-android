@@ -3,6 +3,7 @@ package com.aaronsedna.hopecards.ui
 import android.graphics.Bitmap
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveableStateHolder
@@ -33,8 +34,9 @@ class BibleQuizInstrumentedTest {
     private fun node(tag: String) = compose.onNodeWithTag(tag)
     private fun waitFor(tag: String) = compose.waitUntil(10_000) { compose.onAllNodesWithTag(tag).fetchSemanticsNodes().isNotEmpty() }
     private fun scroll(tag: String): SemanticsNodeInteraction {
-        node("bible_quiz").performScrollToNode(hasTestTag(tag))
-        return node(tag)
+        val target = node(tag)
+        if (!target.isDisplayed()) node("bible_quiz").performScrollToNode(hasTestTag(tag))
+        return target
     }
     private fun questionText(): String {
         return scroll("quiz_question").fetchSemanticsNode().config[SemanticsProperties.Text].joinToString("") { it.text }
@@ -141,12 +143,10 @@ class BibleQuizInstrumentedTest {
         node("quiz_restart").performClick()
         assertEquals(1, completionCalls)
         scroll("quiz_action").assertIsNotEnabled()
-        node("bible_quiz").performScrollToNode(hasText("End quiz"))
-        compose.onNodeWithText("End quiz").performClick()
+        node("quiz_end_round").assertIsDisplayed().performClick()
         compose.onNodeWithText("Continue quiz").performClick()
         node("quiz_question").assertExists()
-        node("bible_quiz").performScrollToNode(hasText("End quiz"))
-        compose.onNodeWithText("End quiz").performClick()
+        node("quiz_end_round").assertIsDisplayed().performClick()
         compose.onAllNodesWithText("End quiz").filter(hasClickAction()).onLast().performClick()
         node("quiz_start").assertExists()
     }
@@ -188,7 +188,7 @@ class BibleQuizInstrumentedTest {
         assertEquals(3, navigations)
     }
 
-    @Test fun resultExportMenuKeepsTheScoreAndDoesNotTriggerCompletionAd() {
+    @Test fun directResultShareKeepsTheScoreAfterCancellationAndRestorationWithoutCompletionAd() {
         val questions = bank(Translation.BSB).take(1)
         var completions = 0
         val restoration = StateRestorationTester(compose)
@@ -202,17 +202,20 @@ class BibleQuizInstrumentedTest {
         scroll("quiz_option_${questions.first().correctIndex}").performClick()
         scroll("quiz_action").performClick()
         scroll("quiz_action").performClick()
+        assertDirectShareButton()
         scroll("quiz_export").performClick()
-        node("quiz_share").assertIsDisplayed()
-        node("quiz_save_pdf").assertIsDisplayed()
-        node("quiz_print").assertIsDisplayed()
-        androidx.test.espresso.Espresso.pressBack()
+        awaitSystemShareSheet()
+        cancelSystemShareSheet()
+        scroll("quiz_score").assertTextEquals("1 of 1 correct")
+        assertEquals(0, completions)
+
         restoration.emulateSavedInstanceStateRestore()
         scroll("quiz_score").assertTextEquals("1 of 1 correct")
+        assertDirectShareButton()
         assertEquals(0, completions)
     }
 
-    @Test fun systemShareSaveAndPrintReturnToTheCompletedRoundWithoutAds() {
+    @Test fun systemShareCanBeCancelledAndRetriedWithReadablePdfsWithoutLeavingResultsOrShowingAds() {
         val questions = bank(Translation.BSB).take(1)
         var completions = 0
         compose.setContent {
@@ -225,59 +228,104 @@ class BibleQuizInstrumentedTest {
         scroll("quiz_option_${questions.first().correctIndex}").performClick()
         scroll("quiz_action").performClick()
         scroll("quiz_action").performClick()
+        capture("export-results.png")
+        val directory = File(context.cacheDir, "quiz-reports")
+        val sharedFiles = mutableListOf<File>()
+        repeat(2) {
+            val previousPaths = directory.listFiles().orEmpty().map { it.absolutePath }.toSet()
+            assertDirectShareButton()
+            scroll("quiz_export").performClick()
+            awaitSystemShareSheet()
+            val created = directory.listFiles().orEmpty().filter {
+                it.extension == "pdf" && it.absolutePath !in previousPaths
+            }
+            assertEquals("Each Share tap should prepare one new PDF", 1, created.size)
+            val file = created.single()
+            assertReadablePdf(file)
+            sharedFiles += file
+
+            cancelSystemShareSheet()
+            scroll("quiz_score").assertTextEquals("1 of 1 correct")
+            assertEquals(0, completions)
+            compose.waitUntil(10_000) {
+                compose.onAllNodes(hasTestTag("quiz_export") and isEnabled()).fetchSemanticsNodes().isNotEmpty()
+            }
+            assertDirectShareButton()
+            // A recipient can still finish importing the file after the sharesheet has closed.
+            sharedFiles.forEach(::assertReadablePdf)
+        }
+        assertEquals(2, sharedFiles.map { it.absolutePath }.distinct().size)
+        node("quiz_review").performClick()
+        scroll("quiz_back_results").performClick()
+        scroll("quiz_score").assertTextEquals("1 of 1 correct")
+        assertEquals(0, completions)
+    }
+
+    private fun assertDirectShareButton() {
+        scroll("quiz_export").assertIsDisplayed().assertIsEnabled().assertTextEquals("Share")
+        node("quiz_share").assertDoesNotExist()
+        node("quiz_save_pdf").assertDoesNotExist()
+        node("quiz_print").assertDoesNotExist()
+    }
+
+    private fun assertReadablePdf(file: File) {
+        assertTrue("Shared PDF must remain available: ${file.name}", file.isFile && file.length() > 0)
+        android.graphics.pdf.PdfRenderer(android.os.ParcelFileDescriptor.open(file,
+            android.os.ParcelFileDescriptor.MODE_READ_ONLY)).use { renderer ->
+            assertTrue("Shared PDF should contain the results page", renderer.pageCount > 0)
+            renderer.openPage(0).use { page ->
+                assertTrue(page.width > 0 && page.height > 0)
+            }
+        }
+    }
+
+    private fun awaitSystemShareSheet() {
         val automation = InstrumentationRegistry.getInstrumentation().uiAutomation
-        fun awaitPackage(part: String) {
-            val deadline = android.os.SystemClock.uptimeMillis() + 15000
+        val deadline = android.os.SystemClock.uptimeMillis() + 15_000
+        while (android.os.SystemClock.uptimeMillis() < deadline) {
+            val packageName = automation.rootInActiveWindow?.packageName?.toString()
+            // The chooser belongs to different system packages on Pixel and Samsung devices.
+            // QuizReportTest separately checks the PDF MIME type, URI, companion text and read grant.
+            if (!packageName.isNullOrBlank() && packageName != context.packageName && packageName != "com.android.systemui") {
+                assertFalse("Share must open the sharesheet, not the removed save-document flow",
+                    packageName.contains("documentsui"))
+                return
+            }
+            compose.mainClock.advanceTimeBy(100)
+            android.os.SystemClock.sleep(100)
+        }
+        fail("System share activity not opened. Actual: ${automation.rootInActiveWindow?.packageName}")
+    }
+
+    private fun cancelSystemShareSheet() {
+        val automation = InstrumentationRegistry.getInstrumentation().uiAutomation
+        fun returnedToQuiz(timeoutMillis: Long): Boolean {
+            val deadline = android.os.SystemClock.uptimeMillis() + timeoutMillis
             while (android.os.SystemClock.uptimeMillis() < deadline) {
-                if (automation.rootInActiveWindow?.packageName?.toString()?.contains(part) == true) return
+                if (automation.rootInActiveWindow?.packageName?.toString() == context.packageName) return true
                 compose.mainClock.advanceTimeBy(100)
                 android.os.SystemClock.sleep(100)
             }
-            fail("System screen not opened: $part. Actual: ${automation.rootInActiveWindow?.packageName}")
+            return false
         }
-        fun back() {
-            automation.performGlobalAction(android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_BACK)
-            awaitPackage("hopecards")
-            scroll("quiz_score").assertTextEquals("1 of 1 correct")
-            assertEquals(0, completions)
+        // Cancel only the chooser or its IME; never choose a recipient or send the PDF.
+        repeat(2) {
+            if (returnedToQuiz(100)) return
+            assertTrue("System Back should be accepted", automation.performGlobalAction(
+                android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_BACK))
+            if (returnedToQuiz(2_000)) return
         }
-        capture("export-results")
-        scroll("quiz_export").performClick()
-        capture("export-menu")
-        node("quiz_share").performClick()
-        awaitPackage("intentresolver")
-        back()
-        scroll("quiz_export").performClick()
-        node("quiz_save_pdf").performClick()
-        awaitPackage("documentsui")
-        back()
-        scroll("quiz_export").assertIsEnabled().performClick()
-        node("quiz_save_pdf").performClick()
-        awaitPackage("documentsui")
-        val filename = automation.rootInActiveWindow.findAccessibilityNodeInfosByText("Hope-Cards-Quiz-en.pdf").firstOrNull { it.isEditable }
-        filename?.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_SET_TEXT, android.os.Bundle().apply {
-            putCharSequence(android.view.accessibility.AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, "Hope-Cards-Quiz-test-${System.currentTimeMillis()}.pdf")
-        })
-        val saveButton = automation.rootInActiveWindow.findAccessibilityNodeInfosByText("Save")
-            .first { it.isClickable && it.text?.toString()?.equals("Save", ignoreCase = true) == true }
-        assertTrue(saveButton.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK))
-        awaitPackage("hopecards")
-        scroll("quiz_score").assertTextEquals("1 of 1 correct")
-        assertEquals(0, completions)
-        compose.waitUntil(10_000) {
-            compose.onAllNodes(hasTestTag("quiz_export") and isEnabled()).fetchSemanticsNodes().isNotEmpty()
-        }
-        scroll("quiz_export").assertIsEnabled().performClick()
-        node("quiz_print").performClick()
-        awaitPackage("printspooler")
-        android.os.SystemClock.sleep(1000)
+        val directory = File(context.getExternalFilesDir(null), "quiz-preview").apply { mkdirs() }
+        File(directory, "share-cancel-failure.txt").writeText(
+            "Active package: ${automation.rootInActiveWindow?.packageName}\n" +
+                automation.windows.joinToString("\n") { "type=${it.type} active=${it.isActive} focused=${it.isFocused}" })
         automation.takeScreenshot()?.let { bitmap ->
-            File(context.getExternalFilesDir(null), "quiz-print-preview.png").outputStream().use {
+            File(directory, "share-cancel-failure.png").outputStream().use {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
             }
             bitmap.recycle()
         }
-        back()
+        fail("System share did not return to the quiz. Actual: ${automation.rootInActiveWindow?.packageName}")
     }
 
     @Test fun wrongAnswerRequestsDeviceVibration() {
@@ -324,6 +372,45 @@ class BibleQuizInstrumentedTest {
         scroll("quiz_feedback").assertIsDisplayed()
         scroll("quiz_action").assertIsDisplayed()
         capture("quiz-malayalam-large-text.png")
+    }
+
+    @Test fun primaryActionStaysVisibleWithLongMalayalamContentOnAShortScreen() {
+        val question = bank(Translation.MAL1910).maxBy { it.question.length + it.options.sumOf(String::length) }
+        compose.setContent {
+            val density = LocalDensity.current
+            CompositionLocalProvider(LocalDensity provides Density(density.density, 1.6f)) {
+                HopeCardsTheme(ThemeName.SERENITY) {
+                    Box(Modifier.size(width = 320.dp, height = 480.dp)) {
+                        BibleQuizScreen(listOf(question), Translation.MAL1910, hapticsEnabled = false)
+                    }
+                }
+            }
+        }
+        scroll("quiz_start").performClick()
+        node("quiz_action").assertIsDisplayed().assertIsNotEnabled()
+        node("quiz_end_round").assertIsDisplayed().assertContentDescriptionEquals("ക്വിസ് അവസാനിപ്പിക്കുക")
+        val initialActionBounds = node("quiz_action").fetchSemanticsNode().boundsInRoot
+
+        // All four answers must remain reachable without hiding the primary action.
+        repeat(4) { index ->
+            scroll("quiz_option_$index").assertIsDisplayed().performClick()
+            node("quiz_action").assertIsDisplayed().assertIsEnabled()
+            val currentBounds = node("quiz_action").fetchSemanticsNode().boundsInRoot
+            assertEquals(initialActionBounds.top, currentBounds.top, 1f)
+            assertEquals(initialActionBounds.bottom, currentBounds.bottom, 1f)
+        }
+        // Submit from the first option, with feedback still below the long answer list.
+        scroll("quiz_option_0").performClick()
+        node("quiz_action").assertIsDisplayed().assertIsEnabled()
+        // Check directly after selection; scrolling to the button would conceal a regression.
+        node("quiz_action").performClick()
+        compose.waitForIdle()
+        node("quiz_feedback").assertIsDisplayed()
+        node("quiz_action").assertIsDisplayed().assertIsEnabled()
+        scroll("quiz_question").assertIsDisplayed()
+        node("quiz_action").assertIsDisplayed().performClick()
+        scroll("quiz_score").assertExists()
+        capture("quiz-malayalam-short-screen.png")
     }
 
     private fun capture(name: String) {

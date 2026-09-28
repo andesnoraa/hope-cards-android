@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_pdf_share_attribution">Ginawa gamit ang Hope Cards</string>
+    <string name="quiz_certificate_share_attribution">Ginawa gamit ang Hope Cards App</string>
+    <string name="quiz_certificate_share_install">I-install ang Hope Cards mula sa Google Play</string>
+    <string name="quiz_certificate_share_message">Mensahe sa pagbabahagi</string>
+    <string name="quiz_certificate_share_copy">Kopyahin ang mensahe</string>
+    <string name="quiz_certificate_share_copied">Nakopya ang mensahe</string>
+    <string name="quiz_certificate_share_hint">Kung hindi isinama ng app ang mensahe, kopyahin at i-paste ito kasama ng PDF.</string>
+</resources>

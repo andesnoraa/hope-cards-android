@@ -101,6 +101,6 @@ JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" ./gradle
 
 The bundle is written to `android/app/build/outputs/bundle/release/app-release.aab`.
 
-## Preserve the current closed test
+## Preserve the existing Play app and tracks
 
-Upload future builds to the existing `com.aaronsedna.hopecards` Play listing, signed with the existing upload key, using a higher version code. Keep the current closed-testing track and tester opt-in configuration. Do not create a new application, change the package name, replace the signing identity, deactivate the existing track, or ask testers to leave and rejoin. Updating the existing closed track does not restart the tester opt-in period; the 14-day requirement follows continuous tester participation.
+Publish production updates to the existing `com.aaronsedna.hopecards` Play listing and production track, signed with the existing upload key, using a higher version code. Version 1.0.9 (36) is already live in production. Preserve the existing testing tracks and tester opt-in configuration. Do not create a new application, change the package name, replace the signing identity, deactivate an existing track, or ask testers to leave and rejoin.

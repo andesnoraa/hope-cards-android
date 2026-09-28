@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_title">Quiz-Urkunden</string>
+    <string name="quiz_certificate_competition_default">Bibelquiz-Wettbewerb</string>
+    <string name="quiz_certificate_intro">Erstelle Teilnahmeurkunden im A4-Format. Jede Person erhält eine eigene PDF.</string>
+    <string name="quiz_certificate_competition_label">Titel des Wettbewerbs</string>
+    <string name="quiz_certificate_date_label">Datum</string>
+    <string name="quiz_certificate_organizer_label">Organisation (optional)</string>
+    <string name="quiz_certificate_participants_label">Namen der Teilnehmenden</string>
+    <string name="quiz_certificate_participants_hint">Ein Name pro Zeile. Bis zu 50 Personen.</string>
+    <string name="quiz_certificate_generate">Urkunden erstellen</string>
+    <string name="quiz_certificate_generating">Urkunde %1$d von %2$d wird erstellt…</string>
+    <string name="quiz_certificate_ready">Fertige Urkunden: %1$d</string>
+    <string name="quiz_certificate_share_all">Alle PDFs teilen</string>
+    <string name="quiz_certificate_share_one">Urkunde für %1$s teilen</string>
+    <string name="quiz_certificate_edit">Angaben bearbeiten</string>
+    <string name="quiz_certificate_error">Die Urkunden konnten nicht erstellt werden. Bitte versuche es erneut.</string>
+    <string name="quiz_certificate_error_required">Gib einen Wettbewerbstitel, ein Datum und mindestens einen Namen ein.</string>
+    <string name="quiz_certificate_error_name_length">Jeder Name darf höchstens 100 Zeichen haben.</string>
+    <string name="quiz_certificate_error_count">Füge höchstens 50 Personen pro Durchgang hinzu.</string>
+    <string name="quiz_certificate_error_title_length">Der Wettbewerbstitel darf höchstens 120 Zeichen haben.</string>
+    <string name="quiz_certificate_error_date_length">Das Datum darf höchstens 60 Zeichen haben.</string>
+    <string name="quiz_certificate_error_organizer_length">Der Name der Organisation darf höchstens 120 Zeichen haben.</string>
+    <string name="quiz_certificate_counter">%1$d / %2$d</string>
+    <string name="quiz_certificate_pdf_title">Teilnahmeurkunde</string>
+    <string name="quiz_certificate_pdf_presented_to">Hiermit wird bestätigt, dass</string>
+    <string name="quiz_certificate_pdf_participation">am folgenden Wettbewerb teilgenommen hat:</string>
+    <string name="quiz_certificate_pdf_signature">Unterschrift der Veranstaltungsleitung</string>
+</resources>

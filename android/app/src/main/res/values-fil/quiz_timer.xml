@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_enable_timer">Countdown timer</string>
+    <string name="quiz_timer_description">%1$d segundo bawat tanong. Awtomatikong lilipat sa susunod kapag naubos ang oras.</string>
+    <string name="quiz_elapsed_time">Oras na ginugol: %1$s</string>
+    <string name="quiz_time_remaining">Natitirang oras: %1$s</string>
+    <string name="quiz_time_up">Tapos na ang oras</string>
+    <string name="quiz_unanswered">Hindi nasagot</string>
+</resources>

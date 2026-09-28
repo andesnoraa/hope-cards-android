@@ -1,9 +1,12 @@
 package com.aaronsedna.hopecards.ui
 
+import android.Manifest
 import android.app.Notification
 import android.app.NotificationManager
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.media.AudioManager
+import android.os.Build
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createEmptyComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -34,9 +37,24 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.TestRule
+import org.junit.runners.model.Statement
 
 class NotificationExperienceInstrumentedTest {
     @get:Rule val compose = createEmptyComposeRule()
+    @get:Rule val notificationPermission = TestRule { base, _ ->
+        object : Statement() {
+            override fun evaluate() {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                    context.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    instrumentation.uiAutomation.grantRuntimePermission(context.packageName,
+                        Manifest.permission.POST_NOTIFICATIONS)
+                }
+                base.evaluate()
+            }
+        }
+    }
     private val instrumentation get() = InstrumentationRegistry.getInstrumentation()
     private val context get() = instrumentation.targetContext
 
@@ -115,7 +133,10 @@ class NotificationExperienceInstrumentedTest {
         repository.initialize()
         val original = repository.currentSettings()
         try {
-            repository.updateSettings { it.copy(preferredTranslation = Translation.BSB, dailyHopeMusicEnabled = true) }
+            repository.updateSettings {
+                it.copy(preferredTranslation = Translation.BSB, dailyHopeMusicEnabled = true,
+                    dailyHopeReminderEnabled = true)
+            }
             val verses = VerseRepository(context)
             val daily = repository.dailyHopeVerse(verses, Translation.BSB)
             val scheduler = ReminderScheduler(context)
@@ -138,7 +159,9 @@ class NotificationExperienceInstrumentedTest {
                 lateinit var launchIntent: android.content.Intent
                 scenario.onActivity { launchIntent = android.content.Intent(it.intent) }
                 scheduler.showNotification(daily)
-                assertTrue(context.getSystemService(NotificationManager::class.java).activeNotifications.isNotEmpty())
+                compose.waitUntil(10_000) {
+                    context.getSystemService(NotificationManager::class.java).activeNotifications.any { it.id == 2025 }
+                }
                 // Even if the saved daily record changes before a tap, open the notified verse.
                 val alternate = verses.random(Translation.BSB, daily.id)
                 repository.setDailyHopeRecord(DailyHopeRecord(LocalDate.now().toString(), alternate.id, "bsb"))
@@ -167,7 +190,16 @@ class NotificationExperienceInstrumentedTest {
                 // MainActivity correctly replaces that intent in onNewIntent during the tap.
                 scenario.onActivity { it.intent = launchIntent }
             }
-        } finally { repository.replaceSettings(original) }
+        } finally {
+            repository.replaceSettings(original)
+            // The activity has closed, so restore its alarm explicitly as well as its preferences.
+            val scheduler = ReminderScheduler(context)
+            context.getSystemService(NotificationManager::class.java).cancel(2025)
+            if (original.dailyHopeReminderEnabled) {
+                scheduler.schedule(original.dailyHopeReminderHour, original.dailyHopeReminderMinute,
+                    original.preferredTranslation)
+            } else scheduler.cancel()
+        }
     }
 
     /** Opt-in screenshot capture on a connected test device; never runs as part of the suite. */

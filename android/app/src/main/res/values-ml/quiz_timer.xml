@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_enable_timer">കൗണ്ട്ഡൗൺ ടൈമർ</string>
+    <string name="quiz_timer_description">ഓരോ ചോദ്യത്തിനും %1$d സെക്കൻഡ്. സമയം തീരുമ്പോൾ അടുത്ത ചോദ്യത്തിലേക്ക് സ്വയം മാറും.</string>
+    <string name="quiz_elapsed_time">എടുത്ത സമയം: %1$s</string>
+    <string name="quiz_time_remaining">ബാക്കിയുള്ള സമയം: %1$s</string>
+    <string name="quiz_time_up">സമയം കഴിഞ്ഞു</string>
+    <string name="quiz_unanswered">ഉത്തരം നൽകിയിട്ടില്ല</string>
+</resources>

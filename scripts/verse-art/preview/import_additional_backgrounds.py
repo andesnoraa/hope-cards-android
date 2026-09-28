@@ -1,8 +1,9 @@
-"""Reproduce the September 26 additions without altering their colors or scenery.
+"""Reproduce approved additions without altering their colors or scenery.
 
 Requires cwebp on PATH. Original PNGs stay unchanged; only resize and encode.
 The manifest records source hashes, prompts, encoding settings and text regions.
 """
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -16,7 +17,10 @@ MANIFEST = HERE / 'selected-backgrounds-2026-09-26.json'
 
 
 def main():
-    entries = json.loads(MANIFEST.read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--manifest', type=Path, default=MANIFEST)
+    manifest_path = parser.parse_args().manifest.resolve()
+    entries = json.loads(manifest_path.read_text())
     profiles_path = ASSETS / 'photo-profiles.json'
     profiles = json.loads(profiles_path.read_text())
     encoder = shutil.which('cwebp')
@@ -25,6 +29,8 @@ def main():
     total = 0
     for entry in entries:
         source = Path(entry['sourcePath'])
+        if not source.is_absolute():
+            source = ROOT / source
         source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
         if entry.get('sourceSha256') and entry['sourceSha256'] != source_hash:
             raise ValueError(f"Source changed: {source}")
@@ -38,7 +44,7 @@ def main():
         profiles[entry['name']] = entry['profile']
         total += target.stat().st_size
     profiles_path.write_text(json.dumps(profiles, indent=2) + '\n')
-    MANIFEST.write_text(json.dumps(entries, indent=2) + '\n')
+    manifest_path.write_text(json.dumps(entries, indent=2) + '\n')
     print(f'{len(entries)} backgrounds. {total:,} bytes ({total / 1024 / 1024:.2f} MiB).')
 
 

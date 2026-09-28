@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_pdf_share_attribution">Created using Hope Cards</string>
+    <string name="quiz_certificate_share_attribution">Generated using Hope Cards App</string>
+    <string name="quiz_certificate_share_install">Install Hope Cards on Google Play</string>
+    <string name="quiz_certificate_share_message">Sharing message</string>
+    <string name="quiz_certificate_share_copy">Copy message</string>
+    <string name="quiz_certificate_share_copied">Message copied</string>
+    <string name="quiz_certificate_share_hint">If your sharing app omits the message, copy and paste it with the PDF.</string>
+</resources>

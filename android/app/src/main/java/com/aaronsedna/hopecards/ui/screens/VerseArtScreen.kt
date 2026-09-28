@@ -128,11 +128,7 @@ fun VerseArtScreen(
                                     Text(category.description, color = colors.textSecondary, fontFamily = Poppins,
                                         fontSize = 12.sp, lineHeight = 19.sp, modifier = Modifier.padding(top = 4.dp))
                                 }
-                                Column(horizontalAlignment = Alignment.End) {
-                                    Text(category.artworkIds.count { it in available }.toString(), color = colors.textSecondary,
-                                        fontFamily = Poppins, fontSize = 12.sp)
-                                    AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
-                                }
+                                AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
                             }
                             HorizontalDivider(color = colors.divider)
                         }

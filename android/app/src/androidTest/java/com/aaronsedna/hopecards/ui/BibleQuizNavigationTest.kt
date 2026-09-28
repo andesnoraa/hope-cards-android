@@ -33,6 +33,7 @@ class BibleQuizNavigationTest {
             compose.onNodeWithText("MAL · Sathyavedapusthakam (1910)").performScrollTo().performClick()
             openDestination("Bible Quiz")
             waitFor("quiz_start")
+            compose.onNodeWithText("ബൈബിൾ ക്വിസ്").assertIsDisplayed()
             scroll("quiz_start").assertTextEquals("ആരംഭിക്കാം").performClick()
             assertQuestionLanguage(Translation.MAL1910)
             capture("quiz-app-malayalam.png")
@@ -43,6 +44,7 @@ class BibleQuizNavigationTest {
             compose.onNodeWithText("LUT · Lutherbibel (1912)").performScrollTo().performClick()
             openDestination("Bible Quiz")
             waitFor("quiz_start")
+            compose.onNodeWithText("Bibelquiz").assertIsDisplayed()
             scroll("quiz_start").assertTextEquals("Quiz starten").performClick()
             assertQuestionLanguage(Translation.LUT1912)
             capture("quiz-app-german.png")
@@ -73,8 +75,9 @@ class BibleQuizNavigationTest {
         scroll(tag).assertExists()
     }
     private fun scroll(tag: String): SemanticsNodeInteraction {
-        compose.onNodeWithTag("bible_quiz").performScrollToNode(hasTestTag(tag))
-        return compose.onNodeWithTag(tag)
+        val target = compose.onNodeWithTag(tag)
+        if (!target.isDisplayed()) compose.onNodeWithTag("bible_quiz").performScrollToNode(hasTestTag(tag))
+        return target
     }
 
     private fun assertQuestionLanguage(edition: Translation) {

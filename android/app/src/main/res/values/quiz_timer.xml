@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_enable_timer">Countdown timer</string>
+    <string name="quiz_timer_description">%1$d seconds per question. Automatically moves on when time runs out.</string>
+    <string name="quiz_elapsed_time">Time taken: %1$s</string>
+    <string name="quiz_time_remaining">Time left: %1$s</string>
+    <string name="quiz_time_up">Time’s up</string>
+    <string name="quiz_unanswered">Not answered</string>
+</resources>

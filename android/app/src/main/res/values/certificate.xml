@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_title">Quiz certificates</string>
+    <string name="quiz_certificate_competition_default">Bible Quiz Competition</string>
+    <string name="quiz_certificate_intro">Create A4 participation certificates. Each participant gets a separate PDF.</string>
+    <string name="quiz_certificate_competition_label">Competition title</string>
+    <string name="quiz_certificate_date_label">Date</string>
+    <string name="quiz_certificate_organizer_label">Organization (optional)</string>
+    <string name="quiz_certificate_participants_label">Participant names</string>
+    <string name="quiz_certificate_participants_hint">One name per line. Up to 50 participants.</string>
+    <string name="quiz_certificate_generate">Generate certificates</string>
+    <string name="quiz_certificate_generating">Creating certificate %1$d of %2$d…</string>
+    <string name="quiz_certificate_ready">Certificates ready: %1$d</string>
+    <string name="quiz_certificate_share_all">Share all PDFs</string>
+    <string name="quiz_certificate_share_one">Share certificate for %1$s</string>
+    <string name="quiz_certificate_edit">Edit details</string>
+    <string name="quiz_certificate_error">Certificates could not be created. Please try again.</string>
+    <string name="quiz_certificate_error_required">Add a competition title, date and at least one participant.</string>
+    <string name="quiz_certificate_error_name_length">Keep each participant name within 100 characters.</string>
+    <string name="quiz_certificate_error_count">Add no more than 50 participants per batch.</string>
+    <string name="quiz_certificate_error_title_length">Keep the competition title within 120 characters.</string>
+    <string name="quiz_certificate_error_date_length">Keep the date within 60 characters.</string>
+    <string name="quiz_certificate_error_organizer_length">Keep the organization name within 120 characters.</string>
+    <string name="quiz_certificate_counter">%1$d / %2$d</string>
+    <string name="quiz_certificate_pdf_title">Certificate of Participation</string>
+    <string name="quiz_certificate_pdf_presented_to">This is to certify that</string>
+    <string name="quiz_certificate_pdf_participation">has participated in the following competition:</string>
+    <string name="quiz_certificate_pdf_signature">Signature of organizer</string>
+</resources>

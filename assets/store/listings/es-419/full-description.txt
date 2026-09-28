@@ -2,31 +2,43 @@ Encuentra un versículo bíblico diario para recibir esperanza, reflexión y án
 
 Hope Cards es una app serena de versículos de la Biblia creada para ayudarte a cultivar un hábito sencillo con la Palabra. Saca una tarjeta, lee el versículo del día, guarda tus favoritos y escribe notas vinculadas a cada pasaje. No necesitas una cuenta ni un plan de lectura complicado.
 
-TARJETAS CON VERSÍCULOS BÍBLICOS
+Quiz bíblico en tu idioma
+
+Explora personas, lugares y acontecimientos de la Biblia en rondas con preguntas aleatorias. El quiz sigue el idioma de la traducción bíblica que elegiste. Comprueba las respuestas con sus referencias bíblicas y comparte un informe PDF con las preguntas, tus respuestas y las respuestas correctas. Las preguntas funcionan sin conexión. Juega a tu ritmo o activa una cuenta regresiva de 30 segundos por pregunta. Al agotarse el tiempo, el quiz avanza automáticamente. El temporizador está desactivado al principio y recuerda tu elección. El sonido viene activado, se puede desactivar y avisa durante los últimos cinco segundos.
+
+Generador de certificados para concursos bíblicos
+
+Crea certificados de participación en PDF tamaño A4. Agrega varios nombres a la vez para generar un certificado individual para cada participante. Elige inglés u otro idioma bíblico compatible, indica el nombre del concurso y selecciona la fecha. Puedes añadir el nombre de la organización si lo deseas. Comparte un certificado o todos los PDF juntos.
+
+Imágenes con versículos para compartir
+
+Crea imágenes bíblicas con fondos de naturaleza, como flores, aves, costas y cielos estrellados. Los fondos cambian al abrir la galería. Guarda tus imágenes o compártelas con otras personas.
+
+Tarjetas con versículos bíblicos
 
 Saca un versículo cuando necesites un momento de calma. Cada tarjeta ofrece un espacio claro y cuidado para leer y reflexionar.
 
-VERSÍCULO DEL DÍA Y RECORDATORIOS
+Daily Hope y recordatorios
 
 Comienza cada jornada con un nuevo versículo. Programa un recordatorio bíblico diario a la hora que prefieras.
 
-FAVORITOS Y DIARIO BÍBLICO
+Favoritos y diario bíblico
 
 Guarda pasajes importantes en favoritos. Añade un pensamiento, una oración o una nota personal junto al versículo y vuelve a leer ambos cuando quieras.
 
-TRADUCCIONES E IDIOMAS
+Traducciones e idiomas
 
 Elige entre BSB, BBE, King James Version (KJV), World English Bible (WEB) y traducciones compatibles en español, malayalam, francés, alemán, italiano y tagalo.
 
-MÁS FUNCIONES
+Más funciones
 
-• Comparte versículos con familiares y amigos
-• Elige entre elegantes temas de tarjetas
-• Crea y restaura copias de favoritos, diario y ajustes
-• Escucha, si lo deseas, música tranquila mientras lees
-• Lee cómodamente en teléfonos y tablets
+Comparte versículos con familiares y amigos
+Elige entre elegantes temas de tarjetas
+Crea y restaura copias de favoritos, diario y ajustes
+Escucha, si lo deseas, música tranquila en Daily Hope
+Lee cómodamente en teléfonos y tablets
 
-TODAS LAS FUNCIONES ESTÁN DISPONIBLES
+Todas las funciones están disponibles
 
 La lectura, los temas, los recordatorios, los favoritos y el diario están disponibles para todos. Algunos anuncios ayudan a mantener Hope Cards. Un único pago en Google Play puede eliminar los anuncios de forma permanente; no hay suscripción.
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_pdf_share_attribution">Hope Cards ഉപയോഗിച്ച് തയ്യാറാക്കിയത്</string>
+    <string name="quiz_certificate_share_attribution">Hope Cards ആപ്പ് ഉപയോഗിച്ച് തയ്യാറാക്കിയത്</string>
+    <string name="quiz_certificate_share_install">Google Play-യിൽ നിന്ന് Hope Cards ഇൻസ്റ്റാൾ ചെയ്യുക</string>
+    <string name="quiz_certificate_share_message">പങ്കിടാനുള്ള സന്ദേശം</string>
+    <string name="quiz_certificate_share_copy">സന്ദേശം പകർത്തുക</string>
+    <string name="quiz_certificate_share_copied">സന്ദേശം പകർത്തി</string>
+    <string name="quiz_certificate_share_hint">പങ്കിടുന്ന ആപ്പിൽ സന്ദേശം കാണുന്നില്ലെങ്കിൽ, അത് പകർത്തി PDF-നൊപ്പം ചേർക്കുക.</string>
+</resources>

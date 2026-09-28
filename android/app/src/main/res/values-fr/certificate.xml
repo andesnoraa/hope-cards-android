@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_title">Certificats du quiz</string>
+    <string name="quiz_certificate_competition_default">Concours de quiz biblique</string>
+    <string name="quiz_certificate_intro">Créez des certificats de participation au format A4. Chaque personne reçoit un PDF distinct.</string>
+    <string name="quiz_certificate_competition_label">Titre du concours</string>
+    <string name="quiz_certificate_date_label">Date</string>
+    <string name="quiz_certificate_organizer_label">Organisation (facultatif)</string>
+    <string name="quiz_certificate_participants_label">Noms des participants</string>
+    <string name="quiz_certificate_participants_hint">Un nom par ligne. Jusqu’à 50 participants.</string>
+    <string name="quiz_certificate_generate">Créer les certificats</string>
+    <string name="quiz_certificate_generating">Création du certificat %1$d sur %2$d…</string>
+    <string name="quiz_certificate_ready">Certificats prêts : %1$d</string>
+    <string name="quiz_certificate_share_all">Partager tous les PDF</string>
+    <string name="quiz_certificate_share_one">Partager le certificat de %1$s</string>
+    <string name="quiz_certificate_edit">Modifier les détails</string>
+    <string name="quiz_certificate_error">Impossible de créer les certificats. Veuillez réessayer.</string>
+    <string name="quiz_certificate_error_required">Ajoutez un titre, une date et au moins un participant.</string>
+    <string name="quiz_certificate_error_name_length">Chaque nom doit contenir au maximum 100 caractères.</string>
+    <string name="quiz_certificate_error_count">Ajoutez au maximum 50 participants à la fois.</string>
+    <string name="quiz_certificate_error_title_length">Le titre doit contenir au maximum 120 caractères.</string>
+    <string name="quiz_certificate_error_date_length">La date doit contenir au maximum 60 caractères.</string>
+    <string name="quiz_certificate_error_organizer_length">Le nom de l’organisation doit contenir au maximum 120 caractères.</string>
+    <string name="quiz_certificate_counter">%1$d / %2$d</string>
+    <string name="quiz_certificate_pdf_title">Attestation de participation</string>
+    <string name="quiz_certificate_pdf_presented_to">Il est certifié que</string>
+    <string name="quiz_certificate_pdf_participation">a participé au concours suivant :</string>
+    <string name="quiz_certificate_pdf_signature">Signature de l’organisation</string>
+</resources>

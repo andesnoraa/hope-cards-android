@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_language_label">Lingua del certificato</string>
+    <string name="quiz_certificate_language_hint">I nomi e i dettagli personalizzati restano come inseriti. Scrivili nella lingua desiderata per il certificato.</string>
+    <string name="quiz_certificate_language_ready">Lingua del certificato: %1$s</string>
+    <string name="quiz_certificate_date_confirm">Imposta data</string>
+    <string name="quiz_certificate_date_cancel">Annulla</string>
+    <string name="quiz_certificate_date_picker_title">Seleziona la data del certificato</string>
+</resources>

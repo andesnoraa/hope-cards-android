@@ -1,122 +1,259 @@
 package com.aaronsedna.hopecards.export
 
 import android.content.Context
-import android.content.res.Configuration
 import android.graphics.Color
+import android.graphics.Paint
 import android.graphics.pdf.PdfDocument
 import android.os.CancellationSignal
-import android.print.PageRange
 import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
 import androidx.core.content.res.ResourcesCompat
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.*
+import com.aaronsedna.hopecards.ui.forQuizTranslation
 import java.io.OutputStream
-import java.util.Locale
 
-/** Immutable, localized snapshot. External activities must never change the exported round. */
+/** Immutable, localized snapshot. Sharing never changes the completed quiz. */
 class QuizReport(context: Context, translation: Translation, session: QuizSession, questions: List<QuizQuestion>) {
-    val resources = context.createConfigurationContext(Configuration(context.resources.configuration).apply {
-        setLocale(Locale.forLanguageTag(QuizLanguage.forTranslation(translation).code))
-    }).resources
+    val resources = context.forQuizTranslation(translation).resources
     val title = resources.getString(R.string.quiz_report_title)
     private val language = QuizLanguage.forTranslation(translation)
     private val edition = resources.getString(R.string.quiz_selected_edition, language.nativeName, translation.label)
     private val byId = questions.associateBy { it.id }
     val score = resources.getString(R.string.quiz_score, session.score(byId), session.questionIds.size)
-    val shareText = "$title\n$score\n$edition\n\nHope Cards\nhttps://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
-    private val regular = ResourcesCompat.getFont(context, if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_regular else R.font.poppins_regular)!!
-    private val bold = ResourcesCompat.getFont(context, if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_semibold else R.font.poppins_semibold)!!
-    private data class Block(val text: String, val size: Float = 11f, val bold: Boolean = false, val color: Int = Color.rgb(26,39,71), val gap: Int = 5)
+    private val invitation = resources.getString(R.string.quiz_share_invite)
+    private val install = resources.getString(R.string.quiz_report_install)
+    private val attribution = resources.getString(R.string.quiz_pdf_share_attribution)
+    val shareText = "$title\n$score\n$edition\n\n$attribution\n$invitation\n$install\n$PLAY_STORE_URL"
+    private val regular = ResourcesCompat.getFont(context,
+        if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_regular else R.font.poppins_regular)!!
+    private val semibold = ResourcesCompat.getFont(context,
+        if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_semibold else R.font.poppins_semibold)!!
+    private val brandFont = ResourcesCompat.getFont(context, R.font.poppins_semibold)!!
+
+    private data class Block(
+        val text: String,
+        val size: Float = 10.5f,
+        val bold: Boolean = false,
+        val color: Int = INK,
+        val gap: Int = 8,
+        val fill: Int? = null,
+        val inset: Int = 0,
+        val brand: Boolean = false,
+    )
+
     private val groups: List<List<Block>>
     init {
-        require(session.finished && session.answers.size == session.questionIds.size)
-        groups = listOf(listOf(Block(title, 24f, true), Block(score, 18f, true), Block(edition, gap = 20))) +
-            session.questionIds.mapIndexed { index, id ->
-                val q = byId.getValue(id)
-                val correct = session.answers[index] == q.correctIndex
-                buildList {
-                    add(Block("${index + 1}. ${q.question}", bold = true, gap = 8))
-                    add(Block(resources.getString(if (correct) R.string.quiz_correct else R.string.quiz_incorrect), bold = true,
-                        color = if (correct) Color.rgb(32,102,65) else Color.rgb(166,43,43)))
-                    add(Block(resources.getString(R.string.quiz_your_answer, q.options[session.answers[index]])))
-                    if (!correct) add(Block(resources.getString(R.string.quiz_correct_answer, q.options[q.correctIndex])))
-                    if (q.explanation.isNotBlank()) add(Block(q.explanation))
-                    add(Block("${resources.getString(R.string.quiz_reference)}: ${BibleReferenceFormatter.formatFull(q.reference, translation)}", color = Color.DKGRAY, gap = 20))
-                }
-            }
-    }
-
-    data class Paper(val width: Int = 595, val height: Int = 842, val left: Int = 40, val top: Int = 40, val right: Int = 40, val bottom: Int = 40)
-    data class Fragment(val layout: StaticLayout, val first: Int, val end: Int, val y: Int)
-    data class Pages(val paper: Paper, val content: List<List<Fragment>>)
-
-    fun layout(paper: Paper = Paper(), signal: CancellationSignal = CancellationSignal()): Pages {
-        val width = paper.width - paper.left - paper.right
-        val limit = paper.height - paper.bottom - 30
-        require(width >= 72 && limit - paper.top >= 72)
-        val pages = mutableListOf(mutableListOf<Fragment>())
-        var y = paper.top
-        fun nextPage() { pages.add(mutableListOf()); y = paper.top }
-        fun layout(block: Block): StaticLayout = StaticLayout.Builder.obtain(block.text, 0, block.text.length,
-            TextPaint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply {
-                textSize = block.size; typeface = if (block.bold) bold else regular; color = block.color
-            }, width).setAlignment(Layout.Alignment.ALIGN_NORMAL).setLineSpacing(3f, 1f).setIncludePad(true).build()
-        for (group in groups) {
-            signal.throwIfCanceled()
-            val layouts = group.map { it to layout(it) }
-            val height = layouts.sumOf { (block, text) -> text.height + block.gap }
-            // Keep each answer with its question when it fits a page. Very long passages flow by line.
-            if (height <= limit - paper.top && y + height > limit && pages.last().isNotEmpty()) nextPage()
-            for ((block, text) in layouts) {
-                var first = 0
-                while (first < text.lineCount) {
-                    signal.throwIfCanceled()
-                    var end = first
-                    while (end < text.lineCount && y + text.getLineBottom(end) - text.getLineTop(first) <= limit) end++
-                    if (end == first) { nextPage(); continue }
-                    pages.last().add(Fragment(text, first, end, y))
-                    y += text.getLineBottom(end - 1) - text.getLineTop(first)
-                    first = end
-                    if (first < text.lineCount) nextPage()
-                }
-                y += block.gap
+        require(session.finished && session.questionIds.isNotEmpty() && session.answers.size == session.questionIds.size)
+        groups = session.questionIds.mapIndexed { index, id ->
+            val q = byId.getValue(id)
+            val selected = session.answers[index]
+            val unanswered = selected == -1
+            val correct = selected == q.correctIndex
+            val answerColor = when { unanswered -> MUTED; correct -> GREEN; else -> RED }
+            buildList {
+                val passageStart = q.question.indexOf("\n\n")
+                if (passageStart >= 0) {
+                    add(Block("${index + 1}. ${q.question.substring(0, passageStart)}", size = 12f, bold = true, gap = 9))
+                    // Keep the question prominent without making a long quoted passage visually heavy.
+                    add(Block(q.question.substring(passageStart + 2), size = 11f, gap = 9))
+                } else add(Block("${index + 1}. ${q.question}", size = 12f, bold = true, gap = 7))
+                add(Block(resources.getString(when { unanswered -> R.string.quiz_unanswered; correct -> R.string.quiz_correct; else -> R.string.quiz_incorrect }),
+                    size = 9.5f, bold = true, color = answerColor, gap = 9))
+                add(Block(resources.getString(R.string.quiz_your_answer,
+                    if (unanswered) resources.getString(R.string.quiz_unanswered) else q.options[selected]),
+                    color = answerColor,
+                    fill = when { unanswered -> IVORY; correct -> GREEN_WASH; else -> RED_WASH }, inset = 10, gap = 5))
+                add(Block(resources.getString(R.string.quiz_correct_answer, q.options[q.correctIndex]),
+                    bold = true, color = GREEN, fill = GREEN_WASH, inset = 10, gap = 10))
+                if (q.explanation.isNotBlank()) add(Block(q.explanation, color = MUTED, gap = 8))
+                add(Block("${resources.getString(R.string.quiz_reference)}: ${BibleReferenceFormatter.formatFull(q.reference, translation)}",
+                    size = 9.5f, bold = true, color = INK, gap = 0))
             }
         }
-        return Pages(paper, pages)
     }
 
-    fun write(pages: Pages, output: OutputStream, ranges: Array<out PageRange> = arrayOf(PageRange.ALL_PAGES), signal: CancellationSignal = CancellationSignal()): Array<PageRange> {
-        val selected = pages.content.indices.filter { i -> ranges.any { i in it.start..it.end } }
-        require(selected.isNotEmpty())
+    data class Paper(val width: Int = 595, val height: Int = 842, val left: Int = 54, val top: Int = 54, val right: Int = 54, val bottom: Int = 54)
+    data class Fragment(val layout: StaticLayout, val first: Int, val end: Int, val y: Int, val x: Int) {
+        val height: Int get() = layout.getLineBottom(end - 1) - layout.getLineTop(first)
+    }
+    data class Panel(val left: Int, val top: Int, val width: Int, val height: Int, val color: Int, val border: Boolean = false, val radius: Float = 10f)
+    data class Pages(val paper: Paper, val content: List<List<Fragment>>, val panels: List<List<Panel>>)
+
+    private fun textLayout(block: Block, width: Int): StaticLayout =
+        StaticLayout.Builder.obtain(block.text, 0, block.text.length, TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
+            textSize = block.size
+            typeface = if (block.brand) brandFont else if (block.bold) semibold else regular
+            color = block.color
+        }, width).setAlignment(Layout.Alignment.ALIGN_NORMAL)
+            .setLineSpacing(if (language == QuizLanguage.MALAYALAM) 4f else 2.5f, 1f)
+            .setIncludePad(true).build()
+
+    fun layout(paper: Paper = Paper(), signal: CancellationSignal = CancellationSignal()): Pages {
+        signal.throwIfCanceled()
+        val width = paper.width - paper.left - paper.right
+        val limit = paper.height - paper.bottom - FOOTER_SPACE
+        require(width >= 140 && limit - paper.top >= 220) { "Page is too small for a readable quiz report." }
+        val content = mutableListOf<MutableList<Fragment>>()
+        val panels = mutableListOf<MutableList<Panel>>()
+        val padding = 18
+        val textWidth = width - padding * 2
+        var y = paper.top
+        var bodyTop = y
+
+        fun place(block: Block, x: Int, availableWidth: Int) {
+            val text = textLayout(block, availableWidth)
+            content.last().add(Fragment(text, 0, text.lineCount, y, x))
+            y += text.height + block.gap
+        }
+        fun newPage() {
+            signal.throwIfCanceled()
+            content.add(mutableListOf())
+            panels.add(mutableListOf())
+            y = paper.top
+            place(Block("HOPE CARDS", 9f, bold = true, color = MUTED, gap = 10, brand = true), paper.left, width)
+            if (content.size == 1) {
+                val top = y
+                y += padding
+                place(Block(title, if (width < 300) 20f else 25f, bold = true, color = Color.WHITE, gap = 5),
+                    paper.left + padding, textWidth)
+                place(Block(score, 17f, bold = true, color = PALE_GOLD, gap = 5), paper.left + padding, textWidth)
+                place(Block(edition, 9.5f, color = Color.WHITE, gap = 0), paper.left + padding, textWidth)
+                y += padding
+                panels.last().add(Panel(paper.left, top, width, y - top, INK, radius = 14f))
+                panels.last().add(Panel(paper.left + padding, top + 7, 28, 2, GOLD, radius = 1f))
+                y += 15
+            } else {
+                place(Block(title, 14f, bold = true, gap = 2), paper.left, width)
+                place(Block(edition, 9f, color = MUTED, gap = 10), paper.left, width)
+                panels.last().add(Panel(paper.left, y, width, 1, LINE, radius = 0f))
+                y += 14
+            }
+            bodyTop = y
+        }
+
+        fun addCard(blocks: List<Block>, background: Int = Color.WHITE) {
+            val layouts = blocks.map { it to textLayout(it, textWidth - it.inset * 2) }
+            val measured = padding * 2 + layouts.sumOf { (block, text) ->
+                text.height + block.gap + if (block.fill != null) 12 else 0
+            }
+            if (y + measured > limit && y > bodyTop) newPage()
+            // Start a large question on a clean continuation page, rather than below the cover.
+            if (y + measured > limit && content.size == 1) newPage()
+            var cardTop = y
+            var panelIndex = panels.last().size
+            panels.last().add(Panel(paper.left, cardTop, width, 0, background, border = true))
+            y += padding
+            var cardHasText = false
+
+            fun finishCard() {
+                panels.last()[panelIndex] = panels.last()[panelIndex].copy(height = y - cardTop + padding)
+            }
+            fun continueCard() {
+                check(cardHasText) { "Page is too small for a line of quiz text." }
+                finishCard()
+                newPage()
+                cardTop = y
+                panelIndex = panels.last().size
+                panels.last().add(Panel(paper.left, cardTop, width, 0, background, border = true))
+                y += padding
+                cardHasText = false
+            }
+
+            for ((block, text) in layouts) {
+                signal.throwIfCanceled()
+                var first = 0
+                val insetY = if (block.fill != null) 6 else 0
+                while (first < text.lineCount) {
+                    val available = limit - padding - y - insetY * 2
+                    var end = first
+                    while (end < text.lineCount && text.getLineBottom(end) - text.getLineTop(first) <= available) end++
+                    if (end == first) { continueCard(); continue }
+                    val height = text.getLineBottom(end - 1) - text.getLineTop(first)
+                    block.fill?.let { fill ->
+                        panels.last().add(Panel(paper.left + padding, y, textWidth, height + insetY * 2, fill, radius = 6f))
+                    }
+                    content.last().add(Fragment(text, first, end, y + insetY, paper.left + padding + block.inset))
+                    y += height + insetY * 2
+                    cardHasText = true
+                    first = end
+                    if (first < text.lineCount) continueCard()
+                }
+                // A gap can be reduced at a page edge, but text and card padding never overlap the footer.
+                y += minOf(block.gap, maxOf(0, limit - padding - y))
+            }
+            finishCard()
+            y += padding + 14
+        }
+
+        newPage()
+        groups.forEach { addCard(it) }
+        return Pages(paper, content, panels)
+    }
+
+    fun write(pages: Pages, output: OutputStream, signal: CancellationSignal = CancellationSignal()) {
+        signal.throwIfCanceled()
         val pdf = PdfDocument()
         try {
-            for (index in selected) {
+            pages.content.forEachIndexed { index, fragments ->
                 signal.throwIfCanceled()
                 val paper = pages.paper
                 val page = pdf.startPage(PdfDocument.PageInfo.Builder(paper.width, paper.height, index + 1).create())
                 val canvas = page.canvas
-                for (fragment in pages.content[index]) {
+                canvas.drawColor(IVORY)
+                val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+                for (panel in pages.panels[index]) {
+                    paint.color = panel.color
+                    paint.style = Paint.Style.FILL
+                    canvas.drawRoundRect(panel.left.toFloat(), panel.top.toFloat(), (panel.left + panel.width).toFloat(),
+                        (panel.top + panel.height).toFloat(), panel.radius, panel.radius, paint)
+                    if (panel.border) {
+                        paint.color = LINE
+                        paint.style = Paint.Style.STROKE
+                        paint.strokeWidth = 0.6f
+                        canvas.drawRoundRect(panel.left.toFloat(), panel.top.toFloat(), (panel.left + panel.width).toFloat(),
+                            (panel.top + panel.height).toFloat(), panel.radius, panel.radius, paint)
+                    }
+                }
+                for (fragment in fragments) {
                     canvas.save()
-                    canvas.translate(paper.left.toFloat(), fragment.y.toFloat())
+                    canvas.translate(fragment.x.toFloat(), fragment.y.toFloat())
                     val top = fragment.layout.getLineTop(fragment.first)
-                    val height = fragment.layout.getLineBottom(fragment.end - 1) - top
-                    canvas.clipRect(0, 0, fragment.layout.width, height)
+                    canvas.clipRect(0, 0, fragment.layout.width, fragment.height)
                     canvas.translate(0f, -top.toFloat())
                     fragment.layout.draw(canvas)
                     canvas.restore()
                 }
-                val footer = TextPaint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { textSize = 9f; typeface = regular; color = Color.DKGRAY }
-                canvas.drawText("Hope Cards", paper.left.toFloat(), (paper.height - paper.bottom).toFloat(), footer)
+                val baseline = (paper.height - paper.bottom).toFloat()
+                paint.style = Paint.Style.STROKE
+                paint.strokeWidth = 0.6f
+                paint.color = LINE
+                canvas.drawLine(paper.left.toFloat(), baseline - 17, (paper.width - paper.right).toFloat(), baseline - 17, paint)
+                val footer = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 8f; typeface = brandFont; color = MUTED }
+                canvas.drawText("Hope Cards", paper.left.toFloat(), baseline, footer)
                 val number = "${index + 1} / ${pages.content.size}"
-                canvas.drawText(number, paper.width - paper.right - footer.measureText(number), (paper.height - paper.bottom).toFloat(), footer)
+                canvas.drawText(number, paper.width - paper.right - footer.measureText(number), baseline, footer)
                 pdf.finishPage(page)
             }
             signal.throwIfCanceled()
             pdf.writeTo(output)
         } finally { pdf.close() }
         signal.throwIfCanceled()
-        return selected.map { PageRange(it, it) }.toTypedArray()
+    }
+
+    private companion object {
+        const val PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
+        const val FOOTER_SPACE = 30
+        val INK = Color.rgb(26, 39, 71)
+        val IVORY = Color.rgb(248, 246, 242)
+        val GOLD = Color.rgb(200, 155, 60)
+        val PALE_GOLD = Color.rgb(245, 234, 200)
+        val MUTED = Color.rgb(91, 101, 120)
+        val LINE = Color.rgb(231, 226, 216)
+        val GREEN = Color.rgb(32, 102, 65)
+        val RED = Color.rgb(151, 53, 45)
+        val GREEN_WASH = Color.rgb(237, 246, 239)
+        val RED_WASH = Color.rgb(252, 240, 236)
     }
 }

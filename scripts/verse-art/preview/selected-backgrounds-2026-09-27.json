@@ -1,0 +1,119 @@
+[
+  {
+    "name": "scene-water-lily-stillness",
+    "family": "lake",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic background for a Hope Cards Bible verse image. Generate ONE finished square image, full bleed, 1536 by 1536 composition. Scene: a secluded freshwater pond just after sunrise, viewed gently down across still rich deep teal-green water. Two exquisite white water lilies with natural yellow stamens and a few rounded lily pads occupy the LOWER RIGHT quarter only; a small floating leaf touches the bottom left edge. Fine droplets and realistic plant textures. The broad middle and upper two thirds are calm deep green water with soft reflections of distant trees, very subtle ripples and natural tonal variation. A delicate warm rim of dawn light touches the petals; restful botanical photography, rich true colors, beautiful realistic detail. Composition: reserve x12%-88%, y12%-70% as a quiet, fairly uniform dark area for several lines of separately rendered English or Malayalam Scripture. All prominent flowers remain below y72%. Do not place lettering or a text panel there. No artificial gradient, no washout or added color tint, no text, letters, numbers, watermark, logo, symbols, people, animals, buildings, border, collage, mockup, or UI.",
+    "sourcePath": "tmp/verse-image-candidates-2026-09-27/01-water-lily-stillness.png",
+    "sourceSha256": "2db018ce42a3208d9aa1c9762b739ed540970cf6dddd9a4b3b0f41927a84aa7d",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-27",
+    "selection": "All four previews explicitly approved by user",
+    "profile": {
+      "centerX": 480,
+      "centerY": 345,
+      "height": 580,
+      "width": 800,
+      "ink": "#FFF8E9",
+      "footerInk": "#FFF8E9",
+      "citationY": 670,
+      "family": "lake"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-water-lily-stillness.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 86406,
+    "assetSha256": "9f1b7ae340712c0e6d17cde9a991436b865a6887ffcc890ea2ab392d1eb547d7"
+  },
+  {
+    "name": "scene-coast-after-rain",
+    "family": "coast",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic background for a Hope Cards Bible verse image. Generate ONE finished square image, full bleed, 1536 by 1536 composition. Scene: a peaceful sandy coastal path leading between soft sea grasses toward a quiet turquoise sea after a passing rain. The curving path and fine golden grasses are confined to the lower quarter and very bottom corners; a small low headland sits at the far lower left horizon. Wide pearl-blue morning sky opens above a low sea horizon at y77%, with soft pale apricot light and a few very delicate clearing clouds near the upper edges. Real editorial landscape photography, uplifting calm, subtle wet sand reflections, naturally rich coastal colors, no dramatic sunset or huge sun. Composition: reserve x12%-88%, y12%-70% as broad softly luminous nearly uniform sky for separately rendered dark Scripture text in English or Malayalam. Clouds should be subtle, without sharp high contrast through the middle. Keep detailed grass and land low, sky and sea feel authentic rather than an artificial gradient. No washout filter or added tint, no text, letters, numbers, watermark, logo, symbols, people, animals, buildings, boats, border, collage, mockup, or UI.",
+    "sourcePath": "tmp/verse-image-candidates-2026-09-27/02-coast-after-rain.png",
+    "sourceSha256": "2e43e14553822852f9926c137d8429b1c4f1781cd082ecab08dfeed2a5c89d06",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-27",
+    "selection": "All four previews explicitly approved by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 380,
+      "height": 580,
+      "width": 840,
+      "ink": "#193C43",
+      "footerInk": "#FFF8E9",
+      "citationInk": "#193C43",
+      "citationY": 710,
+      "family": "coast"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-coast-after-rain.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 111272,
+    "assetSha256": "32dbbd48761b6e2aebe53530320224894614a64aa967f719cc59e3a6ecac14e3"
+  },
+  {
+    "name": "scene-vineyard-light",
+    "family": "foliage",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic background for a Hope Cards Bible verse image. Generate ONE finished square image, full bleed, 1536 by 1536 composition. Scene: a beautiful living grapevine in a quiet vineyard during late golden hour. A small cluster of natural purple grapes hangs at the LOWER RIGHT corner beneath a translucent fresh green vine leaf, with a few delicate curling tendrils along the lower edge. Real grape bloom, irregular natural berries, credible botanical structure, warm sunlight touching leaf veins. The broad center and upper two thirds are softly blurred shaded vineyard foliage in deep olive, moss-green and warm earth colors; subtly glowing warm bokeh only near the very top left edge. Refined intimate vineyard photography with rich natural colors and shallow depth of field. Composition: reserve x12%-88%, y12%-70% as a quiet evenly shaded area for several lines of separately rendered ivory English or Malayalam Scripture; grapes and sharp leaves stay below y72% or at extreme margins. Keep the image naturally beautiful without an obvious blank panel. No washout, artificial gradient, added tint, text, letters, numbers, watermark, logo, symbols, people, animals, buildings, wine bottles, glasses, border, collage, mockup, or UI.",
+    "sourcePath": "tmp/verse-image-candidates-2026-09-27/03-vineyard-light.png",
+    "sourceSha256": "a14c7ed309dafd1e71ff62134b6037f71c39b6f362973be9ae11a342a4f40e15",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-27",
+    "selection": "All four previews explicitly approved by user",
+    "profile": {
+      "centerX": 465,
+      "centerY": 350,
+      "height": 580,
+      "width": 790,
+      "ink": "#FFF8E9",
+      "footerInk": "#FFF8E9",
+      "citationY": 700,
+      "family": "foliage"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-vineyard-light.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 75500,
+    "assetSha256": "90b234bd0d26ab9ae9559e353309c002e45381aead47c5326daae07bca4d6e83"
+  },
+  {
+    "name": "scene-firefly-evening",
+    "family": "night",
+    "prompt": "Use case: photorealistic-natural. Asset type: original square photographic background for a Hope Cards Bible verse image. Generate ONE finished square image, full bleed, 1536 by 1536 composition. Scene: an enchanting but believable quiet meadow at blue hour, photographed from grass height after sunset. Fine meadow grasses and a few small white wildflowers line the lower quarter, with only a handful of tiny natural warm firefly glows nestled in the grass near the lower edges. Deep distant woodland fades into soft navy and teal bokeh through the broad upper two thirds; a tiny trace of dusky lavender sky near the very top. Restful real nature photography, rich muted blue and green hues, subtle warm firefly lights, no fantasy glow, no artificial sparkles or star field. Composition: reserve x12%-88%, y12%-70% as a broad quiet fairly uniform dark background for separately rendered ivory English or Malayalam Scripture. All detailed grass, flowers and light points stay beneath y72% or at the extreme edges; no central glowing subject. No washout filter or added tint, no text, letters, numbers, watermark, logo, symbols, people, animals except the implied tiny fireflies, buildings, border, collage, mockup, or UI.",
+    "sourcePath": "tmp/verse-image-candidates-2026-09-27/04-firefly-evening.png",
+    "sourceSha256": "e9de1e58da7b3f1e9627b748d5ed7f840d695d083c1b93ad834787abf4388010",
+    "generation": "Built-in image_gen",
+    "date": "2026-09-27",
+    "selection": "All four previews explicitly approved by user",
+    "profile": {
+      "centerX": 540,
+      "centerY": 390,
+      "height": 620,
+      "width": 840,
+      "ink": "#FFF8E9",
+      "footerInk": "#FFF8E9",
+      "citationY": 745,
+      "family": "night"
+    },
+    "asset": "android/app/src/main/assets/verse-art-renderer/backgrounds/scene-firefly-evening.webp",
+    "outputSize": [
+      1080,
+      1080
+    ],
+    "format": "WebP",
+    "quality": 86,
+    "bytes": 51868,
+    "assetSha256": "9d11b17776c97ebfd4908c85174114449fe27fde302a63d3918ff71f3409c7da"
+  }
+]

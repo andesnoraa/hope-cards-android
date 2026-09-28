@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_enable_timer">Conto alla rovescia</string>
+    <string name="quiz_timer_description">%1$d secondi per domanda. Allo scadere del tempo si passa alla domanda successiva.</string>
+    <string name="quiz_elapsed_time">Tempo impiegato: %1$s</string>
+    <string name="quiz_time_remaining">Tempo rimasto: %1$s</string>
+    <string name="quiz_time_up">Tempo scaduto</string>
+    <string name="quiz_unanswered">Nessuna risposta</string>
+</resources>

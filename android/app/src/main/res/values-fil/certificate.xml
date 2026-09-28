@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_title">Mga sertipiko ng quiz</string>
+    <string name="quiz_certificate_competition_default">Paligsahan sa Bible Quiz</string>
+    <string name="quiz_certificate_intro">Gumawa ng mga sertipiko ng paglahok na A4. Bawat kalahok ay may sariling PDF.</string>
+    <string name="quiz_certificate_competition_label">Pamagat ng paligsahan</string>
+    <string name="quiz_certificate_date_label">Petsa</string>
+    <string name="quiz_certificate_organizer_label">Organisasyon (opsyonal)</string>
+    <string name="quiz_certificate_participants_label">Mga pangalan ng kalahok</string>
+    <string name="quiz_certificate_participants_hint">Isang pangalan sa bawat linya. Hanggang 50 kalahok.</string>
+    <string name="quiz_certificate_generate">Gumawa ng mga sertipiko</string>
+    <string name="quiz_certificate_generating">Ginagawa ang sertipiko %1$d sa %2$d…</string>
+    <string name="quiz_certificate_ready">Mga sertipikong handa: %1$d</string>
+    <string name="quiz_certificate_share_all">Ibahagi ang lahat ng PDF</string>
+    <string name="quiz_certificate_share_one">Ibahagi ang sertipiko ni %1$s</string>
+    <string name="quiz_certificate_edit">Baguhin ang mga detalye</string>
+    <string name="quiz_certificate_error">Hindi nagawa ang mga sertipiko. Pakisubukang muli.</string>
+    <string name="quiz_certificate_error_required">Maglagay ng pamagat, petsa at kahit isang kalahok.</string>
+    <string name="quiz_certificate_error_name_length">Hanggang 100 character lang ang bawat pangalan.</string>
+    <string name="quiz_certificate_error_count">Magdagdag ng hanggang 50 kalahok sa bawat batch.</string>
+    <string name="quiz_certificate_error_title_length">Hanggang 120 character lang ang pamagat.</string>
+    <string name="quiz_certificate_error_date_length">Hanggang 60 character lang ang petsa.</string>
+    <string name="quiz_certificate_error_organizer_length">Hanggang 120 character lang ang pangalan ng organisasyon.</string>
+    <string name="quiz_certificate_counter">%1$d / %2$d</string>
+    <string name="quiz_certificate_pdf_title">Katibayan ng Paglahok</string>
+    <string name="quiz_certificate_pdf_presented_to">Pinatutunayan na si</string>
+    <string name="quiz_certificate_pdf_participation">ay lumahok sa sumusunod na paligsahan:</string>
+    <string name="quiz_certificate_pdf_signature">Lagda ng tagapag-organisa</string>
+</resources>

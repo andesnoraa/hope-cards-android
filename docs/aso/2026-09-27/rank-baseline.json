@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "app": {
+    "packageName": "com.aaronsedna.hopecards",
+    "consoleAppId": "4976302422419978923",
+    "displayedNameAtBaseline": "Daily Bible Verse & Bible Quiz"
+  },
+  "observationDate": "2026-09-27",
+  "context": {
+    "surface": "Google Play desktop web search",
+    "browser": "Google Chrome",
+    "authentication": "signed in",
+    "requestedCountry": "IN",
+    "countrySpecifiedBy": "gl=IN URL parameter",
+    "languageSpecifiedBy": "hl URL parameter",
+    "deviceClass": "desktop",
+    "sponsoredLabelsObserved": false
+  },
+  "methodology": "The root task inspected returned app results in the signed-in browser. No Sponsored labels were seen. Each sample records the actual inspected depth. A null organic position means the app was not observed within that sample; it does not mean rank 0, prove a rank beyond that depth, or establish absence for other accounts, devices or markets. No full ordered-result list is persisted here.",
+  "searchVolumeData": {
+    "status": "unavailable_from_inspected_pages",
+    "notes": "The legacy store analysis page redirects. Acquisition traffic instructions lead to Grow overview and listing instructions to Store listings. Individual search-term data and query search volumes have not been obtained from the inspected pages."
+  },
+  "samples": [
+    {
+      "query": "daily bible verse",
+      "intent": "primary_category",
+      "observedAtUtc": "2026-09-27T14:58:11Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=daily%20bible%20verse&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "Hope Cards",
+      "intent": "brand",
+      "observedAtUtc": "2026-09-27T14:59:50Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "Hopecards",
+      "intent": "brand_variant",
+      "observedAtUtc": "2026-09-27T15:00:45Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "verse of the day",
+      "intent": "secondary_category",
+      "observedAtUtc": "2026-09-27T15:01:28Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=verse%20of%20the%20day&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "bible quiz",
+      "intent": "secondary_feature",
+      "observedAtUtc": "2026-09-27T15:02:57Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=bible%20quiz&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "daily bible",
+      "intent": "diagnostic",
+      "observedAtUtc": "2026-09-27T15:04:02Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 24,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "verse",
+      "intent": "diagnostic",
+      "observedAtUtc": "2026-09-27T15:04:51Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 20,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "മലയാളം ബൈബിൾ വചനങ്ങൾ",
+      "intent": "localized_category",
+      "observedAtUtc": "2026-09-27T15:05:56Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82%20%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE&c=apps&hl=ml&gl=IN",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "ഇന്നത്തെ വചനം",
+      "intent": "localized_category",
+      "observedAtUtc": "2026-09-27T15:06:16Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    },
+    {
+      "query": "ബൈബിൾ ക്വിസ്",
+      "intent": "localized_feature",
+      "observedAtUtc": "2026-09-27T15:07:25Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false
+    }
+  ],
+  "milestones": {
+    "primaryCategoryTopFive": "not_achieved",
+    "exactBrandObserved": "not_observed_within_30_inspected_results",
+    "brandVariantObserved": "not_observed_within_30_inspected_results",
+    "consecutiveDailyTopFiveSamples": 0
+  }
+}

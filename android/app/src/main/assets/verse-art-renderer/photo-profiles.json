@@ -332,5 +332,46 @@
     "ink": "#FFF8E9",
     "citationY": 856,
     "family": "night"
+  },
+  "scene-water-lily-stillness": {
+    "centerX": 480,
+    "centerY": 345,
+    "height": 580,
+    "width": 800,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "citationY": 670,
+    "family": "lake"
+  },
+  "scene-coast-after-rain": {
+    "centerX": 540,
+    "centerY": 380,
+    "height": 580,
+    "width": 840,
+    "ink": "#193C43",
+    "footerInk": "#FFF8E9",
+    "citationInk": "#193C43",
+    "citationY": 710,
+    "family": "coast"
+  },
+  "scene-vineyard-light": {
+    "centerX": 465,
+    "centerY": 350,
+    "height": 580,
+    "width": 790,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "citationY": 700,
+    "family": "foliage"
+  },
+  "scene-firefly-evening": {
+    "centerX": 540,
+    "centerY": 390,
+    "height": 620,
+    "width": 840,
+    "ink": "#FFF8E9",
+    "footerInk": "#FFF8E9",
+    "citationY": 745,
+    "family": "night"
   }
 }

@@ -46,3 +46,8 @@ example
 
 # Local QA screenshots and release artifacts
 /output/
+/tmp/
+
+# Local release signing credentials
+/credentials.json
+/credentials/

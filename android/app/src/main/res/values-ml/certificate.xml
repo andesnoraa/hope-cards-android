@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_certificate_title">ക്വിസ് സർട്ടിഫിക്കറ്റുകൾ</string>
+    <string name="quiz_certificate_competition_default">ബൈബിൾ ക്വിസ് മത്സരം</string>
+    <string name="quiz_certificate_intro">A4 പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കുക. ഓരോ പങ്കാളിക്കും പ്രത്യേക PDF ലഭിക്കും.</string>
+    <string name="quiz_certificate_competition_label">മത്സരത്തിന്റെ പേര്</string>
+    <string name="quiz_certificate_date_label">തീയതി</string>
+    <string name="quiz_certificate_organizer_label">സംഘടന (നിർബന്ധമില്ല)</string>
+    <string name="quiz_certificate_participants_label">പങ്കാളികളുടെ പേരുകൾ</string>
+    <string name="quiz_certificate_participants_hint">ഓരോ വരിയിലും ഒരു പേര്. പരമാവധി 50 പേർ.</string>
+    <string name="quiz_certificate_generate">സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കുക</string>
+    <string name="quiz_certificate_generating">സർട്ടിഫിക്കറ്റ് തയ്യാറാക്കുന്നു: %1$d / %2$d…</string>
+    <string name="quiz_certificate_ready">തയ്യാറായ സർട്ടിഫിക്കറ്റുകൾ: %1$d</string>
+    <string name="quiz_certificate_share_all">എല്ലാ PDF-കളും പങ്കിടുക</string>
+    <string name="quiz_certificate_share_one">%1$s-ന്റെ സർട്ടിഫിക്കറ്റ് പങ്കിടുക</string>
+    <string name="quiz_certificate_edit">വിവരങ്ങൾ മാറ്റുക</string>
+    <string name="quiz_certificate_error">സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="quiz_certificate_error_required">മത്സരത്തിന്റെ പേരും തീയതിയും ഒരു പങ്കാളിയുടെ പേരെങ്കിലും ചേർക്കുക.</string>
+    <string name="quiz_certificate_error_name_length">ഓരോ പങ്കാളിയുടെ പേരും 100 അക്ഷരത്തിനുള്ളിൽ നൽകുക.</string>
+    <string name="quiz_certificate_error_count">ഒരു തവണ പരമാവധി 50 പങ്കാളികളെ ചേർക്കുക.</string>
+    <string name="quiz_certificate_error_title_length">മത്സരത്തിന്റെ പേര് 120 അക്ഷരത്തിനുള്ളിൽ നൽകുക.</string>
+    <string name="quiz_certificate_error_date_length">തീയതി 60 അക്ഷരത്തിനുള്ളിൽ നൽകുക.</string>
+    <string name="quiz_certificate_error_organizer_length">സംഘടനയുടെ പേര് 120 അക്ഷരത്തിനുള്ളിൽ നൽകുക.</string>
+    <string name="quiz_certificate_counter">%1$d / %2$d</string>
+    <string name="quiz_certificate_pdf_title">പങ്കാളിത്ത സാക്ഷ്യപത്രം</string>
+    <string name="quiz_certificate_pdf_presented_to"></string>
+    <string name="quiz_certificate_pdf_participation">താഴെപ്പറയുന്ന മത്സരത്തിൽ പങ്കെടുത്തതായി സാക്ഷ്യപ്പെടുത്തുന്നു:</string>
+    <string name="quiz_certificate_pdf_signature">സംഘാടകരുടെ ഒപ്പ്</string>
+</resources>

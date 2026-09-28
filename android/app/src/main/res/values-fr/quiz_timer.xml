@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_enable_timer">Compte à rebours</string>
+    <string name="quiz_timer_description">%1$d secondes par question. Passage automatique à la suivante à la fin du temps imparti.</string>
+    <string name="quiz_elapsed_time">Temps écoulé : %1$s</string>
+    <string name="quiz_time_remaining">Temps restant : %1$s</string>
+    <string name="quiz_time_up">Temps écoulé</string>
+    <string name="quiz_unanswered">Sans réponse</string>
+</resources>
