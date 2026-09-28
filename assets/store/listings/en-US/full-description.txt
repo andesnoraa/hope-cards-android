@@ -8,7 +8,7 @@ Explore Bible people, places and events in English, Malayalam, German, French, I
 Play at your own pace or enable a 30-second countdown for each question. The quiz moves on automatically when time runs out. The timer is off by default and remembers your choice. Sound feedback is on by default and can be switched off. With sound enabled, gentle beeps mark the final five seconds.
 
 Bible Quiz Certificate Generator
-Create A4 PDF participation certificates for your Bible quiz competition. Add multiple participant names at once to generate a separate certificate for each person. Choose English or another supported Bible language, select the date, and add your competition title and optional organization name. Share one certificate or all PDFs together.
+Create A4 PDF participation certificates for your Bible quiz competition. Add multiple participant names at once to generate a separate certificate for each person. Certificates automatically use the language of your selected Bible. Select the date and add your competition title and optional organization name. Share one certificate or all PDFs together.
 
 Verse images to save and share
 Create meaningful Scripture images with nature backgrounds, including flowers, birds, coastlines and starry skies. Backgrounds rotate as you browse. Save your favorites or share a verse image.

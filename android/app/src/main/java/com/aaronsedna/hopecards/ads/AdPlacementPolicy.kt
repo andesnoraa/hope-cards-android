@@ -9,4 +9,9 @@ internal object AdPlacementPolicy {
     )
 
     fun showsBanner(destination: Destination): Boolean = destination in bannerDestinations
+
+    fun allowsInterstitial(destination: Destination): Boolean = destination != Destination.DAILY
+
+    fun handlesQuizExit(from: Destination, to: Destination): Boolean =
+        from == Destination.BIBLE_QUIZ && to != Destination.BIBLE_QUIZ && allowsInterstitial(to)
 }

@@ -9,6 +9,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.data.AppRepository
+import com.aaronsedna.hopecards.model.Destination
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -40,13 +41,16 @@ internal object InterstitialPresentationPolicy {
         consentAllowsAds: Boolean,
         activityResumed: Boolean,
         alreadyShowing: Boolean,
+        destination: Destination,
     ): Boolean =
-        adsEnabled && foreground && consentAllowsAds && activityResumed && !alreadyShowing
+        adsEnabled && foreground && consentAllowsAds && activityResumed && !alreadyShowing &&
+            AdPlacementPolicy.allowsInterstitial(destination)
 }
 
 class AdsManager(
     context: Context,
     private val repository: AppRepository,
+    private val currentDestination: () -> Destination,
 ) {
     private val appContext = context.applicationContext
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
@@ -130,8 +134,13 @@ class AdsManager(
         interstitialRetryJob = null
     }
 
+    fun onDestinationChanged(destination: Destination) {
+        // A content break queued before Daily Hope must never resume as a delayed ad.
+        if (!AdPlacementPolicy.allowsInterstitial(destination)) presentationGeneration += 1
+    }
+
     fun recordCompletedCard(activity: Activity, isAdFree: Boolean) {
-        if (isAdFree) return
+        if (isAdFree || !AdPlacementPolicy.allowsInterstitial(currentDestination())) return
         initialize(activity, isAdFree = false)
         val requestGeneration = ++presentationGeneration
         scope.launch {
@@ -170,7 +179,7 @@ class AdsManager(
         continueNavigation: () -> Unit,
         recordCompletion: suspend () -> Boolean,
     ) {
-        if (isAdFree || closed) {
+        if (isAdFree || closed || !AdPlacementPolicy.allowsInterstitial(currentDestination())) {
             continueNavigation()
             return
         }
@@ -344,6 +353,7 @@ class AdsManager(
                 consentAllowsAds = consentInformation.canRequestAds(),
                 activityResumed = activityResumed,
                 alreadyShowing = interstitialShowing,
+                destination = currentDestination(),
             )
         ) return
         if (SystemClock.elapsedRealtime() - interstitialLoadedAt >= INTERSTITIAL_EXPIRATION_MS) {

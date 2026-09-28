@@ -74,7 +74,7 @@ submission alongside the app release. The existing titles are preserved. The
 English and Malayalam titles retain the daily Bible verse purpose and Hope Cards
 brand. The new copy adds the Bible Quiz
 Certificate Generator as a concrete feature: A4 participation PDFs, multiple
-participant names, output-language selection, a date and optional organization,
+participant names, automatic use of the selected Bible language, a date and optional organization,
 and sharing one or all certificates. It also describes the optional 30-second
 countdown for each question, automatic advancement when time expires, and the
 complete PDF answer report.

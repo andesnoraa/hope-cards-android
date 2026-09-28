@@ -4,7 +4,7 @@ This directory contains Hope Cards' tracked Play Store metadata and artwork. Som
 
 ## September 28 certificate-generator metadata
 
-The `short-description.txt` and `full-description.txt` files in all seven listing languages now contain the prepared app-release copy. Existing titles are preserved. The descriptions introduce the Bible Quiz Certificate Generator, multiple-participant A4 PDFs, certificate-language selection and sharing. They also describe the optional 30-second countdown for each question, automatic advancement when time expires, and question-by-question PDF report. The English and Malayalam copy removes the old print action and fixed background count; the other five locale files previously lacked the quiz sections. This locally prepared text is not proof of publication. See [the metadata record](../../docs/aso/2026-09-28/certificate-generator-update.md) before saving or reporting its status.
+The `short-description.txt` and `full-description.txt` files in all seven listing languages now contain the prepared app-release copy. Existing titles are preserved. The descriptions introduce the Bible Quiz Certificate Generator, multiple-participant A4 PDFs, automatic use of the selected Bible language and sharing. They also describe the optional 30-second countdown for each question, automatic advancement when time expires, and question-by-question PDF report. The English and Malayalam copy removes the old print action and fixed background count; the other five locale files previously lacked the quiz sections. This locally prepared text is not proof of publication. See [the metadata record](../../docs/aso/2026-09-28/certificate-generator-update.md) before saving or reporting its status.
 
 ## September 27 English and Malayalam screenshot sets
 

@@ -11,7 +11,8 @@
     <string name="quiz_certificate_generate">Créer les certificats</string>
     <string name="quiz_certificate_generating">Création du certificat %1$d sur %2$d…</string>
     <string name="quiz_certificate_ready">Certificats prêts : %1$d</string>
-    <string name="quiz_certificate_share_all">Partager tous les PDF</string>
+    <string name="quiz_certificate_share_single">Partager le certificat</string>
+    <string name="quiz_certificate_share_all">Partager les certificats</string>
     <string name="quiz_certificate_share_one">Partager le certificat de %1$s</string>
     <string name="quiz_certificate_edit">Modifier les détails</string>
     <string name="quiz_certificate_error">Impossible de créer les certificats. Veuillez réessayer.</string>

@@ -1,14 +1,9 @@
 package com.aaronsedna.hopecards.ui.screens
 
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.selection.selectable
-import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -23,7 +18,6 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.LiveRegionMode
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
@@ -69,31 +63,17 @@ internal fun QuizCertificateScreen(translation: Translation, onClose: () -> Unit
     val focus = LocalFocusManager.current
     val bibleLanguage = QuizLanguage.forTranslation(translation)
     val language = bibleLanguage.code
-    val preferences = remember(context) { context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE) }
-    val availableLanguages = remember {
-        QuizLanguage.entries.filter { candidate -> Translation.entries.any { QuizLanguage.forTranslation(it) == candidate } }
-    }
-    var outputLanguageCode by rememberSaveable(language) {
-        mutableStateOf(preferences.getString("certificate_language", null)
-            ?.takeIf { saved -> availableLanguages.any { it.code == saved } }
-            ?: if (preferences.getBoolean("certificate_english", false)) QuizLanguage.ENGLISH.code else language)
-    }
-    val outputLanguage = availableLanguages.first { it.code == outputLanguageCode }
-    val outputTranslation = outputLanguage.certificateTranslation()
-    val outputResources = remember(context, outputTranslation) { context.forQuizTranslation(outputTranslation).resources }
     // DatePicker represents calendar dates at UTC midnight, independent of the device timezone.
     var dateMillis by rememberSaveable(language) { mutableLongStateOf(LocalDate.now().toEpochDay() * 86_400_000L) }
-    val date = remember(dateMillis, outputLanguage) { formatCertificateDate(dateMillis, outputLanguage) }
+    val date = remember(dateMillis, bibleLanguage) { formatCertificateDate(dateMillis, bibleLanguage) }
     var datePickerOpen by rememberSaveable(language) { mutableStateOf(false) }
-    var languagePickerOpen by rememberSaveable(language) { mutableStateOf(false) }
-    var competition by rememberSaveable(language) { mutableStateOf(outputResources.getString(R.string.quiz_certificate_competition_default)) }
-    var competitionEdited by rememberSaveable(language) { mutableStateOf(false) }
+    var competition by rememberSaveable(language) { mutableStateOf(resources.getString(R.string.quiz_certificate_competition_default)) }
     var organizer by rememberSaveable(language) { mutableStateOf("") }
     var names by rememberSaveable(language) { mutableStateOf("") }
     var submitted by rememberSaveable(language) { mutableStateOf(false) }
     var generatedNames by rememberSaveable(language) { mutableStateOf<List<String>>(arrayListOf()) }
     var generatedPaths by rememberSaveable(language) { mutableStateOf<List<String>>(arrayListOf()) }
-    var generatedTranslationId by rememberSaveable(language) { mutableStateOf(outputTranslation.id) }
+    var generatedTranslationId by rememberSaveable(language) { mutableStateOf(translation.id) }
     var busy by remember { mutableStateOf(false) }
     var completed by remember { mutableIntStateOf(0) }
     var error by rememberSaveable(language) { mutableStateOf(false) }
@@ -123,19 +103,6 @@ internal fun QuizCertificateScreen(translation: Translation, onClose: () -> Unit
     }
     val filesAvailable = certificates.isNotEmpty() && certificates.all { it.file.isFile }
     val missingFiles = certificates.isNotEmpty() && !filesAvailable
-    val sharingMessage = remember(context, generatedTranslationId) {
-        QuizCertificates.shareMessage(context, Translation.fromId(generatedTranslationId))
-    }
-    var sharingMessageCopied by remember(sharingMessage) { mutableStateOf(false) }
-    val selectLanguage: (QuizLanguage) -> Unit = { selected ->
-        if (!busy) {
-            outputLanguageCode = selected.code
-            preferences.edit().putString("certificate_language", selected.code).remove("certificate_english").apply()
-            if (!competitionEdited) competition = context.forQuizTranslation(selected.certificateTranslation())
-                .getString(R.string.quiz_certificate_competition_default)
-            languagePickerOpen = false
-        }
-    }
     val share: (List<GeneratedCertificate>) -> Unit = { selected ->
         try {
             context.startActivity(Intent.createChooser(
@@ -152,7 +119,7 @@ internal fun QuizCertificateScreen(translation: Translation, onClose: () -> Unit
             focus.clearFocus()
             val details = CertificateDetails(competition.trim(), date.trim(), organizer.trim())
             val people = participants.toList()
-            val certificateTranslation = outputTranslation
+            val certificateTranslation = translation
             // Set immediately before dispatch, so two rapid taps cannot start overlapping batches.
             busy = true
             completed = 0
@@ -216,44 +183,11 @@ internal fun QuizCertificateScreen(translation: Translation, onClose: () -> Unit
                                 }
                             }
                         }
-                        Surface(shape = RoundedCornerShape(18.dp), color = colors.accentSoft,
-                            modifier = Modifier.fillMaxWidth().testTag("certificate_sharing_message_card")) {
-                            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                Text(resources.getString(R.string.quiz_certificate_share_message),
-                                    color = colors.text, fontFamily = font, fontWeight = FontWeight.SemiBold,
-                                    fontSize = 14.sp, modifier = Modifier.semantics { heading() })
-                                Text(sharingMessage, color = colors.text,
-                                    fontFamily = interfaceFontFor(Translation.fromId(generatedTranslationId)),
-                                    fontSize = 12.sp, lineHeight = 18.sp,
-                                    modifier = Modifier.fillMaxWidth().testTag("certificate_sharing_message"))
-                                Text(resources.getString(R.string.quiz_certificate_share_hint), color = colors.textSecondary,
-                                    fontFamily = font, fontSize = 12.sp, lineHeight = 18.sp)
-                                TextButton(onClick = {
-                                    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                                    clipboard.setPrimaryClip(ClipData.newPlainText(
-                                        resources.getString(R.string.quiz_certificate_share_message), sharingMessage))
-                                    sharingMessageCopied = true
-                                }, modifier = Modifier.testTag("certificate_copy_message")) {
-                                    Text(resources.getString(if (sharingMessageCopied) R.string.quiz_certificate_share_copied
-                                        else R.string.quiz_certificate_share_copy), color = colors.text,
-                                        fontFamily = font, fontWeight = FontWeight.SemiBold,
-                                        modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite })
-                                }
-                            }
-                        }
                     } else {
-                        Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            CertificateSelectionField(outputLanguage.nativeName, resources.getString(R.string.quiz_certificate_language_label),
-                                "certificate_language", translation, outputTranslation, busy) {
-                                focus.clearFocus(); languagePickerOpen = true
-                            }
-                            Text(resources.getString(R.string.quiz_certificate_language_hint), fontFamily = font,
-                                color = colors.textSecondary, fontSize = 12.sp, lineHeight = 18.sp)
-                        }
-                        CertificateField(competition, { competition = it; competitionEdited = true }, resources.getString(R.string.quiz_certificate_competition_label),
+                        CertificateField(competition, { competition = it }, resources.getString(R.string.quiz_certificate_competition_label),
                             "certificate_competition", translation, busy, if (submitted) competitionError?.let(resources::getString) else null)
                         CertificateSelectionField(date, resources.getString(R.string.quiz_certificate_date_label),
-                            "certificate_date", translation, outputTranslation, busy) {
+                            "certificate_date", translation, translation, busy) {
                             focus.clearFocus(); datePickerOpen = true
                         }
                         CertificateField(organizer, { organizer = it }, resources.getString(R.string.quiz_certificate_organizer_label),
@@ -280,13 +214,14 @@ internal fun QuizCertificateScreen(translation: Translation, onClose: () -> Unit
                                 if (busy) CircularProgressIndicator(Modifier.size(19.dp), strokeWidth = 2.dp, color = colors.buttonText)
                                 Text(when {
                                     busy -> resources.getString(R.string.quiz_certificate_generating, completed, participants.size)
-                                    filesAvailable -> resources.getString(R.string.quiz_certificate_share_all)
+                                    filesAvailable -> resources.getString(if (certificates.size == 1) R.string.quiz_certificate_share_single
+                                        else R.string.quiz_certificate_share_all)
                                     else -> resources.getString(R.string.quiz_certificate_generate)
                                 }, fontFamily = font, fontSize = 15.sp, modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite })
                             }
                         }
                         if (filesAvailable) TextButton(onClick = {
-                            generatedNames = arrayListOf(); generatedPaths = arrayListOf(); error = false; sharingMessageCopied = false
+                            generatedNames = arrayListOf(); generatedPaths = arrayListOf(); error = false
                         }, modifier = Modifier.fillMaxWidth().testTag("certificate_edit")) {
                             Text(resources.getString(R.string.quiz_certificate_edit), fontFamily = font, color = colors.text)
                         }
@@ -295,31 +230,9 @@ internal fun QuizCertificateScreen(translation: Translation, onClose: () -> Unit
             }
         }
     }
-    if (languagePickerOpen && !busy) AlertDialog(
-        onDismissRequest = { languagePickerOpen = false },
-        modifier = Modifier.testTag("certificate_language_picker"),
-        containerColor = colors.background,
-        title = { Text(resources.getString(R.string.quiz_certificate_language_label), fontFamily = font, color = colors.text) },
-        text = {
-            Column(Modifier.verticalScroll(rememberScrollState()).selectableGroup(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                availableLanguages.forEach { option ->
-                    CertificateLanguageOption(option.nativeName, option == outputLanguage, false,
-                        option.certificateTranslation(), "certificate_language_${option.code}") { selectLanguage(option) }
-                }
-            }
-        },
-        confirmButton = {},
-        dismissButton = {
-            TextButton(onClick = { languagePickerOpen = false }, modifier = Modifier.testTag("certificate_language_cancel")) {
-                Text(resources.getString(R.string.quiz_certificate_date_cancel), fontFamily = font, color = colors.text)
-            }
-        },
-    )
     if (datePickerOpen && !busy) CertificateDatePicker(dateMillis, translation,
         onDismiss = { datePickerOpen = false }, onDateSelected = { dateMillis = it; datePickerOpen = false })
 }
-
-private fun QuizLanguage.certificateTranslation(): Translation = Translation.entries.first { QuizLanguage.forTranslation(it) == this }
 
 internal fun formatCertificateDate(utcDateMillis: Long, language: QuizLanguage): String =
     DateFormat.getDateInstance(DateFormat.LONG, Locale.forLanguageTag(language.code)).apply {
@@ -397,24 +310,6 @@ private fun CertificateSelectionField(value: String, label: String, tag: String,
                     color = colors.text, modifier = Modifier.testTag("${tag}_value"))
             }
             AppIcon(AppIconGlyph.ChevronDown, null, colors.textSecondary, size = 22.dp)
-        }
-    }
-}
-
-@Composable
-private fun CertificateLanguageOption(label: String, selected: Boolean, busy: Boolean,
-    translation: Translation, tag: String, onSelect: () -> Unit) {
-    val colors = LocalHopeColors.current
-    Surface(shape = RoundedCornerShape(14.dp), color = if (selected) colors.accentSoft else colors.surface,
-        border = BorderStroke(1.dp, if (selected) colors.text else colors.divider)) {
-        Row(Modifier.fillMaxWidth().heightIn(min = 52.dp)
-            .selectable(selected = selected, enabled = !busy, role = Role.RadioButton, onClick = onSelect)
-            .testTag(tag).padding(horizontal = 14.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            RadioButton(selected = selected, enabled = !busy, onClick = null,
-                colors = RadioButtonDefaults.colors(selectedColor = colors.text, unselectedColor = colors.textSecondary))
-            Text(label, fontFamily = interfaceFontFor(translation), fontSize = 15.sp,
-                color = colors.text, modifier = Modifier.weight(1f))
         }
     }
 }

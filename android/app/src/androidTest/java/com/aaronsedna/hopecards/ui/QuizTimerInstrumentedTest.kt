@@ -226,8 +226,6 @@ class QuizTimerInstrumentedTest {
         visible("quiz_start").performClick()
         node("quiz_timer_display").assertIsDisplayed().assertTextEquals("00:30")
             .assertContentDescriptionEquals(context.getString(R.string.quiz_time_remaining, "00:30"))
-        val firstQuestionSelection = requireNotNull(visible("quiz_option_0").fetchSemanticsNode()
-            .config[SemanticsActions.OnClick].action)
         compose.runOnIdle { now = 39_000L }
         compose.mainClock.advanceTimeBy(1_100L)
         node("quiz_timer_display").assertTextEquals("00:01")
@@ -241,10 +239,6 @@ class QuizTimerInstrumentedTest {
                 compose.onNodeWithText(context.getString(R.string.quiz_progress, completedQuestions + 1, 10))
                     .assertIsDisplayed()
                 node("quiz_timer_display").assertTextEquals("00:30")
-                if (completedQuestions == 1) {
-                    // A queued option click from the expired question cannot answer the next one.
-                    compose.runOnIdle { assertTrue(firstQuestionSelection()) }
-                }
                 node("quiz_action").assertIsNotEnabled()
                 node("quiz_score").assertDoesNotExist()
                 // A stale ticker sample must neither expire nor beep on the new question.
@@ -258,6 +252,32 @@ class QuizTimerInstrumentedTest {
         visible("quiz_elapsed_result").assertTextEquals("Time taken: 05:00")
         node("quiz_timer_display").assertDoesNotExist()
         node("quiz_action").assertDoesNotExist()
+    }
+
+    @Test fun optionPressStartedBeforeExpiryCannotSelectAnAnswerOnTheNextQuestion() {
+        preferences.edit().putBoolean("timer", true).commit()
+        var now = 10_000L
+        val twoQuestions = (1..2).map { questions.single().copy(id = "press-expiry-$it") }
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        compose.setContent {
+            HopeCardsTheme(ThemeName.CLASSIC) {
+                BibleQuizScreen(twoQuestions, Translation.BSB, elapsedRealtimeMillis = { now })
+            }
+        }
+        visible("quiz_start").performClick()
+        compose.runOnIdle { now = 39_000L }
+        compose.mainClock.advanceTimeBy(1_100L)
+        node("quiz_timer_display").assertTextEquals("00:01")
+        visible("quiz_option_0").performTouchInput { down(center) }
+        compose.runOnIdle { now = 40_000L }
+        compose.mainClock.advanceTimeBy(1_100L)
+        compose.onNodeWithText(context.getString(R.string.quiz_progress, 2, 2)).assertIsDisplayed()
+        node("quiz_timer_display").assertTextEquals("00:30")
+        // Finish the physical gesture begun on the expired question, using the same coordinates.
+        node("quiz_option_0").performTouchInput { up() }
+        node("quiz_option_0").assertIsNotSelected()
+        node("quiz_action").assertIsNotEnabled()
+        node("quiz_score").assertDoesNotExist()
     }
 
     @Test fun checkingAnswerPausesCountdownAndNextQuestionStartsFreshThirtySeconds() {

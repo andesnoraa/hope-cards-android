@@ -3,7 +3,7 @@
     <string name="quiz_certificate_language_label">Langue du certificat</string>
     <string name="quiz_certificate_language_hint">Les noms et les informations personnalisées restent tels que saisis. Saisissez-les dans la langue souhaitée pour le certificat.</string>
     <string name="quiz_certificate_language_ready">Langue du certificat : %1$s</string>
-    <string name="quiz_certificate_date_confirm">Définir la date</string>
+    <string name="quiz_certificate_date_confirm">OK</string>
     <string name="quiz_certificate_date_cancel">Annuler</string>
-    <string name="quiz_certificate_date_picker_title">Sélectionner la date du certificat</string>
+    <string name="quiz_certificate_date_picker_title">Date</string>
 </resources>

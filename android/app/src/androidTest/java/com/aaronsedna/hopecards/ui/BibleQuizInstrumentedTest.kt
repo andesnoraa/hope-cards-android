@@ -262,7 +262,7 @@ class BibleQuizInstrumentedTest {
     }
 
     private fun assertDirectShareButton() {
-        scroll("quiz_export").assertIsDisplayed().assertIsEnabled().assertTextEquals("Share")
+        scroll("quiz_export").assertIsDisplayed().assertIsEnabled().assertTextContains("Share")
         node("quiz_share").assertDoesNotExist()
         node("quiz_save_pdf").assertDoesNotExist()
         node("quiz_print").assertDoesNotExist()

@@ -11,7 +11,8 @@
     <string name="quiz_certificate_generate">Gumawa ng mga sertipiko</string>
     <string name="quiz_certificate_generating">Ginagawa ang sertipiko %1$d sa %2$d…</string>
     <string name="quiz_certificate_ready">Mga sertipikong handa: %1$d</string>
-    <string name="quiz_certificate_share_all">Ibahagi ang lahat ng PDF</string>
+    <string name="quiz_certificate_share_single">Ibahagi ang sertipiko</string>
+    <string name="quiz_certificate_share_all">Ibahagi ang mga sertipiko</string>
     <string name="quiz_certificate_share_one">Ibahagi ang sertipiko ni %1$s</string>
     <string name="quiz_certificate_edit">Baguhin ang mga detalye</string>
     <string name="quiz_certificate_error">Hindi nagawa ang mga sertipiko. Pakisubukang muli.</string>

@@ -3,7 +3,7 @@
     <string name="quiz_certificate_language_label">Wika ng sertipiko</string>
     <string name="quiz_certificate_language_hint">Mananatili ang mga pangalan at sariling detalye ayon sa iyong pagkakasulat. Ilagay ang mga ito sa wikang gusto mong gamitin sa sertipiko.</string>
     <string name="quiz_certificate_language_ready">Wika ng sertipiko: %1$s</string>
-    <string name="quiz_certificate_date_confirm">Itakda ang petsa</string>
+    <string name="quiz_certificate_date_confirm">OK</string>
     <string name="quiz_certificate_date_cancel">Kanselahin</string>
-    <string name="quiz_certificate_date_picker_title">Piliin ang petsa ng sertipiko</string>
+    <string name="quiz_certificate_date_picker_title">Petsa</string>
 </resources>

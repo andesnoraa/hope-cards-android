@@ -8,7 +8,7 @@ Explorez les personnages, les lieux et les événements de la Bible dans des sé
 
 Création d’attestations de participation au quiz biblique
 
-Créez des attestations de participation au format PDF A4. Saisissez plusieurs noms à la fois pour générer un document distinct pour chaque personne. Choisissez l’anglais ou une autre langue biblique prise en charge, indiquez le nom du concours et sélectionnez la date. Le nom de l’organisation est facultatif. Partagez une attestation ou tous les PDF ensemble.
+Créez des attestations de participation au format PDF A4. Saisissez plusieurs noms à la fois pour générer un document distinct pour chaque personne. Les attestations utilisent automatiquement la langue de la traduction biblique choisie. Indiquez le nom du concours et sélectionnez la date. Le nom de l’organisation est facultatif. Partagez une attestation ou tous les PDF ensemble.
 
 Images de versets à partager
 

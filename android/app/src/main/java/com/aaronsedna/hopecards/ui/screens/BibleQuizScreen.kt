@@ -448,8 +448,9 @@ fun BibleQuizScreen(
                     }
                     else -> {
                         val q = byId.getValue(session.questionIds[session.position])
-                        item(key = "question") { QuizQuestionText(q.question, translation) }
-                        item(key = "options") {
+                        item(key = "question-${q.id}") { QuizQuestionText(q.question, translation) }
+                        // Replacing the question must cancel any press still held on its options.
+                        item(key = "options-${q.id}") {
                             Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                 q.options.forEachIndexed { index, answer ->
                                     val selected = session.selectedIndex == index
@@ -480,7 +481,7 @@ fun BibleQuizScreen(
                                 }
                             }
                         }
-                        if (session.checked) item(key = "feedback") {
+                        if (session.checked) item(key = "feedback-${q.id}") {
                             QuizAnswerFeedback(q, translation, session.selectedIndex == q.correctIndex)
                         }
                     }

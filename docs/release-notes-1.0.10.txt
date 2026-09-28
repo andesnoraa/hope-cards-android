@@ -1,41 +1,41 @@
 <en-US>
-- Create Bible Quiz participation certificates with multiple names, language choices and shareable A4 PDFs.
+- Create Bible Quiz participation certificates with multiple names and shareable A4 PDFs.
 - Try an optional 30-second timer for each question, with final-second sounds and automatic advance.
 - Improved quiz result PDFs and sharing.
 - New backgrounds for verse images.
 </en-US>
 <de-DE>
-- Teilnahmeurkunden für das Bibelquiz: mehrere Namen, Sprachauswahl und teilbare A4-PDFs.
+- Teilnahmeurkunden für das Bibelquiz: mehrere Namen und teilbare A4-PDFs.
 - Optionaler Timer: 30 Sekunden pro Frage, Signaltöne am Ende und automatischer Wechsel.
 - Verbesserte PDF-Berichte zu Quizergebnissen und einfacheres Teilen.
 - Neue Hintergründe für Versbilder.
 </de-DE>
 <es-419>
-- Crea certificados de participación del cuestionario bíblico con varios nombres, opciones de idioma y PDF A4 para compartir.
+- Crea certificados de participación del cuestionario bíblico con varios nombres y PDF A4 para compartir.
 - Temporizador opcional de 30 segundos por pregunta, con avisos sonoros y avance automático.
 - Mejoras en los PDF de resultados y al compartirlos.
 - Nuevos fondos para las imágenes de versículos.
 </es-419>
 <fil>
-- Gumawa ng mga sertipiko ng paglahok sa Bible Quiz para sa maraming pangalan, pumili ng wika at ibahagi bilang A4 PDF.
+- Gumawa ng mga sertipiko ng paglahok sa Bible Quiz para sa maraming pangalan at ibahagi bilang A4 PDF.
 - Opsyonal na 30 segundong timer bawat tanong, na may tunog sa huling mga segundo at awtomatikong pag-usad.
 - Pinahusay na mga PDF ng resulta ng quiz at pagbabahagi.
 - Mga bagong background para sa mga larawan ng talata.
 </fil>
 <fr-FR>
-- Créez des certificats de participation au quiz biblique avec plusieurs noms, un choix de langue et des PDF A4 à partager.
+- Créez des certificats de participation au quiz biblique avec plusieurs noms et des PDF A4 à partager.
 - Minuteur facultatif de 30 secondes par question, avec bips finaux et passage automatique à la suite.
 - Amélioration des PDF de résultats et du partage.
 - Nouveaux arrière-plans pour les images de versets.
 </fr-FR>
 <it-IT>
-- Crea attestati di partecipazione al quiz biblico con più nomi, scelta della lingua e PDF A4 da condividere.
+- Crea attestati di partecipazione al quiz biblico con più nomi e PDF A4 da condividere.
 - Timer facoltativo di 30 secondi per domanda, con segnali sonori finali e avanzamento automatico.
 - Migliorati i PDF dei risultati e la condivisione.
 - Nuovi sfondi per le immagini dei versetti.
 </it-IT>
 <ml-IN>
-- ബൈബിൾ ക്വിസ് പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ: ഒന്നിലധികം പേരുകൾ ചേർക്കാം, ഭാഷ തിരഞ്ഞെടുക്കാം, A4 PDF ആയി പങ്കിടാം.
+- ബൈബിൾ ക്വിസ് പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ: ഒന്നിലധികം പേരുകൾ ചേർക്കാം, A4 PDF ആയി പങ്കിടാം.
 - ഓരോ ചോദ്യത്തിനും 30 സെക്കൻഡ് ടൈമർ തിരഞ്ഞെടുക്കാം. അവസാന സെക്കൻഡുകളിൽ ശബ്ദസൂചന; സമയം തീരുമ്പോൾ സ്വയം മുന്നോട്ട് നീങ്ങും.
 - ക്വിസ് ഫലങ്ങളുടെ PDF രൂപകൽപ്പനയും പങ്കിടലും മെച്ചപ്പെടുത്തി.
 - വചന ചിത്രങ്ങൾക്ക് പുതിയ പശ്ചാത്തലങ്ങൾ.

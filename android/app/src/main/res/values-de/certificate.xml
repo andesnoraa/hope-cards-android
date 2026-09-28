@@ -11,7 +11,8 @@
     <string name="quiz_certificate_generate">Urkunden erstellen</string>
     <string name="quiz_certificate_generating">Urkunde %1$d von %2$d wird erstellt…</string>
     <string name="quiz_certificate_ready">Fertige Urkunden: %1$d</string>
-    <string name="quiz_certificate_share_all">Alle PDFs teilen</string>
+    <string name="quiz_certificate_share_single">Urkunde teilen</string>
+    <string name="quiz_certificate_share_all">Urkunden teilen</string>
     <string name="quiz_certificate_share_one">Urkunde für %1$s teilen</string>
     <string name="quiz_certificate_edit">Angaben bearbeiten</string>
     <string name="quiz_certificate_error">Die Urkunden konnten nicht erstellt werden. Bitte versuche es erneut.</string>

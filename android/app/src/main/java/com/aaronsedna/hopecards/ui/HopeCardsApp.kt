@@ -190,7 +190,7 @@ fun HopeCardsApp(
     val registerQuizExitHandler = remember { { handler: ((() -> Unit) -> Unit)? -> quizExitHandler = handler } }
     val navigate: (Destination) -> Unit = { destination ->
         val proceed = { viewModel.navigate(destination) }
-        if (state.destination == Destination.BIBLE_QUIZ && destination != Destination.BIBLE_QUIZ) {
+        if (AdPlacementPolicy.handlesQuizExit(state.destination, destination)) {
             quizExitHandler?.invoke(proceed) ?: proceed()
         } else proceed()
     }

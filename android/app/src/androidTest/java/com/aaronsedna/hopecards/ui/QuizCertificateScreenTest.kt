@@ -1,10 +1,7 @@
 package com.aaronsedna.hopecards.ui
 
 import android.graphics.Bitmap
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
-import android.os.Build
 import androidx.compose.material3.DatePickerDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.mutableStateOf
@@ -60,7 +57,7 @@ class QuizCertificateScreenTest {
         compose.setContent {
             HopeCardsTheme(ThemeName.CLASSIC) { QuizCertificateScreen(Translation.BSB) {} }
         }
-        assertLanguage(QuizLanguage.ENGLISH)
+        assertNoLanguageSelector()
         field("certificate_organizer").assertTextContains(context.getString(R.string.quiz_certificate_organizer_label))
         node("certificate_generate").assertIsDisplayed().performClick()
         field("certificate_participants")
@@ -110,34 +107,14 @@ class QuizCertificateScreenTest {
         node("certificate_share_0").assertExists().assertHasClickAction()
         node("certificate_share_1").assertExists().assertHasClickAction()
         node("certificate_share_all").assertIsDisplayed().assertIsEnabled()
-        val expectedMessage = "Generated using Hope Cards App\n\nInstall Hope Cards on Google Play\n" +
-            "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
-        field("certificate_sharing_message").assertIsDisplayed().assertTextEquals(expectedMessage)
-        val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val previousClip = compose.runOnIdle { clipboard.primaryClip }
-        try {
-            field("certificate_copy_message").assertTextEquals(context.getString(R.string.quiz_certificate_share_copy))
-                .assertIsDisplayed().performClick()
-            node("certificate_copy_message").assertTextEquals(context.getString(R.string.quiz_certificate_share_copied))
-            compose.runOnIdle {
-                val copied = requireNotNull(clipboard.primaryClip)
-                assertEquals(1, copied.itemCount)
-                assertEquals(expectedMessage, copied.getItemAt(0).text.toString())
-            }
-        } finally {
-            compose.runOnIdle {
-                when {
-                    previousClip != null -> clipboard.setPrimaryClip(previousClip)
-                    Build.VERSION.SDK_INT >= Build.VERSION_CODES.P -> clipboard.clearPrimaryClip()
-                    else -> clipboard.setPrimaryClip(ClipData.newPlainText("", ""))
-                }
-            }
-        }
+        node("certificate_share_all").assertTextEquals("Share certificates")
+        assertNoSharingMessagePanel()
         restoration.emulateSavedInstanceStateRestore()
         node("certificate_person_0").assertExists()
         node("certificate_person_1").assertExists()
         node("certificate_share_all").assertIsDisplayed().assertIsEnabled()
-        field("certificate_sharing_message").assertIsDisplayed().assertTextEquals(expectedMessage)
+        node("certificate_share_all").assertTextEquals("Share certificates")
+        assertNoSharingMessagePanel()
         capture("certificate-ready.png")
         node("certificate_edit").performClick()
         assertInput("certificate_competition", "Sunday School Bible Quiz")
@@ -153,7 +130,7 @@ class QuizCertificateScreenTest {
             HopeCardsTheme(ThemeName.CLASSIC) { QuizCertificateScreen(Translation.MAL1910) {} }
         }
         node("certificate_generate").assertTextEquals(translated.getString(R.string.quiz_certificate_generate))
-        assertLanguage(QuizLanguage.MALAYALAM)
+        assertNoLanguageSelector()
         assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
         input("certificate_participants", "ആരോൺ ജോസഫ്\nസാറ മേരി")
         restoration.emulateSavedInstanceStateRestore()
@@ -162,37 +139,32 @@ class QuizCertificateScreenTest {
         capture("certificate-form-malayalam.png")
     }
 
-    @Test fun allSevenCertificateLanguagesAreAvailableEvenWithAnEnglishBibleAndPersistOnReopen() {
+    @Test fun allSevenBibleLanguagesAutomaticallyLocalizeTheCertificateForm() {
         val visible = mutableStateOf(true)
+        val selectedBible = mutableStateOf(Translation.BSB)
         compose.setContent {
             HopeCardsTheme(ThemeName.CLASSIC) {
-                if (visible.value) QuizCertificateScreen(Translation.BSB) { visible.value = false }
+                if (visible.value) QuizCertificateScreen(selectedBible.value) { visible.value = false }
             }
         }
-        openLanguagePicker()
-        QuizLanguage.entries.forEach { node("certificate_language_${it.code}").assertExists() }
-        node("certificate_language_en").assertIsSelected()
-        capture("certificate-language-picker-english.png")
-        node("certificate_language_cancel").performClick()
-        assertLanguage(QuizLanguage.ENGLISH)
         QuizLanguage.entries.forEach { language ->
-            selectLanguage(language)
-            assertLanguage(language)
             val translation = translationFor(language)
-            assertInput("certificate_competition", context.forQuizTranslation(translation)
-                .getString(R.string.quiz_certificate_competition_default))
-            assertEquals(language.code, context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE)
-                .getString("certificate_language", null))
+            compose.runOnIdle { selectedBible.value = translation }
+            val resources = context.forQuizTranslation(translation).resources
+            assertNoLanguageSelector()
+            assertInput("certificate_competition", resources.getString(R.string.quiz_certificate_competition_default))
+            assertDate(currentMonthDate(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)), language)
+            node("certificate_generate").assertTextEquals(resources.getString(R.string.quiz_certificate_generate))
         }
         node("certificate_close").performClick()
         compose.runOnIdle { visible.value = true }
-        assertLanguage(QuizLanguage.TAGALOG)
-        node("certificate_generate").assertTextEquals(context.getString(R.string.quiz_certificate_generate))
+        assertNoLanguageSelector()
+        assertInput("certificate_competition", context.forQuizTranslation(Translation.ADB1905)
+            .getString(R.string.quiz_certificate_competition_default))
     }
 
-    @Test fun certificateLanguageRelocalizesDefaultsAndPreservesCustomDetailsAcrossRestorationAndReopen() {
+    @Test fun selectedBibleLanguageAndCustomDetailsSurviveRestorationAndReopenUsesLocalizedDefaults() {
         val translated = context.forQuizTranslation(Translation.MAL1910).resources
-        val english = context.forQuizTranslation(Translation.BSB).resources
         val visible = mutableStateOf(true)
         val restoration = StateRestorationTester(compose)
         restoration.setContent {
@@ -200,33 +172,22 @@ class QuizCertificateScreenTest {
                 if (visible.value) QuizCertificateScreen(Translation.MAL1910) { visible.value = false }
             }
         }
-        assertLanguage(QuizLanguage.MALAYALAM)
-        selectLanguage(QuizLanguage.ENGLISH)
-        assertInput("certificate_competition", english.getString(R.string.quiz_certificate_competition_default))
-        val selectedDate = selectDate(15, QuizLanguage.MALAYALAM)
-        assertDate(selectedDate, QuizLanguage.ENGLISH)
-        selectLanguage(QuizLanguage.MALAYALAM)
+        assertNoLanguageSelector()
         assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
-        assertDate(selectedDate, QuizLanguage.MALAYALAM)
+        val selectedDate = selectDate(15, QuizLanguage.MALAYALAM)
         input("certificate_competition", "സൺഡേ സ്കൂൾ ബൈബിൾ ക്വിസ്")
         input("certificate_organizer", "St. Thomas Sunday School")
         input("certificate_participants", "ആരോൺ ജോസഫ്\nSarah Mary")
-        selectLanguage(QuizLanguage.ENGLISH)
-        assertInput("certificate_competition", "സൺഡേ സ്കൂൾ ബൈബിൾ ക്വിസ്")
-        assertDate(selectedDate, QuizLanguage.ENGLISH)
-        assertInput("certificate_organizer", "St. Thomas Sunday School")
-        assertInput("certificate_participants", "ആരോൺ ജോസഫ്\nSarah Mary")
         restoration.emulateSavedInstanceStateRestore()
-        assertLanguage(QuizLanguage.ENGLISH)
+        assertNoLanguageSelector()
         assertInput("certificate_competition", "സൺഡേ സ്കൂൾ ബൈബിൾ ക്വിസ്")
-        assertDate(selectedDate, QuizLanguage.ENGLISH)
+        assertDate(selectedDate, QuizLanguage.MALAYALAM)
         assertInput("certificate_organizer", "St. Thomas Sunday School")
         assertInput("certificate_participants", "ആരോൺ ജോസഫ്\nSarah Mary")
         node("certificate_close").performClick()
         compose.runOnIdle { visible.value = true }
-        assertLanguage(QuizLanguage.ENGLISH)
-        assertInput("certificate_competition", english.getString(R.string.quiz_certificate_competition_default))
-        // The UI continues to follow the Bible language, even while the PDF language is English.
+        assertNoLanguageSelector()
+        assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
         node("certificate_generate").assertTextEquals(translated.getString(R.string.quiz_certificate_generate))
     }
 
@@ -249,71 +210,92 @@ class QuizCertificateScreenTest {
         selectCalendarDay(16, QuizLanguage.MALAYALAM)
         node("certificate_date_confirm").performClick()
         assertDate(currentMonthDate(16), QuizLanguage.MALAYALAM)
-        selectLanguage(QuizLanguage.FRENCH)
-        assertDate(currentMonthDate(16), QuizLanguage.FRENCH)
+        restoration.emulateSavedInstanceStateRestore()
+        assertDate(currentMonthDate(16), QuizLanguage.MALAYALAM)
     }
 
-    @Test fun previousEnglishCertificatePreferenceIsRespectedUntilANewLanguageIsChosen() {
-        context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE).edit()
-            .putBoolean("certificate_english", true).commit()
+    @Test fun legacyCertificateLanguagePreferencesCannotOverrideTheSelectedBible() {
+        val preferences = context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE)
+        preferences.edit().putBoolean("certificate_english", true)
+            .putString("certificate_language", "de").commit()
+        val visible = mutableStateOf(true)
         compose.setContent {
-            HopeCardsTheme(ThemeName.CLASSIC) { QuizCertificateScreen(Translation.MAL1910) {} }
+            HopeCardsTheme(ThemeName.CLASSIC) {
+                if (visible.value) QuizCertificateScreen(Translation.MAL1910) { visible.value = false }
+            }
         }
-        assertLanguage(QuizLanguage.ENGLISH)
-        selectLanguage(QuizLanguage.GERMAN)
-        assertLanguage(QuizLanguage.GERMAN)
-        assertEquals("de", context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE)
-            .getString("certificate_language", null))
+        val translated = context.forQuizTranslation(Translation.MAL1910).resources
+        assertNoLanguageSelector()
+        assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
+        assertDate(selectDate(15, QuizLanguage.MALAYALAM), QuizLanguage.MALAYALAM)
+        // The older English-only preference is ignored even without a saved language code.
+        node("certificate_close").performClick()
+        preferences.edit().remove("certificate_language").commit()
+        compose.runOnIdle { visible.value = true }
+        assertNoLanguageSelector()
+        assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
+        node("certificate_generate").assertTextEquals(translated.getString(R.string.quiz_certificate_generate))
     }
 
-    @Test fun malayalamBibleGeneratesEnglishAndMalayalamCertificatesAndRestoresBatchLanguage() {
-        val translated = context.forQuizTranslation(Translation.MAL1910).resources
+    @Test fun selectedBibleControlsGeneratedPdfsAndRestoredBatchLanguage() {
+        val selectedBible = mutableStateOf(Translation.BSB)
         val restoration = StateRestorationTester(compose)
         restoration.setContent {
-            HopeCardsTheme(ThemeName.CLASSIC) { QuizCertificateScreen(Translation.MAL1910) {} }
+            HopeCardsTheme(ThemeName.CLASSIC) { QuizCertificateScreen(selectedBible.value) {} }
         }
-        selectLanguage(QuizLanguage.ENGLISH)
+        assertNoLanguageSelector()
         input("certificate_participants", "ആരോൺ ജോസഫ്")
         input("certificate_organizer", "St. Thomas Sunday School")
         val firstFiles = certificateFiles().map { it.name }.toSet()
         node("certificate_generate").performClick()
         compose.waitUntil(30_000) { compose.onAllNodesWithTag("certificate_ready").fetchSemanticsNodes().isNotEmpty() }
-        node("certificate_output_language").assertTextEquals(translated.getString(R.string.quiz_certificate_language_ready, "English"))
-        copyGeneratedCertificate(firstFiles, "certificate-english-from-malayalam.pdf")
+        node("certificate_output_language").assertTextEquals(context.getString(R.string.quiz_certificate_language_ready, "English"))
+        node("certificate_share_all").assertTextEquals("Share certificate")
+        assertNoSharingMessagePanel()
+        copyGeneratedCertificate(firstFiles, "certificate-english-selected-bible.pdf")
         restoration.emulateSavedInstanceStateRestore()
-        node("certificate_output_language").assertTextEquals(translated.getString(R.string.quiz_certificate_language_ready, "English"))
+        node("certificate_output_language").assertTextEquals(context.getString(R.string.quiz_certificate_language_ready, "English"))
+        node("certificate_share_all").assertTextEquals("Share certificate")
+        assertNoSharingMessagePanel()
         node("certificate_share_all").assertIsEnabled()
-        capture("certificate-english-ready-malayalam-ui.png")
+        capture("certificate-english-selected-bible-ready.png")
+
         node("certificate_edit").performClick()
-        assertLanguage(QuizLanguage.ENGLISH)
-        selectLanguage(QuizLanguage.MALAYALAM)
-        input("certificate_organizer", "സെന്റ് തോമസ് സൺഡേ സ്കൂൾ")
-        assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
         assertInput("certificate_participants", "ആരോൺ ജോസഫ്")
+        // The app's selected Bible now supplies the form and PDF language, ignoring old overrides.
+        context.getSharedPreferences("bible-quiz", Context.MODE_PRIVATE).edit()
+            .putString("certificate_language", "en").putBoolean("certificate_english", true).commit()
+        compose.runOnIdle { selectedBible.value = Translation.MAL1910 }
+        val translated = context.forQuizTranslation(Translation.MAL1910).resources
+        assertNoLanguageSelector()
+        assertInput("certificate_competition", translated.getString(R.string.quiz_certificate_competition_default))
+        input("certificate_participants", "ആരോൺ ജോസഫ്")
+        input("certificate_organizer", "സെന്റ് തോമസ് സൺഡേ സ്കൂൾ")
+        assertDate(selectDate(15, QuizLanguage.MALAYALAM), QuizLanguage.MALAYALAM)
         val secondFiles = certificateFiles().map { it.name }.toSet()
         node("certificate_generate").performClick()
         compose.waitUntil(30_000) { compose.onAllNodesWithTag("certificate_ready").fetchSemanticsNodes().isNotEmpty() }
         node("certificate_output_language").assertTextEquals(translated.getString(R.string.quiz_certificate_language_ready, "മലയാളം"))
-        copyGeneratedCertificate(secondFiles, "certificate-malayalam-from-malayalam.pdf")
+        node("certificate_share_all").assertTextEquals(translated.getString(R.string.quiz_certificate_share_single))
+        assertNoSharingMessagePanel()
+        copyGeneratedCertificate(secondFiles, "certificate-malayalam-selected-bible.pdf")
         restoration.emulateSavedInstanceStateRestore()
         node("certificate_output_language").assertTextEquals(translated.getString(R.string.quiz_certificate_language_ready, "മലയാളം"))
+        node("certificate_share_all").assertTextEquals(translated.getString(R.string.quiz_certificate_share_single))
+        assertNoSharingMessagePanel()
+        node("certificate_share_all").assertIsEnabled()
+        capture("certificate-malayalam-selected-bible-ready.png")
     }
 
-    private fun assertLanguage(language: QuizLanguage) {
-        field("certificate_language")
-        compose.onNodeWithTag("certificate_language_value", useUnmergedTree = true)
-            .assertTextEquals(language.nativeName)
-    }
-
-    private fun openLanguagePicker() {
-        field("certificate_language").performClick()
-        node("certificate_language_picker").assertExists()
-    }
-
-    private fun selectLanguage(language: QuizLanguage) {
-        openLanguagePicker()
-        node("certificate_language_${language.code}").performScrollTo().performClick()
+    private fun assertNoLanguageSelector() {
+        node("certificate_language").assertDoesNotExist()
         node("certificate_language_picker").assertDoesNotExist()
+    }
+
+    private fun assertNoSharingMessagePanel() {
+        node("certificate_sharing_message_card").assertDoesNotExist()
+        node("certificate_sharing_message").assertDoesNotExist()
+        node("certificate_copy_message").assertDoesNotExist()
     }
 
     private fun openDatePicker() {

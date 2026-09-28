@@ -8,7 +8,7 @@ Explora personas, lugares y acontecimientos de la Biblia en rondas con preguntas
 
 Generador de certificados para concursos bíblicos
 
-Crea certificados de participación en PDF tamaño A4. Agrega varios nombres a la vez para generar un certificado individual para cada participante. Elige inglés u otro idioma bíblico compatible, indica el nombre del concurso y selecciona la fecha. Puedes añadir el nombre de la organización si lo deseas. Comparte un certificado o todos los PDF juntos.
+Crea certificados de participación en PDF tamaño A4. Agrega varios nombres a la vez para generar un certificado individual para cada participante. Los certificados usan automáticamente el idioma de la Biblia seleccionada. Indica el nombre del concurso y selecciona la fecha. Puedes añadir el nombre de la organización si lo deseas. Comparte un certificado o todos los PDF juntos.
 
 Imágenes con versículos para compartir
 

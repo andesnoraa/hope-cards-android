@@ -8,7 +8,7 @@ Scopri persone, luoghi ed eventi della Bibbia con domande selezionate casualment
 
 Generatore di attestati per il quiz biblico
 
-Crea attestati di partecipazione in PDF formato A4. Inserisci più nomi insieme per generare un attestato distinto per ogni partecipante. Scegli l’inglese o un’altra lingua biblica supportata, indica il nome della gara e seleziona la data. Puoi aggiungere il nome dell’organizzazione, se desideri. Condividi un attestato oppure tutti i PDF insieme.
+Crea attestati di partecipazione in PDF formato A4. Inserisci più nomi insieme per generare un attestato distinto per ogni partecipante. Gli attestati usano automaticamente la lingua della traduzione biblica selezionata. Indica il nome della gara e seleziona la data. Puoi aggiungere il nome dell’organizzazione, se desideri. Condividi un attestato oppure tutti i PDF insieme.
 
 Immagini con versetti da condividere
 

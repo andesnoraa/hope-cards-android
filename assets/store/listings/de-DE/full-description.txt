@@ -8,7 +8,7 @@ Entdecke Menschen, Orte und Ereignisse der Bibel in zufällig zusammengestellten
 
 Teilnahmeurkunden für Bibelquiz-Wettbewerbe
 
-Erstelle Teilnahmeurkunden als A4-PDF. Gib mehrere Namen ein, um für jede Person eine eigene Urkunde zu erstellen. Wähle Englisch oder eine andere unterstützte Bibelsprache, den Wettbewerbsnamen und das Datum. Einen Organisationsnamen kannst du optional ergänzen. Teile einzelne Urkunden oder alle PDFs zusammen.
+Erstelle Teilnahmeurkunden als A4-PDF. Gib mehrere Namen ein, um für jede Person eine eigene Urkunde zu erstellen. Die Urkunden verwenden automatisch die Sprache deiner ausgewählten Bibelübersetzung. Gib den Wettbewerbsnamen ein und wähle das Datum. Einen Organisationsnamen kannst du optional ergänzen. Teile einzelne Urkunden oder alle PDFs zusammen.
 
 Bibelverse als Bilder teilen
 

@@ -8,7 +8,7 @@ Kilalanin ang mga tao, lugar at pangyayari sa Biblia sa mga round na may halo-ha
 
 Paggawa ng mga sertipiko para sa Bible quiz
 
-Gumawa ng mga sertipiko ng pakikilahok bilang A4 PDF. Maglagay ng maraming pangalan nang sabay-sabay upang makagawa ng hiwalay na sertipiko para sa bawat kalahok. Pumili ng Ingles o ibang suportadong wika ng Biblia, ilagay ang pangalan ng paligsahan at piliin ang petsa. Maaari ring idagdag ang pangalan ng organisasyon. Ibahagi ang isang sertipiko o lahat ng PDF nang sabay-sabay.
+Gumawa ng mga sertipiko ng pakikilahok bilang A4 PDF. Maglagay ng maraming pangalan nang sabay-sabay upang makagawa ng hiwalay na sertipiko para sa bawat kalahok. Awtomatikong ginagamit ng mga sertipiko ang wika ng napili mong Biblia. Ilagay ang pangalan ng paligsahan at piliin ang petsa. Maaari ring idagdag ang pangalan ng organisasyon. Ibahagi ang isang sertipiko o lahat ng PDF nang sabay-sabay.
 
 Mga larawang may talata na maibabahagi
 

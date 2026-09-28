@@ -48,7 +48,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     private val repository = AppRepository(application)
     private val verseRepository = VerseRepository(application)
     val billing = BillingManager(application, repository)
-    val ads = AdsManager(application, repository)
+    val ads = AdsManager(application, repository) { _uiState.value.destination }
     val backups = BackupManager(application, repository, verseRepository)
     private val reminders = ReminderScheduler(application)
 
@@ -109,6 +109,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun openDailyHopeNotification(verseId: String?) {
+        ads.onDestinationChanged(Destination.DAILY)
         notificationVerseId = verseId
         _uiState.update { it.copy(destination = Destination.DAILY, selectedVerse = null, dailyVerse = null) }
         if (_uiState.value.initialized) {
@@ -117,6 +118,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun navigate(destination: Destination) {
+        ads.onDestinationChanged(destination)
         notificationVerseId = null
         _uiState.update { it.copy(destination = destination, selectedVerse = null) }
         if (destination == Destination.DAILY) {
