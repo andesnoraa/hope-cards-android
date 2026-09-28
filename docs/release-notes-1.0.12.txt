@@ -1,0 +1,21 @@
+<en-US>
+Improved Bible reference translations and checked the question bank for duplicates.
+</en-US>
+<de-DE>
+Die Übersetzungen der Bibelstellenangaben wurden verbessert und die Fragensammlung auf doppelte Fragen geprüft.
+</de-DE>
+<es-419>
+Mejoramos las traducciones de las referencias bíblicas y revisamos el banco de preguntas para detectar duplicados.
+</es-419>
+<fil>
+Pinahusay ang pagsasalin ng mga sanggunian sa Bibliya at sinuri kung may magkakaparehong tanong sa koleksiyon.
+</fil>
+<fr-FR>
+Amélioration de la traduction des références bibliques et vérification de la banque de questions pour repérer les doublons.
+</fr-FR>
+<it-IT>
+Migliorate le traduzioni dei riferimenti biblici e controllata la raccolta di domande per individuare eventuali duplicati.
+</it-IT>
+<ml-IN>
+വേദഭാഗസൂചനകളുടെ പരിഭാഷകൾ മെച്ചപ്പെടുത്തുകയും ചോദ്യശേഖരത്തിൽ ആവർത്തിച്ചുള്ള ചോദ്യങ്ങളുണ്ടോയെന്ന് പരിശോധിക്കുകയും ചെയ്തു.
+</ml-IN>

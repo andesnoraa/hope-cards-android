@@ -9,21 +9,48 @@ import com.aaronsedna.hopecards.MainActivity
 import com.aaronsedna.hopecards.data.AppRepository
 import com.aaronsedna.hopecards.data.BibleQuizRepository
 import com.aaronsedna.hopecards.model.*
+import com.aaronsedna.hopecards.notifications.ReminderScheduler
 import java.io.File
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.ExternalResource
+import org.junit.rules.RuleChain
 
 class BibleQuizNavigationTest {
-    @get:Rule val compose = createAndroidComposeRule<MainActivity>()
+    private val compose = createAndroidComposeRule<MainActivity>()
+    private val settings = object : ExternalResource() {
+        private lateinit var repository: AppRepository
+        private var original: AppSettings? = null
+
+        override fun before() = runBlocking {
+            repository = AppRepository(InstrumentationRegistry.getInstrumentation().targetContext)
+            repository.initialize()
+            original = repository.currentSettings()
+            // Set up before Activity launch so the first-run permission dialog cannot cover
+            // the drawer. Preserve the device permission; notification behavior has its own tests.
+            repository.updateSettings {
+                it.copy(preferredTranslation = Translation.BSB, dailyHopeReminderEnabled = false)
+            }
+        }
+
+        override fun after() {
+            original?.let { saved ->
+                runBlocking { repository.replaceSettings(saved) }
+                val reminders = ReminderScheduler(InstrumentationRegistry.getInstrumentation().targetContext)
+                if (saved.dailyHopeReminderEnabled) {
+                    reminders.schedule(saved.dailyHopeReminderHour, saved.dailyHopeReminderMinute, saved.preferredTranslation)
+                } else {
+                    reminders.cancel()
+                }
+            }
+        }
+    }
+    @get:Rule val rules: RuleChain = RuleChain.outerRule(settings).around(compose)
 
     @Test fun drawerAndSettingsKeepTheQuizLanguageInSync() {
-        val context = InstrumentationRegistry.getInstrumentation().targetContext
-        val repository = AppRepository(context)
-        val before = runBlocking { repository.currentSettings() }
         try {
-            runBlocking { repository.updateSettings { it.copy(preferredTranslation = Translation.BSB) } }
             openDestination("Bible Quiz")
             waitFor("quiz_start")
             scroll("quiz_start").performClick()
@@ -59,8 +86,6 @@ class BibleQuizNavigationTest {
             runCatching { compose.onRoot(useUnmergedTree = true).printToLog("QuizNavigation") }
             capture("quiz-navigation-failure.png")
             throw failure
-        } finally {
-            runBlocking { repository.replaceSettings(before) }
         }
     }
 

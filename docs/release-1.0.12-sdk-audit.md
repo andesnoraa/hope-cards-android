@@ -1,0 +1,13 @@
+# Release 1.0.12 SDK audit
+
+The version-42 release runtime graph was resolved and inspected on September 28, 2026 at 15:01:57 UTC. All 133 coordinates match the previous release. Official Google Maven/Maven Central metadata checks completed with no errors or unlisted versions; OSV checks completed for all 133 coordinates with no reported vulnerabilities. This is a point-in-time advisory check.
+
+The version-43 and version-44 candidates' `releaseRuntimeClasspath` graphs were independently resolved again. All 133 coordinates exactly match the audited graph; Mobile Ads dependency insight confirms 25.4.0 and Fragment insight confirms 1.9.1. The banner ownership fix and localized About copy introduce no dependency or minimum-SDK change. Their bundle validations are recorded separately from version 42. Version 44 dependency evidence is in `output/release-1.0.12/v44/`.
+
+No required compatible SDK upgrade was identified. Mobile Ads 25.4.0, WorkManager 2.11.2 and Guava 33.6.0-android preserve Android 6/API 23 support; their newer versions require API 24. Billing 9.1.0, UMP 4.0.0 and Fragment 1.9.1 remain selected. Newer AndroidX families also have compileSdk/AGP requirements beyond the existing baseline. The 98 coordinates with newer stable metadata are not 98 required upgrades. The transitive deprecated LocalBroadcastManager remains an advisory without a demonstrated Play blocker.
+
+Gradle dependency insight confirms the Fragment override. Dependency metadata remains enabled, and the signed AAB contains both dependencies.pb and its R8 mapping. Google Play parsed the exact version-42 bundle with no outdated-SDK warning, no release errors, API 23+, target 36, 16 KB page support and 20,367 supported devices (no support losses). Its one warning concerns unavailable third-party native debug symbols.
+
+Sources: [Mobile Ads releases](https://developers.google.com/admob/android/rel-notes), [Billing releases](https://developer.android.com/google/play/billing/release-notes), [UMP releases](https://developers.google.com/admob/android/privacy/release-notes), [WorkManager releases](https://developer.android.com/jetpack/androidx/releases/work), [Guava releases](https://github.com/google/guava/releases), [Play services releases](https://developers.google.com/android/guides/releases), [LocalBroadcastManager status](https://developer.android.com/jetpack/androidx/releases/localbroadcastmanager).
+
+Local audit evidence is in `output/release-1.0.12/`: `modules.json`, `release-runtime-dependencies.log`, `verification-build.log`, `version-audit.json`, `osv-audit.json`, `audit-summary.json`, `artifact-verification.json` and `play-validation.json`.
