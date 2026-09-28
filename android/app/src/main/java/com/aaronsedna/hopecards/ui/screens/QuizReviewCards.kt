@@ -99,7 +99,11 @@ private fun ReviewText(text: String, translation: Translation, modifier: Modifie
     // Stable text columns match the PDF and avoid shrink-wrapping a wider measured paragraph.
     val textModifier = if (fillWidth) modifier.fillMaxWidth() else modifier
     Text(text, modifier = if (heading) textModifier.semantics { heading() } else textModifier, color = color,
-        fontFamily = interfaceFontFor(translation), fontWeight = if (heading || strong) FontWeight.SemiBold else FontWeight.Normal,
+        fontFamily = interfaceFontFor(translation), fontWeight = when {
+            heading -> FontWeight.Bold
+            strong -> FontWeight.SemiBold
+            else -> FontWeight.Normal
+        },
         fontSize = if (heading) 20.sp else if (small) 14.sp else 16.sp,
         lineHeight = if (heading) 29.sp else if (small) 23.sp else 27.sp)
 }

@@ -76,6 +76,7 @@ class AdsManager(
     private var closed = false
 
     fun initialize(activity: Activity, isAdFree: Boolean) {
+        if (closed) return
         adsEnabled = !isAdFree
         if (isAdFree) {
             _ready.value = false
@@ -255,6 +256,12 @@ class AdsManager(
             AdRequest.Builder().build(),
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: InterstitialAd) {
+                    // Consent or entitlement may have invalidated this request while a new
+                    // load started. A stale success must not reset that newer load's state.
+                    if (loadGeneration != adStateGeneration) {
+                        ad.fullScreenContentCallback = null
+                        return
+                    }
                     loadingInterstitial = false
                     nextInterstitialLoadAt = 0L
                     interstitialRetryJob?.cancel()

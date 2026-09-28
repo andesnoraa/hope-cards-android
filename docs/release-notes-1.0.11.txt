@@ -1,0 +1,21 @@
+<en-US>
+Clearer quiz results with bold questions, labeled answers and matching PDF layouts. Improved purchase reliability, ad loading and verse-image gallery performance.
+</en-US>
+<de-DE>
+Übersichtlichere Quiz-Ergebnisse mit fett gedruckten Fragen, klar beschrifteten Antworten und passendem PDF-Layout. Verbesserte Zuverlässigkeit bei Käufen, beim Laden von Werbung und in der Versbilder-Galerie.
+</de-DE>
+<es-419>
+Resultados del cuestionario más claros, con preguntas en negrita, respuestas identificadas y el mismo diseño en PDF. Mejoras en las compras, la carga de anuncios y el rendimiento de la galería de versículos.
+</es-419>
+<fil>
+Mas malinaw na resulta ng pagsusulit, may makakapal na tanong, malinaw na mga sagot at kaparehong disenyo sa PDF. Pinahusay ang pagbili, pag-load ng ad at pagganap ng gallery ng mga talatang larawan.
+</fil>
+<fr-FR>
+Résultats du quiz plus lisibles, avec des questions en gras, des réponses clairement identifiées et une présentation PDF assortie. Amélioration des achats, du chargement des annonces et de la galerie de versets illustrés.
+</fr-FR>
+<it-IT>
+Risultati del quiz più chiari, con domande in grassetto, risposte ben distinte e lo stesso stile nel PDF. Miglioramenti agli acquisti, al caricamento degli annunci e alle prestazioni della galleria di versetti.
+</it-IT>
+<ml-IN>
+ക്വിസ് ഫലങ്ങളിൽ കൂടുതൽ വ്യക്തമായ ചോദ്യങ്ങളും ഉത്തരങ്ങളും. ചോദ്യങ്ങൾക്ക് കട്ടിയുള്ള അക്ഷരങ്ങളും ആപ്പിലും PDF-ലും ഒരേ രൂപകൽപ്പനയും. വാങ്ങൽ, പരസ്യങ്ങൾ ലോഡ് ചെയ്യൽ, വചനചിത്ര ഗാലറിയുടെ പ്രവർത്തനം എന്നിവ മെച്ചപ്പെടുത്തി.
+</ml-IN>

@@ -29,6 +29,9 @@ class VerseArtShareNavigationTest {
         repository.initialize()
         val original = repository.currentSettings()
         try {
+            // This test isolates share cancellation and Back restoration. A valid ad at the
+            // final artwork exit is covered by the separate live-inventory integration test.
+            repository.recordInterstitialShown(System.currentTimeMillis())
             repository.updateSettings { it.copy(preferredTranslation = Translation.BSB) }
             ActivityScenario.launch(MainActivity::class.java).use { scenario ->
                 scenario.onActivity { it.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) }

@@ -31,6 +31,8 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
         if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_regular else R.font.poppins_regular)!!
     private val semibold = ResourcesCompat.getFont(context,
         if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_semibold else R.font.poppins_semibold)!!
+    private val headingFont = ResourcesCompat.getFont(context,
+        if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_bold else R.font.poppins_bold)!!
     private val brandFont = ResourcesCompat.getFont(context, R.font.poppins_semibold)!!
 
     private data class Block(
@@ -43,6 +45,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
         val inset: Int = 0,
         val brand: Boolean = false,
         val compact: Boolean = false,
+        val heading: Boolean = false,
     )
 
     private val groups: List<List<Block>>
@@ -52,7 +55,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
             val correct = answer.outcome == QuizReviewContent.Outcome.CORRECT
             val answerColor = when { unanswered -> MUTED; correct -> GREEN; else -> RED }
             buildList {
-                add(Block(answer.prompt, size = 12f, bold = true, gap = 9))
+                add(Block(answer.prompt, size = 12f, heading = true, gap = 9))
                 answer.passage?.let { add(Block(it, size = 11f, gap = 9)) }
                 add(Block(answer.status, size = 9.5f, bold = true, color = answerColor, gap = 9,
                     fill = when { unanswered -> IVORY; correct -> GREEN_WASH; else -> RED_WASH }, inset = 8, compact = true))
@@ -80,7 +83,12 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
     private fun textLayout(block: Block, width: Int): StaticLayout {
         val paint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
             textSize = block.size
-            typeface = if (block.brand) brandFont else if (block.bold) semibold else regular
+            typeface = when {
+                block.brand -> brandFont
+                block.heading -> headingFont
+                block.bold -> semibold
+                else -> regular
+            }
             color = block.color
         }
         val layoutWidth = if (block.compact) minOf(width, ceil(Layout.getDesiredWidth(block.text, paint).toDouble()).toInt() + 1) else width
@@ -115,7 +123,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
             if (content.size == 1) {
                 val top = y
                 y += padding
-                place(Block(title, if (width < 300) 20f else 25f, bold = true, color = Color.WHITE, gap = 5),
+                place(Block(title, if (width < 300) 20f else 25f, heading = true, color = Color.WHITE, gap = 5),
                     paper.left + padding, textWidth)
                 place(Block(score, 17f, bold = true, color = PALE_GOLD, gap = 5), paper.left + padding, textWidth)
                 place(Block(edition, 9.5f, color = Color.WHITE, gap = 0), paper.left + padding, textWidth)

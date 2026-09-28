@@ -192,7 +192,7 @@ private fun PurchaseAction(
     val colors = LocalHopeColors.current
 
     when {
-        billing.loading -> Surface(
+        billing.loading || billing.launchingPurchase -> Surface(
             modifier = Modifier.fillMaxWidth().heightIn(min = 58.dp),
             color = colors.surface,
             shape = RoundedCornerShape(29.dp),

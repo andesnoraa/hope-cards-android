@@ -20,7 +20,16 @@ import java.util.Locale
 internal class VerseArtRenderer(private val context: Context) {
     private val root = "verse-art-renderer"
     private val faces = mutableMapOf<String, Typeface>()
-    private val reviewed = JSONArray(context.assets.open("$root/reviewed-designs.json").bufferedReader().use { it.readText() })
+    // Gallery visits resolve hundreds of designs. Index once instead of allocating and
+    // scanning the entire reviewed list for every thumbnail, rotation and export.
+    private val reviewed = buildMap<Triple<String, String, String>, JSONObject> {
+        val entries = JSONArray(context.assets.open("$root/reviewed-designs.json").bufferedReader().use { it.readText() })
+        for (index in 0 until entries.length()) {
+            val entry = entries.getJSONObject(index)
+            val key = Triple(entry.getString("edition"), entry.getString("verseId"), entry.getString("verifiedText"))
+            if (key !in this) put(key, entry)
+        }
+    }
     private val webEmphasis = JSONObject(context.assets.open("$root/web-emphasis.json").bufferedReader().use { it.readText() })
     private val photos = JSONObject(context.assets.open("$root/photo-profiles.json").bufferedReader().use { it.readText() })
     private val photoNames = photos.keys().asSequence().toList().sorted()
@@ -42,10 +51,7 @@ internal class VerseArtRenderer(private val context: Context) {
     }
 
     private fun baseDesign(verse: Verse): Design {
-        val selected = (0 until reviewed.length()).map { reviewed.getJSONObject(it) }.firstOrNull {
-            it.getString("edition") == verse.edition.id && it.getString("verseId") == verse.id &&
-                it.getString("verifiedText") == verse.text
-        }
+        val selected = reviewed[Triple(verse.edition.id, verse.id, verse.text)]
         if (selected != null) return Design(selected.getString("background"), selected.getString("font"),
             selected.getString("highlightFont"), selected.getString("emphasis"),
             selected.optString("highlightText", selected.getString("emphasis")),

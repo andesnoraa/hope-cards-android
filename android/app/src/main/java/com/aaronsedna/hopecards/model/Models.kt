@@ -116,6 +116,7 @@ enum class Destination(val title: String) {
 data class BillingState(
     val connected: Boolean = false,
     val loading: Boolean = true,
+    val launchingPurchase: Boolean = false,
     val isAdFree: Boolean = false,
     val price: String? = null,
     val canPurchase: Boolean = false,

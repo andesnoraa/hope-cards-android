@@ -2,6 +2,8 @@ package com.aaronsedna.hopecards.billing
 
 import android.app.Activity
 import android.content.Context
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
@@ -24,6 +26,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import java.lang.ref.WeakReference
 
 internal object BillingEntitlementPolicy {
     fun resolve(
@@ -45,7 +48,9 @@ class BillingManager(
     private val _state = MutableStateFlow(BillingState())
     val state: StateFlow<BillingState> = _state.asStateFlow()
 
-    private var productDetails: ProductDetails? = null
+    private val checkout = FreshCheckout<ProductDetails> { busy ->
+        _state.value = _state.value.copy(launchingPurchase = busy)
+    }
     private var ownedRemoveAds = false
     private var activeLegacySubscription = false
     private var connecting = false
@@ -131,9 +136,9 @@ class BillingManager(
         }
     }
 
-    fun launchPurchase(activity: Activity) {
-        val product = productDetails
-        if (!client.isReady || product == null) {
+    fun launchPurchase(activity: Activity, isCurrentScreen: () -> Boolean = { true }) {
+        if (closed || _state.value.isAdFree || _state.value.pending) return
+        if (!client.isReady) {
             refresh(reportErrors = true, preserveMessage = true)
             _state.value = _state.value.copy(
                 message = if (BuildConfig.DEBUG) {
@@ -144,7 +149,22 @@ class BillingManager(
             )
             return
         }
+        // Play's details and offer tokens can expire while this screen stays open.
+        // A slow response must not retain a destroyed Activity or interrupt another screen.
+        val owner = WeakReference(activity)
+        checkout.start(
+            query = { complete -> queryProduct(complete) },
+            canLaunch = {
+                val current = owner.get()
+                current != null && !current.isFinishing && !current.isDestroyed &&
+                    (current as? LifecycleOwner)?.lifecycle?.currentState?.isAtLeast(Lifecycle.State.RESUMED) != false &&
+                    !_state.value.isAdFree && !_state.value.pending && isCurrentScreen()
+            },
+            launch = { product -> owner.get()?.let { launchFreshPurchase(it, product) } },
+        )
+    }
 
+    private fun launchFreshPurchase(activity: Activity, product: ProductDetails) {
         val detailsBuilder = BillingFlowParams.ProductDetailsParams.newBuilder()
             .setProductDetails(product)
         product.oneTimePurchaseOfferDetailsList
@@ -164,6 +184,7 @@ class BillingManager(
     }
 
     override fun onPurchasesUpdated(result: BillingResult, purchases: MutableList<Purchase>?) {
+        if (closed) return
         when (result.responseCode) {
             BillingClient.BillingResponseCode.OK -> processPurchases(purchases.orEmpty())
             BillingClient.BillingResponseCode.USER_CANCELED -> Unit
@@ -171,7 +192,7 @@ class BillingManager(
         }
     }
 
-    private fun queryProduct() {
+    private fun queryProduct(onComplete: ((ProductDetails?) -> Unit)? = null) {
         val params = QueryProductDetailsParams.newBuilder()
             .setProductList(
                 listOf(
@@ -183,13 +204,23 @@ class BillingManager(
             )
             .build()
         client.queryProductDetailsAsync(params) { result, detailsResult ->
-            if (closed) return@queryProductDetailsAsync
-            productDetails = detailsResult.productDetailsList.firstOrNull()
-            val offer = productDetails?.oneTimePurchaseOfferDetailsList?.firstOrNull()
-            _state.value = _state.value.copy(
-                price = offer?.formattedPrice,
-                canPurchase = result.responseCode == BillingClient.BillingResponseCode.OK && productDetails != null,
-            )
+            scope.launch {
+                if (closed) return@launch
+                val product = detailsResult.productDetailsList.firstOrNull {
+                    it.productId == BuildConfig.REMOVE_ADS_PRODUCT_ID
+                }?.takeIf { result.responseCode == BillingClient.BillingResponseCode.OK }
+                val offer = product?.oneTimePurchaseOfferDetailsList?.firstOrNull()
+                val available = product.takeIf { offer != null }
+                _state.value = _state.value.copy(
+                    price = offer?.formattedPrice,
+                    canPurchase = available != null,
+                    message = if (onComplete != null && available == null) {
+                        if (BuildConfig.DEBUG) "Google Play purchases require the Play testing version."
+                        else "Remove Ads is not available from Google Play right now. Please try again later."
+                    } else _state.value.message,
+                )
+                onComplete?.invoke(available)
+            }
         }
     }
 
@@ -284,6 +315,7 @@ class BillingManager(
 
     fun close() {
         closed = true
+        checkout.close()
         scope.cancel()
         client.endConnection()
     }

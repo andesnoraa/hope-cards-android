@@ -158,7 +158,7 @@ class QuizReportTest {
         val quotationLayout = layouts.keys.single { it.text.toString() == quotation }
         assertEquals("The complete question must survive the style split", question.question,
             promptLayout.text.toString().removePrefix("1. ") + "\n\n" + quotationLayout.text)
-        assertEquals(ResourcesCompat.getFont(context, R.font.poppins_semibold), promptLayout.paint.typeface)
+        assertEquals(ResourcesCompat.getFont(context, R.font.poppins_bold), promptLayout.paint.typeface)
         assertEquals(ResourcesCompat.getFont(context, R.font.poppins_regular), quotationLayout.paint.typeface)
         assertTrue("The quotation should be lighter in scale than the prompt", quotationLayout.paint.textSize < promptLayout.paint.textSize)
         val file = File(context.cacheDir, "quiz-long-question-test.pdf")

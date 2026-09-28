@@ -217,7 +217,7 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun purchaseRemoveAds(activity: Activity) {
-        billing.launchPurchase(activity)
+        billing.launchPurchase(activity) { _uiState.value.destination == Destination.REMOVE_ADS }
     }
 
     fun restorePurchases() {
