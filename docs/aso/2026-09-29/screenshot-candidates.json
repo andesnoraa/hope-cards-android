@@ -1,0 +1,139 @@
+{
+  "appVersion": "1.0.12 (44) screenshot-mode debug",
+  "device": "emulator-5554",
+  "status": "local_candidates_not_uploaded",
+  "captures": [
+    {
+      "locale": "en-US",
+      "source": "output/aso-2026-09-29/source/en-US/01-card-back.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 107914,
+      "sha256": "932f43c6d76ac3a1c4b6c68d8b0e880d69fae260f12e2ee5dea71522231d4667",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "en-US",
+      "source": "output/aso-2026-09-29/source/en-US/02-card-front.png",
+      "trackedCandidate": "assets/store/candidates/2026-09-29/en-US/02-card-front.png",
+      "width": 1080,
+      "height": 2424,
+      "bytes": 178588,
+      "sha256": "254d95fa9e18fd5788e19dcdc4b1a78bcf1dba328b3bfd58cbb620487bb12895",
+      "visuallyReviewed": true,
+      "published": false
+    },
+    {
+      "locale": "en-US",
+      "source": "output/aso-2026-09-29/source/en-US/03-daily-hope.png",
+      "trackedCandidate": "assets/store/candidates/2026-09-29/en-US/03-daily-hope.png",
+      "width": 1080,
+      "height": 2424,
+      "bytes": 107232,
+      "sha256": "023e7bb4c4199b854ac923647f6d55d94130fde96c26a22ce0ebdd1fcb7b1ddc",
+      "visuallyReviewed": true,
+      "published": false
+    },
+    {
+      "locale": "en-US",
+      "source": "output/aso-2026-09-29/source/en-US/04-favorites.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 139688,
+      "sha256": "3bb1bae17eaab1c14edc4b12c025bfeaffd317204a80651c719d313f8498ac06",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "en-US",
+      "source": "output/aso-2026-09-29/source/en-US/05-journal.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 92988,
+      "sha256": "e05ef68eb296ce295f14fe986585b3d77d2d1cfc5e1fb7aa09b948479f49c460",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "en-US",
+      "source": "output/aso-2026-09-29/source/en-US/06-themes.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 145880,
+      "sha256": "4a03c790b4675a7d31b8ac24a61b6c92f85f2d1313e7d0b00400ac4453211c7f",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "ml-IN",
+      "source": "output/aso-2026-09-29/source/ml-IN/01-card-back.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 107829,
+      "sha256": "5ecda1d7e81c44a9e63737f915188148a6e0bd1450956139907ba00f042a45d3",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "ml-IN",
+      "source": "output/aso-2026-09-29/source/ml-IN/02-card-front.png",
+      "trackedCandidate": "assets/store/candidates/2026-09-29/ml-IN/02-card-front.png",
+      "width": 1080,
+      "height": 2424,
+      "bytes": 260345,
+      "sha256": "b79ae2fda31c49aca498ef17b0b722a412c6418380ecd09638ae724afaa04c79",
+      "visuallyReviewed": true,
+      "published": false
+    },
+    {
+      "locale": "ml-IN",
+      "source": "output/aso-2026-09-29/source/ml-IN/03-daily-hope.png",
+      "trackedCandidate": "assets/store/candidates/2026-09-29/ml-IN/03-daily-hope.png",
+      "width": 1080,
+      "height": 2424,
+      "bytes": 140800,
+      "sha256": "84b221ddd00f3a482f29bd2d83bd6e9770d110b131c30e05298bebcc53091d56",
+      "visuallyReviewed": true,
+      "published": false
+    },
+    {
+      "locale": "ml-IN",
+      "source": "output/aso-2026-09-29/source/ml-IN/04-favorites.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 187241,
+      "sha256": "5bbb9e31f6ecaa202410dd8dfd3641ae8f5569a43ea1e2de602d8e5c98ce38db",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "ml-IN",
+      "source": "output/aso-2026-09-29/source/ml-IN/05-journal.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 125518,
+      "sha256": "d684286b33079c219bfa39fc7f22b29abc0719a1026d3e1304f196f204c0af03",
+      "visuallyReviewed": false,
+      "published": false
+    },
+    {
+      "locale": "ml-IN",
+      "source": "output/aso-2026-09-29/source/ml-IN/06-themes.png",
+      "trackedCandidate": null,
+      "width": 1080,
+      "height": 2424,
+      "bytes": 145026,
+      "sha256": "ec75b0171b9e1068fe2b9459fdbca7f3dfc592e947ce3be6ccaaeba0c25fff4a",
+      "visuallyReviewed": false,
+      "published": false
+    }
+  ]
+}

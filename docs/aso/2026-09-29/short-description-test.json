@@ -1,0 +1,12 @@
+{
+  "status": "draft_not_submitted",
+  "locale": "en-US",
+  "earliestEvaluationDate": "2026-10-13",
+  "variable": "short description only",
+  "control": "Daily Bible verses, verse images, Bible quiz and a quiz certificate generator.",
+  "controlCharacters": 78,
+  "candidate": "Find hope in a daily Bible verse. Share verse images, quiz and PDF certificates.",
+  "candidateCharacters": 80,
+  "titleUnchanged": "Daily Bible Verse: Hope Cards",
+  "startGate": "Observation window complete; screenshot accuracy corrections settled; Console experiment-duration estimate supports useful results."
+}
