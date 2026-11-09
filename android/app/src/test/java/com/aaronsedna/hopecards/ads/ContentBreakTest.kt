@@ -30,6 +30,59 @@ class ContentBreakTest {
         assertEquals(listOf("count", "ad", "gallery"), events)
     }
 
+    @Test fun nextQuizWaitsForAdDismissalAndDuplicateCallbacksCannotRestartTwice(): Unit = runBlocking {
+        var dismiss: (() -> Unit)? = null
+        val events = mutableListOf<String>()
+        val job = launch(start = CoroutineStart.UNDISPATCHED) {
+            completeContentBreak(true, { true }, { true }, {
+                awaitFullScreenContent { finished ->
+                    events += "ad"
+                    dismiss = finished
+                }
+            }, { events += "quiz" })
+        }
+        assertEquals(listOf("ad"), events)
+        dismiss!!.invoke()
+        dismiss!!.invoke()
+        job.join()
+        assertEquals(listOf("ad", "quiz"), events)
+    }
+
+    @Test fun synchronousAdRejectionContinuesImmediately(): Unit = runBlocking {
+        var transitions = 0
+        completeContentBreak(true, { true }, { true }, {
+            awaitFullScreenContent { finished -> finished() }
+        }, { transitions++ })
+        assertEquals(1, transitions)
+    }
+
+    @Test fun asynchronousAdFailureReleasesNavigation(): Unit = runBlocking {
+        var failed: (() -> Unit)? = null
+        var transitions = 0
+        val job = launch(start = CoroutineStart.UNDISPATCHED) {
+            completeContentBreak(true, { true }, { true }, {
+                awaitFullScreenContent { failed = it }
+            }, { transitions++ })
+        }
+        assertEquals(0, transitions)
+        failed!!.invoke()
+        job.join()
+        assertEquals(1, transitions)
+    }
+
+    @Test fun destroyedActivityCannotRestartQuizAfterLateAdDismissal(): Unit = runBlocking {
+        var dismiss: (() -> Unit)? = null
+        var transitions = 0
+        val job = launch(start = CoroutineStart.UNDISPATCHED) {
+            completeContentBreak(true, { true }, { true }, {
+                awaitFullScreenContent { dismiss = it }
+            }, { transitions++ })
+        }
+        job.cancelAndJoin()
+        dismiss!!.invoke()
+        assertEquals(0, transitions)
+    }
+
     @Test fun navigatingAwayDuringBookkeepingDiscardsAd(): Unit = runBlocking {
         val eligibility = CompletableDeferred<Boolean>()
         var current = true
@@ -77,6 +130,6 @@ class ContentBreakTest {
         }
         job.cancelAndJoin()
         pendingStorage.complete(true)
-        assertEquals(listOf("continue"), events)
+        assertEquals(emptyList<String>(), events)
     }
 }

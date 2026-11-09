@@ -9,6 +9,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.net.Uri
 import android.os.Build
+import android.os.SystemClock
 import android.provider.DocumentsContract
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalActivity
@@ -61,6 +62,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -123,6 +125,7 @@ private data class DrawerEntry(
 )
 
 private const val SHARE_ATTRIBUTION = "Shared from Hope Cards ❤️"
+private const val DAILY_HOPE_MIN_READ_TIME_MS = 30_000L
 private const val PLAY_STORE_URL =
     "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
 
@@ -188,16 +191,48 @@ fun HopeCardsApp(
     val quizStateHolder = rememberSaveableStateHolder()
     var quizExitHandler by remember { mutableStateOf<((() -> Unit) -> Unit)?>(null) }
     val registerQuizExitHandler = remember { { handler: ((() -> Unit) -> Unit)? -> quizExitHandler = handler } }
+    var dailyHopeReadStartedAt by remember { mutableLongStateOf(0L) }
+    var dailyHopeExitPending by remember { mutableStateOf(false) }
+    var dailySharePresentation by remember { mutableStateOf<Verse?>(null) }
+    val adsSuppressed = billing.isAdFree || BuildConfig.SCREENSHOT_MODE
+    LaunchedEffect(state.destination, state.dailyVerse?.id, drawerState.isOpen, dailySharePresentation) {
+        dailyHopeReadStartedAt = if (
+            state.destination == Destination.DAILY && state.dailyVerse != null &&
+            !drawerState.isOpen && dailySharePresentation == null
+        ) {
+            SystemClock.elapsedRealtime()
+        } else 0L
+    }
     val navigate: (Destination) -> Unit = { destination ->
-        val proceed = { viewModel.navigate(destination) }
-        if (AdPlacementPolicy.handlesQuizExit(state.destination, destination)) {
-            quizExitHandler?.invoke(proceed) ?: proceed()
-        } else proceed()
+        val proceed = {
+            dailyHopeExitPending = false
+            viewModel.navigate(destination)
+        }
+        when {
+            state.destination == Destination.DAILY && destination != Destination.DAILY -> {
+                if (!dailyHopeExitPending) {
+                    val stayedToRead = dailyHopeReadStartedAt > 0L &&
+                        SystemClock.elapsedRealtime() - dailyHopeReadStartedAt >= DAILY_HOPE_MIN_READ_TIME_MS
+                    if (stayedToRead && !adsSuppressed) {
+                        dailyHopeExitPending = true
+                        viewModel.completedDailyHope(
+                            activity,
+                            isCurrentDailyHope = {
+                                dailyHopeExitPending &&
+                                    viewModel.uiState.value.destination == Destination.DAILY && !activity.isDestroyed
+                            },
+                            continueNavigation = proceed,
+                        )
+                    } else proceed()
+                }
+            }
+            AdPlacementPolicy.handlesQuizExit(state.destination, destination) ->
+                quizExitHandler?.invoke(proceed) ?: proceed()
+            else -> proceed()
+        }
     }
     val snackbarHostState = remember { SnackbarHostState() }
-    val adsSuppressed = billing.isAdFree || BuildConfig.SCREENSHOT_MODE
     var drawerLoaded by rememberSaveable { mutableStateOf(false) }
-    var dailySharePresentation by remember { mutableStateOf<Verse?>(null) }
     var journalEntryInDetail by remember { mutableStateOf<JournalEntry?>(null) }
     var editingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
     var deletingJournalEntry by remember { mutableStateOf<JournalEntry?>(null) }
@@ -310,8 +345,18 @@ fun HopeCardsApp(
                 Lifecycle.Event.ON_RESUME -> {
                     viewModel.billing.refresh()
                     viewModel.ads.onResume()
+                    if (
+                        viewModel.uiState.value.destination == Destination.DAILY &&
+                        viewModel.uiState.value.dailyVerse != null && !drawerState.isOpen &&
+                        dailySharePresentation == null
+                    ) {
+                        dailyHopeReadStartedAt = SystemClock.elapsedRealtime()
+                    }
                 }
-                Lifecycle.Event.ON_PAUSE -> viewModel.ads.onPause()
+                Lifecycle.Event.ON_PAUSE -> {
+                    viewModel.ads.onPause()
+                    dailyHopeReadStartedAt = 0L
+                }
                 else -> Unit
             }
         }

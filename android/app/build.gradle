@@ -133,6 +133,10 @@ dependencies {
     implementation("com.google.android.gms:play-services-ads:25.4.0") {
         because "25.5.0 requires API 24; 25.4.0 retains support for existing Android 6 users"
     }
+    // Add Unity as an AdMob bidding source. The network is initialized by the
+    // Google Mobile Ads mediation adapter; do not initialize UnityAds directly.
+    implementation "com.unity3d.ads:unity-ads:4.20.1"
+    implementation "com.google.ads.mediation:unity:4.20.1.0"
     implementation "com.google.android.ump:user-messaging-platform:4.0.0"
 
     constraints {

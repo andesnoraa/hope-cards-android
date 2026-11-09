@@ -42,9 +42,11 @@ internal object InterstitialPresentationPolicy {
         activityResumed: Boolean,
         alreadyShowing: Boolean,
         destination: Destination,
+        afterDailyHope: Boolean = false,
     ): Boolean =
         adsEnabled && foreground && consentAllowsAds && activityResumed && !alreadyShowing &&
-            AdPlacementPolicy.allowsInterstitial(destination)
+            (AdPlacementPolicy.allowsInterstitial(destination) ||
+                (afterDailyHope && destination == Destination.DAILY))
 }
 
 class AdsManager(
@@ -173,14 +175,33 @@ class AdsManager(
         repository.recordCompletedQuiz(System.currentTimeMillis())
     }
 
+    fun completeDailyHope(
+        activity: Activity,
+        isAdFree: Boolean,
+        isCurrentDailyHope: () -> Boolean,
+        continueNavigation: () -> Unit,
+    ) = completeActivity(
+        activity,
+        isAdFree,
+        isCurrentDailyHope,
+        continueNavigation,
+        allowDailyHopeExit = true,
+    ) {
+        repository.recordCompletedCard(System.currentTimeMillis())
+    }
+
     private fun completeActivity(
         activity: Activity,
         isAdFree: Boolean,
         isCurrentContent: () -> Boolean,
         continueNavigation: () -> Unit,
+        allowDailyHopeExit: Boolean = false,
         recordCompletion: suspend () -> Boolean,
     ) {
-        if (isAdFree || closed || !AdPlacementPolicy.allowsInterstitial(currentDestination())) {
+        val destination = currentDestination()
+        val eligibleDestination = AdPlacementPolicy.allowsInterstitial(destination) ||
+            (allowDailyHopeExit && destination == Destination.DAILY)
+        if (isAdFree || closed || !eligibleDestination) {
             continueNavigation()
             return
         }
@@ -199,7 +220,11 @@ class AdsManager(
                         requestGeneration == presentationGeneration && interstitial === cachedAd &&
                             _ready.value && isCurrentContent() && activity.hasWindowFocus()
                     },
-                    showAd = { showInterstitial(activity) },
+                    showAd = {
+                        awaitFullScreenContent { onFinished ->
+                            showInterstitial(activity, onFinished, afterDailyHope = allowDailyHopeExit)
+                        }
+                    },
                     continueNavigation = continueNavigation,
                 )
                 if (_ready.value) loadInterstitial()
@@ -348,7 +373,11 @@ class AdsManager(
         }
     }
 
-    private fun showInterstitial(activity: Activity) {
+    private fun showInterstitial(
+        activity: Activity,
+        onFinished: () -> Unit = {},
+        afterDailyHope: Boolean = false,
+    ) {
         val activityResumed =
             (activity as? LifecycleOwner)?.lifecycle?.currentState?.isAtLeast(Lifecycle.State.RESUMED)
                 ?: (!activity.isFinishing && !activity.isDestroyed)
@@ -361,8 +390,12 @@ class AdsManager(
                 activityResumed = activityResumed,
                 alreadyShowing = interstitialShowing,
                 destination = currentDestination(),
+                afterDailyHope = afterDailyHope,
             )
-        ) return
+        ) {
+            onFinished()
+            return
+        }
         if (SystemClock.elapsedRealtime() - interstitialLoadedAt >= INTERSTITIAL_EXPIRATION_MS) {
             interstitialExpirationJob?.cancel()
             interstitialExpirationJob = null
@@ -373,7 +406,40 @@ class AdsManager(
         val ad = interstitial
         if (ad == null) {
             loadInterstitial()
+            onFinished()
         } else {
+            val callback = ad.fullScreenContentCallback
+            val finished = AtomicBoolean(false)
+            fun finish() {
+                if (finished.compareAndSet(false, true)) {
+                    ad.fullScreenContentCallback = null
+                    onFinished()
+                }
+            }
+            ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                override fun onAdShowedFullScreenContent() {
+                    callback?.onAdShowedFullScreenContent()
+                }
+
+                override fun onAdDismissedFullScreenContent() {
+                    try {
+                        callback?.onAdDismissedFullScreenContent()
+                    } finally {
+                        finish()
+                    }
+                }
+
+                override fun onAdFailedToShowFullScreenContent(error: AdError) {
+                    try {
+                        callback?.onAdFailedToShowFullScreenContent(error)
+                    } finally {
+                        finish()
+                    }
+                }
+
+                override fun onAdClicked() { callback?.onAdClicked() }
+                override fun onAdImpression() { callback?.onAdImpression() }
+            }
             interstitialShowing = true
             runCatching { ad.show(activity) }
                 .onFailure { error ->
@@ -381,6 +447,7 @@ class AdsManager(
                     interstitialShowing = false
                     clearCachedInterstitial(invalidatePendingLoad = false)
                     loadInterstitial()
+                    finish()
                 }
         }
     }

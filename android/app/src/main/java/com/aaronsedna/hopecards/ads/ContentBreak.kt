@@ -1,11 +1,29 @@
 package com.aaronsedna.hopecards.ads
 
-/** Never hold navigation for an ad load, or show a newly loaded ad after navigation. */
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.suspendCancellableCoroutine
+import java.util.concurrent.atomic.AtomicBoolean
+import kotlin.coroutines.resume
+
+/** Wait for a presented ad's dismissal/failure, never for an ad load. */
+internal suspend fun awaitFullScreenContent(show: (onFinished: () -> Unit) -> Unit) {
+    suspendCancellableCoroutine<Unit> { continuation ->
+        val finished = AtomicBoolean(false)
+        show {
+            if (finished.compareAndSet(false, true) && continuation.isActive) {
+                continuation.resume(Unit)
+            }
+        }
+    }
+}
+
+/** No late ads after navigation. A presented ad must finish before starting new content. */
 internal suspend fun completeContentBreak(
     adReadyAtStart: Boolean,
     recordCompletion: suspend () -> Boolean,
     canStillPresent: () -> Boolean,
-    showAd: () -> Unit,
+    showAd: suspend () -> Unit,
     continueNavigation: () -> Unit,
 ) {
     if (!adReadyAtStart) continueNavigation()
@@ -13,7 +31,7 @@ internal suspend fun completeContentBreak(
         val eligible = recordCompletion()
         if (adReadyAtStart && eligible && canStillPresent()) showAd()
     } finally {
-        // An already loaded ad is presented before the gallery transition, never afterwards.
-        if (adReadyAtStart) continueNavigation()
+        // Do not restart a quiz (and its timer) behind the ad or after activity destruction.
+        if (adReadyAtStart && currentCoroutineContext().isActive) continueNavigation()
     }
 }
