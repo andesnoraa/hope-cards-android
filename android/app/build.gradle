@@ -31,10 +31,10 @@ android {
 
     defaultConfig {
         applicationId "com.aaronsedna.hopecards"
-        minSdk 23
+        minSdk 24
         targetSdk 36
-        versionCode 47
-        versionName "1.0.14"
+        versionCode 48
+        versionName "1.0.15"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -138,18 +138,21 @@ dependencies {
     implementation "com.android.billingclient:billing-ktx:9.1.0"
     implementation "com.google.android.play:app-update:2.1.0"
     implementation "com.google.android.play:app-update-ktx:2.1.0"
-    implementation("com.google.android.gms:play-services-ads:25.4.0") {
-        because "25.5.0 requires API 24; 25.4.0 retains support for existing Android 6 users"
+    implementation("com.google.android.gms:play-services-ads:25.5.0") {
+        because "Use the latest Google Mobile Ads SDK and its current Unity mediation adapter"
     }
     // Add Unity as an AdMob bidding source. The network is initialized by the
     // Google Mobile Ads mediation adapter; do not initialize UnityAds directly.
-    implementation "com.unity3d.ads:unity-ads:4.20.1"
-    implementation "com.google.ads.mediation:unity:4.20.1.0"
+    implementation "com.unity3d.ads:unity-ads:4.21.0"
+    implementation "com.google.ads.mediation:unity:4.21.0.0"
     implementation "com.google.android.ump:user-messaging-platform:4.0.0"
 
     constraints {
-        implementation("com.google.guava:guava:33.6.0-android") {
-            because "Replace transitive Guava 31.1; retain Android 6 support (33.7 requires API 24)"
+        implementation("com.google.guava:guava:33.7.2-android") {
+            because "Fix CVE-2026-102554 in the release runtime graph"
+        }
+        implementation("com.squareup.okhttp3:okhttp:4.12.0") {
+            because "Fix CVE-2021-0341 in the Unity Ads transitive HTTP client"
         }
     }
 
