@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import com.aaronsedna.hopecards.audio.DailyHopeAudioPlayer
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
@@ -72,7 +73,6 @@ import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.components.BibleReferenceText
 import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.ClassicHopeColors
-import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
 import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
@@ -255,11 +255,11 @@ fun DailyHopeScreen(
                         Text(
                             if (existingNote.isBlank()) appString(R.string.add_to_journal) else appString(R.string.edit_journal_entry),
                             color = colors.text,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
                         )
-                        Text(appString(R.string.for_reference, verse.displayReference), color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                        Text(appString(R.string.for_reference, verse.displayReference), color = colors.textTertiary, fontFamily = appInterfaceFont(), fontSize = 12.sp)
                     }
                     IconButton(onClick = { reflectionOpen = false }) {
                         AppIcon(AppIconGlyph.Close, appString(R.string.close_journal_entry), colors.textSecondary, size = 22.dp)
@@ -269,7 +269,7 @@ fun DailyHopeScreen(
                     Text(
                         appString(R.string.simple_thought),
                         color = colors.accent,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 11.sp,
                         letterSpacing = 1.5.sp,
@@ -277,7 +277,7 @@ fun DailyHopeScreen(
                     Text(
                         reflectionPrompt(verse.category),
                         color = colors.text,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 18.sp,
                         lineHeight = 27.sp,
@@ -298,8 +298,8 @@ fun DailyHopeScreen(
                     ),
                 )
                 Row(Modifier.fillMaxWidth()) {
-                    Text(appString(R.string.journal_entry), color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp, modifier = Modifier.weight(1f))
-                    Text("${note.length} / 1,000", color = colors.textTertiary, fontFamily = Poppins, fontSize = 12.sp)
+                    Text(appString(R.string.journal_entry), color = colors.textTertiary, fontFamily = appInterfaceFont(), fontSize = 12.sp, modifier = Modifier.weight(1f))
+                    Text("${note.length} / 1,000", color = colors.textTertiary, fontFamily = appInterfaceFont(), fontSize = 12.sp)
                 }
                 if (noteChanged) {
                     Button(
@@ -321,7 +321,7 @@ fun DailyHopeScreen(
                                 existingNote.isBlank() -> appString(R.string.save_to_journal)
                                 else -> appString(R.string.save_changes)
                             },
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                         )
@@ -331,7 +331,7 @@ fun DailyHopeScreen(
                         if (existingNote.isBlank()) appString(R.string.add_words_when_ready)
                         else appString(R.string.added_to_journal),
                         color = colors.textTertiary,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontSize = 12.sp,
                         lineHeight = 18.sp,
                         textAlign = TextAlign.Center,
@@ -405,7 +405,7 @@ fun DailySharePresentation(verse: Verse) {
         Text(
             "HOPE CARDS",
             color = colors.accent,
-            fontFamily = Poppins,
+            fontFamily = appInterfaceFont(),
             fontWeight = FontWeight.Bold,
             fontSize = 13.sp,
             lineHeight = 18.sp,

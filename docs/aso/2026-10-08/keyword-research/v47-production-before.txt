@@ -1,0 +1,250 @@
+2026-10-08T17:27:08.525Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+      - list:
+        - listitem "Latest releases and bundles":
+          - button "Latest releases and bundles":
+            - generic: Latest releases and bundles
+        - listitem "Production":
+          - button "Production" [active]:
+            - generic: Production
+        - listitem "Testing":
+          - button "Testing":
+            - generic: Testing
+            - img: expand_more
+        - listitem "Pre-registration":
+          - button "Pre-registration":
+            - generic: Pre-registration
+        - listitem "App integrity":
+          - button "App integrity":
+            - generic: App integrity
+        - listitem "Advanced settings":
+          - button "Advanced settings":
+            - generic: Advanced settings
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Production" [level=1]
+- button "Select form factors. Phones, Tablets, Desktop (Googlebook OS, ChromeOS), Android XR":
+  - img: phonelink
+  - generic: Phones, Tablets, Desktop (Googlebook OS, ChromeOS), Android XR
+  - img: arrow_drop_down
+- button "Create new release":
+  - generic: Create new release
+- text: Create and manage production releases to make your app available to all users in your chosen countries.
+- link "Learn more about Production (opens in a new tab)":
+  - /url: https://play.google.com/console/about/publicreleases
+  - text: Learn more
+- heading "Track summary (Phones, Tablets, Desktop, Android XR)" [level=4]
+- list:
+  - listitem: Active
+  - listitem: "Latest release: 1.0.13 (45)"
+  - listitem: 178 countries / regions
+  - listitem: 144 installs
+- tablist:
+  - tab "Release dashboard" [selected]:
+    - generic: Release dashboard
+  - tab "Releases":
+    - generic: Releases
+  - tab "Countries / regions":
+    - generic: Countries / regions
+- heading "Release dashboard" [level=2]
+- 'button "Release: Most recent (1.0.13 (45))"':
+  - generic: "Release: Most recent (1.0.13 (45))"
+  - img: arrow_drop_down
+- 'button "Compare to: All releases"':
+  - generic: "Compare to: All releases"
+  - img: arrow_drop_down
+- 'button "Granularity: Hourly"':
+  - generic: "Granularity: Hourly"
+  - img: arrow_drop_down
+- heading "3 actions recommended" [level=3]:
+  - generic: 3 actions recommended
+- button "Expand all": Expand all
+- heading "Remove resizability and orientation restrictions in your app to support large screen devices" [level=5]
+- generic: User experience
+- generic: "Release name: 1.0.13 (45)"
+- button "Show more":
+  - img: expand_more
+- heading "Improve your app's performance with bitmap downsampling" [level=5]
+- generic: Memory usage
+- generic: "Release name: 1.0.13 (45)"
+- button "Show more":
+  - img: expand_more
+- heading "Improve your app's memory and performance with R8 optimization" [level=5]
+- generic: Memory usage
+- generic: "Release name: 1.0.13 (45)"
+- button "Show more":
+  - img: expand_more
+- heading "Release stability" [level=2]
+- button "Collapse section":
+  - img: view_agenda
+- button "Collapse section":
+  - img: grid_view
+- button "User-perceived crashes"
+- generic: "-"
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- generic: User-perceived crashes (1.0.13 (45))
+- link "Explore report of User-perceived crashes":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/crashes?errorType=CRASH&versionCode=45
+  - generic: Explore
+  - img: arrow_right_alt
+- button "User-perceived crash rate"
+- generic: "-"
+- img: equalizer
+- paragraph: Data unavailable
+- link "Explore report of User-perceived crash rate":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?days=28&metric=USER_PERCEIVED_CRASHES&versionCode=45&granularity=HOURLY_GRANULARITY&aggregationPeriod=AGGREGATION_PERIOD_24H
+  - generic: Explore
+  - img: arrow_right_alt
+- button "User-perceived ANRs"
+- generic: "-"
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- generic: User-perceived ANRs (1.0.13 (45))
+- link "Explore report of User-perceived ANRs":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/crashes?errorType=ANR&versionCode=45
+  - generic: Explore
+  - img: arrow_right_alt
+- button "User-perceived ANR rate"
+- generic: "-"
+- img: equalizer
+- paragraph: Data unavailable
+- link "Explore report of User-perceived ANR rate":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?days=28&metric=USER_PERCEIVED_ANRS&versionCode=45&granularity=HOURLY_GRANULARITY&aggregationPeriod=AGGREGATION_PERIOD_24H
+  - generic: Explore
+  - img: arrow_right_alt
+- heading "Issues affecting the most users" [level=2]
+- button "More information about \"Issues affecting the most users\"":
+  - img: help
+- grid "Issues affecting the most users":
+  - row "Issue Type Affected versions Affected users Events Last occurred":
+    - columnheader "Issue"
+    - columnheader "Type"
+    - columnheader "Affected versions"
+    - columnheader "Affected users":
+      - text: Affected users
+      - img: help_outline
+    - columnheader "Events":
+      - text: Events
+      - img: help_outline
+    - columnheader "Last occurred":
+      - text: Last occurred
+      - img: help_outline
+    - cell
+  - row "No results":
+    - cell "No results"
+- heading "Reviews" [level=2]
+- button "Collapse section":
+  - img: view_agenda
+- button "Collapse section":
+  - img: grid_view
+- generic: 1 and 2 star ratings
+- img: equalizer
+- paragraph: No reviews
+- link "Explore report of 1 and 2 star ratings":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/reviews?versionCodes=45&starCounts=1%2C2
+  - generic: Explore
+  - img: arrow_right_alt
+- generic: 4 and 5 star ratings
+- img: equalizer
+- paragraph: No reviews
+- link "Explore report of 4 and 5 star ratings":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/reviews?versionCodes=45&starCounts=4%2C5
+  - generic: Explore
+  - img: arrow_right_alt
+- heading "Installs and uninstalls" [level=2]
+- button "Collapse section":
+  - img: view_agenda
+- button "Collapse section":
+  - img: grid_view
+- button "Install base"
+- generic: "-"
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- generic: Install base
+- link "Explore report of Install base":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=ACTIVE_DEVICES-ALL-UNIQUE-PER_INTERVAL-DAY&dimension=APP_VERSION&dimensionValues=45&dateRange=2026_10_6-2026_10_9
+  - generic: Explore
+  - img: arrow_right_alt
+- button "Install and update events"
+- generic: "2"
+- button "Download CSV file of Install and update events":
+  - img: download
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- generic: New installs
+- generic: Updates
+- link "Explore report of Install and update events":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=DEVICE_ACQUISITION-ALL-EVENTS-PER_INTERVAL-HOUR%2CDEVICE_UPDATES-ALL-EVENTS-PER_INTERVAL-HOUR&dimension=APP_VERSION&dimensionValues=45&dateRange=2026_10_6-2026_10_9
+  - generic: Explore
+  - img: arrow_right_alt
+- button "Uninstall events"
+- generic: "-"
+- img: equalizer
+- paragraph: Data unavailable
+- link "Explore report of Uninstall events":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=DEVICE_LOSS-ALL-EVENTS-PER_INTERVAL-HOUR&dimension=APP_VERSION&dimensionValues=45&dateRange=2026_10_6-2026_10_9
+  - generic: Explore
+  - img: arrow_right_alt
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/
+- status

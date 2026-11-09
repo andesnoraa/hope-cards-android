@@ -1,0 +1,150 @@
+{
+  "sourceCount": 329,
+  "translatableCount": 326,
+  "protectedNames": [
+    "about_feature_list",
+    "app_name",
+    "nav_home"
+  ],
+  "localResources": {
+    "de": {
+      "present": 312,
+      "missing": [
+        "art_browse_all",
+        "art_choose_category",
+        "art_count",
+        "art_favorite",
+        "art_hide_verse",
+        "art_image_error",
+        "art_image_saved",
+        "art_image_unavailable",
+        "art_read_verse",
+        "art_save_image",
+        "art_saved",
+        "art_saved_empty",
+        "art_unfavorite",
+        "nav_verse_art"
+      ],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    },
+    "es": {
+      "present": 312,
+      "missing": [
+        "art_browse_all",
+        "art_choose_category",
+        "art_count",
+        "art_favorite",
+        "art_hide_verse",
+        "art_image_error",
+        "art_image_saved",
+        "art_image_unavailable",
+        "art_read_verse",
+        "art_save_image",
+        "art_saved",
+        "art_saved_empty",
+        "art_unfavorite",
+        "nav_verse_art"
+      ],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    },
+    "fr": {
+      "present": 312,
+      "missing": [
+        "art_browse_all",
+        "art_choose_category",
+        "art_count",
+        "art_favorite",
+        "art_hide_verse",
+        "art_image_error",
+        "art_image_saved",
+        "art_image_unavailable",
+        "art_read_verse",
+        "art_save_image",
+        "art_saved",
+        "art_saved_empty",
+        "art_unfavorite",
+        "nav_verse_art"
+      ],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    },
+    "it": {
+      "present": 312,
+      "missing": [
+        "art_browse_all",
+        "art_choose_category",
+        "art_count",
+        "art_favorite",
+        "art_hide_verse",
+        "art_image_error",
+        "art_image_saved",
+        "art_image_unavailable",
+        "art_read_verse",
+        "art_save_image",
+        "art_saved",
+        "art_saved_empty",
+        "art_unfavorite",
+        "nav_verse_art"
+      ],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    },
+    "ml": {
+      "present": 312,
+      "missing": [
+        "art_browse_all",
+        "art_choose_category",
+        "art_count",
+        "art_favorite",
+        "art_hide_verse",
+        "art_image_error",
+        "art_image_saved",
+        "art_image_unavailable",
+        "art_read_verse",
+        "art_save_image",
+        "art_saved",
+        "art_saved_empty",
+        "art_unfavorite",
+        "nav_verse_art"
+      ],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    },
+    "fil": {
+      "present": 312,
+      "missing": [
+        "art_browse_all",
+        "art_choose_category",
+        "art_count",
+        "art_favorite",
+        "art_hide_verse",
+        "art_image_error",
+        "art_image_saved",
+        "art_image_unavailable",
+        "art_read_verse",
+        "art_save_image",
+        "art_saved",
+        "art_saved_empty",
+        "art_unfavorite",
+        "nav_verse_art"
+      ],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    },
+    "pt": {
+      "present": 326,
+      "missing": [],
+      "fallback": "English gallery controls in local builds where absent; Google supplies all visible controls in managed release languages. Filipino is not offered by Gemini."
+    }
+  },
+  "GeminiConfigured": [
+    "pt",
+    "de",
+    "fr",
+    "it",
+    "ml",
+    "es"
+  ],
+  "generatedTranslationsStatus": "Validated in final Play-signed version-47 APK",
+  "finalGeneratedValidation": "../../../../output/translation-final-1.0.14/google-generated-validation.json",
+  "googleReleaseResourcesPerManagedLanguage": 315,
+  "googleMissingResources": [],
+  "unusedShrunkResourcesWithLocalEnglishFallback": 11,
+  "scriptureAndQuizAssetTranslation": "Unchanged; not handled by Gemini app-string service"
+}

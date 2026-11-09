@@ -1,0 +1,240 @@
+2026-10-08T04:58:19.997Z
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Search Google Play":
+        - /placeholder: Search for apps & games
+        - text: bible quiz
+      - generic: clear
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "Apps & games" [pressed]:
+    - generic: Apps & games
+    - generic: arrow_drop_down
+  - button "Device":
+    - generic: Device
+    - generic: arrow_drop_down
+- link "Bible Quiz & Answers Drew Neuro Rated 4.6 stars out of five stars":
+  - /url: /store/apps/details?id=com.neuron.learningnumbers
+  - generic: Bible Quiz & Answers
+  - generic: Drew Neuro
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- link "Bible Trivia - Word Quiz Game Topy Games Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=bible.trivia.quiz.question.answer.spelling.correct.knowledge.test.game
+  - generic: Bible Trivia - Word Quiz Game
+  - generic: Topy Games
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Play Bible Quiz Chapter By Chapter Bible Quiz Chapter By Chapter SeedDevelopers Rated 4.0 stars out of five stars":
+  - /url: /store/apps/details?id=com.bible.quizpro
+  - button "Play Bible Quiz Chapter By Chapter":
+  - generic: Bible Quiz Chapter By Chapter
+  - generic: SeedDevelopers
+  - img "Rated 4.0 stars out of five stars":
+    - generic: "4.0"
+    - generic: star
+- link "Play Lighthouse Bible Quiz Lighthouse Bible Quiz Gospel Garden Apps Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.lighthousequiz.app
+  - button "Play Lighthouse Bible Quiz":
+  - generic: Lighthouse Bible Quiz
+  - generic: Gospel Garden Apps
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Play Bible Quiz Quest Adventure Bible Quiz Quest Adventure Blessy Rated 4.6 stars out of five stars":
+  - /url: /store/apps/details?id=com.quiz.biblequizquest
+  - button "Play Bible Quiz Quest Adventure":
+  - generic: Bible Quiz Quest Adventure
+  - generic: Blessy
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- link "Bible Quiz Ronasoft Media Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.ronasoftstudios.biblequiz
+  - generic: Bible Quiz
+  - generic: Ronasoft Media
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Bible Trivia Quiz, Bible Guide Christian Resources- Bible Truth Rated 4.6 stars out of five stars":
+  - /url: /store/apps/details?id=com.biblequestions.adevarprezent
+  - generic: Bible Trivia Quiz, Bible Guide
+  - generic: Christian Resources- Bible Truth
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- 'link "Bible Quiz Pro: Bible Trivia Christian Games Rated 4.8 stars out of five stars"':
+  - /url: /store/apps/details?id=us.christiangames.bibletrivia
+  - generic: "Bible Quiz Pro: Bible Trivia"
+  - generic: Christian Games
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Play Bible Trivia - Bible Quiz Game Bible Trivia - Bible Quiz Game Aged Studio Limited Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.agedstudio.bible.trivia.knowledge
+  - button "Play Bible Trivia - Bible Quiz Game":
+  - generic: Bible Trivia - Bible Quiz Game
+  - generic: Aged Studio Limited
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- link "Bible Quiz Dozcore Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.dozcore.mathew.biblequiz
+  - generic: Bible Quiz
+  - generic: Dozcore
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Kingdom Bible Quiz & Trivia Royal Nation LLC":
+  - /url: /store/apps/details?id=kingdom.bible.quiz
+  - generic: Kingdom Bible Quiz & Trivia
+  - generic: Royal Nation LLC
+- link "Bible Trivia Quiz Questions Christian Resources- Bible Truth":
+  - /url: /store/apps/details?id=com.bibleresources.trivia
+  - generic: Bible Trivia Quiz Questions
+  - generic: Christian Resources- Bible Truth
+- link "Bible Quiz Images AZak Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=mysuperiorgames.biblequiz
+  - generic: Bible Quiz Images
+  - generic: AZak
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Bible Quiz Trivia studencity":
+  - /url: /store/apps/details?id=com.studencity.biblequiz
+  - generic: Bible Quiz Trivia
+  - generic: studencity
+- 'link "Bible Quiz: Trivia Game Maias Dev"':
+  - /url: /store/apps/details?id=com.quizbiblia.quiz_biblia
+  - generic: "Bible Quiz: Trivia Game"
+  - generic: Maias Dev
+- link "Bible Show - Quiz Game Hosanna Games":
+  - /url: /store/apps/details?id=com.alexkojicBibleShowQuiz
+  - generic: Bible Show - Quiz Game
+  - generic: Hosanna Games
+- link "Play Daily Bible Trivia Daily Bible Trivia Super Free Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.daily.bible.trivia.android
+  - button "Play Daily Bible Trivia":
+  - generic: Daily Bible Trivia
+  - generic: Super Free
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- 'link "Bible Quiz: Daily Bible Trivia DOHAGI HOLDINGS CO., LTD"':
+  - /url: /store/apps/details?id=com.dohagi.bible.quiz.app
+  - generic: "Bible Quiz: Daily Bible Trivia"
+  - generic: DOHAGI HOLDINGS CO., LTD
+- 'link "Bible Trivia: Bible Quiz Game Clappy LLC Rated 4.7 stars out of five stars"':
+  - /url: /store/apps/details?id=com.clappy.bibletrivia
+  - generic: "Bible Trivia: Bible Quiz Game"
+  - generic: Clappy LLC
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Bible Quiz – English & Telugu 2Anns Media Rated 4.0 stars out of five stars":
+  - /url: /store/apps/details?id=com.twoannsmedia.jeevadharabiblequiz
+  - generic: Bible Quiz – English & Telugu
+  - generic: 2Anns Media
+  - img "Rated 4.0 stars out of five stars":
+    - generic: "4.0"
+    - generic: star
+- link "बाइबल क्विज प्रतियोगिता Africa Resurrection Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.resurrection.biblequiz
+  - generic: बाइबल क्विज प्रतियोगिता
+  - generic: Africa Resurrection
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- 'link "Play Bible Quiz: Trivia Game Bible Quiz: Trivia Game Supergonk Rated 4.0 stars out of five stars"':
+  - /url: /store/apps/details?id=org.supergonk.bible
+  - 'button "Play Bible Quiz: Trivia Game"':
+  - generic: "Bible Quiz: Trivia Game"
+  - generic: Supergonk
+  - img "Rated 4.0 stars out of five stars":
+    - generic: "4.0"
+    - generic: star
+- link "Bible Quiz - Ask a Christian Kermezou":
+  - /url: /store/apps/details?id=com.axelcode.bible.quiz.app
+  - generic: Bible Quiz - Ask a Christian
+  - generic: Kermezou
+- link "Hindi Bible Quiz Oly Bible Rated 4.4 stars out of five stars":
+  - /url: /store/apps/details?id=com.hindibible.quiz.trivia
+  - generic: Hindi Bible Quiz
+  - generic: Oly Bible
+  - img "Rated 4.4 stars out of five stars":
+    - generic: "4.4"
+    - generic: star
+- 'link "Bible Quiz: Chapter by Chapter Janus Works LLC"':
+  - /url: /store/apps/details?id=com.janus.trivia
+  - generic: "Bible Quiz: Chapter by Chapter"
+  - generic: Janus Works LLC
+- link "Bible Trivia, Quiz & Games Tupungato Studios":
+  - /url: /store/apps/details?id=com.tupungato.biblequiz
+  - generic: Bible Trivia, Quiz & Games
+  - generic: Tupungato Studios
+- link "Discover the Bible - the Quiz Luca Sigle":
+  - /url: /store/apps/details?id=com.lucasigle.biblequizzes
+  - generic: Discover the Bible - the Quiz
+  - generic: Luca Sigle
+- link "The Bible Quiz BsoftwareS":
+  - /url: /store/apps/details?id=com.bsoftwares.thebiblequiz
+  - generic: The Bible Quiz
+  - generic: BsoftwareS
+- 'link "Bibvia: Bible Trivia Quiz Game Mobeyosoft"':
+  - /url: /store/apps/details?id=bibvia.bible.trivia.quiz.game
+  - generic: "Bibvia: Bible Trivia Quiz Game"
+  - generic: Mobeyosoft
+- link "Bible Trivia Holisite":
+  - /url: /store/apps/details?id=bibletrivia.bible.trivia.quiz
+  - generic: Bible Trivia
+  - generic: Holisite
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

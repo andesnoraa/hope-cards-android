@@ -1,0 +1,313 @@
+Browser tab: 455027210, Title: "Statistics | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=ACTIVE_USERS-ALL-UNIQUE-PER_INTERVAL-DAY&dimension=COUNTRY&dimensionValues=OVERALL%2CUS%2CIN%2CRU%2CAF&dateRange=2026_9_16-2026_10_13&tab=APP_STATISTICS&ctpMetric=DAU_MAU-ACQUISITION_UNSPECIFIED-COUNT_UNSPECIFIED-CALCULATION_UNSPECIFIED-DAY&ctpDateRange=2026_9_16-2026_10_13&ctpDimension=COUNTRY&ctpDimensionValue=OVERALL&ctpPeersetKey=3%3Ac821014406a6c1a7".
+1 AXWebArea Statistics | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=ACTIVE_USERS-ALL-UNIQUE-PER_INTERVAL-DAY&dimension=COUNTRY&dimensionValues=OVERALL%2CUS%2CIN%2CRU%2CAF&dateRange=2026_9_16-2026_10_13&tab=APP_STATISTICS&ctpMetric=DAU_MAU-ACQUISITION_UNSPECIFIED-COUNT_UNSPECIFIED-CALCULATION_UNSPECIFIED-DAY&ctpDateRange=2026_9_16-2026_10_13&ctpDimension=COUNTRY&ctpDimensionValue=OVERALL&ctpPeersetKey=3%3Ac821014406a6c1a7
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+						32 button Monitor and improve
+							33 text Monitor and improve
+					34 container (collapsed) Description: Grow users, Secondary Actions: Expand
+						35 button Grow users
+							36 text Grow users
+					37 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						38 button Monetize with Play
+							39 text Monetize with Play
+			40 container main-content
+				41 container
+					42 heading Statistics, Value: 1
+						43 text Statistics
+					44 pop up button (collapsed) Description: Saved reports button, Secondary Actions: Expand
+						45 text Saved reports
+					46 container
+						47 text See detailed, customizable reports about the performance of your app and peers.
+						48 button Show more details about Statistics
+					49 tab group
+						50 tab (selected, settable, boolean) Description: App statistics, Value: 1
+						51 tab (selectable, settable, boolean) Description: Compare to peers, Value: 0
+					52 heading App statistics, Value: 2
+						53 text App statistics
+					54 heading Configure report, Value: 3
+						55 text Configure report
+					56 pop up button (collapsed) Description: Last 28 days Select a date range., ID: aB1A58C08-6888-4627-982E-3AB277B0BA67--2, Secondary Actions: Expand
+						57 text date_range
+						58 text Last 28 days
+					59 pop up button (collapsed) Description: Export report, Secondary Actions: Expand
+						60 text Export report
+					61 button Save this report
+						62 text Save this report
+					63 pop up button (collapsed) Description: Installed audience, Secondary Actions: Expand
+						64 text Installed audience
+					65 text Unique users, Per interval, Daily
+					66 button Edit
+						67 text Edit
+					68 pop up button (collapsed) Description: Select another metric, Secondary Actions: Expand
+						69 text Select another metric
+					70 text by
+					87 pop up button (collapsed) Description: Country / region, Secondary Actions: Expand
+						88 text Country / region
+					89 cell
+						90 button (collapsed) 5 countries / regions, Secondary Actions: Expand
+							91 text 5 countries / regions
+					92 button Explore this chart with AI
+						93 text Explore with AI
+					73 heading Time series, Value: 2
+						74 text Time series
+					94 container Chart Use left and right keys to navigate through domain values. Press enter to expand details for a domain value.
+					75 heading Change analysis, Value: 2
+						76 text Change analysis
+					77 container
+						78 checkbox (settable, integer) Description: Include selected Countries / regions, Value: 0
+					79 text Include selected Countries / regions
+					80 button (collapsed) Description: Show Countries / regions you selected in configure report at the top of the page., Secondary Actions: Expand
+					81 text Countries / regions with the largest change between the first interval in your selected period and the last interval with complete data
+					82 heading Installed audience, Value: 4
+						83 text Installed audience
+					95 button Explore this chart with AI
+					84 heading Description: Data table, Value: 2
+						85 text Data table
+					86 table Data table
+						96 row Days All countries / regions United States India Russia Afghanistan
+							97 cell Days
+								98 text Days
+							99 cell
+								100 text All countries / regions
+							101 cell
+								102 text United States
+							103 cell
+								104 text India
+							105 cell
+								106 text Russia
+							107 cell
+								108 text Afghanistan
+						109 row Oct 11, 2026 Percentage of total 213 100% 123 57.75% 73 34.27% 5 2.35% 3 1.41%
+							110 cell
+								111 text Oct 11, 2026
+								112 text Percentage of total
+							113 cell
+								114 text 213
+								115 text 100%
+							116 cell
+								117 text 123
+								118 text 57.75%
+							119 cell
+								120 text 73
+								121 text 34.27%
+							122 cell
+								123 text 5
+								124 text 2.35%
+							125 cell
+								126 text 3
+								127 text 1.41%
+						128 row Oct 10, 2026 Percentage of total 230 100% 144 62.61% 69 30% 5 2.17% 2 0.87%
+							129 cell
+								130 text Oct 10, 2026
+								131 text Percentage of total
+							132 cell
+								133 text 230
+								134 text 100%
+							135 cell
+								136 text 144
+								137 text 62.61%
+							138 cell
+								139 text 69
+								140 text 30%
+							141 cell
+								142 text 5
+								143 text 2.17%
+							144 cell
+								145 text 2
+								146 text 0.87%
+						147 row Oct 9, 2026 Percentage of total 227 100% 134 59.03% 76 33.48% 5 2.2% 2 0.88%
+							148 cell
+								149 text Oct 9, 2026
+								150 text Percentage of total
+							151 cell
+								152 text 227
+								153 text 100%
+							154 cell
+								155 text 134
+								156 text 59.03%
+							157 cell
+								158 text 76
+								159 text 33.48%
+							160 cell
+								161 text 5
+								162 text 2.2%
+							163 cell
+								164 text 2
+								165 text 0.88%
+						166 row Oct 8, 2026 Percentage of total 215 100% 125 58.14% 73 33.95% 5 2.33% 2 0.93%
+							167 cell
+								168 text Oct 8, 2026
+								169 text Percentage of total
+							170 cell
+								171 text 215
+								172 text 100%
+							173 cell
+								174 text 125
+								175 text 58.14%
+							176 cell
+								177 text 73
+								178 text 33.95%
+							179 cell
+								180 text 5
+								181 text 2.33%
+							182 cell
+								183 text 2
+								184 text 0.93%
+						185 row Oct 7, 2026 Percentage of total 253 100% 159 62.85% 74 29.25% 5 1.98% 3 1.19%
+							186 cell
+								187 text Oct 7, 2026
+								188 text Percentage of total
+							189 cell
+								190 text 253
+								191 text 100%
+							192 cell
+								193 text 159
+								194 text 62.85%
+							195 cell
+								196 text 74
+								197 text 29.25%
+							198 cell
+								199 text 5
+								200 text 1.98%
+							201 cell
+								202 text 3
+								203 text 1.19%
+						204 row Oct 6, 2026 Percentage of total 239 100% 146 61.09% 77 32.22% 5 2.09% 2 0.84%
+							205 cell
+								206 text Oct 6, 2026
+								207 text Percentage of total
+							208 cell
+								209 text 239
+								210 text 100%
+							211 cell
+								212 text 146
+								213 text 61.09%
+							214 cell
+								215 text 77
+								216 text 32.22%
+							217 cell
+								218 text 5
+								219 text 2.09%
+							220 cell
+								221 text 2
+								222 text 0.84%
+						223 row Oct 5, 2026 Percentage of total 159 100% 91 57.23% 53 33.33% 5 3.14% 2 1.26%
+							224 cell
+								225 text Oct 5, 2026
+								226 text Percentage of total
+							227 cell
+								228 text 159
+								229 text 100%
+							230 cell
+								231 text 91
+								232 text 57.23%
+							233 cell
+								234 text 53
+								235 text 33.33%
+							236 cell
+								237 text 5
+								238 text 3.14%
+							239 cell
+								240 text 2
+								241 text 1.26%
+						242 row Oct 4, 2026 Percentage of total 147 100% 73 49.66% 57 38.78% 8 5.44% 2 1.36%
+							243 cell
+								244 text Oct 4, 2026
+								245 text Percentage of total
+							246 cell
+								247 text 147
+								248 text 100%
+							249 cell
+								250 text 73
+								251 text 49.66%
+							252 cell
+								253 text 57
+								254 text 38.78%
+							255 cell
+								256 text 8
+								257 text 5.44%
+							258 cell
+								259 text 2
+								260 text 1.36%
+						261 row Oct 3, 2026 Percentage of total 152 100% 79 51.97% 54 35.53% 8 5.26% 2 1.32%
+							262 cell
+								263 text Oct 3, 2026
+								264 text Percentage of total
+							265 cell
+								266 text 152
+								267 text 100%
+							268 cell
+								269 text 79
+								270 text 51.97%
+							271 cell
+								272 text 54
+								273 text 35.53%
+							274 cell
+								275 text 8
+								276 text 5.26%
+							277 cell
+								278 text 2
+								279 text 1.32%
+						280 row Oct 2, 2026 Percentage of total 145 100% 75 51.72% 56 38.62% 5 3.45% 2 1.38%
+							281 cell
+								282 text Oct 2, 2026
+								283 text Percentage of total
+							284 cell
+								285 text 145
+								286 text 100%
+							287 cell
+								288 text 75
+								289 text 51.72%
+							290 cell
+								291 text 56
+								292 text 38.62%
+							293 cell
+								294 text 5
+								295 text 3.45%
+							296 cell
+								297 text 2
+								298 text 1.38%
+					299 text Show rows:
+					300 pop up button (collapsed) Description: Show rows: 10 selected., ID: aB1A58C08-6888-4627-982E-3AB277B0BA67--8, Secondary Actions: Expand
+					301 text 1 - 10 of 26
+					302 button (disabled) Go to the first page
+					303 button (disabled) Go to the previous page
+					304 button Go to the next page
+					305 button Go to the last page
+				306 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				307 link Description: Status dashboard, Value: status.play.google.com/
+				308 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				309 text © 2026 Google
+				310 link Description: Privacy, Value: google.com/policies/privacy/
+				311 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				312 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Statistics | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=ACTIVE_USERS-ALL-UNIQUE-PER_INTERVAL-DAY&dimension=COUNTRY&dimensionValues=OVERALL%2CUS%2CIN%2CRU%2CAF&dateRange=2026_9_16-2026_10_13&tab=APP_STATISTICS&ctpMetric=DAU_MAU-ACQUISITION_UNSPECIFIED-COUNT_UNSPECIFIED-CALCULATION_UNSPECIFIED-DAY&ctpDateRange=2026_9_16-2026_10_13&ctpDimension=COUNTRY&ctpDimensionValue=OVERALL&ctpPeersetKey=3%3Ac821014406a6c1a7

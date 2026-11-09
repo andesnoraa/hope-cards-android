@@ -1,0 +1,205 @@
+2026-10-08T16:50:44.910Z
+- link "Skip to main content":
+  - /url: "#hcfe-content"
+- banner:
+  - button "Main menu":
+  - link "Play Console Help":
+    - /url: /googleplay/android-developer
+  - search:
+    - combobox "Search Help Center"
+    - button "Search Help Center":
+  - button "Google apps":
+  - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- navigation "Support page navigation bar":
+  - generic "Helpcenter sections":
+    - list:
+      - link "Help Center":
+        - /url: /googleplay/android-developer/?hl=en
+      - link "Community":
+        - /url: /googleplay/android-developer/community?hl=en&help_center_link=CKrw2AQSH1RyYW5zbGF0ZSBhbmQgbG9jYWxpemUgeW91ciBhcHA
+      - link "Announcements":
+        - /url: /googleplay/android-developer/announcements/13412212
+  - link "Play Console (Open in a new window)":
+    - /url: //play.google.com/apps/publish/
+    - text: Play Console
+- navigation "Top navigation":
+  - tablist:
+    - tab "Play Console Help" [selected]
+    - tab "Policy Center"
+- generic "Notification":
+  - paragraph:
+    - text: You can now request help from the
+    - link "Help (Open in a new window)":
+      - /url: https://play.google.com/console/developers/help-and-support
+      - text: Help
+    - text: page in your Play Console account. If you don't have access to Play Console, ask your account admin for an invite.
+- main:
+  - article:
+    - heading "Translate and localize your app" [level=1]
+    - paragraph: To provide a localized experience for your users around the world, you can add translations for your app's store listing page, app strings or in-app products. You can add them yourself or purchase and apply translations for your store listing and in-app products through Play Console. You can also opt in to automatic translation of your app strings using Gemini.
+    - paragraph: If a user's language preference matches the translation languages you've added, they'll see the translated version of your app.
+    - heading "Add translations for your store listing and product" [level=2]
+    - button "Add your own text translations and localized graphic assets"
+    - button "View list of available languages": View list of available languages
+    - generic: • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+    - button "Purchase and apply human translations for store listing and in-app products"
+    - generic: • • • • • • • • • • • • • • •
+    - button "Use Play Console's free machine translation service"
+    - generic: • • • • • • • • • • • • • • • •
+    - button "Updated translations"
+    - generic: • • •
+    - button "Check order status"
+    - button "Contact translation vendor"
+    - button "If you don't add or purchase translations"
+    - list
+    - paragraph: You can also add localized graphic assets for your store listing pages.
+    - paragraph: If you add text translations without localized graphic assets, your app's graphic assets show from the default language.
+    - paragraph:
+      - strong: "Note:"
+      - text: Store listing localization is one of two ways that Play Console can help you deliver differentiated experiences to users in different locations. To deliver different store listings by country/region (versus language), we recommend
+      - link "creating custom store listings":
+        - /url: https://support.google.com/googleplay/android-developer/answer/9867158
+      - text: .
+    - heading "App strings translation using Gemini" [level=2]: App strings translation using Gemini
+    - paragraph: Play Console lets you continuously translate your app strings using Gemini models at no cost. It eliminates the need for manual translation and integration of translation files for each new app release, so that keeping translation files up-to-date becomes seamless and straightforward.
+    - button "How it works" [expanded]
+    - list:
+      - text: •
+      - strong: Automatic translations
+      - text: ": Your app strings are automatically translated using Gemini models at no cost."
+      - text: •
+      - strong: "Continuous translation for future releases:"
+      - text: Once you’ve turned on automatic app strings translations, whenever a new app bundle is uploaded to a draft release, translations are automatically generated using Gemini models and seamlessly integrated to the app bundle. This is based on the latest version of your
+      - code: strings.xml
+      - text: file. We maintain translation consistency across your app versions, only changing translations when the source text is altered or new text is introduced.
+      - text: •
+      - strong: "Translation to multiple languages:"
+      - text: You can select multiple languages to translate to. Play will automatically manage all translations for languages you select. Any existing translations for these languages will be overridden. To keep existing translations or to manage them yourself, do not select these languages.
+      - text: •
+      - strong: "Preview translations:"
+      - text: You can preview the automatically generated translation before publishing the release using a built-in emulator.
+      - text: •
+      - strong: "Edit translations:"
+      - text: You can make any necessary edits to the automatically generated translations before publishing the release. Your changes are saved and carried over into future release, ensuring consistency and reducing repetitive work.
+    - paragraph:
+      - strong: "Note:"
+      - text: App strings translation using Gemini doesn’t affect the installable APK size.
+    - button "How to turn on automatic app strings translation"
+    - generic: • •
+    - button "How to preview translations" [expanded] [active]
+    - paragraph: You can verify and test the correctness and look and feel of the translated app directly within the Play Console using a built-in emulator. Preview is available once you have an uploaded bundle in a draft release.
+    - list:
+      - listitem: Select an app bundle and language in the emulator to preview your translations.
+      - listitem: If you make edits, refresh the preview in the emulator to see how the changes reflect in your app.
+    - paragraph: Remember to test the translation as part of your regular release cycle.
+    - button "How to manage translations"
+    - heading "Language recommendations" [level=2]
+    - paragraph: In some cases, you may notice a banner in Play Console with translation recommendations that are likely to increase installs.
+    - paragraph: "When enough data is available, these recommendations will be based on the following:"
+    - list:
+      - listitem: • Your app’s current install distribution for each language is compared with other apps in the same category.
+      - listitem: • Your app’s current install growth for each language is compared with other apps in the same category.
+      - listitem: • Your app’s category and the language preferences for that category.
+      - listitem: • Your app’s current conversion rate for each language.
+      - listitem: • The potential market for each language.
+    - list
+    - heading "View or check your translations" [level=2]
+    - paragraph: "To view your app in another language and check your app's translations, you'll need to change the language on your Android device. To do this:"
+    - list:
+      - text: On your device, open the
+      - strong: Settings
+      - text: app
+      - text: .
+      - text: Select
+      - strong: Language and input
+      - text: ">"
+      - strong: Language
+      - text: .
+      - listitem: Select the language you want to view.
+      - listitem: Review your app.
+    - heading "Related content" [level=2]
+    - list:
+      - text: • Learn more about
+      - link "localizing your app (Open in a new window)":
+        - /url: /l10n?topic=6307483
+        - text: localizing your app
+      - text: .
+      - text: • To get your app ready for successful local launches, review the
+      - link "localization checklist (Open in a new window)":
+        - /url: https://developer.android.com/distribute/best-practices/launch/localization-checklist.html
+        - text: localization checklist
+      - text: .
+    - button "Give feedback about this article":
+      - generic: Give feedback about this article
+    - heading "Was this helpful?" [level=2]
+    - button "Yes (Was this helpful?)": "Yes"
+    - button "No (Was this helpful?)": "No"
+  - heading "Need more help?" [level=2]
+  - heading "Try these next steps:" [level=3]
+  - link "Post to the help community Get answers from community members":
+    - /url: /googleplay/android-developer/community?hl=en&help_center_link=CKrw2AQSH1RyYW5zbGF0ZSBhbmQgbG9jYWxpemUgeW91ciBhcHA
+    - text: Post to the help community
+    - generic: Get answers from community members
+  - link "Contact us Tell us more and we’ll help you get there":
+    - /url: /googleplay/android-developer/gethelp
+    - text: Contact us
+    - generic: Tell us more and we’ll help you get there
+  - navigation "Play Console Help":
+    - heading "Play Console Help" [level=2]:
+      - link "Play Console Help":
+        - /url: /googleplay/android-developer?hl=en#topic=7071529
+    - list:
+      - link "Set up your app's prices":
+        - /url: /googleplay/android-developer/answer/6334373?hl=en&ref_topic=7071529
+        - text: Set up your app's prices
+      - link "Distribute app releases to specific countries":
+        - /url: /googleplay/android-developer/answer/7550024?hl=en&ref_topic=7071529
+        - text: Distribute app releases to specific countries
+      - link "Translate and localize your app":
+        - /url: "#"
+        - text: Translate and localize your app
+      - link "App Indexing on Google Search":
+        - /url: /googleplay/android-developer/answer/6041489?hl=en&ref_topic=7071529
+        - text: App Indexing on Google Search
+      - link "Create promotions":
+        - /url: /googleplay/android-developer/answer/6321495?hl=en&ref_topic=7071529
+        - text: Create promotions
+      - link "View and restrict your app's compatible devices":
+        - /url: /googleplay/android-developer/answer/7353455?hl=en&ref_topic=7071529
+        - text: View and restrict your app's compatible devices
+      - link "Build awareness for your apps with pre-registration":
+        - /url: /googleplay/android-developer/answer/9859047?hl=en&ref_topic=7071529
+        - text: Build awareness for your apps with pre-registration
+      - link "View and download supported devices":
+        - /url: /googleplay/android-developer/answer/9859371?hl=en&ref_topic=7071529
+        - text: View and download supported devices
+      - link "Participate in the Families Self-Certified Ads SDK Program":
+        - /url: /googleplay/android-developer/answer/12955712?hl=en&ref_topic=7071529
+        - text: Participate in the Families Self-Certified Ads SDK Program
+      - link "Publish private apps":
+        - /url: /googleplay/android-developer/answer/9874937?hl=en&ref_topic=7071529
+        - text: Publish private apps
+      - link "Make informed choices with Google Play SDK Index":
+        - /url: /googleplay/android-developer/answer/12034434?hl=en&ref_topic=7071529
+        - text: Make informed choices with Google Play SDK Index
+      - link "Customize your users' experience with the Google Play Grouping API":
+        - /url: /googleplay/android-developer/answer/14840298?hl=en&ref_topic=7071529
+        - text: Customize your users' experience with the Google Play Grouping API
+      - link "Grow your startup app with help from Google Play":
+        - /url: /googleplay/android-developer/answer/16412111?hl=en&ref_topic=7071529
+        - text: Grow your startup app with help from Google Play
+- contentinfo:
+  - generic: ©2026 Google
+  - list:
+    - text: "-"
+    - link "Privacy Policy":
+      - /url: //www.google.com/intl/en/privacy.html
+    - text: "-"
+    - link "Terms of Service":
+      - /url: https://www.google.com/accounts/TOS
+  - generic "Language":
+    - generic: Language
+    - listbox "Language (English‎)":
+      - generic: English‎
+  - button "Enable Dark Mode":
+- dialog "What is the issue with this selection?"

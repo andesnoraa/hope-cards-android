@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.SemanticsActions
@@ -20,6 +21,8 @@ import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.test.platform.app.InstrumentationRegistry
 import com.aaronsedna.hopecards.R
+import com.aaronsedna.hopecards.ads.awaitFullScreenContent
+import com.aaronsedna.hopecards.ads.completeContentBreak
 import com.aaronsedna.hopecards.data.BibleQuizRepository
 import com.aaronsedna.hopecards.model.QuizLanguage
 import com.aaronsedna.hopecards.model.QuizQuestion
@@ -28,6 +31,7 @@ import com.aaronsedna.hopecards.model.Translation
 import com.aaronsedna.hopecards.ui.screens.BibleQuizScreen
 import com.aaronsedna.hopecards.ui.theme.HopeCardsTheme
 import java.io.File
+import kotlinx.coroutines.launch
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -76,6 +80,51 @@ class QuizTimerInstrumentedTest {
         node("quiz_timer_display").assertDoesNotExist()
         finishRound()
         node("quiz_elapsed_result").assertDoesNotExist()
+        visible("quiz_review").performClick()
+        node("quiz_review_time_timer-test").assertDoesNotExist()
+    }
+
+    @Test fun nextRoundAndCountdownWaitUntilTheFullScreenAdFinishes() {
+        preferences.edit().putBoolean("timer", true).putBoolean("sound", false).commit()
+        var now = 10_000L
+        var dismissAd: (() -> Unit)? = null
+        var roundsStarted = 0
+        compose.setContent {
+            val scope = rememberCoroutineScope()
+            HopeCardsTheme(ThemeName.CLASSIC) {
+                BibleQuizScreen(questions, Translation.BSB,
+                    elapsedRealtimeMillis = { now },
+                    onStartRound = { roundsStarted++; com.aaronsedna.hopecards.model.QuizSession.start(questions) },
+                    onComplete = { current, proceed ->
+                        scope.launch {
+                            completeContentBreak(true, { true }, current, {
+                                awaitFullScreenContent { dismissAd = it }
+                            }, proceed)
+                        }
+                    })
+            }
+        }
+        visible("quiz_start").performClick()
+        finishRound()
+        visible("quiz_restart").performClick()
+        compose.runOnIdle {
+            assertTrue(dismissAd != null)
+            assertEquals(1, roundsStarted)
+            now += 45_000L // Longer than a question's allowance while the ad is open.
+        }
+        compose.mainClock.advanceTimeBy(1_100L)
+        visible("quiz_score").assertTextEquals("1 of 1 correct")
+        visible("quiz_restart").assertIsNotEnabled()
+        node("quiz_timer_display").assertDoesNotExist()
+        node("quiz_question").assertDoesNotExist()
+        compose.runOnIdle { dismissAd!!.invoke(); dismissAd!!.invoke() }
+        node("quiz_timer_display").assertTextEquals("00:30")
+        visible("quiz_option_0").assertIsEnabled()
+        node("quiz_time_up").assertDoesNotExist()
+        compose.runOnIdle { assertEquals(2, roundsStarted) }
+        compose.runOnIdle { now += 1_000L }
+        compose.mainClock.advanceTimeBy(1_100L)
+        node("quiz_timer_display").assertTextEquals("00:29")
     }
 
     @Test fun preferencePersistsAndTimedRoundRestoresFreezesAndResetsEvenWithIdenticalQuestions() {
@@ -116,6 +165,7 @@ class QuizTimerInstrumentedTest {
         node("quiz_time_up").assertDoesNotExist()
         node("quiz_timer_display").assertDoesNotExist()
         visible("quiz_review").performClick()
+        visible("quiz_review_time_timer-test").assertTextEquals("00:13")
         visible("quiz_back_results").performClick()
         visible("quiz_elapsed_result").assertTextEquals("Time taken: 00:13")
         visible("quiz_restart").performClick()
@@ -322,6 +372,13 @@ class QuizTimerInstrumentedTest {
         visible("quiz_score").assertTextEquals("2 of 2 correct")
         visible("quiz_elapsed_result").assertTextEquals("Time taken: 00:30")
         node("quiz_time_up").assertDoesNotExist()
+        restoration.emulateSavedInstanceStateRestore()
+        visible("quiz_review").performClick()
+        node("bible_quiz").performScrollToNode(hasText("00:05"))
+        compose.onNodeWithText("00:05").assertIsDisplayed()
+        node("bible_quiz").performScrollToNode(hasText("00:25"))
+        compose.onNodeWithText("00:25").assertIsDisplayed()
+        capture("timer-per-question-review.png")
     }
 
     @Test fun resumingAfterALongAbsenceExpiresCurrentQuestionAndPreservesUnseenQuestions() {
@@ -398,13 +455,14 @@ class QuizTimerInstrumentedTest {
         visible("quiz_elapsed_result").assertTextEquals("Time taken: 00:30")
         visible("quiz_review").performClick()
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        val unanswered = context.getString(R.string.quiz_your_answer, context.getString(R.string.quiz_unanswered))
-        node("bible_quiz").performScrollToNode(hasText(unanswered))
-        compose.onNodeWithText(unanswered).assertIsDisplayed()
-        compose.onNodeWithText(context.getString(R.string.quiz_correct_answer, "God")).assertExists()
+        val unanswered = context.getString(R.string.quiz_unanswered)
+        node("bible_quiz").performScrollToNode(hasContentDescription(unanswered))
+        compose.onNodeWithContentDescription(unanswered).assertIsDisplayed()
+        compose.onNodeWithText("God").assertExists()
+        visible("quiz_review_time_timer-test").assertTextEquals("00:30")
         capture("timer-time-up-review.png")
         restoration.emulateSavedInstanceStateRestore()
-        compose.onNodeWithText(unanswered).assertExists()
+        compose.onNodeWithContentDescription(unanswered).assertExists()
         visible("quiz_back_results").performClick()
         visible("quiz_score").assertTextEquals("0 of 1 correct")
         assertEquals(0, completedExits)
@@ -431,7 +489,8 @@ class QuizTimerInstrumentedTest {
         visible("quiz_elapsed_result").assertTextEquals("Time taken: 00:30")
         visible("quiz_review").performClick()
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        compose.onNodeWithText(context.getString(R.string.quiz_your_answer, "God")).assertExists()
+        compose.onNodeWithText("God").assertExists()
+        visible("quiz_review_time_timer-test").assertTextEquals("00:30")
     }
 
     @Test fun selectingAnAnswerAfterTheDeadlineDoesNotReplaceAnUnansweredResult() {

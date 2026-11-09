@@ -1,0 +1,143 @@
+Browser tab: 455027219, Title: "Dashboard | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/app-dashboard".
+1 AXWebArea Dashboard | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/app-dashboard
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/home
+				7 button Notifications Open notification center
+					18 text Notifications
+				8 pop up button (collapsed) Description: Switch developer accounts, Secondary Actions: Expand
+				9 button (collapsed) Description: Google Account: Aaronsedna (redacted), Secondary Actions: Expand
+			19 content list
+				43 container Home
+					44 button Home
+				45 container Manage account
+					46 button Manage account
+				47 container Daily Bible Verse: Hope Cards
+					48 pop up button Daily Bible Verse: Hope Cards
+				49 container Dashboard
+					50 button Dashboard
+				51 container Statistics
+					52 button Statistics
+				53 container Publishing overview
+					54 button Publishing overview
+				55 container Protected with Play
+					56 button Protected with Play
+				57 container (collapsed) Description: Test and release, Secondary Actions: Expand
+					58 button Test and release
+				59 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+					60 button Monitor and improve
+				61 container (collapsed) Description: Grow users, Secondary Actions: Expand
+					62 button Grow users
+				63 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+					64 button Monetize with Play
+			10 container main-content
+				42 container
+					65 heading Daily Bible Verse: Hope Cards, Value: 1
+						66 text Daily Bible Verse: Hope Cards
+					67 content list
+						68 container
+							69 text com.aaronsedna.hopecards
+							70 button (collapsed) Description: Tooltip for "com.aaronsedna.hopecards" registered on Android developer console, Secondary Actions: Expand
+						71 container
+							72 link Description: View on Play, Value: play.google.com/store/apps/details?id=com.aaronsedna.hopecards
+					73 text Publishing overview You have no unpublished changes
+					74 link Description: Go to publishing page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing
+					75 heading Test and release, Value: 3
+						76 text Test and release
+					77 link Description: Go to Test and release overview, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/test-and-release
+					78 content list
+						79 container
+							80 container Latest production release
+								81 button (collapsed) Latest production release, Secondary Actions: Expand
+							82 text •
+						83 container
+							84 container Released on: Oct 8, 2026
+								85 button (collapsed) Oct 8, 2026, Secondary Actions: Expand
+							86 text •
+						87 container
+							88 container Rollout: 100%
+								89 button (collapsed) 100%, Secondary Actions: Expand
+							90 text •
+						91 container Form factors: Phones and tablets, + 2 more
+							92 button (collapsed) Phones and tablets, + 2 more, Secondary Actions: Expand
+					93 content list
+						94 container Crash rate - null
+							95 container
+								96 button (collapsed) Description: Tooltip for Crash rate, Secondary Actions: Expand
+							97 link Description: Crash rate - null, View release details, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/tracks/4698153634986669454?tab=releaseDashboard
+						98 container Installs 38 null
+							99 container
+								100 button (collapsed) Description: Tooltip for Installs, Secondary Actions: Expand
+							101 link Description: Installs 38 null, Go to the release's summary page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/tracks/4698153634986669454/releases/17/details
+						102 container Install base 50% null
+							103 container
+								104 button (collapsed) Description: Tooltip for Install base, Secondary Actions: Expand
+							105 link Description: Install base 50% null, Go to the release's summary page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/tracks/4698153634986669454/releases/17/details
+					106 heading Monitor and improve, Value: 3
+						107 text Monitor and improve
+					108 link Go to Monitor and improve overview
+					109 heading Grow users, Value: 3
+						110 text Grow users
+					111 link Description: Go to Grow Overview page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/grow-overview
+					112 content list
+						113 container Last 28 days, compared to previous 28 days
+							114 text Last 28 days, compared to previous 28 days
+					115 content list
+						116 container Device acquisitions 255 >+999% delta
+							117 container
+								118 button (collapsed) Description: Tooltip for Device acquisitions, Secondary Actions: Expand
+							119 link Description: Device acquisitions 255 >+999% delta, Go to Grow Overview page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/grow-overview
+						120 container Device first opens 38 +73% delta
+							121 container
+								122 button (collapsed) Description: Tooltip for Device first opens, Secondary Actions: Expand
+							123 link Description: Device first opens 38 +73% delta, Go to Grow Overview page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/grow-overview
+						124 container Monthly active devices 44 +144% delta
+							125 container
+								126 button (collapsed) Description: Tooltip for Monthly active devices, Secondary Actions: Expand
+							127 link Description: Monthly active devices 44 +144% delta, Go to Grow Overview page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/grow-overview
+					128 heading Monetize with Play, Value: 3
+						129 text Monetize with Play
+					130 link Description: Go to Monetize with Play overview, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/monetize
+					131 content list
+						132 container Last 28 days, compared to previous 28 days
+							133 text Last 28 days, compared to previous 28 days
+					134 content list
+						135 container Revenue (USD) - null
+							136 container
+								137 button (collapsed) Description: Tooltip for Revenue (USD), Secondary Actions: Expand
+							138 link Description: Revenue (USD) - null, Go to Revenue, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/reporting/finance/revenue
+						139 container ARPPU (USD) - null
+							140 container
+								141 button (collapsed) Description: Tooltip for ARPPU (USD), Secondary Actions: Expand
+							142 link Description: ARPPU (USD) - null, Go to Buyers & ARPPU, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/reporting/finance/buyer-conversion?tab=1
+						143 container Buyers - null
+							144 container
+								145 button (collapsed) Description: Tooltip for Buyers, Secondary Actions: Expand
+							146 link Description: Buyers - null, Go to Buyers & ARPPU, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/reporting/finance/buyer-conversion?tab=1
+					147 heading Marketing activity, Value: 3
+						148 text Marketing activity
+					149 button (collapsed) Description: More information about "Marketing activity", Secondary Actions: Expand
+					150 heading Grow and retain subscribers with new tools, Value: 3
+						151 text Grow and retain subscribers with new tools
+					152 text Learn how new tools like usage-based billing, mixed carts, multi-quantity plans, and dynamic grace periods can help you package offers more flexibly, recover failed payments, and reduce churn
+					153 link Description: Read blog post, Value: android-developers.googleblog.com/2026/09/unlocking-Google-play-subscription-growth.html
+					154 heading Reduce subscription churn and payment decline, Value: 3
+						155 text Reduce subscription churn and payment decline
+					156 text You can now set up grace periods, account hold, and targeted offers to recover payment declines and prevent cancellations. Go to the Subscriptions page to get started.
+					157 link Description: Go to Subscriptions, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/subscriptions
+					158 heading Monitor KPI trends, Value: 3
+						159 text Monitor KPI trends
+					160 text Need more metrics? Add KPIs here to customise your dashboard
+					161 button Select KPIs
+						162 text Select KPIs
+				163 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				164 link Description: Status dashboard, Value: status.play.google.com/
+				165 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				166 text © 2026 Google
+				167 link Description: Privacy, Value: google.com/policies/privacy/
+				168 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				169 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Dashboard | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/app-dashboard

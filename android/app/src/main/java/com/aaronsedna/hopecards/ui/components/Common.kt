@@ -1,5 +1,7 @@
 package com.aaronsedna.hopecards.ui.components
 
+import com.aaronsedna.hopecards.ui.theme.Poppins
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
@@ -61,7 +63,6 @@ import com.aaronsedna.hopecards.model.ThemeName
 import com.aaronsedna.hopecards.ui.appString
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.LocalHopeThemeName
-import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
 import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
@@ -178,7 +179,7 @@ fun ActionPill(
             Text(
                 label,
                 color = tint,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp,
                 maxLines = 1,
@@ -226,7 +227,7 @@ fun VerseCardFace(
                 Text(
                     verse.category.uppercase(),
                     color = colors.accent,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                     letterSpacing = 2.sp,
@@ -262,7 +263,7 @@ fun VerseCardFace(
                 Text(
                     verse.translation,
                     color = colors.cardMuted,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontSize = translationFontSize(verse.translation.length),
                     letterSpacing = translationLetterSpacing(verse.translation.length),
                     textAlign = TextAlign.Center,
@@ -394,7 +395,7 @@ private fun VintageVerseCardFace(
                 Text(
                     text = verse.translation,
                     color = colors.cardMuted,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontSize = 10.5.sp,
                     letterSpacing = .15.sp,
                     textAlign = TextAlign.Center,
@@ -504,7 +505,7 @@ private fun EvergreenVerseCardFace(
                 Text(
                     text = verse.translation,
                     color = colors.cardMuted,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontSize = 10.5.sp,
                     letterSpacing = .15.sp,
                     textAlign = TextAlign.Center,
@@ -553,7 +554,7 @@ private fun EvergreenAction(
             verticalArrangement = Arrangement.Center,
         ) {
             AppIcon(icon, contentDescription = null, tint = evergreenGreen, size = 20.dp)
-            Text(label, fontFamily = Poppins, fontSize = 10.5.sp, modifier = Modifier.padding(top = 1.dp))
+            Text(label, fontFamily = appInterfaceFont(), fontSize = 10.5.sp, modifier = Modifier.padding(top = 1.dp))
         }
     }
 }
@@ -589,7 +590,7 @@ private fun VintageAction(
             verticalArrangement = Arrangement.Center,
         ) {
             AppIcon(icon, contentDescription = null, tint = vintageBurgundy, size = 20.dp)
-            Text(label, fontFamily = Poppins, fontSize = 10.5.sp, modifier = Modifier.padding(top = 1.dp))
+            Text(label, fontFamily = appInterfaceFont(), fontSize = 10.5.sp, modifier = Modifier.padding(top = 1.dp))
         }
     }
 }

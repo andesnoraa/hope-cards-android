@@ -1,0 +1,109 @@
+Browser tab: 455027212, Title: "Monitor and improve | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/monitor".
+1 AXWebArea Monitor and improve | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/monitor
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (expanded) Description: Monitor and improve, Secondary Actions: Collapse
+						32 button Monitor and improve
+							33 text Monitor and improve
+						34 content list
+							35 container
+								36 container (collapsed) Description: Reach and devices, Secondary Actions: Expand
+									37 button Reach and devices
+								38 container (collapsed) Description: Ratings and reviews, Secondary Actions: Expand
+									39 button Ratings and reviews
+								40 container (expanded) Description: Android vitals, Secondary Actions: Collapse
+									41 button Android vitals
+									73 content list
+										74 container
+											75 container Overview
+												76 button Overview
+											77 container Crashes and ANRs
+												78 button Crashes and ANRs
+											79 container App size
+												80 button App size
+								42 container (collapsed) Description: Policy and programs, Secondary Actions: Expand
+									43 button Policy and programs
+					44 container (collapsed) Description: Grow users, Secondary Actions: Expand
+						45 button Grow users
+							46 text Grow users
+					47 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						48 button Monetize with Play
+							49 text Monetize with Play
+			50 container main-content
+				51 container
+					52 heading Monitor and improve, Value: 1
+						53 text Monitor and improve
+					54 text Policy status No policy issues found
+					55 link Description: View Policy issues, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/policy-center
+					56 heading Android vitals, Value: 2
+						57 text Android vitals
+					58 text Last 28 days
+					81 container
+						82 button (collapsed) User-perceived crash rate, Secondary Actions: Expand
+						83 text -
+					84 link Description: View details for metric, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?aggregationPeriod=AGGREGATION_PERIOD_28D&days=28&metric=USER_PERCEIVED_CRASHES&granularity=DAILY_GRANULARITY
+					85 text Data unavailable
+					86 container
+						87 button (collapsed) User-perceived ANR rate, Secondary Actions: Expand
+						88 text -
+					89 link Description: View details for metric, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?aggregationPeriod=AGGREGATION_PERIOD_28D&days=28&metric=USER_PERCEIVED_ANRS&granularity=DAILY_GRANULARITY
+					90 text Data unavailable
+					91 container
+						92 button (collapsed) Slow cold start rate, Secondary Actions: Expand
+						93 text -
+					94 link Description: View details for metric, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?aggregationPeriod=AGGREGATION_PERIOD_28D&days=28&metric=COLD_STARTUP_TIME&granularity=DAILY_GRANULARITY
+					95 text Data unavailable
+					59 heading Ratings and reviews, Value: 2
+						60 text Ratings and reviews
+					61 link Description: View Ratings page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+					62 link Description: View Ratings page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+					63 link Description: View Reviews page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/reviews
+					64 heading Take action, Value: 2
+						65 text Take action
+					96 heading Improve your app's memory and performance with R8 optimization, Value: 3
+						97 text Improve your app's memory and performance with R8 optimization
+					98 container a7471D96E-4B35-4D51-944F-0672DF35989A--22
+						99 text Your R8 configuration could be causing higher memory usage and lower performance.
+						100 text Memory usage
+						101 text Release name: 1.0.14 (47)
+						102 text Is this useful?
+						103 checkbox Description: Thumb up button for reporting the information as useful, Value: 0
+						104 checkbox Description: Thumb down button for reporting the information as not useful, Value: 0
+					105 button Read more
+						106 text Read more
+				66 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				67 link Description: Status dashboard, Value: status.play.google.com/
+				68 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				69 text © 2026 Google
+				70 link Description: Privacy, Value: google.com/policies/privacy/
+				71 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				72 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 41 button Android vitals

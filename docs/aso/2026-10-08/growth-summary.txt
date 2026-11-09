@@ -1,0 +1,173 @@
+2026-10-08T05:03:41.651Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users" [active]:
+        - img: finance_mode
+        - generic: Grow users
+      - list:
+        - listitem "Store presence":
+          - button "Store presence":
+            - generic: Store presence
+            - img: expand_more
+        - listitem "Store performance":
+          - button "Store performance":
+            - generic: Store performance
+            - img: expand_more
+        - listitem "Translations":
+          - button "Translations":
+            - generic: Translations
+            - img: expand_more
+        - listitem "Deep links":
+          - button "Deep links":
+            - generic: Deep links
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Grow users" [level=1]
+- heading "Your performance on Play" [level=2]
+- 'button "Metrics by: Device"':
+  - generic: "Metrics by: Device"
+  - img: arrow_drop_down
+- button "Last 28 days":
+  - img: calendar_today
+  - generic: Last 28 days
+  - img: arrow_drop_down
+- button "Reach Show details for Device impressions":
+  - generic: Reach
+  - img: expand_more
+  - generic: Show details for Device impressions
+- button "Device impressions"
+- generic: 2.29K
+- img: arrow_right_alt
+- generic: ">+999%"
+- generic: delta, where an increase is good
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Acquire Show details for Device acquisitions":
+  - generic: Acquire
+  - img: expand_more
+  - generic: Show details for Device acquisitions
+- button "Device acquisitions"
+- generic: "172"
+- img: arrow_right_alt
+- generic: +455%
+- generic: delta, where an increase is good
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Activate Show details for Device first opens":
+  - generic: Activate
+  - img: expand_more
+  - generic: Show details for Device first opens
+- button "Device first opens"
+- generic: "30"
+- img: arrow_right_alt
+- generic: +11%
+- generic: delta, where an increase is good
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Engage Show details for Monthly active devices":
+  - generic: Engage
+  - img: expand_more
+  - generic: Show details for Monthly active devices
+- button "Monthly active devices"
+- generic: "36"
+- img: arrow_right_alt
+- generic: +64%
+- generic: delta, where an increase is good
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Retain Show details for 7-day device retention":
+  - generic: Retain
+  - img: expand_more
+  - generic: Show details for 7-day device retention
+- button "7-day device retention"
+- generic: "1"
+- img: arrow_left_alt
+- generic: "-88%"
+- generic: delta, where an increase is good
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- generic: Play is helping people to discover your app
+- generic: +12 explore user acquisitions in the last 90 days
+- img: calendar_today
+- generic: Last 90 days
+- heading "Store listings" [level=2]
+- link "Get started View store listings":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings
+  - img: arrow_right_alt
+- generic: Default listing active
+- generic: Your conversion rate is 24.04%
+- heading "Store listing experiments" [level=2]
+- link "Get started View store listing experiments":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings?tab=experiments
+  - img: arrow_right_alt
+- list:
+  - listitem: 0 experiments running
+  - listitem: 0 ended
+- generic: 0 applied
+- generic: Do you find this overview useful?
+- button "No, not really":
+  - img "No, not really"
+- button "Somewhat":
+  - img "Somewhat"
+- button "Yes, this is great":
+  - img "Yes, this is great"
+- generic: No, not really
+- generic: Somewhat
+- generic: Yes, this is great
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/

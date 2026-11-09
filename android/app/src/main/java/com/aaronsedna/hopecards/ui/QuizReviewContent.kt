@@ -14,10 +14,17 @@ class QuizReviewContent(context: Context, translation: Translation, session: Qui
         val passage: String?,
         val outcome: Outcome,
         val status: String,
-        val selectedAnswer: String,
-        val correctAnswer: String,
+        val selectedAnswer: String?,
+        val correctAnswer: String?,
         val explanation: String,
         val reference: String,
+        val timeTaken: String?,
+        val duration: String?,
+        val selectedValue: String?,
+        val correctValue: String,
+        val selectedLabel: String,
+        val correctLabel: String,
+        val shortReference: String,
     )
 
     val resources = context.forQuizTranslation(translation).resources
@@ -28,6 +35,11 @@ class QuizReviewContent(context: Context, translation: Translation, session: Qui
         QuizLanguage.forTranslation(translation).nativeName, translation.label)
     private val byId = questions.associateBy { it.id }
     val score = resources.getString(R.string.quiz_score, session.score(byId), session.questionIds.size)
+    val correctCount = session.score(byId)
+    val questionCount = session.questionIds.size
+    val scoreRatio = "$correctCount / $questionCount"
+    val totalTime = session.answerTimesMillis.takeIf { it.size == questionCount && it.all { time -> time != null } }
+        ?.sumOf { requireNotNull(it) }?.let { resources.getString(R.string.quiz_elapsed_time, formatQuizElapsedTime(it)) }
     val answers: List<Answer>
 
     init {
@@ -52,11 +64,26 @@ class QuizReviewContent(context: Context, translation: Translation, session: Qui
                 passage = question.question.substringAfter("\n\n", "").takeIf { it.isNotBlank() },
                 outcome = outcome,
                 status = status,
-                selectedAnswer = resources.getString(R.string.quiz_your_answer,
-                    question.options.getOrNull(selection) ?: resources.getString(R.string.quiz_unanswered)),
-                correctAnswer = resources.getString(R.string.quiz_correct_answer, question.options[question.correctIndex]),
+                // The status already identifies correct and unanswered responses. Only a
+                // mistake needs two labelled answers to explain the difference.
+                selectedAnswer = when (outcome) {
+                    Outcome.CORRECT -> question.options[selection]
+                    Outcome.INCORRECT -> resources.getString(R.string.quiz_your_answer, question.options[selection])
+                    Outcome.UNANSWERED -> null
+                },
+                correctAnswer = if (outcome == Outcome.CORRECT) null else
+                    resources.getString(R.string.quiz_correct_answer, question.options[question.correctIndex]),
                 explanation = question.explanation,
                 reference = "${resources.getString(R.string.quiz_reference)}: ${BibleReferenceFormatter.formatFull(question.reference, translation)}",
+                timeTaken = session.answerTimesMillis.getOrNull(index)?.let {
+                    resources.getString(R.string.quiz_elapsed_time, formatQuizElapsedTime(it))
+                },
+                duration = session.answerTimesMillis.getOrNull(index)?.let(::formatQuizElapsedTime),
+                selectedValue = question.options.getOrNull(selection),
+                correctValue = question.options[question.correctIndex],
+                selectedLabel = resources.getString(R.string.quiz_review_selected_label),
+                correctLabel = resources.getString(R.string.quiz_review_correct_label),
+                shortReference = BibleReferenceFormatter.formatFull(question.reference, translation),
             )
         }
     }

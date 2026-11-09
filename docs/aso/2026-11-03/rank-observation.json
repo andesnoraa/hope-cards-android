@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "app": {"packageName": "com.aaronsedna.hopecards", "consoleAppId": "4976302422419978923"},
+  "observationDate": "2026-11-03",
+  "context": {
+    "surface": "Google Play desktop web search",
+    "browser": "Google Chrome",
+    "authentication": "signed-in baseline profile; account observed as aaronsedna.work@gmail.com",
+    "requestedCountry": "IN",
+    "countrySpecifiedBy": "gl=IN URL parameter",
+    "deviceClass": "desktop",
+    "sponsoredLabelsObserved": false
+  },
+  "methodology": "Inspected rendered Play app-result rows for each exact query in the signed-in baseline Chrome profile. Organic positions count ordinary app results only; featured tiles and carousels that cannot be linearly ordered are not assigned a rank. Package ID identifies Hope Cards. Result depth is the actual rendered app-result count. Sponsored labels were not seen.",
+  "samples": [
+    {"query":"daily bible verse","intent":"primary_category","observedAtUtc":"2026-11-03T06:26:07.024Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=daily%20bible%20verse&c=apps&hl=en&gl=IN","inspectedResultCount":30,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false},
+    {"query":"Hope Cards","intent":"brand","observedAtUtc":"2026-11-03T06:26:07.852Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN","inspectedResultCount":30,"organicPosition":1,"matchedPackage":"com.aaronsedna.hopecards","status":"observed","sponsoredLabelsObserved":false},
+    {"query":"Hopecards","intent":"brand_variant","observedAtUtc":"2026-11-03T06:26:08.622Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN","inspectedResultCount":28,"organicPosition":7,"matchedPackage":"com.aaronsedna.hopecards","status":"observed","sponsoredLabelsObserved":false},
+    {"query":"verse of the day","intent":"secondary_category","observedAtUtc":"2026-11-03T06:26:09.356Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=verse%20of%20the%20day&c=apps&hl=en&gl=IN","inspectedResultCount":30,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false},
+    {"query":"bible quiz","intent":"secondary_feature","observedAtUtc":"2026-11-03T06:26:10.122Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=bible%20quiz&c=apps&hl=en&gl=IN","inspectedResultCount":30,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false},
+    {"query":"daily bible","intent":"diagnostic","observedAtUtc":"2026-11-03T06:26:10.811Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN","inspectedResultCount":30,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false},
+    {"query":"verse","intent":"diagnostic","observedAtUtc":"2026-11-03T06:26:43.150Z","requestedCountry":"IN","requestedLanguage":"en","url":"https://play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN","inspectedResultCount":20,"organicPosition":null,"status":"unavailable_noncomparable_featured_result_and_carousel_layout","sponsoredLabelsObserved":false,"note":"A featured HCL Verse app tile appeared before the ordinary app carousel. The ordinary results were not comparable as a linear rank, so no position was assigned."},
+    {"query":"മലയാളം ബൈബിൾ വചനങ്ങൾ","intent":"localized_category","observedAtUtc":"2026-11-03T06:26:12.240Z","requestedCountry":"IN","requestedLanguage":"ml","url":"https://play.google.com/store/search?q=%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82%20%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE&c=apps&hl=ml&gl=IN","inspectedResultCount":50,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false},
+    {"query":"ഇന്നത്തെ വചനം","intent":"localized_category","observedAtUtc":"2026-11-03T06:26:13.017Z","requestedCountry":"IN","requestedLanguage":"ml","url":"https://play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN","inspectedResultCount":50,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false},
+    {"query":"ബൈബിൾ ക്വിസ്","intent":"localized_feature","observedAtUtc":"2026-11-03T06:26:43.989Z","requestedCountry":"IN","requestedLanguage":"ml","url":"https://play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN","inspectedResultCount":50,"organicPosition":null,"status":"not_observed_within_inspected_results","sponsoredLabelsObserved":false}
+  ],
+  "milestones": {
+    "primaryCategoryTopFive": "not_achieved",
+    "exactBrandObserved": "position_1",
+    "brandVariantObserved": "position_7",
+    "consecutiveDailyTopFiveSamples": 0,
+    "sequenceInterruptedByUnavailableSample": true
+  }
+}

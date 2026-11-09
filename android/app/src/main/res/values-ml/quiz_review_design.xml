@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_review_all">എല്ലാം</string>
+    <string name="quiz_result_correct">ശരി</string>
+    <string name="quiz_review_empty">ഈ വിഭാഗത്തിൽ ഉത്തരങ്ങളില്ല.</string>
+    <string name="quiz_review_selected_label">നിങ്ങളുടെ ഉത്തരം</string>
+    <string name="quiz_review_correct_label">ശരിയായ ഉത്തരം</string>
+</resources>

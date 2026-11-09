@@ -2,7 +2,7 @@ Start each day with a Bible verse of the day for hope, reflection and encouragem
 
 Hope Cards is a calm daily Bible verse app for a simple Scripture habit. Draw a Bible verse card, read today’s verse in Daily Hope, set a daily Bible reminder, save favorite Scripture and add journal notes linked to each verse. There is no complicated reading plan and no account to create.
 
-Bible quiz in your language
+Bible trivia: quiz questions and answers
 Explore Bible people, places and events in English, Malayalam, German, French, Italian, Spanish and Filipino. Enjoy randomized rounds that follow your selected Bible translation. Check each answer with a Scripture reference and review your score. Share a PDF report with every question, your selected answer and the correct answer. Quiz questions work offline.
 
 Play at your own pace or enable a 30-second countdown for each question. The quiz moves on automatically when time runs out. The timer is off by default and remembers your choice. Sound feedback is on by default and can be switched off. With sound enabled, gentle beeps mark the final five seconds.
@@ -10,12 +10,12 @@ Play at your own pace or enable a 30-second countdown for each question. The qui
 Bible Quiz Certificate Generator
 Create A4 PDF participation certificates for your Bible quiz competition. Add multiple participant names at once to generate a separate certificate for each person. Certificates automatically use the language of your selected Bible. Select the date and add your competition title and optional organization name. Share one certificate or all PDFs together.
 
-Verse images to save and share
+Bible verse images to save and share
 Create meaningful Scripture images with nature backgrounds, including flowers, birds, coastlines and starry skies. Backgrounds rotate as you browse. Save your favorites or share a verse image.
 
 Daily Bible verse cards
 
-Draw an encouraging Bible verse whenever you need a quiet moment. Each card gives Scripture a clear, beautiful place to read and reflect.
+Draw a random Bible verse whenever you need a quiet moment. Find encouraging Bible verses about hope, faith, love, peace and strength. Each card gives Scripture a clear, beautiful place to read and reflect.
 
 Daily Hope and reminders
 

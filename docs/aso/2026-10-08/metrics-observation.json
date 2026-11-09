@@ -1,0 +1,163 @@
+{
+  "observationDate": "2026-10-08",
+  "scope": "All countries and languages unless explicitly noted. Not India-only.",
+  "acquisition": {
+    "metric": "All device acquisitions",
+    "configuration": "All events, Per interval, Daily, Traffic source",
+    "window": [
+      "2026-09-09",
+      "2026-10-06"
+    ],
+    "total": 172,
+    "sources": {
+      "Google Play explore": 11,
+      "Paid and direct": 73,
+      "Not attributed": 88
+    },
+    "datedRowsInspected": 14,
+    "evidence": [
+      "grow-overview.txt",
+      "acquisition-current.txt",
+      "acquisition-current-page2.txt"
+    ],
+    "changeFromPreviousObservation": "One additional Paid/direct device dated October 5. October 5 was already inside the prior observed window, consistent with delayed reporting. No attribution to ASO or a specific campaign."
+  },
+  "completedPeriodComparison": {
+    "metric": "All device acquisitions. Available numeric-cell subtotals only.",
+    "current7": {
+      "window": [
+        "2026-09-30",
+        "2026-10-06"
+      ],
+      "subtotal": 87,
+      "sources": {
+        "Google Play explore": null,
+        "Paid and direct": 3,
+        "Not attributed": 84
+      },
+      "datedRows": 3,
+      "completeAllSourceTotal": null,
+      "evidence": "acquisition-current7.txt"
+    },
+    "previous7": {
+      "window": [
+        "2026-09-23",
+        "2026-09-29"
+      ],
+      "subtotal": 73,
+      "sources": {
+        "Google Play explore": 8,
+        "Paid and direct": 64,
+        "Not attributed": 1
+      },
+      "datedRows": 5,
+      "evidence": "acquisition-previous7.txt"
+    },
+    "previous28": {
+      "window": [
+        "2026-08-12",
+        "2026-09-08"
+      ],
+      "subtotal": 20,
+      "sources": {
+        "Paid and direct": 16,
+        "Not attributed": 4
+      },
+      "datedRows": 5,
+      "completeAllSourceTotal": null,
+      "evidence": "acquisition-previous28.txt"
+    },
+    "limitations": "Available-cell subtotals only. Dashes/missing dates are not independently zero. Current 7-day and previous 28-day reports have an empty source column. Paid/direct mix, historical unattributed backfill and October 6 binary publication confound comparisons; no ASO causation or percentage lift claimed."
+  },
+  "growthOverview": {
+    "windowLabel": "Last 28 days; individual endpoints not independently drilled down except acquisition/retention",
+    "deviceImpressionsRounded": "2.29K",
+    "deviceFirstOpens": 30,
+    "monthlyActiveDevices": 36,
+    "sevenDayDeviceRetentionCount": 1,
+    "separate90DayConversion": "24.04%",
+    "separate90DayExploreUserAcquisitions": 12,
+    "experimentsRunning": 0,
+    "experimentsEnded": 0,
+    "experimentsApplied": 0,
+    "evidence": "growth-summary.txt"
+  },
+  "listing": {
+    "window": [
+      "2026-09-07",
+      "2026-10-04"
+    ],
+    "visitors": 397,
+    "uniqueUserInstallClicks": 84,
+    "CTR": "21%",
+    "completedInstallsFromClicks": null,
+    "defaultRow": {
+      "visitors": 339,
+      "conversion": "18.6%",
+      "status": "Live",
+      "lastUpdated": "2026-09-28",
+      "window": "not independently exposed for row"
+    },
+    "evidence": [
+      "listing-overview.txt",
+      "listing-date-range.txt"
+    ]
+  },
+  "retention": {
+    "metric": "7-day device retention, Per interval, Daily",
+    "window": [
+      "2026-09-09",
+      "2026-10-06"
+    ],
+    "displayedCount": 1,
+    "source": "Paid and direct",
+    "datedRow": "2026-09-17",
+    "partialDataWarning": true,
+    "percentage": null,
+    "evidence": [
+      "grow-retention.txt",
+      "retention-current.txt"
+    ]
+  },
+  "quality": {
+    "windowLabel": "Last 28 days; exact endpoints and locale not separately exposed",
+    "averageRating": 5.0,
+    "totalUsers": 1,
+    "ratingsWithReviews": null,
+    "userPerceivedCrashRate": null,
+    "userPerceivedANRRate": null,
+    "slowColdStartRate": null,
+    "policyStatus": "No policy issues found",
+    "advisories": [
+      "Bitmap downsampling",
+      "R8 optimization",
+      "Large-screen resizability/orientation restriction (production dashboard)"
+    ],
+    "advisoryVersionCode": 45,
+    "evidence": [
+      "quality-overview.txt",
+      "production-current.txt"
+    ]
+  },
+  "separateTrackSummary": {
+    "metricLabel": "installs",
+    "value": 144,
+    "window": "not exposed in track summary",
+    "notEquivalentToAcquisitionTotal": true,
+    "evidence": "production-current.txt",
+    "previousDisplayedValue": 160,
+    "interpretation": "Display changed in unspecified track-summary population/window; not sufficient to infer 16 uninstalls or a retention regression."
+  },
+  "querySpecificAcquisitions": null,
+  "querySearchVolumes": null,
+  "indiaOnlyReportValues": null,
+  "googlePlaySearchVersusAdsReferralsSplit": null,
+  "separateReleaseOverview": {
+    "versionCode": 45,
+    "totalReleaseInstalls": 1,
+    "installBase": "1.7%",
+    "appInstalls": 58,
+    "window": "Not independently exposed for these summary labels",
+    "evidence": "release-overview.txt"
+  }
+}

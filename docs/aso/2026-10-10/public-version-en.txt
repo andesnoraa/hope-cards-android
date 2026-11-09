@@ -1,0 +1,241 @@
+2026-10-10T16:12:28.872Z
+- banner:
+  - navigation:
+    - link:
+      - /url: /store/games
+      - generic: google_logo Play
+    - navigation:
+      - tablist:
+        - tab:
+          - generic: Games
+        - tab [selected]:
+          - generic: Apps
+        - tab:
+          - generic: Books
+        - tab:
+          - generic: Kids
+    - button:
+      - generic: search
+    - button:
+      - generic: help_outline
+    - button:
+- heading [level=1]: "Daily Bible Verse: Hope Cards"
+- link:
+  - /url: /store/apps/developer?id=Aaronsedna
+  - text: Aaronsedna
+- generic: Contains ads · In-app purchases
+- region:
+  - generic: 100+
+  - generic: Downloads
+- button [disabled]:
+  - generic: Install on more devices
+- button:
+  - generic: Share
+- button:
+  - generic: play_arrow
+  - text: Trailer
+- generic: devices
+- generic: This app is available for all of your devices
+- list:
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+  - button
+- button:
+  - generic: chevron_right
+- heading [level=2]: What’s new
+- generic: Bug fixes.
+- heading [level=2]: Data safety
+- generic: arrow_forward
+- link:
+  - /url: /store/apps/datasafety?id=com.aaronsedna.hopecards
+- text: Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.
+- list:
+  - text: This app may share these data types with third parties
+  - generic: Location, App activity and 2 others
+  - text: This app may collect these data types
+  - generic: Location, App activity and 2 others
+  - generic: Data is encrypted in transit
+- generic: See details
+- link:
+  - /url: /store/apps/datasafety?id=com.aaronsedna.hopecards
+- heading [level=2]: About this app
+- button:
+  - generic: arrow_forward
+- text: Start each day with a Bible verse of the day for hope, reflection and encouragement, one beautiful Scripture card at a time. Hope Cards is a calm daily Bible verse app for a simple Scripture habit. Draw a Bible verse card, read today’s verse in Daily Hope, set a daily Bible reminder, save favorite Scripture and add journal notes linked to each verse. There is no complicated reading plan and no account to create.
+- text: "Bible trivia: quiz questions and answers Explore Bible people, places and events in English, Malayalam, German, French, Italian, Spanish and Filipino. Enjoy randomized rounds that follow your selected Bible translation. Check each answer with a Scripture reference and review your score. Share a PDF report with every question, your selected answer and the correct answer. Quiz questions work offline. Play at your own pace or enable a 30-second countdown for each question. The quiz moves on automatically when time runs out. The timer is off by default and remembers your choice. Sound feedback is on by default and can be switched off. With sound enabled, gentle beeps mark the final five seconds. Bible Quiz Certificate Generator Create A4 PDF participation certificates for your Bible quiz competition. Add multiple participant names at once to generate a separate certificate for each person. Certificates automatically use the language of your selected Bible. Select the date and add your competition title and optional organization name. Share one certificate or all PDFs together. Bible verse images to save and share Create meaningful Scripture images with nature backgrounds, including flowers, birds, coastlines and starry skies. Backgrounds rotate as you browse. Save your favorites or share a verse image. Daily Bible verse cards Draw a random Bible verse whenever you need a quiet moment. Find encouraging Bible verses about hope, faith, love, peace and strength. Each card gives Scripture a clear, beautiful place to read and reflect. Daily Hope and reminders Begin the day with a fresh Daily Hope verse. Set a gentle daily Bible reminder for the time that suits your routine. Favorites and Bible journal notes Save meaningful verses to your favorites. Add a personal thought, reflection or prayer beside a verse, then return to the Scripture and journal entry together. Bible translations and languages Choose from Berean Standard Bible (BSB), Bible in Basic English (BBE), King James Version (KJV), World English Bible (WEB) and supported Malayalam, Spanish, French, German, Italian and Tagalog translations. More to enjoy Share Bible verses with family and friends Choose from elegant card themes Back up and restore favorites, journal entries and settings Listen to optional peaceful background music in Daily Hope Read comfortably on phones and tablets Every feature is available Daily verses, Bible quiz, certificate generation, verse images, card themes, reminders, favorites and journal features are available to everyone. Occasional ads support Hope Cards. A one-time Google Play purchase can remove ads permanently; there is no subscription. Whether you have one quiet minute or want to keep a Bible verse close throughout the day, Hope Cards offers a focused, welcoming space for Scripture."
+- note: Daily Bible verses, verse images, Bible quiz and a quiz certificate generator.
+- generic: Updated on
+- generic: Oct 8, 2026
+- generic: Lifestyle
+- link:
+  - /url: /store/apps/category/LIFESTYLE
+- link:
+  - /url: https://support.google.com/googleplay/?p=report_content
+  - generic: flag
+  - text: Flag as inappropriate
+- generic: Rated for 3+
+- generic: In-App Purchases
+- link:
+  - /url: https://support.google.com/googleplay?p=appgame_ratings
+  - text: Learn more
+- heading [level=2]: App support
+- button:
+  - generic: expand_more
+- heading [level=2]:
+  - generic: More apps to try
+- generic: arrow_forward
+- link:
+  - /url: /store/apps/collection/cluster?gsr=SmJqLDh2RlRvMTVkbEp6NzdYc3JhdXVLVXNxVkd2NWJhS1c5TlVpVFE3ZHpMMzA9mgguChwKGGNvbS5hYXJvbnNlZG5hLmhvcGVjYXJkcxAHEAIaBggBEAAYACAAMAE4ALASAA%3D%3D:S:ANO1ljJKzVA
+- link:
+  - /url: /store/apps/details?id=jp.cocone.livly
+  - generic: Livly Island - Adopt Cute Pets
+  - generic: ENSAPIA Corporation
+- link:
+  - /url: /store/apps/details?id=com.codespaceapps.aichat
+  - generic: Chatbot AI - Search Assistant
+  - generic: Codespace Dijital
+- link:
+  - /url: /store/apps/details?id=com.lionsgateplay.videoapp
+  - generic: "Lionsgate Play: Movies & Shows"
+  - generic: Lionsgate Play LLP
+- link:
+  - /url: /store/apps/details?id=com.duolingo
+  - generic: "Duolingo: Learn Languages"
+  - generic: Duolingo
+- link:
+  - /url: /store/apps/details?id=com.adobe.scan.android
+  - generic: Adobe Scan AI PDF Scanner, OCR
+  - generic: Adobe
+- link:
+  - /url: /store/apps/details?id=com.anthropic.claude
+  - generic: Claude by Anthropic
+  - generic: Anthropic PBC
+- contentinfo:
+  - text: Google Play
+  - link:
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link:
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link:
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link:
+    - /url: /redeem
+    - paragraph: Redeem
+  - link:
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link:
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link:
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link:
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link:
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link:
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link:
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link:
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)
+- dialog:
+  - 'heading "Daily Bible Verse: Hope Cards" [level=5]'
+  - generic: About this app
+  - button "Close about app dialog" [active]:
+    - generic: clear
+  - text: Start each day with a Bible verse of the day for hope, reflection and encouragement, one beautiful Scripture card at a time.
+  - text: Hope Cards is a calm daily Bible verse app for a simple Scripture habit. Draw a Bible verse card, read today’s verse in Daily Hope, set a daily Bible reminder, save favorite Scripture and add journal notes linked to each verse. There is no complicated reading plan and no account to create.
+  - text: "Bible trivia: quiz questions and answers"
+  - text: Explore Bible people, places and events in English, Malayalam, German, French, Italian, Spanish and Filipino. Enjoy randomized rounds that follow your selected Bible translation. Check each answer with a Scripture reference and review your score. Share a PDF report with every question, your selected answer and the correct answer. Quiz questions work offline.
+  - text: Play at your own pace or enable a 30-second countdown for each question. The quiz moves on automatically when time runs out. The timer is off by default and remembers your choice. Sound feedback is on by default and can be switched off. With sound enabled, gentle beeps mark the final five seconds.
+  - text: Bible Quiz Certificate Generator
+  - text: Create A4 PDF participation certificates for your Bible quiz competition. Add multiple participant names at once to generate a separate certificate for each person. Certificates automatically use the language of your selected Bible. Select the date and add your competition title and optional organization name. Share one certificate or all PDFs together.
+  - text: Bible verse images to save and share
+  - text: Create meaningful Scripture images with nature backgrounds, including flowers, birds, coastlines and starry skies. Backgrounds rotate as you browse. Save your favorites or share a verse image.
+  - text: Daily Bible verse cards
+  - text: Draw a random Bible verse whenever you need a quiet moment. Find encouraging Bible verses about hope, faith, love, peace and strength. Each card gives Scripture a clear, beautiful place to read and reflect.
+  - text: Daily Hope and reminders
+  - text: Begin the day with a fresh Daily Hope verse. Set a gentle daily Bible reminder for the time that suits your routine.
+  - text: Favorites and Bible journal notes
+  - text: Save meaningful verses to your favorites. Add a personal thought, reflection or prayer beside a verse, then return to the Scripture and journal entry together.
+  - text: Bible translations and languages
+  - text: Choose from Berean Standard Bible (BSB), Bible in Basic English (BBE), King James Version (KJV), World English Bible (WEB) and supported Malayalam, Spanish, French, German, Italian and Tagalog translations.
+  - text: More to enjoy
+  - text: Share Bible verses with family and friends
+  - text: Choose from elegant card themes
+  - text: Back up and restore favorites, journal entries and settings
+  - text: Listen to optional peaceful background music in Daily Hope
+  - text: Read comfortably on phones and tablets
+  - text: Every feature is available
+  - text: Daily verses, Bible quiz, certificate generation, verse images, card themes, reminders, favorites and journal features are available to everyone. Occasional ads support Hope Cards. A one-time Google Play purchase can remove ads permanently; there is no subscription.
+  - text: Whether you have one quiet minute or want to keep a Bible verse close throughout the day, Hope Cards offers a focused, welcoming space for Scripture.
+  - generic: Version
+  - generic: 1.0.14
+  - generic: Updated on
+  - generic: Oct 8, 2026
+  - generic: Requires Android
+  - generic: 6.0 and up
+  - generic: Downloads
+  - generic: 100+ downloads
+  - generic: In-app purchases
+  - generic: ₹100.00 - ₹340.00 per item
+  - generic: Content rating
+  - text: Rated for 3+
+  - link "Learn more":
+    - /url: https://support.google.com/googleplay?p=appgame_ratings
+  - generic: Permissions
+  - generic: View details
+  - generic: Interactive elements
+  - generic: In-App Purchases
+  - generic: Released on
+  - generic: Sep 11, 2026
+  - generic: Offered by
+  - generic: Aaronsedna
+  - generic: Compatibility for your active devices *
+  - generic: Samsung SM-A165F
+  - generic: Version
+  - generic: 1.0.14
+  - generic: Compatibility
+  - generic: Works on your device
+  - generic: Download Size
+  - generic: 37 MB
+  - generic: Requires
+  - generic: Android 6.0 and up
+  - generic: Google Sdk_gphone16k_arm64
+  - generic: Version
+  - generic: 1.0.14
+  - generic: Compatibility
+  - generic: Works on your device
+  - generic: Download Size
+  - generic: 37 MB
+  - generic: Requires
+  - generic: Android 6.0 and up
+  - generic: "* How this app works on your device"
+  - generic: This section shows you whether this app works on your devices. You’ll only see devices that are linked to your Google Account and that have been active in the last 30 days.

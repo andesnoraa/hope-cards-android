@@ -1,0 +1,92 @@
+Browser tab: 455027210, Title: "verse - Android Apps on Google Play", URL: "https://play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN".
+1 AXWebArea verse - Android Apps on Google Play, URL: play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN
+	2 container yDmH0d
+		3 container Page Header
+			4 link Description: Google Play logo, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Description: Search Google Play, Value: verse
+			8 button Help Center
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna ([signed-in email redacted]), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: Apps & games, Value: 1
+				13 checkbox Description: Device, Value: 0
+			14 container
+				15 link Description: HCL Verse, Value: play.google.com/store/apps/details?id=com.lotus.sync.traveler
+				16 text HCL Verse HCL America Inc. HCL Verse Android Client
+				17 image Rated 3.2 stars out of five stars
+				18 text 16.2K  reviews 1M+ Downloads
+				19 button (disabled) Install
+					20 text Install
+				21 image Content rating
+				22 text Rated for 3+
+				23 link Description: Learn more about content ratings (opens in new window), Value: support.google.com/googleplay?p=appgame_ratings
+				24 container
+					25 content list
+						26 button Screenshot image
+						27 button Screenshot image
+						28 button Screenshot image
+						29 button Screenshot image
+						30 button Screenshot image
+						31 button Screenshot image
+						32 button Screenshot image
+					33 button Scroll Next
+			34 container
+				35 content list
+					36 container
+						37 link Description: Quran Verse Premium - No Ads FrazerX Apps Rated 5.0 stars out of five stars, Value: play.google.com/store/apps/details?id=com.quranverseapp.quran_verse_app
+					38 container
+						39 link Description: King James Bible - Verse+Audio Ozion Rated 4.8 stars out of five stars, Value: play.google.com/store/apps/details?id=kjv.bible.kingjamesbible
+					40 container
+						41 link Description: Verse: Daily Bible Companion Chelsea Ajah, Value: play.google.com/store/apps/details?id=com.verse.verse_app
+					42 container
+						43 link Description: Verse By Verse Ministry Verse By Verse Ministry International Rated 4.6 stars out of five stars, Value: play.google.com/store/apps/details?id=com.erpdevelopment.vbvm
+					44 container
+						45 link Description: GlowVerse: Bible Verse Widget Everblessed Technology Inc., Value: play.google.com/store/apps/details?id=app.glowverse.biblewidget
+					46 container
+						47 link Description: YouVersion Bible App + Audio Life.Church Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.sirma.mobile.bible.android
+					48 container
+						49 link Description: My Memory Verse Redeemer Apps, Value: play.google.com/store/apps/details?id=com.keynentt.mymemoryverse
+					50 container
+						51 link Value: play.google.com/store/apps/details?id=bzn.bible.journaling.verse, Description: Play Verse Root: Bible Journal Verse Root: Bible Journal Verselingo Apps - Motivation and Christian Apps
+					52 container
+						53 link Description: Wallet Verse: DeFi, Buy Crypto ilink Ltd. Rated 5.0 stars out of five stars, Value: play.google.com/store/apps/details?id=com.walletverse
+					54 container
+						55 link Description: Riding Verse Explorations And Innovations Technologies Pvt Ltd Rated 4.3 stars out of five stars, Value: play.google.com/store/apps/details?id=com.ridingverse.app
+					56 container
+						57 link Description: VerseLight: Daily Bible Verse Adhikari Studio, Value: play.google.com/store/apps/details?id=com.verselight.dailybibleverse
+					58 container
+						59 link Description: Bible Hour: Verses & Prayer Bible Hour Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=com.marketu.biblehour
+					60 container
+						61 link Description: Bible Verses: For Every Day 1381802 Ontario Inc., Value: play.google.com/store/apps/details?id=com.collabra.bible
+					62 container
+						63 link Description: VerseTap: AI Sermon Note-taker Clarylife Global, Value: play.google.com/store/apps/details?id=versetap.bible.sermon
+					64 container
+						65 link Description: Play AudioVerse AudioVerse AudioVerse Rated 4.9 stars out of five stars, Value: play.google.com/store/apps/details?id=org.audioverse.exodus
+					66 container
+						67 link Description: Holy: Daily Bible Verses Believe PR Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=dev.armandojimenez.holy
+					68 container
+						69 link Description: The Bible Memory App Millennial Apps - The Bible Memory App Rated 4.8 stars out of five stars, Value: play.google.com/store/apps/details?id=com.millennialsolutions.scripturetyper
+					70 container
+						71 link Description: VerseAnchor -BibleMemorization Buzen Apps, Value: play.google.com/store/apps/details?id=bzn.bible.memorise.verselock
+					72 container
+						73 link Description: Solitaire Verse Gimica GmbH Rated 4.3 stars out of five stars, Value: play.google.com/store/apps/details?id=com.gimica.solitaireverse
+		74 container
+			75 text Google Play
+			76 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			77 link Description: Play Points, Value: play.google.com/store/points/enroll
+			78 link Description: Gift cards, Value: play.google.com/about/giftcards
+			79 link Description: Redeem, Value: play.google.com/redeem
+			80 link Description: Refund policy, Value: support.google.com/googleplay/answer/134336
+			81 text Kids & family
+			82 link Description: Parent Guide, Value: support.google.com/googleplay?p=pff_parentguide
+			83 link Description: Family sharing, Value: support.google.com/googleplay/answer/7007852
+			84 link Description: Terms of Service, Value: play.google.com/intl/en_in/about/play-terms.html
+			85 link Description: Privacy, Value: policies.google.com/privacy
+			86 link Description: About Google Play, Value: support.google.com/googleplay/?p=about_play
+			87 link Description: Developers, Value: developer.android.com/index.html
+			88 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			89 text All prices include GST. India (English)
+
+The focused UI element is 1 AXWebArea verse - Android Apps on Google Play, URL: play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN

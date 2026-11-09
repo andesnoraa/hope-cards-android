@@ -1,0 +1,36 @@
+{
+  "observedAtUtc": "2026-10-09T15:59:03.232123+00:00",
+  "appPackage": "com.aaronsedna.hopecards",
+  "consoleAppId": "4976302422419978923",
+  "submissionId": 39,
+  "status": "published",
+  "versionName": "1.0.14",
+  "versionCode": 47,
+  "submittedConsoleLabel": "Oct 08, 2026, 10:59 PM",
+  "publishedConsoleLabel": "Oct 08, 2026, 11:32 PM",
+  "publishedAtUtcUsingTaskTimezone": "2026-10-08T18:02:00Z",
+  "timezoneForConversion": "Asia/Kolkata",
+  "rolloutPercentage": 100,
+  "countries": 178,
+  "unpublishedChanges": false,
+  "publicVisibility": {
+    "gl": "IN",
+    "hl": "en",
+    "version": "1.0.14",
+    "updatedOn": "Oct 8, 2026",
+    "whatsNew": "Bug fixes.",
+    "evidence": "public-version-en.txt"
+  },
+  "metadataSubmission38": "Already published October 8; English and Malayalam descriptions still visible",
+  "nextPlannedMetadataEvaluationNotBefore": "2026-10-22",
+  "evidence": [
+    "submission-39.txt",
+    "submission-39-published.png",
+    "release-overview.txt",
+    "production-current.txt",
+    "public-listing-en.txt",
+    "public-listing-ml.txt",
+    "public-version-en.txt"
+  ],
+  "newBinaryPublishedByThisHeartbeat": false
+}

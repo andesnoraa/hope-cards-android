@@ -1,0 +1,34 @@
+{
+  "observedAtUtc": "2026-10-10T16:09:55.639Z",
+  "packageName": "com.aaronsedna.hopecards",
+  "consoleAppId": "4976302422419978923",
+  "status": "published",
+  "versionName": "1.0.14",
+  "versionCode": 47,
+  "rolloutPercentage": 100,
+  "lastPublishedConsoleDate": "2026-10-08",
+  "unpublishedChanges": false,
+  "savedDraftsObserved": false,
+  "queuedSubmissionObserved": false,
+  "inReviewObserved": false,
+  "newPublicationOrRejectionToday": false,
+  "historicalPublicationRecord": "../2026-10-09/PUBLICATION.md",
+  "publicVisibility": {
+    "country": "IN",
+    "language": "en",
+    "version": "1.0.14",
+    "updatedOn": "Oct 8, 2026",
+    "whatsNew": "Bug fixes.",
+    "observedAtUtc": "2026-10-10T16:12:28.872Z"
+  },
+  "metadata": "October 8 English and Malayalam descriptions remain public. Preserved without mutation.",
+  "nextPlannedMetadataEvaluationNotBefore": "2026-10-22",
+  "newBinaryPublishedByThisHeartbeat": false,
+  "evidence": [
+    "publishing-overview.txt",
+    "release-overview.txt",
+    "public-version-en.txt",
+    "public-listing-en.txt",
+    "public-listing-ml.txt"
+  ]
+}

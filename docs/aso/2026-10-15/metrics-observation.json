@@ -1,0 +1,106 @@
+{
+  "observedAtUtc": "2026-10-15T09:15:48.200Z",
+  "scope": "Google Play Console, all countries unless noted. UI scopes and date labels preserved; Ads settings unchanged.",
+  "acquisition": {
+    "source": "Grow users overview, Metrics by Device",
+    "window": "Last 28 days compared with previous 28 days; source-detail URL dateRange=2026_9_17-2026_10_14",
+    "deviceImpressions": "3.53K",
+    "deviceImpressionsDisplayedDeltaPercent": ">999",
+    "deviceAcquisitions": 253,
+    "deviceAcquisitionsDisplayedDeltaPercent": ">999",
+    "deviceFirstOpens": 38,
+    "deviceFirstOpensDisplayedDeltaPercent": 27,
+    "monthlyActiveDevices": 44,
+    "monthlyActiveDevicesDisplayedDeltaPercent": 120,
+    "trafficSources": [
+      {
+        "label": "Google Play explore",
+        "deviceAcquisitions": 12,
+        "displayedDeltaPercent": ">999"
+      },
+      {
+        "label": "Paid and direct",
+        "deviceAcquisitions": 96,
+        "displayedDeltaPercent": 500
+      },
+      {
+        "label": "Not attributed",
+        "deviceAcquisitions": 145,
+        "displayedDeltaPercent": ">999"
+      }
+    ],
+    "exploreUserAcquisitions90Days": 14,
+    "searchTerms": "No query-level search-term report exposed in this overview. Google Play explore can include generic category searches; aggregate source totals do not identify individual queries. Paid and direct combines mechanisms."
+  },
+  "listing": {
+    "report": "Store listings, Installs",
+    "displayedRangeLabel": "Last 28 days",
+    "exactDateRange": "Not exposed in visible UI or page URL",
+    "defaultListingRowVisitors": 499,
+    "defaultListingRowConversionRatePercent": 19.4,
+    "defaultListingStatus": "Live",
+    "defaultListingLastUpdated": "2026-10-08",
+    "uniqueUserInstallClicks": "Not exposed in current capture",
+    "clickThroughRate": "Not exposed in current capture",
+    "growOverviewStoreListingConversionRateLast90DaysPercent": 25.14,
+    "countryLanguageBreakdown": "Not exposed",
+    "caution": "Different reporting scopes: Last 28 days row versus Last 90 days Grow overview. Install clicks are not completed installs."
+  },
+  "ratings": {
+    "report": "Ratings",
+    "selectedPerformancePeriod": "Last 28 days",
+    "defaultGooglePlayRating": 5.0,
+    "averageRatingLast28Days": 5.0,
+    "users": 1,
+    "ratingsBreakdown": [
+      {
+        "country": "India",
+        "numberOfRatings": 1,
+        "averageRating": 5.0
+      },
+      {
+        "language": "English",
+        "numberOfRatings": 1,
+        "averageRating": 5.0
+      },
+      {
+        "appVersion": "1.0.2 (28)",
+        "numberOfRatings": 1,
+        "averageRating": 5.0
+      }
+    ],
+    "note": "One-user sample attributed to an older app version; not representative of current version 1.0.14."
+  },
+  "retention": {
+    "source": "Grow users overview, Metrics by Device",
+    "window": "Last 28 days compared with previous 28 days",
+    "metric": "7-day device retention",
+    "displayedValue": 1,
+    "displayedDeltaPercent": -88,
+    "unit": "device count, not a retention rate",
+    "note": "Very small observed count; no causal diagnosis can be made."
+  },
+  "quality": {
+    "policyIssues": "None shown",
+    "last28DaysAndroidVitals": {
+      "userPerceivedCrashes": "Data unavailable",
+      "userPerceivedAnrs": "Data unavailable",
+      "slowColdStart": "Data unavailable"
+    },
+    "r8Advisory": "Play says R8 configuration could cause higher memory usage and lower performance for 1.0.14 (47); advisory only, not measured device memory or battery usage."
+  },
+  "experiments": {
+    "running": 0,
+    "ended": 0,
+    "applied": 0
+  },
+  "confounders": [
+    "Global totals combine all countries and languages.",
+    "Paid and direct is a mixed source; 96 acquisitions cannot be attributed to the Ads campaign alone.",
+    "Google Play explore (12) may include generic category searches but contains no query-level attribution.",
+    "Not attributed accounts for 145 acquisitions.",
+    "Rolling 28-day totals differ slightly from Oct 14 (254 acquisitions, 13 Explore), not evidence of a material day-over-day shift.",
+    "Last-28-day listing performance overlaps the Oct 8 listing publication.",
+    "Vitals are unavailable, not zero; retention value is a single-device count."
+  ]
+}

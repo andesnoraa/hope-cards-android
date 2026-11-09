@@ -1,0 +1,215 @@
+2026-10-08T04:58:45.661Z
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - navigation "Main":
+      - tablist:
+        - tab "Games":
+          - generic: Games
+        - tab "Apps" [selected]:
+          - generic: Apps
+        - tab "Books":
+          - generic: Books
+        - tab "Kids":
+          - generic: Kids
+    - button "Search":
+      - generic: search
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- 'heading "Daily Bible Verse: Hope Cards" [level=1]'
+- link "Aaronsedna":
+  - /url: /store/apps/developer?id=Aaronsedna
+- generic: Contains ads · In-app purchases
+- region "Information badges":
+  - generic: 100+
+  - generic: Downloads
+- button "Install on more devices" [disabled]:
+  - generic: Install on more devices
+- button "Share":
+  - generic: Share
+- button "Play trailer":
+  - generic: play_arrow
+  - text: Trailer
+- generic: devices
+- generic: This app is available for all of your devices
+- list:
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+- heading "What’s new" [level=2]
+- generic: Bug fixes.
+- banner:
+  - generic: Featured stories
+- list:
+  - link "Special event Play Fest starts on October 13 Big savings, big offers, and more":
+    - /url: /store/apps/editorial?id=mc_games_cmp_play_days_2026_fcp
+    - generic: Special event
+    - generic: Play Fest starts on October 13
+    - generic: Big savings, big offers, and more
+- heading "Data safety" [level=2]
+- generic: arrow_forward
+- link "See more information on Data safety":
+  - /url: /store/apps/datasafety?id=com.aaronsedna.hopecards
+- text: Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.
+- list:
+  - text: This app may share these data types with third parties
+  - generic: Location, App activity and 2 others
+  - text: This app may collect these data types
+  - generic: Location, App activity and 2 others
+  - generic: Data is encrypted in transit
+- generic: See details
+- link "See more details on data safety":
+  - /url: /store/apps/datasafety?id=com.aaronsedna.hopecards
+- heading "About this app" [level=2]
+- button "See more information on About this app":
+  - generic: arrow_forward
+- text: Start each day with a Bible verse of the day for hope, reflection and encouragement, one beautiful Scripture card at a time.
+- text: Hope Cards is a calm daily Bible verse app for a simple Scripture habit. Draw a Bible verse card, read today’s verse in Daily Hope, set a daily Bible reminder, save favorite Scripture and add journal notes linked to each verse. There is no complicated reading plan and no account to create.
+- text: Bible quiz in your language
+- text: Explore Bible people, places and events in English, Malayalam, German, French, Italian, Spanish and Filipino. Enjoy randomized rounds that follow your selected Bible translation. Check each answer with a Scripture reference and review your score. Share a PDF report with every question, your selected answer and the correct answer. Quiz questions work offline.
+- text: Play at your own pace or enable a 30-second countdown for each question. The quiz moves on automatically when time runs out. The timer is off by default and remembers your choice. Sound feedback is on by default and can be switched off. With sound enabled, gentle beeps mark the final five seconds.
+- text: Bible Quiz Certificate Generator
+- text: Create A4 PDF participation certificates for your Bible quiz competition. Add multiple participant names at once to generate a separate certificate for each person. Certificates automatically use the language of your selected Bible. Select the date and add your competition title and optional organization name. Share one certificate or all PDFs together.
+- text: Verse images to save and share
+- text: Create meaningful Scripture images with nature backgrounds, including flowers, birds, coastlines and starry skies. Backgrounds rotate as you browse. Save your favorites or share a verse image.
+- text: Daily Bible verse cards
+- text: Draw an encouraging Bible verse whenever you need a quiet moment. Each card gives Scripture a clear, beautiful place to read and reflect.
+- text: Daily Hope and reminders
+- text: Begin the day with a fresh Daily Hope verse. Set a gentle daily Bible reminder for the time that suits your routine.
+- text: Favorites and Bible journal notes
+- text: Save meaningful verses to your favorites. Add a personal thought, reflection or prayer beside a verse, then return to the Scripture and journal entry together.
+- text: Bible translations and languages
+- text: Choose from Berean Standard Bible (BSB), Bible in Basic English (BBE), King James Version (KJV), World English Bible (WEB) and supported Malayalam, Spanish, French, German, Italian and Tagalog translations.
+- text: More to enjoy
+- text: Share Bible verses with family and friends
+- text: Choose from elegant card themes
+- text: Back up and restore favorites, journal entries and settings
+- text: Listen to optional peaceful background music in Daily Hope
+- text: Read comfortably on phones and tablets
+- text: Every feature is available
+- text: Daily verses, Bible quiz, certificate generation, verse images, card themes, reminders, favorites and journal features are available to everyone. Occasional ads support Hope Cards. A one-time Google Play purchase can remove ads permanently; there is no subscription.
+- text: Whether you have one quiet minute or want to keep a Bible verse close throughout the day, Hope Cards offers a focused, welcoming space for Scripture.
+- note "Daily Bible verses, verse images, Bible quiz and a quiz certificate generator."
+- generic: Updated on
+- generic: Oct 6, 2026
+- generic: Lifestyle
+- link "Lifestyle":
+  - /url: /store/apps/category/LIFESTYLE
+- link "Flag as inappropriate (opens in new window)":
+  - /url: https://support.google.com/googleplay/?p=report_content
+  - generic: flag
+  - text: Flag as inappropriate
+- img "Content rating"
+- generic: Rated for 3+
+- generic: In-App Purchases
+- link "Learn more about content ratings (opens in new window)":
+  - /url: https://support.google.com/googleplay?p=appgame_ratings
+  - text: Learn more
+- heading "App support" [level=2]
+- button "Expand":
+  - generic: expand_more
+- heading "More apps to try" [level=2]:
+  - generic: More apps to try
+- generic: arrow_forward
+- link "See more information on More apps to try":
+  - /url: /store/apps/collection/cluster?gsr=SmJqLDZpbEJtZXdyYVMyNG4xeExWYTdLcy9RR25DK0hGR0ZTYUJ1aGZJQXZSTGc9mgguChwKGGNvbS5hYXJvbnNlZG5hLmhvcGVjYXJkcxAHEAIaBggBEAAYACAAMAE4ALASAA%3D%3D:S:ANO1ljJai9Y
+- link "Facebook Meta Platforms, Inc. Rated 4.3 stars out of five stars":
+  - /url: /store/apps/details?id=com.facebook.katana
+  - generic: Facebook
+  - generic: Meta Platforms, Inc.
+  - img "Rated 4.3 stars out of five stars":
+    - generic: "4.3"
+    - generic: star
+- link "Yandex Maps and Navigator Direct Cursus Computer Systems Trading LLC Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=ru.yandex.yandexmaps
+  - generic: Yandex Maps and Navigator
+  - generic: Direct Cursus Computer Systems Trading LLC
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- 'link "Finch: Self-Care Pet Finch Care Public Benefit Corporation Rated 4.9 stars out of five stars"':
+  - /url: /store/apps/details?id=com.finch.finch
+  - generic: "Finch: Self-Care Pet"
+  - generic: Finch Care Public Benefit Corporation
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- link "PhotoBoost - AI Photo Enhancer Tap AI Rated 4.2 stars out of five stars":
+  - /url: /store/apps/details?id=tap.photo.boost.restoration
+  - generic: PhotoBoost - AI Photo Enhancer
+  - generic: Tap AI
+  - img "Rated 4.2 stars out of five stars":
+    - generic: "4.2"
+    - generic: star
+- link "Claude by Anthropic Anthropic PBC Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.anthropic.claude
+  - generic: Claude by Anthropic
+  - generic: Anthropic PBC
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "PDF Scanner app - TapScanner Tap AI Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=pdf.tap.scanner
+  - generic: PDF Scanner app - TapScanner
+  - generic: Tap AI
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

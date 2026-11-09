@@ -1,0 +1,93 @@
+{
+  "verifiedAtUtc": "2026-10-08T17:16:35.586962+00:00",
+  "versionCode": 47,
+  "versionName": "1.0.14",
+  "buildResult": "BUILD SUCCESSFUL in 2m 24s",
+  "emulatorLanguageTests": {
+    "device": "emulator-5554",
+    "passed": 4,
+    "failed": 0,
+    "elapsedSeconds": 12.84,
+    "evidence": "emulator-final-v47-tests.txt"
+  },
+  "unitTests": {
+    "debug": {
+      "tests": 93,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "release": {
+      "tests": 93,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "lint": {
+    "debug": {
+      "Error": 0,
+      "Warning": 66,
+      "Hint": 1
+    },
+    "release": {
+      "Error": 0,
+      "Warning": 67,
+      "Hint": 1
+    }
+  },
+  "artifactValidation": "output/translation-final-1.0.14/artifact-verification.json",
+  "runtimeAudit": "output/translation-final-1.0.14/content-and-dependency-validation.json",
+  "earlierVersion46Verification": {
+    "instrumentation": {
+      "device": "emulator-5554",
+      "finalMethods": 4,
+      "failures": 0,
+      "elapsedSeconds": 53.156,
+      "evidence": "emulator-final-language-tests.txt"
+    },
+    "unitTests": {
+      "debug": {
+        "tests": 93,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "release": {
+        "tests": 93,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "lint": {
+      "debug": {
+        "Warning": 61,
+        "Hint": 1
+      },
+      "release": {
+        "Warning": 62,
+        "Hint": 1
+      }
+    },
+    "initialEmulatorRun": {
+      "methods": 4,
+      "failures": 1,
+      "reason": "French/German test activity teardown timeout",
+      "evidence": "emulator-language-tests.txt",
+      "isolatedRerun": "passed (emulator-french-rerun.txt)"
+    },
+    "visualScope": "Final debug interface using existing translations; Google-generated wording preview still pending."
+  },
+  "googleGeneratedApk": {
+    "versionCode": 47,
+    "validated": true,
+    "resourceValidation": "output/translation-final-1.0.14/google-generated-validation.json",
+    "manualEmulatorDevice": "emulator-5554",
+    "screens": [
+      "google-v47-portuguese-home.png",
+      "google-v47-portuguese-about.png"
+    ],
+    "originalAppLocalesRestored": true
+  }
+}

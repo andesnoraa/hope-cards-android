@@ -11,7 +11,6 @@ import androidx.compose.ui.platform.LocalContext
 import com.aaronsedna.hopecards.model.Translation
 import com.aaronsedna.hopecards.model.ThemeName
 import com.aaronsedna.hopecards.R
-import java.util.Locale
 
 val LocalAppTranslation = staticCompositionLocalOf { Translation.BSB }
 
@@ -31,13 +30,11 @@ val Translation.localeTag: String
         else -> "en-US"
     }
 
+@Suppress("UNUSED_PARAMETER")
 fun Context.forTranslation(translation: Translation): Context {
     val configuration = Configuration(resources.configuration)
-    // Bible editions can change the verse text and book reference presentation, but the
-    // product UI stays in English. Keeping this context explicit also avoids a selected
-    // Malayalam/German/etc. Bible from unexpectedly changing navigation and settings labels.
-    configuration.setLocale(Locale.US)
-    configuration.setLayoutDirection(Locale.US)
+    // General UI follows the device language, including Play-generated translations.
+    // Bible selection still controls Scripture and the quiz's separate resource context.
     return createConfigurationContext(configuration)
 }
 

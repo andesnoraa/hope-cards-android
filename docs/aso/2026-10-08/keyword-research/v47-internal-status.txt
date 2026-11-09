@@ -1,0 +1,147 @@
+2026-10-08T17:26:51.412Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+      - list:
+        - listitem "Latest releases and bundles":
+          - button "Latest releases and bundles":
+            - generic: Latest releases and bundles
+        - listitem "Production":
+          - button "Production":
+            - generic: Production
+        - listitem "Testing":
+          - button "Testing":
+            - generic: Testing
+            - img: expand_less
+          - list:
+            - listitem "Open testing":
+              - button "Open testing":
+                - generic: Open testing
+            - listitem "Closed testing":
+              - button "Closed testing":
+                - generic: Closed testing
+            - listitem "Internal testing":
+              - button "Internal testing":
+                - generic: Internal testing
+            - listitem "Pre-launch report":
+              - button "Pre-launch report":
+                - generic: Pre-launch report
+                - img: expand_more
+            - listitem "Internal app sharing":
+              - button "Internal app sharing":
+                - generic: Internal app sharing
+        - listitem "Pre-registration":
+          - button "Pre-registration":
+            - generic: Pre-registration
+        - listitem "App integrity":
+          - button "App integrity":
+            - generic: App integrity
+        - listitem "Advanced settings":
+          - button "Advanced settings":
+            - generic: Advanced settings
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Internal testing" [level=1]
+- button "Select form factors. Phones, Tablets, Desktop (Googlebook OS, ChromeOS), Android XR":
+  - img: phonelink
+  - generic: Phones, Tablets, Desktop (Googlebook OS, ChromeOS), Android XR
+  - img: arrow_drop_down
+- button "Create new release":
+  - generic: Create new release
+- text: Create and manage internal testing releases to make your app available to up to 100 internal testers.
+- link "Learn more about Internal testing (opens in a new tab)":
+  - /url: https://play.google.com/console/about/internal-testing
+  - text: Learn more
+- heading "Track summary (Phones, Tablets, Desktop, Android XR)" [level=4]
+- button "Pause track":
+  - generic: Pause track
+- list:
+  - listitem: Active
+  - listitem: "Latest release: 1.0.14 (47) Gemini translations"
+- tablist:
+  - tab "Releases" [selected]:
+    - generic: Releases
+  - tab "Testers":
+    - generic: Testers
+- heading "Releases" [level=2]
+- heading "Release 1.0.14 (47) Gemini translations" [level=3]: 1.0.14 (47) Gemini translations
+- link "Manage release 1.0.14 (47) Gemini translations":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/tracks/4701693063840833699/releases/17/details
+  - generic: Manage release
+- button "Promote release":
+  - generic: Promote release
+  - img: arrow_drop_down
+- paragraph:
+  - img: check_circle
+  - generic: Available to internal testers
+  - img: brightness_1
+  - generic: 1 version code
+  - img: brightness_1
+  - generic: Released on Oct 8 10:56 PM
+- button "Show summary for 1.0.14 (47) Gemini translations":
+  - generic: Show summary
+  - img: expand_more
+- heading "Release history" [level=2]
+- 'button "Show content: Release history"':
+  - generic: Show
+  - img: expand_more
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/
+- status

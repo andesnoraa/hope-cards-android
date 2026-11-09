@@ -24,7 +24,7 @@ import java.io.File
 
 /** Sharing retains the score screen and bypasses the completed-round ad. */
 @Composable
-internal fun QuizResultActions(translation: Translation, session: QuizSession, questions: List<QuizQuestion>) {
+internal fun QuizResultActions(translation: Translation, session: QuizSession, questions: List<QuizQuestion>, primary: Boolean = false) {
     val context = LocalContext.current
     val colors = LocalHopeColors.current
     val scope = rememberCoroutineScope()
@@ -32,7 +32,8 @@ internal fun QuizResultActions(translation: Translation, session: QuizSession, q
     val resources = report.resources
     var busy by remember { mutableStateOf(false) }
     var error by rememberSaveable { mutableStateOf(false) }
-    OutlinedButton(
+    val foreground = if (primary) colors.buttonText else colors.text
+    Button(
         onClick = {
             if (!busy) {
                 busy = true
@@ -56,13 +57,14 @@ internal fun QuizResultActions(translation: Translation, session: QuizSession, q
             }
         },
         enabled = !busy,
-        shape = RoundedCornerShape(28.dp), border = BorderStroke(1.dp, colors.divider),
-        colors = ButtonDefaults.outlinedButtonColors(contentColor = colors.text),
+        shape = RoundedCornerShape(12.dp), border = if (primary) null else BorderStroke(1.dp, colors.text),
+        colors = ButtonDefaults.buttonColors(containerColor = if (primary) colors.buttonBackground else androidx.compose.ui.graphics.Color.Transparent,
+            contentColor = foreground),
         modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp).testTag("quiz_export"),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            if (busy) CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp, color = colors.text)
-            else AppIcon(AppIconGlyph.ShareOutline, null, colors.text, size = 20.dp)
+            if (busy) CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp, color = foreground)
+            else AppIcon(AppIconGlyph.ShareOutline, null, foreground, size = 20.dp)
             Text(resources.getString(if (busy) R.string.quiz_preparing_pdf else R.string.quiz_share_export),
                 fontFamily = interfaceFontFor(translation), fontSize = 16.sp)
         }

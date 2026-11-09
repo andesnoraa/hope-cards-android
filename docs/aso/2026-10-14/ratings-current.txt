@@ -1,0 +1,299 @@
+Browser tab: 455027210, Title: "Ratings | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings".
+1 AXWebArea Ratings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (expanded) Description: Monitor and improve, Secondary Actions: Collapse
+						32 button Monitor and improve
+							33 text Monitor and improve
+						34 content list
+							35 container
+								36 container (collapsed) Description: Reach and devices, Secondary Actions: Expand
+									37 button Reach and devices
+								38 container (expanded) Description: Ratings and reviews, Secondary Actions: Collapse
+									39 button Ratings and reviews
+									40 content list
+										41 container
+											42 container Ratings
+												43 button Ratings
+											44 container Reviews
+												45 button Reviews
+											46 container Reviews analysis
+												47 button Reviews analysis
+											48 container Testing feedback
+												49 button Testing feedback
+								50 container (collapsed) Description: Android vitals, Secondary Actions: Expand
+									51 button Android vitals
+								52 container (collapsed) Description: Policy and programs, Secondary Actions: Expand
+									53 button Policy and programs
+					54 container (collapsed) Description: Grow users, Secondary Actions: Expand
+						55 button Grow users
+							56 text Grow users
+					57 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						58 button Monetize with Play
+							59 text Monetize with Play
+			60 container main-content
+				61 container
+					62 heading Ratings, Value: 1
+						63 text Ratings
+					64 link Description: Go to Download reports, Value: play.google.com/console/u/0/developers/7885801294965165245/download-reports/statistics?appId=4976302422419978923
+					65 container
+						66 text See how users rate your app on Google Play.
+						67 button Show more details about Ratings
+					68 heading Configure report, Value: 3
+						69 text Configure report
+					70 button Edit peer group
+						71 text Edit peer group
+					72 pop up button (collapsed) Description: Peer group: Custom peer group, Secondary Actions: Expand
+						73 text Peer group: Custom peer group
+					74 container Overview 5.000 Default Google Play rating 5.000 Average rating (last 28 days) 1 Users Rating vs. peers: Custom peer group More information about "Rating vs. peers: Custom peer group" - Yesterday's average -
+						75 heading Overview, Value: 2
+							76 text Overview
+						77 container
+							121 text 5.000
+							78 button (expanded) Default Google Play rating, Secondary Actions: Collapse
+						79 container
+							122 text 5.000
+							80 button (collapsed) Average rating (last 28 days), Secondary Actions: Expand
+						81 container
+							123 text 1
+							82 button (collapsed) Users, Secondary Actions: Expand
+						83 heading Rating vs. peers: Custom peer group, Value: 3
+							84 text Rating vs. peers: Custom peer group
+						85 button (collapsed) Description: More information about "Rating vs. peers: Custom peer group", Secondary Actions: Expand
+						86 container
+							124 text -
+							87 button (collapsed) Yesterday's average, Secondary Actions: Expand
+						88 container
+							125 text -
+							89 text vs. peers' median
+						90 container
+							126 text 4.500
+							91 text Peers' median
+						92 button (collapsed) Description: Show peers, Secondary Actions: Expand
+							93 text Show peers
+					94 heading Performance over time, Value: 2
+						95 text Performance over time
+					96 pop up button (collapsed) Period: Daily, Secondary Actions: Expand
+						97 text Period: Daily
+					98 pop up button (collapsed) Last 28 days, ID: a71BDB23F-B087-48F1-8856-4F80712E3C5A--0, Secondary Actions: Expand
+					99 text Average rating
+					100 button Download CSV
+						101 text Download CSV
+					102 pop up button (collapsed) Show: Daily average rating, Secondary Actions: Expand
+						103 text Show: Daily average rating
+					127 button Explore this chart with AI
+						128 text Explore with AI
+					129 container Chart Use left and right keys to navigate through domain values.
+					104 text Rating distribution
+					105 button Download CSV
+						106 text Download CSV
+					107 pop up button (collapsed) Show: Absolute numbers, Secondary Actions: Expand
+						108 text Show: Absolute numbers
+					130 button Explore this chart with AI
+						131 text Explore with AI
+					132 container Chart Use left and right keys to navigate through domain values.
+					109 heading Ratings breakdown, Value: 2
+						110 text Ratings breakdown
+					111 pop up button (collapsed) Any number of ratings, ID: a71BDB23F-B087-48F1-8856-4F80712E3C5A--2, Secondary Actions: Expand
+					112 pop up button (collapsed) Last 28 days, ID: a71BDB23F-B087-48F1-8856-4F80712E3C5A--4, Secondary Actions: Expand
+					133 heading Country / region, Value: 5
+						134 text Country / region
+					135 table Country / region
+						136 row Country / region Number of ratings Average rating
+							137 cell
+							138 cell Country / region
+								139 text Country / region
+							140 cell Number of ratings
+								141 text Number of ratings
+							142 cell Average rating
+								143 text Average rating
+						144 row 1. India 1 5.000
+							145 cell
+								146 text 1.
+							147 cell
+								148 text India
+							149 cell
+								150 text 1
+							151 cell
+								152 text 5.000
+					153 button Go to Ratings Breakdown page
+						154 text Explore
+					155 heading Language, Value: 5
+						156 text Language
+					157 table Language
+						158 row Language Number of ratings Average rating
+							159 cell
+							160 cell Language
+								161 text Language
+							162 cell Number of ratings
+								163 text Number of ratings
+							164 cell Average rating
+								165 text Average rating
+						166 row 1. English 1 5.000
+							167 cell
+								168 text 1.
+							169 cell
+								170 text English
+							171 cell
+								172 text 1
+							173 cell
+								174 text 5.000
+					175 button Go to Ratings Breakdown page
+						176 text Explore
+					177 heading App version, Value: 5
+						178 text App version
+					179 table App version
+						180 row App version Number of ratings Average rating
+							181 cell
+							182 cell App version
+								183 text App version
+							184 cell Number of ratings
+								185 text Number of ratings
+							186 cell Average rating
+								187 text Average rating
+						188 row 1. 1.0.2 (28) 1 5.000
+							189 cell
+								190 text 1.
+							191 cell
+								192 text 1.0.2 (28)
+							193 cell
+								194 text 1
+							195 cell
+								196 text 5.000
+					197 button Go to Ratings Breakdown page
+						198 text Explore
+					199 heading Android version, Value: 5
+						200 text Android version
+					201 table Android version
+						202 row Android version Number of ratings Average rating
+							203 cell
+							204 cell Android version
+								205 text Android version
+							206 cell
+							207 cell Number of ratings
+								208 text Number of ratings
+							209 cell Average rating
+								210 text Average rating
+						211 row 1. Android 16 (SDK 36) View details in side panel 1 5.000
+							212 cell
+								213 text 1.
+							214 cell
+								215 text Android 16 (SDK 36)
+							216 cell
+								217 button View details in side panel
+							218 cell
+								219 text 1
+							220 cell
+								221 text 5.000
+					222 button Go to Ratings Breakdown page
+						223 text Explore
+					224 heading Form factor, Value: 5
+						225 text Form factor
+					226 table Form factor
+						227 row Form factor Number of ratings Average rating
+							228 cell
+							229 cell Form factor
+								230 text Form factor
+							231 cell
+							232 cell Number of ratings
+								233 text Number of ratings
+							234 cell Average rating
+								235 text Average rating
+						236 row 1. Phone View details in side panel 1 5.000
+							237 cell
+								238 text 1.
+							239 cell
+								240 text Phone
+							241 cell
+								242 button View details in side panel
+							243 cell
+								244 text 1
+							245 cell
+								246 text 5.000
+					247 button Go to Ratings Breakdown page
+						248 text Explore
+					249 heading Device, Value: 5
+						250 text Device
+					251 table Device
+						252 row Device Number of ratings Average rating
+							253 cell
+							254 cell Device
+								255 text Device
+							256 cell
+							257 cell Number of ratings
+								258 text Number of ratings
+							259 cell Average rating
+								260 text Average rating
+						261 row 1. samsung a16 (Galaxy A16) View details in side panel 1 5.000
+							262 cell
+								263 text 1.
+							264 cell
+								265 text samsung a16 (Galaxy A16)
+							266 cell
+								267 button View details in side panel
+							268 cell
+								269 text 1
+							270 cell
+								271 text 5.000
+					272 button Go to Ratings Breakdown page
+						273 text Explore
+					274 heading Carrier, Value: 5
+						275 text Carrier
+					276 table Carrier
+						277 row Carrier Number of ratings Average rating
+							278 cell
+							279 cell Carrier
+								280 text Carrier
+							281 cell Number of ratings
+								282 text Number of ratings
+							283 cell Average rating
+								284 text Average rating
+						285 row 1. Smart Communications 1 5.000
+							286 cell
+								287 text 1.
+							288 cell
+								289 text Smart Communications
+							290 cell
+								291 text 1
+							292 cell
+								293 text 5.000
+					294 button Go to Ratings Breakdown page
+						295 text Explore
+				114 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				115 link Description: Status dashboard, Value: status.play.google.com/
+				116 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				117 text © 2026 Google
+				118 link Description: Privacy, Value: google.com/policies/privacy/
+				119 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				120 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+		296 container ID: a072D3B02-7DDE-4EC0-B4EE-A52CC18F86B8--2, In countries where we're unable to show a local rating, this rating is shown. This is calculated based on your most recent ratings across all countries.
+			297 text In countries where we're unable to show a local rating, this rating is shown. This is calculated based on your most recent ratings across all countries.
+
+The focused UI element is 78 button (expanded) Default Google Play rating, Secondary Actions: Collapse

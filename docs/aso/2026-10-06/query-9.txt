@@ -1,0 +1,398 @@
+Observed at UTC: 2026-10-06T01:51:39.292Z
+URL: https://play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN
+
+- banner:
+  - navigation "പേജ് ഹെഡ്ഡര്‍":
+    - link "Google Play ലോഗോ":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Google Play-യിൽ തിരയുക":
+        - /placeholder: ആപ്പുകളും ഗെയിമുകളും തിരയുക
+        - text: ഇന്നത്തെ വചനം
+      - generic: clear
+    - button "സഹായ കേന്ദ്രം":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account redacted])"':
+- list:
+  - button "ആപ്പുകളും ഗെയിമുകളും" [pressed]:
+    - generic: ആപ്പുകളും ഗെയിമുകളും
+    - generic: arrow_drop_down
+  - button "ഉപകരണം":
+    - generic: ഉപകരണം
+    - generic: arrow_drop_down
+- 'link "ബൈബിള്‍: Malayalam Audio Bible Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.sirma.mobile.bible.android
+  - generic: "ബൈബിള്‍: Malayalam Audio Bible"
+  - generic: Life.Church
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Torch - Bible App Soul Cloud LLC അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.soulcloud.torch
+  - generic: Torch - Bible App
+  - generic: Soul Cloud LLC
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Daily Bible - Offline & Audio Mark Melton":
+  - /url: /store/apps/details?id=com.coommark.dailybible
+  - generic: Daily Bible - Offline & Audio
+  - generic: Mark Melton
+- link "Hindi Bible (हिंदी बाइबिल) The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.ips.hinbible.hindi
+  - generic: Hindi Bible (हिंदी बाइबिल)
+  - generic: The Love Fellowship
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Bible Offline-KJV Holy Bible Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.offline.bible
+  - generic: Bible Offline-KJV Holy Bible
+  - generic: Bíblia Offline
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Bible-Daily Bible Verse Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bible.holybible.nkjv.dailyverse
+  - generic: Bible-Daily Bible Verse
+  - generic: Bíblia Offline
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Holy Bible Offline NIV KJV App Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=app.bible.lite.offline
+  - generic: Holy Bible Offline NIV KJV App
+  - generic: Life.Church
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "3.9"
+    - generic: star
+- link "VerseVIEW Bible - Multilingual പ്ലേ ചെയ്യുക VerseVIEW Bible - Multilingual VerseVIEW അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=info.verseview.bible
+  - button "VerseVIEW Bible - Multilingual പ്ലേ ചെയ്യുക":
+  - generic: VerseVIEW Bible - Multilingual
+  - generic: VerseVIEW
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "കുട്ടികൾക്കുള്ള ബൈബിൾ പ്ലേ ചെയ്യുക കുട്ടികൾക്കുള്ള ബൈബിൾ Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bible.kids
+  - button "കുട്ടികൾക്കുള്ള ബൈബിൾ പ്ലേ ചെയ്യുക":
+  - generic: കുട്ടികൾക്കുള്ള ബൈബിൾ
+  - generic: Life.Church
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "3.6"
+    - generic: star
+- link "Bible Audio HarperCollins Christian Publishing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.hccp.biblegatewayaudio
+  - generic: Bible Audio
+  - generic: HarperCollins Christian Publishing
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Bible Reading Made Easy Christian Holy City Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.biblesearches.easybible
+  - generic: Bible Reading Made Easy
+  - generic: Christian Holy City Church
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "King James Bible - Verse+Audio Ozion അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=kjv.bible.kingjamesbible
+  - generic: King James Bible - Verse+Audio
+  - generic: Ozion
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Holy Bible Awesomecode Tanzania അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.awesomecodetz.holybible
+  - generic: Holy Bible
+  - generic: Awesomecode Tanzania
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Tamil Bible – Audio & Songs Handy Application അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.tamilbible.tamilsong
+  - generic: Tamil Bible – Audio & Songs
+  - generic: Handy Application
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "5.0"
+    - generic: star
+- link "BibleOn – Catholic Audio Bible പ്ലേ ചെയ്യുക BibleOn – Catholic Audio Bible Eloit Innovations Limited അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.eloitinnovation.theholybibleintongues
+  - button "BibleOn – Catholic Audio Bible പ്ലേ ചെയ്യുക":
+  - generic: BibleOn – Catholic Audio Bible
+  - generic: Eloit Innovations Limited
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Holy Bible, KJV Bible + Audio WOOMBIT അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=holy.bible.kjv.kingjamesbible.verse.biblia
+  - generic: Holy Bible, KJV Bible + Audio
+  - generic: WOOMBIT
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.4"
+    - generic: star
+- link "Malayalam Bible Fifi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.malayalambible.myapp
+  - generic: Malayalam Bible
+  - generic: Fifi Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Bible - Audio & Video Bibles Faith Comes By Hearing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.faithcomesbyhearing.android.bibleis
+  - generic: Bible - Audio & Video Bibles
+  - generic: Faith Comes By Hearing
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "主内圣经 BiblePro Bible Company":
+  - /url: /store/apps/details?id=com.zhunei.biblevip
+  - generic: 主内圣经 BiblePro
+  - generic: Bible Company
+- link "Pray Bible - Daily Verse&Audio Pioneer Technologies HK Limited അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=pray.holy.kingjames.kjv.bb
+  - generic: Pray Bible - Daily Verse&Audio
+  - generic: Pioneer Technologies HK Limited
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "King James Bible - KJV Offline Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.skyraan.kjvbible
+  - generic: King James Bible - KJV Offline
+  - generic: Oly Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Video Bible Video Bible LLC അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.subsplashconsulting.s_RCW4XK
+  - generic: Video Bible
+  - generic: Video Bible LLC
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "3.9"
+    - generic: star
+- link "Biblia Reina Valera Cristiana la biblia അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.learn.bibliavalera
+  - generic: Biblia Reina Valera Cristiana
+  - generic: la biblia
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.2"
+    - generic: star
+- 'link "Bible Journey: Sacred Names House of Revayah"':
+  - /url: /store/apps/details?id=com.blackicebell.biblejourney
+  - generic: "Bible Journey: Sacred Names"
+  - generic: House of Revayah
+- link "Bible Verse:Daily Pray X5 Network Area അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.kjvbibleverse.dailyprayer.audiobible
+  - generic: Bible Verse:Daily Pray
+  - generic: X5 Network Area
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- link "King James Bible - KJV പ്ലേ ചെയ്യുക King James Bible - KJV Smart Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=by.uniq.king_james_version_kjv_bible_offline_reader
+  - button "King James Bible - KJV പ്ലേ ചെയ്യുക":
+  - generic: King James Bible - KJV
+  - generic: Smart Bible Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.4"
+    - generic: star
+- link "Holy Bible-Large Print Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.holy.bible.large.print
+  - generic: Holy Bible-Large Print
+  - generic: Bíblia Offline
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Holy Bible King James + Audio Tecarta, Inc. അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.tecarta.kjv2
+  - generic: Holy Bible King James + Audio
+  - generic: Tecarta, Inc.
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Tamil Bible SHEKINAH CHURCH അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.shekina.tamilbible
+  - generic: Tamil Bible
+  - generic: SHEKINAH CHURCH
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Life Bible Tecarta, Inc. അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.tecarta.TecartaBible
+  - generic: Life Bible
+  - generic: Tecarta, Inc.
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- link "Bible 2026 Labhub":
+  - /url: /store/apps/details?id=com.labhub.bible
+  - generic: Bible 2026
+  - generic: Labhub
+- link "Hindi Bible – Audio & Songs Handy Application അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.hindibible.hindisong
+  - generic: Hindi Bible – Audio & Songs
+  - generic: Handy Application
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "5.0"
+    - generic: star
+- 'link "AndBible: Bible Study പ്ലേ ചെയ്യുക AndBible: Bible Study Sykerö Software അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=net.bible.android.activity
+  - 'button "AndBible: Bible Study പ്ലേ ചെയ്യുക"':
+  - generic: "AndBible: Bible Study"
+  - generic: Sykerö Software
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Holy Bible - KJV Audio Offline SuperWolf":
+  - /url: /store/apps/details?id=com.livingbible.app
+  - generic: Holy Bible - KJV Audio Offline
+  - generic: SuperWolf
+- link "Jesus Calling Daily Devotional HarperCollins Christian Publishing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.thomasnelson.jesuscalling
+  - generic: Jesus Calling Daily Devotional
+  - generic: HarperCollins Christian Publishing
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Gideon Bible App പ്ലേ ചെയ്യുക Gideon Bible App The Gideons Intl അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.faithcomesbyhearing.gideons.android.bibleis
+  - button "Gideon Bible App പ്ലേ ചെയ്യുക":
+  - generic: Gideon Bible App
+  - generic: The Gideons Intl
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- 'link "THRU the BIBLE: Audio Study THRU the BIBLE with Dr. J. Vernon McGee അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.ttb.android
+  - generic: "THRU the BIBLE: Audio Study"
+  - generic: THRU the BIBLE with Dr. J. Vernon McGee
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Tamil Bible பரிசுத்த வேதாகமம் Bro. JD അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.tamilbible.app
+  - generic: Tamil Bible பரிசுத்த வேதாகமம்
+  - generic: Bro. JD
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- link "Odiya Bible (ଓଡିଆ ବାଇବଲ) The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.ips.oribible.oriya
+  - generic: Odiya Bible (ଓଡିଆ ବାଇବଲ)
+  - generic: The Love Fellowship
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- 'link "Daily Bible Study: Audio, Plan പ്ലേ ചെയ്യുക Daily Bible Study: Audio, Plan Salem Media Group അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=joansoft.dailybible
+  - 'button "Daily Bible Study: Audio, Plan പ്ലേ ചെയ്യുക"':
+  - generic: "Daily Bible Study: Audio, Plan"
+  - generic: Salem Media Group
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "Iraivarthai Indru-Tamil Bible Donbosco Media അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.donboscomedia.iraivarthaiindru
+  - generic: Iraivarthai Indru-Tamil Bible
+  - generic: Donbosco Media
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- 'link "വിശുദ്ധ ബൈബിൾ: ഓഡിയോ ഓഫ്‌ലൈൻ Sick App Developers GmbH"':
+  - /url: /store/apps/details?id=com.sickappdevelopersgmbh.simplebible
+  - generic: "വിശുദ്ധ ബൈബിൾ: ഓഡിയോ ഓഫ്‌ലൈൻ"
+  - generic: Sick App Developers GmbH
+- link "Bible Daily, KJV Bible + Audio WOOMBIT അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=bible.offline.kingjames.holy.kjv.bible.daily.verse
+  - generic: Bible Daily, KJV Bible + Audio
+  - generic: WOOMBIT
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "Nagamese Bible The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.ipsapps.india.nag.nagamese.bible.audio
+  - generic: Nagamese Bible
+  - generic: The Love Fellowship
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "My Bible - Verse+Audio LiveLauncher അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=my.bible.kjv.verse.devotion
+  - generic: My Bible - Verse+Audio
+  - generic: LiveLauncher
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Bíblia Sagrada ACF NVI Offline MELPE Tecnologia അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.melpe.bible
+  - generic: Bíblia Sagrada ACF NVI Offline
+  - generic: MELPE Tecnologia
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "3.2"
+    - generic: star
+- link "The Bible.Global Subsplash Inc":
+  - /url: /store/apps/details?id=com.subsplash.thechurchapp.s_J54KRT
+  - generic: The Bible.Global
+  - generic: Subsplash Inc
+- link "Holy Bible - KJV Reader SVVN-RU അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.holy.bible.offline.read.kjv
+  - generic: Holy Bible - KJV Reader
+  - generic: SVVN-RU
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Sara Madjingaye Bible Bibles International":
+  - /url: /store/apps/details?id=org.biblesint.mwm.bible
+  - generic: Sara Madjingaye Bible
+  - generic: Bibles International
+- 'link "ബൈബിൾ + ഓഡിയോ: THE ONE Offline Bible App അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.1 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=iChampion.BibleApp
+  - generic: "ബൈബിൾ + ഓഡിയോ: THE ONE"
+  - generic: Offline Bible App
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.1 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.1"
+    - generic: star
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "സമ്മാന കാർഡുകൾ":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: സമ്മാന കാർഡുകൾ
+  - link "റിഡീം ചെയ്യുക":
+    - /url: /redeem
+    - paragraph: റിഡീം ചെയ്യുക
+  - link "റീഫണ്ട് നയം":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: റീഫണ്ട് നയം
+  - text: കുട്ടികളും കുടുംബവും
+  - link "രക്ഷാകർതൃ ഗൈഡ്":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: രക്ഷാകർതൃ ഗൈഡ്
+  - link "കുടുംബവുമായി പങ്കിടൽ":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: കുടുംബവുമായി പങ്കിടൽ
+  - link "സേവന നിബന്ധനകൾ":
+    - /url: https://play.google.com/intl/ml_in/about/play-terms.html
+    - paragraph: സേവന നിബന്ധനകൾ
+  - link "സ്വകാര്യത":
+    - /url: https://policies.google.com/privacy
+    - paragraph: സ്വകാര്യത
+  - link "Google Play-യെ കുറിച്ച്":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: Google Play-യെ കുറിച്ച്
+  - link "ഡെവലപ്പർമാർ":
+    - /url: http://developer.android.com/index.html
+    - paragraph: ഡെവലപ്പർമാർ
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ.
+  - generic: ഇന്ത്യ (മലയാളം)

@@ -1,0 +1,3 @@
+# Publication verification — October 14, 2026
+
+The app dashboard identifies `com.aaronsedna.hopecards` and says “You have no unpublished changes.” Publishing overview says last published October 8, 2026. The current public India English and Malayalam listing pages loaded and both show an October 8 update; their “What’s new” notes are “Bug fixes.” and “പിഴവുകൾ പരിഹരിച്ചു.” No queued submission, active review, approval or rejection change is visible. The latest verified production release record remains version 1.0.14 (47), 100% rollout. No listing or binary changes were made. See [publication record](publication.json).

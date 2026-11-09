@@ -1,0 +1,133 @@
+Browser tab: 455027205, Title: "ഇന്നത്തെ വചനം - Google Play-യിലെ Android ആപ്പുകൾ", URL: "https://play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN".
+1 AXWebArea ഇന്നത്തെ വചനം - Google Play-യിലെ Android ആപ്പുകൾ, URL: play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN
+	2 container yDmH0d
+		3 container പേജ് ഹെഡ്ഡര്‍
+			4 link Description: Google Play ലോഗോ, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Google Play-യിൽ തിരയുക
+			8 button സഹായ കേന്ദ്രം
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna ([redacted signed-in account]), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: ആപ്പുകളും ഗെയിമുകളും, Value: 1
+				13 checkbox Description: ഉപകരണം, Value: 0
+			14 container
+				15 container
+					16 link Description: ബൈബിള്‍: Malayalam Audio Bible Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.sirma.mobile.bible.android
+				17 container
+					18 link Description: Torch - Bible App Soul Cloud LLC അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.soulcloud.torch
+				19 container
+					20 link Description: Bible-Daily Bible Verse Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.bible.holybible.nkjv.dailyverse
+				21 container
+					22 link Description: Hindi Bible (हिंदी बाइबिल) The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=org.ips.hinbible.hindi
+				23 container
+					24 link Description: Daily Bible - Offline & Audio Mark Melton, Value: play.google.com/store/apps/details?id=com.coommark.dailybible
+				25 container
+					26 link Description: King James Bible - Verse+Audio Ozion അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=kjv.bible.kingjamesbible
+				27 container
+					28 link Value: play.google.com/store/apps/details?id=com.eloitinnovation.theholybibleintongues, Description: BibleOn – Catholic Audio Bible പ്ലേ ചെയ്യുക BibleOn – Catholic Audio Bible Eloit Innovations Limited അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				29 container
+					30 link Description: കുട്ടികൾക്കുള്ള ബൈബിൾ പ്ലേ ചെയ്യുക കുട്ടികൾക്കുള്ള ബൈബിൾ Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.bible.kids
+				31 container
+					32 link Description: Bible - Audio & Video Bibles Faith Comes By Hearing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.faithcomesbyhearing.android.bibleis
+				33 container
+					34 link Description: Bible Audio HarperCollins Christian Publishing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.hccp.biblegatewayaudio
+				35 container
+					36 link Value: play.google.com/store/apps/details?id=info.verseview.bible, Description: VerseVIEW Bible - Multilingual പ്ലേ ചെയ്യുക VerseVIEW Bible - Multilingual VerseVIEW അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				37 container
+					38 link Description: Bible Offline-KJV Holy Bible Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.offline.bible
+				39 container
+					40 link Description: Holy Bible, KJV Bible + Audio WOOMBIT അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=holy.bible.kjv.kingjamesbible.verse.biblia
+				41 container
+					42 link Description: Bible Daily, KJV Bible + Audio WOOMBIT അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=bible.offline.kingjames.holy.kjv.bible.daily.verse
+				43 container
+					44 link Description: Malayalam Bible Fifi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.malayalambible.myapp
+				45 container
+					46 link Description: Holy Bible Offline NIV KJV App Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=app.bible.lite.offline
+				47 container
+					48 link Description: Tamil Bible – Audio & Songs Handy Application അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.tamilbible.tamilsong
+				49 container
+					50 link Description: Bible Reading Made Easy Christian Holy City Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=org.biblesearches.easybible
+				51 container
+					52 link Description: Video Bible Video Bible LLC അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.subsplashconsulting.s_RCW4XK
+				53 container
+					54 link Description: Odiya Bible (ଓଡିଆ ବାଇବଲ) The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=org.ips.oribible.oriya
+				55 container
+					56 link Description: Holy Bible - KJV Audio Offline SuperWolf, Value: play.google.com/store/apps/details?id=com.livingbible.app
+				57 container
+					58 link Description: Life Bible Tecarta, Inc. അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.tecarta.TecartaBible
+				59 container
+					60 link Description: My Bible - Verse+Audio LiveLauncher അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=my.bible.kjv.verse.devotion
+				61 container
+					62 link Description: THRU the BIBLE: Audio Study THRU the BIBLE with Dr. J. Vernon McGee അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.ttb.android
+				63 container
+					64 link Value: play.google.com/store/apps/details?id=joansoft.dailybible, Description: Daily Bible Study: Audio, Plan പ്ലേ ചെയ്യുക Daily Bible Study: Audio, Plan Salem Media Group അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				65 container
+					66 link Description: Tamil Bible SHEKINAH CHURCH അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.shekina.tamilbible
+				67 container
+					68 link Description: Pray Bible - Daily Verse&Audio Pioneer Technologies HK Limited അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=pray.holy.kingjames.kjv.bb
+				69 container
+					70 link Description: The Bible.Global Subsplash Inc, Value: play.google.com/store/apps/details?id=com.subsplash.thechurchapp.s_J54KRT
+				71 container
+					72 link Description: Holy Bible Awesomecode Tanzania അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.awesomecodetz.holybible
+				73 container
+					74 link Description: Hindi Bible – Audio & Songs Handy Application അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.hindibible.hindisong
+				75 container
+					76 link Description: Bible Verse:Daily Pray X5 Network Area അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.kjvbibleverse.dailyprayer.audiobible
+				77 container
+					78 link Description: 主内圣经 BiblePro Bible Company, Value: play.google.com/store/apps/details?id=com.zhunei.biblevip
+				79 container
+					80 link Description: Holy Bible King James + Audio Tecarta, Inc. അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.tecarta.kjv2
+				81 container
+					82 link Description: Bible Journey: Sacred Names House of Revayah, Value: play.google.com/store/apps/details?id=com.blackicebell.biblejourney
+				83 container
+					84 link Description: AndBible: Bible Study പ്ലേ ചെയ്യുക AndBible: Bible Study Sykerö Software അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=net.bible.android.activity
+				85 container
+					86 link Description: വിശുദ്ധ ബൈബിൾ: ഓഡിയോ ഓഫ്‌ലൈൻ Sick App Developers GmbH, Value: play.google.com/store/apps/details?id=com.sickappdevelopersgmbh.simplebible
+				87 container
+					88 link Description: King James Bible (KJV) പ്ലേ ചെയ്യുക King James Bible (KJV) Warp Studios Bibles അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.azwstudios.theholybible.kjv
+				89 container
+					90 link Value: play.google.com/store/apps/details?id=com.art.pixel.bible.games.paint.color.by.numbers, Description: Bible Color Paint By Number പ്ലേ ചെയ്യുക Bible Color Paint By Number Art Coloring Group അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				91 container
+					92 link Description: ബൈബിൾ + ഓഡിയോ: THE ONE Offline Bible App അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.1 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=iChampion.BibleApp
+				93 container
+					94 link Description: Holy: Daily Bible Verses Believe PR അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=dev.armandojimenez.holy
+				95 container
+					96 link Description: Holy Bible-Large Print Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.holy.bible.large.print
+				97 container
+					98 link Description: King James Bible - KJV Offline Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.skyraan.kjvbible
+				99 container
+					100 link Description: Pavitra Bible – पवित्र बाइबिल Learn Per Second അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.learnpersecond.pavitrabible
+				101 container
+					102 link Description: Holy Bible - KJV+Verse JATHLEHEM LIMITED അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=bible.kjvbible.audio.plan.verse
+				103 container
+					104 link Description: King James Bible - KJV പ്ലേ ചെയ്യുക King James Bible - KJV Smart Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=by.uniq.king_james_version_kjv_bible_offline_reader
+				105 container
+					106 link Value: play.google.com/store/apps/details?id=app.biblenow.client, Description: BibleNow: Audio Bible Stories പ്ലേ ചെയ്യുക BibleNow: Audio Bible Stories MyAppDesk അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				107 container
+					108 link Description: Nagamese Bible The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=org.ipsapps.india.nag.nagamese.bible.audio
+				109 container
+					110 link Description: Tamil Bible பரிசுத்த வேதாகமம் Bro. JD അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.tamilbible.app
+				111 container
+					112 link Description: Gideon Bible App പ്ലേ ചെയ്യുക Gideon Bible App The Gideons Intl അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.faithcomesbyhearing.gideons.android.bibleis
+				113 container
+					114 link Description: Bíblia Sagrada ACF NVI Offline MELPE Tecnologia അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.melpe.bible
+		115 container
+			116 text Google Play
+			117 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			118 link Description: Play Points, Value: play.google.com/store/points/enroll
+			119 link Description: സമ്മാന കാർഡുകൾ, Value: play.google.com/about/giftcards
+			120 link Description: റിഡീം ചെയ്യുക, Value: play.google.com/redeem
+			121 link Description: റീഫണ്ട് നയം, Value: support.google.com/googleplay/answer/134336
+			122 text കുട്ടികളും കുടുംബവും
+			123 link Description: രക്ഷാകർതൃ ഗൈഡ്, Value: support.google.com/googleplay?p=pff_parentguide
+			124 link Description: കുടുംബവുമായി പങ്കിടൽ, Value: support.google.com/googleplay/answer/7007852
+			125 link Description: സേവന നിബന്ധനകൾ, Value: play.google.com/intl/ml_in/about/play-terms.html
+			126 link Description: സ്വകാര്യത, Value: policies.google.com/privacy
+			127 link Description: Google Play-യെ കുറിച്ച്, Value: support.google.com/googleplay/?p=about_play
+			128 link Description: ഡെവലപ്പർമാർ, Value: developer.android.com/index.html
+			129 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			130 text എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ. ഇന്ത്യ (മലയാളം)
+
+The focused UI element is 1 AXWebArea ഇന്നത്തെ വചനം - Google Play-യിലെ Android ആപ്പുകൾ, URL: play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN

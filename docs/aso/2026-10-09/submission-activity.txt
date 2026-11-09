@@ -1,0 +1,234 @@
+2026-10-09T15:53:39.898Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- link "Go back to Publishing overview":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing
+  - img: keyboard_backspace
+  - generic: Publishing overview
+- heading "Submission activity" [level=1]
+- text: Monitor your submitted changes and review status. Submission activity recorded from May 1, 2026.
+- button "Learn more about Submission activity (opens in a new tab)": Learn more
+- img: filter_list
+- grid:
+  - row:
+    - gridcell:
+      - combobox "Add filter"
+      - status
+- button "Select a date range":
+  - text: date_range
+  - generic: Select a date range
+  - img: arrow_drop_down
+- grid "Submission activity":
+  - row "Submission ID Submitted Changes Status":
+    - columnheader "Submission ID"
+    - columnheader "Submitted"
+    - columnheader "Changes"
+    - columnheader "Status"
+    - cell
+  - row "39 Oct 08, 2026, 10:59 PM Production Published View submission details":
+    - gridcell "39":
+      - generic: "39"
+    - gridcell "Oct 08, 2026, 10:59 PM":
+      - generic: Oct 08, 2026, 10:59 PM
+    - gridcell "Production":
+      - generic: Production
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/39/details
+        - img: arrow_right_alt
+  - row "38 Oct 08, 2026, 9:40 PM Store Listing Published View submission details":
+    - gridcell "38":
+      - generic: "38"
+    - gridcell "Oct 08, 2026, 9:40 PM":
+      - generic: Oct 08, 2026, 9:40 PM
+    - gridcell "Store Listing":
+      - generic: Store Listing
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/38/details
+        - img: arrow_right_alt
+  - row "37 Oct 06, 2026, 7:54 AM Production Published View submission details":
+    - gridcell "37":
+      - generic: "37"
+    - gridcell "Oct 06, 2026, 7:54 AM":
+      - generic: Oct 06, 2026, 7:54 AM
+    - gridcell "Production":
+      - generic: Production
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/37/details
+        - img: arrow_right_alt
+  - row "36 Sep 29, 2026, 12:32 AM Production Published View submission details":
+    - gridcell "36":
+      - generic: "36"
+    - gridcell "Sep 29, 2026, 12:32 AM":
+      - generic: Sep 29, 2026, 12:32 AM
+    - gridcell "Production":
+      - generic: Production
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/36/details
+        - img: arrow_right_alt
+  - row "35 Sep 28, 2026, 9:56 PM Production Published View submission details":
+    - gridcell "35":
+      - generic: "35"
+    - gridcell "Sep 28, 2026, 9:56 PM":
+      - generic: Sep 28, 2026, 9:56 PM
+    - gridcell "Production":
+      - generic: Production
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/35/details
+        - img: arrow_right_alt
+  - row "34 Sep 28, 2026, 2:21 PM Production Published View submission details":
+    - gridcell "34":
+      - generic: "34"
+    - gridcell "Sep 28, 2026, 2:21 PM":
+      - generic: Sep 28, 2026, 2:21 PM
+    - gridcell "Production":
+      - generic: Production
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/34/details
+        - img: arrow_right_alt
+  - row "33 Sep 28, 2026, 12:19 PM Closed testing - Alpha Published View submission details":
+    - gridcell "33":
+      - generic: "33"
+    - gridcell "Sep 28, 2026, 12:19 PM":
+      - generic: Sep 28, 2026, 12:19 PM
+    - gridcell "Closed testing - Alpha":
+      - generic: Closed testing - Alpha
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/33/details
+        - img: arrow_right_alt
+  - row "32 Sep 28, 2026, 11:05 AM Production, Store Listing Published View submission details":
+    - gridcell "32":
+      - generic: "32"
+    - gridcell "Sep 28, 2026, 11:05 AM":
+      - generic: Sep 28, 2026, 11:05 AM
+    - gridcell "Production, Store Listing":
+      - generic: Production, Store Listing
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/32/details
+        - img: arrow_right_alt
+  - row "31 Sep 28, 2026, 10:36 AM Production, Store Listing Canceled View submission details":
+    - gridcell "31":
+      - generic: "31"
+    - gridcell "Sep 28, 2026, 10:36 AM":
+      - generic: Sep 28, 2026, 10:36 AM
+    - gridcell "Production, Store Listing":
+      - generic: Production, Store Listing
+    - gridcell "Canceled":
+      - img: do_not_disturb_on
+      - generic: Canceled
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/31/details
+        - img: arrow_right_alt
+  - row "30 Sep 27, 2026, 8:49 PM Store Listing Published View submission details":
+    - gridcell "30":
+      - generic: "30"
+    - gridcell "Sep 27, 2026, 8:49 PM":
+      - generic: Sep 27, 2026, 8:49 PM
+    - gridcell "Store Listing":
+      - generic: Store Listing
+    - gridcell "Published":
+      - img: play_store_installed
+      - generic: Published
+    - gridcell "View submission details":
+      - link "View submission details":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity/30/details
+        - img: arrow_right_alt
+- generic: 1 - 10
+- button "Go to the previous page" [disabled]:
+  - img: chevron_left
+- button "Go to the next page":
+  - img: chevron_right
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/

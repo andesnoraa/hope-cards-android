@@ -1,0 +1,22 @@
+{
+  "observedAtUtc": "2026-10-08T17:31:05.667805+00:00",
+  "appPackage": "com.aaronsedna.hopecards",
+  "versionCode": 47,
+  "versionName": "1.0.14",
+  "internalTesting": "available_to_internal_testers",
+  "productionStatus": "submission_queued_pending_quick_checks",
+  "consoleSection": "Changes in review",
+  "consoleExplanation": "Changes will be sent for review as soon as checks complete successfully.",
+  "productionApproved": false,
+  "publicBinaryVersionCodeLastVerified": 45,
+  "rolloutPercentageRequested": 100,
+  "countriesPreserved": 178,
+  "managedPublishing": false,
+  "releaseNotes": "Bug fixes.",
+  "evidence": [
+    "v47-internal-status.txt",
+    "v47-production-validation-expanded.txt",
+    "v47-submission-status.txt",
+    "v47-production-submission.png"
+  ]
+}

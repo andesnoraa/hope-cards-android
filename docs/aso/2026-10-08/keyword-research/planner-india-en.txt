@@ -1,0 +1,466 @@
+2026-10-08T15:53:09.832Z
+- banner:
+  - button "Hide scoping navigation menu" [expanded]:
+    - img: menu
+  - heading "Ads" [level=1]:
+    - generic: Ads
+  - button "Search":
+    - img: search
+    - generic: Search
+  - button "Appearance":
+    - img: responsive_layout
+    - generic: Appearance
+  - button "Refresh":
+    - img: refresh
+    - generic: Refresh
+  - button "Help":
+    - img: help_outline
+    - generic: Help
+  - button "Notifications":
+    - img: notifications
+    - generic: Notifications
+  - generic "801-431-6633 Aaronsedna"
+  - generic: [account-redacted]
+  - button "Google account":
+    - img "Google account ([account-redacted])"
+- button "Create":
+- generic: Create
+- menu:
+  - menu:
+    - menuitem "Campaigns":
+      - img: campaign
+      - generic: Campaigns
+    - menuitem "Goals":
+      - img: rewarded_ads
+      - generic: Goals
+    - menuitem "Tools":
+      - img: construction
+      - generic: Tools
+    - menuitem "Billing":
+      - img: credit_card
+      - generic: Billing
+    - menuitem "Admin":
+      - img: settings
+      - generic: Admin
+- navigation:
+  - menu:
+    - menuitem "Asset studio":
+      - generic: Asset studio
+    - menuitem "Planning" [expanded]:
+      - generic: Planning
+      - img: expand_more
+    - menuitem "Keyword Planner":
+      - generic: Keyword Planner
+    - menuitem "Performance Planner":
+      - generic: Performance Planner
+    - menuitem "Reach Planner":
+      - generic: Reach Planner
+    - menuitem "App advertising hub":
+      - generic: App advertising hub
+    - menuitem "Shared library":
+      - generic: Shared library
+      - img: expand_more
+    - menuitem "YouTube creator partnerships Beta":
+      - generic: YouTube creator partnerships
+      - generic: Beta
+    - menuitem "Content suitability":
+      - generic: Content suitability
+    - menuitem "Data manager":
+      - generic: Data manager
+    - menuitem "Troubleshooting":
+      - generic: Troubleshooting
+      - img: expand_more
+    - menuitem "Bulk actions":
+      - generic: Bulk actions
+      - img: expand_more
+    - menuitem "Budgets and bidding":
+      - generic: Budgets and bidding
+      - img: expand_more
+    - menuitem "Business data":
+      - generic: Business data
+- link "Keyword Planner":
+  - /url: /aw/keywordplanner/home?ocid=8566688555&authuser=1&__u=5925761757&__c=7037858195
+- img: chevron_right
+- heading "Plan from Oct 8, 2026, 9 PM, GMT+05:30" [level=2]
+- tablist:
+  - tab "Keyword ideas" [selected]:
+    - generic: Keyword ideas
+  - tab "Forecast":
+    - generic: Forecast
+  - tab "Saved keywords":
+    - generic: Saved keywords
+  - tab "Negative keywords":
+    - generic: Negative keywords
+- main:
+  - region "Keyword Ideas Search Bar":
+    - 'button "Change existing keywords or website: daily bible verse, verse of the day, bible quiz, bible trivia, bible verse images, malayalam bible, bible quiz questions and answers, bible verse of the day, bible verses, scripture"':
+      - img: search
+      - generic: daily bible verse, verse of the day, bible quiz, bible trivia, bible verse images, malayalam bible, bible quiz questions and answers, bible verse of the day, bible verses, scripture
+    - region "Targeting Settings":
+      - button "India":
+        - img: location_on
+        - generic: India
+      - button "English":
+        - img: translate
+        - generic: English
+      - button "Google":
+        - img: manage_search
+        - generic: Google
+      - button "Edit date range, Last 12 months":
+        - img: calendar_today
+        - generic: Sep 2025 – Aug 2026
+        - img: arrow_drop_down
+    - group "Broaden your search:":
+      - text: "Broaden your search:"
+      - grid:
+        - row "Add psalm Add christian ministry Add verse Add bible study tool Add bible Add christian saying Add revelation":
+          - gridcell "Add psalm":
+            - img: add
+            - generic: psalm
+          - gridcell "Add christian ministry":
+            - img: add
+            - generic: christian ministry
+          - gridcell "Add verse":
+            - img: add
+            - generic: verse
+          - gridcell "Add bible study tool":
+            - img: add
+            - generic: bible study tool
+          - gridcell "Add bible":
+            - img: add
+            - generic: bible
+          - gridcell "Add christian saying":
+            - img: add
+            - generic: christian saying
+          - gridcell "Add revelation":
+            - img: add
+            - generic: revelation
+    - button "Download keyword ideas Keyword ideas":
+      - img: file_download
+      - generic: Download keyword ideas
+      - region "Keyword ideas"
+  - region "Search Results Table":
+    - region "Primary toolbelt for Keyword ideas":
+      - button "Show 1 active filters":
+        - img: filter_alt
+        - generic: "1"
+      - generic: "Filters Applied:"
+      - grid "Filters Applied:":
+        - row "Exclude adult ideas Delete":
+          - gridcell "Exclude adult ideas":
+            - button "Exclude adult ideas": Exclude adult ideas
+          - gridcell "Delete Exclude adult ideas":
+            - button "Delete Exclude adult ideas": close
+      - button "Add filter":
+        - generic: Add filter
+      - generic: Showing 10,613 of 10,616 keyword ideas
+      - button "Columns":
+        - img: view_column
+        - generic: Columns
+      - button "Keyword view":
+        - text: Keyword view
+        - img: arrow_drop_down
+    - grid "Keyword ideas":
+      - row "Select all rows Keyword (by relevance) Avg. monthly searches Three month change YoY change Competition Ad impression share Top of page bid (low range) Top of page bid (high range) Account status":
+        - gridcell "Select all rows":
+          - checkbox "Select all rows":
+        - columnheader "Keyword (by relevance)"
+        - columnheader "Avg. monthly searches":
+          - text: Avg. monthly searches
+          - img: help_outline
+        - columnheader "Three month change":
+          - text: Three month change
+          - img: help_outline
+        - columnheader "YoY change":
+          - text: YoY change
+          - img: help_outline
+        - columnheader "Competition":
+          - text: Competition
+          - img: help_outline
+        - columnheader "Ad impression share":
+          - text: Ad impression share
+          - img: help_outline
+        - columnheader "Top of page bid (low range)":
+          - text: Top of page bid (low range)
+          - img: help_outline
+        - columnheader "Top of page bid (high range)":
+          - text: Top of page bid (high range)
+          - img: help_outline
+        - columnheader "Account status":
+          - text: Account status
+          - img: help_outline
+      - generic: Keywords you provided
+      - row "Select row \"daily bible verse\" daily bible verse. This is a keyword you provided. 1K – 10K 0% 0% Low — ₹2.90 ₹78.85":
+        - gridcell "Select row \"daily bible verse\"":
+          - checkbox "Select row \"daily bible verse\"":
+        - gridcell "daily bible verse. This is a keyword you provided.":
+          - generic "daily bible verse. This is a keyword you provided.":
+            - generic: daily bible verse
+        - gridcell "1K – 10K":
+          - generic: 1K – 10K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹2.90":
+          - generic: ₹2.90
+        - gridcell "₹78.85":
+          - generic: ₹78.85
+        - gridcell
+      - row "Select row \"verse of the day\" verse of the day. This is a keyword you provided. 10K – 100K 0% 0% Low — ₹20.32 ₹700.03":
+        - gridcell "Select row \"verse of the day\"":
+          - checkbox "Select row \"verse of the day\"":
+        - gridcell "verse of the day. This is a keyword you provided.":
+          - generic "verse of the day. This is a keyword you provided.":
+            - generic: verse of the day
+        - gridcell "10K – 100K":
+          - generic: 10K – 100K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹20.32":
+          - generic: ₹20.32
+        - gridcell "₹700.03":
+          - generic: ₹700.03
+        - gridcell
+      - row "Select row \"bible quiz\" bible quiz. This is a keyword you provided. 1K – 10K 0% 0% Low — ₹4.84 ₹298.72":
+        - gridcell "Select row \"bible quiz\"":
+          - checkbox "Select row \"bible quiz\"":
+        - gridcell "bible quiz. This is a keyword you provided.":
+          - generic "bible quiz. This is a keyword you provided.":
+            - generic: bible quiz
+        - gridcell "1K – 10K":
+          - generic: 1K – 10K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹4.84":
+          - generic: ₹4.84
+        - gridcell "₹298.72":
+          - generic: ₹298.72
+        - gridcell
+      - row "Select row \"bible trivia\" bible trivia. This is a keyword you provided. 100 – 1K 0% 0% Low — — —":
+        - gridcell "Select row \"bible trivia\"":
+          - checkbox "Select row \"bible trivia\"":
+        - gridcell "bible trivia. This is a keyword you provided.":
+          - generic "bible trivia. This is a keyword you provided.":
+            - generic: bible trivia
+        - gridcell "100 – 1K":
+          - generic: 100 – 1K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"bible verse images\" bible verse images. This is a keyword you provided. 100 – 1K 0% 0% Low — — —":
+        - gridcell "Select row \"bible verse images\"":
+          - checkbox "Select row \"bible verse images\"":
+        - gridcell "bible verse images. This is a keyword you provided.":
+          - generic "bible verse images. This is a keyword you provided.":
+            - generic: bible verse images
+        - gridcell "100 – 1K":
+          - generic: 100 – 1K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"malayalam bible\" malayalam bible. This is a keyword you provided. 10K – 100K 0% 0% Low — ₹2.33 ₹33.25":
+        - gridcell "Select row \"malayalam bible\"":
+          - checkbox "Select row \"malayalam bible\"":
+        - gridcell "malayalam bible. This is a keyword you provided.":
+          - generic "malayalam bible. This is a keyword you provided.":
+            - generic: malayalam bible
+        - gridcell "10K – 100K":
+          - generic: 10K – 100K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹2.33":
+          - generic: ₹2.33
+        - gridcell "₹33.25":
+          - generic: ₹33.25
+        - gridcell
+      - row "Select row \"bible quiz questions and answers\" bible quiz questions and answers. This is a keyword you provided. 100 – 1K 0% 0% Low — ₹0.97 ₹185.44":
+        - gridcell "Select row \"bible quiz questions and answers\"":
+          - checkbox "Select row \"bible quiz questions and answers\"":
+        - gridcell "bible quiz questions and answers. This is a keyword you provided.":
+          - generic "bible quiz questions and answers. This is a keyword you provided.":
+            - generic: bible quiz questions and answers
+        - gridcell "100 – 1K":
+          - generic: 100 – 1K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹0.97":
+          - generic: ₹0.97
+        - gridcell "₹185.44":
+          - generic: ₹185.44
+        - gridcell
+      - row "Select row \"bible verse of the day\" bible verse of the day. This is a keyword you provided. 10K – 100K 0% 0% Low — ₹11.61 ₹230.64":
+        - gridcell "Select row \"bible verse of the day\"":
+          - checkbox "Select row \"bible verse of the day\"":
+        - gridcell "bible verse of the day. This is a keyword you provided.":
+          - generic "bible verse of the day. This is a keyword you provided.":
+            - generic: bible verse of the day
+        - gridcell "10K – 100K":
+          - generic: 10K – 100K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹11.61":
+          - generic: ₹11.61
+        - gridcell "₹230.64":
+          - generic: ₹230.64
+        - gridcell
+      - row "Select row \"bible verses\" bible verses. This is a keyword you provided. 10K – 100K 0% 0% Low — ₹6.77 ₹449.04":
+        - gridcell "Select row \"bible verses\"":
+          - checkbox "Select row \"bible verses\"":
+        - gridcell "bible verses. This is a keyword you provided.":
+          - generic "bible verses. This is a keyword you provided.":
+            - generic: bible verses
+        - gridcell "10K – 100K":
+          - generic: 10K – 100K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹6.77":
+          - generic: ₹6.77
+        - gridcell "₹449.04":
+          - generic: ₹449.04
+        - gridcell
+      - row "Select row \"scripture\" scripture. This is a keyword you provided. 1K – 10K 0% 0% Low — ₹5.80 ₹28.17":
+        - gridcell "Select row \"scripture\"":
+          - checkbox "Select row \"scripture\"":
+        - gridcell "scripture. This is a keyword you provided.":
+          - generic "scripture. This is a keyword you provided.":
+            - generic: scripture
+        - gridcell "1K – 10K":
+          - generic: 1K – 10K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹5.80":
+          - generic: ₹5.80
+        - gridcell "₹28.17":
+          - generic: ₹28.17
+        - gridcell
+    - generic: "Show rows:"
+    - 'button "Show rows: 30 selected."':
+      - generic: "30"
+      - img: arrow_drop_down
+    - generic: 1 - 30 of 10,613
+    - button "Go to the first page" [disabled]:
+      - img: first_page
+    - button "Go to the previous page" [disabled]:
+      - img: chevron_left
+    - button "Go to the next page":
+      - img: chevron_right
+    - button "Go to the last page":
+      - img: last_page
+  - generic: Keyword Planner can be used to generate keyword ideas, but it doesn't guarantee improved performance. You're responsible for your keyword choices and for complying with our advertising policies and any applicable laws.
+  - region "Refine keywords":
+    - heading "Refine keywords" [level=2]
+    - button "Close":
+      - img: close
+    - button "Expand all":
+      - generic: Expand all
+    - button "Brand or Non-Brand":
+      - paragraph: Brand or Non-Brand
+      - paragraph: Non-Brands, daily bread, poc bible, random bible verse, jw
+      - img: expand_less
+    - button "Book":
+      - paragraph: Book
+      - paragraph: psalms, romans, genesis, deuteronomy, 1 john
+      - img: expand_less
+    - button "Religion":
+      - paragraph: Religion
+      - paragraph: christian, catholic, jewish
+      - img: expand_less
+    - button "Language":
+      - paragraph: Language
+      - paragraph: malayalam, tamil, english, telugu, hindi
+      - img: expand_less
+    - button "Holiday":
+      - paragraph: Holiday
+      - paragraph: christmas, thanksgiving, easter, fathers day, mothers day
+      - img: expand_less
+    - button "Quality":
+      - paragraph: Quality
+      - paragraph: love, faith, hope, peace, joy
+      - img: expand_less
+    - button "Person":
+      - paragraph: Person
+      - paragraph: youth, women, adults, kids, children
+      - img: expand_less
+    - button "Others":
+      - paragraph: Others
+      - paragraph: images, games, 2022, pdf, jeremiah
+      - img: expand_less
+    - button "Give feedback":
+      - img: feedback
+      - text: Give feedback
+- dialog:
+  - heading [level=1]: Turn off ad blockers
+  - paragraph: Google Ads can't work when you're using an ad blocker. To use Google Ads, please turn off any ad blockers for now.
+- status
+- dialog "dialog"
+- dialog "dialog"
+- dialog "dialog"
+- dialog "dialog"
+- text: info *

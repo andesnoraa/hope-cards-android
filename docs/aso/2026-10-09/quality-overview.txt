@@ -1,0 +1,142 @@
+2026-10-09T15:56:24.512Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve" [active]:
+        - img: vital_signs
+        - generic: Monitor and improve
+      - list:
+        - listitem "Reach and devices":
+          - button "Reach and devices":
+            - generic: Reach and devices
+            - img: expand_more
+        - listitem "Ratings and reviews":
+          - button "Ratings and reviews":
+            - generic: Ratings and reviews
+            - img: expand_more
+        - listitem "Android vitals":
+          - button "Android vitals":
+            - generic: Android vitals
+            - img: expand_more
+        - listitem "Policy and programs":
+          - button "Policy and programs":
+            - generic: Policy and programs
+            - img: expand_more
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Monitor and improve" [level=1]
+- img: android_security_privacy_safe
+- generic: Policy status
+- generic: No policy issues found
+- link "View Policy issues":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/policy-center
+  - img: arrow_right_alt
+- heading "Android vitals" [level=2]
+- img: calendar_today
+- generic: Last 28 days
+- button "User-perceived crash rate"
+- generic: "-"
+- link "View details for metric":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?aggregationPeriod=AGGREGATION_PERIOD_28D&days=28&metric=USER_PERCEIVED_CRASHES&granularity=DAILY_GRANULARITY
+  - img: arrow_right_alt
+- img: equalizer
+- paragraph: Data unavailable
+- button "User-perceived ANR rate"
+- generic: "-"
+- link "View details for metric":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?aggregationPeriod=AGGREGATION_PERIOD_28D&days=28&metric=USER_PERCEIVED_ANRS&granularity=DAILY_GRANULARITY
+  - img: arrow_right_alt
+- img: equalizer
+- paragraph: Data unavailable
+- button "Slow cold start rate"
+- generic: "-"
+- link "View details for metric":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/vitals/metrics/details?aggregationPeriod=AGGREGATION_PERIOD_28D&days=28&metric=COLD_STARTUP_TIME&granularity=DAILY_GRANULARITY
+  - img: arrow_right_alt
+- img: equalizer
+- paragraph: Data unavailable
+- heading "Ratings and reviews" [level=2]
+- link "View Ratings page":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+  - button "Average rating (last 28 days)"
+  - generic: "5.00"
+  - img: star
+  - generic: vs. previous 28 days
+- link "View Ratings page":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+  - button "Total users"
+  - generic: "1"
+- link "View Reviews page":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/reviews
+  - generic: Ratings with reviews
+  - generic: "-"
+- img: playlist_add_check
+- heading "Take action" [level=2]
+- heading "Improve your app's memory and performance with R8 optimization" [level=3]
+- paragraph: Your R8 configuration could be causing higher memory usage and lower performance.
+- generic: Memory usage
+- generic: "Release name: 1.0.14 (47)"
+- generic: Is this useful?
+- button "Thumb up button for reporting the information as useful":
+  - img: thumb_up
+- button "Thumb down button for reporting the information as not useful":
+  - img: thumb_down
+- button "Read more":
+  - generic: Read more
+  - img: read_more
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/

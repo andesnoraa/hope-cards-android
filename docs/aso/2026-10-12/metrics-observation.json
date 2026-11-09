@@ -1,0 +1,62 @@
+{
+  "observedAtUtc": "2026-10-12T17:29:23Z",
+  "scope": "Google Play Console, all countries unless noted; reporting windows copied from visible UI labels/URL parameters. No ad settings changed.",
+  "acquisition": {
+    "source": "Grow users and app dashboard",
+    "window": "Last 28 days compared with previous 28 days (exact dates not exposed on dashboard snapshot)",
+    "deviceAcquisitions": 254,
+    "displayedDeltaPercent": 841,
+    "deviceFirstOpens": 25,
+    "deviceFirstOpensDisplayedDeltaPercent": -4,
+    "monthlyActiveDevices": 40,
+    "monthlyActiveDevicesDisplayedDeltaPercent": 82,
+    "exploreUserAcquisitions90Days": 14,
+    "trafficSourceBreakdown": "Not exposed in the currently read Grow overview. Previous detailed 28-day report was Sep 12–Oct 9 with 256 numeric subtotal across 16 date rows; incomplete source dates/cells were unavailable, not zero.",
+    "searchTerms": "Not exposed in the current reports; no query volume or query-level acquisition inferred."
+  },
+  "listing": {
+    "report": "Store listings performance, Installs",
+    "displayedRangeLabel": "Last 28 days",
+    "dateRangeUrlParameter": "2026_09_08-2026_10_05",
+    "rangeNote": "The UI label says Last 28 days while URL retains Sep 8–Oct 5; figures are preserved with this exact URL date range and are not presented as a fresh Oct 12 window.",
+    "overallVisitors": 397,
+    "uniqueUserInstallClicks": 84,
+    "displayedClickThroughRatePercent": 21,
+    "defaultListingRowVisitors": 384,
+    "defaultListingRowConversionRatePercent": 18.0,
+    "defaultListingStatus": "Live",
+    "defaultListingLastUpdated": "2026-10-08",
+    "countryLanguageBreakdown": "Not exposed",
+    "caution": "Unique user install clicks are not completed installs."
+  },
+  "ratings": {
+    "report": "Ratings breakdown",
+    "period": "Last 28 days selected; exact dates not shown",
+    "country": "India",
+    "numberOfRatings": 1,
+    "averageRating": 5.0,
+    "language": "English",
+    "appVersion": "1.0.2 (28)",
+    "note": "Single rating; not representative of current version 1.0.14."
+  },
+  "retention": {
+    "availability": "Not exposed in current live report read today. Previous observed 7-day retention report covered 2026-09-13 through 2026-10-10, Paid and direct; one numeric row on Sep 17, count 1, and Console said some data unavailable. No rate can be computed."
+  },
+  "quality": {
+    "policyIssues": "None shown",
+    "last28DaysAndroidVitals": {
+      "userPerceivedCrashes": "Data unavailable",
+      "userPerceivedAnrs": "Data unavailable",
+      "slowColdStart": "Data unavailable"
+    },
+    "r8Advisory": "Play still recommends optimized resource shrinking and AGP 9.0 or higher for version 1.0.14 (47). This is a potential optimization warning, not measured memory/battery usage."
+  },
+  "confounders": [
+    "28-day totals are global, not India/Malayalam specific.",
+    "Paid and direct combines sources; the existing ad campaign is a confounder and settings were left unchanged.",
+    "The Oct 8 listing change and version 47 rollout overlap the reporting period.",
+    "Source attribution and missing daily values can change after initial reporting.",
+    "Listing install clicks are not completed installs.",
+    "Crash, ANR, slow cold-start and retention evidence are incomplete or unavailable."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "observedAtUtc": "2026-10-07T05:33:01.676Z",
+  "packageName": "com.aaronsedna.hopecards",
+  "consoleAppId": "4976302422419978923",
+  "versionName": "1.0.13",
+  "versionCode": 45,
+  "track": "Production",
+  "consoleStatus": "Available on Google Play",
+  "rolloutPercentage": 100,
+  "countriesRegions": 178,
+  "consoleReleaseDateTimeDisplayed": "Oct 6 8:10 AM",
+  "displayTimezone": "not independently exposed; not converted to UTC",
+  "managedPublishing": false,
+  "pendingChangesObserved": false,
+  "approvalConfirmed": true,
+  "publicAvailabilityConfirmed": true,
+  "publicListingIndiaEnglishAndMalayalamConfirmed": true,
+  "publicListingUpdatedDate": "2026-10-06",
+  "englishReleaseNotes": "Bug fixes.",
+  "previousObservation": "../2026-10-06/publication-followup-1113utc.json",
+  "evidence": [
+    "publication.txt",
+    "release-overview.txt",
+    "production.txt",
+    "release-published.txt",
+    "public-en.txt",
+    "public-ml.txt"
+  ],
+  "screenshotCapture": "Unavailable. Two documented tab screenshot attempts timed out; DOM evidence retained.",
+  "actions": "Read-only verification. No release or metadata submission."
+}

@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
@@ -93,8 +94,8 @@ fun JournalScreen(
                     AppIcon(AppIconGlyph.JournalOutline, null, colors.accent, size = 30.dp)
                 }
             }
-            Text(appString(R.string.journal_empty_title), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp))
-            Text(appString(R.string.journal_empty_body), color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 12.dp).widthIn(max = 360.dp))
+            Text(appString(R.string.journal_empty_title), color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp))
+            Text(appString(R.string.journal_empty_body), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 12.dp).widthIn(max = 360.dp))
         }
     } else {
         Column(Modifier.fillMaxSize()) {
@@ -107,7 +108,7 @@ fun JournalScreen(
                     if (selectionMode) appString(R.string.selected_count, selectedIds.size)
                     else appQuantityString(R.plurals.journal_count, entries.size, entries.size),
                     color = colors.textTertiary,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.Medium,
                     fontSize = 13.sp,
                     modifier = Modifier.weight(1f),
@@ -119,7 +120,7 @@ fun JournalScreen(
                         Text(
                             if (selectedIds.size == entries.size) appString(R.string.clear) else appString(R.string.select_all),
                             color = colors.accent,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.SemiBold,
                         )
                     }
@@ -127,11 +128,11 @@ fun JournalScreen(
                         selectionMode = false
                         selectedIds = emptySet()
                     }) {
-                        Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                        Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
                     }
                 } else {
                     TextButton(onClick = { selectionMode = true }) {
-                        Text(appString(R.string.select), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                        Text(appString(R.string.select), color = colors.accent, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
@@ -167,7 +168,7 @@ fun JournalScreen(
                         Text(
                             categoryLabel(verse.category).uppercase(),
                             color = colors.accent,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 13.sp,
                             letterSpacing = 2.5.sp,
@@ -199,7 +200,7 @@ fun JournalScreen(
                         Text(
                             formatDate(entry.date),
                             color = colors.textTertiary,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontSize = 12.sp,
                             modifier = Modifier.padding(end = 8.dp),
                         )
@@ -267,7 +268,7 @@ fun JournalScreen(
                     Text(
                         appString(R.string.delete_selected_count, selectedIds.size),
                         color = Color.White,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(start = 8.dp),
                     )
@@ -344,7 +345,7 @@ fun JournalEditorDialog(
                         Text(
                             appString(R.string.edit_journal_entry),
                             color = colors.text,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 22.sp,
                             lineHeight = 28.sp,
@@ -352,7 +353,7 @@ fun JournalEditorDialog(
                         Text(
                             displayReference,
                             color = colors.textTertiary,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Medium,
                             fontSize = 13.sp,
                             lineHeight = 19.sp,
@@ -366,7 +367,7 @@ fun JournalEditorDialog(
                 Text(
                     appString(R.string.gentle_thought),
                     color = colors.accent,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 11.sp,
                     letterSpacing = 1.7.sp,
@@ -375,7 +376,7 @@ fun JournalEditorDialog(
                 Text(
                     calmReflectionText(entry.prompt),
                     color = colors.text,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                     lineHeight = 24.sp,
@@ -416,14 +417,14 @@ fun JournalEditorDialog(
                     Text(
                         appString(R.string.journal_entry),
                         color = colors.textTertiary,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontSize = 12.sp,
                         modifier = Modifier.weight(1f),
                     )
                     Text(
                         "${draft.length} / 1,000",
                         color = if (draft.length >= JOURNAL_CHARACTER_LIMIT) colors.accent else colors.textTertiary,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.Medium,
                         fontSize = 12.sp,
                     )
@@ -443,14 +444,14 @@ fun JournalEditorDialog(
                         Text(
                             appString(R.string.delete),
                             color = colors.danger,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(start = 6.dp),
                         )
                     }
                     Spacer(Modifier.weight(1f))
                     TextButton(onClick = onDismiss) {
-                        Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.Medium)
+                        Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Medium)
                     }
                     Button(
                         onClick = { onSave(entry.copy(note = trimmedDraft)) },
@@ -461,7 +462,7 @@ fun JournalEditorDialog(
                         shape = RoundedCornerShape(14.dp),
                         modifier = Modifier.padding(start = 6.dp),
                     ) {
-                        Text(appString(R.string.save), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                        Text(appString(R.string.save), fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
@@ -480,9 +481,9 @@ fun DeleteJournalDialog(
     val colors = LocalHopeColors.current
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title ?: appString(R.string.delete_journal_title), fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-        text = { Text(message ?: appString(R.string.delete_journal_message), fontFamily = Poppins) },
-        confirmButton = { TextButton(onClick = onDelete) { Text(confirmLabel ?: appString(R.string.delete), color = colors.danger, fontFamily = Poppins) } },
+        title = { Text(title ?: appString(R.string.delete_journal_title), fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold) },
+        text = { Text(message ?: appString(R.string.delete_journal_message), fontFamily = appInterfaceFont()) },
+        confirmButton = { TextButton(onClick = onDelete) { Text(confirmLabel ?: appString(R.string.delete), color = colors.danger, fontFamily = appInterfaceFont()) } },
         dismissButton = { TextButton(onClick = onDismiss) { Text(appString(R.string.cancel)) } },
         shape = RoundedCornerShape(28.dp),
         containerColor = colors.surface,

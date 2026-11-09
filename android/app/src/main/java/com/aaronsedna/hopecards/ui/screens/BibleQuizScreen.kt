@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import androidx.activity.compose.BackHandler
 import android.content.Context
 import android.os.SystemClock
 import android.provider.Settings
@@ -17,6 +18,7 @@ import com.aaronsedna.hopecards.audio.QuizSoundPlayer
 import com.aaronsedna.hopecards.audio.QuizVibration
 import androidx.annotation.StringRes
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -101,11 +103,13 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.withContext
 
 private val SessionSaver = listSaver<QuizSession, Any>(
-    save = { listOf(ArrayList(it.questionIds), ArrayList(it.answers), it.position, it.selectedIndex, it.finished, it.timedOut) },
+    save = { listOf(ArrayList(it.questionIds), ArrayList(it.answers), it.position, it.selectedIndex, it.finished, it.timedOut,
+        it.answerTimesMillis.map { time -> time ?: -1L }.toLongArray()) },
     restore = { values ->
         @Suppress("UNCHECKED_CAST")
         QuizSession(values[0] as List<String>, values[1] as List<Int>, values[2] as Int, values[3] as Int, values[4] as Boolean,
-            values.getOrNull(5) as? Boolean ?: false)
+            values.getOrNull(5) as? Boolean ?: false,
+            (values.getOrNull(6) as? LongArray)?.map { it.takeIf { time -> time >= 0L } } ?: emptyList())
     },
 )
 
@@ -172,7 +176,9 @@ fun BibleQuizScreen(
     DisposableEffect(Unit) { onDispose { activeScreen.value = false } }
     var confirmEnd by rememberSaveable { mutableStateOf(false) }
     var review by rememberSaveable(language) { mutableStateOf(false) }
+    var reviewFilter by rememberSaveable(language) { mutableStateOf<QuizReviewContent.Outcome?>(null) }
     var showCertificates by rememberSaveable(language) { mutableStateOf(false) }
+    BackHandler(enabled = review && !showCertificates) { review = false }
     val context = LocalContext.current.applicationContext
     val reviewContent = remember(context, translation, session, questions) {
         if (session.finished) QuizReviewContent(context, translation, session, questions) else null
@@ -203,6 +209,7 @@ fun BibleQuizScreen(
     val startNewRound = {
         val nextRound = onStartRound?.invoke() ?: QuizSession.start(questions)
         review = false
+        reviewFilter = null
         completionRecorded = false
         savedSession = nextRound
         stopwatch = QuizStopwatch.start(timerEnabled, currentClock(), bootCount)
@@ -279,7 +286,7 @@ fun BibleQuizScreen(
             lastCountdownCue = 0
             if (onCountdownCue != null) onCountdownCue(0) else sound?.playCountdown(ended = true)
         }
-        val next = active.expireQuestion()
+        val next = active.expireQuestion(limit)
         savedSession = next
         if (next.finished) {
             stopwatch = stopwatch.finish(now, bootCount).copy(elapsedBeforeAnchorMillis = limit)
@@ -317,7 +324,7 @@ fun BibleQuizScreen(
     LaunchedEffect(session.questionIds, session.position, session.checked, session.finished, stopwatch, elapsedMillis) {
         if (playing && savedSession == session && stopwatch.enabled && lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) finishIfExpired(currentClock())
     }
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+    Box(Modifier.fillMaxSize().background(colors.background), contentAlignment = Alignment.TopCenter) {
         Column(Modifier.widthIn(max = 600.dp).fillMaxSize()) {
             if (playing) {
                 Column(Modifier.padding(horizontal = 24.dp)) {
@@ -346,6 +353,15 @@ fun BibleQuizScreen(
                         modifier = Modifier.fillMaxWidth().semantics { contentDescription = progress },
                         color = colors.text, trackColor = colors.divider,
                     )
+                }
+            }
+            if (session.finished && review) {
+                Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+                    IconButton(onClick = { review = false }, modifier = Modifier.testTag("quiz_back_results")) {
+                        AppIcon(AppIconGlyph.ArrowBack, quizString(translation, R.string.quiz_back_results), colors.text)
+                    }
+                    QuizText(quizString(translation, R.string.quiz_review), translation, heading = true,
+                        modifier = Modifier.weight(1f))
                 }
             }
             LazyColumn(
@@ -401,45 +417,37 @@ fun BibleQuizScreen(
                         }
                     }
                     session.finished -> {
-                        item {
-                            Column(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                                if (review) {
-                                    QuizReviewSummary(requireNotNull(reviewContent), translation)
-                                    QuizText(reviewContent.reviewTitle, translation, heading = true)
-                                }
-                                if (!review) {
-                                    Surface(color = colors.surface, shape = RoundedCornerShape(20.dp), border = BorderStroke(1.dp, colors.divider)) {
-                                        Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                            QuizText(quizString(translation, if (session.timedOut) R.string.quiz_time_up else R.string.quiz_complete),
-                                                translation, small = true, color = colors.textSecondary,
-                                                modifier = if (session.timedOut) Modifier.testTag("quiz_time_up") else Modifier)
-                                            Text(quizString(translation, R.string.quiz_score, session.score(byId), session.questionIds.size),
-                                                modifier = Modifier.testTag("quiz_score").semantics { heading() },
-                                                color = colors.text, fontFamily = interfaceFontFor(translation),
-                                                fontSize = 30.sp, lineHeight = 40.sp, fontWeight = FontWeight.SemiBold)
-                                            if (stopwatch.enabled) QuizText(
-                                                quizString(translation, R.string.quiz_elapsed_time, formatQuizElapsedTime(completedQuestionTimeMillis + stopwatch.elapsedMillis(currentClock(), bootCount))),
-                                                translation, small = true, color = colors.textSecondary, modifier = Modifier.testTag("quiz_elapsed_result"))
-                                        }
-                                    }
-                                    QuizButton(quizString(translation, R.string.quiz_review), translation, { review = true }, tag = "quiz_review")
-                                    QuizResultActions(translation, session, questions)
-                                    QuizCertificateButton(translation, enabled = !completing) { showCertificates = true }
-                                    TextButton(onClick = { leaveCompletedQuiz(startNewRound) }, enabled = !completing,
-                                        modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("quiz_restart")) {
-                                        QuizText(quizString(translation, R.string.quiz_play_again), translation)
-                                    }
+                        val content = requireNotNull(reviewContent)
+                        if (!review) item {
+                            Column(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                                val totalTime = if (stopwatch.enabled) quizString(translation, R.string.quiz_elapsed_time,
+                                    formatQuizElapsedTime(completedQuestionTimeMillis + stopwatch.elapsedMillis(currentClock(), bootCount)))
+                                    else content.totalTime
+                                QuizResultsSummary(content, translation, totalTime, session.timedOut)
+                                QuizButton(quizString(translation, R.string.quiz_review), translation, { review = true },
+                                    tag = "quiz_review", flat = true)
+                                QuizResultActions(translation, session, questions)
+                                QuizCertificateButton(translation, enabled = !completing, flat = true) { showCertificates = true }
+                                TextButton(onClick = { leaveCompletedQuiz(startNewRound) }, enabled = !completing,
+                                    modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("quiz_restart")) {
+                                    QuizText(quizString(translation, R.string.quiz_play_again), translation)
                                 }
                             }
-                        }
-                        if (review) itemsIndexed(requireNotNull(reviewContent).answers, key = { _, answer -> answer.id }) { _, answer ->
-                            QuizReviewCard(answer, reviewContent.explanationLabel, translation)
-                        }
-                        if (review) item {
-                            QuizResultActions(translation, session, questions)
-                        }
-                        if (review) item {
-                            QuizButton(quizString(translation, R.string.quiz_back_results), translation, { review = false }, tag = "quiz_back_results")
+                        } else {
+                            item {
+                                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                                    QuizReviewSummary(content, translation)
+                                    QuizReviewFilters(content, translation, reviewFilter) { reviewFilter = it }
+                                }
+                            }
+                            val visibleAnswers = content.answers.filter { reviewFilter == null || it.outcome == reviewFilter }
+                            if (visibleAnswers.isEmpty()) item {
+                                QuizText(quizString(translation, R.string.quiz_review_empty), translation,
+                                    color = colors.textSecondary, modifier = Modifier.padding(vertical = 24.dp).testTag("quiz_review_empty"))
+                            }
+                            itemsIndexed(visibleAnswers, key = { _, answer -> answer.id }) { _, answer ->
+                                QuizReviewCard(answer, translation)
+                            }
                         }
                     }
                     else -> {
@@ -493,6 +501,16 @@ fun BibleQuizScreen(
                     }
                 }
             }
+            if (session.finished && review) {
+                Surface(color = colors.background) {
+                    Column {
+                        HorizontalDivider(color = colors.divider)
+                        Box(Modifier.padding(horizontal = 24.dp, vertical = 12.dp)) {
+                            QuizResultActions(translation, session, questions, primary = true)
+                        }
+                    }
+                }
+            }
             if (playing) {
                 val q = byId.getValue(session.questionIds[session.position])
                 // The action stays reachable while long questions, answers and feedback scroll above it.
@@ -515,9 +533,11 @@ fun BibleQuizScreen(
                                         savedSession = next
                                     }
                                     else {
-                                        savedSession = session.submit()
+                                        val submittedAt = currentClock()
+                                        savedSession = session.submit(if (stopwatch.enabled)
+                                            stopwatch.elapsedMillis(submittedAt, bootCount) else null)
                                         if (savedSession.checked) {
-                                            stopwatch = stopwatch.finish(currentClock(), bootCount)
+                                            stopwatch = stopwatch.finish(submittedAt, bootCount)
                                             val correct = session.selectedIndex == q.correctIndex
                                             sound?.play(correct)
                                             if (!correct && hapticsEnabled) {
@@ -538,9 +558,23 @@ fun BibleQuizScreen(
 }
 
 @Composable
-private fun QuizCertificateButton(translation: Translation, enabled: Boolean = true, onClick: () -> Unit) {
+private fun QuizCertificateButton(translation: Translation, enabled: Boolean = true, flat: Boolean = false, onClick: () -> Unit) {
     val colors = LocalHopeColors.current
     val foreground = if (enabled) colors.text else colors.text.copy(alpha = 0.38f)
+    if (flat) {
+        Column {
+            TextButton(onClick = onClick, enabled = enabled,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp).testTag("quiz_certificates"),
+                contentPadding = PaddingValues(vertical = 12.dp)) {
+                Text(quizString(translation, R.string.quiz_certificate_generate), modifier = Modifier.weight(1f),
+                    color = foreground, fontFamily = interfaceFontFor(translation), fontSize = 16.sp,
+                    lineHeight = 25.sp, fontWeight = FontWeight.Medium)
+                AppIcon(AppIconGlyph.ChevronForward, null, foreground, size = 18.dp)
+            }
+            HorizontalDivider(color = colors.divider)
+        }
+        return
+    }
     androidx.compose.material3.OutlinedButton(
         onClick = onClick,
         enabled = enabled,
@@ -623,13 +657,13 @@ private fun QuizText(text: String, translation: Translation, modifier: Modifier 
 }
 
 @Composable
-private fun QuizButton(label: String, translation: Translation, onClick: () -> Unit, enabled: Boolean = true, tag: String = "") {
+private fun QuizButton(label: String, translation: Translation, onClick: () -> Unit, enabled: Boolean = true, tag: String = "", flat: Boolean = false) {
     val colors = LocalHopeColors.current
     Button(
         onClick = onClick, enabled = enabled,
         modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp).testTag(tag),
         contentPadding = PaddingValues(horizontal = 20.dp, vertical = 14.dp),
-        shape = RoundedCornerShape(28.dp),
+        shape = RoundedCornerShape(if (flat) 12.dp else 28.dp),
         colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground, contentColor = colors.buttonText),
     ) {
         Text(label, fontFamily = interfaceFontFor(translation), fontSize = 16.sp, lineHeight = 26.sp, fontWeight = FontWeight.SemiBold)

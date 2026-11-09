@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quiz_review_all">Alle</string>
+    <string name="quiz_result_correct">Richtig</string>
+    <string name="quiz_review_empty">Keine Antworten in dieser Kategorie.</string>
+    <string name="quiz_review_selected_label">Deine Antwort</string>
+    <string name="quiz_review_correct_label">Richtige Antwort</string>
+</resources>

@@ -1,0 +1,5 @@
+# ASO observation — November 3, 2026
+
+At 06:26 UTC, Google Play desktop web search was sampled in the signed-in baseline Chrome profile for India (`gl=IN`) in English and Malayalam (`hl=en` / `hl=ml`). Hope Cards was identified by package `com.aaronsedna.hopecards`. It ranked #1 for the exact brand query “Hope Cards” and #7 for “Hopecards”. It was not in the first 30 observed organic results for “daily bible verse”, “verse of the day”, “bible quiz”, or “daily bible”; it was not in the first 50 for the three tracked Malayalam queries. The broad “verse” result was not linearly rankable because a featured app tile appeared before a separate carousel, so that sample is recorded as non-comparable. No sponsored labels were observed.
+
+The primary seven-day top-five milestone is unachieved. The missed prior daily samples interrupt the sequence; today’s primary result is also absent within the inspected 30 organic results. Exact query URLs, timestamps, depths and statuses are in [rank-observation.json](rank-observation.json).

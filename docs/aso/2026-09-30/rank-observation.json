@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 3,
+  "app": {
+    "packageName": "com.aaronsedna.hopecards",
+    "consoleAppId": "4976302422419978923",
+    "displayedNameAtBaseline": "Daily Bible Verse & Bible Quiz"
+  },
+  "observationDate": "2026-09-30",
+  "context": {
+    "surface": "Google Play desktop web search",
+    "browser": "Google Chrome",
+    "authentication": "signed in",
+    "requestedCountry": "IN",
+    "countrySpecifiedBy": "gl=IN URL parameter",
+    "languageSpecifiedBy": "hl URL parameter",
+    "deviceClass": "desktop",
+    "sponsoredLabelsObserved": false,
+    "browserProfile": "Your Chrome",
+    "browserId": "1",
+    "accountFingerprintSha256": "d54ecae873358fce05e51d822d2051016bc9b859bd3f01a1aef47bb5b09cfdec",
+    "accountContinuityNote": "Same Your Chrome profile, extension identity and signed-in account verified on both public listings as September 28–29. No account switch. September 27 lacked an account fingerprint.",
+    "sequenceId": "chrome-your-chrome-IN-account-fingerprinted-2026-09-28"
+  },
+  "methodology": "One sample per exact query in the same signed-in Chrome profile and account. Inspected all 30 rendered flat English results through the footer and the first 50 Malayalam results. Mixed featured HCL Verse plus recommendation surface is unavailable for ordinary ranking. First/last package excerpts below document boundaries; they are not represented as a complete result archive. Full ordered package lists were returned in the browser tool transcript.",
+  "samples": [
+    {
+      "query": "daily bible verse",
+      "intent": "primary_category",
+      "observedAtUtc": "2026-09-30T05:19:45.961Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=daily%20bible%20verse&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.bible.holybible.nkjv.dailyverse",
+          "com.dailyverses",
+          "com.quotes.christian"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.mdb.mybible.verse.kjv.prayer",
+          "com.lumengrace.palavradodia",
+          "com.verse.verse_app"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "Hope Cards",
+      "intent": "brand",
+      "observedAtUtc": "2026-09-30T05:20:06.461Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": 1,
+      "status": "observed",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.aaronsedna.hopecards",
+          "org.sanctuaryofhope.conjuringhope",
+          "com.hopeparanormal.hsb1"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "branded.m75a37a638477427f92fb9a50c449555d.mysite",
+          "com.pyypl",
+          "net.fdgames.ek.android"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "Hopecards",
+      "intent": "brand_variant",
+      "observedAtUtc": "2026-09-30T05:20:07.096Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": 3,
+      "status": "observed",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.hopecardis.mobile",
+          "com.cardpact.pactbound",
+          "com.aaronsedna.hopecards"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.tinytouchtales.cardthief",
+          "com.rainbowgames.solitaire2018",
+          "com.global.mhope.google"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "verse of the day",
+      "intent": "secondary_category",
+      "observedAtUtc": "2026-09-30T05:20:08.010Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=verse%20of%20the%20day&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.dailyverses",
+          "com.magiccitycode.verseoftheday",
+          "com.ostojic.verseoftheday"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.idelata.VerseADayFree",
+          "com.marketu.biblehour",
+          "org.benlottejnr.verseup"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "bible quiz",
+      "intent": "secondary_feature",
+      "observedAtUtc": "2026-09-30T05:20:08.542Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=bible%20quiz&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.neuron.learningnumbers",
+          "bible.trivia.quiz.question.answer.spelling.correct.knowledge.test.game",
+          "com.bible.quizpro"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.lucasigle.biblequizzes",
+          "com.ianchrist007.biblemasterquiz",
+          "com.hindibible.quiz.trivia"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "daily bible",
+      "intent": "diagnostic",
+      "observedAtUtc": "2026-09-30T05:20:09.204Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.bible.holybible.nkjv.dailyverse",
+          "com.sirma.mobile.bible.android",
+          "kjv.holy.bible.kingjames"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.bzn.biblical.meditation",
+          "com.dwellapp.dwell",
+          "com.declarebible.app"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "verse",
+      "intent": "diagnostic",
+      "observedAtUtc": "2026-09-30T05:20:09.688Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN",
+      "inspectedResultCount": 0,
+      "organicPosition": null,
+      "status": "unavailable",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.lotus.sync.traveler",
+          "kjv.bible.kingjamesbible",
+          "com.verse.verse_app"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "dev.abeni.bible_memorizer",
+          "versetap.bible.sermon",
+          "com.codeinfaith.bibleclock"
+        ],
+        "excerptOnly": true
+      },
+      "inspectedAppLinkCount": 20,
+      "reason": "Featured HCL Verse followed by recommendations. No comparable flat organic ordering."
+    },
+    {
+      "query": "മലയാളം ബൈബിൾ വചനങ്ങൾ",
+      "intent": "localized_category",
+      "observedAtUtc": "2026-09-30T05:20:24.384Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82%20%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE&c=apps&hl=ml&gl=IN",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "org.jesusyouth.poc.activity",
+          "com.malayalambible.myapp",
+          "com.a4akhilsudha.bible"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "malayalam.english.bible.kjv",
+          "com.katinkadigital.app.iamchristian",
+          "com.malayalambiblequiz.app"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "ഇന്നത്തെ വചനം",
+      "intent": "localized_category",
+      "observedAtUtc": "2026-09-30T05:20:25.063Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.sirma.mobile.bible.android",
+          "holy.bible.kjv.kingjamesbible.verse.biblia",
+          "com.soulcloud.torch"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.dreambuilders.theholybibleapp",
+          "iChampion.BibleApp",
+          "com.hindibible.hindisong"
+        ],
+        "excerptOnly": true
+      }
+    },
+    {
+      "query": "ബൈബിൾ ക്വിസ്",
+      "intent": "localized_feature",
+      "observedAtUtc": "2026-09-30T05:20:25.893Z",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "firstThreeInspectedPackageIds": [
+          "com.pscexams.pro",
+          "org.supergonk.bible",
+          "com.clappy.bibletrivia"
+        ],
+        "lastThreeInspectedPackageIds": [
+          "com.agapeame.quizgame",
+          "com.rednucifera.biblequiz",
+          "com.kannadabible.quiz.trivia"
+        ],
+        "excerptOnly": true
+      }
+    }
+  ],
+  "milestones": {
+    "primaryCategoryConsecutiveDailyTopFive": 0,
+    "primaryCategoryTopFive": "not_achieved",
+    "exactBrandConsecutiveDailyTopFive": 3,
+    "brandVariantConsecutiveDailyTopFive": 2,
+    "sustainedMilestoneAchieved": false,
+    "datesSupportingExactBrandTopFive": [
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "datesSupportingBrandVariantTopFive": [
+      "2026-09-29",
+      "2026-09-30"
+    ]
+  }
+}

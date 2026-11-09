@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import android.Manifest
 import android.app.Activity
 import android.content.Context
@@ -72,6 +73,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -179,7 +181,8 @@ fun HopeCardsApp(
     val dailyRequest by dailyHopeRequests.collectAsStateWithLifecycle()
     val isUpdateReady by updateReady.collectAsStateWithLifecycle()
     val context = LocalContext.current
-    val localizedContext = remember(state.settings.preferredTranslation) {
+    val deviceConfiguration = LocalConfiguration.current
+    val localizedContext = remember(context, deviceConfiguration, state.settings.preferredTranslation) {
         context.forTranslation(state.settings.preferredTranslation)
     }
     val updateReadyMessage = localizedContext.getString(com.aaronsedna.hopecards.R.string.update_ready)
@@ -443,11 +446,11 @@ fun HopeCardsApp(
                             }
                         }
                         Column(Modifier.padding(start = 24.dp, end = 24.dp, top = 24.dp, bottom = 8.dp)) {
-                            Text(appString(com.aaronsedna.hopecards.R.string.app_name), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 13.sp, lineHeight = 18.sp)
+                            Text(appString(com.aaronsedna.hopecards.R.string.app_name), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold, fontSize = 13.sp, lineHeight = 18.sp)
                             Text(
                                 appString(com.aaronsedna.hopecards.R.string.version_format, BuildConfig.VERSION_NAME.removeSuffix("-debug")),
                                 color = colors.textTertiary,
-                                fontFamily = Poppins,
+                                fontFamily = appInterfaceFont(),
                                 fontWeight = FontWeight.Medium,
                                 fontSize = 11.sp,
                                 lineHeight = 16.sp,
@@ -480,18 +483,21 @@ fun HopeCardsApp(
                                     state.destination == Destination.BIBLE_QUIZ -> quizString(state.settings.preferredTranslation, com.aaronsedna.hopecards.R.string.nav_bible_quiz)
                                     else -> destinationTitle(state.destination)
                                 },
-                                fontFamily = if (state.destination == Destination.BIBLE_QUIZ) interfaceFontFor(state.settings.preferredTranslation) else Poppins,
+                                fontFamily = if (state.destination == Destination.BIBLE_QUIZ) interfaceFontFor(state.settings.preferredTranslation) else appInterfaceFont(),
                                 fontSize = if (state.destination == Destination.BIBLE_QUIZ) 21.sp else androidx.compose.ui.unit.TextUnit.Unspecified,
                                 fontWeight = FontWeight.Bold,
                             )
                         },
                         navigationIcon = {
                             IconButton(onClick = {
-                                if (hasBack) backFromContent()
-                                else scope.launch {
-                                    drawerLoaded = true
-                                    delay(16)
-                                    drawerState.open()
+                                if (hasBack) {
+                                    backFromContent()
+                                } else {
+                                    scope.launch {
+                                        drawerLoaded = true
+                                        delay(16)
+                                        drawerState.open()
+                                    }
                                 }
                             }) {
                                 AppIcon(
@@ -815,7 +821,7 @@ private fun RestoreBackupDialog(onDismiss: () -> Unit, onRestore: () -> Unit) {
             Text(
                 appString(com.aaronsedna.hopecards.R.string.restore_backup_title),
                 color = colors.text,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 21.sp,
             )
@@ -829,12 +835,12 @@ private fun RestoreBackupDialog(onDismiss: () -> Unit, onRestore: () -> Unit) {
         },
         confirmButton = {
             TextButton(onClick = onRestore) {
-                Text(appString(com.aaronsedna.hopecards.R.string.restore), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                Text(appString(com.aaronsedna.hopecards.R.string.restore), fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text(appString(com.aaronsedna.hopecards.R.string.cancel), fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                Text(appString(com.aaronsedna.hopecards.R.string.cancel), fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
             }
         },
         shape = RoundedCornerShape(28.dp),
@@ -858,7 +864,7 @@ private fun DrawerItems(
 private fun DrawerItem(entry: DrawerEntry, selected: Destination, onSelect: (Destination) -> Unit) {
     val colors = LocalHopeColors.current
     NavigationDrawerItem(
-        label = { Text(destinationTitle(entry.destination), fontFamily = Poppins, fontWeight = FontWeight.SemiBold) },
+        label = { Text(destinationTitle(entry.destination), fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold) },
         selected = selected == entry.destination,
         onClick = { onSelect(entry.destination) },
         icon = {

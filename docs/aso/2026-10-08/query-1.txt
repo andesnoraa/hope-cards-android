@@ -1,0 +1,263 @@
+2026-10-08T04:58:16.964Z
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Search Google Play":
+        - /placeholder: Search for apps & games
+        - text: daily bible verse
+      - generic: clear
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "Apps & games" [pressed]:
+    - generic: Apps & games
+    - generic: arrow_drop_down
+  - button "Device":
+    - generic: Device
+    - generic: arrow_drop_down
+- link "Bible-Daily Bible Verse Bíblia Offline Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.bible.holybible.nkjv.dailyverse
+  - generic: Bible-Daily Bible Verse
+  - generic: Bíblia Offline
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Bible verse of the day DailyVerses Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=com.dailyverses
+  - generic: Bible verse of the day
+  - generic: DailyVerses
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Daily Bible Verses Quotes and Verses Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.quotes.christian
+  - generic: Daily Bible Verses
+  - generic: Quotes and Verses
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- link "YouVersion Bible App + Audio Life.Church Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.sirma.mobile.bible.android
+  - generic: YouVersion Bible App + Audio
+  - generic: Life.Church
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Simple Bible Daily Verse Alarm Reminders & Alarms Rated 4.6 stars out of five stars":
+  - /url: /store/apps/details?id=com.holy.bible.study
+  - generic: Simple Bible Daily Verse Alarm
+  - generic: Reminders & Alarms
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- 'link "Holy: Daily Bible Verses Believe PR Rated 4.7 stars out of five stars"':
+  - /url: /store/apps/details?id=dev.armandojimenez.holy
+  - generic: "Holy: Daily Bible Verses"
+  - generic: Believe PR
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- 'link "Daily Bible: Holy Bible KJV Daily Bible : Daily Verses and Prayers Rated 4.7 stars out of five stars"':
+  - /url: /store/apps/details?id=kjv.holy.bible.kingjames
+  - generic: "Daily Bible: Holy Bible KJV"
+  - generic: "Daily Bible : Daily Verses and Prayers"
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Holy Bible Offline NIV KJV App Life.Church Rated 3.9 stars out of five stars":
+  - /url: /store/apps/details?id=app.bible.lite.offline
+  - generic: Holy Bible Offline NIV KJV App
+  - generic: Life.Church
+  - img "Rated 3.9 stars out of five stars":
+    - generic: "3.9"
+    - generic: star
+- link "King James Bible - Verse+Audio Ozion Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=kjv.bible.kingjamesbible
+  - generic: King James Bible - Verse+Audio
+  - generic: Ozion
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Bible Offline-KJV Holy Bible Bíblia Offline Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=com.offline.bible
+  - generic: Bible Offline-KJV Holy Bible
+  - generic: Bíblia Offline
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- 'link "Bible Widget: Daily Verse Kawaii Inc Rated 4.8 stars out of five stars"':
+  - /url: /store/apps/details?id=com.kawaiiapps.biblewidget
+  - generic: "Bible Widget: Daily Verse"
+  - generic: Kawaii Inc
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Daily Power - bible verses OEMEL09 Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=de.oemel09.dailypower
+  - generic: Daily Power - bible verses
+  - generic: OEMEL09
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- 'link "Bible Hour: Verses & Prayer Bible Hour Rated 4.5 stars out of five stars"':
+  - /url: /store/apps/details?id=com.marketu.biblehour
+  - generic: "Bible Hour: Verses & Prayer"
+  - generic: Bible Hour
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Play Inspiring Bible Verses Daily Inspiring Bible Verses Daily Kiwi App Lab Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.kiwiapplab.versepager
+  - button "Play Inspiring Bible Verses Daily":
+  - generic: Inspiring Bible Verses Daily
+  - generic: Kiwi App Lab
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Daily Scripture The Servants of the Word Rated 4.6 stars out of five stars":
+  - /url: /store/apps/details?id=com.servantsoftheword.dailymeditations
+  - generic: Daily Scripture
+  - generic: The Servants of the Word
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- link "Blessed - Bible Verse & Prayer Everblessed Technology Inc. Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=amen.blessed.app
+  - generic: Blessed - Bible Verse & Prayer
+  - generic: Everblessed Technology Inc.
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Bible For Women-Holy Bible KJV Bíblia Offline Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.bible.holy.bible.for.women
+  - generic: Bible For Women-Holy Bible KJV
+  - generic: Bíblia Offline
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Daily Bible - Verse+Audio Flutter Lab. Rated 5.0 stars out of five stars":
+  - /url: /store/apps/details?id=com.kjvbible.bibledailyverse.pray.devotion
+  - generic: Daily Bible - Verse+Audio
+  - generic: Flutter Lab.
+  - img "Rated 5.0 stars out of five stars":
+    - generic: "5.0"
+    - generic: star
+- link "Daily Bible Verse & Widgets iKame Applications - Begamob Global":
+  - /url: /store/apps/details?id=com.ikame.biblechat.bible.holy.widget
+  - generic: Daily Bible Verse & Widgets
+  - generic: iKame Applications - Begamob Global
+- link "Bible Verses for All Situation Maryjane21 Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.sacredspace.bibleversesforeverysituation
+  - generic: Bible Verses for All Situation
+  - generic: Maryjane21
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- 'link "Bible Verses: For Every Day 1381802 Ontario Inc."':
+  - /url: /store/apps/details?id=com.collabra.bible
+  - generic: "Bible Verses: For Every Day"
+  - generic: 1381802 Ontario Inc.
+- 'link "Verse of the Day: Bible Quotes Tole Dev"':
+  - /url: /store/apps/details?id=com.way.bible_widget
+  - generic: "Verse of the Day: Bible Quotes"
+  - generic: Tole Dev
+- link "Daily Bible Verse Adepture Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.adepture.dailybibleverse
+  - generic: Daily Bible Verse
+  - generic: Adepture
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- link "Pray Daily - KJV Bible & Verse WOOMBIT Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=bible.pray.daily.women.offline.kjv
+  - generic: Pray Daily - KJV Bible & Verse
+  - generic: WOOMBIT
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Play Daily Bible Verse App Daily Bible Verse App Krikasoft Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.krikasoft.kjv_daily_verse_and_jesus_quotes
+  - button "Play Daily Bible Verse App":
+  - generic: Daily Bible Verse App
+  - generic: Krikasoft
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Daily Bible - Offline & Audio Mark Melton":
+  - /url: /store/apps/details?id=com.coommark.dailybible
+  - generic: Daily Bible - Offline & Audio
+  - generic: Mark Melton
+- link "Bible Verse:Daily Pray X5 Network Area Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.kjvbibleverse.dailyprayer.audiobible
+  - generic: Bible Verse:Daily Pray
+  - generic: X5 Network Area
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- link "Bible App by Olive Tree Gospel Technologies Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=biblereader.olivetree
+  - generic: Bible App by Olive Tree
+  - generic: Gospel Technologies
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- 'link "Bible Verse of the Day: Daily Life Hack Developer Rated 5.0 stars out of five stars"':
+  - /url: /store/apps/details?id=com.bible.verseoftheday2026
+  - generic: "Bible Verse of the Day: Daily"
+  - generic: Life Hack Developer
+  - img "Rated 5.0 stars out of five stars":
+    - generic: "5.0"
+    - generic: star
+- link "Bible Verse Widget Городков Дмитрий Николаевич Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=game.frst.me.bibleversenew
+  - generic: Bible Verse Widget
+  - generic: Городков Дмитрий Николаевич
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

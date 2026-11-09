@@ -1,0 +1,330 @@
+{
+  "observedAtUtc": "2026-10-10T16:10:24.454Z",
+  "scope": "All countries; all app versions; Console default reports unless stated. Not an India-only cohort.",
+  "acquisitionMetric": "Device acquisition (All devices, All events, Per interval, Daily)",
+  "trafficSources": [
+    "Google Play explore",
+    "Paid and direct",
+    "Not attributed"
+  ],
+  "googlePlaySearch": "Not separately available in this report; not zero.",
+  "acquisition": {
+    "current28Days": {
+      "start": "2026-09-12",
+      "end": "2026-10-09",
+      "reportedRowCount": 14,
+      "availableNumericCellSubtotals": {
+        "googlePlayExplore": 11,
+        "paidAndDirect": 86,
+        "notAttributed": 154
+      },
+      "availableNumericCellSubtotal": 251,
+      "overviewTotal": 251,
+      "completeAllSourceTotal": 251,
+      "rows": [
+        {
+          "date": "2026-10-06",
+          "googlePlayExplore": null,
+          "paidAndDirect": 17,
+          "notAttributed": 67
+        },
+        {
+          "date": "2026-10-05",
+          "googlePlayExplore": null,
+          "paidAndDirect": 1,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-10-02",
+          "googlePlayExplore": null,
+          "paidAndDirect": 1,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-10-01",
+          "googlePlayExplore": null,
+          "paidAndDirect": 1,
+          "notAttributed": 84
+        },
+        {
+          "date": "2026-09-29",
+          "googlePlayExplore": 1,
+          "paidAndDirect": 3,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-28",
+          "googlePlayExplore": 1,
+          "paidAndDirect": 60,
+          "notAttributed": 1
+        },
+        {
+          "date": "2026-09-27",
+          "googlePlayExplore": 2,
+          "paidAndDirect": null,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-26",
+          "googlePlayExplore": 1,
+          "paidAndDirect": null,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-23",
+          "googlePlayExplore": 3,
+          "paidAndDirect": 1,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-22",
+          "googlePlayExplore": 1,
+          "paidAndDirect": null,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-20",
+          "googlePlayExplore": null,
+          "paidAndDirect": null,
+          "notAttributed": 2
+        },
+        {
+          "date": "2026-09-18",
+          "googlePlayExplore": 1,
+          "paidAndDirect": null,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-16",
+          "googlePlayExplore": 1,
+          "paidAndDirect": null,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-13",
+          "googlePlayExplore": null,
+          "paidAndDirect": 2,
+          "notAttributed": null
+        }
+      ],
+      "missingValuePolicy": "Dash cells and omitted dates remain unavailable, not zero. Numeric subtotal is not asserted to be a complete total without an overview total."
+    },
+    "previous28Days": {
+      "start": "2026-08-15",
+      "end": "2026-09-11",
+      "reportedRowCount": 6,
+      "availableNumericCellSubtotals": {
+        "googlePlayExplore": null,
+        "paidAndDirect": 20,
+        "notAttributed": 5
+      },
+      "availableNumericCellSubtotal": 25,
+      "overviewTotal": null,
+      "completeAllSourceTotal": null,
+      "rows": [
+        {
+          "date": "2026-09-09",
+          "googlePlayExplore": null,
+          "paidAndDirect": 4,
+          "notAttributed": 1
+        },
+        {
+          "date": "2026-08-31",
+          "googlePlayExplore": null,
+          "paidAndDirect": null,
+          "notAttributed": 1
+        },
+        {
+          "date": "2026-08-29",
+          "googlePlayExplore": null,
+          "paidAndDirect": null,
+          "notAttributed": 2
+        },
+        {
+          "date": "2026-08-26",
+          "googlePlayExplore": null,
+          "paidAndDirect": 10,
+          "notAttributed": 1
+        },
+        {
+          "date": "2026-08-19",
+          "googlePlayExplore": null,
+          "paidAndDirect": 2,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-08-18",
+          "googlePlayExplore": null,
+          "paidAndDirect": 4,
+          "notAttributed": null
+        }
+      ],
+      "missingValuePolicy": "Dash cells and omitted dates remain unavailable, not zero. Numeric subtotal is not asserted to be a complete total without an overview total."
+    },
+    "current7Days": {
+      "start": "2026-10-03",
+      "end": "2026-10-09",
+      "reportedRowCount": 2,
+      "availableNumericCellSubtotals": {
+        "googlePlayExplore": null,
+        "paidAndDirect": 18,
+        "notAttributed": 67
+      },
+      "availableNumericCellSubtotal": 85,
+      "overviewTotal": null,
+      "completeAllSourceTotal": null,
+      "rows": [
+        {
+          "date": "2026-10-06",
+          "googlePlayExplore": null,
+          "paidAndDirect": 17,
+          "notAttributed": 67
+        },
+        {
+          "date": "2026-10-05",
+          "googlePlayExplore": null,
+          "paidAndDirect": 1,
+          "notAttributed": null
+        }
+      ],
+      "missingValuePolicy": "Dash cells and omitted dates remain unavailable, not zero. Numeric subtotal is not asserted to be a complete total without an overview total."
+    },
+    "previous7Days": {
+      "start": "2026-09-26",
+      "end": "2026-10-02",
+      "reportedRowCount": 6,
+      "availableNumericCellSubtotals": {
+        "googlePlayExplore": 5,
+        "paidAndDirect": 65,
+        "notAttributed": 85
+      },
+      "availableNumericCellSubtotal": 155,
+      "overviewTotal": null,
+      "completeAllSourceTotal": null,
+      "rows": [
+        {
+          "date": "2026-10-02",
+          "googlePlayExplore": null,
+          "paidAndDirect": 1,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-10-01",
+          "googlePlayExplore": null,
+          "paidAndDirect": 1,
+          "notAttributed": 84
+        },
+        {
+          "date": "2026-09-29",
+          "googlePlayExplore": 1,
+          "paidAndDirect": 3,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-28",
+          "googlePlayExplore": 1,
+          "paidAndDirect": 60,
+          "notAttributed": 1
+        },
+        {
+          "date": "2026-09-27",
+          "googlePlayExplore": 2,
+          "paidAndDirect": null,
+          "notAttributed": null
+        },
+        {
+          "date": "2026-09-26",
+          "googlePlayExplore": 1,
+          "paidAndDirect": null,
+          "notAttributed": null
+        }
+      ],
+      "missingValuePolicy": "Dash cells and omitted dates remain unavailable, not zero. Numeric subtotal is not asserted to be a complete total without an overview total."
+    }
+  },
+  "growthOverview": {
+    "window": "Last 28 days; Sep 12–Oct 9 from Dive deeper report",
+    "deviceImpressionsDisplayed": "2.87K",
+    "deviceAcquisitions": 251,
+    "deviceFirstOpens": 26,
+    "monthlyActiveDevices": 36,
+    "sevenDayDeviceRetentionCount": 1,
+    "exploreUserAcquisitions90Days": 12,
+    "conversionRate90DaysPercent": 23.92,
+    "experimentsRunning": 0,
+    "experimentsEnded": 0,
+    "experimentsApplied": 0
+  },
+  "listing": {
+    "start": "2026-09-08",
+    "end": "2026-10-05",
+    "visitors": 397,
+    "uniqueUserInstallClicks": 84,
+    "clickThroughRateDisplayedPercent": 21,
+    "defaultListingRow": {
+      "visitors": 354,
+      "conversionRatePercent": 18.4,
+      "lastUpdated": "2026-10-08",
+      "status": "Live",
+      "dateWindow": "Not exposed for row; do not assume headline window."
+    },
+    "caution": "Install clicks are not completed installs."
+  },
+  "retention": {
+    "start": "2026-09-12",
+    "end": "2026-10-09",
+    "metric": "7-day device retention (Per interval, Daily)",
+    "source": "Paid and direct",
+    "reportedCount": 1,
+    "onlyReportedRowDate": "2026-09-17",
+    "dataAvailability": "Some 7-day device retention data is currently unavailable.",
+    "retentionRate": null
+  },
+  "quality": {
+    "windowLabel": "Last 28 days",
+    "exactDatesExposed": false,
+    "averageRating": 5.0,
+    "ratingUsers": 1,
+    "userPerceivedCrashRate": null,
+    "userPerceivedAnrRate": null,
+    "slowColdStartRate": null,
+    "policyIssues": "No policy issues found",
+    "r8Advisory": "Unchanged for 1.0.14 (47). Optimized resource shrinking not enabled; recommends AGP 9.0 or higher. Not measured memory or battery drain evidence."
+  },
+  "releaseOverview": {
+    "appInstalls": 85,
+    "appInstallsDateScope": "Not exposed",
+    "version47ReleaseInstalls": 0,
+    "version47InstallBasePercent": 0,
+    "caution": "Separate dashboard measures; do not reconcile as the same device-acquisition cohort."
+  },
+  "changeSinceOctober9": {
+    "acquisitionOverviewIncrease": 84,
+    "newlyReportedDate": "2026-10-06",
+    "paidAndDirect": 17,
+    "notAttributed": 67,
+    "googlePlayExploreTotalUnchanged": 11,
+    "interpretation": "Newly present historical row, consistent with delayed reporting. No claimed October 10 new installs or ASO causal gain."
+  },
+  "confounders": [
+    "Paid and direct combines Ads and referrals/direct; no campaign-specific attribution.",
+    "October 6 newly reported historical row predates October 8 metadata publication.",
+    "Current and prior periods differ in app lifecycle, binary versions and paid exposure.",
+    "Reporting lag, omitted dates, partial retention data and small samples limit inference."
+  ],
+  "evidence": [
+    "growth-overview.txt",
+    "grow-acquisition.txt",
+    "acquisition-current-28d-page1.txt",
+    "acquisition-current-28d-page2.txt",
+    "acquisition-previous-28d.txt",
+    "retention-overview.txt",
+    "retention-current-28d.txt",
+    "listing-overview.txt",
+    "listing-date-range.txt",
+    "quality-overview.txt",
+    "quality-r8-advisory.txt",
+    "release-overview.txt",
+    "report-urls.json"
+  ]
+}

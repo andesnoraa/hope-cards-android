@@ -1,0 +1,255 @@
+2026-10-10T16:09:55.704Z
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Search Google Play":
+        - /placeholder: Search for apps & games
+        - text: Hope Cards
+      - generic: clear
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "Apps & games" [pressed]:
+    - generic: Apps & games
+    - generic: arrow_drop_down
+  - button "Device":
+    - generic: Device
+    - generic: arrow_drop_down
+- 'link "Play Daily Bible Verse: Hope Cards Daily Bible Verse: Hope Cards Aaronsedna"':
+  - /url: /store/apps/details?id=com.aaronsedna.hopecards
+  - 'button "Play Daily Bible Verse: Hope Cards"':
+  - generic: "Daily Bible Verse: Hope Cards"
+  - generic: Aaronsedna
+- link "Conjuring Hope GoatScaper":
+  - /url: /store/apps/details?id=org.sanctuaryofhope.conjuringhope
+  - generic: Conjuring Hope
+  - generic: GoatScaper
+- link "Hopecardis Hopecardis":
+  - /url: /store/apps/details?id=com.hopecardis.mobile
+  - generic: Hopecardis
+  - generic: Hopecardis
+- link "Play Hope Spring eCards Hope Spring eCards Velnet UK":
+  - /url: /store/apps/details?id=com.HopeSpringeCards.app
+  - button "Play Hope Spring eCards":
+  - generic: Hope Spring eCards
+  - generic: Velnet UK
+- link "HOPE Spirit Box Joshua T Louis Rated 3.8 stars out of five stars":
+  - /url: /store/apps/details?id=com.hopeparanormal.hsb1
+  - generic: HOPE Spirit Box
+  - generic: Joshua T Louis
+  - img "Rated 3.8 stars out of five stars":
+    - generic: "3.8"
+    - generic: star
+- link "Golden Card Pact The hope ... Rated 4.0 stars out of five stars":
+  - /url: /store/apps/details?id=com.cardpact.pactbound
+  - generic: Golden Card Pact
+  - generic: The hope ...
+  - img "Rated 4.0 stars out of five stars":
+    - generic: "4.0"
+    - generic: star
+- link "HOPE National Health Mission (Madhya Pradesh) Rated 4.1 stars out of five stars":
+  - /url: /store/apps/details?id=com.hopeApp
+  - generic: HOPE
+  - generic: National Health Mission (Madhya Pradesh)
+  - img "Rated 4.1 stars out of five stars":
+    - generic: "4.1"
+    - generic: star
+- link "Hope Fertility Hope Applications GmbH":
+  - /url: /store/apps/details?id=com.hopeapplicationsgmbh.hope3
+  - generic: Hope Fertility
+  - generic: Hope Applications GmbH
+- link "Hope for our Times Hope for our Times":
+  - /url: /store/apps/details?id=com.subsplashconsulting.s_8K93C2
+  - generic: Hope for our Times
+  - generic: Hope for our Times
+- link "Play Card Hog - Dungeon Crawler Card Hog - Dungeon Crawler SnoutUp Games Rated 4.2 stars out of five stars":
+  - /url: /store/apps/details?id=com.snoutup.cardhog
+  - button "Play Card Hog - Dungeon Crawler":
+  - generic: Card Hog - Dungeon Crawler
+  - generic: SnoutUp Games
+  - img "Rated 4.2 stars out of five stars":
+    - generic: "4.2"
+    - generic: star
+- link "Play Hope & Humor Daily Hope & Humor Daily Agentwire":
+  - /url: /store/apps/details?id=com.agentwire.kiki
+  - button "Play Hope & Humor Daily":
+  - generic: Hope & Humor Daily
+  - generic: Agentwire
+- 'link "HeartCraft: Cards & Wishes Promptly Yours Rated 4.3 stars out of five stars"':
+  - /url: /store/apps/details?id=com.kuchkuch
+  - generic: "HeartCraft: Cards & Wishes"
+  - generic: Promptly Yours
+  - img "Rated 4.3 stars out of five stars":
+    - generic: "4.3"
+    - generic: star
+- link "Hope Pro Zulkaron":
+  - /url: /store/apps/details?id=com.deep.ailume
+  - generic: Hope Pro
+  - generic: Zulkaron
+- link "Play Card Guardians Roguelike Games Card Guardians Roguelike Games Tapps Games - PT Rated 4.4 stars out of five stars":
+  - /url: /store/apps/details?id=com.tapps.roguelike.rpg.cardguardians
+  - button "Play Card Guardians Roguelike Games":
+  - generic: Card Guardians Roguelike Games
+  - generic: Tapps Games - PT
+  - img "Rated 4.4 stars out of five stars":
+    - generic: "4.4"
+    - generic: star
+- link "Play Hearthstone Hearthstone Blizzard Entertainment, Inc. Rated 3.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.blizzard.wtcg.hearthstone
+  - button "Play Hearthstone":
+  - generic: Hearthstone
+  - generic: Blizzard Entertainment, Inc.
+  - img "Rated 3.7 stars out of five stars":
+    - generic: "3.7"
+    - generic: star
+- link "Magenta Pay Telekom Payments":
+  - /url: /store/apps/details?id=gr.payzy
+  - generic: Magenta Pay
+  - generic: Telekom Payments
+- link "Play Spades Stars - Card Game Spades Stars - Card Game Bluetile Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.playvalve.spades
+  - button "Play Spades Stars - Card Game":
+  - generic: Spades Stars - Card Game
+  - generic: Bluetile
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Pyypl - it’s your money Pyypl Rated 2.2 stars out of five stars":
+  - /url: /store/apps/details?id=com.pyypl
+  - generic: Pyypl - it’s your money
+  - generic: Pyypl
+  - img "Rated 2.2 stars out of five stars":
+    - generic: "2.2"
+    - generic: star
+- 'link "Play SBI Card: Manage Credit Card SBI Card: Manage Credit Card SBI Cards and Payment Services Limited Rated 4.6 stars out of five stars"':
+  - /url: /store/apps/details?id=com.ge.capital.konysbiapp
+  - 'button "Play SBI Card: Manage Credit Card"':
+  - generic: "SBI Card: Manage Credit Card"
+  - generic: SBI Cards and Payment Services Limited
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- link "Play Bingo Set Bingo Set Little bandit Games Rated 3.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.littlebandit.bingoset
+  - button "Play Bingo Set":
+  - generic: Bingo Set
+  - generic: Little bandit Games
+  - img "Rated 3.9 stars out of five stars":
+    - generic: "3.9"
+    - generic: star
+- link "Bangtan Memory RexTeam Rated 4.3 stars out of five stars":
+  - /url: /store/apps/details?id=com.RexTeam.BangtanMemory
+  - generic: Bangtan Memory
+  - generic: RexTeam
+  - img "Rated 4.3 stars out of five stars":
+    - generic: "4.3"
+    - generic: star
+- link "Play You are Hope You are Hope Dual Decade Rated 4.0 stars out of five stars ₹480.00":
+  - /url: /store/apps/details?id=com.wereviz.evolution
+  - button "Play You are Hope":
+  - generic: You are Hope
+  - generic: Dual Decade
+  - img "Rated 4.0 stars out of five stars":
+    - generic: "4.0"
+    - generic: star
+  - generic: ₹480.00
+- link "Play Spades Solitaire - Card Games Spades Solitaire - Card Games Topy Games Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.spades.solitaire.online.plus.offline.free.card.games
+  - button "Play Spades Solitaire - Card Games":
+  - generic: Spades Solitaire - Card Games
+  - generic: Topy Games
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "HOPE HAP EYE":
+  - /url: /store/apps/details?id=com.hope.gateway
+  - generic: HOPE
+  - generic: HAP EYE
+- 'link "Callbreak Offline : Tash Game MGGAMES Rated 3.7 stars out of five stars"':
+  - /url: /store/apps/details?id=com.mggames.callbreak
+  - generic: "Callbreak Offline : Tash Game"
+  - generic: MGGAMES
+  - img "Rated 3.7 stars out of five stars":
+    - generic: "3.7"
+    - generic: star
+- link "Spades - Classic Cards Tripledot Studios Limited Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.tripledot.spades
+  - generic: Spades - Classic Cards
+  - generic: Tripledot Studios Limited
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- 'link "FC 27: FUT Draft & Pack NHDsports FC Rated 5.0 stars out of five stars"':
+  - /url: /store/apps/details?id=nhdsports.nhdfut.fc
+  - generic: "FC 27: FUT Draft & Pack"
+  - generic: NHDsports FC
+  - img "Rated 5.0 stars out of five stars":
+    - generic: "5.0"
+    - generic: star
+- link "Play Everyone’s Stamp Card Everyone’s Stamp Card tofukabochakan":
+  - /url: /store/apps/details?id=com.tofukabochakan.minnano_stamp_cards
+  - button "Play Everyone’s Stamp Card":
+  - generic: Everyone’s Stamp Card
+  - generic: tofukabochakan
+- 'link "Play Ascension: Deckbuilding Game Ascension: Deckbuilding Game Playdek, Inc. Rated 3.9 stars out of five stars"':
+  - /url: /store/apps/details?id=com.playdekgames.android.Ascension
+  - 'button "Play Ascension: Deckbuilding Game"':
+  - generic: "Ascension: Deckbuilding Game"
+  - generic: Playdek, Inc.
+  - img "Rated 3.9 stars out of five stars":
+    - generic: "3.9"
+    - generic: star
+- 'link "Play GWENT: The Witcher Card Game GWENT: The Witcher Card Game CD PROJEKT RED S.A. Rated 4.2 stars out of five stars"':
+  - /url: /store/apps/details?id=com.cdprojektred.gwent
+  - 'button "Play GWENT: The Witcher Card Game"':
+  - generic: "GWENT: The Witcher Card Game"
+  - generic: CD PROJEKT RED S.A.
+  - img "Rated 4.2 stars out of five stars":
+    - generic: "4.2"
+    - generic: star
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

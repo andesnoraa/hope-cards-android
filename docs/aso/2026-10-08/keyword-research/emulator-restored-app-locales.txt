@@ -1,0 +1,1 @@
+Locales for com.aaronsedna.hopecards.debug for user 0 are []

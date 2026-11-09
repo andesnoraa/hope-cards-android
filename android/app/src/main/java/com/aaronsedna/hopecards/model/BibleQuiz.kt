@@ -43,6 +43,8 @@ data class QuizSession(
     val selectedIndex: Int = -1,
     val finished: Boolean = false,
     val timedOut: Boolean = false,
+    /** Submission durations in question order. Null means timing was off or unavailable. */
+    val answerTimesMillis: List<Long?> = emptyList(),
 ) {
     val started get() = questionIds.isNotEmpty()
     val checked get() = answers.size > position
@@ -50,8 +52,13 @@ data class QuizSession(
     fun choose(index: Int): QuizSession =
         if (started && !finished && !checked && index in 0..3) copy(selectedIndex = index) else this
 
-    fun submit(): QuizSession =
-        if (started && !finished && !checked && selectedIndex in 0..3) copy(answers = answers + selectedIndex) else this
+    fun submit(timeTakenMillis: Long? = null): QuizSession =
+        if (started && !finished && !checked && selectedIndex in 0..3)
+            copy(answers = answers + selectedIndex, answerTimesMillis = appendTime(timeTakenMillis)) else this
+
+    private fun appendTime(timeTakenMillis: Long?): List<Long?> =
+        answers.indices.map { answerTimesMillis.getOrNull(it) } +
+            timeTakenMillis?.coerceIn(0L, QUIZ_COUNTDOWN_DURATION_MILLIS)
 
     fun advance(): QuizSession = when {
         !checked || finished -> this
@@ -60,14 +67,16 @@ data class QuizSession(
     }
 
     /** Lock the current choice, or record an unanswered question, and continue the round. */
-    fun expireQuestion(): QuizSession {
+    fun expireQuestion(timeTakenMillis: Long? = null): QuizSession {
         if (!started || finished || checked) return this
         val answer = selectedIndex.takeIf { it in 0..3 } ?: -1
         val submitted = answers + answer
         return if (position == questionIds.lastIndex) {
-            copy(answers = submitted, selectedIndex = answer, finished = true, timedOut = true)
+            copy(answers = submitted, selectedIndex = answer, finished = true, timedOut = true,
+                answerTimesMillis = appendTime(timeTakenMillis))
         } else {
-            copy(answers = submitted, position = position + 1, selectedIndex = -1)
+            copy(answers = submitted, position = position + 1, selectedIndex = -1,
+                answerTimesMillis = appendTime(timeTakenMillis))
         }
     }
 
@@ -77,7 +86,8 @@ data class QuizSession(
         val submitted = if (checked) answers else answers + (selectedIndex.takeIf { it in 0..3 } ?: -1)
         val completed = submitted + List((questionIds.size - submitted.size).coerceAtLeast(0)) { -1 }
         return copy(answers = completed, position = questionIds.lastIndex,
-            selectedIndex = completed.last(), finished = true, timedOut = true)
+            selectedIndex = completed.last(), finished = true, timedOut = true,
+            answerTimesMillis = completed.indices.map { answerTimesMillis.getOrNull(it) })
     }
 
     fun score(questions: Map<String, QuizQuestion>): Int =
@@ -85,6 +95,8 @@ data class QuizSession(
 
     fun isValidFor(questions: List<QuizQuestion>): Boolean {
         if (!started) return this == QuizSession()
+        if (answerTimesMillis.isNotEmpty() && answerTimesMillis.size != answers.size ||
+            answerTimesMillis.any { it != null && it !in 0L..QUIZ_COUNTDOWN_DURATION_MILLIS }) return false
         if (questionIds.size > ROUND_SIZE || questionIds.distinct().size != questionIds.size ||
             questionIds.any { id -> questions.none { it.id == id } } || position !in questionIds.indices ||
             selectedIndex !in -1..3) return false

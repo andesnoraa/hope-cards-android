@@ -1,0 +1,93 @@
+Browser tab: 455027205, Title: "Hopecards - Android Apps on Google Play", URL: "https://play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN".
+1 AXWebArea Hopecards - Android Apps on Google Play, URL: play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN
+	2 container yDmH0d
+		3 container Page Header
+			4 link Description: Google Play logo, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Description: Search Google Play, Value: Hopecards
+			8 button Help Center
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna ([redacted signed-in account]), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: Apps & games, Value: 1
+				13 checkbox Description: Device, Value: 0
+			14 container
+				15 container
+					16 link Description: Hopecardis Hopecardis, Value: play.google.com/store/apps/details?id=com.hopecardis.mobile
+				17 container
+					18 link Description: Play Daily Bible Verse: Hope Cards Daily Bible Verse: Hope Cards Aaronsedna, Value: play.google.com/store/apps/details?id=com.aaronsedna.hopecards
+				19 container
+					20 link Description: Hope Fertility Hope Applications GmbH, Value: play.google.com/store/apps/details?id=com.hopeapplicationsgmbh.hope3
+				21 container
+					22 link Description: Golden Card Pact The hope ... Rated 4.0 stars out of five stars, Value: play.google.com/store/apps/details?id=com.cardpact.pactbound
+				23 container
+					24 link Value: play.google.com/store/apps/details?id=com.snoutup.cardhog, Description: Play Card Hog - Dungeon Crawler Card Hog - Dungeon Crawler SnoutUp Games Rated 4.2 stars out of five stars
+				25 container
+					26 link Description: HOPE National Health Mission (Madhya Pradesh) Rated 4.1 stars out of five stars, Value: play.google.com/store/apps/details?id=com.hopeApp
+				27 container
+					28 link Description: HopeCare Hope Care, SA, Value: play.google.com/store/apps/details?id=com.wow.hopecare
+				29 container
+					30 link Description: HeartCraft: Cards & Wishes Promptly Yours Rated 4.3 stars out of five stars, Value: play.google.com/store/apps/details?id=com.kuchkuch
+				31 container
+					32 link Description: Play Hearthstone Hearthstone Blizzard Entertainment, Inc. Rated 3.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.blizzard.wtcg.hearthstone
+				33 container
+					34 link Value: play.google.com/store/apps/details?id=com.tapps.roguelike.rpg.cardguardians, Description: Play Card Guardians Roguelike Games Card Guardians Roguelike Games Tapps Games - PT Rated 4.4 stars out of five stars
+				35 container
+					36 link Description: CardWho: Ask, Talk, Connect Erik Medya, Value: play.google.com/store/apps/details?id=com.erikmedya.cardwho
+				37 container
+					38 link Description: Hope Wallet LIONHEART LABS, Value: play.google.com/store/apps/details?id=io.hopenetwork.wallet
+				39 container
+					40 link Description: Card Hobby SSUPER TECHNOLOGY INC., Value: play.google.com/store/apps/details?id=com.oversea.card
+				41 container
+					42 link Description: HOPE Spirit Box Joshua T Louis Rated 3.8 stars out of five stars, Value: play.google.com/store/apps/details?id=com.hopeparanormal.hsb1
+				43 container
+					44 link Value: play.google.com/store/apps/details?id=com.ge.capital.konysbiapp, Description: Play SBI Card: Manage Credit Card SBI Card: Manage Credit Card SBI Cards and Payment Services Limited Rated 4.6 stars out of five stars
+				45 container
+					46 link Description: HeyCard Digital Business Card Jumilabs, Value: play.google.com/store/apps/details?id=com.heycard.app
+				47 container
+					48 link Description: Cards Hero: Idle Card Game Card game CCG - DNK Studio, Value: play.google.com/store/apps/details?id=com.DnkStudio.HeroDeck
+				49 container
+					50 link Description: Play Hearts Card Classic Hearts Card Classic Games By Post Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=com.gamesbypost.heartscardclassic
+				51 container
+					52 link Description: Play Card Thief Card Thief Arnold Rauers Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=com.tinytouchtales.cardthief
+				53 container
+					54 link Description: Card Insider: Cards & Offers Card Insider Rated 1.6 stars out of five stars, Value: play.google.com/store/apps/details?id=com.cardinsider.creditcards
+				55 container
+					56 link Description: OmniCard: UPI, Card & Rewards Eroute Technologies Private Limited Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=com.eroute.omnicard
+				57 container
+					58 link Value: play.google.com/store/apps/details?id=com.spades.solitaire.online.plus.offline.free.card.games, Description: Play Spades Solitaire - Card Games Spades Solitaire - Card Games Topy Games Rated 4.7 stars out of five stars
+				59 container
+					60 link Description: Farkle Cards FunCraft Games, Value: play.google.com/store/apps/details?id=com.funcraft.farklecards
+				61 container
+					62 link Description: Play Spades Stars - Card Game Spades Stars - Card Game Bluetile Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=com.playvalve.spades
+				63 container
+					64 link Description: Home of Cards: Cozy Solitaire Steamroller Games Rated 4.4 stars out of five stars, Value: play.google.com/store/apps/details?id=com.steamrollergames.solitaire
+				65 container
+					66 link Value: play.google.com/store/apps/details?id=in.hopscotch.android, Description: Play Hopscotch - Kids Fashion Brand Hopscotch - Kids Fashion Brand Hopscotch Rated 4.4 stars out of five stars
+				67 container
+					68 link Description: PackRat Card Collecting Game HookBang LLC, Value: play.google.com/store/apps/details?id=air.mobile.hookbang.packrat
+				69 container
+					70 link Description: Hope for our Times Hope for our Times, Value: play.google.com/store/apps/details?id=com.subsplashconsulting.s_8K93C2
+				71 container
+					72 link Value: play.google.com/store/apps/details?id=com.rainbowgames.solitaire2018, Description: Play Magic Story of Solitaire Cards Magic Story of Solitaire Cards Rainbow Games Kz Rated 4.2 stars out of five stars
+				73 container
+					74 link Description: Play Solitaire Story Solitaire Story Solitaire Card Games Classic Rated 4.1 stars out of five stars, Value: play.google.com/store/apps/details?id=linkdesks.solitaire.rescue.story
+		75 container
+			76 text Google Play
+			77 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			78 link Description: Play Points, Value: play.google.com/store/points/enroll
+			79 link Description: Gift cards, Value: play.google.com/about/giftcards
+			80 link Description: Redeem, Value: play.google.com/redeem
+			81 link Description: Refund policy, Value: support.google.com/googleplay/answer/134336
+			82 text Kids & family
+			83 link Description: Parent Guide, Value: support.google.com/googleplay?p=pff_parentguide
+			84 link Description: Family sharing, Value: support.google.com/googleplay/answer/7007852
+			85 link Description: Terms of Service, Value: play.google.com/intl/en_in/about/play-terms.html
+			86 link Description: Privacy, Value: policies.google.com/privacy
+			87 link Description: About Google Play, Value: support.google.com/googleplay/?p=about_play
+			88 link Description: Developers, Value: developer.android.com/index.html
+			89 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			90 text All prices include GST. India (English)
+
+The focused UI element is 1 AXWebArea Hopecards - Android Apps on Google Play, URL: play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN

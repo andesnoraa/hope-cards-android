@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import android.app.Activity
 import androidx.activity.compose.LocalActivity
 import androidx.compose.animation.core.Animatable
@@ -50,7 +51,6 @@ import com.aaronsedna.hopecards.ui.components.CardBack
 import com.aaronsedna.hopecards.ui.components.VerseCardFace
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
 import com.aaronsedna.hopecards.ui.theme.LocalHopeThemeName
-import com.aaronsedna.hopecards.ui.theme.Poppins
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import kotlin.math.min
@@ -219,7 +219,7 @@ fun HomeScreen(
                 Box(contentAlignment = Alignment.Center) {
                     Text(
                         if (revealed) appString(R.string.return_to_deck) else appString(R.string.draw_a_card),
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 18.sp,
                         letterSpacing = .5.sp,

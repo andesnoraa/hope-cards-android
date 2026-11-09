@@ -1,0 +1,136 @@
+Browser tab: 455027219, Title: "Store listings | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings?metric=METRIC_ACQUISITION&dateRange=2026_09_15-2026_10_12".
+1 AXWebArea Store listings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings?metric=METRIC_ACQUISITION&dateRange=2026_09_15-2026_10_12
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/home
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 pop up button (collapsed) Description: Switch developer accounts, Secondary Actions: Expand
+				10 button (collapsed) Description: Google Account: Aaronsedna (redacted), Secondary Actions: Expand
+			11 content list
+				12 container Home
+					13 button Home
+				14 container Manage account
+					15 button Manage account
+				16 container Daily Bible Verse: Hope Cards
+					17 pop up button Daily Bible Verse: Hope Cards
+				18 container Dashboard
+					19 button Dashboard
+				20 container Statistics
+					21 button Statistics
+				22 container Publishing overview
+					23 button Publishing overview
+				24 container Protected with Play
+					25 button Protected with Play
+				26 container (collapsed) Description: Test and release, Secondary Actions: Expand
+					27 button Test and release
+				28 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+					29 button Monitor and improve
+				30 container (expanded) Description: Grow users, Secondary Actions: Collapse
+					31 button Grow users
+				32 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+					33 button Monetize with Play
+			34 container main-content
+				35 container
+					36 heading Store listings, Value: 1
+						37 text Store listings
+					38 button Create custom listing
+						39 text Create custom listing
+					40 button Create group
+						41 text Create group
+					42 container
+						43 heading Manage how your app is presented to users on Play, Value: 2
+							44 text Manage how your app is presented to users on Play
+						45 text Make a great first impression and help users find and engage with your app through your store listing. Use custom listings to target specific audiences with tailored content.
+						46 link Description: Learn more about Store listings (opens in a new tab), Value: support.google.com/googleplay/android-developer/answer/9156429
+						47 button Hide detailed description about Store listings
+							48 text Hide
+					49 tab group
+						50 tab (selected, settable, boolean) Description: Listings, Value: 1
+						51 tab (selectable, settable, boolean) Description: Groups, Value: 0
+					52 heading Your performance on Play, Value: 2
+						53 text Your performance on Play
+					54 pop up button (collapsed) Description: Select metric, Secondary Actions: Expand
+						55 text Installs
+					56 pop up button (collapsed) Description: Last 28 days Select date range to filter metrics, ID: a3BF0D328-951C-4EF4-9047-0766D958507F--0, Secondary Actions: Expand
+						134 text date_range
+						58 text Last 28 days
+					59 container
+						60 button (collapsed) Reach Show details for Visitors, Secondary Actions: Expand
+							61 text Reach
+							62 text Show details for Visitors
+						63 button (collapsed) Visitors, Secondary Actions: Expand
+						64 text 514 1,558% delta, where an increase is good
+						65 text vs. previous period
+						66 container Chart Use left and right keys to navigate through domain values.
+					67 container
+						68 button (collapsed) Acquire Show details for Unique user install clicks, Secondary Actions: Expand
+							69 text Acquire
+							70 text Show details for Unique user install clicks
+						71 button (collapsed) Unique user install clicks, Secondary Actions: Expand
+						72 text 116 452% delta, where an increase is good
+						73 text vs. previous period
+						74 container Chart Use left and right keys to navigate through domain values.
+					75 container
+						76 button (collapsed) Acquire (%) Show details for Click-through rate, Secondary Actions: Expand
+							77 text Acquire (%)
+							78 text Show details for Click-through rate
+						79 button (collapsed) Click-through rate, Secondary Actions: Expand
+						80 text 23% 67% delta, where an increase is good
+						81 text vs. previous period
+						82 container Chart Use left and right keys to navigate through domain values.
+					83 button (collapsed) Default listing, Secondary Actions: Expand
+					84 link Description: Edit default listing, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings/default/edit
+					85 text 499 visitors
+					86 table Default store listing
+						87 row Name Last updated Visitors Conversion rate Experiments Status
+							88 cell Name
+								89 text Name
+							90 cell Last updated
+								91 text Last updated
+							92 cell Visitors
+								93 text Visitors
+							94 cell Conversion rate
+								95 text Conversion rate
+							96 cell Experiments
+								97 text Experiments
+							98 cell Status
+								99 text Status
+							100 cell
+							101 cell
+						102 row Default store listing Oct 8, 2026 499 19.4% Set up Live Select an action: view data, create new listing within group View default listing
+							103 cell
+								104 text Default store listing
+							105 cell
+								106 text Oct 8, 2026
+							107 cell
+								108 text 499
+							109 cell
+								110 text 19.4%
+							111 cell
+								112 button Set up
+									113 text Set up
+							114 cell
+								115 text Live
+							116 cell
+								117 list Select an action: view data, create new listing within group
+									118 pop up button (collapsed) Description: Select an action: view data, create new listing within group, Secondary Actions: Expand
+							119 cell
+								120 link Description: View default listing, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings/0
+					121 container
+						122 heading Target specific users with tailored content, Value: 2
+							123 text Target specific users with tailored content
+						124 text Create custom store listings to target specific users with tailored content. Once you've created a custom store listing, you can run experiments to test different graphics and localized text and see which perform best.
+						125 button Create custom store listing
+							126 text Create custom store listing
+				127 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				128 link Description: Status dashboard, Value: status.play.google.com/
+				129 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				130 text © 2026 Google
+				131 link Description: Privacy, Value: google.com/policies/privacy/
+				132 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				133 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Store listings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings?metric=METRIC_ACQUISITION&dateRange=2026_09_15-2026_10_12

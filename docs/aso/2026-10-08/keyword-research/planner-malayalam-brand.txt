@@ -1,0 +1,424 @@
+2026-10-08T15:57:11.403Z
+- banner:
+  - button "Hide scoping navigation menu" [expanded]:
+    - img: menu
+  - heading "Ads" [level=1]:
+    - generic: Ads
+  - button "Search":
+    - img: search
+    - generic: Search
+  - button "Appearance":
+    - img: responsive_layout
+    - generic: Appearance
+  - button "Refresh":
+    - img: refresh
+    - generic: Refresh
+  - button "Help":
+    - img: help_outline
+    - generic: Help
+  - button "Notifications":
+    - img: notifications
+    - generic: Notifications
+  - generic "801-431-6633 Aaronsedna"
+  - generic: [account-redacted]
+  - button "Google account":
+    - img "Google account ([account-redacted])"
+- button "Create":
+- generic: Create
+- menu:
+  - menu:
+    - menuitem "Campaigns":
+      - img: campaign
+      - generic: Campaigns
+    - menuitem "Goals":
+      - img: rewarded_ads
+      - generic: Goals
+    - menuitem "Tools":
+      - img: construction
+      - generic: Tools
+    - menuitem "Billing":
+      - img: credit_card
+      - generic: Billing
+    - menuitem "Admin":
+      - img: settings
+      - generic: Admin
+- navigation:
+  - menu:
+    - menuitem "Asset studio":
+      - generic: Asset studio
+    - menuitem "Planning" [expanded]:
+      - generic: Planning
+      - img: expand_more
+    - menuitem "Keyword Planner":
+      - generic: Keyword Planner
+    - menuitem "Performance Planner":
+      - generic: Performance Planner
+    - menuitem "Reach Planner":
+      - generic: Reach Planner
+    - menuitem "App advertising hub":
+      - generic: App advertising hub
+    - menuitem "Shared library":
+      - generic: Shared library
+      - img: expand_more
+    - menuitem "YouTube creator partnerships Beta":
+      - generic: YouTube creator partnerships
+      - generic: Beta
+    - menuitem "Content suitability":
+      - generic: Content suitability
+    - menuitem "Data manager":
+      - generic: Data manager
+    - menuitem "Troubleshooting":
+      - generic: Troubleshooting
+      - img: expand_more
+    - menuitem "Bulk actions":
+      - generic: Bulk actions
+      - img: expand_more
+    - menuitem "Budgets and bidding":
+      - generic: Budgets and bidding
+      - img: expand_more
+    - menuitem "Business data":
+      - generic: Business data
+- link "Keyword Planner":
+  - /url: /aw/keywordplanner/home?ocid=8566688555&authuser=1&__u=5925761757&__c=7037858195
+- img: chevron_right
+- heading "Plan from Oct 8, 2026, 9 PM, GMT+05:30" [level=2]
+- tablist:
+  - tab "Keyword ideas" [selected]:
+    - generic: Keyword ideas
+  - tab "Forecast":
+    - generic: Forecast
+  - tab "Saved keywords":
+    - generic: Saved keywords
+  - tab "Negative keywords":
+    - generic: Negative keywords
+- main:
+  - region "Keyword Ideas Search Bar":
+    - 'button "Change existing keywords or website: malayalam bible verses, malayalam bible quiz, bible quiz certificate, hope cards, hopecards, മലയാളം ബൈബിൾ വചനങ്ങൾ, ഇന്നത്തെ വചനം, ബൈബിൾ ക്വിസ്, സത്യവേദപുസ്തകം, ദൈവവചനം"':
+      - img: search
+      - generic: malayalam bible verses, malayalam bible quiz, bible quiz certificate, hope cards, hopecards, മലയാളം ബൈബിൾ വചനങ്ങൾ, ഇന്നത്തെ വചനം, ബൈബിൾ ക്വിസ്, സത്യവേദപുസ്തകം, ദൈവവചനം
+    - region "Targeting Settings":
+      - button "India":
+        - img: location_on
+        - generic: India
+      - button "English":
+        - img: translate
+        - generic: English
+      - button "Google":
+        - img: manage_search
+        - generic: Google
+      - button "Edit date range, Last 12 months":
+        - img: calendar_today
+        - generic: Sep 2025 – Aug 2026
+        - img: arrow_drop_down
+    - group "Broaden your search:":
+      - text: "Broaden your search:"
+      - grid:
+        - row "Add malayalam bible Add bible verses Add bible Add bible quiz Add verses Add christianity Add religion":
+          - gridcell "Add malayalam bible":
+            - img: add
+            - generic: malayalam bible
+          - gridcell "Add bible verses":
+            - img: add
+            - generic: bible verses
+          - gridcell "Add bible":
+            - img: add
+            - generic: bible
+          - gridcell "Add bible quiz":
+            - img: add
+            - generic: bible quiz
+          - gridcell "Add verses":
+            - img: add
+            - generic: verses
+          - gridcell "Add christianity":
+            - img: add
+            - generic: christianity
+          - gridcell "Add religion":
+            - img: add
+            - generic: religion
+    - button "Download keyword ideas Keyword ideas":
+      - img: file_download
+      - generic: Download keyword ideas
+      - region "Keyword ideas"
+  - region "Search Results Table":
+    - region "Primary toolbelt for Keyword ideas":
+      - button "Show 1 active filters":
+        - img: filter_alt
+        - generic: "1"
+      - generic: "Filters Applied:"
+      - grid "Filters Applied:":
+        - row "Exclude adult ideas Delete":
+          - gridcell "Exclude adult ideas":
+            - button "Exclude adult ideas": Exclude adult ideas
+          - gridcell "Delete Exclude adult ideas":
+            - button "Delete Exclude adult ideas": close
+      - button "Add filter":
+        - generic: Add filter
+      - generic: 250 keyword ideas available
+      - button "Columns":
+        - img: view_column
+        - generic: Columns
+      - button "Keyword view":
+        - text: Keyword view
+        - img: arrow_drop_down
+    - grid "Keyword ideas":
+      - row "Select all rows Keyword (by relevance) Avg. monthly searches Three month change YoY change Competition Ad impression share Top of page bid (low range) Top of page bid (high range) Account status":
+        - gridcell "Select all rows":
+          - checkbox "Select all rows":
+        - columnheader "Keyword (by relevance)": Keyword (by relevance)
+        - columnheader "Avg. monthly searches":
+          - text: Avg. monthly searches
+          - img: help_outline
+        - columnheader "Three month change":
+          - text: Three month change
+          - img: help_outline
+        - columnheader "YoY change":
+          - text: YoY change
+          - img: help_outline
+        - columnheader "Competition":
+          - text: Competition
+          - img: help_outline
+        - columnheader "Ad impression share":
+          - text: Ad impression share
+          - img: help_outline
+        - columnheader "Top of page bid (low range)":
+          - text: Top of page bid (low range)
+          - img: help_outline
+        - columnheader "Top of page bid (high range)":
+          - text: Top of page bid (high range)
+          - img: help_outline
+        - columnheader "Account status":
+          - text: Account status
+          - img: help_outline
+      - generic: Keywords you provided
+      - row "Select row \"malayalam bible verses\" malayalam bible verses. This is a keyword you provided. 10K – 100K 0% 0% Low — — —":
+        - gridcell "Select row \"malayalam bible verses\"":
+          - checkbox "Select row \"malayalam bible verses\"":
+        - gridcell "malayalam bible verses. This is a keyword you provided.":
+          - generic "malayalam bible verses. This is a keyword you provided.":
+            - generic: malayalam bible verses
+        - gridcell "10K – 100K":
+          - generic: 10K – 100K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"malayalam bible quiz\" malayalam bible quiz. This is a keyword you provided. 100 – 1K 0% -90% Low — — —":
+        - gridcell "Select row \"malayalam bible quiz\"":
+          - checkbox "Select row \"malayalam bible quiz\"":
+        - gridcell "malayalam bible quiz. This is a keyword you provided.":
+          - generic "malayalam bible quiz. This is a keyword you provided.":
+            - generic: malayalam bible quiz
+        - gridcell "100 – 1K":
+          - generic: 100 – 1K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "-90%":
+          - generic: "-90%"
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"bible quiz certificate\" bible quiz certificate. This is a keyword you provided. 10 – 100 0% 0% Low — — —":
+        - gridcell "Select row \"bible quiz certificate\"":
+          - checkbox "Select row \"bible quiz certificate\"":
+        - gridcell "bible quiz certificate. This is a keyword you provided.":
+          - generic "bible quiz certificate. This is a keyword you provided.":
+            - generic: bible quiz certificate
+        - gridcell "10 – 100":
+          - generic: 10 – 100
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"hope cards\" hope cards. This is a keyword you provided. 10 – 100 +900% 0% Low — — —":
+        - gridcell "Select row \"hope cards\"":
+          - checkbox "Select row \"hope cards\"":
+        - gridcell "hope cards. This is a keyword you provided.":
+          - generic "hope cards. This is a keyword you provided.":
+            - generic: hope cards
+        - gridcell "10 – 100":
+          - generic: 10 – 100
+        - gridcell "+900%":
+          - generic: +900%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"ഇന്നത്തെ വചനം\" ഇന്നത്തെ വചനം. This is a keyword you provided. 10 – 100 0% 0% Low — — —":
+        - gridcell "Select row \"ഇന്നത്തെ വചനം\"":
+          - checkbox "Select row \"ഇന്നത്തെ വചനം\"":
+        - gridcell "ഇന്നത്തെ വചനം. This is a keyword you provided.":
+          - generic "ഇന്നത്തെ വചനം. This is a keyword you provided.":
+            - generic: ഇന്നത്തെ വചനം
+        - gridcell "10 – 100":
+          - generic: 10 – 100
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"സത്യവേദപുസ്തകം\" സത്യവേദപുസ്തകം. This is a keyword you provided. 100 – 1K 0% 0% Low — — —":
+        - gridcell "Select row \"സത്യവേദപുസ്തകം\"":
+          - checkbox "Select row \"സത്യവേദപുസ്തകം\"":
+        - gridcell "സത്യവേദപുസ്തകം. This is a keyword you provided.":
+          - generic "സത്യവേദപുസ്തകം. This is a keyword you provided.":
+            - generic: സത്യവേദപുസ്തകം
+        - gridcell "100 – 1K":
+          - generic: 100 – 1K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - row "Select row \"ദൈവവചനം\" ദൈവവചനം. This is a keyword you provided. 100 – 1K +900% 0% Low — — —":
+        - gridcell "Select row \"ദൈവവചനം\"":
+          - checkbox "Select row \"ദൈവവചനം\"":
+        - gridcell "ദൈവവചനം. This is a keyword you provided.":
+          - generic "ദൈവവചനം. This is a keyword you provided.":
+            - generic: ദൈവവചനം
+        - gridcell "100 – 1K":
+          - generic: 100 – 1K
+        - gridcell "+900%":
+          - generic: +900%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+      - generic: Keyword ideas
+      - row "Select row \"bible malayalam\" bible malayalam 10K – 100K 0% 0% Low — ₹2.90 ₹48.39":
+        - gridcell "Select row \"bible malayalam\"":
+          - checkbox "Select row \"bible malayalam\"":
+        - gridcell "bible malayalam":
+          - generic: bible malayalam
+        - gridcell "10K – 100K":
+          - generic: 10K – 100K
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "Low":
+          - generic: Low
+        - gridcell "—":
+          - generic: —
+        - gridcell "₹2.90":
+          - generic: ₹2.90
+        - gridcell "₹48.39":
+          - generic: ₹48.39
+        - gridcell
+      - row "Select row \"hope christmas cards\" hope christmas cards 10 – 100 0% 0% — — — —":
+        - gridcell "Select row \"hope christmas cards\"":
+          - checkbox "Select row \"hope christmas cards\"":
+        - gridcell "hope christmas cards":
+          - generic: hope christmas cards
+        - gridcell "10 – 100":
+          - generic: 10 – 100
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "0%":
+          - generic: 0%
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell "—":
+          - generic: —
+        - gridcell
+    - generic: "Show rows:"
+    - 'button "Show rows: 30 selected."':
+      - generic: "30"
+      - img: arrow_drop_down
+    - generic: 1 - 30 of 250
+    - button "Go to the first page" [disabled]:
+      - img: first_page
+    - button "Go to the previous page" [disabled]:
+      - img: chevron_left
+    - button "Go to the next page":
+      - img: chevron_right
+    - button "Go to the last page":
+      - img: last_page
+  - generic: Keyword Planner can be used to generate keyword ideas, but it doesn't guarantee improved performance. You're responsible for your keyword choices and for complying with our advertising policies and any applicable laws.
+  - region "Refine keywords":
+    - heading "Refine keywords" [level=2]
+    - button "Close":
+      - img: close
+    - button "Expand all":
+      - generic: Expand all
+    - button "Brand or Non-Brand":
+      - paragraph: Brand or Non-Brand
+      - paragraph: Non-Brands, stampin up, poc bible, bible bsi, hope pastures
+      - img: expand_less
+    - button "Book":
+      - paragraph: Book
+      - paragraph: romans, john, genesis
+      - img: expand_less
+    - button "Others":
+      - paragraph: Others
+      - paragraph: words, speedy
+      - img: expand_less
+    - button "Give feedback":
+      - img: feedback
+      - text: Give feedback
+- dialog:
+  - heading [level=1]: Turn off ad blockers
+  - paragraph: Google Ads can't work when you're using an ad blocker. To use Google Ads, please turn off any ad blockers for now.
+- status
+- dialog "dialog"
+- dialog "dialog"
+- dialog "dialog"
+- dialog "dialog"
+- text: info *

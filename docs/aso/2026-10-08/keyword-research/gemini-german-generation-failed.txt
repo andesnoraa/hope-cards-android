@@ -1,0 +1,199 @@
+2026-10-08T16:45:51.887Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+      - list:
+        - listitem "Latest releases and bundles":
+          - button "Latest releases and bundles":
+            - generic: Latest releases and bundles
+        - listitem "Production":
+          - button "Production":
+            - generic: Production
+        - listitem "Testing":
+          - button "Testing":
+            - generic: Testing
+            - img: expand_less
+          - list:
+            - listitem "Open testing":
+              - button "Open testing":
+                - generic: Open testing
+            - listitem "Closed testing":
+              - button "Closed testing":
+                - generic: Closed testing
+            - listitem "Internal testing":
+              - button "Internal testing":
+                - generic: Internal testing
+            - listitem "Pre-launch report":
+              - button "Pre-launch report":
+                - generic: Pre-launch report
+                - img: expand_more
+            - listitem "Internal app sharing":
+              - button "Internal app sharing":
+                - generic: Internal app sharing
+        - listitem "Pre-registration":
+          - button "Pre-registration":
+            - generic: Pre-registration
+        - listitem "App integrity":
+          - button "App integrity":
+            - generic: App integrity
+        - listitem "Advanced settings":
+          - button "Advanced settings":
+            - generic: Advanced settings
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Create internal testing release" [level=1]
+- tablist:
+  - tab "Step 1 of 2, Create release" [selected]:
+    - generic: "1"
+    - generic: Create release
+  - tab "Step 2 of 2, Preview and confirm" [disabled]:
+    - generic: "2"
+    - generic: Preview and confirm
+- tabpanel
+- button "Discard draft release":
+  - generic: Discard draft release
+- heading "App bundles" [level=2]
+- img: clock_loader_60
+- heading "‎2 of 3 enhancements active" [level=3]
+- 'button "Show content: ‎2 of 3 enhancements active"':
+  - img: expand_more
+- heading "Upload app bundles" [level=3]
+- img: apk_document
+- generic: Drop app bundles here to upload
+- button "Upload":
+  - img: upload
+  - generic: Upload
+- button "Add from library":
+  - img: add_to_photos
+  - generic: Add from library
+- img: error
+- generic: hope-cards-1.0.14-v46.aab
+- button "Remove hope-cards-1.0.14-v46.aab":
+  - img: clear
+- alert "Validation errors":
+  - generic: "Translation failed for these languages: de. Please try uploading your app bundle again or disable these languages on the Grow users > Translations > App strings page. If you disable automatic translation for these languages, you can include them manually in your app or applicable users can receive your app's default strings instead."
+- heading "Previous release" [level=3]
+- generic: Include app versions from your previous release
+- heading "Included" [level=4]
+- img: slow_motion_video
+- paragraph: No app bundles from your previous release will be included in this release
+- heading "Not Included" [level=4]
+- generic: These versions from your previous release won't be included in this release
+- grid "Artifacts":
+  - row "File type Version API levels Target SDK Screen layouts ABIs Required features":
+    - columnheader "File type"
+    - columnheader "Version"
+    - columnheader "API levels"
+    - columnheader "Target SDK"
+    - columnheader "Screen layouts"
+    - columnheader "ABIs"
+    - columnheader "Required features"
+    - cell
+    - cell
+  - 'row "App bundle This app bundle has the following file attached: ReTrace mapping file Enhanced 41 (1.0.11) 23+ 36 4 4 2 Include View details for App bundle: 41 (1.0.11)"':
+    - 'gridcell "App bundle This app bundle has the following file attached: ReTrace mapping file Enhanced"':
+      - generic: App bundle
+      - 'img "This app bundle has the following file attached: ReTrace mapping file"': attachment
+      - button "Enhanced":
+        - img: info
+        - generic: Enhanced
+    - gridcell "41 (1.0.11)":
+      - generic: 41 (1.0.11)
+    - gridcell "23+":
+      - generic: 23+
+    - gridcell "36":
+      - generic: "36"
+    - gridcell "4":
+      - generic: "4"
+    - gridcell "4":
+      - generic: "4"
+    - gridcell "2":
+      - generic: "2"
+    - gridcell "Include":
+      - button "Include":
+        - generic: Include
+    - 'gridcell "View details for App bundle: 41 (1.0.11)"':
+      - 'button "View details for App bundle: 41 (1.0.11)"':
+        - img: arrow_right_alt
+- heading "Release details" [level=2]
+- group "Release name":
+  - generic: Release name *
+  - textbox "Release name": 1.0.14 (46) Gemini translation preview
+  - paragraph
+  - generic: 38 / 50
+  - generic: Text is 38 characters out of 50
+  - generic: This is so you can identify this release, and isn't shown to users on Google Play. We've suggested a name based on the first app bundle or APK in this release, but you can edit it.
+- group "Release notes":
+  - generic: Release notes
+  - button "Copy from a previous release":
+    - generic: Copy from a previous release
+  - textbox "Release notes" [active]: <en-US> Bug fixes. </en-US> <de-DE> Fehlerbehebungen. </de-DE> <es-419> Corrección de errores. </es-419> <fil> Mga pag-aayos ng bug. </fil> <fr-FR> Corrections de bugs. </fr-FR> <it-IT> Correzioni di bug. </it-IT> <ml-IN> പിഴവുകൾ പരിഹരിച്ചു. </ml-IN>
+  - paragraph
+  - generic: Release notes provided for 7 of 7 languages
+  - generic: Let users know what's in your release. Enter release notes for each language within the language tags.
+- button "Discard changes":
+  - generic: Discard changes
+- button "Save as draft":
+  - generic: Save as draft
+- button "Next":
+  - generic: Next
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/
+- status

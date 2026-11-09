@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import android.os.Build
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -78,7 +79,6 @@ import com.aaronsedna.hopecards.ui.components.ResponsiveScrollColumn
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
-import com.aaronsedna.hopecards.ui.theme.Poppins
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -118,7 +118,7 @@ fun SettingsScreen(
         Text(
             appString(R.string.settings_intro),
             color = colors.textSecondary,
-            fontFamily = Poppins,
+            fontFamily = appInterfaceFont(),
             fontSize = 16.sp,
             lineHeight = 28.sp,
             modifier = Modifier.padding(bottom = 28.dp),
@@ -335,7 +335,7 @@ private fun ReminderTimeDialog(
                         Text(
                             appString(R.string.settings_reminder_time),
                             color = colors.text,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 24.sp,
                             lineHeight = 30.sp,
@@ -362,7 +362,7 @@ private fun ReminderTimeDialog(
                         Text(
                             ":",
                             color = colors.accent,
-                            fontFamily = Poppins,
+                            fontFamily = appInterfaceFont(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 38.sp,
                         )
@@ -380,7 +380,7 @@ private fun ReminderTimeDialog(
                         horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.End),
                     ) {
                         TextButton(onClick = onDismiss) {
-                            Text(appString(R.string.cancel), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(appString(R.string.cancel), color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 16.sp)
                         }
                         Button(
                             onClick = onSave,
@@ -389,7 +389,7 @@ private fun ReminderTimeDialog(
                             shape = RoundedCornerShape(10.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = colors.accent, contentColor = colors.buttonText),
                         ) {
-                            Text(appString(R.string.save), fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(appString(R.string.save), fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 16.sp)
                         }
                     }
                 }
@@ -459,7 +459,7 @@ private fun TimeUnit(
                     ),
                     textStyle = TextStyle(
                         color = colors.text,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.Bold,
                         fontSize = 38.sp,
                         textAlign = TextAlign.Center,
@@ -490,7 +490,7 @@ private fun PeriodButton(label: String, selected: Boolean, onClick: () -> Unit) 
             Text(
                 label,
                 color = if (selected) colors.buttonText else colors.cardMuted,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp,
             )
@@ -526,7 +526,7 @@ private fun SelectorDialog(
                             Text(
                                 title,
                                 color = colors.text,
-                                fontFamily = Poppins,
+                                fontFamily = appInterfaceFont(),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 24.sp,
                                 lineHeight = 30.sp,
@@ -535,7 +535,7 @@ private fun SelectorDialog(
                             Text(
                                 subtitle,
                                 color = colors.textSecondary,
-                                fontFamily = Poppins,
+                                fontFamily = appInterfaceFont(),
                                 fontSize = 15.sp,
                                 lineHeight = 22.sp,
                                 modifier = Modifier.padding(top = 5.dp),
@@ -573,7 +573,7 @@ private fun SettingsHeader(label: String, icon: AppIconGlyph, modifier: Modifier
             color = colors.accent,
             shadowElevation = 3.dp,
         ) { Box(contentAlignment = Alignment.Center) { AppIcon(icon, null, Color.White, size = 20.dp) } }
-        Text(label, color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, letterSpacing = 1.2.sp, modifier = Modifier.padding(start = 14.dp))
+        Text(label, color = colors.accent, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold, fontSize = 15.sp, letterSpacing = 1.2.sp, modifier = Modifier.padding(start = 14.dp))
         Box(Modifier.padding(start = 18.dp).height(1.dp).weight(1f).background(colors.accentLine))
     }
 }
@@ -593,8 +593,8 @@ private fun SettingsRow(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Column(Modifier.weight(1f).padding(end = 18.dp)) {
-            Text(title, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 18.sp)
-            Text(subtitle, color = colors.textSecondary, fontFamily = Poppins, fontSize = 14.sp, lineHeight = 20.sp, modifier = Modifier.padding(top = 6.dp))
+            Text(title, color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold, fontSize = 18.sp)
+            Text(subtitle, color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 14.sp, lineHeight = 20.sp, modifier = Modifier.padding(top = 6.dp))
         }
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) { trailing() }
     }
@@ -670,8 +670,8 @@ private fun PickerRow(title: String, subtitle: String, selected: Boolean, onClic
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(Modifier.weight(1f)) {
-                Text(title, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
-                Text(subtitle, color = colors.textSecondary, fontFamily = Poppins, fontSize = 13.sp, lineHeight = 18.sp)
+                Text(title, color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+                Text(subtitle, color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 13.sp, lineHeight = 18.sp)
             }
             if (selected) {
                 AppIcon(AppIconGlyph.Checkmark, appString(R.string.selected), colors.accent, Modifier.padding(start = 12.dp), 22.dp)

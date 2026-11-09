@@ -1,0 +1,249 @@
+2026-10-10T16:09:55.732Z
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Search Google Play":
+        - /placeholder: Search for apps & games
+        - text: Hopecards
+      - generic: clear
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "Apps & games" [pressed]:
+    - generic: Apps & games
+    - generic: arrow_drop_down
+  - button "Device":
+    - generic: Device
+    - generic: arrow_drop_down
+- link "Hopecardis Hopecardis":
+  - /url: /store/apps/details?id=com.hopecardis.mobile
+  - generic: Hopecardis
+  - generic: Hopecardis
+- 'link "Play Daily Bible Verse: Hope Cards Daily Bible Verse: Hope Cards Aaronsedna"':
+  - /url: /store/apps/details?id=com.aaronsedna.hopecards
+  - 'button "Play Daily Bible Verse: Hope Cards"':
+  - generic: "Daily Bible Verse: Hope Cards"
+  - generic: Aaronsedna
+- link "Hope Fertility Hope Applications GmbH":
+  - /url: /store/apps/details?id=com.hopeapplicationsgmbh.hope3
+  - generic: Hope Fertility
+  - generic: Hope Applications GmbH
+- link "Golden Card Pact The hope ... Rated 4.0 stars out of five stars":
+  - /url: /store/apps/details?id=com.cardpact.pactbound
+  - generic: Golden Card Pact
+  - generic: The hope ...
+  - img "Rated 4.0 stars out of five stars":
+    - generic: "4.0"
+    - generic: star
+- link "Play Card Hog - Dungeon Crawler Card Hog - Dungeon Crawler SnoutUp Games Rated 4.2 stars out of five stars":
+  - /url: /store/apps/details?id=com.snoutup.cardhog
+  - button "Play Card Hog - Dungeon Crawler":
+  - generic: Card Hog - Dungeon Crawler
+  - generic: SnoutUp Games
+  - img "Rated 4.2 stars out of five stars":
+    - generic: "4.2"
+    - generic: star
+- link "HOPE National Health Mission (Madhya Pradesh) Rated 4.1 stars out of five stars":
+  - /url: /store/apps/details?id=com.hopeApp
+  - generic: HOPE
+  - generic: National Health Mission (Madhya Pradesh)
+  - img "Rated 4.1 stars out of five stars":
+    - generic: "4.1"
+    - generic: star
+- 'link "HeartCraft: Cards & Wishes Promptly Yours Rated 4.3 stars out of five stars"':
+  - /url: /store/apps/details?id=com.kuchkuch
+  - generic: "HeartCraft: Cards & Wishes"
+  - generic: Promptly Yours
+  - img "Rated 4.3 stars out of five stars":
+    - generic: "4.3"
+    - generic: star
+- link "HopeCare Hope Care, SA":
+  - /url: /store/apps/details?id=com.wow.hopecare
+  - generic: HopeCare
+  - generic: Hope Care, SA
+- link "Play Hearthstone Hearthstone Blizzard Entertainment, Inc. Rated 3.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.blizzard.wtcg.hearthstone
+  - button "Play Hearthstone":
+  - generic: Hearthstone
+  - generic: Blizzard Entertainment, Inc.
+  - img "Rated 3.7 stars out of five stars":
+    - generic: "3.7"
+    - generic: star
+- link "Play Card Guardians Roguelike Games Card Guardians Roguelike Games Tapps Games - PT Rated 4.4 stars out of five stars":
+  - /url: /store/apps/details?id=com.tapps.roguelike.rpg.cardguardians
+  - button "Play Card Guardians Roguelike Games":
+  - generic: Card Guardians Roguelike Games
+  - generic: Tapps Games - PT
+  - img "Rated 4.4 stars out of five stars":
+    - generic: "4.4"
+    - generic: star
+- link "Hope Wallet LIONHEART LABS":
+  - /url: /store/apps/details?id=io.hopenetwork.wallet
+  - generic: Hope Wallet
+  - generic: LIONHEART LABS
+- 'link "CardWho: Ask, Talk, Connect Erik Medya"':
+  - /url: /store/apps/details?id=com.erikmedya.cardwho
+  - generic: "CardWho: Ask, Talk, Connect"
+  - generic: Erik Medya
+- link "HOPE Spirit Box Joshua T Louis Rated 3.8 stars out of five stars":
+  - /url: /store/apps/details?id=com.hopeparanormal.hsb1
+  - generic: HOPE Spirit Box
+  - generic: Joshua T Louis
+  - img "Rated 3.8 stars out of five stars":
+    - generic: "3.8"
+    - generic: star
+- link "Card Hobby SSUPER TECHNOLOGY INC.":
+  - /url: /store/apps/details?id=com.oversea.card
+  - generic: Card Hobby
+  - generic: SSUPER TECHNOLOGY INC.
+- link "HeyCard Digital Business Card Jumilabs":
+  - /url: /store/apps/details?id=com.heycard.app
+  - generic: HeyCard Digital Business Card
+  - generic: Jumilabs
+- 'link "Play SBI Card: Manage Credit Card SBI Card: Manage Credit Card SBI Cards and Payment Services Limited Rated 4.6 stars out of five stars"':
+  - /url: /store/apps/details?id=com.ge.capital.konysbiapp
+  - 'button "Play SBI Card: Manage Credit Card"':
+  - generic: "SBI Card: Manage Credit Card"
+  - generic: SBI Cards and Payment Services Limited
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- link "Play Hearts Card Classic Hearts Card Classic Games By Post Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.gamesbypost.heartscardclassic
+  - button "Play Hearts Card Classic":
+  - generic: Hearts Card Classic
+  - generic: Games By Post
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Play Card Thief Card Thief Arnold Rauers Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.tinytouchtales.cardthief
+  - button "Play Card Thief":
+  - generic: Card Thief
+  - generic: Arnold Rauers
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- 'link "Cards Hero: Idle Card Game Card game CCG - DNK Studio"':
+  - /url: /store/apps/details?id=com.DnkStudio.HeroDeck
+  - generic: "Cards Hero: Idle Card Game"
+  - generic: Card game CCG - DNK Studio
+- 'link "Card Insider: Cards & Offers Card Insider Rated 1.6 stars out of five stars"':
+  - /url: /store/apps/details?id=com.cardinsider.creditcards
+  - generic: "Card Insider: Cards & Offers"
+  - generic: Card Insider
+  - img "Rated 1.6 stars out of five stars":
+    - generic: "1.6"
+    - generic: star
+- link "Farkle Cards FunCraft Games":
+  - /url: /store/apps/details?id=com.funcraft.farklecards
+  - generic: Farkle Cards
+  - generic: FunCraft Games
+- link "Hope for our Times Hope for our Times":
+  - /url: /store/apps/details?id=com.subsplashconsulting.s_8K93C2
+  - generic: Hope for our Times
+  - generic: Hope for our Times
+- 'link "OmniCard: UPI, Card & Rewards Eroute Technologies Private Limited Rated 4.5 stars out of five stars"':
+  - /url: /store/apps/details?id=com.eroute.omnicard
+  - generic: "OmniCard: UPI, Card & Rewards"
+  - generic: Eroute Technologies Private Limited
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Play Spades Solitaire - Card Games Spades Solitaire - Card Games Topy Games Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.spades.solitaire.online.plus.offline.free.card.games
+  - button "Play Spades Solitaire - Card Games":
+  - generic: Spades Solitaire - Card Games
+  - generic: Topy Games
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Play Hopscotch - Kids Fashion Brand Hopscotch - Kids Fashion Brand Hopscotch Rated 4.4 stars out of five stars":
+  - /url: /store/apps/details?id=in.hopscotch.android
+  - button "Play Hopscotch - Kids Fashion Brand":
+  - generic: Hopscotch - Kids Fashion Brand
+  - generic: Hopscotch
+  - img "Rated 4.4 stars out of five stars":
+    - generic: "4.4"
+    - generic: star
+- link "Play Spades Stars - Card Game Spades Stars - Card Game Bluetile Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.playvalve.spades
+  - button "Play Spades Stars - Card Game":
+  - generic: Spades Stars - Card Game
+  - generic: Bluetile
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Play Solitaire Story Solitaire Story Solitaire Card Games Classic Rated 4.1 stars out of five stars":
+  - /url: /store/apps/details?id=linkdesks.solitaire.rescue.story
+  - button "Play Solitaire Story":
+  - generic: Solitaire Story
+  - generic: Solitaire Card Games Classic
+  - img "Rated 4.1 stars out of five stars":
+    - generic: "4.1"
+    - generic: star
+- 'link "Poker Offline: Texas Holdem TeeHeeTiger Rated 4.2 stars out of five stars"':
+  - /url: /store/apps/details?id=com.redrocket.poker
+  - generic: "Poker Offline: Texas Holdem"
+  - generic: TeeHeeTiger
+  - img "Rated 4.2 stars out of five stars":
+    - generic: "4.2"
+    - generic: star
+- link "Play Magic Story of Solitaire Cards Magic Story of Solitaire Cards Rainbow Games Kz Rated 4.2 stars out of five stars":
+  - /url: /store/apps/details?id=com.rainbowgames.solitaire2018
+  - button "Play Magic Story of Solitaire Cards":
+  - generic: Magic Story of Solitaire Cards
+  - generic: Rainbow Games Kz
+  - img "Rated 4.2 stars out of five stars":
+    - generic: "4.2"
+    - generic: star
+- link "PackRat Card Collecting Game HookBang LLC":
+  - /url: /store/apps/details?id=air.mobile.hookbang.packrat
+  - generic: PackRat Card Collecting Game
+  - generic: HookBang LLC
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

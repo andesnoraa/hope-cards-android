@@ -9,6 +9,31 @@ class BibleQuizTest {
         QuizQuestion("q$it", "John 1:1", "Question $it", listOf("A", "B", "C", "D"), it % 4, "Explanation")
     }
 
+    @Test fun answerDurationsStayWithLockedAnswersAndExpireAtTheQuestionLimit() {
+        val first = QuizSession(questionIds = listOf("q0", "q1", "q2")).choose(0).submit(8_250L)
+        assertEquals(listOf(8_250L), first.answerTimesMillis)
+        assertEquals(first, first.submit(20_000L))
+        assertEquals(first, first.expireQuestion(30_000L))
+        val expired = first.advance().expireQuestion(90_000L)
+        val completed = expired.choose(2).submit(12_000L).advance()
+        assertEquals(listOf(0, -1, 2), completed.answers)
+        assertEquals(listOf(8_250L, 30_000L, 12_000L), completed.answerTimesMillis)
+        assertTrue(completed.isValidFor(bank))
+        assertEquals(completed, completed.expireQuestion(30_000L))
+    }
+
+    @Test fun untimedAndLegacyAnswersHaveNoInventedDurations() {
+        val untimed = QuizSession(questionIds = listOf("q0")).choose(0).submit().advance()
+        assertEquals(listOf<Long?>(null), untimed.answerTimesMillis)
+        val legacy = QuizSession(questionIds = listOf("q0", "q1"), answers = listOf(0), position = 1)
+        assertTrue(legacy.isValidFor(bank))
+        val completed = legacy.choose(1).submit(4_000L).advance()
+        assertEquals(listOf(null, 4_000L), completed.answerTimesMillis)
+        assertTrue(completed.isValidFor(bank))
+        assertFalse(completed.copy(answerTimesMillis = listOf(1L)).isValidFor(bank))
+        assertFalse(completed.copy(answerTimesMillis = listOf(-1L, 4_000L)).isValidFor(bank))
+    }
+
     @Test fun everyBibleEditionHasAQuizInItsOwnLanguage() {
         val expected = mapOf(
             Translation.BSB to QuizLanguage.ENGLISH, Translation.BBE to QuizLanguage.ENGLISH,

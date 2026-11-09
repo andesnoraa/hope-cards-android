@@ -1,0 +1,246 @@
+2026-10-08T16:02:23.550Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+      - list:
+        - listitem "Store presence":
+          - button "Store presence":
+            - generic: Store presence
+            - img: expand_less
+          - list:
+            - listitem "Store listings":
+              - button "Store listings":
+                - generic: Store listings
+            - listitem "Store settings":
+              - button "Store settings":
+                - generic: Store settings
+        - listitem "Store performance":
+          - button "Store performance":
+            - generic: Store performance
+            - img: expand_more
+        - listitem "Translations":
+          - button "Translations":
+            - generic: Translations
+            - img: expand_more
+        - listitem "Deep links":
+          - button "Deep links":
+            - generic: Deep links
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- link "Go back to Store listings":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings
+  - img: keyboard_backspace
+  - generic: Store listings
+- heading "Default store listing" [level=1]
+- tablist:
+  - tab "Step 1 of 2, Assets" [selected]:
+    - generic: "1"
+    - generic: Assets
+  - tab "Step 2 of 2, Review" [disabled]:
+    - generic: "2"
+    - generic: Review
+- tabpanel:
+  - generic: Select a language to edit
+  - button "Malayalam – ml-IN" [expanded]:
+    - generic: Malayalam – ml-IN
+    - img: arrow_drop_down
+  - button "Switch to the next language":
+    - generic: Next language
+    - img: arrow_right_alt
+  - heading "Import translations with AI" [level=3]
+  - generic: Save time by using AI to add translations instead of manually creating and adding a new translation for every language.
+  - button "Dismiss":
+    - generic: Dismiss
+  - button "Import a file":
+    - img: article_spark
+    - generic: Import a file
+  - heading "Common text assets" [level=2]
+  - generic "Required field": "*"
+  - 'button "Hide content: Common text assets" [expanded]':
+    - img: expand_less
+  - paragraph:
+    - text: Check the
+    - link "View metadata policy (opens in a new tab)":
+      - /url: https://play.google.com/about/storelisting-promotional/metadata
+      - text: Metadata policy
+    - text: and
+    - link "View Help Center guidance (opens in a new tab)":
+      - /url: https://support.google.com/googleplay/android-developer/answer/9866151
+      - text: Help Center guidance
+    - text: to avoid common issues with your store listing. Review all
+    - link "View program policies (opens in a new tab)":
+      - /url: https://play.google.com/about/developer-content-policy
+      - text: program policies
+    - text: before submitting your app.
+    - text: If you're eligible to
+    - link "View advance notice help (opens in a new tab)":
+      - /url: https://support.google.com/googleplay/android-developer/answer/6320428
+      - text: provide advance notice
+    - text: to the app review team, contact us before publishing your store listing.
+  - generic: App name
+  - generic "Required field": "*"
+  - generic: This is how your app will appear on Google Play
+  - textbox "App name": "ബൈബിൾ വചനം: Hope Cards"
+  - paragraph
+  - generic: 22 / 30
+  - generic: Text is 22 characters out of 30
+  - generic: Short description
+  - generic "Required field": "*"
+  - generic: Users can expand to view your full description.
+  - textbox "Short description": മലയാളം ബൈബിൾ വചനങ്ങൾ, വചനചിത്രങ്ങൾ, ക്വിസ്, പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ.
+  - paragraph
+  - generic: 73 / 80
+  - generic: Text is 73 characters out of 80
+  - generic: Full description
+  - generic "Required field": "*"
+  - textbox "Full description": പ്രത്യാശയ്ക്കും ധ്യാനത്തിനും പ്രോത്സാഹനത്തിനുമായി ഓരോ ദിവസവും ഒരു ബൈബിൾ വാക്യം കണ്ടെത്തൂ. ഒരു മനോഹരമായ കാർഡ് വീതം. തിരുവചനത്തോടൊപ്പം ലളിതമായൊരു ദൈനംദിന ശീലം വളർത്താൻ സഹായിക്കുന്ന ശാന്തമായ ബൈബിൾ വാക്യ ആപ്പാണ് Hope Cards. ഒരു വാക്യ കാർഡ് എടുക്കൂ, Daily Hope-ൽ ഇന്നത്തെ ബൈബിൾ വാക്യം വായിക്കൂ, പ്രിയപ്പെട്ട വാക്യങ്ങൾ സൂക്ഷിക്കൂ, ഓരോ തിരുവചനത്തോടും ബന്ധിപ്പിച്ച ജേർണൽ കുറിപ്പുകൾ എഴുതൂ. അക്കൗണ്ടോ സങ്കീർണ്ണമായ വായനാപദ്ധതിയോ ആവശ്യമില്ല. നിങ്ങളുടെ ഭാഷയിൽ ബൈബിൾ ക്വിസ് ബൈബിളിലെ വ്യക്തികളെയും സ്ഥലങ്ങളെയും സംഭവങ്ങളെയും കുറിച്ച് പഠിക്കാം. മലയാളം, ഇംഗ്ലീഷ്, ജർമ്മൻ, ഫ്രഞ്ച്, ഇറ്റാലിയൻ, സ്പാനിഷ്, ഫിലിപ്പിനോ ഭാഷകളിൽ കളിക്കാം. ചോദ്യങ്ങളുടെ ക്രമം ഓരോ റൗണ്ടിലും മാറിവരും. തിരഞ്ഞെടുത്ത ബൈബിൾ പരിഭാഷയുടെ ഭാഷയിൽ ക്വിസ് ലഭിക്കും. വചനസൂചനയോടെ ഉത്തരം പരിശോധിക്കാം. സ്കോറും എല്ലാ ചോദ്യങ്ങളും നിങ്ങൾ തിരഞ്ഞെടുത്ത ഉത്തരങ്ങളും ശരിയുത്തരങ്ങളും അടങ്ങിയ PDF റിപ്പോർട്ട് പങ്കിടാം. ഇന്റർനെറ്റ് ഇല്ലാതെയും ചോദ്യങ്ങൾ ലഭിക്കും. നിങ്ങളുടെ വേഗത്തിൽ കളിക്കാം, അല്ലെങ്കിൽ ഓരോ ചോദ്യത്തിനും 30 സെക്കൻഡ് കൗണ്ട്ഡൗൺ സജ്ജമാക്കാം. സമയം തീരുമ്പോൾ ക്വിസ് സ്വയം മുന്നോട്ട് നീങ്ങും. ടൈമർ ആദ്യം ഓഫ് ആയിരിക്കും. നിങ്ങൾ തിരഞ്ഞെടുത്ത ക്രമീകരണം അടുത്ത ക്വിസിലും നിലനിൽക്കും. ശബ്ദം ആദ്യം ഓൺ ആയിരിക്കും; വേണമെങ്കിൽ ഓഫ് ചെയ്യാം. ശബ്ദം ഓൺ ആണെങ്കിൽ അവസാന അഞ്ച് സെക്കൻഡിൽ ബീപ്പ് കേൾക്കാം. ബൈബിൾ ക്വിസ് സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കാം ബൈബിൾ ക്വിസ് മത്സരത്തിനായി A4 വലുപ്പത്തിലുള്ള പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ PDF ആയി തയ്യാറാക്കാം. ഒന്നിലധികം പങ്കാളികളുടെ പേരുകൾ ഒരുമിച്ച് ചേർക്കാം. ഓരോരുത്തർക്കും പ്രത്യേക സർട്ടിഫിക്കറ്റ് ലഭിക്കും. തിരഞ്ഞെടുത്ത ബൈബിളിന്റെ ഭാഷയിൽ സർട്ടിഫിക്കറ്റുകൾ സ്വയം തയ്യാറാകും. മത്സരത്തിന്റെ പേരും തീയതിയും നൽകാം; വേണമെങ്കിൽ സംഘടനയുടെ പേരും ചേർക്കാം. ഒരു സർട്ടിഫിക്കറ്റോ എല്ലാ PDF-കളോ ഒരുമിച്ച് പങ്കിടാം. വചനചിത്രങ്ങൾ സൂക്ഷിക്കാനും പങ്കിടാനും പൂക്കൾ, പക്ഷികൾ, കടൽത്തീരങ്ങൾ, നക്ഷത്രങ്ങൾ നിറഞ്ഞ ആകാശം എന്നിവ ഉൾപ്പെടുന്ന പ്രകൃതിദൃശ്യ പശ്ചാത്തലങ്ങൾ. ഗാലറി തുറക്കുമ്പോൾ പശ്ചാത്തലങ്ങൾ മാറിവരും. ഇഷ്ടമുള്ള വചനചിത്രങ്ങൾ സൂക്ഷിക്കാം, പങ്കിടാം. Hope Cards ഉപയോഗിച്ച് ചെയ്യാവുന്നത് പ്രോത്സാഹിപ്പിക്കുന്ന ബൈബിൾ വാക്യ കാർഡുകൾ എടുക്കാം ഓരോ ദിവസവും Daily Hope-ൽ ഇന്നത്തെ വാക്യം വായിക്കാം വിവിധ ബൈബിൾ പരിഭാഷകളിലും ഭാഷകളിലും വായിക്കാം ഇഷ്ടപ്പെട്ട വാക്യങ്ങൾ സൂക്ഷിക്കാം ഓരോ വാക്യത്തിനുമൊപ്പം ജേർണൽ കുറിപ്പുകൾ ചേർക്കാം നിങ്ങൾക്ക് അനുയോജ്യമായ സമയത്ത് ദൈനംദിന ഓർമ്മപ്പെടുത്തൽ ക്രമീകരിക്കാം വാക്യങ്ങൾ കുടുംബത്തോടും സുഹൃത്തുക്കളോടും പങ്കിടാം മനോഹരമായ കാർഡ് തീമുകൾ തിരഞ്ഞെടുക്കാം പ്രിയപ്പെട്ടവ, ജേർണൽ, ക്രമീകരണങ്ങൾ എന്നിവ ബാക്കപ്പ് എടുത്ത് പുനഃസ്ഥാപിക്കാം Daily Hope ഉപയോഗിക്കുമ്പോൾ ഇഷ്ടമെങ്കിൽ ശാന്തമായ പശ്ചാത്തല സംഗീതം കേൾക്കാം എല്ലാ സൗകര്യങ്ങളും ലഭ്യമാണ് ദിനവചനങ്ങൾ, ബൈബിൾ ക്വിസ്, സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കൽ, വചനചിത്രങ്ങൾ, തീമുകൾ, ഓർമ്മപ്പെടുത്തലുകൾ, പ്രിയപ്പെട്ടവ, ജേർണൽ എന്നിവയെല്ലാം ലഭ്യമാണ്. ഇടയ്ക്കുള്ള പരസ്യങ്ങൾ Hope Cards-നെ പിന്തുണയ്ക്കുന്നു. Google Play-യിലെ ഒറ്റത്തവണ വാങ്ങലിലൂടെ പരസ്യങ്ങൾ എന്നേക്കുമായി നീക്കാം. സബ്സ്ക്രിപ്ഷൻ ഇല്ല. ഒരു ശാന്ത നിമിഷത്തിനായാലും ദിവസം മുഴുവൻ ഒരു വാക്യം ഓർക്കാനായാലും, നിങ്ങളുടെ ഫോണിലും ടാബ്‌ലെറ്റിലും തിരുവചനത്തിന് ലളിതവും സ്വാഗതാർഹവുമായ ഇടം Hope Cards നൽകുന്നു.
+  - paragraph
+  - generic: 2955 / 4000
+  - generic: Text is 2955 characters out of 4000
+  - heading "Common visual assets" [level=2]
+  - 'button "Hide content: Common visual assets" [expanded]':
+    - img: expand_less
+  - paragraph:
+    - text: Manage your app icon, screenshots, and videos to promote your app on Google Play. Review the
+    - link "View content guidelines (opens in a new tab)":
+      - /url: https://support.google.com/googleplay/android-developer/answer/9866151#zippy=,app-icon
+      - text: content guidelines
+    - text: before uploading new graphics. If you add translations for your store listing without localized graphics, we will use the graphics from your default language.
+  - generic: App icon
+  - text: Your app icon must be a PNG or JPEG, up to 1 MB, 512 px by 512 px, and meet our
+  - link "View design specifications (opens in a new tab)":
+    - /url: https://developer.android.com/google-play/resources/icon-design-specifications
+    - text: design specifications
+  - text: and
+  - link "View metadata policy (opens in a new tab)":
+    - /url: https://support.google.com/googleplay/android-developer/answer/9898842
+    - text: metadata policy
+  - img "Cropped - icon-sq.png"
+  - button "Remove Cropped - icon-sq.png":
+    - img: delete
+  - button "View details for Cropped - icon-sq.png":
+    - img: arrow_right_alt
+  - generic "Icon 1 of 1": 1 / 1
+  - button "Add assets":
+    - generic: Add assets
+  - generic: Feature graphic
+  - text: Your featured graphic must be a PNG or JPEG, up to 15 MB, and 1,024 px by 500 px. This graphic will be used when you choose to feature your app.
+  - link "Learn more about featuring guidelines (opens in a new tab)":
+    - /url: https://play.google.com/console/about/guides/featuring/
+    - text: Learn more
+  - img "download.png"
+  - button "Remove download.png":
+    - img: delete
+  - button "View details for download.png":
+    - img: arrow_right_alt
+  - generic "Image 1 of 1": 1 / 1
+  - button "Add assets":
+    - generic: Add assets
+  - generic: Video
+  - generic: Add a video by entering a YouTube URL. This video must be public or unlisted, ads must be turned off, and it must not be age restricted.
+  - textbox "Video":
+    - /placeholder: https://youtu.be/twQv3naz1l4
+    - text: https://youtu.be/nu3CzkbKRcc
+  - paragraph
+  - heading "Phone assets" [level=2]
+  - 'button "Hide content: Phone assets" [expanded]':
+    - img: expand_less
+  - generic: Phone screenshots
+  - generic: Upload 2-8 phone screenshots. Screenshots must be PNG or JPEG, up to 8 MB each, 16:9 or 9:16 aspect ratio, with each side between 320 px and 3,840 px
+  - generic "Screenshot 0 of 8": 0 / 8
+  - button "Add assets" [disabled]:
+    - generic: Add assets
+  - heading "Tablet assets" [level=2]
+  - 'button "Show content: Tablet assets"':
+    - img: expand_more
+  - heading "Desktop assets" [level=2]
+  - 'button "Show content: Desktop assets"':
+    - img: expand_more
+  - heading "Android XR assets" [level=2]
+  - 'button "Show content: Android XR assets"':
+    - img: expand_more
+- button "Discard":
+  - generic: Discard
+- button "Save as draft":
+  - generic: Save as draft
+- button "Next":
+  - generic: Next
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/
+- menu [active]:
+  - menuitem "Manage languages":
+    - generic: Manage languages
+  - menuitem "Purchase translations":
+    - generic: Purchase translations
+  - menuitemradio "English (United States) – en-US":
+    - generic: English (United States) – en-US
+    - generic: Default
+  - menuitemradio "Filipino – fil":
+    - generic: Filipino – fil
+  - menuitemradio "French (France) – fr-FR":
+    - generic: French (France) – fr-FR
+  - menuitemradio "German – de-DE":
+    - generic: German – de-DE
+  - menuitemradio "Italian – it-IT":
+    - generic: Italian – it-IT
+  - menuitemradio "Malayalam – ml-IN" [checked]:
+    - generic: Malayalam – ml-IN
+  - menuitemradio "Spanish (Latin America) – es-419":
+    - generic: Spanish (Latin America) – es-419

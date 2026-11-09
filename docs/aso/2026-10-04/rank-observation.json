@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 3,
+  "app": {
+    "packageName": "com.aaronsedna.hopecards",
+    "consoleAppId": "4976302422419978923",
+    "displayedNameAtBaseline": "Daily Bible Verse & Bible Quiz"
+  },
+  "observationDate": "2026-10-04",
+  "context": {
+    "surface": "Google Play desktop web search",
+    "browser": "Google Chrome",
+    "authentication": "signed in",
+    "requestedCountry": "IN",
+    "countrySpecifiedBy": "gl=IN URL parameter",
+    "languageSpecifiedBy": "hl URL parameter",
+    "deviceClass": "desktop",
+    "sponsoredLabelsObserved": false,
+    "browserProfile": "Your Chrome",
+    "browserId": "1",
+    "accountFingerprintSha256": "d54ecae873358fce05e51d822d2051016bc9b859bd3f01a1aef47bb5b09cfdec",
+    "accountContinuityNote": "Same Chrome Your Chrome profile, browser 1 and email SHA-256 as October 3, verified on both public listings and all successful query snapshots. Chrome extension instance is now cf9158e1-6c95-4892-90df-7dc465a1f094 (runtime identity changed), with account and desktop search surface unchanged. Fingerprinted sequence starts September 28.",
+    "sequenceId": "chrome-your-chrome-IN-account-fingerprinted-2026-09-28",
+    "extensionInstanceId": "cf9158e1-6c95-4892-90df-7dc465a1f094"
+  },
+  "methodology": "One sample for each exact baseline query. Signed-in baseline Chrome profile with gl=IN and baseline hl; identify by package ID. Inspect rendered ordered app links through footer, maximum 50. Full dated DOM snapshots and ordered IDs are retained. No Sponsored labels observed. Mixed HCL Verse featured/recommendation page is unavailable for comparable organic ranking.",
+  "samples": [
+    {
+      "query": "daily bible verse",
+      "intent": "primary_category",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=daily%20bible%20verse&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:54.985Z",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-1.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "Hope Cards",
+      "intent": "brand",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.061Z",
+      "inspectedResultCount": 30,
+      "organicPosition": 1,
+      "status": "observed",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-2.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "Hopecards",
+      "intent": "brand_variant",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=Hopecards&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.104Z",
+      "inspectedResultCount": 30,
+      "organicPosition": 3,
+      "status": "observed",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-3.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "verse of the day",
+      "intent": "secondary_category",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=verse%20of%20the%20day&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.143Z",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-4.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "bible quiz",
+      "intent": "secondary_feature",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=bible%20quiz&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:03:48.376Z",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-5.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      },
+      "retryNote": "Initial HTTP 500. One reload recovered; failed attempt retained separately."
+    },
+    {
+      "query": "daily bible",
+      "intent": "diagnostic",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.211Z",
+      "inspectedResultCount": 30,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-6.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "verse",
+      "intent": "diagnostic",
+      "requestedCountry": "IN",
+      "requestedLanguage": "en",
+      "url": "https://play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.251Z",
+      "inspectedResultCount": 0,
+      "organicPosition": null,
+      "status": "unavailable_noncomparable_featured_page",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-7.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      },
+      "inspectedAppLinkCount": 20,
+      "note": "Featured HCL Verse detail and separate recommendations; comparable organic rank unavailable."
+    },
+    {
+      "query": "മലയാളം ബൈബിൾ വചനങ്ങൾ",
+      "intent": "localized_category",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82%20%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE&c=apps&hl=ml&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.303Z",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-8.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "ഇന്നത്തെ വചനം",
+      "intent": "localized_category",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%87%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B5%86%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%82&c=apps&hl=ml&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.355Z",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-9.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    },
+    {
+      "query": "ബൈബിൾ ക്വിസ്",
+      "intent": "localized_feature",
+      "requestedCountry": "IN",
+      "requestedLanguage": "ml",
+      "url": "https://play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN",
+      "observedAtUtc": "2026-10-04T05:02:55.404Z",
+      "inspectedResultCount": 50,
+      "organicPosition": null,
+      "status": "not_observed_within_inspected_results",
+      "sponsoredLabelsObserved": false,
+      "sponsoredPlacements": [],
+      "evidence": {
+        "type": "rendered_DOM_package_link_inspection",
+        "snapshot": "query-10.txt",
+        "orderedPackageIdsFile": "search-evidence.json",
+        "footerObserved": true
+      }
+    }
+  ],
+  "milestones": {
+    "primaryCategoryConsecutiveDailyTopFive": 0,
+    "primaryCategoryTopFive": "not_achieved",
+    "exactBrandConsecutiveDailyTopFive": 7,
+    "brandVariantConsecutiveDailyTopFive": 6,
+    "sustainedMilestoneAchieved": true,
+    "datesSupportingExactBrandTopFive": [
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04"
+    ],
+    "datesSupportingBrandVariantTopFive": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04"
+    ],
+    "sustainedMilestoneScope": "Exact brand Hope Cards only. India, hl=en, signed-in Google Play desktop web. Rank 1 each day September 28–October 4. Primary category milestone not achieved.",
+    "exactBrandTopFive": "achieved_seven_consecutive_daily_samples"
+  }
+}

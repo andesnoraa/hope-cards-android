@@ -1,0 +1,121 @@
+2026-10-12T17:32:22.600Z
+Browser tab: 455027203, Title: "Daily Bible Verse: Hope Cards - Apps on Google Play", URL: "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards&hl=en&gl=IN".
+1 AXWebArea Daily Bible Verse: Hope Cards - Apps on Google Play, URL: play.google.com/store/apps/details?id=com.aaronsedna.hopecards&hl=en&gl=IN
+	2 container yDmH0d
+		3 container
+			4 container Page Header
+				5 link Description: Google Play logo, Value: play.google.com/store/games
+				6 container Main
+					7 tab group
+						8 tab (selectable, settable, boolean) Games, Value: 0, ID: 11
+						9 tab (selected, settable, boolean) Apps, Value: 1
+						10 tab (selectable, settable, boolean) Books, Value: 0, ID: 5
+						11 tab (selectable, settable, boolean) Kids, Value: 0, ID: 13
+				12 button Search
+				13 button Help Center
+				14 pop up button (collapsed) Description: Google Account: Aaronsedna ([redacted signed-in account]), Secondary Actions: Expand
+		15 container
+			16 container
+				17 heading Daily Bible Verse: Hope Cards, Value: 1
+					18 text Daily Bible Verse: Hope Cards
+				19 link Description: Aaronsedna, Value: play.google.com/store/apps/developer?id=Aaronsedna
+				20 text Contains ads  ·  In-app purchases
+				21 container Information badges
+					22 container
+						23 text 100+ Downloads
+			24 button (disabled) Install on more devices
+				25 text Install on more devices
+			26 button Share
+				27 text Share
+			28 button Play trailer
+			29 text This app is available for all of your devices
+			116 container
+				117 content list
+					118 button Screenshot image
+					119 button Screenshot image
+					120 button Screenshot image
+					121 button Screenshot image
+					122 button Screenshot image
+					123 button Screenshot image
+					124 button Screenshot image
+					125 button Screenshot image
+					126 button Screenshot image
+					127 button Screenshot image
+					128 button Screenshot image
+					129 button Screenshot image
+					130 button Screenshot image
+					131 button Screenshot image
+					132 button Screenshot image
+					133 button Screenshot image
+					134 button Screenshot image
+				135 button Scroll Next
+			48 container
+				49 heading What’s new, Value: 2
+					50 text What’s new
+				51 text Bug fixes.
+			52 container
+				53 text Featured stories
+				54 content list
+					55 container
+						56 link Description: Special event Play Fest starts on October 13 Big savings, big offers, and more, Value: play.google.com/store/apps/editorial?id=mc_games_cmp_play_days_2026_fcp
+			57 container
+				58 heading Data safety, Value: 2
+					59 text Data safety
+				60 container
+					61 link Description: See more information on Data safety, Value: play.google.com/store/apps/datasafety?id=com.aaronsedna.hopecards
+				62 text Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.
+				63 content list
+					64 container
+						65 text This app may share these data types with third parties Location, App activity and 2 others
+					66 container
+						67 text This app may collect these data types Location, App activity and 2 others
+					68 text Data is encrypted in transit
+				69 container
+					70 link Description: See more details on data safety, Value: play.google.com/store/apps/datasafety?id=com.aaronsedna.hopecards
+			71 container
+				72 heading About this app, Value: 2
+					73 text About this app
+				74 button See more information on About this app
+				75 container Daily Bible verses, verse images, Bible quiz and a quiz certificate generator.
+					76 text Daily Bible verses, verse images, Bible quiz and a quiz certificate generator.
+				77 text Updated on Oct 8, 2026
+				78 container
+					79 link Description: Lifestyle, Value: play.google.com/store/apps/category/LIFESTYLE
+			80 link Description: Flag as inappropriate (opens in new window), Value: support.google.com/googleplay/?p=report_content
+			81 image Content rating
+			82 text Rated for 3+
+			83 text In-App Purchases
+			84 link Description: Learn more about content ratings (opens in new window), Value: support.google.com/googleplay?p=appgame_ratings
+			85 container developer-contacts-heading
+				86 heading App support, Value: 2
+					87 text App support
+				88 button (collapsed) Expand
+			89 container
+				90 heading More apps to try, Value: 2
+					91 text More apps to try
+				92 container
+					93 link Description: See more information on More apps to try, Value: play.google.com/store/apps/collection/cluster?gsr=SmJqLHFUM0xjU01jRGFlVHFFR1RUN3ZzQlN0OEdZYm1FN3JXaUVtWENOTENaam89mgguChwKGGNvbS5hYXJvbnNlZG5hLmhvcGVjYXJkcxAHEAIaBggBEAAYACAAMAE4ALASAA%3D%3D:S:ANO1ljJ4L_A
+				94 link Description: Livly Island - Adopt Cute Pets ENSAPIA Corporation Rated 3.6 stars out of five stars, Value: play.google.com/store/apps/details?id=jp.cocone.livly
+				95 link Description: Lionsgate Play: Movies & Shows Lionsgate Play LLP Rated 3.8 stars out of five stars, Value: play.google.com/store/apps/details?id=com.lionsgateplay.videoapp
+				96 link Description: Chat AI: Ask Agent Anything Deep Flow Apps Rated 4.4 stars out of five stars, Value: play.google.com/store/apps/details?id=com.codeway.chatapp
+				97 link Description: Suno - AI Music & Songs Maker Suno, Inc Rated 4.6 stars out of five stars, Value: play.google.com/store/apps/details?id=com.suno.android
+				98 link Description: Truecaller: Call Blocker Truecaller Rated 4.4 stars out of five stars, Value: play.google.com/store/apps/details?id=com.truecaller
+				99 link Description: Lose Weight App for Men Leap Fitness Group Rated 4.9 stars out of five stars, Value: play.google.com/store/apps/details?id=menloseweight.loseweightappformen.weightlossformen
+		100 container
+			101 text Google Play
+			102 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			103 link Description: Play Points, Value: play.google.com/store/points/enroll
+			104 link Description: Gift cards, Value: play.google.com/about/giftcards
+			105 link Description: Redeem, Value: play.google.com/redeem
+			106 link Description: Refund policy, Value: support.google.com/googleplay/answer/134336
+			107 text Kids & family
+			108 link Description: Parent Guide, Value: support.google.com/googleplay?p=pff_parentguide
+			109 link Description: Family sharing, Value: support.google.com/googleplay/answer/7007852
+			110 link Description: Terms of Service, Value: play.google.com/intl/en_in/about/play-terms.html
+			111 link Description: Privacy, Value: policies.google.com/privacy
+			112 link Description: About Google Play, Value: support.google.com/googleplay/?p=about_play
+			113 link Description: Developers, Value: developer.android.com/index.html
+			114 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			115 text All prices include GST. India (English)
+
+The focused UI element is 1 AXWebArea Daily Bible Verse: Hope Cards - Apps on Google Play, URL: play.google.com/store/apps/details?id=com.aaronsedna.hopecards&hl=en&gl=IN

@@ -1,0 +1,133 @@
+Browser tab: 455027219, Title: "ബൈബിൾ ക്വിസ് - Google Play-യിലെ Android ആപ്പുകൾ", URL: "https://play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN".
+1 AXWebArea ബൈബിൾ ക്വിസ് - Google Play-യിലെ Android ആപ്പുകൾ, URL: play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN
+	2 container yDmH0d
+		3 container പേജ് ഹെഡ്ഡര്‍
+			4 link Description: Google Play ലോഗോ, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Description: Google Play-യിൽ തിരയുക, Value: ബൈബിൾ ക്വിസ്
+			8 button സഹായ കേന്ദ്രം
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna (redacted), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: ആപ്പുകളും ഗെയിമുകളും, Value: 1
+				13 checkbox Description: ഉപകരണം, Value: 0
+			14 container
+				15 container
+					16 link Description: Bible Quiz (ബൈബിള്‍ ക്വിസ്സ്) SeedDevelopers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.pscexams.pro
+				17 container
+					18 link Description: BIBLE TRIVIA - Bible Quiz Game Red Nucifera അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.rednucifera.bible.trivia.quiz.game
+				19 container
+					20 link Description: Bible Quiz: Trivia Game പ്ലേ ചെയ്യുക Bible Quiz: Trivia Game Supergonk അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=org.supergonk.bible
+				21 container
+					22 link Description: Bible Trivia - Word Quiz Game Topy Games അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=bible.trivia.quiz.question.answer.spelling.correct.knowledge.test.game
+				23 container
+					24 link Description: Lighthouse Bible Quiz പ്ലേ ചെയ്യുക Lighthouse Bible Quiz Gospel Garden Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.lighthousequiz.app
+				25 container
+					26 link Description: Bible Quiz: Trivia Game Maias Dev, Value: play.google.com/store/apps/details?id=com.quizbiblia.quiz_biblia
+				27 container
+					28 link Description: Bible Trivia: Bible Quiz Game Clappy LLC അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.clappy.bibletrivia
+				29 container
+					30 link Description: Bible Quiz Ronasoft Media അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.ronasoftstudios.biblequiz
+				31 container
+					32 link Description: Bible Trivia Quiz, Bible Guide Christian Resources- Bible Truth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.biblequestions.adevarprezent
+				33 container
+					34 link Description: Bible Basics Trivia Quiz Game RD Games, Inc, Value: play.google.com/store/apps/details?id=com.rdgames.biblebasics
+				35 container
+					36 link Description: Bible Quiz Quest Adventure പ്ലേ ചെയ്യുക Bible Quiz Quest Adventure Blessy അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.quiz.biblequizquest
+				37 container
+					38 link Description: Bible Quiz Pro: Bible Trivia Christian Games അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=us.christiangames.bibletrivia
+				39 container
+					40 link Description: Malayalam Bible Quiz Oly Bible, Value: play.google.com/store/apps/details?id=com.malayalambible.quiz.trivia
+				41 container
+					42 link Description: Ultimate Bible Quiz The Ascension Apps, Value: play.google.com/store/apps/details?id=com.quiz.ultimatebiblequiz
+				43 container
+					44 link Description: Bible Quiz - Ask a Christian Kermezou, Value: play.google.com/store/apps/details?id=com.axelcode.bible.quiz.app
+				45 container
+					46 link Description: Bible Quiz – English & Telugu 2Anns Media അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.twoannsmedia.jeevadharabiblequiz
+				47 container
+					48 link Value: play.google.com/store/apps/details?id=com.bible.quizpro, Description: Bible Quiz Chapter By Chapter പ്ലേ ചെയ്യുക Bible Quiz Chapter By Chapter SeedDevelopers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				49 container
+					50 link Description: Bible Questions & Answers FAQ Christian Resources- Bible Truth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.book.bible
+				51 container
+					52 link Description: Bible Quiz & Answers Drew Neuro അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.neuron.learningnumbers
+				53 container
+					54 link Description: Bible Trivia Quiz Game Kinzudi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.bibletrivia.biblequiz
+				55 container
+					56 link Description: बाइबल क्विज प्रतियोगिता Africa Resurrection അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.resurrection.biblequiz
+				57 container
+					58 link Description: Hindi Bible Quiz Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.hindibible.quiz.trivia
+				59 container
+					60 link Description: Arabic Bible Quiz Oly Bible, Value: play.google.com/store/apps/details?id=com.arabicbible.quiz.trivia
+				61 container
+					62 link Description: Bible Master – Quiz & Trivia Eggies ₹270.00, Value: play.google.com/store/apps/details?id=com.eggies.biblemaster
+				63 container
+					64 link Value: play.google.com/store/apps/details?id=com.biblestudios.bibletrivia, Description: Bible Trivia: Jesus Quiz Games പ്ലേ ചെയ്യുക Bible Trivia: Jesus Quiz Games Bible Studios (App & Games) അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				65 container
+					66 link Description: Bible Quiz: Chapter by Chapter Janus Works LLC, Value: play.google.com/store/apps/details?id=com.janus.trivia
+				67 container
+					68 link Description: Bible Quiz Images AZak അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=mysuperiorgames.biblequiz
+				69 container
+					70 link Description: Hindi Bible Quiz SeedDevelopers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.hindibible.quiz
+				71 container
+					72 link Description: Malayalam Catholic Bible Quiz JJMT, Value: play.google.com/store/apps/details?id=com.jjmt.mjcjbmqt
+				73 container
+					74 link Description: Bible Show - Quiz Game Hosanna Games, Value: play.google.com/store/apps/details?id=com.alexkojicBibleShowQuiz
+				75 container
+					76 link Description: Discover the Bible - the Quiz Luca Sigle, Value: play.google.com/store/apps/details?id=com.lucasigle.biblequizzes
+				77 container
+					78 link Description: Bible - Study, Audio & Quiz Holisite അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=bibleKJV.bible.kingjamesbible
+				79 container
+					80 link Description: Kannada Bible Quiz Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.kannadabible.quiz.trivia
+				81 container
+					82 link Description: Bible Quest: Quiz & Rewards The Ascension Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.biblequest.app
+				83 container
+					84 link Description: Jesus Bible Trivia Games Quiz RD Games, Inc അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.gmail.troylyndon.PlayTrivia
+				85 container
+					86 link Description: Bible Verses - Bible Quiz Bange Sabastine Hwonyi അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.bible.verse
+				87 container
+					88 link Description: Bible Quiz - Le Jeu Familial ALSLG, Value: play.google.com/store/apps/details?id=xyz.heritier.quiz
+				89 container
+					90 link Description: Telugu Bible Quiz Daily Trivia J Angel Apps, Value: play.google.com/store/apps/details?id=com.jangelapps.telugubiblequiz
+				91 container
+					92 link Description: Bible Quiz Dozcore അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.dozcore.mathew.biblequiz
+				93 container
+					94 link Description: Najibu: Bible Quizzes & Trivia Najibu KE, Value: play.google.com/store/apps/details?id=app.najibu.najibu
+				95 container
+					96 link Description: Logos Bible Quiz - Malayalam Seemas.Justin, Value: play.google.com/store/apps/details?id=com.logosbiblequiz.logos_bible_quiz
+				97 container
+					98 link Description: ലോഗോസ് ബൈബിൾ ക്വിസ് Ebby Stephen അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.biblelogosquiz.app
+				99 container
+					100 link Description: Bible Quiz Ultra By Chapter SeedDevelopers, Value: play.google.com/store/apps/details?id=com.biblequiz.learn
+				101 container
+					102 link Description: Bible Quiz പ്ലേ ചെയ്യുക Bible Quiz JWgames അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.RMsoftwares.JWgamequizfree
+				103 container
+					104 link Description: Bible Quiz in English Agapéame, Value: play.google.com/store/apps/details?id=com.agapeame.quizgame
+				105 container
+					106 link Description: Bible Answers & Questions Apps_Central, Value: play.google.com/store/apps/details?id=com.wordsofthegospel.bibleanswers
+				107 container
+					108 link Description: Bible Trivia - True or False? Christian Games അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=us.christiangames.trueorfalse
+				109 container
+					110 link Description: Bible Quiz: Bible Trivia Games Red Nucifera അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.rednucifera.biblequiz
+				111 container
+					112 link Value: play.google.com/store/apps/details?id=air.cbn.superbook.bible.app.android, Description: Superbook Kids Bible App പ്ലേ ചെയ്യുക Superbook Kids Bible App The Christian Broadcasting Network (CBN) അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				113 container
+					114 link Value: play.google.com/store/apps/details?id=com.rednucifera.bible_quiz_multiplayer, Description: Bible Trivia Quiz: Multiplayer പ്ലേ ചെയ്യുക Bible Trivia Quiz: Multiplayer Red Nucifera അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+		115 container
+			116 text Google Play
+			117 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			118 link Description: Play Points, Value: play.google.com/store/points/enroll
+			119 link Description: സമ്മാന കാർഡുകൾ, Value: play.google.com/about/giftcards
+			120 link Description: റിഡീം ചെയ്യുക, Value: play.google.com/redeem
+			121 link Description: റീഫണ്ട് നയം, Value: support.google.com/googleplay/answer/134336
+			122 text കുട്ടികളും കുടുംബവും
+			123 link Description: രക്ഷാകർതൃ ഗൈഡ്, Value: support.google.com/googleplay?p=pff_parentguide
+			124 link Description: കുടുംബവുമായി പങ്കിടൽ, Value: support.google.com/googleplay/answer/7007852
+			125 link Description: സേവന നിബന്ധനകൾ, Value: play.google.com/intl/ml_in/about/play-terms.html
+			126 link Description: സ്വകാര്യത, Value: policies.google.com/privacy
+			127 link Description: Google Play-യെ കുറിച്ച്, Value: support.google.com/googleplay/?p=about_play
+			128 link Description: ഡെവലപ്പർമാർ, Value: developer.android.com/index.html
+			129 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			130 text എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ. ഇന്ത്യ (മലയാളം)
+
+The focused UI element is 1 AXWebArea ബൈബിൾ ക്വിസ് - Google Play-യിലെ Android ആപ്പുകൾ, URL: play.google.com/store/search?q=%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%BF%E0%B4%B8%E0%B5%8D&c=apps&hl=ml&gl=IN

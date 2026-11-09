@@ -1,0 +1,93 @@
+Browser tab: 455027219, Title: "Ratings | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings".
+1 AXWebArea Ratings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/home
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 pop up button (collapsed) Description: Switch developer accounts, Secondary Actions: Expand
+				10 button (collapsed) Description: Google Account: Aaronsedna (redacted), Secondary Actions: Expand
+			11 content list
+				12 container Home
+					13 button Home
+				14 container Manage account
+					15 button Manage account
+				16 container Daily Bible Verse: Hope Cards
+					17 pop up button Daily Bible Verse: Hope Cards
+				18 container Dashboard
+					19 button Dashboard
+				20 container Statistics
+					21 button Statistics
+				22 container Publishing overview
+					23 button Publishing overview
+				24 container Protected with Play
+					25 button Protected with Play
+				26 container (collapsed) Description: Test and release, Secondary Actions: Expand
+					27 button Test and release
+				28 container (expanded) Description: Monitor and improve, Secondary Actions: Collapse
+					29 button Monitor and improve
+				30 container (collapsed) Description: Grow users, Secondary Actions: Expand
+					31 button Grow users
+				32 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+					33 button Monetize with Play
+			34 container main-content
+				35 container
+					36 heading Ratings, Value: 1
+						37 text Ratings
+					38 link Description: Go to Download reports, Value: play.google.com/console/u/0/developers/7885801294965165245/download-reports/statistics?appId=4976302422419978923
+					39 container
+						40 text See how users rate your app on Google Play.
+						41 button Show more details about Ratings
+					42 heading Configure report, Value: 3
+						43 text Configure report
+					44 container Overview Default Google Play rating Average rating (last 28 days) Users Rating vs. peers: - More information about "Rating vs. peers: -" Yesterday's average
+						45 heading Overview, Value: 2
+							46 text Overview
+						47 container
+							48 button (collapsed) Default Google Play rating, Secondary Actions: Expand
+						49 container
+							50 button (collapsed) Average rating (last 28 days), Secondary Actions: Expand
+						51 container
+							52 button (collapsed) Users, Secondary Actions: Expand
+						53 heading Rating vs. peers: -, Value: 3
+							54 text Rating vs. peers: -
+						55 button (collapsed) Description: More information about "Rating vs. peers: -", Secondary Actions: Expand
+						56 container
+							57 button (collapsed) Yesterday's average, Secondary Actions: Expand
+						58 container
+							59 text vs. peers' median
+						60 container
+							61 text Peers' median
+						62 button (disabled, collapsed) Description: Show peers, Secondary Actions: Expand
+							63 text Show peers
+					64 heading Performance over time, Value: 2
+						65 text Performance over time
+					66 pop up button (collapsed) Period: Daily, Secondary Actions: Expand
+						67 text Period: Daily
+					68 pop up button (collapsed) Last 28 days, ID: aD5248E2C-DD8E-4119-807F-BE8B3D0B54DE--0, Secondary Actions: Expand
+					69 text Average rating
+					70 button (disabled) Download CSV
+						71 text Download CSV
+					72 pop up button (collapsed) Show: Daily average rating, Secondary Actions: Expand
+						73 text Show: Daily average rating
+					74 text Rating distribution
+					75 button (disabled) Download CSV
+						76 text Download CSV
+					77 pop up button (collapsed) Show: Absolute numbers, Secondary Actions: Expand
+						78 text Show: Absolute numbers
+					79 heading Ratings breakdown, Value: 2
+						80 text Ratings breakdown
+					81 pop up button (collapsed) Any number of ratings, ID: aD5248E2C-DD8E-4119-807F-BE8B3D0B54DE--2, Secondary Actions: Expand
+					82 pop up button (collapsed) Last 28 days, ID: aD5248E2C-DD8E-4119-807F-BE8B3D0B54DE--4, Secondary Actions: Expand
+					83 text No ratings match your filters
+				84 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				85 link Description: Status dashboard, Value: status.play.google.com/
+				86 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				87 text © 2026 Google
+				88 link Description: Privacy, Value: google.com/policies/privacy/
+				89 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				90 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Ratings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings

@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -34,7 +35,6 @@ import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.components.ResponsiveScrollColumn
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
-import com.aaronsedna.hopecards.ui.theme.Poppins
 
 private data class AdFreeBenefit(
     val title: Int,
@@ -87,7 +87,7 @@ fun RemoveAdsScreen(
             Text(
                 text = appString(R.string.remove_ads_title),
                 color = colors.text,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 28.sp,
                 lineHeight = 34.sp,
@@ -97,7 +97,7 @@ fun RemoveAdsScreen(
             Text(
                 text = appString(R.string.remove_ads_body),
                 color = colors.textSecondary,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontSize = 15.sp,
                 lineHeight = 23.sp,
                 textAlign = TextAlign.Center,
@@ -133,7 +133,7 @@ fun RemoveAdsScreen(
                 Text(
                     text = appString(R.string.restore_purchase),
                     modifier = Modifier.padding(start = 7.dp),
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 14.sp,
                 )
@@ -146,7 +146,7 @@ fun RemoveAdsScreen(
                 Text(
                     text = appString(R.string.ad_privacy_choices),
                     modifier = Modifier.padding(start = 7.dp),
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.Normal,
                     fontSize = 13.sp,
                 )
@@ -175,7 +175,7 @@ private fun BenefitRow(benefit: AdFreeBenefit) {
         Text(
             text = appString(benefit.title),
             color = colors.text,
-            fontFamily = Poppins,
+            fontFamily = appInterfaceFont(),
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
             lineHeight = 20.sp,
@@ -211,7 +211,7 @@ private fun PurchaseAction(
                 Text(
                     text = appString(R.string.checking_google_play),
                     color = colors.text,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(start = 10.dp),
                 )
@@ -232,7 +232,7 @@ private fun PurchaseAction(
                 Text(
                     text = appString(R.string.ad_free_active),
                     color = colors.text,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
                     textAlign = TextAlign.Center,
@@ -253,7 +253,7 @@ private fun PurchaseAction(
             ) {
                 Text(
                     text = billing.price?.let { appString(R.string.remove_ads_price, it) } ?: appString(R.string.remove_ads_forever),
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
                     textAlign = TextAlign.Center,
@@ -266,7 +266,7 @@ private fun PurchaseAction(
                     appString(R.string.google_play_local_price)
                 },
                 color = colors.textTertiary,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontSize = 12.sp,
                 lineHeight = 18.sp,
                 textAlign = TextAlign.Center,

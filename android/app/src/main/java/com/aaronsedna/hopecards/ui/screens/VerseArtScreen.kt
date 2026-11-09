@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import android.content.Intent
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -90,7 +91,7 @@ fun VerseArtScreen(
                         shape = RoundedCornerShape(12.dp),
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground, contentColor = colors.buttonText)) {
-                        Text(appString(R.string.art_browse_all), fontFamily = Poppins, fontSize = 14.sp,
+                        Text(appString(R.string.art_browse_all), fontFamily = appInterfaceFont(), fontSize = 14.sp,
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center)
                     }
                     OutlinedButton(onClick = { onCategory(VerseArtCatalog.SAVED) },
@@ -99,7 +100,7 @@ fun VerseArtScreen(
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
                         border = androidx.compose.foundation.BorderStroke(1.dp, colors.textSecondary),
                         colors = ButtonDefaults.outlinedButtonColors(contentColor = colors.text)) {
-                        Text(appString(R.string.art_saved), fontFamily = Poppins, fontSize = 14.sp,
+                        Text(appString(R.string.art_saved), fontFamily = appInterfaceFont(), fontSize = 14.sp,
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center)
                     }
                 }
@@ -109,7 +110,7 @@ fun VerseArtScreen(
                     contentPadding = PaddingValues(horizontal = 20.dp, vertical = 12.dp),
                 ) {
                     item {
-                        Text(appString(R.string.art_choose_category), fontFamily = Poppins, fontSize = 13.sp,
+                        Text(appString(R.string.art_choose_category), fontFamily = appInterfaceFont(), fontSize = 13.sp,
                             color = colors.textSecondary, modifier = Modifier.padding(bottom = 10.dp))
                     }
                     items(VerseArtCatalog.categories, key = { it.id }) { category ->
@@ -123,9 +124,9 @@ fun VerseArtScreen(
                                     ?: category.artworkIds.first { it in available })!!,
                                     thumbnail = true, modifier = Modifier.size(60.dp), description = null, rotation = checkNotNull(rotation))
                                 Column(Modifier.weight(1f).padding(horizontal = 16.dp)) {
-                                    Text(category.title, color = colors.text, fontFamily = Poppins,
+                                    Text(category.title, color = colors.text, fontFamily = appInterfaceFont(),
                                         fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
-                                    Text(category.description, color = colors.textSecondary, fontFamily = Poppins,
+                                    Text(category.description, color = colors.textSecondary, fontFamily = appInterfaceFont(),
                                         fontSize = 12.sp, lineHeight = 19.sp, modifier = Modifier.padding(top = 4.dp))
                                 }
                                 AppIcon(AppIconGlyph.ChevronForward, null, colors.textTertiary, size = 18.dp)
@@ -140,10 +141,10 @@ fun VerseArtScreen(
                     gallery?.ordered(VerseArtCatalog.inCategory(categoryId, favorites)).orEmpty()
                 }
                 Column(Modifier.widthIn(max = 760.dp).fillMaxSize()) {
-                    Text(appQuantityString(R.plurals.art_count, artworks.size, artworks.size), fontFamily = Poppins,
+                    Text(appQuantityString(R.plurals.art_count, artworks.size, artworks.size), fontFamily = appInterfaceFont(),
                         color = colors.textTertiary, fontSize = 13.sp, modifier = Modifier.padding(20.dp))
                     if (artworks.isEmpty()) {
-                        Text(appString(R.string.art_saved_empty), fontFamily = Poppins,
+                        Text(appString(R.string.art_saved_empty), fontFamily = appInterfaceFont(),
                             color = colors.textSecondary, modifier = Modifier.padding(horizontal = 20.dp))
                     }
                     LazyVerticalGrid(GridCells.Adaptive(150.dp), state = galleryScroll, modifier = Modifier.testTag("art-gallery"), contentPadding = PaddingValues(20.dp, 0.dp, 20.dp, 24.dp),
@@ -215,7 +216,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
     }
 
     Column(Modifier.widthIn(max = 720.dp).fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp)) {
-        Text("${edition.language} (${edition.label})", color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp,
+        Text("${edition.language} (${edition.label})", color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 12.sp,
             modifier = Modifier.padding(bottom = 16.dp))
         Box {
             VerseArtImage(artwork, false, Modifier.fillMaxWidth().aspectRatio(1f).testTag("art-detail-image"), reference, rotation)
@@ -223,7 +224,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
         }
         Text(reference, fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else Poppins, fontWeight = FontWeight.Bold, fontSize = 26.sp,
             color = colors.text, modifier = Modifier.padding(top = 24.dp))
-        Text(edition.displayName, fontFamily = Poppins, fontSize = 13.sp, color = colors.textSecondary,
+        Text(edition.displayName, fontFamily = appInterfaceFont(), fontSize = 13.sp, color = colors.textSecondary,
             modifier = Modifier.padding(top = 4.dp, bottom = 20.dp))
         FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -239,7 +240,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
                 }
             }, modifier = Modifier.heightIn(min = 48.dp).testTag("art-save-image"),
                 colors = ButtonDefaults.outlinedButtonColors(contentColor = colors.text)) {
-                Text(appString(R.string.art_save_image), fontFamily = Poppins)
+                Text(appString(R.string.art_save_image), fontFamily = appInterfaceFont())
             }
             Button(enabled = !busy, onClick = {
                 performFileAction {
@@ -250,12 +251,12 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
                 colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground, contentColor = colors.buttonText)) {
                 AppIcon(AppIconGlyph.ShareOutline, null, colors.buttonText, size = 18.dp)
                 Spacer(Modifier.width(8.dp))
-                Text(appString(R.string.share), fontFamily = Poppins)
+                Text(appString(R.string.share), fontFamily = appInterfaceFont())
             }
         }
         HorizontalDivider(color = colors.divider, modifier = Modifier.padding(top = 24.dp))
         TextButton(onClick = { showText = !showText }, modifier = Modifier.padding(top = 8.dp)) {
-            Text(appString(if (showText) R.string.art_hide_verse else R.string.art_read_verse), fontFamily = Poppins, color = colors.text)
+            Text(appString(if (showText) R.string.art_hide_verse else R.string.art_read_verse), fontFamily = appInterfaceFont(), color = colors.text)
         }
         if (showText) verse?.let { Text(it.text, color = colors.cardText,
             fontFamily = if (edition == Translation.MAL1910) NotoSansMalayalam else SourceSerif, fontSize = 20.sp, lineHeight = 32.sp) }

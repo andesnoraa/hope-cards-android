@@ -1,0 +1,360 @@
+2026-10-07T05:34:21.132Z
+- banner:
+  - navigation "പേജ് ഹെഡ്ഡര്‍":
+    - link "Google Play ലോഗോ":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Google Play-യിൽ തിരയുക":
+        - /placeholder: ആപ്പുകളും ഗെയിമുകളും തിരയുക
+    - button "സഹായ കേന്ദ്രം":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "ആപ്പുകളും ഗെയിമുകളും" [pressed]:
+    - generic: ആപ്പുകളും ഗെയിമുകളും
+    - generic: arrow_drop_down
+  - button "ഉപകരണം":
+    - generic: ഉപകരണം
+    - generic: arrow_drop_down
+- link "Bible Quiz (ബൈബിള്‍ ക്വിസ്സ്) SeedDevelopers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.pscexams.pro
+  - generic: Bible Quiz (ബൈബിള്‍ ക്വിസ്സ്)
+  - generic: SeedDevelopers
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- 'link "Bible Quiz: Trivia Game പ്ലേ ചെയ്യുക Bible Quiz: Trivia Game Supergonk അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=org.supergonk.bible
+  - 'button "Bible Quiz: Trivia Game പ്ലേ ചെയ്യുക"':
+  - generic: "Bible Quiz: Trivia Game"
+  - generic: Supergonk
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- 'link "Bible Trivia: Bible Quiz Game Clappy LLC അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.clappy.bibletrivia
+  - generic: "Bible Trivia: Bible Quiz Game"
+  - generic: Clappy LLC
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Bible Quiz Ronasoft Media അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.ronasoftstudios.biblequiz
+  - generic: Bible Quiz
+  - generic: Ronasoft Media
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "BIBLE TRIVIA - Bible Quiz Game Red Nucifera അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.rednucifera.bible.trivia.quiz.game
+  - generic: BIBLE TRIVIA - Bible Quiz Game
+  - generic: Red Nucifera
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Lighthouse Bible Quiz പ്ലേ ചെയ്യുക Lighthouse Bible Quiz Gospel Garden Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.lighthousequiz.app
+  - button "Lighthouse Bible Quiz പ്ലേ ചെയ്യുക":
+  - generic: Lighthouse Bible Quiz
+  - generic: Gospel Garden Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Bible Trivia - Word Quiz Game Topy Games അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=bible.trivia.quiz.question.answer.spelling.correct.knowledge.test.game
+  - generic: Bible Trivia - Word Quiz Game
+  - generic: Topy Games
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Kingdom Bible Quiz & Trivia Royal Nation LLC":
+  - /url: /store/apps/details?id=kingdom.bible.quiz
+  - generic: Kingdom Bible Quiz & Trivia
+  - generic: Royal Nation LLC
+- 'link "Bible Quiz Pro: Bible Trivia Christian Games അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=us.christiangames.bibletrivia
+  - generic: "Bible Quiz Pro: Bible Trivia"
+  - generic: Christian Games
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- 'link "Bible Quiz: Trivia Game Maias Dev"':
+  - /url: /store/apps/details?id=com.quizbiblia.quiz_biblia
+  - generic: "Bible Quiz: Trivia Game"
+  - generic: Maias Dev
+- link "Bible Quiz Quest Adventure പ്ലേ ചെയ്യുക Bible Quiz Quest Adventure Blessy അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.quiz.biblequizquest
+  - button "Bible Quiz Quest Adventure പ്ലേ ചെയ്യുക":
+  - generic: Bible Quiz Quest Adventure
+  - generic: Blessy
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Bible Trivia Quiz, Bible Guide Christian Resources- Bible Truth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.biblequestions.adevarprezent
+  - generic: Bible Trivia Quiz, Bible Guide
+  - generic: Christian Resources- Bible Truth
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Bible Quiz - Ask a Christian Kermezou":
+  - /url: /store/apps/details?id=com.axelcode.bible.quiz.app
+  - generic: Bible Quiz - Ask a Christian
+  - generic: Kermezou
+- link "Bible Quiz Ultra By Chapter SeedDevelopers":
+  - /url: /store/apps/details?id=com.biblequiz.learn
+  - generic: Bible Quiz Ultra By Chapter
+  - generic: SeedDevelopers
+- link "Malayalam Bible Quiz Oly Bible":
+  - /url: /store/apps/details?id=com.malayalambible.quiz.trivia
+  - generic: Malayalam Bible Quiz
+  - generic: Oly Bible
+- link "Bible Basics Trivia Quiz Game RD Games, Inc":
+  - /url: /store/apps/details?id=com.rdgames.biblebasics
+  - generic: Bible Basics Trivia Quiz Game
+  - generic: RD Games, Inc
+- 'link "Bible Quiz: Chapter by Chapter Janus Works LLC"':
+  - /url: /store/apps/details?id=com.janus.trivia
+  - generic: "Bible Quiz: Chapter by Chapter"
+  - generic: Janus Works LLC
+- link "Bible - Study, Audio & Quiz Holisite അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=bibleKJV.bible.kingjamesbible
+  - generic: Bible - Study, Audio & Quiz
+  - generic: Holisite
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Bible Quiz Chapter By Chapter പ്ലേ ചെയ്യുക Bible Quiz Chapter By Chapter SeedDevelopers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bible.quizpro
+  - button "Bible Quiz Chapter By Chapter പ്ലേ ചെയ്യുക":
+  - generic: Bible Quiz Chapter By Chapter
+  - generic: SeedDevelopers
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Bible Questions & Answers FAQ Christian Resources- Bible Truth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.book.bible
+  - generic: Bible Questions & Answers FAQ
+  - generic: Christian Resources- Bible Truth
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.4"
+    - generic: star
+- link "Bible Master – Quiz & Trivia Eggies ₹270.00":
+  - /url: /store/apps/details?id=com.eggies.biblemaster
+  - generic: Bible Master – Quiz & Trivia
+  - generic: Eggies
+  - generic: ₹270.00
+- link "बाइबल क्विज प्रतियोगिता Africa Resurrection അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.resurrection.biblequiz
+  - generic: बाइबल क्विज प्रतियोगिता
+  - generic: Africa Resurrection
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- link "Ultimate Bible Quiz The Ascension Apps":
+  - /url: /store/apps/details?id=com.quiz.ultimatebiblequiz
+  - generic: Ultimate Bible Quiz
+  - generic: The Ascension Apps
+- 'link "Bible Quest: Quiz & Rewards The Ascension Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.biblequest.app
+  - generic: "Bible Quest: Quiz & Rewards"
+  - generic: The Ascension Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "3.2"
+    - generic: star
+- link "Bible Quiz & Answers Drew Neuro അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.neuron.learningnumbers
+  - generic: Bible Quiz & Answers
+  - generic: Drew Neuro
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Bible Trivia Quiz Game Kinzudi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bibletrivia.biblequiz
+  - generic: Bible Trivia Quiz Game
+  - generic: Kinzudi Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Bible Quiz – English & Telugu 2Anns Media അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.twoannsmedia.jeevadharabiblequiz
+  - generic: Bible Quiz – English & Telugu
+  - generic: 2Anns Media
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Biblical Quiz 7 IT Solutions അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.sevenitsolutions.biblicalquiz
+  - generic: Biblical Quiz
+  - generic: 7 IT Solutions
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Hindi Bible Quiz Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.hindibible.quiz.trivia
+  - generic: Hindi Bible Quiz
+  - generic: Oly Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.4"
+    - generic: star
+- 'link "Najibu: Bible Quizzes & Trivia Najibu KE"':
+  - /url: /store/apps/details?id=app.najibu.najibu
+  - generic: "Najibu: Bible Quizzes & Trivia"
+  - generic: Najibu KE
+- link "Bible Quiz Images AZak അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=mysuperiorgames.biblequiz
+  - generic: Bible Quiz Images
+  - generic: AZak
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Bible Quiz - Le Jeu Familial ALSLG":
+  - /url: /store/apps/details?id=xyz.heritier.quiz
+  - generic: Bible Quiz - Le Jeu Familial
+  - generic: ALSLG
+- link "Arabic Bible Quiz Oly Bible":
+  - /url: /store/apps/details?id=com.arabicbible.quiz.trivia
+  - generic: Arabic Bible Quiz
+  - generic: Oly Bible
+- link "The Bible Quiz BsoftwareS":
+  - /url: /store/apps/details?id=com.bsoftwares.thebiblequiz
+  - generic: The Bible Quiz
+  - generic: BsoftwareS
+- link "Bible Show - Quiz Game Hosanna Games":
+  - /url: /store/apps/details?id=com.alexkojicBibleShowQuiz
+  - generic: Bible Show - Quiz Game
+  - generic: Hosanna Games
+- link "Bible Trivia - Bible Quiz Game പ്ലേ ചെയ്യുക Bible Trivia - Bible Quiz Game Aged Studio Limited അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.agedstudio.bible.trivia.knowledge
+  - button "Bible Trivia - Bible Quiz Game പ്ലേ ചെയ്യുക":
+  - generic: Bible Trivia - Bible Quiz Game
+  - generic: Aged Studio Limited
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- link "Bible Quiz പ്ലേ ചെയ്യുക Bible Quiz JWgames അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.RMsoftwares.JWgamequizfree
+  - button "Bible Quiz പ്ലേ ചെയ്യുക":
+  - generic: Bible Quiz
+  - generic: JWgames
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Telugu Bible Quiz Daily Trivia J Angel Apps":
+  - /url: /store/apps/details?id=com.jangelapps.telugubiblequiz
+  - generic: Telugu Bible Quiz Daily Trivia
+  - generic: J Angel Apps
+- 'link "Bible Trivia: Jesus Quiz Games പ്ലേ ചെയ്യുക Bible Trivia: Jesus Quiz Games Bible Studios (App & Games) അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.biblestudios.bibletrivia
+  - 'button "Bible Trivia: Jesus Quiz Games പ്ലേ ചെയ്യുക"':
+  - generic: "Bible Trivia: Jesus Quiz Games"
+  - generic: Bible Studios (App & Games)
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Bible Quiz Dozcore അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.dozcore.mathew.biblequiz
+  - generic: Bible Quiz
+  - generic: Dozcore
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Bible Quiz Offline Systemsbase Solutions":
+  - /url: /store/apps/details?id=biblequiz.systemsbase.game
+  - generic: Bible Quiz Offline
+  - generic: Systemsbase Solutions
+- link "Discover the Bible - the Quiz Luca Sigle":
+  - /url: /store/apps/details?id=com.lucasigle.biblequizzes
+  - generic: Discover the Bible - the Quiz
+  - generic: Luca Sigle
+- 'link "Bible Trivia Game: Heroes പ്ലേ ചെയ്യുക Bible Trivia Game: Heroes Hope Software Services അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=org.adventist.heroes.ii
+  - 'button "Bible Trivia Game: Heroes പ്ലേ ചെയ്യുക"':
+  - generic: "Bible Trivia Game: Heroes"
+  - generic: Hope Software Services
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.4"
+    - generic: star
+- link "Bible Verses - Bible Quiz Bange Sabastine Hwonyi അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bible.verse
+  - generic: Bible Verses - Bible Quiz
+  - generic: Bange Sabastine Hwonyi
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.2"
+    - generic: star
+- link "ലോഗോസ് ബൈബിൾ ക്വിസ് Ebby Stephen അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.biblelogosquiz.app
+  - generic: ലോഗോസ് ബൈബിൾ ക്വിസ്
+  - generic: Ebby Stephen
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "5.0"
+    - generic: star
+- link "Jesus Bible Trivia Games Quiz RD Games, Inc അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.gmail.troylyndon.PlayTrivia
+  - generic: Jesus Bible Trivia Games Quiz
+  - generic: RD Games, Inc
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Kannada Bible Quiz Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.kannadabible.quiz.trivia
+  - generic: Kannada Bible Quiz
+  - generic: Oly Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "JwQuiz – ബൈബിൾ ക്വിസ് JwApp":
+  - /url: /store/apps/details?id=org.jwquiz.app
+  - generic: JwQuiz – ബൈബിൾ ക്വിസ്
+  - generic: JwApp
+- 'link "Bible Quiz: Daily Bible Trivia DOHAGI HOLDINGS CO., LTD"':
+  - /url: /store/apps/details?id=com.dohagi.bible.quiz.app
+  - generic: "Bible Quiz: Daily Bible Trivia"
+  - generic: DOHAGI HOLDINGS CO., LTD
+- link "Bible Quiz in English Agapéame":
+  - /url: /store/apps/details?id=com.agapeame.quizgame
+  - generic: Bible Quiz in English
+  - generic: Agapéame
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "സമ്മാന കാർഡുകൾ":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: സമ്മാന കാർഡുകൾ
+  - link "റിഡീം ചെയ്യുക":
+    - /url: /redeem
+    - paragraph: റിഡീം ചെയ്യുക
+  - link "റീഫണ്ട് നയം":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: റീഫണ്ട് നയം
+  - text: കുട്ടികളും കുടുംബവും
+  - link "രക്ഷാകർതൃ ഗൈഡ്":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: രക്ഷാകർതൃ ഗൈഡ്
+  - link "കുടുംബവുമായി പങ്കിടൽ":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: കുടുംബവുമായി പങ്കിടൽ
+  - link "സേവന നിബന്ധനകൾ":
+    - /url: https://play.google.com/intl/ml_in/about/play-terms.html
+    - paragraph: സേവന നിബന്ധനകൾ
+  - link "സ്വകാര്യത":
+    - /url: https://policies.google.com/privacy
+    - paragraph: സ്വകാര്യത
+  - link "Google Play-യെ കുറിച്ച്":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: Google Play-യെ കുറിച്ച്
+  - link "ഡെവലപ്പർമാർ":
+    - /url: http://developer.android.com/index.html
+    - paragraph: ഡെവലപ്പർമാർ
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ.
+  - generic: ഇന്ത്യ (മലയാളം)

@@ -12,7 +12,6 @@ import androidx.core.content.res.ResourcesCompat
 import com.aaronsedna.hopecards.R
 import com.aaronsedna.hopecards.model.*
 import com.aaronsedna.hopecards.ui.QuizReviewContent
-import kotlin.math.ceil
 import java.io.OutputStream
 
 /** Immutable, localized snapshot. Sharing never changes the completed quiz. */
@@ -21,12 +20,11 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
     val resources = review.resources
     val title = review.title
     private val language = QuizLanguage.forTranslation(translation)
-    private val edition = review.edition
     val score = review.score
     private val invitation = resources.getString(R.string.quiz_share_invite)
     private val install = resources.getString(R.string.quiz_report_install)
     private val attribution = resources.getString(R.string.quiz_pdf_share_attribution)
-    val shareText = "$title\n$score\n$edition\n\n$attribution\n$invitation\n$install\n$PLAY_STORE_URL"
+    val shareText = "$title\n$score\n\n$attribution\n$invitation\n$install\n$PLAY_STORE_URL"
     private val regular = ResourcesCompat.getFont(context,
         if (language == QuizLanguage.MALAYALAM) R.font.noto_sans_malayalam_regular else R.font.poppins_regular)!!
     private val semibold = ResourcesCompat.getFont(context,
@@ -44,7 +42,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
         val fill: Int? = null,
         val inset: Int = 0,
         val brand: Boolean = false,
-        val compact: Boolean = false,
+        val marker: QuizReviewContent.Outcome? = null,
         val heading: Boolean = false,
     )
 
@@ -53,22 +51,21 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
         groups = review.answers.map { answer ->
             val unanswered = answer.outcome == QuizReviewContent.Outcome.UNANSWERED
             val correct = answer.outcome == QuizReviewContent.Outcome.CORRECT
-            val answerColor = when { unanswered -> MUTED; correct -> GREEN; else -> RED }
+            val answerColor = when { unanswered -> BLUE; correct -> GREEN; else -> RED }
             buildList {
                 add(Block(answer.prompt, size = 12f, heading = true, gap = 9))
                 answer.passage?.let { add(Block(it, size = 11f, gap = 9)) }
-                add(Block(answer.status, size = 9.5f, bold = true, color = answerColor, gap = 9,
-                    fill = when { unanswered -> IVORY; correct -> GREEN_WASH; else -> RED_WASH }, inset = 8, compact = true))
-                add(Block(answer.selectedAnswer,
-                    color = answerColor,
-                    fill = when { unanswered -> IVORY; correct -> GREEN_WASH; else -> RED_WASH }, inset = 10, gap = 5))
-                add(Block(answer.correctAnswer,
-                    bold = true, color = GREEN, fill = GREEN_WASH, inset = 10, gap = 10))
-                if (answer.explanation.isNotBlank()) {
-                    add(Block(review.explanationLabel, size = 9.5f, bold = true, gap = 3))
-                    add(Block(answer.explanation, gap = 8))
+                answer.timeTaken?.let { add(Block(it, size = 9.5f, color = MUTED, gap = 7)) }
+                if (unanswered) add(Block(answer.status, color = BLUE, marker = answer.outcome, inset = 24, gap = 6))
+                answer.selectedAnswer?.let {
+                    add(Block(it, bold = true, color = answerColor, marker = answer.outcome, inset = 24, gap = 6))
                 }
-                add(Block(answer.reference, size = 9.5f, bold = true, color = INK, gap = 0, fill = IVORY, inset = 10))
+                answer.correctAnswer?.let {
+                    add(Block(it, bold = true, color = if (unanswered) BLUE else GREEN, inset = 24, gap = 8,
+                        marker = if (unanswered) null else QuizReviewContent.Outcome.CORRECT))
+                }
+                if (answer.explanation.isNotBlank()) add(Block(answer.explanation, color = MUTED, gap = 8))
+                add(Block(answer.reference, size = 9.5f, color = MUTED, gap = 0))
             }
         }
     }
@@ -77,7 +74,8 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
     data class Fragment(val layout: StaticLayout, val first: Int, val end: Int, val y: Int, val x: Int) {
         val height: Int get() = layout.getLineBottom(end - 1) - layout.getLineTop(first)
     }
-    data class Panel(val left: Int, val top: Int, val width: Int, val height: Int, val color: Int, val border: Boolean = false, val radius: Float = 10f)
+    data class Panel(val left: Int, val top: Int, val width: Int, val height: Int, val color: Int,
+        val border: Boolean = false, val radius: Float = 10f, val marker: QuizReviewContent.Outcome? = null)
     data class Pages(val paper: Paper, val content: List<List<Fragment>>, val panels: List<List<Panel>>)
 
     private fun textLayout(block: Block, width: Int): StaticLayout {
@@ -91,8 +89,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
             }
             color = block.color
         }
-        val layoutWidth = if (block.compact) minOf(width, ceil(Layout.getDesiredWidth(block.text, paint).toDouble()).toInt() + 1) else width
-        return StaticLayout.Builder.obtain(block.text, 0, block.text.length, paint, layoutWidth).setAlignment(Layout.Alignment.ALIGN_NORMAL)
+        return StaticLayout.Builder.obtain(block.text, 0, block.text.length, paint, width).setAlignment(Layout.Alignment.ALIGN_NORMAL)
             .setLineSpacing(if (language == QuizLanguage.MALAYALAM) 4f else 2.5f, 1f)
             .setIncludePad(true).build()
     }
@@ -121,27 +118,21 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
             y = paper.top
             place(Block("HOPE CARDS", 9f, bold = true, color = MUTED, gap = 10, brand = true), paper.left, width)
             if (content.size == 1) {
-                val top = y
-                y += padding
-                place(Block(title, if (width < 300) 20f else 25f, heading = true, color = Color.WHITE, gap = 5),
-                    paper.left + padding, textWidth)
-                place(Block(score, 17f, bold = true, color = PALE_GOLD, gap = 5), paper.left + padding, textWidth)
-                place(Block(edition, 9.5f, color = Color.WHITE, gap = 0), paper.left + padding, textWidth)
-                y += padding
-                panels.last().add(Panel(paper.left, top, width, y - top, INK, radius = 14f))
-                panels.last().add(Panel(paper.left + padding, top + 7, 28, 2, GOLD, radius = 1f))
+                place(Block(title, if (width < 300) 20f else 25f, heading = true, gap = 6), paper.left, width)
+                place(Block(score, 19f, bold = true, gap = 8), paper.left, width)
+                review.totalTime?.let { place(Block(it, 9.5f, color = MUTED, gap = 8), paper.left, width) }
+                panels.last().add(Panel(paper.left, y, width, 1, LINE, radius = 0f))
                 y += 15
                 place(Block(review.reviewTitle, 13f, bold = true, gap = 12), paper.left, width)
             } else {
-                place(Block(title, 14f, bold = true, gap = 2), paper.left, width)
-                place(Block(edition, 9f, color = MUTED, gap = 10), paper.left, width)
+                place(Block(title, 14f, bold = true, gap = 10), paper.left, width)
                 panels.last().add(Panel(paper.left, y, width, 1, LINE, radius = 0f))
                 y += 14
             }
             bodyTop = y
         }
 
-        fun addCard(blocks: List<Block>, background: Int = Color.WHITE) {
+        fun addCard(blocks: List<Block>, background: Int = IVORY) {
             val layouts = blocks.map { it to textLayout(it, textWidth - it.inset * 2) }
             val measured = padding * 2 + layouts.sumOf { (block, text) ->
                 text.height + block.gap + if (block.fill != null) 12 else 0
@@ -151,12 +142,13 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
             if (y + measured > limit && content.size == 1) newPage()
             var cardTop = y
             var panelIndex = panels.last().size
-            panels.last().add(Panel(paper.left, cardTop, width, 0, background, border = true))
+            panels.last().add(Panel(paper.left, cardTop, width, 0, background, border = false))
             y += padding
             var cardHasText = false
 
             fun finishCard() {
                 panels.last()[panelIndex] = panels.last()[panelIndex].copy(height = y - cardTop + padding)
+                panels.last().add(Panel(paper.left, y + padding - 1, width, 1, LINE, radius = 0f))
             }
             fun continueCard() {
                 check(cardHasText) { "Page is too small for a line of quiz text." }
@@ -164,7 +156,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
                 newPage()
                 cardTop = y
                 panelIndex = panels.last().size
-                panels.last().add(Panel(paper.left, cardTop, width, 0, background, border = true))
+                panels.last().add(Panel(paper.left, cardTop, width, 0, background, border = false))
                 y += padding
                 cardHasText = false
             }
@@ -183,9 +175,13 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
                     while (end < text.lineCount && text.getLineBottom(end) - text.getLineTop(first) <= available) end++
                     if (end == first) { continueCard(); continue }
                     val height = text.getLineBottom(end - 1) - text.getLineTop(first)
+                    if (first == 0) block.marker?.let { outcome ->
+                        panels.last().add(Panel(paper.left + padding, y, 18, minOf(18, height),
+                            IVORY, radius = 0f, marker = outcome))
+                    }
                     block.fill?.let { fill ->
                         panels.last().add(Panel(paper.left + padding, y,
-                            if (block.compact) text.width + block.inset * 2 else textWidth,
+                            textWidth,
                             height + insetY * 2, fill, radius = 6f))
                     }
                     content.last().add(Fragment(text, first, end, y + insetY, paper.left + padding + block.inset))
@@ -222,6 +218,25 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
                     paint.style = Paint.Style.FILL
                     canvas.drawRoundRect(panel.left.toFloat(), panel.top.toFloat(), (panel.left + panel.width).toFloat(),
                         (panel.top + panel.height).toFloat(), panel.radius, panel.radius, paint)
+                    panel.marker?.let { outcome ->
+                        // Draw symbols as vectors so every PDF language uses the same marks.
+                        paint.color = when (outcome) {
+                            QuizReviewContent.Outcome.CORRECT -> GREEN
+                            QuizReviewContent.Outcome.INCORRECT -> RED
+                            QuizReviewContent.Outcome.UNANSWERED -> BLUE
+                        }
+                        paint.strokeWidth = 1.6f
+                        paint.strokeCap = Paint.Cap.ROUND
+                        fun line(x1: Float, y1: Float, x2: Float, y2: Float) = canvas.drawLine(
+                            panel.left + panel.width * x1, panel.top + panel.height * y1,
+                            panel.left + panel.width * x2, panel.top + panel.height * y2, paint)
+                        when (outcome) {
+                            QuizReviewContent.Outcome.CORRECT -> { line(.25f, .5f, .43f, .7f); line(.43f, .7f, .77f, .28f) }
+                            QuizReviewContent.Outcome.INCORRECT -> { line(.3f, .3f, .7f, .7f); line(.3f, .7f, .7f, .3f) }
+                            QuizReviewContent.Outcome.UNANSWERED -> line(.28f, .5f, .72f, .5f)
+                        }
+                        paint.strokeCap = Paint.Cap.BUTT
+                    }
                     if (panel.border) {
                         paint.color = LINE
                         paint.style = Paint.Style.STROKE
@@ -269,5 +284,7 @@ class QuizReport(context: Context, translation: Translation, session: QuizSessio
         val RED = Color.rgb(151, 53, 45)
         val GREEN_WASH = Color.rgb(237, 246, 239)
         val RED_WASH = Color.rgb(252, 240, 236)
+        val BLUE = Color.rgb(40, 91, 133)
+        val BLUE_WASH = Color.rgb(234, 242, 250)
     }
 }

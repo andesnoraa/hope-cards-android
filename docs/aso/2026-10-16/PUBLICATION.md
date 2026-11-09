@@ -1,0 +1,3 @@
+# Publication verification — October 16, 2026
+
+The app-specific Play Console Dashboard identifies com.aaronsedna.hopecards and says “You have no unpublished changes.” It shows the latest production release at 100% rollout, released October 8, 2026. Publishing overview also says last published October 8, 2026; no app-specific queued submission, in-review item or rejection is visible. The English public listing loads at package ID com.aaronsedna.hopecards as “Daily Bible Verse: Hope Cards,” updated October 8, with “Bug fixes.” The Malayalam public listing loads as “ബൈബിൾ വചനം: Hope Cards,” updated October 8, with “പിഴവുകൾ പരിഹരിച്ചു.” No listing or binary changes were made.

@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -49,7 +50,6 @@ import com.aaronsedna.hopecards.ui.categoryLabel
 import com.aaronsedna.hopecards.ui.components.AppIcon
 import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
-import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
 import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
@@ -77,8 +77,8 @@ fun FavoritesScreen(
                     AppIcon(AppIconGlyph.Heart, null, colors.danger, size = 30.dp)
                 }
             }
-            Text(appString(R.string.favorites_empty_title), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp, bottom = 12.dp))
-            Text(appString(R.string.favorites_empty_body), color = colors.textSecondary, fontFamily = Poppins, fontSize = 16.sp, lineHeight = 26.sp, textAlign = TextAlign.Center, modifier = Modifier.widthIn(max = 330.dp))
+            Text(appString(R.string.favorites_empty_title), color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 35.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 22.dp, bottom = 12.dp))
+            Text(appString(R.string.favorites_empty_body), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 16.sp, lineHeight = 26.sp, textAlign = TextAlign.Center, modifier = Modifier.widthIn(max = 330.dp))
         }
         return
     }
@@ -92,7 +92,7 @@ fun FavoritesScreen(
                 if (selectionMode) appString(R.string.selected_count, selectedIds.size)
                 else appQuantityString(R.plurals.favorites_count, verses.size, verses.size),
                 color = colors.textTertiary,
-                fontFamily = Poppins,
+                fontFamily = appInterfaceFont(),
                 fontWeight = FontWeight.Medium,
                 fontSize = 13.sp,
                 modifier = Modifier.weight(1f),
@@ -104,7 +104,7 @@ fun FavoritesScreen(
                     Text(
                         if (selectedIds.size == verses.size) appString(R.string.clear) else appString(R.string.select_all),
                         color = colors.accent,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.SemiBold,
                     )
                 }
@@ -112,11 +112,11 @@ fun FavoritesScreen(
                     selectionMode = false
                     selectedIds = emptySet()
                 }) {
-                    Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    Text(appString(R.string.cancel), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
                 }
             } else {
                 TextButton(onClick = { selectionMode = true }) {
-                    Text(appString(R.string.select), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                    Text(appString(R.string.select), color = colors.accent, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
                 }
             }
         }
@@ -142,7 +142,7 @@ fun FavoritesScreen(
                         },
                     ).padding(top = 18.dp),
                 ) {
-                    Text(categoryLabel(verse.category).uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 2.5.sp, modifier = Modifier.padding(bottom = 10.dp))
+                    Text(categoryLabel(verse.category).uppercase(), color = colors.accent, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 13.sp, letterSpacing = 2.5.sp, modifier = Modifier.padding(bottom = 10.dp))
                     Text(verse.text, color = colors.cardText, fontFamily = scriptureFontFor(verse.edition), fontSize = 19.sp, lineHeight = 30.sp, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(bottom = 10.dp))
                     Row(Modifier.fillMaxWidth().padding(bottom = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text(verse.displayReference, color = colors.text, fontFamily = interfaceFontFor(verse.edition), fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.weight(1f))
@@ -182,7 +182,7 @@ fun FavoritesScreen(
                 Text(
                     appString(R.string.remove_selected_count, selectedIds.size),
                     color = Color.White,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(start = 8.dp),
                 )
@@ -230,14 +230,14 @@ private fun FavoriteRemovalDialog(
     val colors = LocalHopeColors.current
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title, fontFamily = Poppins, fontWeight = FontWeight.Bold) },
-        text = { Text(message, fontFamily = Poppins) },
+        title = { Text(title, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold) },
+        text = { Text(message, fontFamily = appInterfaceFont()) },
         confirmButton = {
             TextButton(onClick = onConfirm) {
-                Text(confirmLabel, color = colors.danger, fontFamily = Poppins, fontWeight = FontWeight.SemiBold)
+                Text(confirmLabel, color = colors.danger, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold)
             }
         },
-        dismissButton = { TextButton(onClick = onDismiss) { Text(appString(R.string.cancel), fontFamily = Poppins) } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(appString(R.string.cancel), fontFamily = appInterfaceFont()) } },
         shape = RoundedCornerShape(28.dp),
         containerColor = colors.surface,
         titleContentColor = colors.text,

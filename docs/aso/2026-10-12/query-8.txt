@@ -1,0 +1,133 @@
+Browser tab: 455027203, Title: "മലയാളം ബൈബിൾ വചനങ്ങൾ - Google Play-യിലെ Android ആപ്പുകൾ", URL: "https://play.google.com/store/search?q=%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82%20%E0%B4%AC%E0%B5%88%E0%B4%AC%E0%B4%BF%E0%B5%BE%20%E0%B4%B5%E0%B4%9A%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B5%BE&c=apps&hl=ml&gl=IN".
+1 AXWebArea മലയാളം ബൈബിൾ വചനങ്ങൾ - Google Play-യിലെ Android ആപ്പുകൾ, URL: play.google.com/store/search
+	2 container yDmH0d
+		3 container പേജ് ഹെഡ്ഡര്‍
+			4 link Description: Google Play ലോഗോ, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Description: Google Play-യിൽ തിരയുക, Value: മലയാളം ബൈബിൾ വചനങ്ങൾ
+			8 button സഹായ കേന്ദ്രം
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna ([redacted signed-in account]), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: ആപ്പുകളും ഗെയിമുകളും, Value: 1
+				13 checkbox Description: ഉപകരണം, Value: 0
+			14 container
+				15 container
+					16 link Description: ബൈബിള്‍: Malayalam Audio Bible Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				17 container
+					18 link Description: Malayalam Bible Fifi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				19 container
+					20 link Description: Malayalam Bible മലയാളം ബൈബിള് The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				21 container
+					22 link Description: Malayalam Bible- മലയാളം ബൈബിൾ പ്ലേ ചെയ്യുക Malayalam Bible- മലയാളം ബൈബിൾ DPK Developers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				23 container
+					24 link Description: POC Bible (Malayalam) Jesus Youth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				25 container
+					26 link Value: play.google.com/store/apps/details, Description: Malayalam Bible (Biblica) പ്ലേ ചെയ്യുക Malayalam Bible (Biblica) Faith Comes By Hearing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				27 container
+					28 link Description: Malayalam Bible (മലയാളം ബൈബിൾ) Shalom Design S2dio അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				29 container
+					30 link Description: Malayalam Study Bible Grace Ministries and Dusty Sandals അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				31 container
+					32 link Description: Malayalam Bible :Offline Bible The Holy Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				33 container
+					34 link Description: Malayalam Bible പ്ലേ ചെയ്യുക Malayalam Bible SafeApps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				35 container
+					36 link Description: Malayalam Bible (ബൈബിള്‍) TR Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				37 container
+					38 link Description: Malayalam Bible Fifi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				39 container
+					40 link Description: Malayalam bible KJV RealGamer അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				41 container
+					42 link Description: Malayalam English Bible Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				43 container
+					44 link Description: Malayalam Bible :Offline Bible Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				45 container
+					46 link Description: dot.Bible മലയാളം (Malayalam) International Scripture Ministries, Inc., Value: play.google.com/store/apps/details
+				47 container
+					48 link Description: Holy Bible Offline NIV KJV App Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				49 container
+					50 link Description: ഹോളി ബൈബിൾ മലയാളം Soar Aloft Mobile Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				51 container
+					52 link Description: Malayalam English Bible KJV nSource Lab അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				53 container
+					54 link Description: Malayalam Bible - ബൈബിൾ Holy Quran Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				55 container
+					56 link Value: play.google.com/store/apps/details, Description: VerseVIEW Bible - Multilingual പ്ലേ ചെയ്യുക VerseVIEW Bible - Multilingual VerseVIEW അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു
+				57 container
+					58 link Description: Malayalam Bible Plus - Offline CharlesKing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				59 container
+					60 link Description: Malayalam Bible Lite The Holy Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				61 container
+					62 link Description: Malayalam Bible-Audio & Songs Handy Application, Value: play.google.com/store/apps/details
+				63 container
+					64 link Description: ബൈബിൾ കഥകൾ Bible Stories പ്ലേ ചെയ്യുക ബൈബിൾ കഥകൾ Bible Stories Shalom Design S2dio അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				65 container
+					66 link Description: മലയാളം ബൈബിൾ offline nSource Lab അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				67 container
+					68 link Description: POC Bible - Text and Audio Jesus Youth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				69 container
+					70 link Description: Malayalam Bible - സത്യവേദപുസ്ത 100code അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				71 container
+					72 link Description: ബൈബിള് മലയാളം audio app mp3 Audio Religious Book അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				73 container
+					74 link Description: Malayalam Bible -Offline Bible Oly Bible AI, Value: play.google.com/store/apps/details
+				75 container
+					76 link Description: Malayalam English Bible Daily Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				77 container
+					78 link Description: Malayalam Bible Techsoft Mobile, Value: play.google.com/store/apps/details
+				79 container
+					80 link Description: Malayalam Bible POC & Standard JELOYO Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				81 container
+					82 link Description: Malayalam Daily Bible Words Studio Jom അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				83 container
+					84 link Description: Malayalam Bible Offline SOFTCRAFT അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				85 container
+					86 link Description: Blue Letter Bible Blue Letter Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				87 container
+					88 link Description: Malayalam OV Bible (BSI) Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				89 container
+					90 link Description: Malayalam Bible പ്ലേ ചെയ്യുക Malayalam Bible Online Bibles അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.1 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				91 container
+					92 link Description: The Bible (All Languages) tixfar അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				93 container
+					94 link Description: Bible-Daily Bible Verse Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				95 container
+					96 link Description: Malayalam Audio Bible (ERV) Faith Comes By Hearing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				97 container
+					98 link Description: Vachan Malayalam Bible Bridge Connectivity Solutions Pvt. Ltd., Value: play.google.com/store/apps/details
+				99 container
+					100 link Description: ബൈബിൾ - മലയാളം Bincy Baby അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				101 container
+					102 link Description: Malayalam English Bible Oly Bible AI, Value: play.google.com/store/apps/details
+				103 container
+					104 link Description: Malayalam Bible (ബൈബിൾ) TheDailyBible.NET അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				105 container
+					106 link Description: Bible Offline-KJV Holy Bible Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				107 container
+					108 link Description: Bible Malayalam 365 DPK Developers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				109 container
+					110 link Description: King James Bible - Verse+Audio Ozion അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				111 container
+					112 link Description: Malayalam Bible Audio Offline DanelasApps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+				113 container
+					114 link Description: My Bible - Verse+Audio LiveLauncher അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details
+		115 container
+			116 text Google Play
+			117 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			118 link Description: Play Points, Value: play.google.com/store/points/enroll
+			119 link Description: സമ്മാന കാർഡുകൾ, Value: play.google.com/about/giftcards
+			120 link Description: റിഡീം ചെയ്യുക, Value: play.google.com/redeem
+			121 link Description: റീഫണ്ട് നയം, Value: support.google.com/googleplay/answer/134336
+			122 text കുട്ടികളും കുടുംബവും
+			123 link Description: രക്ഷാകർതൃ ഗൈഡ്, Value: support.google.com/googleplay
+			124 link Description: കുടുംബവുമായി പങ്കിടൽ, Value: support.google.com/googleplay/answer/7007852
+			125 link Description: സേവന നിബന്ധനകൾ, Value: play.google.com/intl/ml_in/about/play-terms.html
+			126 link Description: സ്വകാര്യത, Value: policies.google.com/privacy
+			127 link Description: Google Play-യെ കുറിച്ച്, Value: support.google.com/googleplay/
+			128 link Description: ഡെവലപ്പർമാർ, Value: developer.android.com/index.html
+			129 link Description: Google Store, Value: store.google.com/
+			130 text എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ. ഇന്ത്യ (മലയാളം)
+
+The focused UI element is 1 AXWebArea മലയാളം ബൈബിൾ വചനങ്ങൾ - Google Play-യിലെ Android ആപ്പുകൾ, URL: play.google.com/store/search

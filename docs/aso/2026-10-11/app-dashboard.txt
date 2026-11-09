@@ -1,0 +1,112 @@
+2026-10-11T08:14:10.540Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- 'heading "Daily Bible Verse: Hope Cards" [level=1]'
+- list:
+  - text: com.aaronsedna.hopecards
+  - button "Tooltip for \"com.aaronsedna.hopecards\" registered on Android developer console":
+    - img: check_circle
+  - link "View on Play":
+    - /url: https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards
+- img: overview
+- generic: Publishing overview
+- generic: You have no unpublished changes
+- link "Go to publishing page":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing
+  - img: arrow_right_alt
+- img: rocket_launch
+- heading "Test and release" [level=3]
+- generic "Go to Test and release overview":
+  - img: arrow_right_alt
+- img: vital_signs
+- heading "Monitor and improve" [level=3]
+- generic "Go to Monitor and improve overview":
+  - img: arrow_right_alt
+- img: finance_mode
+- heading "Grow users" [level=3]
+- generic "Go to Grow Overview page":
+  - img: arrow_right_alt
+- img: sell
+- heading "Monetize with Play" [level=3]
+- generic "Go to Monetize with Play overview":
+  - img: arrow_right_alt
+- heading "Marketing activity" [level=3]
+- button "More information about \"Marketing activity\"":
+  - img: help
+- heading "Track monetization & subscription performance" [level=3]
+- generic: You can now view cart conversion, fraud insights, and subscription churn in one place. Use the Monetization overview page to identify revenue trends and optimize app performance.
+- link "Go to Monetization overview":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/monetize
+  - generic: Go to Monetization overview
+- heading "Grow and retain subscribers with new tools" [level=3]
+- generic: Learn how new tools like usage-based billing, mixed carts, multi-quantity plans, and dynamic grace periods can help you package offers more flexibly, recover failed payments, and reduce churn
+- link "Read blog post":
+  - /url: https://android-developers.googleblog.com/2026/09/unlocking-Google-play-subscription-growth.html
+  - generic: Read blog post
+- img: bar_chart
+- heading "Monitor KPI trends" [level=3]
+- button "Select KPIs":
+  - generic: Select KPIs
+  - img: arrow_right_alt
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/

@@ -1,0 +1,93 @@
+Browser tab: 455027219, Title: "daily bible - Android Apps on Google Play", URL: "https://play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN".
+1 AXWebArea daily bible - Android Apps on Google Play, URL: play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN
+	2 container yDmH0d
+		3 container Page Header
+			4 link Description: Google Play logo, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Description: Search Google Play, Value: daily bible
+			8 button Help Center
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna (redacted), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: Apps & games, Value: 1
+				13 checkbox Description: Device, Value: 0
+			14 container
+				15 container
+					16 link Description: Bible-Daily Bible Verse Bíblia Offline Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.bible.holybible.nkjv.dailyverse
+				17 container
+					18 link Description: Daily Bible: Holy Bible KJV Daily Bible : Daily Verses and Prayers Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=kjv.holy.bible.kingjames
+				19 container
+					20 link Description: YouVersion Bible App + Audio Life.Church Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.sirma.mobile.bible.android
+				21 container
+					22 link Description: Daily Bible - Verse+Audio Flutter Lab. Rated 5.0 stars out of five stars, Value: play.google.com/store/apps/details?id=com.kjvbible.bibledailyverse.pray.devotion
+				23 container
+					24 link Description: Holy: Daily Bible Verses Believe PR Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=dev.armandojimenez.holy
+				25 container
+					26 link Description: Bible Daily, KJV Bible + Audio WOOMBIT Rated 4.4 stars out of five stars, Value: play.google.com/store/apps/details?id=bible.offline.kingjames.holy.kjv.bible.daily.verse
+				27 container
+					28 link Description: Bible App by Olive Tree Gospel Technologies Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=biblereader.olivetree
+				29 container
+					30 link Value: play.google.com/store/apps/details?id=com.bzn.pray.go, Description: Play PrayGo -Daily Bible Meditation PrayGo -Daily Bible Meditation Verselingo Communications Limited Rated 4.5 stars out of five stars
+				31 container
+					32 link Description: Daily Bible: Widgets & Prayer Growly Rated 4.6 stars out of five stars, Value: play.google.com/store/apps/details?id=life.growly.dailybible
+				33 container
+					34 link Description: Holy Bible Offline NIV KJV App Life.Church Rated 3.9 stars out of five stars, Value: play.google.com/store/apps/details?id=app.bible.lite.offline
+				35 container
+					36 link Description: Daily Bible Reading Mission Jesus Youth Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=org.jytechmission.dbrm
+				37 container
+					38 link Description: Bible Offline-KJV Holy Bible Bíblia Offline Rated 4.8 stars out of five stars, Value: play.google.com/store/apps/details?id=com.offline.bible
+				39 container
+					40 link Description: Daily Bible - Offline & Audio Mark Melton, Value: play.google.com/store/apps/details?id=com.coommark.dailybible
+				41 container
+					42 link Description: Play Bible Daily Bible Daily AZUR APPS FZ-LLC, Value: play.google.com/store/apps/details?id=com.dailybible.devotional
+				43 container
+					44 link Description: King James Bible - Verse+Audio Ozion Rated 4.8 stars out of five stars, Value: play.google.com/store/apps/details?id=kjv.bible.kingjamesbible
+				45 container
+					46 link Value: play.google.com/store/apps/details?id=dailyaudiobible.dabapp, Description: Play Daily Audio Bible Mobile App Daily Audio Bible Mobile App Daily Audio Bible Rated 4.5 stars out of five stars
+				47 container
+					48 link Description: Daily Power - bible verses OEMEL09 Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=de.oemel09.dailypower
+				49 container
+					50 link Value: play.google.com/store/apps/details?id=com.prayer247.lectio365, Description: Play Lectio 365: Daily Bible Prayer Lectio 365: Daily Bible Prayer 24-7 Prayer Rated 4.7 stars out of five stars
+				51 container
+					52 link Description: Daily Bible Verses Quotes and Verses Rated 4.9 stars out of five stars, Value: play.google.com/store/apps/details?id=com.quotes.christian
+				53 container
+					54 link Description: ESV Bible Crossway Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.subsplash.esv
+				55 container
+					56 link Description: Daily Bible KJV Double Prime, Value: play.google.com/store/apps/details?id=com.dbltec.dailybible
+				57 container
+					58 link Description: Daily Scripture The Servants of the Word Rated 4.6 stars out of five stars, Value: play.google.com/store/apps/details?id=com.servantsoftheword.dailymeditations
+				59 container
+					60 link Description: Declare Bible: Daily Prayers Joelior Apps Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.declarebible.app
+				61 container
+					62 link Description: Daily Bible - Verse+Audio JATHLEHEM LIMITED, Value: play.google.com/store/apps/details?id=com.holybible.kjv.devotion.verse
+				63 container
+					64 link Description: Bible Widget: Daily Verse Kawaii Inc Rated 4.8 stars out of five stars, Value: play.google.com/store/apps/details?id=com.kawaiiapps.biblewidget
+				65 container
+					66 link Value: play.google.com/store/apps/details?id=com.bestweatherfor.bibleoffline_pt_ra, Description: Play Holy Bible Offline KJV + Audio Holy Bible Offline KJV + Audio Mr Rocco Rated 4.8 stars out of five stars
+				67 container
+					68 link Value: play.google.com/store/apps/details?id=com.bzn.biblical.meditation, Description: Play Bible Meditation -Pray & Study Bible Meditation -Pray & Study Verselingo Communications Limited Rated 4.6 stars out of five stars
+				69 container
+					70 link Description: Play Bible Clock: Daily Verse Bible Clock: Daily Verse CodeInFaith Rated 4.4 stars out of five stars, Value: play.google.com/store/apps/details?id=com.codeinfaith.bibleclock
+				71 container
+					72 link Value: play.google.com/store/apps/details?id=com.azwstudios.theholybible.kjv, Description: Play King James Bible (KJV) King James Bible (KJV) Warp Studios Bibles Rated 4.7 stars out of five stars
+				73 container
+					74 link Description: Life Bible Tecarta, Inc. Rated 4.9 stars out of five stars, Value: play.google.com/store/apps/details?id=com.tecarta.TecartaBible
+		75 container
+			76 text Google Play
+			77 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			78 link Description: Play Points, Value: play.google.com/store/points/enroll
+			79 link Description: Gift cards, Value: play.google.com/about/giftcards
+			80 link Description: Redeem, Value: play.google.com/redeem
+			81 link Description: Refund policy, Value: support.google.com/googleplay/answer/134336
+			82 text Kids & family
+			83 link Description: Parent Guide, Value: support.google.com/googleplay?p=pff_parentguide
+			84 link Description: Family sharing, Value: support.google.com/googleplay/answer/7007852
+			85 link Description: Terms of Service, Value: play.google.com/intl/en_in/about/play-terms.html
+			86 link Description: Privacy, Value: policies.google.com/privacy
+			87 link Description: About Google Play, Value: support.google.com/googleplay/?p=about_play
+			88 link Description: Developers, Value: developer.android.com/index.html
+			89 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			90 text All prices include GST. India (English)
+
+The focused UI element is 1 AXWebArea daily bible - Android Apps on Google Play, URL: play.google.com/store/search?q=daily%20bible&c=apps&hl=en&gl=IN

@@ -1,0 +1,134 @@
+Browser tab: 455027212, Title: "Store listings | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings".
+1 AXWebArea Store listings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+						32 button Monitor and improve
+							33 text Monitor and improve
+					34 container (expanded) Description: Grow users, Secondary Actions: Collapse
+						35 button Grow users
+							36 text Grow users
+						37 content list
+							38 container
+								39 container (expanded) Description: Store presence, Secondary Actions: Collapse
+									40 button Store presence
+									41 content list
+										42 container
+											43 container Store listings
+												44 button Store listings
+											45 container Store settings
+												46 button Store settings
+								47 container (collapsed) Description: Store performance, Secondary Actions: Expand
+									48 button Store performance
+								49 container (collapsed) Description: Translations, Secondary Actions: Expand
+									50 button Translations
+								51 container Deep links
+									52 button Deep links
+					53 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						54 button Monetize with Play
+							55 text Monetize with Play
+			56 container main-content
+				57 container
+					58 heading Store listings, Value: 1
+						59 text Store listings
+					60 button Create custom listing
+						61 text Create custom listing
+					62 button Create group
+						63 text Create group
+					64 container
+						65 heading Manage how your app is presented to users on Play, Value: 2
+							66 text Manage how your app is presented to users on Play
+						67 text Make a great first impression and help users find and engage with your app through your store listing. Use custom listings to target specific audiences with tailored content.
+						68 link Description: Learn more about Store listings (opens in a new tab), Value: support.google.com/googleplay/android-developer/answer/9156429
+						69 button Hide detailed description about Store listings
+							70 text Hide
+					71 tab group
+						72 tab (selected, settable, boolean) Description: Listings, Value: 1
+						73 tab (selectable, settable, boolean) Description: Groups, Value: 0
+					74 heading Your performance on Play, Value: 2
+						75 text Your performance on Play
+					76 pop up button (collapsed) Description: Select metric, Secondary Actions: Expand
+						77 text Installs
+					78 pop up button (collapsed) Description: Last 28 days Select date range to filter metrics, ID: a1B89DA34-18CB-4545-9E66-22003A6B8521--0, Secondary Actions: Expand
+						79 text date_range
+						80 text Last 28 days
+					81 button (collapsed) Default listing, Secondary Actions: Expand
+					82 link Description: Edit default listing, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings/default/edit
+					83 text 499 visitors
+					84 table Default store listing
+						85 row Name Last updated Visitors Conversion rate Experiments Status
+							86 cell Name
+								87 text Name
+							88 cell Last updated
+								89 text Last updated
+							90 cell Visitors
+								91 text Visitors
+							92 cell Conversion rate
+								93 text Conversion rate
+							94 cell Experiments
+								95 text Experiments
+							96 cell Status
+								97 text Status
+							98 cell
+							99 cell
+						100 row Default store listing Oct 8, 2026 499 19.4% Set up Live Select an action: view data, create new listing within group View default listing
+							101 cell
+								102 text Default store listing
+							103 cell
+								104 text Oct 8, 2026
+							105 cell
+								106 text 499
+							107 cell
+								108 text 19.4%
+							109 cell
+								110 button Set up
+									111 text Set up
+							112 cell
+								113 text Live
+							114 cell
+								115 list Select an action: view data, create new listing within group
+									116 pop up button (collapsed) Description: Select an action: view data, create new listing within group, Secondary Actions: Expand
+							117 cell
+								118 link Description: View default listing, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings/0
+					119 container
+						120 heading Target specific users with tailored content, Value: 2
+							121 text Target specific users with tailored content
+						122 text Create custom store listings to target specific users with tailored content. Once you've created a custom store listing, you can run experiments to test different graphics and localized text and see which perform best.
+						123 button Create custom store listing
+							124 text Create custom store listing
+				125 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				126 link Description: Status dashboard, Value: status.play.google.com/
+				127 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				128 text © 2026 Google
+				129 link Description: Privacy, Value: google.com/policies/privacy/
+				130 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				131 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Store listings | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings

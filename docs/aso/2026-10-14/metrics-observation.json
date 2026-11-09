@@ -1,0 +1,104 @@
+{
+  "observedAtUtc": "2026-10-14T05:12:00Z",
+  "scope": "Google Play Console, all countries unless noted. UI windows retained as shown; no Ads settings changed.",
+  "acquisition": {
+    "source": "Grow users overview, Metrics by Device",
+    "window": "Last 28 days compared with previous 28 days; source-detail URL dateRange=2026_9_15-2026_10_12",
+    "deviceImpressions": "3.53K",
+    "deviceImpressionsDisplayedDeltaPercent": ">999",
+    "deviceAcquisitions": 254,
+    "deviceAcquisitionsDisplayedDeltaPercent": 535,
+    "deviceFirstOpens": 38,
+    "deviceFirstOpensDisplayedDeltaPercent": 12,
+    "monthlyActiveDevices": 45,
+    "monthlyActiveDevicesDisplayedDeltaPercent": 88,
+    "trafficSources": [
+      {
+        "label": "Google Play explore",
+        "deviceAcquisitions": 13,
+        "displayedDeltaPercent": 0
+      },
+      {
+        "label": "Paid and direct",
+        "deviceAcquisitions": 96,
+        "displayedDeltaPercent": 336
+      },
+      {
+        "label": "Not attributed",
+        "deviceAcquisitions": 145,
+        "displayedDeltaPercent": ">999"
+      }
+    ],
+    "exploreUserAcquisitions90Days": 14,
+    "searchTerms": "No search-term/query report exposed in this view. Google Play explore can include generic category searches; this aggregate does not reveal query-level installs. Paid and direct combines paid/referral/direct mechanisms."
+  },
+  "listing": {
+    "report": "Store listings performance, Installs",
+    "displayedRangeLabel": "Last 28 days",
+    "exactDateRange": "Not exposed in page URL or visible label at capture",
+    "defaultListingRowVisitors": 491,
+    "defaultListingRowConversionRatePercent": 19.3,
+    "defaultListingStatus": "Live",
+    "defaultListingLastUpdated": "2026-10-08",
+    "uniqueUserInstallClicks": "Not exposed in current capture",
+    "clickThroughRate": "Not exposed in current capture",
+    "growOverviewStoreListingConversionRateLast90DaysPercent": 24.14,
+    "countryLanguageBreakdown": "Not exposed",
+    "caution": "Install clicks are not completed installs. Last-28-day listing row and 90-day overview conversion rates are different scopes."
+  },
+  "ratings": {
+    "report": "Ratings breakdown",
+    "averageRatingObserved": 5.0,
+    "last28DaysRatingsBreakdown": "No ratings match your filters",
+    "allTimeBreakdownObserved": [
+      {
+        "country": "India",
+        "numberOfRatings": 1,
+        "averageRating": 5.0
+      },
+      {
+        "language": "English",
+        "numberOfRatings": 1,
+        "averageRating": 5.0
+      },
+      {
+        "appVersion": "1.0.2 (28)",
+        "numberOfRatings": 1,
+        "averageRating": 5.0
+      }
+    ],
+    "note": "The one-rating breakdown is for an older build and is not evidence about version 1.0.14."
+  },
+  "retention": {
+    "source": "Grow users overview, Metrics by Device",
+    "window": "Last 28 days compared with previous 28 days",
+    "metric": "7-day device retention",
+    "displayedValue": 1,
+    "displayedDeltaPercent": -88,
+    "unit": "device count, not a retention percentage",
+    "note": "Very small observed count; sparse data limits interpretation."
+  },
+  "quality": {
+    "policyIssues": "None shown",
+    "last28DaysAndroidVitals": {
+      "userPerceivedCrashes": "Data unavailable",
+      "userPerceivedAnrs": "Data unavailable",
+      "slowColdStart": "Data unavailable"
+    },
+    "r8Advisory": "R8 configuration could be causing higher memory usage and lower performance, for version 1.0.14 (47). Potential optimization advisory, not measured device memory or battery use."
+  },
+  "experiments": {
+    "running": 0,
+    "ended": 0,
+    "applied": 0
+  },
+  "confounders": [
+    "Global device totals combine countries and languages.",
+    "Paid and direct contributed 96 device acquisitions (+336%); this is a material paid/referral/direct confounder and does not establish Google Ads-attributed installs.",
+    "Google Play explore contributed 13 acquisitions (0% displayed change); Explore includes generic category searches, but this is not a query-level measure.",
+    "Not attributed contributed 145 acquisitions (>999% displayed change).",
+    "Last-28-day acquisition window and active listing changes overlap the Oct 8 publication.",
+    "Unique install clicks, when exposed, are not completed installs.",
+    "Retention sample is one device; Android vitals are unavailable, not zero."
+  ]
+}

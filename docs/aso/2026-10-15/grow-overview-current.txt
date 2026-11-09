@@ -1,0 +1,151 @@
+Browser tab: 455027212, Title: "Grow users | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/grow-overview".
+1 AXWebArea Grow users | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/grow-overview
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+						32 button Monitor and improve
+							33 text Monitor and improve
+					34 container (expanded) Description: Grow users, Secondary Actions: Collapse
+						35 button Grow users
+							36 text Grow users
+						42 content list
+							43 container
+								44 container (collapsed) Description: Store presence, Secondary Actions: Expand
+									45 button Store presence
+								46 container (collapsed) Description: Store performance, Secondary Actions: Expand
+									47 button Store performance
+								48 container (collapsed) Description: Translations, Secondary Actions: Expand
+									49 button Translations
+								50 container Deep links
+									51 button Deep links
+					37 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						38 button Monetize with Play
+							39 text Monetize with Play
+			40 container main-content
+				41 container
+					52 heading Grow users, Value: 1
+						53 text Grow users
+					54 heading Your performance on Play, Value: 2
+						55 text Your performance on Play
+					56 pop up button (collapsed) Description: Metrics by: Device, Secondary Actions: Expand
+						57 text Metrics by: Device
+					58 pop up button (collapsed) Description: Last 28 days, Secondary Actions: Expand
+						59 text Last 28 days
+					60 button (collapsed) Reach Show details for Device impressions, Secondary Actions: Expand
+						61 text Reach
+						62 text Show details for Device impressions
+					63 button (collapsed) Device impressions, Secondary Actions: Expand
+					64 text 3.53K
+					65 text >+999% delta, where an increase is good
+					66 container Chart Use left and right keys to navigate through domain values.
+					67 button (expanded) Acquire Device acquisitions 253 Hide details for Device acquisitions, Secondary Actions: Collapse
+						68 text Acquire
+						127 text Device acquisitions
+						128 text 253
+						69 text Hide details for Device acquisitions
+					70 button (collapsed) Device acquisitions, Secondary Actions: Expand
+					71 text 253
+					72 text >+999% delta, where an increase is good
+					73 container Chart Use left and right keys to navigate through domain values.
+					74 button (collapsed) Activate Show details for Device first opens, Secondary Actions: Expand
+						75 text Activate
+						76 text Show details for Device first opens
+					77 button (collapsed) Device first opens, Secondary Actions: Expand
+					78 text 38
+					79 text +27% delta, where an increase is good
+					80 container Chart Use left and right keys to navigate through domain values.
+					81 button (collapsed) Engage Show details for Monthly active devices, Secondary Actions: Expand
+						82 text Engage
+						83 text Show details for Monthly active devices
+					84 button (collapsed) Monthly active devices, Secondary Actions: Expand
+					85 text 44
+					86 text +120% delta, where an increase is good
+					87 container Chart Use left and right keys to navigate through domain values.
+					88 button (collapsed) Retain Show details for 7-day device retention, Secondary Actions: Expand
+						89 text Retain
+						90 text Show details for 7-day device retention
+					91 button (collapsed) 7-day device retention, Secondary Actions: Expand
+					92 text 1
+					93 text -88% delta, where an increase is good
+					94 container Chart Use left and right keys to navigate through domain values.
+					129 container
+						130 button (collapsed) Google Play explore, Secondary Actions: Expand
+						131 text 12 >+999%
+					132 container
+						133 button (collapsed) Paid and direct, Secondary Actions: Expand
+						134 text 96 +500%
+					135 container
+						136 button (collapsed) Not attributed, Secondary Actions: Expand
+						137 text 145 >+999%
+					138 button (collapsed) Device acquisitions, Secondary Actions: Expand
+					139 text by
+					140 pop up button (collapsed) Description: Traffic source, Secondary Actions: Expand
+						141 text Traffic source
+					142 cell
+						143 button (collapsed) 3 traffic sources, Secondary Actions: Expand
+							144 text 3 traffic sources
+					145 button Explore this chart with AI
+						146 text Explore with AI
+					147 link Description: Dive deeper, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/statistics?metrics=DEVICE_ACQUISITION-ALL-EVENTS-PER_INTERVAL-DAY&dateRange=2026_9_17-2026_10_14&dimension=TRAFFIC_SOURCE_NAV_SEARCH_AND_DEEP_LINK_IS_PAID_DIRECT&dimensionValues=UNKNOWN_TRAFFIC_SOURCE%2CPAID_AND_DIRECT%2CSTORE_BROWSE
+					148 container Chart Use left and right keys to navigate through domain values.
+					95 text Play is helping people to discover your app
+					96 container
+						97 text +14 explore user acquisitions in the last 90 days
+					98 text Last 90 days
+					99 heading Store listings, Value: 2
+						100 text Store listings
+					101 link Description: Get started View store listings, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings
+					102 text Default listing active
+					103 container
+						104 text Your conversion rate is  25.14%
+					105 heading Store listing experiments, Value: 2
+						106 text Store listing experiments
+					107 link Description: Get started View store listing experiments, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings?tab=experiments
+					108 content list
+						109 text 0 experiments running
+						110 container
+							111 text 0 ended
+					112 text 0 applied
+					113 text Do you find this overview useful?
+					114 button No, not really
+						115 image No, not really
+					116 button Somewhat
+						117 image Somewhat
+					118 button Yes, this is great
+						119 image Yes, this is great
+				120 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				121 link Description: Status dashboard, Value: status.play.google.com/
+				122 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				123 text © 2026 Google
+				124 link Description: Privacy, Value: google.com/policies/privacy/
+				125 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				126 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 67 button (expanded) Acquire Device acquisitions 253 Hide details for Device acquisitions, Secondary Actions: Collapse

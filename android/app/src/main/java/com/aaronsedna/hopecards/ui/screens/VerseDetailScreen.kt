@@ -1,5 +1,6 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -38,7 +39,6 @@ import com.aaronsedna.hopecards.ui.components.AppIconGlyph
 import com.aaronsedna.hopecards.ui.components.BibleReferenceText
 import com.aaronsedna.hopecards.ui.components.changeTranslationOnLongPress
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
-import com.aaronsedna.hopecards.ui.theme.Poppins
 import com.aaronsedna.hopecards.ui.theme.SourceSerif
 import com.aaronsedna.hopecards.ui.theme.interfaceFontFor
 import com.aaronsedna.hopecards.ui.theme.scriptureFontFor
@@ -62,7 +62,7 @@ fun VerseDetailScreen(
         verticalArrangement = Arrangement.Center,
     ) {
         Column(Modifier.fillMaxWidth().widthIn(max = 720.dp).alpha(alpha.value), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(categoryLabel(verse.category).uppercase(), color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, letterSpacing = 3.sp, modifier = Modifier.padding(bottom = 10.dp))
+            Text(categoryLabel(verse.category).uppercase(), color = colors.accent, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold, fontSize = 16.sp, letterSpacing = 3.sp, modifier = Modifier.padding(bottom = 10.dp))
             Box(Modifier.size(80.dp, 3.dp).background(colors.accent, CircleShape))
             BibleReferenceText(
                 verse = verse,
@@ -92,18 +92,18 @@ fun VerseDetailScreen(
                     Text(
                         appString(R.string.edit_journal_entry),
                         color = colors.accent,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.SemiBold,
                         modifier = Modifier.padding(start = 7.dp),
                     )
                 }
             }
             Column(Modifier.padding(top = 34.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(appString(R.string.translation).uppercase(), color = colors.textTertiary, fontFamily = Poppins, fontSize = 13.sp, letterSpacing = 1.5.sp, modifier = Modifier.padding(bottom = 8.dp))
+                Text(appString(R.string.translation).uppercase(), color = colors.textTertiary, fontFamily = appInterfaceFont(), fontSize = 13.sp, letterSpacing = 1.5.sp, modifier = Modifier.padding(bottom = 8.dp))
                 Text(
                     verse.translation,
                     color = colors.text,
-                    fontFamily = Poppins,
+                    fontFamily = appInterfaceFont(),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
                     textAlign = TextAlign.Center,

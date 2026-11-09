@@ -75,7 +75,7 @@ class QuizReportTest {
             Translation.RIV1927, Translation.RV1909, Translation.ADB1905).forEach { translation ->
             val report = report(translation)
             assertTrue(report.shareText.contains(report.score))
-            assertTrue(report.shareText.contains(translation.label))
+            assertFalse(report.shareText.contains(report.review.edition))
             for (paper in listOf(QuizReport.Paper(), QuizReport.Paper(842, 595), QuizReport.Paper(298, 420))) {
                 val pages = report.layout(paper)
                 assertTrue(pages.content.size > 1)
@@ -194,7 +194,7 @@ class QuizReportTest {
         }
     }
 
-    @Test fun everyQuestionIncludesSelectedAndCorrectAnswersInTheSelectedBibleLanguage() {
+    @Test fun everyQuestionIncludesAnswersWithoutRedundancyInTheSelectedBibleLanguage() {
         listOf(Translation.BSB, Translation.MAL1910, Translation.LUT1912, Translation.LSG1910,
             Translation.RIV1927, Translation.RV1909, Translation.ADB1905).forEach { translation ->
             val questions = BibleQuizRepository(context).load(QuizLanguage.forTranslation(translation)).take(2)
@@ -209,9 +209,18 @@ class QuizReportTest {
                 val end = if (index == questions.lastIndex) text.size else text.indexOf("${index + 2}. ${questions[index + 1].question.substringBefore("\n\n")}")
                 val answer = text.subList(start, end)
                 if ("\n\n" in question.question) assertTrue("Missing quotation in ${translation.id}", answer.contains(question.question.substringAfter("\n\n")))
-                assertTrue(answer.contains(report.resources.getString(R.string.quiz_your_answer, question.options[session.answers[index]])))
-                assertTrue(answer.contains(report.resources.getString(R.string.quiz_correct_answer, question.options[question.correctIndex])))
-                assertTrue(answer.contains(report.resources.getString(if (index == 0) R.string.quiz_correct else R.string.quiz_incorrect)))
+                val selectedLabel = report.resources.getString(R.string.quiz_your_answer, question.options[session.answers[index]])
+                val correctLabel = report.resources.getString(R.string.quiz_correct_answer, question.options[question.correctIndex])
+                if (index == 0) {
+                    assertEquals(1, answer.count { it == question.options[question.correctIndex] })
+                    assertFalse(answer.contains(selectedLabel))
+                    assertFalse(answer.contains(correctLabel))
+                } else {
+                    assertTrue(answer.contains(selectedLabel))
+                    assertTrue(answer.contains(correctLabel))
+                }
+                assertFalse(answer.contains(report.resources.getString(if (index == 0) R.string.quiz_correct else R.string.quiz_incorrect)))
+                assertNull(report.review.answers[index].timeTaken)
                 assertTrue(answer.contains("${report.resources.getString(R.string.quiz_reference)}: ${BibleReferenceFormatter.formatFull(question.reference, translation)}"))
                 if (question.explanation.isNotBlank()) assertTrue(answer.contains(question.explanation))
             }
@@ -230,11 +239,13 @@ class QuizReportTest {
             assertPaperBounds(pages)
             val text = pages.content.flatten().distinctBy { it.layout }.map { it.layout.text.toString() }
             val unanswered = report.resources.getString(R.string.quiz_unanswered)
-            assertEquals("Unanswered result labels missing for ${translation.id}", 2, text.count { it == unanswered })
-            assertEquals("Unanswered selections missing for ${translation.id}", 2,
+            assertEquals("Unanswered status must be clear for ${translation.id}", 2, text.count { it == unanswered })
+            assertEquals(2, pages.panels.flatten().count { it.marker == com.aaronsedna.hopecards.ui.QuizReviewContent.Outcome.UNANSWERED })
+            assertEquals("Unanswered selections should not be repeated for ${translation.id}", 0,
                 text.count { it == report.resources.getString(R.string.quiz_your_answer, unanswered) })
             assertFalse("Unanswered must not be labelled Incorrect", text.contains(report.resources.getString(R.string.quiz_incorrect)))
-            questions.forEach { question ->
+            assertTrue(text.contains(questions.first().options[questions.first().correctIndex]))
+            questions.drop(1).forEach { question ->
                 assertTrue(text.contains(report.resources.getString(R.string.quiz_correct_answer, question.options[question.correctIndex])))
             }
             assertFalse(text.any { it.contains("play.google.com") })

@@ -1,0 +1,205 @@
+2026-10-09T15:55:42.611Z
+- banner:
+  - navigation "പേജ് ഹെഡ്ഡര്‍":
+    - link "Google Play ലോഗോ":
+      - /url: /store/games
+      - generic: google_logo Play
+    - navigation "പ്രധാനപ്പെട്ടത്":
+      - tablist:
+        - tab "ഗെയിമുകൾ":
+          - generic: ഗെയിമുകൾ
+        - tab "ആപ്പുകൾ" [selected]:
+          - generic: ആപ്പുകൾ
+        - tab "പുസ്‌തകങ്ങൾ":
+          - generic: പുസ്‌തകങ്ങൾ
+        - tab "കുട്ടികള്‍‌":
+          - generic: കുട്ടികള്‍‌
+    - button "തിരയുക":
+      - generic: search
+    - button "സഹായ കേന്ദ്രം":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- 'heading "ബൈബിൾ വചനം: Hope Cards" [level=1]'
+- link "Aaronsedna":
+  - /url: /store/apps/developer?id=Aaronsedna
+- generic: പരസ്യങ്ങൾ അടങ്ങിയിരിക്കുന്നു · ആപ്പ് വഴിയുള്ള വാങ്ങലുകൾ
+- region "വിവര ബാഡ്‌ജുകൾ":
+  - generic: 100+
+  - generic: ഡൗൺലോഡുകൾ
+- button "കൂടുതൽ ഉപകരണങ്ങളിൽ ഇൻസ്റ്റാൾ ചെയ്യുക" [disabled]:
+  - generic: കൂടുതൽ ഉപകരണങ്ങളിൽ ഇൻസ്റ്റാൾ ചെയ്യുക
+- button "പങ്കിടുക":
+  - generic: പങ്കിടുക
+- button "ട്രെയ്‌ലർ പ്ലേ ചെയ്യുക":
+  - generic: play_arrow
+  - text: ട്രെയ്‌ലർ
+- generic: devices
+- generic: നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങൾക്കും ഈ ആപ്പ് ലഭ്യമാണ്
+- list:
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+  - button "സ്‌ക്രീൻഷോട്ട് ചിത്രം"
+- button "അടുത്ത സെറ്റിലേക്ക് സ്ക്രോൾ ചെയ്യുക":
+  - generic: chevron_right
+- heading "പുതിയതെന്താണ്" [level=2]
+- generic: പിഴവുകൾ പരിഹരിച്ചു.
+- banner:
+  - generic: തിരഞ്ഞെടുത്ത സ്റ്റോറികൾ
+- list:
+  - link "Special event Play Fest starts on October 13 Big savings, big offers, and more":
+    - /url: /store/apps/editorial?id=mc_games_cmp_play_days_2026_fcp
+    - generic: Special event
+    - generic: Play Fest starts on October 13
+    - generic: Big savings, big offers, and more
+- heading "ഡാറ്റാ സുരക്ഷ" [level=2]
+- generic: arrow_forward
+- link "ഡാറ്റാ സുരക്ഷ എന്നതിൽ കൂടുതൽ വിവരങ്ങൾ കാണുക":
+  - /url: /store/apps/datasafety?id=com.aaronsedna.hopecards
+- text: ഡെവലപ്പര്‍മാർ നിങ്ങളുടെ ഡാറ്റ ശേഖരിക്കുകയും പങ്കിടുകയും ചെയ്യുന്നത് എങ്ങനെയെന്ന് മനസ്സിലാക്കുന്നതിലൂടെയാണ് സുരക്ഷ ആരംഭിക്കുന്നത്. നിങ്ങളുടെ ഉപയോഗത്തെയും പ്രദേശത്തെയും പ്രായത്തെയും അടിസ്ഥാനമാക്കി ഡാറ്റാ സ്വകാര്യതയും സുരക്ഷാ നടപടികളും വ്യത്യാസപ്പെടാം. ഡെവലപ്പര്‍ ഈ വിവരങ്ങൾ നൽകി കാലക്രമേണ ഇത് അപ്ഡേറ്റ് ചെയ്തേക്കാം.
+- list:
+  - text: മൂന്നാം കക്ഷികളുമായി ഈ ആപ്പ് ഈ ഡാറ്റാ തരങ്ങൾ പങ്കിട്ടേക്കാം
+  - generic: ലൊക്കേഷൻ, ആപ്പ് ആക്റ്റിവിറ്റി എന്നിവയും മറ്റ് 2 എണ്ണവും
+  - text: ഈ ആപ്പ് ഈ ഡാറ്റാ തരങ്ങൾ ശേഖരിച്ചേക്കാം
+  - generic: ലൊക്കേഷൻ, ആപ്പ് ആക്റ്റിവിറ്റി എന്നിവയും മറ്റ് 2 എണ്ണവും
+  - generic: ട്രാൻസിറ്റിൽ ഡാറ്റ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു
+- generic: വിശദാംശങ്ങൾ കാണുക
+- link "ഡാറ്റാ സുരക്ഷയിൽ കൂടുതൽ വിശദാംശങ്ങള്‍ കാണുക":
+  - /url: /store/apps/datasafety?id=com.aaronsedna.hopecards
+- heading "ഈ ആപ്പിനെക്കുറിച്ച്" [level=2]
+- button "ഈ ആപ്പിനെക്കുറിച്ച് എന്നതിൽ കൂടുതൽ വിവരങ്ങൾ കാണുക":
+  - generic: arrow_forward
+- text: പ്രത്യാശയ്ക്കും ധ്യാനത്തിനും പ്രോത്സാഹനത്തിനുമായി ഓരോ ദിവസവും ഒരു ബൈബിൾ വാക്യം കണ്ടെത്തൂ. ഒരു മനോഹരമായ കാർഡ് വീതം.
+- text: തിരുവചനത്തോടൊപ്പം ലളിതമായൊരു ദൈനംദിന ശീലം വളർത്താൻ സഹായിക്കുന്ന ശാന്തമായ ബൈബിൾ വാക്യ ആപ്പാണ് Hope Cards. ഒരു വാക്യ കാർഡ് എടുക്കൂ, Daily Hope-ൽ ഇന്നത്തെ വചനം വായിക്കൂ, പ്രിയപ്പെട്ട വാക്യങ്ങൾ സൂക്ഷിക്കൂ, ഓരോ തിരുവചനത്തോടും ബന്ധിപ്പിച്ച ജേർണൽ കുറിപ്പുകൾ എഴുതൂ. മലയാളത്തിലെ സത്യവേദപുസ്തകം ഉൾപ്പെടെയുള്ള പരിഭാഷകളിൽ ബൈബിൾ വചനങ്ങൾ വായിക്കാം. അക്കൗണ്ടോ സങ്കീർണ്ണമായ വായനാപദ്ധതിയോ ആവശ്യമില്ല.
+- text: ബൈബിൾ ക്വിസ് ചോദ്യങ്ങളും ഉത്തരങ്ങളും
+- text: ബൈബിളിലെ വ്യക്തികളെയും സ്ഥലങ്ങളെയും സംഭവങ്ങളെയും കുറിച്ച് പഠിക്കാം. മലയാളം, ഇംഗ്ലീഷ്, ജർമ്മൻ, ഫ്രഞ്ച്, ഇറ്റാലിയൻ, സ്പാനിഷ്, ഫിലിപ്പിനോ ഭാഷകളിൽ കളിക്കാം. ചോദ്യങ്ങളുടെ ക്രമം ഓരോ റൗണ്ടിലും മാറിവരും. തിരഞ്ഞെടുത്ത ബൈബിൾ പരിഭാഷയുടെ ഭാഷയിൽ ക്വിസ് ലഭിക്കും. വചനസൂചനയോടെ ഉത്തരം പരിശോധിക്കാം. സ്കോറും എല്ലാ ചോദ്യങ്ങളും നിങ്ങൾ തിരഞ്ഞെടുത്ത ഉത്തരങ്ങളും ശരിയുത്തരങ്ങളും അടങ്ങിയ PDF റിപ്പോർട്ട് പങ്കിടാം. ഇന്റർനെറ്റ് ഇല്ലാതെയും ചോദ്യങ്ങൾ ലഭിക്കും.
+- text: നിങ്ങളുടെ വേഗത്തിൽ കളിക്കാം, അല്ലെങ്കിൽ ഓരോ ചോദ്യത്തിനും 30 സെക്കൻഡ് കൗണ്ട്ഡൗൺ സജ്ജമാക്കാം. സമയം തീരുമ്പോൾ ക്വിസ് സ്വയം മുന്നോട്ട് നീങ്ങും. ടൈമർ ആദ്യം ഓഫ് ആയിരിക്കും. നിങ്ങൾ തിരഞ്ഞെടുത്ത ക്രമീകരണം അടുത്ത ക്വിസിലും നിലനിൽക്കും. ശബ്ദം ആദ്യം ഓൺ ആയിരിക്കും; വേണമെങ്കിൽ ഓഫ് ചെയ്യാം. ശബ്ദം ഓൺ ആണെങ്കിൽ അവസാന അഞ്ച് സെക്കൻഡിൽ ബീപ്പ് കേൾക്കാം.
+- text: ബൈബിൾ ക്വിസ് സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കാം
+- text: ബൈബിൾ ക്വിസ് മത്സരത്തിനായി A4 വലുപ്പത്തിലുള്ള പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ PDF ആയി തയ്യാറാക്കാം. ഒന്നിലധികം പങ്കാളികളുടെ പേരുകൾ ഒരുമിച്ച് ചേർക്കാം. ഓരോരുത്തർക്കും പ്രത്യേക സർട്ടിഫിക്കറ്റ് ലഭിക്കും. തിരഞ്ഞെടുത്ത ബൈബിളിന്റെ ഭാഷയിൽ സർട്ടിഫിക്കറ്റുകൾ സ്വയം തയ്യാറാകും. മത്സരത്തിന്റെ പേരും തീയതിയും നൽകാം; വേണമെങ്കിൽ സംഘടനയുടെ പേരും ചേർക്കാം. ഒരു സർട്ടിഫിക്കറ്റോ എല്ലാ PDF-കളോ ഒരുമിച്ച് പങ്കിടാം.
+- text: വചനചിത്രങ്ങൾ സൂക്ഷിക്കാനും പങ്കിടാനും
+- text: പൂക്കൾ, പക്ഷികൾ, കടൽത്തീരങ്ങൾ, നക്ഷത്രങ്ങൾ നിറഞ്ഞ ആകാശം എന്നിവ ഉൾപ്പെടുന്ന പ്രകൃതിദൃശ്യ പശ്ചാത്തലങ്ങൾ. ഗാലറി തുറക്കുമ്പോൾ പശ്ചാത്തലങ്ങൾ മാറിവരും. ഇഷ്ടമുള്ള വചനചിത്രങ്ങൾ സൂക്ഷിക്കാം, പങ്കിടാം.
+- text: Hope Cards ഉപയോഗിച്ച് ചെയ്യാവുന്നത്
+- text: പ്രോത്സാഹിപ്പിക്കുന്ന ബൈബിൾ വാക്യ കാർഡുകൾ എടുക്കാം
+- text: ഓരോ ദിവസവും Daily Hope-ൽ ഇന്നത്തെ വാക്യം വായിക്കാം
+- text: വിവിധ ബൈബിൾ പരിഭാഷകളിലും ഭാഷകളിലും വായിക്കാം
+- text: ഇഷ്ടപ്പെട്ട വാക്യങ്ങൾ സൂക്ഷിക്കാം
+- text: ഓരോ വാക്യത്തിനുമൊപ്പം ജേർണൽ കുറിപ്പുകൾ ചേർക്കാം
+- text: നിങ്ങൾക്ക് അനുയോജ്യമായ സമയത്ത് ദൈനംദിന ഓർമ്മപ്പെടുത്തൽ ക്രമീകരിക്കാം
+- text: വാക്യങ്ങൾ കുടുംബത്തോടും സുഹൃത്തുക്കളോടും പങ്കിടാം
+- text: മനോഹരമായ കാർഡ് തീമുകൾ തിരഞ്ഞെടുക്കാം
+- text: പ്രിയപ്പെട്ടവ, ജേർണൽ, ക്രമീകരണങ്ങൾ എന്നിവ ബാക്കപ്പ് എടുത്ത് പുനഃസ്ഥാപിക്കാം
+- text: Daily Hope ഉപയോഗിക്കുമ്പോൾ ഇഷ്ടമെങ്കിൽ ശാന്തമായ പശ്ചാത്തല സംഗീതം കേൾക്കാം
+- text: എല്ലാ സൗകര്യങ്ങളും ലഭ്യമാണ്
+- text: ദിനവചനങ്ങൾ, ബൈബിൾ ക്വിസ്, സർട്ടിഫിക്കറ്റുകൾ തയ്യാറാക്കൽ, വചനചിത്രങ്ങൾ, തീമുകൾ, ഓർമ്മപ്പെടുത്തലുകൾ, പ്രിയപ്പെട്ടവ, ജേർണൽ എന്നിവയെല്ലാം ലഭ്യമാണ്. ഇടയ്ക്കുള്ള പരസ്യങ്ങൾ Hope Cards-നെ പിന്തുണയ്ക്കുന്നു. Google Play-യിലെ ഒറ്റത്തവണ വാങ്ങലിലൂടെ പരസ്യങ്ങൾ എന്നേക്കുമായി നീക്കാം. സബ്സ്ക്രിപ്ഷൻ ഇല്ല.
+- text: ഒരു ശാന്ത നിമിഷത്തിനായാലും ദിവസം മുഴുവൻ ഒരു വാക്യം ഓർക്കാനായാലും, നിങ്ങളുടെ ഫോണിലും ടാബ്‌ലെറ്റിലും തിരുവചനത്തിന് ലളിതവും സ്വാഗതാർഹവുമായ ഇടം Hope Cards നൽകുന്നു.
+- note "മലയാളം ബൈബിൾ വചനങ്ങൾ, വചനചിത്രങ്ങൾ, ക്വിസ്, പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ."
+- generic: അപ്‌ഡേറ്റ് ചെയ്ത തീയതി
+- generic: 2026 ഒക്ടോ 8
+- generic: ജീവിതശൈലി
+- link "ജീവിതശൈലി":
+  - /url: /store/apps/category/LIFESTYLE
+- link "അനുചിതമാണെന്ന് ഫ്ലാഗ് ചെയ്യുക (പുതിയ വിൻഡോയിൽ തുറക്കുന്നു)":
+  - /url: https://support.google.com/googleplay/?p=report_content
+  - generic: flag
+  - text: അനുചിതമെന്ന് ഫ്ലാഗുചെയ്യുക
+- img "ഉള്ളടക്ക റേറ്റിംഗ്"
+- generic: 3+ പ്രായമുള്ളവർക്ക്
+- generic: ആപ്പ് വഴിയുള്ള വാങ്ങൽ
+- link "ഉള്ളടക്ക റേറ്റിംഗുകളെ കുറിച്ച് കൂടുതലറിയുക (പുതിയ വിൻഡോയിൽ തുറക്കുന്നു)":
+  - /url: https://support.google.com/googleplay?p=appgame_ratings
+  - text: കൂടുതലറിയുക
+- heading "ആപ്പ് പിന്തുണ" [level=2]
+- button "വികസിപ്പിക്കുക":
+  - generic: expand_more
+- heading "പരീക്ഷിക്കാൻ കൂടുതൽ ആപ്പുകൾ" [level=2]:
+  - generic: പരീക്ഷിക്കാൻ കൂടുതൽ ആപ്പുകൾ
+- generic: arrow_forward
+- link "പരീക്ഷിക്കാൻ കൂടുതൽ ആപ്പുകൾ എന്നതിൽ കൂടുതൽ വിവരങ്ങൾ കാണുക":
+  - /url: /store/apps/collection/cluster?gsr=SmJqLFdyclJnMThLRmxEN1hwOCtBclJPWS82WW0zVXJqaGxyVTJBNHNHYmRNYzg9mgguChwKGGNvbS5hYXJvbnNlZG5hLmhvcGVjYXJkcxAHEAIaBggBEAAYACAAMAE4ALASAA%3D%3D:S:ANO1ljKW5EE
+- 'link "Storytel: Audiobooks & Ebooks Storytel Sweden AB അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=grit.storytel.app
+  - generic: "Storytel: Audiobooks & Ebooks"
+  - generic: Storytel Sweden AB
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "Chatbot AI - Search Assistant Codespace Dijital അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.codespaceapps.aichat
+  - generic: Chatbot AI - Search Assistant
+  - generic: Codespace Dijital
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "DramaBox - Stream Drama Shorts STORYMATRIX അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.storymatrix.drama
+  - generic: DramaBox - Stream Drama Shorts
+  - generic: STORYMATRIX
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Claude by Anthropic Anthropic PBC അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.anthropic.claude
+  - generic: Claude by Anthropic
+  - generic: Anthropic PBC
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- 'link "NBA: Live Games & Scores NBA Properties, Inc. അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.nbaimd.gametime.nba2011
+  - generic: "NBA: Live Games & Scores"
+  - generic: NBA Properties, Inc.
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- 'link "MoboReels: Good Reel Short TV MOBOREADER TECHNOLOGY USA CO LTD അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.changdu.mobovideo
+  - generic: "MoboReels: Good Reel Short TV"
+  - generic: MOBOREADER TECHNOLOGY USA CO LTD
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "സമ്മാന കാർഡുകൾ":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: സമ്മാന കാർഡുകൾ
+  - link "റിഡീം ചെയ്യുക":
+    - /url: /redeem
+    - paragraph: റിഡീം ചെയ്യുക
+  - link "റീഫണ്ട് നയം":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: റീഫണ്ട് നയം
+  - text: കുട്ടികളും കുടുംബവും
+  - link "രക്ഷാകർതൃ ഗൈഡ്":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: രക്ഷാകർതൃ ഗൈഡ്
+  - link "കുടുംബവുമായി പങ്കിടൽ":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: കുടുംബവുമായി പങ്കിടൽ
+  - link "സേവന നിബന്ധനകൾ":
+    - /url: https://play.google.com/intl/ml_in/about/play-terms.html
+    - paragraph: സേവന നിബന്ധനകൾ
+  - link "സ്വകാര്യത":
+    - /url: https://policies.google.com/privacy
+    - paragraph: സ്വകാര്യത
+  - link "Google Play-യെ കുറിച്ച്":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: Google Play-യെ കുറിച്ച്
+  - link "ഡെവലപ്പർമാർ":
+    - /url: http://developer.android.com/index.html
+    - paragraph: ഡെവലപ്പർമാർ
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ.
+  - generic: ഇന്ത്യ (മലയാളം)

@@ -1,0 +1,34 @@
+{
+  "observedAtUtc": "2026-10-12T17:29:23Z",
+  "packageName": "com.aaronsedna.hopecards",
+  "consoleAppId": "4976302422419978923",
+  "productionStatus": "published",
+  "versionName": "1.0.14",
+  "versionCode": 47,
+  "rolloutPercent": 100,
+  "countriesOrRegions": 178,
+  "lastPublishedConsoleDate": "2026-10-08",
+  "noUnpublishedChanges": true,
+  "reviewState": "Dashboard says no unpublished changes; Publishing overview says last published Oct 8. No queued submission, active review, approval or rejection visible.",
+  "publicVisibility": {
+    "IndiaEnglish": {
+      "title": "Daily Bible Verse: Hope Cards",
+      "updatedOn": "Oct 8, 2026",
+      "whatsNew": "Bug fixes.",
+      "snapshot": "public-listing-en.txt"
+    },
+    "IndiaMalayalam": {
+      "titleObserved": "ബൈബിൾ വചനം: Hope Cards",
+      "updatedOn": "2026 ഒക്ടോ 8",
+      "snapshot": "public-listing-ml.txt"
+    },
+    "packageVerifiedByURL": "com.aaronsedna.hopecards"
+  },
+  "evidence": [
+    "app-dashboard-current.txt",
+    "publishing-overview-current.txt",
+    "production-track-current.txt",
+    "public-listing-en.txt",
+    "public-listing-ml.txt"
+  ]
+}

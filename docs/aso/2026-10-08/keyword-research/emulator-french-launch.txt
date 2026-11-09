@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.aaronsedna.hopecards.debug/com.aaronsedna.hopecards.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.aaronsedna.hopecards.debug/com.aaronsedna.hopecards.MainActivity
+TotalTime: 16667
+WaitTime: 16742
+Complete

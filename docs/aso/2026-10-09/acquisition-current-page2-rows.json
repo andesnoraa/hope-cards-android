@@ -1,0 +1,39 @@
+{
+  "columnOrder": [
+    "Google Play explore",
+    "Paid and direct",
+    "Not attributed"
+  ],
+  "rows": [
+    {
+      "date": "Sep 18, 2026",
+      "values": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "date": "Sep 16, 2026",
+      "values": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "date": "Sep 13, 2026",
+      "values": [
+        null,
+        2,
+        null
+      ]
+    }
+  ],
+  "availableNumericCellSubtotals": [
+    2,
+    2,
+    null
+  ],
+  "dashesAreNotZero": true
+}

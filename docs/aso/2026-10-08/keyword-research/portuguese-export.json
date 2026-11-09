@@ -1,0 +1,27 @@
+{
+  "googleSource": "Play Console signed universal APK for draft 46",
+  "reviewedCorrections": {
+    "draw_a_card": "Tirar uma carta",
+    "draw_card_accessibility": "Tirar uma carta",
+    "settings_draw_button": "Botão para tirar cartas",
+    "settings_draw_button_body": "Mostre um botão para tirar cartas ou toque diretamente no baralho.",
+    "settings_haptics_body": "Use uma vibração suave ao tirar e salvar cartas."
+  },
+  "strippedUnusedFallbackNames": [
+    "quiz_certificate_error_date_length",
+    "quiz_certificate_language_label",
+    "quiz_certificate_language_hint",
+    "quiz_certificate_share_message",
+    "quiz_certificate_share_copy",
+    "quiz_certificate_share_copied",
+    "quiz_certificate_share_hint",
+    "quiz_exit_message",
+    "quiz_bank_size",
+    "quiz_save_pdf",
+    "quiz_pdf_saved"
+  ],
+  "sourceArtifactSha256": "f83b7f9c6d0c96476014371329a924db19a98d1994defaf3ef76aedfbc0a7ca5",
+  "googleDumpResourcesIncludingLibraryStrings": 404,
+  "retainedAppResources": 326,
+  "googleAppResourcesRetained": 315
+}

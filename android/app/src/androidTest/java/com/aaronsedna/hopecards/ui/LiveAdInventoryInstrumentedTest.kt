@@ -14,6 +14,7 @@ import com.aaronsedna.hopecards.ads.AdsManager
 import com.aaronsedna.hopecards.data.AppRepository
 import com.aaronsedna.hopecards.data.InterstitialPolicy
 import com.aaronsedna.hopecards.model.Destination
+import com.aaronsedna.hopecards.notifications.ReminderScheduler
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Rule
@@ -32,70 +33,90 @@ class LiveAdInventoryInstrumentedTest {
         repository.initialize()
         // This is the disposable debug package; do not touch production entitlement or counters.
         repository.recordInterstitialShown(System.currentTimeMillis() - InterstitialPolicy.MIN_INTERVAL_MS - 1_000)
-        ActivityScenario.launch(MainActivity::class.java).use { scenario ->
-            lateinit var model: HopeCardsViewModel
-            scenario.onActivity {
-                it.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-                model = ViewModelProvider(it)[HopeCardsViewModel::class.java]
-            }
-            compose.waitUntil(15_000) { model.uiState.value.initialized }
-            // Observe the cached SDK object in this unminified test build without adding a
-            // production testing API or replacing the real network/ad presentation path.
-            val cachedAd = AdsManager::class.java.getDeclaredField("interstitial").apply { isAccessible = true }
-            compose.waitUntil(90_000) {
-                var loaded = false
-                scenario.onActivity { loaded = cachedAd.get(model.ads) != null }
-                loaded
-            }
-            var dailyContinued = false
-            scenario.onActivity {
-                model.navigate(Destination.DAILY)
-                model.ads.completeQuiz(it, false, { true }) { dailyContinued = true }
-            }
-            assertTrue(dailyContinued)
-            assertEquals(Lifecycle.State.RESUMED, scenario.state)
-            scenario.onActivity {
-                assertNotNull(cachedAd.get(model.ads))
-                model.navigate(Destination.BIBLE_QUIZ)
-            }
-            compose.waitForIdle()
-            scenario.onActivity {
-                model.ads.completeQuiz(it, false, { true }) { model.navigate(Destination.HOME) }
-            }
-            compose.waitUntil(10_000) { scenario.state != Lifecycle.State.RESUMED }
-            SystemClock.sleep(2_000)
-            val output = File(instrumentation.targetContext.getExternalFilesDir(null), "quality-ad-test.png")
-            val capture = checkNotNull(instrumentation.uiAutomation.takeScreenshot())
-            output.outputStream().use { capture.compress(Bitmap.CompressFormat.PNG, 100, it) }
-            capture.recycle()
-            println("Official test interstitial presented. Screenshot=${output.name}. No ad click performed.")
-            // Video test inventory can delay its close button and ignore Android Back.
-            // Operate only the SDK's accessible close control, never the ad creative.
-            fun closeControl(node: AccessibilityNodeInfo?): AccessibilityNodeInfo? {
-                if (node == null) return null
-                val label = (node.contentDescription ?: node.text)?.toString()?.trim().orEmpty()
-                if (node.isVisibleToUser && node.isEnabled && node.isClickable &&
-                    label.lowercase() in setOf("close", "close ad", "close button")) return node
-                for (index in 0 until node.childCount) closeControl(node.getChild(index))?.let { return it }
-                return null
-            }
-            val deadline = SystemClock.elapsedRealtime() + 60_000
-            var closed = false
-            while (scenario.state != Lifecycle.State.RESUMED && SystemClock.elapsedRealtime() < deadline) {
-                closeControl(instrumentation.uiAutomation.rootInActiveWindow)?.let {
-                    println("Dismiss official test ad using accessible control: ${it.contentDescription ?: it.text}")
-                    val bounds = android.graphics.Rect().apply { it.getBoundsInScreen(this) }
-                    instrumentation.uiAutomation.executeShellCommand("input tap ${bounds.centerX()} ${bounds.centerY()}").use { descriptor ->
-                        java.io.FileInputStream(descriptor.fileDescriptor).use { input -> input.readBytes() }
-                    }
-                    closed = true
+        val originalSettings = repository.currentSettings()
+        repository.updateSettings { it.copy(dailyHopeReminderEnabled = false) }
+        try {
+            ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+                lateinit var model: HopeCardsViewModel
+                scenario.onActivity {
+                    it.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                    model = ViewModelProvider(it)[HopeCardsViewModel::class.java]
                 }
-                // Some inventory has a second close control on its end card.
+                compose.waitUntil(15_000) { model.uiState.value.initialized }
+                // Observe the cached SDK object in this unminified test build without adding a
+                // production testing API or replacing the real network/ad presentation path.
+                val cachedAd = AdsManager::class.java.getDeclaredField("interstitial").apply { isAccessible = true }
+                compose.waitUntil(90_000) {
+                    var loaded = false
+                    scenario.onActivity { loaded = cachedAd.get(model.ads) != null }
+                    loaded
+                }
+                var dailyContinued = false
+                scenario.onActivity {
+                    model.navigate(Destination.DAILY)
+                    model.ads.completeQuiz(it, false, { true }) { dailyContinued = true }
+                }
+                assertTrue(dailyContinued)
+                assertEquals(Lifecycle.State.RESUMED, scenario.state)
+                scenario.onActivity {
+                    assertNotNull(cachedAd.get(model.ads))
+                    model.navigate(Destination.BIBLE_QUIZ)
+                }
+                compose.waitForIdle()
+                var continuationCalls = 0
+                scenario.onActivity {
+                    model.ads.completeQuiz(it, false, { true }) {
+                        continuationCalls++
+                        model.navigate(Destination.HOME)
+                    }
+                }
+                compose.waitUntil(10_000) { scenario.state != Lifecycle.State.RESUMED }
                 SystemClock.sleep(2_000)
+                instrumentation.runOnMainSync {
+                    assertEquals("Navigation must wait while the real SDK ad covers the app", 0, continuationCalls)
+                    assertEquals(Destination.BIBLE_QUIZ, model.uiState.value.destination)
+                }
+                val output = File(instrumentation.targetContext.getExternalFilesDir(null), "quality-ad-test.png")
+                val capture = checkNotNull(instrumentation.uiAutomation.takeScreenshot())
+                output.outputStream().use { capture.compress(Bitmap.CompressFormat.PNG, 100, it) }
+                capture.recycle()
+                println("Official test interstitial presented. Screenshot=${output.name}. No ad click performed.")
+                // Video test inventory can delay its close button and ignore Android Back.
+                // Operate only the SDK's accessible close control, never the ad creative.
+                fun closeControl(node: AccessibilityNodeInfo?): AccessibilityNodeInfo? {
+                    if (node == null) return null
+                    val label = (node.contentDescription ?: node.text)?.toString()?.trim().orEmpty()
+                    if (node.isVisibleToUser && node.isEnabled && node.isClickable &&
+                        label.lowercase() in setOf("close", "close ad", "close button")) return node
+                    for (index in 0 until node.childCount) closeControl(node.getChild(index))?.let { return it }
+                    return null
+                }
+                val deadline = SystemClock.elapsedRealtime() + 60_000
+                var closed = false
+                while (scenario.state != Lifecycle.State.RESUMED && SystemClock.elapsedRealtime() < deadline) {
+                    closeControl(instrumentation.uiAutomation.rootInActiveWindow)?.let {
+                        println("Dismiss official test ad using accessible control: ${it.contentDescription ?: it.text}")
+                        val bounds = android.graphics.Rect().apply { it.getBoundsInScreen(this) }
+                        instrumentation.uiAutomation.executeShellCommand("input tap ${bounds.centerX()} ${bounds.centerY()}").use { descriptor ->
+                            java.io.FileInputStream(descriptor.fileDescriptor).use { input -> input.readBytes() }
+                        }
+                        closed = true
+                    }
+                    // Some inventory has a second close control on its end card.
+                    SystemClock.sleep(2_000)
+                }
+                assertTrue("The official test ad did not expose an accessible close control", closed)
+                compose.waitUntil(15_000) { scenario.state == Lifecycle.State.RESUMED }
+                instrumentation.runOnMainSync { assertEquals(1, continuationCalls) }
+                assertEquals(Destination.HOME, model.uiState.value.destination)
             }
-            assertTrue("The official test ad did not expose an accessible close control", closed)
-            compose.waitUntil(15_000) { scenario.state == Lifecycle.State.RESUMED }
-            assertEquals(Destination.HOME, model.uiState.value.destination)
+        } finally {
+            repository.replaceSettings(originalSettings)
+            val reminders = ReminderScheduler(instrumentation.targetContext)
+            if (originalSettings.dailyHopeReminderEnabled) {
+                reminders.schedule(originalSettings.dailyHopeReminderHour,
+                    originalSettings.dailyHopeReminderMinute, originalSettings.preferredTranslation)
+            } else reminders.cancel()
         }
     }
 }

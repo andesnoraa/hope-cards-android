@@ -1,0 +1,204 @@
+Observed at UTC: 2026-10-06T01:51:39.184Z
+URL: https://play.google.com/store/search?q=verse&c=apps&hl=en&gl=IN
+
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Search Google Play":
+        - /placeholder: Search for apps & games
+        - text: verse
+      - generic: clear
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account redacted])"':
+- list:
+  - button "Apps & games" [pressed]:
+    - generic: Apps & games
+    - generic: arrow_drop_down
+  - button "Device":
+    - generic: Device
+    - generic: arrow_drop_down
+- link "HCL Verse":
+  - /url: /store/apps/details?id=com.lotus.sync.traveler
+- generic: HCL Verse
+- generic: HCL America Inc.
+- generic: HCL Verse Android Client
+- img "Rated 3.2 stars out of five stars":
+  - generic: "3.2"
+  - generic: star
+- generic: 16.2K reviews
+- generic: 1M+
+- generic: Downloads
+- button "Install" [disabled]:
+  - generic: Install
+- img "Content rating"
+- generic: Rated for 3+
+- link "Learn more about content ratings (opens in new window)":
+  - /url: https://support.google.com/googleplay?p=appgame_ratings
+  - text: Learn more
+- list:
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+  - button "Screenshot image"
+- button "Scroll Next":
+  - generic: chevron_right
+- list:
+  - 'link "Verse: Daily Bible Companion Chelsea Ajah"':
+    - /url: /store/apps/details?id=com.verse.verse_app
+    - generic: "Verse: Daily Bible Companion"
+    - generic: Chelsea Ajah
+  - link "YouVersion Bible App + Audio Life.Church Rated 4.7 stars out of five stars":
+    - /url: /store/apps/details?id=com.sirma.mobile.bible.android
+    - generic: YouVersion Bible App + Audio
+    - generic: Life.Church
+    - img "Rated 4.7 stars out of five stars":
+      - generic: "4.7"
+      - generic: star
+  - link "Verse By Verse Ministry Verse By Verse Ministry International Rated 4.6 stars out of five stars":
+    - /url: /store/apps/details?id=com.erpdevelopment.vbvm
+    - generic: Verse By Verse Ministry
+    - generic: Verse By Verse Ministry International
+    - img "Rated 4.6 stars out of five stars":
+      - generic: "4.6"
+      - generic: star
+  - 'link "GlowVerse: Bible Verse Widget Everblessed Technology Inc."':
+    - /url: /store/apps/details?id=app.glowverse.biblewidget
+    - generic: "GlowVerse: Bible Verse Widget"
+    - generic: Everblessed Technology Inc.
+  - link "King James Bible - Verse+Audio Ozion Rated 4.8 stars out of five stars":
+    - /url: /store/apps/details?id=kjv.bible.kingjamesbible
+    - generic: King James Bible - Verse+Audio
+    - generic: Ozion
+    - img "Rated 4.8 stars out of five stars":
+      - generic: "4.8"
+      - generic: star
+  - link "Riding Verse Explorations And Innovations Technologies Pvt Ltd Rated 4.3 stars out of five stars":
+    - /url: /store/apps/details?id=com.ridingverse.app
+    - generic: Riding Verse
+    - generic: Explorations And Innovations Technologies Pvt Ltd
+    - img "Rated 4.3 stars out of five stars":
+      - generic: "4.3"
+      - generic: star
+  - link "My Memory Verse Redeemer Apps":
+    - /url: /store/apps/details?id=com.keynentt.mymemoryverse
+    - generic: My Memory Verse
+    - generic: Redeemer Apps
+  - 'link "Wallet Verse: DeFi, Buy Crypto ilink Ltd. Rated 5.0 stars out of five stars"':
+    - /url: /store/apps/details?id=com.walletverse
+    - generic: "Wallet Verse: DeFi, Buy Crypto"
+    - generic: ilink Ltd.
+    - img "Rated 5.0 stars out of five stars":
+      - generic: "5.0"
+      - generic: star
+  - 'link "Play Verse Root: Bible Journal Verse Root: Bible Journal Verselingo Apps - Motivation and Christian Apps"':
+    - /url: /store/apps/details?id=bzn.bible.journaling.verse
+    - 'button "Play Verse Root: Bible Journal"':
+    - generic: "Verse Root: Bible Journal"
+    - generic: Verselingo Apps - Motivation and Christian Apps
+  - link "Versana -Verse Memorization Verselingo Communications Limited":
+    - /url: /store/apps/details?id=bzn.ai.bible.memorization
+    - generic: Versana -Verse Memorization
+    - generic: Verselingo Communications Limited
+  - link "The Bible Memory App Millennial Apps - The Bible Memory App Rated 4.8 stars out of five stars":
+    - /url: /store/apps/details?id=com.millennialsolutions.scripturetyper
+    - generic: The Bible Memory App
+    - generic: Millennial Apps - The Bible Memory App
+    - img "Rated 4.8 stars out of five stars":
+      - generic: "4.8"
+      - generic: star
+  - link "Quran Verse Finder Islam Shines":
+    - /url: /store/apps/details?id=com.quranversefinder.app
+    - generic: Quran Verse Finder
+    - generic: Islam Shines
+  - 'link "VerseTap: AI Sermon Note-taker Clarylife Global"':
+    - /url: /store/apps/details?id=versetap.bible.sermon
+    - generic: "VerseTap: AI Sermon Note-taker"
+    - generic: Clarylife Global
+  - 'link "Holy: Daily Bible Verses Believe PR Rated 4.7 stars out of five stars"':
+    - /url: /store/apps/details?id=dev.armandojimenez.holy
+    - generic: "Holy: Daily Bible Verses"
+    - generic: Believe PR
+    - img "Rated 4.7 stars out of five stars":
+      - generic: "4.7"
+      - generic: star
+  - 'link "Bible Hour: Verses & Prayer Bible Hour Rated 4.5 stars out of five stars"':
+    - /url: /store/apps/details?id=com.marketu.biblehour
+    - generic: "Bible Hour: Verses & Prayer"
+    - generic: Bible Hour
+    - img "Rated 4.5 stars out of five stars":
+      - generic: "4.5"
+      - generic: star
+  - link "Bible Offline-KJV Holy Bible Bíblia Offline Rated 4.8 stars out of five stars":
+    - /url: /store/apps/details?id=com.offline.bible
+    - generic: Bible Offline-KJV Holy Bible
+    - generic: Bíblia Offline
+    - img "Rated 4.8 stars out of five stars":
+      - generic: "4.8"
+      - generic: star
+  - link "Versify Versify LLC Rated 4.8 stars out of five stars":
+    - /url: /store/apps/details?id=com.tarkowr.versify
+    - generic: Versify
+    - generic: Versify LLC
+    - img "Rated 4.8 stars out of five stars":
+      - generic: "4.8"
+      - generic: star
+  - link "Bible App by Olive Tree Gospel Technologies Rated 4.7 stars out of five stars":
+    - /url: /store/apps/details?id=biblereader.olivetree
+    - generic: Bible App by Olive Tree
+    - generic: Gospel Technologies
+    - img "Rated 4.7 stars out of five stars":
+      - generic: "4.7"
+      - generic: star
+  - link "VerseAnchor -BibleMemorization Buzen Apps":
+    - /url: /store/apps/details?id=bzn.bible.memorise.verselock
+    - generic: VerseAnchor -BibleMemorization
+    - generic: Buzen Apps
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

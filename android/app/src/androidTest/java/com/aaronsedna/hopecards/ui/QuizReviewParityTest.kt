@@ -18,28 +18,50 @@ class QuizReviewParityTest {
             val questions = listOf(bank[2], bank[0], bank[1])
             val selections = listOf(questions[0].correctIndex, (questions[1].correctIndex + 1) % 4, -1)
             val session = QuizSession(questionIds = questions.map { it.id }, answers = selections,
-                position = 2, selectedIndex = -1, finished = true, timedOut = true)
+                position = 2, selectedIndex = -1, finished = true, timedOut = true,
+                answerTimesMillis = listOf(8_000L, 12_000L, 30_000L))
             val content = QuizReviewContent(context, translation, session, bank)
             val report = QuizReport(context, translation, session, bank)
             assertEquals(questions.map { it.id }, content.answers.map { it.id })
             assertEquals(content.answers, report.review.answers)
             assertEquals(listOf(QuizReviewContent.Outcome.CORRECT, QuizReviewContent.Outcome.INCORRECT,
                 QuizReviewContent.Outcome.UNANSWERED), content.answers.map { it.outcome })
-            val texts = report.layout().content.flatten().distinctBy { it.layout }.map { it.layout.text.toString() }
-            assertTrue(texts.containsAll(listOf(content.title, content.reviewTitle, content.score, content.edition)))
+            val pages = report.layout()
+            assertEquals(content.answers.flatMap { if (it.outcome == QuizReviewContent.Outcome.INCORRECT)
+                listOf(it.outcome, QuizReviewContent.Outcome.CORRECT) else listOf(it.outcome) }, pages.panels.flatten().mapNotNull { it.marker })
+            val texts = pages.content.flatten().distinctBy { it.layout }.map { it.layout.text.toString() }
+            assertTrue(texts.containsAll(listOf(content.title, content.reviewTitle, content.score)))
+            assertFalse(texts.contains(content.edition))
             content.answers.forEachIndexed { index, answer ->
-                assertTrue(texts.containsAll(listOf(answer.prompt, answer.status, answer.selectedAnswer,
+                assertTrue(texts.containsAll(listOfNotNull(answer.prompt, answer.timeTaken, answer.selectedAnswer,
                     answer.correctAnswer, answer.reference)))
+                assertEquals(answer.outcome == QuizReviewContent.Outcome.UNANSWERED, texts.contains(answer.status))
+                assertEquals(content.resources.getString(R.string.quiz_elapsed_time,
+                    listOf("00:08", "00:12", "00:30")[index]), answer.timeTaken)
                 answer.passage?.let { assertTrue(texts.contains(it)) }
                 if (answer.explanation.isNotBlank()) {
                     assertTrue(texts.contains(answer.explanation))
-                    assertTrue(texts.contains(content.explanationLabel))
+                    assertFalse(texts.contains(content.explanationLabel))
                 }
-                assertEquals(content.resources.getString(R.string.quiz_your_answer,
-                    questions[index].options.getOrNull(selections[index]) ?: content.resources.getString(R.string.quiz_unanswered)),
-                    answer.selectedAnswer)
-                assertEquals(content.resources.getString(R.string.quiz_correct_answer,
-                    questions[index].options[questions[index].correctIndex]), answer.correctAnswer)
+                val expectedCorrect = content.resources.getString(R.string.quiz_correct_answer,
+                    questions[index].options[questions[index].correctIndex])
+                when (index) {
+                    0 -> {
+                        assertEquals(questions[index].options[selections[index]], answer.selectedAnswer)
+                        assertNull(answer.correctAnswer)
+                        assertFalse(texts.contains(expectedCorrect))
+                    }
+                    1 -> {
+                        assertEquals(content.resources.getString(R.string.quiz_your_answer,
+                            questions[index].options[selections[index]]), answer.selectedAnswer)
+                        assertEquals(expectedCorrect, answer.correctAnswer)
+                    }
+                    2 -> {
+                        assertNull(answer.selectedAnswer)
+                        assertEquals(expectedCorrect, answer.correctAnswer)
+                        assertFalse(texts.contains(content.resources.getString(R.string.quiz_your_answer, answer.status)))
+                    }
+                }
             }
             assertEquals(selections, session.answers)
         }
@@ -56,7 +78,7 @@ class QuizReviewParityTest {
         val pages = report.layout()
         assertTrue(pages.content.size > 2)
         val answer = report.review.answers.single()
-        listOf(answer.selectedAnswer, answer.correctAnswer, answer.reference).forEach { text ->
+        listOfNotNull(answer.selectedAnswer, answer.correctAnswer, answer.reference).forEach { text ->
             val fragments = pages.content.flatten().filter { it.layout.text.toString() == text }
             assertEquals("A normal answer panel was split across pages", 1, fragments.size)
             assertEquals(fragments.single().layout.lineCount, fragments.single().end)

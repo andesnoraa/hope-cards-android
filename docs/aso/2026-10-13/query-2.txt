@@ -1,0 +1,93 @@
+Browser tab: 455027205, Title: "Hope Cards - Android Apps on Google Play", URL: "https://play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN".
+1 AXWebArea Hope Cards - Android Apps on Google Play, URL: play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN
+	2 container yDmH0d
+		3 container Page Header
+			4 link Description: Google Play logo, Value: play.google.com/store/games
+			5 combo box (collapsed) Secondary Actions: Expand
+				6 container
+					7 text field (settable) Description: Search Google Play, Value: Hope Cards
+			8 button Help Center
+			9 pop up button (collapsed) Description: Google Account: Aaronsedna ([redacted signed-in account]), Secondary Actions: Expand
+		10 container
+			11 content list
+				12 checkbox Description: Apps & games, Value: 1
+				13 checkbox Description: Device, Value: 0
+			14 container
+				15 container
+					16 link Description: Play Daily Bible Verse: Hope Cards Daily Bible Verse: Hope Cards Aaronsedna, Value: play.google.com/store/apps/details?id=com.aaronsedna.hopecards
+				17 container
+					18 link Description: Conjuring Hope GoatScaper, Value: play.google.com/store/apps/details?id=org.sanctuaryofhope.conjuringhope
+				19 container
+					20 link Description: Hopecardis Hopecardis, Value: play.google.com/store/apps/details?id=com.hopecardis.mobile
+				21 container
+					22 link Description: Play Hope Spring eCards Hope Spring eCards Velnet UK, Value: play.google.com/store/apps/details?id=com.HopeSpringeCards.app
+				23 container
+					24 link Description: HOPE Spirit Box Joshua T Louis Rated 3.8 stars out of five stars, Value: play.google.com/store/apps/details?id=com.hopeparanormal.hsb1
+				25 container
+					26 link Description: Golden Card Pact The hope ... Rated 4.0 stars out of five stars, Value: play.google.com/store/apps/details?id=com.cardpact.pactbound
+				27 container
+					28 link Description: HOPE National Health Mission (Madhya Pradesh) Rated 4.1 stars out of five stars, Value: play.google.com/store/apps/details?id=com.hopeApp
+				29 container
+					30 link Description: Hope Fertility Hope Applications GmbH, Value: play.google.com/store/apps/details?id=com.hopeapplicationsgmbh.hope3
+				31 container
+					32 link Description: Hope for our Times Hope for our Times, Value: play.google.com/store/apps/details?id=com.subsplashconsulting.s_8K93C2
+				33 container
+					34 link Description: Play Hope & Humor Daily Hope & Humor Daily Agentwire, Value: play.google.com/store/apps/details?id=com.agentwire.kiki
+				35 container
+					36 link Value: play.google.com/store/apps/details?id=com.snoutup.cardhog, Description: Play Card Hog - Dungeon Crawler Card Hog - Dungeon Crawler SnoutUp Games Rated 4.2 stars out of five stars
+				37 container
+					38 link Value: play.google.com/store/apps/details?id=com.tapps.roguelike.rpg.cardguardians, Description: Play Card Guardians Roguelike Games Card Guardians Roguelike Games Tapps Games - PT Rated 4.4 stars out of five stars
+				39 container
+					40 link Description: HeartCraft: Cards & Wishes Promptly Yours Rated 4.3 stars out of five stars, Value: play.google.com/store/apps/details?id=com.kuchkuch
+				41 container
+					42 link Description: Hope Pro Zulkaron, Value: play.google.com/store/apps/details?id=com.deep.ailume
+				43 container
+					44 link Description: Play Hearthstone Hearthstone Blizzard Entertainment, Inc. Rated 3.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.blizzard.wtcg.hearthstone
+				45 container
+					46 link Description: Magenta Pay Telekom Payments, Value: play.google.com/store/apps/details?id=gr.payzy
+				47 container
+					48 link Value: play.google.com/store/apps/details?id=com.bharatpe.app, Description: Play BharatPe for Business BharatPe for Business Resilient Innovation Private Limited Rated 4.9 stars out of five stars
+				49 container
+					50 link Description: Play Spades Stars - Card Game Spades Stars - Card Game Bluetile Rated 4.5 stars out of five stars, Value: play.google.com/store/apps/details?id=com.playvalve.spades
+				51 container
+					52 link Value: play.google.com/store/apps/details?id=com.ge.capital.konysbiapp, Description: Play SBI Card: Manage Credit Card SBI Card: Manage Credit Card SBI Cards and Payment Services Limited Rated 4.6 stars out of five stars
+				53 container
+					54 link Description: Pyypl - it’s your money Pyypl Rated 2.2 stars out of five stars, Value: play.google.com/store/apps/details?id=com.pyypl
+				55 container
+					56 link Description: Play You are Hope You are Hope Dual Decade Rated 4.0 stars out of five stars ₹480.00, Value: play.google.com/store/apps/details?id=com.wereviz.evolution
+				57 container
+					58 link Description: Play Bingo Set Bingo Set Little bandit Games Rated 3.9 stars out of five stars, Value: play.google.com/store/apps/details?id=com.littlebandit.bingoset
+				59 container
+					60 link Description: Witch and Summons BakoApps, Value: play.google.com/store/apps/details?id=com.BakoApps.WitchAndSummons
+				61 container
+					62 link Description: Bangtan Memory RexTeam Rated 4.3 stars out of five stars, Value: play.google.com/store/apps/details?id=com.RexTeam.BangtanMemory
+				63 container
+					64 link Value: play.google.com/store/apps/details?id=com.bankbazaar.app, Description: Play Credit Score & Credit Cards Credit Score & Credit Cards BankBazaar.com Rated 4.5 stars out of five stars
+				65 container
+					66 link Value: play.google.com/store/apps/details?id=com.spades.solitaire.online.plus.offline.free.card.games, Description: Play Spades Solitaire - Card Games Spades Solitaire - Card Games Topy Games Rated 4.7 stars out of five stars
+				67 container
+					68 link Description: The Hope MHSS The Hope School, Value: play.google.com/store/apps/details?id=com.thehopeschool.app
+				69 container
+					70 link Description: HOPE HAP EYE, Value: play.google.com/store/apps/details?id=com.hope.gateway
+				71 container
+					72 link Description: Callbreak Offline : Tash Game MGGAMES Rated 3.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.mggames.callbreak
+				73 container
+					74 link Description: Spades - Classic Cards Tripledot Studios Limited Rated 4.7 stars out of five stars, Value: play.google.com/store/apps/details?id=com.tripledot.spades
+		75 container
+			76 text Google Play
+			77 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			78 link Description: Play Points, Value: play.google.com/store/points/enroll
+			79 link Description: Gift cards, Value: play.google.com/about/giftcards
+			80 link Description: Redeem, Value: play.google.com/redeem
+			81 link Description: Refund policy, Value: support.google.com/googleplay/answer/134336
+			82 text Kids & family
+			83 link Description: Parent Guide, Value: support.google.com/googleplay?p=pff_parentguide
+			84 link Description: Family sharing, Value: support.google.com/googleplay/answer/7007852
+			85 link Description: Terms of Service, Value: play.google.com/intl/en_in/about/play-terms.html
+			86 link Description: Privacy, Value: policies.google.com/privacy
+			87 link Description: About Google Play, Value: support.google.com/googleplay/?p=about_play
+			88 link Description: Developers, Value: developer.android.com/index.html
+			89 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			90 text All prices include GST. India (English)
+
+The focused UI element is 1 AXWebArea Hope Cards - Android Apps on Google Play, URL: play.google.com/store/search?q=Hope%20Cards&c=apps&hl=en&gl=IN

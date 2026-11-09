@@ -1,0 +1,199 @@
+{
+  "observedAtUtc": "2026-10-16T05:07:10.236Z",
+  "scope": "Google Play Console, all-country aggregates unless otherwise stated. No Google Ads settings were changed.",
+  "acquisition": {
+    "growOverview": {
+      "metric": "Device acquisitions",
+      "window": "Last 28 days compared with previous 28 days",
+      "exactSourceRange": "2026-09-17 through 2026-10-14",
+      "deviceImpressions": "3.8K",
+      "impressionsDisplayedDeltaPercent": ">999%",
+      "deviceAcquisitions": 255,
+      "acquisitionsDisplayedDeltaPercent": ">999%",
+      "deviceFirstOpens": 38,
+      "firstOpensDisplayedDeltaPercent": 27,
+      "monthlyActiveDevices": 44,
+      "monthlyActiveDisplayedDeltaPercent": 120,
+      "sevenDayDeviceRetentionCount": 1,
+      "retentionDisplayedDeltaPercent": -88,
+      "retentionUnit": "device count, not a rate",
+      "trafficSources": [
+        {
+          "label": "Google Play explore",
+          "deviceAcquisitions": 13,
+          "displayedDeltaPercent": ">999%"
+        },
+        {
+          "label": "Paid and direct",
+          "deviceAcquisitions": 96,
+          "displayedDeltaPercent": 500
+        },
+        {
+          "label": "Not attributed",
+          "deviceAcquisitions": 146,
+          "displayedDeltaPercent": ">999%"
+        }
+      ],
+      "exploreUserAcquisitions90Days": 16,
+      "searchTermBreakdown": "No query-level terms exposed in Grow overview."
+    },
+    "completedSevenDayComparison": {
+      "metric": "Device acquisition, all devices, all events, per interval, daily; dimension Traffic source",
+      "currentPeriod": "2026-10-05 through 2026-10-11",
+      "previousPeriod": "2026-09-28 through 2026-10-04",
+      "currentPeriodVisibleDailyRows": [
+        {
+          "date": "2026-10-05",
+          "explore": 0,
+          "paidAndDirect": 1,
+          "notAttributed": 0
+        },
+        {
+          "date": "2026-10-06",
+          "explore": 1,
+          "paidAndDirect": 25,
+          "notAttributed": 58
+        },
+        {
+          "date": "2026-10-07",
+          "explore": 0,
+          "paidAndDirect": 2,
+          "notAttributed": 0
+        },
+        {
+          "date": "2026-10-08",
+          "explore": 1,
+          "paidAndDirect": 2,
+          "notAttributed": 0
+        },
+        {
+          "date": "2026-10-11",
+          "explore": 0,
+          "paidAndDirect": 0,
+          "notAttributed": 0,
+          "source": "chart hovercard"
+        }
+      ],
+      "currentVisibleRowsSum": {
+        "explore": 2,
+        "paidAndDirect": 30,
+        "notAttributed": 58,
+        "total": 90
+      },
+      "previousPeriodVisibleDailyRows": [
+        {
+          "date": "2026-09-28",
+          "explore": 1,
+          "paidAndDirect": 60,
+          "notAttributed": 1
+        },
+        {
+          "date": "2026-09-29",
+          "explore": 1,
+          "paidAndDirect": 3,
+          "notAttributed": 0
+        },
+        {
+          "date": "2026-10-01",
+          "explore": 0,
+          "paidAndDirect": 1,
+          "notAttributed": 84
+        },
+        {
+          "date": "2026-10-02",
+          "explore": 0,
+          "paidAndDirect": 1,
+          "notAttributed": 0
+        },
+        {
+          "date": "2026-10-04",
+          "explore": 0,
+          "paidAndDirect": 0,
+          "notAttributed": 0,
+          "source": "chart hovercard"
+        }
+      ],
+      "previousVisibleRowsSum": {
+        "explore": 2,
+        "paidAndDirect": 65,
+        "notAttributed": 85,
+        "total": 152
+      },
+      "comparison": "Visible seven-day event-row sums were 90 versus 152; source-level totals: Explore 2 vs 2, Paid and direct 30 vs 65, Not attributed 58 vs 85. Paid and direct is a mixed source and cannot be assigned to Google Ads. The query-level origin is unavailable. Table omitted zero/no-event rows for some days; Oct 11 and Oct 4 chart hovercards explicitly showed 0 across these sources. Dates Oct 9–10 and Sep 30/Oct 3 had no data-table row."
+    }
+  },
+  "listing": {
+    "report": "Store listings, metric Installs",
+    "window": "Last 28 days",
+    "exactSourceRange": "2026-09-15 through 2026-10-12",
+    "visitors": 514,
+    "visitorsDisplayedDeltaPercent": 1558,
+    "uniqueUserInstallClicks": 116,
+    "installClicksDisplayedDeltaPercent": 452,
+    "clickThroughRatePercent": 23,
+    "ctrDisplayedDeltaPercent": 67,
+    "defaultListing": {
+      "visitors": 499,
+      "conversionRatePercent": 19.4,
+      "status": "Live",
+      "lastUpdated": "2026-10-08"
+    },
+    "warning": "Unique user install clicks are not completed installs. This report is all-country aggregate; no country/language split or query attribution was exposed.",
+    "growOverviewSeparateLast90DayConversionRatePercent": 25.14,
+    "experiments": {
+      "running": 0,
+      "ended": 0,
+      "applied": 0
+    }
+  },
+  "ratings": {
+    "report": "Ratings",
+    "period": "Last 28 days",
+    "defaultGooglePlayRating": 5,
+    "averageRating": 5,
+    "users": 1,
+    "breakdown": {
+      "India": {
+        "count": 1,
+        "averageRating": 5
+      },
+      "English": {
+        "count": 1,
+        "averageRating": 5
+      },
+      "appVersion": {
+        "value": "1.0.2 (28)",
+        "count": 1,
+        "averageRating": 5
+      },
+      "AndroidVersion": {
+        "value": "Android 16 (SDK 36)",
+        "count": 1
+      },
+      "formFactor": {
+        "value": "Phone",
+        "count": 1
+      },
+      "device": {
+        "value": "samsung a16 (Galaxy A16)",
+        "count": 1
+      }
+    },
+    "note": "Single-rating sample on an older app version; not representative of current release."
+  },
+  "quality": {
+    "report": "Monitor and improve plus Android vitals",
+    "period": "Last 28 days",
+    "policyIssues": "No policy issues found",
+    "userPerceivedCrashes": "Data unavailable",
+    "userPerceivedAnrs": "Data unavailable",
+    "slowColdStart": "Data unavailable",
+    "r8Advisory": "R8 configuration could be causing higher memory use and lower performance; advisory for release 1.0.14 (47), not measured memory or battery data."
+  },
+  "limitations": [
+    "Global device acquisition and listing reports do not report individual keywords.",
+    "Google Play explore can include generic/category search; not query-level attribution.",
+    "Paid and direct combines sources. It cannot be reported as paid-only or directly attributed to Google Ads.",
+    "No source here identifies completed installs by exact search query."
+  ]
+}

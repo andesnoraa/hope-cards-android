@@ -1,5 +1,7 @@
 package com.aaronsedna.hopecards.ui.screens
 
+import com.aaronsedna.hopecards.ui.theme.Poppins
+import com.aaronsedna.hopecards.ui.theme.appInterfaceFont
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -40,7 +42,6 @@ import com.aaronsedna.hopecards.ui.appString
 import com.aaronsedna.hopecards.ui.forTranslation
 import com.aaronsedna.hopecards.ui.components.ResponsiveScrollColumn
 import com.aaronsedna.hopecards.ui.theme.LocalHopeColors
-import com.aaronsedna.hopecards.ui.theme.Poppins
 
 @Composable
 fun PrivacyScreen(onPrivacyOptions: (() -> Unit)?) {
@@ -71,19 +72,19 @@ fun PrivacyScreen(onPrivacyOptions: (() -> Unit)?) {
         Modifier.padding(horizontal = 24.dp).padding(top = 32.dp, bottom = 42.dp),
         maxContentWidth = 840.dp,
     ) {
-        Text(appString(R.string.privacy_title), color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 32.sp, lineHeight = 38.sp, letterSpacing = (-.6).sp)
-        Text(appString(R.string.privacy_intro), color = colors.textSecondary, fontFamily = Poppins, fontSize = 17.sp, lineHeight = 26.sp, modifier = Modifier.padding(top = 12.dp))
-        Text(appString(R.string.privacy_effective), color = colors.textTertiary, fontFamily = Poppins, fontWeight = FontWeight.Medium, fontSize = 13.sp, lineHeight = 18.sp, modifier = Modifier.padding(top = 14.dp, bottom = 30.dp))
+        Text(appString(R.string.privacy_title), color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 32.sp, lineHeight = 38.sp, letterSpacing = (-.6).sp)
+        Text(appString(R.string.privacy_intro), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 17.sp, lineHeight = 26.sp, modifier = Modifier.padding(top = 12.dp))
+        Text(appString(R.string.privacy_effective), color = colors.textTertiary, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Medium, fontSize = 13.sp, lineHeight = 18.sp, modifier = Modifier.padding(top = 14.dp, bottom = 30.dp))
         sections.forEach { (title, paragraphs) ->
             HorizontalDivider(color = colors.divider)
             Column(Modifier.padding(vertical = 32.dp)) {
-                Text(title, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 22.sp, lineHeight = 28.sp, letterSpacing = (-.35).sp)
+                Text(title, color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 22.sp, lineHeight = 28.sp, letterSpacing = (-.35).sp)
                 Column(Modifier.padding(top = 14.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     paragraphs.forEach { paragraph ->
-                        Text(paragraph, color = colors.cardText, fontFamily = Poppins, fontSize = 15.sp, lineHeight = 23.sp)
+                        Text(paragraph, color = colors.cardText, fontFamily = appInterfaceFont(), fontSize = 15.sp, lineHeight = 23.sp)
                     }
                     if (title == appString(R.string.privacy_advertising) && onPrivacyOptions != null) {
-                        Text("${appString(R.string.ad_privacy_choices)}  ↗", color = colors.accent, fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, modifier = Modifier.clickable(onClick = onPrivacyOptions).padding(vertical = 5.dp))
+                        Text("${appString(R.string.ad_privacy_choices)}  ↗", color = colors.accent, fontFamily = appInterfaceFont(), fontWeight = FontWeight.SemiBold, fontSize = 15.sp, modifier = Modifier.clickable(onClick = onPrivacyOptions).padding(vertical = 5.dp))
                     }
                 }
             }
@@ -109,8 +110,8 @@ fun AboutScreen() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text("Hope Cards", color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 36.sp, lineHeight = 43.sp, letterSpacing = (-.7).sp, textAlign = TextAlign.Center)
-            Text(appString(R.string.about_tagline), color = colors.textSecondary, fontFamily = Poppins, fontSize = 17.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.widthIn(max = 300.dp).padding(top = 9.dp))
-            Text(appString(R.string.version_format, displayedVersion), color = colors.textTertiary, fontFamily = Poppins, fontWeight = FontWeight.Medium, fontSize = 13.sp, lineHeight = 18.sp, modifier = Modifier.padding(top = 14.dp))
+            Text(appString(R.string.about_tagline), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 17.sp, lineHeight = 25.sp, textAlign = TextAlign.Center, modifier = Modifier.widthIn(max = 300.dp).padding(top = 9.dp))
+            Text(appString(R.string.version_format, displayedVersion), color = colors.textTertiary, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Medium, fontSize = 13.sp, lineHeight = 18.sp, modifier = Modifier.padding(top = 14.dp))
         }
         AboutSection(appString(R.string.about_features)) {
             Column(verticalArrangement = Arrangement.spacedBy(21.dp)) {
@@ -119,7 +120,7 @@ fun AboutScreen() {
                         row.forEach { feature ->
                             Row(Modifier.weight(1f), verticalAlignment = Alignment.Top) {
                                 Box(Modifier.padding(top = 8.dp).size(6.dp).background(colors.accent, CircleShape))
-                                Text(feature, color = colors.cardText, fontFamily = Poppins, fontWeight = FontWeight.Medium, fontSize = 14.sp, lineHeight = 20.sp, modifier = Modifier.padding(start = 10.dp).weight(1f))
+                                Text(feature, color = colors.cardText, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Medium, fontSize = 14.sp, lineHeight = 20.sp, modifier = Modifier.padding(start = 10.dp).weight(1f))
                             }
                         }
                     }
@@ -136,8 +137,8 @@ fun AboutScreen() {
                         .background(colors.accent),
                 )
                 Column(Modifier.padding(start = 18.dp)) {
-                    Text(appString(R.string.about_story_1), color = colors.cardText, fontFamily = Poppins, fontWeight = FontWeight.Medium, fontSize = 16.sp, lineHeight = 25.sp, letterSpacing = (-.1).sp)
-                    Text(appString(R.string.about_story_2), color = colors.textSecondary, fontFamily = Poppins, fontSize = 14.sp, lineHeight = 21.sp, modifier = Modifier.padding(top = 12.dp))
+                    Text(appString(R.string.about_story_1), color = colors.cardText, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Medium, fontSize = 16.sp, lineHeight = 25.sp, letterSpacing = (-.1).sp)
+                    Text(appString(R.string.about_story_2), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 14.sp, lineHeight = 21.sp, modifier = Modifier.padding(top = 12.dp))
                 }
             }
         }
@@ -151,7 +152,7 @@ fun AboutScreen() {
                     Text(
                         translation.label,
                         color = colors.accent,
-                        fontFamily = Poppins,
+                        fontFamily = appInterfaceFont(),
                         fontWeight = FontWeight.Bold,
                         fontSize = when {
                             translation.label.length > 6 -> 11.sp
@@ -164,8 +165,8 @@ fun AboutScreen() {
                         modifier = Modifier.width(52.dp),
                     )
                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(1.dp)) {
-                        Text(translation.attribution, color = colors.cardText, fontFamily = Poppins, fontWeight = FontWeight.Medium, fontSize = 14.sp, lineHeight = 20.sp)
-                        Text(appString(R.string.about_public_domain), color = colors.textSecondary, fontFamily = Poppins, fontSize = 12.sp, lineHeight = 17.sp)
+                        Text(translation.attribution, color = colors.cardText, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Medium, fontSize = 14.sp, lineHeight = 20.sp)
+                        Text(appString(R.string.about_public_domain), color = colors.textSecondary, fontFamily = appInterfaceFont(), fontSize = 12.sp, lineHeight = 17.sp)
                     }
                 }
                 if (index != Translation.entries.lastIndex) HorizontalDivider(thickness = .5.dp, color = colors.divider)
@@ -181,7 +182,7 @@ fun AboutScreen() {
                 withStyle(SpanStyle(color = colors.text, fontWeight = FontWeight.SemiBold)) { append("Aaronsedna") }
             },
             color = colors.textTertiary,
-            fontFamily = Poppins,
+            fontFamily = appInterfaceFont(),
             fontSize = 13.sp,
             lineHeight = 18.sp,
             textAlign = TextAlign.Center,
@@ -199,7 +200,7 @@ private fun AboutSection(
     val colors = LocalHopeColors.current
     HorizontalDivider(thickness = .5.dp, color = colors.divider)
     Column(Modifier.padding(top = 32.dp, bottom = bottomPadding)) {
-        Text(title, color = colors.text, fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 22.sp, lineHeight = 28.sp, letterSpacing = (-.35).sp, modifier = Modifier.padding(bottom = 24.dp))
+        Text(title, color = colors.text, fontFamily = appInterfaceFont(), fontWeight = FontWeight.Bold, fontSize = 22.sp, lineHeight = 28.sp, letterSpacing = (-.35).sp, modifier = Modifier.padding(bottom = 24.dp))
         content()
     }
 }

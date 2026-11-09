@@ -5,6 +5,8 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.core.os.ConfigurationCompat
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -35,6 +37,12 @@ fun interfaceFontFor(translation: Translation): FontFamily =
 
 fun scriptureFontFor(translation: Translation): FontFamily =
     if (translation == Translation.MAL1910) NotoSansMalayalam else SourceSerif
+
+@Composable
+fun appInterfaceFont(): FontFamily {
+    val language = ConfigurationCompat.getLocales(LocalConfiguration.current)[0]?.language
+    return if (language == "ml") NotoSansMalayalam else Poppins
+}
 
 @Immutable
 data class HopeColors(
@@ -84,6 +92,7 @@ val LocalHopeThemeName = staticCompositionLocalOf { ThemeName.CLASSIC }
 @Composable
 fun HopeCardsTheme(themeName: ThemeName, content: @Composable () -> Unit) {
     val colors = themes.getValue(themeName)
+    val uiFont = appInterfaceFont()
     val materialColors = lightColorScheme(
         primary = colors.accent,
         onPrimary = colors.buttonText,
@@ -95,17 +104,17 @@ fun HopeCardsTheme(themeName: ThemeName, content: @Composable () -> Unit) {
         outline = colors.accentLine,
     )
     val typography = androidx.compose.material3.Typography(
-        displayLarge = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 56.sp, lineHeight = 62.sp),
-        headlineLarge = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 30.sp, lineHeight = 36.sp),
-        headlineMedium = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 24.sp, lineHeight = 30.sp),
-        titleLarge = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Bold, fontSize = 26.sp, lineHeight = 32.sp),
-        titleMedium = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 20.sp, lineHeight = 26.sp),
-        bodyLarge = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Normal, fontSize = 18.sp, lineHeight = 28.sp),
-        bodyMedium = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Normal, fontSize = 16.sp, lineHeight = 24.sp),
-        bodySmall = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Normal, fontSize = 14.sp, lineHeight = 20.sp),
-        labelLarge = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, lineHeight = 22.sp),
-        labelMedium = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, lineHeight = 20.sp),
-        labelSmall = TextStyle(fontFamily = Poppins, fontWeight = FontWeight.Normal, fontSize = 12.sp, lineHeight = 17.sp),
+        displayLarge = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Bold, fontSize = 56.sp, lineHeight = 62.sp),
+        headlineLarge = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.SemiBold, fontSize = 30.sp, lineHeight = 36.sp),
+        headlineMedium = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Bold, fontSize = 24.sp, lineHeight = 30.sp),
+        titleLarge = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Bold, fontSize = 26.sp, lineHeight = 32.sp),
+        titleMedium = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.SemiBold, fontSize = 20.sp, lineHeight = 26.sp),
+        bodyLarge = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Normal, fontSize = 18.sp, lineHeight = 28.sp),
+        bodyMedium = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Normal, fontSize = 16.sp, lineHeight = 24.sp),
+        bodySmall = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Normal, fontSize = 14.sp, lineHeight = 20.sp),
+        labelLarge = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, lineHeight = 22.sp),
+        labelMedium = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, lineHeight = 20.sp),
+        labelSmall = TextStyle(fontFamily = uiFont, fontWeight = FontWeight.Normal, fontSize = 12.sp, lineHeight = 17.sp),
     )
     androidx.compose.runtime.CompositionLocalProvider(
         LocalHopeColors provides colors,

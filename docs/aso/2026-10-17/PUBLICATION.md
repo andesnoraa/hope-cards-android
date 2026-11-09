@@ -1,0 +1,3 @@
+# Publication verification — October 17, 2026
+
+The Play Console dashboard for `com.aaronsedna.hopecards` says “You have no unpublished changes.” It shows the latest production release at 100% rollout, released October 8, 2026. No app-specific queued submission, in-review item, or rejection appeared in the dashboard view. Search results in the signed-in Play web context resolve to the existing package. The direct Store listings report page loaded its listing table, with the default listing marked Live and last updated October 8; visitor and conversion cells were blank in the current view. No listing or binary changes were made.

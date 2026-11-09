@@ -1,0 +1,87 @@
+Browser tab: 455027210, Title: "Dashboard | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/app-dashboard".
+1 AXWebArea Dashboard | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/app-dashboard
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+						32 button Monitor and improve
+							33 text Monitor and improve
+					34 container (collapsed) Description: Grow users, Secondary Actions: Expand
+						35 button Grow users
+							36 text Grow users
+					37 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						38 button Monetize with Play
+							39 text Monetize with Play
+			40 container main-content
+				41 container
+					42 heading Daily Bible Verse: Hope Cards, Value: 1
+						43 text Daily Bible Verse: Hope Cards
+					44 content list
+						45 container
+							46 text com.aaronsedna.hopecards
+							47 button (collapsed) Secondary Actions: Expand
+						48 container
+							49 link Description: View on Play, Value: play.google.com/store/apps/details?id=com.aaronsedna.hopecards
+					50 text Publishing overview You have no unpublished changes
+					51 link Description: Go to publishing page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing
+					52 heading Test and release, Value: 3
+						53 text Test and release
+					54 link Go to Test and release overview
+					55 heading Monitor and improve, Value: 3
+						56 text Monitor and improve
+					57 link Go to Monitor and improve overview
+					58 heading Grow users, Value: 3
+						59 text Grow users
+					60 link Go to Grow Overview page
+					61 heading Monetize with Play, Value: 3
+						62 text Monetize with Play
+					63 link Go to Monetize with Play overview
+					64 heading Marketing activity, Value: 3
+						65 text Marketing activity
+					66 button (collapsed) Description: More information about "Marketing activity", Secondary Actions: Expand
+					67 heading Grow and retain subscribers with new tools, Value: 3
+						68 text Grow and retain subscribers with new tools
+					69 text Learn how new tools like usage-based billing, mixed carts, multi-quantity plans, and dynamic grace periods can help you package offers more flexibly, recover failed payments, and reduce churn
+					70 link Description: Read blog post, Value: android-developers.googleblog.com/2026/09/unlocking-Google-play-subscription-growth.html
+					71 heading Acquire more subscribers and grow revenue, Value: 3
+						72 text Acquire more subscribers and grow revenue
+					73 text You can now use introductory pricing, prepaid plans, and add-ons to convert trial users and expand into new markets. Go to the Subscriptions page to get started.
+					74 link Description: Go to Subscriptions, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/subscriptions
+					75 heading Monitor KPI trends, Value: 3
+						76 text Monitor KPI trends
+					77 button
+				78 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				79 link Description: Status dashboard, Value: status.play.google.com/
+				80 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				81 text © 2026 Google
+				82 link Description: Privacy, Value: google.com/policies/privacy/
+				83 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				84 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Dashboard | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/app-dashboard

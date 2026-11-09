@@ -1,0 +1,229 @@
+2026-10-11T06:05:49.354Z
+- banner:
+  - navigation "Page Header":
+    - link "Google Play logo":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Search Google Play":
+        - /placeholder: Search for apps & games
+        - text: verse of the day
+      - generic: clear
+    - button "Help Center":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "Apps & games" [pressed]:
+    - generic: Apps & games
+    - generic: arrow_drop_down
+  - button "Device":
+    - generic: Device
+    - generic: arrow_drop_down
+- link "Bible verse of the day DailyVerses Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=com.dailyverses
+  - generic: Bible verse of the day
+  - generic: DailyVerses
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Verse of the Day (Official) Heartlight, Inc. Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=com.magiccitycode.verseoftheday
+  - generic: Verse of the Day (Official)
+  - generic: Heartlight, Inc.
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- link "Verse of the Day:Bible & Faith Dragan Ostojic":
+  - /url: /store/apps/details?id=com.ostojic.verseoftheday
+  - generic: Verse of the Day:Bible & Faith
+  - generic: Dragan Ostojic
+- 'link "Bible Verse of the Day: Daily Life Hack Developer Rated 5.0 stars out of five stars"':
+  - /url: /store/apps/details?id=com.bible.verseoftheday2026
+  - generic: "Bible Verse of the Day: Daily"
+  - generic: Life Hack Developer
+  - img "Rated 5.0 stars out of five stars":
+    - generic: "5.0"
+    - generic: star
+- link "YouVersion Bible App + Audio Life.Church Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.sirma.mobile.bible.android
+  - generic: YouVersion Bible App + Audio
+  - generic: Life.Church
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Bible-Daily Bible Verse Bíblia Offline Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=com.bible.holybible.nkjv.dailyverse
+  - generic: Bible-Daily Bible Verse
+  - generic: Bíblia Offline
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "Daily Bible Verses Quotes and Verses Rated 4.9 stars out of five stars":
+  - /url: /store/apps/details?id=com.quotes.christian
+  - generic: Daily Bible Verses
+  - generic: Quotes and Verses
+  - img "Rated 4.9 stars out of five stars":
+    - generic: "4.9"
+    - generic: star
+- link "Bible Verse of the Day AleC Games Studio Rated 4.3 stars out of five stars":
+  - /url: /store/apps/details?id=com.alecgames.bibleverse.christianwords
+  - generic: Bible Verse of the Day
+  - generic: AleC Games Studio
+  - img "Rated 4.3 stars out of five stars":
+    - generic: "4.3"
+    - generic: star
+- link "Bible Verse of the Day Widget Janus Works LLC":
+  - /url: /store/apps/details?id=com.janus.verse
+  - generic: Bible Verse of the Day Widget
+  - generic: Janus Works LLC
+- 'link "Bible Verse of The Day: Daily Bíblia Offline Rated 4.3 stars out of five stars"':
+  - /url: /store/apps/details?id=com.bible.verse.dailyverse.prayer.biblia
+  - generic: "Bible Verse of The Day: Daily"
+  - generic: Bíblia Offline
+  - img "Rated 4.3 stars out of five stars":
+    - generic: "4.3"
+    - generic: star
+- link "Verse of the Day - Daily Bible Custom Solutions LLC":
+  - /url: /store/apps/details?id=com.verseoftheday.verse_of_the_day
+  - generic: Verse of the Day - Daily Bible
+  - generic: Custom Solutions LLC
+- link "Daily Power - bible verses OEMEL09 Rated 4.7 stars out of five stars":
+  - /url: /store/apps/details?id=de.oemel09.dailypower
+  - generic: Daily Power - bible verses
+  - generic: OEMEL09
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- 'link "Holy: Daily Bible Verses Believe PR Rated 4.7 stars out of five stars"':
+  - /url: /store/apps/details?id=dev.armandojimenez.holy
+  - generic: "Holy: Daily Bible Verses"
+  - generic: Believe PR
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- 'link "Bible Daily: Verse & Prayer FaithWorks Studio"':
+  - /url: /store/apps/details?id=com.bitsuper.kjv
+  - generic: "Bible Daily: Verse & Prayer"
+  - generic: FaithWorks Studio
+- link "A Verse For Today Narrow Path Doctrine Ministries":
+  - /url: /store/apps/details?id=com.narrowpathdoctrine.versefortoday
+  - generic: A Verse For Today
+  - generic: Narrow Path Doctrine Ministries
+- 'link "Daily Bible: Holy Bible KJV Daily Bible : Daily Verses and Prayers Rated 4.7 stars out of five stars"':
+  - /url: /store/apps/details?id=kjv.holy.bible.kingjames
+  - generic: "Daily Bible: Holy Bible KJV"
+  - generic: "Daily Bible : Daily Verses and Prayers"
+  - img "Rated 4.7 stars out of five stars":
+    - generic: "4.7"
+    - generic: star
+- link "King James Bible - Verse+Audio Ozion Rated 4.8 stars out of five stars":
+  - /url: /store/apps/details?id=kjv.bible.kingjamesbible
+  - generic: King James Bible - Verse+Audio
+  - generic: Ozion
+  - img "Rated 4.8 stars out of five stars":
+    - generic: "4.8"
+    - generic: star
+- 'link "Verse: Daily Bible Companion Chelsea Ajah"':
+  - /url: /store/apps/details?id=com.verse.verse_app
+  - generic: "Verse: Daily Bible Companion"
+  - generic: Chelsea Ajah
+- link "Daily Bible Verse & Devotion BANU APPS":
+  - /url: /store/apps/details?id=com.lumengrace.palavradodia
+  - generic: Daily Bible Verse & Devotion
+  - generic: BANU APPS
+- link "Bible - Holy Verses of the Day Spirit Bible Apps":
+  - /url: /store/apps/details?id=bible365.app
+  - generic: Bible - Holy Verses of the Day
+  - generic: Spirit Bible Apps
+- link "Bible Verse of the Day Dr. Michael Todd":
+  - /url: /store/apps/details?id=com.sionnagh.bibleverseoftheday
+  - generic: Bible Verse of the Day
+  - generic: Dr. Michael Todd
+- 'link "Bible Verses: For Every Day 1381802 Ontario Inc."':
+  - /url: /store/apps/details?id=com.collabra.bible
+  - generic: "Bible Verses: For Every Day"
+  - generic: 1381802 Ontario Inc.
+- 'link "Aurora: Bible Verse of the Day Red Sea Labs Co"':
+  - /url: /store/apps/details?id=com.redsealabs.aurorabible
+  - generic: "Aurora: Bible Verse of the Day"
+  - generic: Red Sea Labs Co
+- link "Quran Verse of the Day CI Developer":
+  - /url: /store/apps/details?id=app.QuranVerseoftheday.com
+  - generic: Quran Verse of the Day
+  - generic: CI Developer
+- link "Bible Verse of the Day Widget Visual Art Group LLP":
+  - /url: /store/apps/details?id=com.biblewidgets.bible_widgets
+  - generic: Bible Verse of the Day Widget
+  - generic: Visual Art Group LLP
+- link "Verse-A-Day Bible Verses iDelata, LLC Rated 4.5 stars out of five stars":
+  - /url: /store/apps/details?id=com.idelata.VerseADayFree
+  - generic: Verse-A-Day Bible Verses
+  - generic: iDelata, LLC
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- link "Simple Bible Daily Verse Alarm Reminders & Alarms Rated 4.6 stars out of five stars":
+  - /url: /store/apps/details?id=com.holy.bible.study
+  - generic: Simple Bible Daily Verse Alarm
+  - generic: Reminders & Alarms
+  - img "Rated 4.6 stars out of five stars":
+    - generic: "4.6"
+    - generic: star
+- 'link "Versely: Bible & Daily Verse Lunnexia"':
+  - /url: /store/apps/details?id=dailybread.lunnexia.com
+  - generic: "Versely: Bible & Daily Verse"
+  - generic: Lunnexia
+- 'link "Bible Hour: Verses & Prayer Bible Hour Rated 4.5 stars out of five stars"':
+  - /url: /store/apps/details?id=com.marketu.biblehour
+  - generic: "Bible Hour: Verses & Prayer"
+  - generic: Bible Hour
+  - img "Rated 4.5 stars out of five stars":
+    - generic: "4.5"
+    - generic: star
+- 'link "Play Daily Bible App: Verse of Day Daily Bible App: Verse of Day Daily Bible APP"':
+  - /url: /store/apps/details?id=net.dailybibleapp
+  - 'button "Play Daily Bible App: Verse of Day"':
+  - generic: "Daily Bible App: Verse of Day"
+  - generic: Daily Bible APP
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "Gift cards":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: Gift cards
+  - link "Redeem":
+    - /url: /redeem
+    - paragraph: Redeem
+  - link "Refund policy":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: Refund policy
+  - text: Kids & family
+  - link "Parent Guide":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: Parent Guide
+  - link "Family sharing":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: Family sharing
+  - link "Terms of Service":
+    - /url: https://play.google.com/intl/en_in/about/play-terms.html
+    - paragraph: Terms of Service
+  - link "Privacy":
+    - /url: https://policies.google.com/privacy
+    - paragraph: Privacy
+  - link "About Google Play":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: About Google Play
+  - link "Developers":
+    - /url: http://developer.android.com/index.html
+    - paragraph: Developers
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: All prices include GST.
+  - generic: India (English)

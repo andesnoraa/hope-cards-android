@@ -1,0 +1,111 @@
+Browser tab: 455027205, Title: "ബൈബിൾ വചനം: Hope Cards - Google Play-യിലെ ആപ്പുകൾ", URL: "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards&hl=ml&gl=IN".
+1 AXWebArea ബൈബിൾ വചനം: Hope Cards - Google Play-യിലെ ആപ്പുകൾ, URL: play.google.com/store/apps/details?id=com.aaronsedna.hopecards&hl=ml&gl=IN
+	2 container yDmH0d
+		3 container
+			4 container പേജ് ഹെഡ്ഡര്‍
+				5 link Description: Google Play ലോഗോ, Value: play.google.com/store/games
+				6 container പ്രധാനപ്പെട്ടത്
+					7 tab group
+						8 tab (selectable, settable, boolean) ഗെയിമുകൾ, Value: 0, ID: 11
+						9 tab (selected, settable, boolean) ആപ്പുകൾ, Value: 1
+						10 tab (selectable, settable, boolean) പുസ്‌തകങ്ങൾ, Value: 0, ID: 5
+						11 tab (selectable, settable, boolean) കുട്ടികള്‍‌, Value: 0, ID: 13
+				12 button തിരയുക
+				13 button സഹായ കേന്ദ്രം
+				14 pop up button (collapsed) Description: Google Account: Aaronsedna ([signed-in email redacted]), Secondary Actions: Expand
+		15 container
+			16 container
+				17 heading ബൈബിൾ വചനം: Hope Cards, Value: 1
+					18 text ബൈബിൾ വചനം: Hope Cards
+				19 link Description: Aaronsedna, Value: play.google.com/store/apps/developer?id=Aaronsedna
+				20 text പരസ്യങ്ങൾ അടങ്ങിയിരിക്കുന്നു  ·  ആപ്പ് വഴിയുള്ള വാങ്ങലുകൾ
+				21 container വിവര ബാഡ്‌ജുകൾ
+					22 container
+						23 text 100+ ഡൗൺലോഡുകൾ
+			24 button (disabled) കൂടുതൽ ഉപകരണങ്ങളിൽ ഇൻസ്റ്റാൾ ചെയ്യുക
+				25 text കൂടുതൽ ഉപകരണങ്ങളിൽ ഇൻസ്റ്റാൾ ചെയ്യുക
+			26 button പങ്കിടുക
+				27 text പങ്കിടുക
+			28 button ട്രെയ്‌ലർ പ്ലേ ചെയ്യുക
+			29 text നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങൾക്കും ഈ ആപ്പ് ലഭ്യമാണ്
+			30 container
+				31 content list
+					32 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					33 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					34 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					35 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					36 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					37 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					38 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+					39 button സ്‌ക്രീൻഷോട്ട് ചിത്രം
+				40 button അടുത്ത സെറ്റിലേക്ക് സ്ക്രോൾ ചെയ്യുക
+			41 container
+				42 heading പുതിയതെന്താണ്, Value: 2
+					43 text പുതിയതെന്താണ്
+				44 text പിഴവുകൾ പരിഹരിച്ചു.
+			45 container
+				46 text തിരഞ്ഞെടുത്ത സ്റ്റോറികൾ
+				47 content list
+					48 container
+						49 link Description: Special event Play Fest starts on October 13 Big savings, big offers, and more, Value: play.google.com/store/apps/editorial?id=mc_games_cmp_play_days_2026_fcp
+			50 container
+				51 heading ഡാറ്റാ സുരക്ഷ, Value: 2
+					52 text ഡാറ്റാ സുരക്ഷ
+				53 container
+					54 link Description: ഡാറ്റാ സുരക്ഷ എന്നതിൽ കൂടുതൽ വിവരങ്ങൾ കാണുക, Value: play.google.com/store/apps/datasafety?id=com.aaronsedna.hopecards
+				55 text ഡെവലപ്പര്‍മാർ നിങ്ങളുടെ ഡാറ്റ ശേഖരിക്കുകയും പങ്കിടുകയും ചെയ്യുന്നത് എങ്ങനെയെന്ന് മനസ്സിലാക്കുന്നതിലൂടെയാണ് സുരക്ഷ ആരംഭിക്കുന്നത്. നിങ്ങളുടെ ഉപയോഗത്തെയും പ്രദേശത്തെയും പ്രായത്തെയും അടിസ്ഥാനമാക്കി ഡാറ്റാ സ്വകാര്യതയും സുരക്ഷാ നടപടികളും വ്യത്യാസപ്പെടാം. ഡെവലപ്പര്‍ ഈ വിവരങ്ങൾ നൽകി കാലക്രമേണ ഇത് അപ്ഡേറ്റ് ചെയ്തേക്കാം.
+				56 content list
+					57 container
+						58 text മൂന്നാം കക്ഷികളുമായി ഈ ആപ്പ് ഈ ഡാറ്റാ തരങ്ങൾ പങ്കിട്ടേക്കാം ലൊക്കേഷൻ, ആപ്പ് ആക്റ്റിവിറ്റി എന്നിവയും മറ്റ് 2 എണ്ണവും
+					59 container
+						60 text ഈ ആപ്പ് ഈ ഡാറ്റാ തരങ്ങൾ ശേഖരിച്ചേക്കാം ലൊക്കേഷൻ, ആപ്പ് ആക്റ്റിവിറ്റി എന്നിവയും മറ്റ് 2 എണ്ണവും
+					61 text ട്രാൻസിറ്റിൽ ഡാറ്റ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു
+				62 container
+					63 link Description: ഡാറ്റാ സുരക്ഷയിൽ കൂടുതൽ വിശദാംശങ്ങള്‍ കാണുക, Value: play.google.com/store/apps/datasafety?id=com.aaronsedna.hopecards
+			64 container
+				65 heading ഈ ആപ്പിനെക്കുറിച്ച്, Value: 2
+					66 text ഈ ആപ്പിനെക്കുറിച്ച്
+				67 button ഈ ആപ്പിനെക്കുറിച്ച് എന്നതിൽ കൂടുതൽ വിവരങ്ങൾ കാണുക
+				68 container മലയാളം ബൈബിൾ വചനങ്ങൾ, വചനചിത്രങ്ങൾ, ക്വിസ്, പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ.
+					69 text മലയാളം ബൈബിൾ വചനങ്ങൾ, വചനചിത്രങ്ങൾ, ക്വിസ്, പങ്കാളിത്ത സർട്ടിഫിക്കറ്റുകൾ.
+				70 text അപ്‌ഡേറ്റ് ചെയ്ത തീയതി 2026 ഒക്ടോ 8
+				71 container
+					72 link Description: ജീവിതശൈലി, Value: play.google.com/store/apps/category/LIFESTYLE
+			73 link Description: അനുചിതമാണെന്ന് ഫ്ലാഗ് ചെയ്യുക (പുതിയ വിൻഡോയിൽ തുറക്കുന്നു), Value: support.google.com/googleplay/?p=report_content
+			74 image ഉള്ളടക്ക റേറ്റിംഗ്
+			75 text 3+ പ്രായമുള്ളവർക്ക്
+			76 text ആപ്പ് വഴിയുള്ള വാങ്ങൽ
+			77 link Description: ഉള്ളടക്ക റേറ്റിംഗുകളെ കുറിച്ച് കൂടുതലറിയുക (പുതിയ വിൻഡോയിൽ തുറക്കുന്നു), Value: support.google.com/googleplay?p=appgame_ratings
+			78 container developer-contacts-heading
+				79 heading ആപ്പ് പിന്തുണ, Value: 2
+					80 text ആപ്പ് പിന്തുണ
+				81 button (collapsed) Description: വികസിപ്പിക്കുക, Secondary Actions: Expand
+			82 container
+				83 heading പരീക്ഷിക്കാൻ കൂടുതൽ ആപ്പുകൾ, Value: 2
+					84 text പരീക്ഷിക്കാൻ കൂടുതൽ ആപ്പുകൾ
+				85 container
+					86 link Description: പരീക്ഷിക്കാൻ കൂടുതൽ ആപ്പുകൾ എന്നതിൽ കൂടുതൽ വിവരങ്ങൾ കാണുക, Value: play.google.com/store/apps/collection/cluster?gsr=SmJqLGc2ZjAvRFV1cHFzd1YybHJsa3d4dmJhV3JwR3huWHJzT2FoZjd6Y24rQzQ9mgguChwKGGNvbS5hYXJvbnNlZG5hLmhvcGVjYXJkcxAHEAIaBggBEAAYACAAMAE4ALASAA%3D%3D:S:ANO1ljLb16I
+				87 link Description: Livly Island - Adopt Cute Pets ENSAPIA Corporation അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=jp.cocone.livly
+				88 link Description: Chat AI: Ask Agent Anything Deep Flow Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.codeway.chatapp
+				89 link Description: NBA: Live Games & Scores NBA Properties, Inc. അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.nbaimd.gametime.nba2011
+				90 link Description: Suno - AI Music & Songs Maker Suno, Inc അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.suno.android
+				91 link Description: SoundCloud: Discover Music SoundCloud അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.soundcloud.android
+				92 link Description: Truecaller: കോളര്‍ID Truecaller അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു, Value: play.google.com/store/apps/details?id=com.truecaller
+		93 container
+			94 text Google Play
+			95 link Description: Play Pass, Value: play.google.com/store/pass/getstarted
+			96 link Description: Play Points, Value: play.google.com/store/points/enroll
+			97 link Description: സമ്മാന കാർഡുകൾ, Value: play.google.com/about/giftcards
+			98 link Description: റിഡീം ചെയ്യുക, Value: play.google.com/redeem
+			99 link Description: റീഫണ്ട് നയം, Value: support.google.com/googleplay/answer/134336
+			100 text കുട്ടികളും കുടുംബവും
+			101 link Description: രക്ഷാകർതൃ ഗൈഡ്, Value: support.google.com/googleplay?p=pff_parentguide
+			102 link Description: കുടുംബവുമായി പങ്കിടൽ, Value: support.google.com/googleplay/answer/7007852
+			103 link Description: സേവന നിബന്ധനകൾ, Value: play.google.com/intl/ml_in/about/play-terms.html
+			104 link Description: സ്വകാര്യത, Value: policies.google.com/privacy
+			105 link Description: Google Play-യെ കുറിച്ച്, Value: support.google.com/googleplay/?p=about_play
+			106 link Description: ഡെവലപ്പർമാർ, Value: developer.android.com/index.html
+			107 link Description: Google Store, Value: store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+			108 text എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ. ഇന്ത്യ (മലയാളം)
+
+The focused UI element is 1 AXWebArea ബൈബിൾ വചനം: Hope Cards - Google Play-യിലെ ആപ്പുകൾ, URL: play.google.com/store/apps/details?id=com.aaronsedna.hopecards&hl=ml&gl=IN

@@ -1,0 +1,39 @@
+{
+  "appPackage": "com.aaronsedna.hopecards",
+  "consoleAppId": "4976302422419978923",
+  "submissionId": 38,
+  "status": "published",
+  "publishedAtConsoleLabel": "Oct 8, 2026 9:55 PM",
+  "publishedAtUtcUsingTaskTimezone": "2026-10-08T16:25:00Z",
+  "timezoneForConversion": "Asia/Kolkata",
+  "publicVisibilityOfNewDescriptions": "verified",
+  "contexts": [
+    {
+      "gl": "IN",
+      "hl": "en_US"
+    },
+    {
+      "gl": "IN",
+      "hl": "ml"
+    }
+  ],
+  "changes": [
+    {
+      "locale": "en-US",
+      "field": "full_description"
+    },
+    {
+      "locale": "ml-IN",
+      "field": "full_description"
+    }
+  ],
+  "minimumObservationWindowEnd": "2026-10-22",
+  "initialSubmissionRecord": "aso-submission.json",
+  "evidence": [
+    "aso-published-submission38.txt",
+    "aso-published-submission38.png",
+    "public-english-after-aso.txt",
+    "public-malayalam-after-aso.txt"
+  ],
+  "adsSettingsChanged": false
+}

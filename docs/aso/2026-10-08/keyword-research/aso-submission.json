@@ -1,0 +1,25 @@
+{
+  "appPackage": "com.aaronsedna.hopecards",
+  "consoleAppId": "4976302422419978923",
+  "observedAtUtc": "2026-10-08T16:10:32.703Z",
+  "status": "in_review",
+  "changes": [
+    {
+      "locale": "en-US",
+      "field": "full_description"
+    },
+    {
+      "locale": "ml-IN",
+      "field": "full_description"
+    }
+  ],
+  "publicBinaryVersionCode": 45,
+  "newBinarySubmitted": false,
+  "managedPublishing": false,
+  "evidence": [
+    "publication-after-submission.txt",
+    "publication-after-submission.png"
+  ],
+  "publicVisibilityOfNewDescriptions": "not_verified",
+  "adsSettingsChanged": false
+}

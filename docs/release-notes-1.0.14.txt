@@ -1,0 +1,21 @@
+<en-US>
+Bug fixes.
+</en-US>
+<de-DE>
+Fehlerbehebungen.
+</de-DE>
+<es-419>
+Corrección de errores.
+</es-419>
+<fil>
+Mga pag-aayos ng bug.
+</fil>
+<fr-FR>
+Corrections de bugs.
+</fr-FR>
+<it-IT>
+Correzioni di bug.
+</it-IT>
+<ml-IN>
+പിഴവുകൾ പരിഹരിച്ചു.
+</ml-IN>

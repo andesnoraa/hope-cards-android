@@ -1,0 +1,171 @@
+2026-10-09T15:56:24.340Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Statistics" [level=1]
+- button "Saved reports button":
+  - generic: Saved reports
+  - img: arrow_drop_down
+- text: See detailed, customizable reports about the performance of your app and peers.
+- button "Show more details about Statistics": Show more
+- tablist:
+  - tab "App statistics" [selected]:
+    - generic: App statistics
+  - tab "Compare to peers":
+    - generic: Compare to peers
+- heading "App statistics" [level=2]
+- heading "Configure report" [level=3]
+- button "Oct 2 – 8, 2026 Select a date range.":
+  - text: date_range
+  - generic: Oct 2 – 8, 2026
+  - img: arrow_drop_down
+- button "Export report":
+  - generic: Export report
+  - img: arrow_drop_down
+- button "Save this report":
+  - generic: Save this report
+- button "All device acquisitions":
+  - generic: All device acquisitions
+  - img: arrow_drop_down
+- generic: All events, Per interval, Daily
+- button "Edit":
+  - generic: Edit
+- button "Select another metric":
+  - generic: Select another metric
+  - img: arrow_drop_down
+- generic: by
+- button "Traffic source":
+  - generic: Traffic source
+  - img: arrow_drop_down
+- gridcell "Paid and direct":
+  - button "Paid and direct":
+    - img: check
+    - generic: Paid and direct
+- img: filter_list
+- grid:
+  - row:
+    - gridcell:
+      - combobox "Add filter"
+      - status
+- button "Explore this chart with AI":
+  - img: info_spark
+  - generic: Explore with AI
+- heading "Time series" [level=2]
+- img "Chart Use left and right keys to navigate through domain values. Press enter to expand details for a domain value.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- generic: Device acquisition (All devices, All events, Per interval, Daily)
+- generic: Paid and direct
+- heading "Change analysis" [level=2]
+- checkbox "Include selected Traffic sources"
+- generic: Include selected Traffic sources
+- button "Show Traffic sources you selected in configure report at the top of the page.":
+  - img: help
+- generic: Traffic sources with the largest change between the first interval in your selected period and the last interval with complete data
+- heading "All device acquisitions" [level=4]
+- button "Explore this chart with AI":
+  - img: info_spark
+- generic: Device acquisition (All devices, All events, Per interval, Daily)
+- heading "Data table" [level=2]
+- grid "Data table":
+  - row "Days Paid and direct":
+    - columnheader "Days"
+    - cell
+    - columnheader "Paid and direct"
+    - cell
+  - row "Oct 5, 2026 Percentage of total - 1 100% -":
+    - gridcell "Oct 5, 2026 Percentage of total":
+      - generic: Oct 5, 2026
+      - generic: Percentage of total
+    - gridcell "-":
+      - generic: "-"
+    - gridcell "1 100%":
+      - generic: "1"
+      - generic: 100%
+    - gridcell "-":
+      - generic: "-"
+  - row "Oct 2, 2026 Percentage of total - 1 100% -":
+    - gridcell "Oct 2, 2026 Percentage of total":
+      - generic: Oct 2, 2026
+      - generic: Percentage of total
+    - gridcell "-":
+      - generic: "-"
+    - gridcell "1 100%":
+      - generic: "1"
+      - generic: 100%
+    - gridcell "-":
+      - generic: "-"
+- generic: "Show rows:"
+- 'button "Show rows: 10 selected."':
+  - generic: "10"
+  - img: arrow_drop_down
+- generic: 1 - 2 of 2
+- button "Go to the first page" [disabled]:
+  - img: first_page
+- button "Go to the previous page" [disabled]:
+  - img: chevron_left
+- button "Go to the next page" [disabled]:
+  - img: chevron_right
+- button "Go to the last page" [disabled]:
+  - img: last_page
+- text: date_range
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/

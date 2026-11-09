@@ -1,0 +1,70 @@
+Browser tab: 455027219, Title: "Monitor and improve | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/monitor".
+1 AXWebArea Monitor and improve | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/monitor
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/home
+				10 button Unread notifications Open notification center
+					11 text Unread notifications
+				7 pop up button (collapsed) Description: Switch developer accounts, Secondary Actions: Expand
+				8 button (collapsed) Description: Google Account: Aaronsedna (redacted), Secondary Actions: Expand
+			12 content list
+				13 container Home
+					14 button Home
+				15 container Manage account
+					16 button Manage account
+				17 container Daily Bible Verse: Hope Cards
+					18 pop up button Daily Bible Verse: Hope Cards
+				19 container Dashboard
+					20 button Dashboard
+				21 container Statistics
+					22 button Statistics
+				23 container Publishing overview
+					24 button Publishing overview
+				25 container Protected with Play
+					26 button Protected with Play
+				27 container (collapsed) Description: Test and release, Secondary Actions: Expand
+					28 button Test and release
+				29 container (expanded) Description: Monitor and improve, Secondary Actions: Collapse
+					30 button Monitor and improve
+				31 container (collapsed) Description: Grow users, Secondary Actions: Expand
+					32 button Grow users
+				33 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+					34 button Monetize with Play
+			9 container main-content
+				35 container
+					36 heading Monitor and improve, Value: 1
+						37 text Monitor and improve
+					38 text Policy status No policy issues found
+					39 link Description: View Policy issues, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/policy-center
+					40 heading Android vitals, Value: 2
+						41 text Android vitals
+					42 text Last 28 days
+					43 heading Ratings and reviews, Value: 2
+						44 text Ratings and reviews
+					45 link Description: View Ratings page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+					46 link Description: View Ratings page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/ratings
+					47 link Description: View Reviews page, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/user-feedback/reviews
+					48 heading Take action, Value: 2
+						49 text Take action
+					50 heading Improve your app's memory and performance with R8 optimization, Value: 3
+						51 text Improve your app's memory and performance with R8 optimization
+					52 container aBFCCE2E0-BAE3-4124-A990-4E467791547E--20
+						53 text Your R8 configuration could be causing higher memory usage and lower performance.
+						54 text Memory usage
+						55 text Release name: 1.0.14 (47)
+						56 text Is this useful?
+						57 checkbox Description: Thumb up button for reporting the information as useful, Value: 0
+						58 checkbox Description: Thumb down button for reporting the information as not useful, Value: 0
+					59 button Read more
+						60 text Read more
+				61 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				62 link Description: Status dashboard, Value: status.play.google.com/
+				63 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				64 text © 2026 Google
+				65 link Description: Privacy, Value: google.com/policies/privacy/
+				66 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				67 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Monitor and improve | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/monitor

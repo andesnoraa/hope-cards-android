@@ -1,0 +1,63 @@
+{
+  "columnOrder": [
+    "Google Play explore",
+    "Paid and direct",
+    "Not attributed"
+  ],
+  "rows": [
+    {
+      "date": "Sep 9, 2026",
+      "values": [
+        null,
+        4,
+        1
+      ]
+    },
+    {
+      "date": "Aug 31, 2026",
+      "values": [
+        null,
+        null,
+        1
+      ]
+    },
+    {
+      "date": "Aug 29, 2026",
+      "values": [
+        null,
+        null,
+        2
+      ]
+    },
+    {
+      "date": "Aug 26, 2026",
+      "values": [
+        null,
+        10,
+        1
+      ]
+    },
+    {
+      "date": "Aug 19, 2026",
+      "values": [
+        null,
+        2,
+        null
+      ]
+    },
+    {
+      "date": "Aug 18, 2026",
+      "values": [
+        null,
+        4,
+        null
+      ]
+    }
+  ],
+  "availableNumericCellSubtotals": [
+    null,
+    20,
+    5
+  ],
+  "dashesAreNotZero": true
+}

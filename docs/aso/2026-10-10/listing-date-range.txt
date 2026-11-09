@@ -1,0 +1,484 @@
+2026-10-10T16:10:37.295Z
+- progressbar
+- generic: Loading Google Play Console
+- banner:
+  - link "Google Play Console logo":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - button "Google Play Console logo"
+  - button "Unread notifications Open notification center":
+    - img: notifications_unread
+    - generic: Unread notifications
+  - 'button "Daily Bible Verse: Hope Cards"':
+    - generic: "Daily Bible Verse: Hope Cards"
+  - button "Switch developer accounts":
+    - img "Switch developer accounts"
+- navigation:
+  - link "All apps":
+    - /url: /console/u/0/developers/7885801294965165245/app-list
+    - img: keyboard_backspace
+    - generic: All apps
+  - list:
+    - listitem "Dashboard":
+      - button "Dashboard":
+        - img: dashboard
+        - generic: Dashboard
+    - listitem "Statistics":
+      - button "Statistics":
+        - img: bar_chart
+        - generic: Statistics
+    - listitem "Publishing overview":
+      - button "Publishing overview":
+        - img: overview
+        - generic: Publishing overview
+    - listitem "Protected with Play":
+      - button "Protected with Play":
+        - img: shield
+        - generic: Protected with Play
+    - listitem "Test and release":
+      - button "Test and release":
+        - img: rocket_launch
+        - generic: Test and release
+    - listitem "Monitor and improve":
+      - button "Monitor and improve":
+        - img: vital_signs
+        - generic: Monitor and improve
+    - listitem "Grow users":
+      - button "Grow users":
+        - img: finance_mode
+        - generic: Grow users
+      - list:
+        - listitem "Store presence":
+          - button "Store presence":
+            - generic: Store presence
+            - img: expand_less
+          - list:
+            - listitem "Store listings":
+              - button "Store listings":
+                - generic: Store listings
+            - listitem "Store settings":
+              - button "Store settings":
+                - generic: Store settings
+        - listitem "Store performance":
+          - button "Store performance":
+            - generic: Store performance
+            - img: expand_more
+        - listitem "Translations":
+          - button "Translations":
+            - generic: Translations
+            - img: expand_more
+        - listitem "Deep links":
+          - button "Deep links":
+            - generic: Deep links
+    - listitem "Monetize with Play":
+      - button "Monetize with Play":
+        - img: sell
+        - generic: Monetize with Play
+- heading "Store listings" [level=1]
+- button "Create custom listing":
+  - generic: Create custom listing
+- button "Create group":
+  - generic: Create group
+- heading "Manage how your app is presented to users on Play" [level=2]
+- paragraph:
+  - generic: Make a great first impression and help users find and engage with your app through your store listing. Use custom listings to target specific audiences with tailored content.
+- link "Learn more about Store listings (opens in a new tab)":
+  - /url: https://support.google.com/googleplay/android-developer/answer/9156429
+  - generic: Learn more
+- button "Hide detailed description about Store listings":
+  - generic: Hide
+- tablist:
+  - tab "Listings" [selected]:
+    - generic: Listings
+  - tab "Groups":
+    - generic: Groups
+- heading "Your performance on Play" [level=2]
+- button "Select metric":
+  - generic: Installs
+  - img: arrow_drop_down
+- button "Last 28 days Select date range to filter metrics" [expanded] [active]:
+  - text: date_range
+  - generic: Last 28 days
+  - img: arrow_drop_down
+- dialog "Date range selection":
+  - listbox "Select date range":
+    - option "Custom":
+      - generic: Custom
+    - option "This week"
+    - option "Last week"
+    - option "This month"
+    - option "Last month"
+    - option "Last 28 days"
+    - option "Last 90 days"
+    - option "Last 180 days"
+    - option "Last 365 days"
+    - option "All time"
+  - generic: Start date
+  - textbox "Start date": 9/8/2026
+  - generic: —
+  - generic: End date
+  - textbox "End date": Oct 5, 2026
+  - button "Sep 2026 Select month":
+    - generic: Sep 2026
+    - img: arrow_drop_down
+  - button "Previous month":
+    - img: chevron_left
+  - button "Next month":
+    - img: chevron_right
+  - region "September 2026"
+  - grid:
+    - row "Sunday Monday Tuesday Wednesday Thursday Friday Saturday":
+      - columnheader "Sunday": S
+      - columnheader "Monday": M
+      - columnheader "Tuesday": T
+      - columnheader "Wednesday": W
+      - columnheader "Thursday": T
+      - columnheader "Friday": F
+      - columnheader "Saturday": S
+    - rowgroup:
+      - heading [level=2]: Jul 2026
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row "10 July 2026 11 July 2026":
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell "10 July 2026"
+        - gridcell "11 July 2026"
+      - row "12 July 2026 13 July 2026 14 July 2026 15 July 2026 16 July 2026 17 July 2026 18 July 2026":
+        - gridcell "12 July 2026"
+        - gridcell "13 July 2026"
+        - gridcell "14 July 2026"
+        - gridcell "15 July 2026"
+        - gridcell "16 July 2026"
+        - gridcell "17 July 2026"
+        - gridcell "18 July 2026"
+      - row "19 July 2026 20 July 2026 21 July 2026 22 July 2026 23 July 2026 24 July 2026 25 July 2026":
+        - gridcell "19 July 2026"
+        - gridcell "20 July 2026"
+        - gridcell "21 July 2026"
+        - gridcell "22 July 2026"
+        - gridcell "23 July 2026"
+        - gridcell "24 July 2026"
+        - gridcell "25 July 2026"
+      - row "26 July 2026 27 July 2026 28 July 2026 29 July 2026 30 July 2026 31 July 2026":
+        - gridcell "26 July 2026"
+        - gridcell "27 July 2026"
+        - gridcell "28 July 2026"
+        - gridcell "29 July 2026"
+        - gridcell "30 July 2026"
+        - gridcell "31 July 2026"
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+    - rowgroup:
+      - heading [level=2]: Aug 2026
+      - row "1 August 2026":
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell "1 August 2026"
+      - row "2 August 2026 3 August 2026 4 August 2026 5 August 2026 6 August 2026 7 August 2026 8 August 2026":
+        - gridcell "2 August 2026"
+        - gridcell "3 August 2026"
+        - gridcell "4 August 2026"
+        - gridcell "5 August 2026"
+        - gridcell "6 August 2026"
+        - gridcell "7 August 2026"
+        - gridcell "8 August 2026"
+      - row "9 August 2026 10 August 2026 11 August 2026 12 August 2026 13 August 2026 14 August 2026 15 August 2026":
+        - gridcell "9 August 2026"
+        - gridcell "10 August 2026"
+        - gridcell "11 August 2026"
+        - gridcell "12 August 2026"
+        - gridcell "13 August 2026"
+        - gridcell "14 August 2026"
+        - gridcell "15 August 2026"
+      - row "16 August 2026 17 August 2026 18 August 2026 19 August 2026 20 August 2026 21 August 2026 22 August 2026":
+        - gridcell "16 August 2026"
+        - gridcell "17 August 2026"
+        - gridcell "18 August 2026"
+        - gridcell "19 August 2026"
+        - gridcell "20 August 2026"
+        - gridcell "21 August 2026"
+        - gridcell "22 August 2026"
+      - row "23 August 2026 24 August 2026 25 August 2026 26 August 2026 27 August 2026 28 August 2026 29 August 2026":
+        - gridcell "23 August 2026"
+        - gridcell "24 August 2026"
+        - gridcell "25 August 2026"
+        - gridcell "26 August 2026"
+        - gridcell "27 August 2026"
+        - gridcell "28 August 2026"
+        - gridcell "29 August 2026"
+      - row "30 August 2026 31 August 2026":
+        - gridcell "30 August 2026"
+        - gridcell "31 August 2026"
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+    - rowgroup:
+      - heading [level=2]: Sep 2026
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row "1 September 2026 2 September 2026 3 September 2026 4 September 2026 5 September 2026":
+        - gridcell
+        - gridcell
+        - gridcell "1 September 2026"
+        - gridcell "2 September 2026"
+        - gridcell "3 September 2026"
+        - gridcell "4 September 2026"
+        - gridcell "5 September 2026"
+      - row "6 September 2026 7 September 2026 8 September 2026, Selected 9 September 2026 10 September 2026 11 September 2026 12 September 2026":
+        - gridcell "6 September 2026"
+        - gridcell "7 September 2026"
+        - gridcell "8 September 2026, Selected" [selected]
+        - gridcell "9 September 2026"
+        - gridcell "10 September 2026"
+        - gridcell "11 September 2026"
+        - gridcell "12 September 2026"
+      - row "13 September 2026 14 September 2026 15 September 2026 16 September 2026 17 September 2026 18 September 2026 19 September 2026":
+        - gridcell "13 September 2026"
+        - gridcell "14 September 2026"
+        - gridcell "15 September 2026"
+        - gridcell "16 September 2026"
+        - gridcell "17 September 2026"
+        - gridcell "18 September 2026"
+        - gridcell "19 September 2026"
+      - row "20 September 2026 21 September 2026 22 September 2026 23 September 2026 24 September 2026 25 September 2026 26 September 2026":
+        - gridcell "20 September 2026"
+        - gridcell "21 September 2026"
+        - gridcell "22 September 2026"
+        - gridcell "23 September 2026"
+        - gridcell "24 September 2026"
+        - gridcell "25 September 2026"
+        - gridcell "26 September 2026"
+      - row "27 September 2026 28 September 2026 29 September 2026 30 September 2026":
+        - gridcell "27 September 2026"
+        - gridcell "28 September 2026"
+        - gridcell "29 September 2026"
+        - gridcell "30 September 2026"
+        - gridcell
+        - gridcell
+        - gridcell
+    - rowgroup:
+      - heading [level=2]: Oct 2026
+      - row "1 October 2026 2 October 2026 3 October 2026":
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell "1 October 2026"
+        - gridcell "2 October 2026"
+        - gridcell "3 October 2026"
+      - row "4 October 2026 5 October 2026, Selected":
+        - gridcell "4 October 2026"
+        - gridcell "5 October 2026, Selected" [selected]
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+    - rowgroup:
+      - heading [level=2]: Nov 2026
+      - row:
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell [selected]
+      - row "1 November 2026 2 November 2026 3 November 2026 4 November 2026 5 November 2026 6 November 2026 7 November 2026":
+        - gridcell "1 November 2026"
+        - gridcell "2 November 2026"
+        - gridcell "3 November 2026"
+        - gridcell "4 November 2026"
+        - gridcell "5 November 2026"
+        - gridcell "6 November 2026"
+        - gridcell "7 November 2026"
+      - row "8 November 2026 9 November 2026 10 November 2026 11 November 2026 12 November 2026 13 November 2026 14 November 2026":
+        - gridcell "8 November 2026"
+        - gridcell "9 November 2026"
+        - gridcell "10 November 2026" [selected]
+        - gridcell "11 November 2026"
+        - gridcell "12 November 2026"
+        - gridcell "13 November 2026"
+        - gridcell "14 November 2026"
+      - row "15 November 2026 16 November 2026 17 November 2026 18 November 2026 19 November 2026 20 November 2026 21 November 2026":
+        - gridcell "15 November 2026"
+        - gridcell "16 November 2026"
+        - gridcell "17 November 2026"
+        - gridcell "18 November 2026"
+        - gridcell "19 November 2026"
+        - gridcell "20 November 2026"
+        - gridcell "21 November 2026"
+      - row "22 November 2026 23 November 2026 24 November 2026 25 November 2026 26 November 2026 27 November 2026 28 November 2026":
+        - gridcell "22 November 2026"
+        - gridcell "23 November 2026"
+        - gridcell "24 November 2026"
+        - gridcell "25 November 2026"
+        - gridcell "26 November 2026"
+        - gridcell "27 November 2026"
+        - gridcell "28 November 2026"
+      - row "29 November 2026 30 November 2026":
+        - gridcell "29 November 2026"
+        - gridcell "30 November 2026"
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+        - gridcell
+- button "Reach Show details for Visitors":
+  - generic: Reach
+  - img: expand_more
+  - generic: Show details for Visitors
+- button "Visitors"
+- generic: "397"
+- img: arrow_right_alt
+- generic: 1,790%
+- generic: delta, where an increase is good
+- generic: vs. previous period
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Acquire Show details for Unique user install clicks":
+  - generic: Acquire
+  - img: expand_more
+  - generic: Show details for Unique user install clicks
+- button "Unique user install clicks"
+- generic: "84"
+- img: arrow_right_alt
+- generic: 425%
+- generic: delta, where an increase is good
+- generic: vs. previous period
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Acquire (%) Show details for Click-through rate":
+  - generic: Acquire (%)
+  - img: expand_more
+  - generic: Show details for Click-through rate
+- button "Click-through rate"
+- generic: 21%
+- img: arrow_left_alt
+- generic: 72%
+- generic: delta, where an increase is good
+- generic: vs. previous period
+- img "Chart Use left and right keys to navigate through domain values.":
+  - generic: Chart Use left and right keys to navigate through domain values.
+- button "Default listing"
+- link "Edit default listing":
+  - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings/default/edit
+  - img: edit
+  - generic: Edit default listing
+- generic: 354 visitors
+- grid "Default store listing":
+  - row "Name Last updated Visitors Conversion rate Experiments Status":
+    - columnheader "Name"
+    - columnheader "Last updated"
+    - columnheader "Visitors":
+      - text: Visitors
+      - img: help_outline
+    - columnheader "Conversion rate":
+      - text: Conversion rate
+      - img: help_outline
+    - columnheader "Experiments"
+    - columnheader "Status"
+    - cell
+    - cell
+  - row "Default store listing Oct 8, 2026 354 18.4% Set up Live View default listing":
+    - gridcell "Default store listing":
+      - generic: Default store listing
+    - gridcell "Oct 8, 2026":
+      - generic: Oct 8, 2026
+    - gridcell "354":
+      - generic: "354"
+    - gridcell "18.4%":
+      - generic: 18.4%
+    - gridcell "Set up":
+      - button "Set up":
+        - generic: Set up
+    - gridcell "Live":
+      - img: check_circle
+      - generic: Live
+    - gridcell:
+      - 'listbox "Select an action: view data, create new listing within group"':
+        - 'button "Select an action: view data, create new listing within group"':
+          - img: more_vert
+    - gridcell "View default listing":
+      - link "View default listing":
+        - /url: /console/u/0/developers/7885801294965165245/app/4976302422419978923/store-listings/0
+        - generic: View
+        - img: arrow_right_alt
+- heading "Target specific users with tailored content" [level=2]
+- generic: Create custom store listings to target specific users with tailored content. Once you've created a custom store listing, you can run experiments to test different graphics and localized text and see which perform best.
+- button "Create custom store listing":
+  - generic: Create custom store listing
+  - img: arrow_right_alt
+- link "Product updates":
+  - /url: https://play.google.com/console/about/whats-new/
+- link "Status dashboard":
+  - /url: https://status.play.google.com/
+- link "Help":
+  - /url: /console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+- generic: © 2026 Google
+- link "Privacy":
+  - /url: https://www.google.com/policies/privacy/
+- link "Developer Distribution Agreement":
+  - /url: https://play.google.com/about/developer-distribution-agreement.html
+- link "Terms of Service":
+  - /url: https://play.google.com/about/console/terms-of-service/

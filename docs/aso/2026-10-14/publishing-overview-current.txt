@@ -1,0 +1,59 @@
+Browser tab: 455027210, Title: "Publishing overview | Daily Bible Verse: Hope Cards", URL: "https://play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing".
+1 AXWebArea Publishing overview | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing
+	2 container
+		3 text Loading Google Play Console
+		4 container
+			5 container
+				6 link Description: Google Play Console logo, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				7 button Unread notifications Open notification center
+					8 text Unread notifications
+				9 button Daily Bible Verse: Hope Cards
+					10 text Daily Bible Verse: Hope Cards
+				11 button Switch developer accounts
+					12 image Switch developer accounts
+			13 container
+				14 link Description: All apps, Value: play.google.com/console/u/0/developers/7885801294965165245/app-list
+				15 content list
+					16 container Dashboard
+						17 button Dashboard
+							18 text Dashboard
+					19 container Statistics
+						20 button Statistics
+							21 text Statistics
+					22 container Publishing overview
+						23 button Publishing overview
+							24 text Publishing overview
+					25 container Protected with Play
+						26 button Protected with Play
+							27 text Protected with Play
+					28 container (collapsed) Description: Test and release, Secondary Actions: Expand
+						29 button Test and release
+							30 text Test and release
+					31 container (collapsed) Description: Monitor and improve, Secondary Actions: Expand
+						32 button Monitor and improve
+							33 text Monitor and improve
+					34 container (collapsed) Description: Grow users, Secondary Actions: Expand
+						35 button Grow users
+							36 text Grow users
+					37 container (collapsed) Description: Monetize with Play, Secondary Actions: Expand
+						38 button Monetize with Play
+							39 text Monetize with Play
+			40 container main-content
+				41 container
+					42 heading Publishing overview, Value: 1
+						43 text Publishing overview
+					44 container
+						45 text See an overview of the changes made to your app, and control when changes are sent for review or published.
+						46 button Show more details about Publishing overview
+					47 pop up button (collapsed) Managed publishing off, ID: aD4B23F09-F524-45A6-8558-99DFF56D9CFC--0, Secondary Actions: Expand
+					48 text Last published on October 8, 2026
+					49 link Description: Submission activity, Value: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing/submission-activity
+				50 link Description: Product updates, Value: play.google.com/console/about/whats-new/
+				51 link Description: Status dashboard, Value: status.play.google.com/
+				52 link Description: Help, Value: play.google.com/console/u/0/developers/7885801294965165245/help-and-support?app=4976302422419978923
+				53 text © 2026 Google
+				54 link Description: Privacy, Value: google.com/policies/privacy/
+				55 link Description: Developer Distribution Agreement, Value: play.google.com/about/developer-distribution-agreement.html
+				56 link Description: Terms of Service, Value: play.google.com/about/console/terms-of-service/
+
+The focused UI element is 1 AXWebArea Publishing overview | Daily Bible Verse: Hope Cards, URL: play.google.com/console/u/0/developers/7885801294965165245/app/4976302422419978923/publishing

@@ -1,0 +1,401 @@
+2026-10-09T15:54:36.320Z
+- banner:
+  - navigation "പേജ് ഹെഡ്ഡര്‍":
+    - link "Google Play ലോഗോ":
+      - /url: /store/games
+      - generic: google_logo Play
+    - combobox:
+      - generic: search
+      - textbox "Google Play-യിൽ തിരയുക":
+        - /placeholder: ആപ്പുകളും ഗെയിമുകളും തിരയുക
+        - text: മലയാളം ബൈബിൾ വചനങ്ങൾ
+      - generic: clear
+    - button "സഹായ കേന്ദ്രം":
+      - generic: help_outline
+    - 'button "Google Account: Aaronsedna ([account-redacted])"':
+- list:
+  - button "ആപ്പുകളും ഗെയിമുകളും" [pressed]:
+    - generic: ആപ്പുകളും ഗെയിമുകളും
+    - generic: arrow_drop_down
+  - button "ഉപകരണം":
+    - generic: ഉപകരണം
+    - generic: arrow_drop_down
+- 'link "ബൈബിള്‍: Malayalam Audio Bible Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു"':
+  - /url: /store/apps/details?id=com.sirma.mobile.bible.android
+  - generic: "ബൈബിള്‍: Malayalam Audio Bible"
+  - generic: Life.Church
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Malayalam Bible മലയാളം ബൈബിള് The Love Fellowship അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.ips.mal1bible.malayalam
+  - generic: Malayalam Bible മലയാളം ബൈബിള്
+  - generic: The Love Fellowship
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Malayalam Bible Fifi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.malayalambible.myapp
+  - generic: Malayalam Bible
+  - generic: Fifi Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Malayalam Bible- മലയാളം ബൈബിൾ പ്ലേ ചെയ്യുക Malayalam Bible- മലയാളം ബൈബിൾ DPK Developers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.dpk.bible_malayalam
+  - button "Malayalam Bible- മലയാളം ബൈബിൾ പ്ലേ ചെയ്യുക":
+  - generic: Malayalam Bible- മലയാളം ബൈബിൾ
+  - generic: DPK Developers
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Malayalam Bible (മലയാളം ബൈബിൾ) Shalom Design S2dio അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=www.malayalambible.app
+  - generic: Malayalam Bible (മലയാളം ബൈബിൾ)
+  - generic: Shalom Design S2dio
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "POC Bible (Malayalam) Jesus Youth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.jesusyouth.poc.activity
+  - generic: POC Bible (Malayalam)
+  - generic: Jesus Youth
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Malayalam Study Bible Grace Ministries and Dusty Sandals അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.grace.ministries.malayalamstudybible
+  - generic: Malayalam Study Bible
+  - generic: Grace Ministries and Dusty Sandals
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Malayalam Bible (Biblica) പ്ലേ ചെയ്യുക Malayalam Bible (Biblica) Faith Comes By Hearing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.fcbh.mjsbib.malayalambible.biblica.mcv
+  - button "Malayalam Bible (Biblica) പ്ലേ ചെയ്യുക":
+  - generic: Malayalam Bible (Biblica)
+  - generic: Faith Comes By Hearing
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Malayalam Bible പ്ലേ ചെയ്യുക Malayalam Bible SafeApps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.duggirala.biblemission.mal
+  - button "Malayalam Bible പ്ലേ ചെയ്യുക":
+  - generic: Malayalam Bible
+  - generic: SafeApps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "Malayalam Bible :Offline Bible The Holy Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.a4akhilsudha.bible
+  - generic: Malayalam Bible :Offline Bible
+  - generic: The Holy Bible Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Malayalam Bible (ബൈബിള്‍) TR Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.trapps.malayalam_bible
+  - generic: Malayalam Bible (ബൈബിള്‍)
+  - generic: TR Bible Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "5.0"
+    - generic: star
+- link "Malayalam bible KJV RealGamer അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=malayalam.bible.realgamer
+  - generic: Malayalam bible KJV
+  - generic: RealGamer
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Malayalam Bible Fifi Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=io.cordova.malayalambible
+  - generic: Malayalam Bible
+  - generic: Fifi Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "dot.Bible മലയാളം (Malayalam) International Scripture Ministries, Inc.":
+  - /url: /store/apps/details?id=com.ism.malayalam
+  - generic: dot.Bible മലയാളം (Malayalam)
+  - generic: International Scripture Ministries, Inc.
+- link "Malayalam Bible :Offline Bible Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.skyraan.malayalambible
+  - generic: Malayalam Bible :Offline Bible
+  - generic: Oly Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Malayalam English Bible Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.skyraan.malayalamenglishbible
+  - generic: Malayalam English Bible
+  - generic: Oly Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Holy Bible Offline NIV KJV App Life.Church അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=app.bible.lite.offline
+  - generic: Holy Bible Offline NIV KJV App
+  - generic: Life.Church
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 3.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "3.9"
+    - generic: star
+- link "ഹോളി ബൈബിൾ മലയാളം Soar Aloft Mobile Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=ajl.com.bible
+  - generic: ഹോളി ബൈബിൾ മലയാളം
+  - generic: Soar Aloft Mobile Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "മലയാളം ബൈബിൾ offline nSource Lab അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=by.nsource.prj_bible_malayalam
+  - generic: മലയാളം ബൈബിൾ offline
+  - generic: nSource Lab
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Malayalam English Bible KJV nSource Lab അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=by.nsource.MalayalamEnglishHolyBible
+  - generic: Malayalam English Bible KJV
+  - generic: nSource Lab
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Malayalam Bible - ബൈബിൾ Holy Quran Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=free.malayalam.holy.poc.bible.india
+  - generic: Malayalam Bible - ബൈബിൾ
+  - generic: Holy Quran Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "VerseVIEW Bible - Multilingual പ്ലേ ചെയ്യുക VerseVIEW Bible - Multilingual VerseVIEW അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=info.verseview.bible
+  - button "VerseVIEW Bible - Multilingual പ്ലേ ചെയ്യുക":
+  - generic: VerseVIEW Bible - Multilingual
+  - generic: VerseVIEW
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Malayalam Bible-Audio & Songs Handy Application":
+  - /url: /store/apps/details?id=com.malayalambible.malayalamsong
+  - generic: Malayalam Bible-Audio & Songs
+  - generic: Handy Application
+- link "Malayalam Bible Plus - Offline CharlesKing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.tamilbiblereading.malayalambible
+  - generic: Malayalam Bible Plus - Offline
+  - generic: CharlesKing
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.9 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.9"
+    - generic: star
+- link "Malayalam Bible Lite The Holy Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.a4akhilsudha.malayalambiblelite
+  - generic: Malayalam Bible Lite
+  - generic: The Holy Bible Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "ബൈബിൾ കഥകൾ Bible Stories പ്ലേ ചെയ്യുക ബൈബിൾ കഥകൾ Bible Stories Shalom Design S2dio അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.shalomdesigns2dio.obs.malayalam
+  - button "ബൈബിൾ കഥകൾ Bible Stories പ്ലേ ചെയ്യുക":
+  - generic: ബൈബിൾ കഥകൾ Bible Stories
+  - generic: Shalom Design S2dio
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.4 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.4"
+    - generic: star
+- link "POC Bible - Text and Audio Jesus Youth അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.pocbible.androidapp
+  - generic: POC Bible - Text and Audio
+  - generic: Jesus Youth
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "Malayalam Bible -Offline Bible Oly Bible AI":
+  - /url: /store/apps/details?id=com.olybibleai.malayalam.bible
+  - generic: Malayalam Bible -Offline Bible
+  - generic: Oly Bible AI
+- link "ബൈബിള് മലയാളം audio app mp3 Audio Religious Book അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.free.audiobook.bible.offline.jesus.god.malayalam
+  - generic: ബൈബിള് മലയാളം audio app mp3
+  - generic: Audio Religious Book
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Malayalam Bible Techsoft Mobile":
+  - /url: /store/apps/details?id=com.peoples.malayalam
+  - generic: Malayalam Bible
+  - generic: Techsoft Mobile
+- link "Malayalam English Bible Daily Bible Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=malayalam.english.bible.kjv
+  - generic: Malayalam English Bible
+  - generic: Daily Bible Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "Blue Letter Bible Blue Letter Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.blueletterbible.blb
+  - generic: Blue Letter Bible
+  - generic: Blue Letter Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Malayalam Bible പ്ലേ ചെയ്യുക Malayalam Bible Online Bibles അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=sam.bible.malayalamfree
+  - button "Malayalam Bible പ്ലേ ചെയ്യുക":
+  - generic: Malayalam Bible
+  - generic: Online Bibles
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.2"
+    - generic: star
+- link "Malayalam Bible - സത്യവേദപുസ്ത 100code അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.the100code.malayalambible
+  - generic: Malayalam Bible - സത്യവേദപുസ്ത
+  - generic: 100code
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.2 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.2"
+    - generic: star
+- link "Malayalam Bible Offline SOFTCRAFT അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.book.malayalambible
+  - generic: Malayalam Bible Offline
+  - generic: SOFTCRAFT
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.3 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.3"
+    - generic: star
+- link "Malayalam Daily Bible Words Studio Jom അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bible.quotes.malayalam
+  - generic: Malayalam Daily Bible Words
+  - generic: Studio Jom
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Malayalam Bible POC & Standard JELOYO Apps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.elamblakatt.theholybible_malayalam
+  - generic: Malayalam Bible POC & Standard
+  - generic: JELOYO Apps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "The Bible (All Languages) tixfar അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.dizsine.the_bible
+  - generic: The Bible (All Languages)
+  - generic: tixfar
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.5 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.5"
+    - generic: star
+- link "Bible-Daily Bible Verse Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.bible.holybible.nkjv.dailyverse
+  - generic: Bible-Daily Bible Verse
+  - generic: Bíblia Offline
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Malayalam OV Bible (BSI) Oly Bible അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.skyraan.malayalamovbiblebsi
+  - generic: Malayalam OV Bible (BSI)
+  - generic: Oly Bible
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.7 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.7"
+    - generic: star
+- link "Vachan Malayalam Bible Bridge Connectivity Solutions Pvt. Ltd.":
+  - /url: /store/apps/details?id=com.bridgeconn.vachanmalayalam
+  - generic: Vachan Malayalam Bible
+  - generic: Bridge Connectivity Solutions Pvt. Ltd.
+- link "Malayalam Audio Bible (ERV) Faith Comes By Hearing അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=org.fcbh.mjswtc.malayalambible.erv
+  - generic: Malayalam Audio Bible (ERV)
+  - generic: Faith Comes By Hearing
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Malayalam English Bible Oly Bible AI":
+  - /url: /store/apps/details?id=com.olybibleai.malayalam.english.bible
+  - generic: Malayalam English Bible
+  - generic: Oly Bible AI
+- link "Bible Offline-KJV Holy Bible Bíblia Offline അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.offline.bible
+  - generic: Bible Offline-KJV Holy Bible
+  - generic: Bíblia Offline
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "ബൈബിൾ - മലയാളം Bincy Baby അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=me.bincy.creative.coder.bee.bible.malayalam
+  - generic: ബൈബിൾ - മലയാളം
+  - generic: Bincy Baby
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 5.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "5.0"
+    - generic: star
+- link "Malayalam Bible (ബൈബിൾ) TheDailyBible.NET അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.malayalam.bible
+  - generic: Malayalam Bible (ബൈബിൾ)
+  - generic: TheDailyBible.NET
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.6 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.6"
+    - generic: star
+- link "King James Bible - Verse+Audio Ozion അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=kjv.bible.kingjamesbible
+  - generic: King James Bible - Verse+Audio
+  - generic: Ozion
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- link "My Bible - Verse+Audio LiveLauncher അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=my.bible.kjv.verse.devotion
+  - generic: My Bible - Verse+Audio
+  - generic: LiveLauncher
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Malayalam Bible Audio Offline DanelasApps അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.danelasapps.MalayalamBible
+  - generic: Malayalam Bible Audio Offline
+  - generic: DanelasApps
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.0 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.0"
+    - generic: star
+- link "Bible Malayalam 365 DPK Developers അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+  - /url: /store/apps/details?id=com.dpk.bible365
+  - generic: Bible Malayalam 365
+  - generic: DPK Developers
+  - img "അഞ്ച് നക്ഷത്രങ്ങളിൽ 4.8 നക്ഷത്രമെന്ന് റേറ്റുചെയ്‌തു":
+    - generic: "4.8"
+    - generic: star
+- contentinfo:
+  - text: Google Play
+  - link "Play Pass":
+    - /url: /store/pass/getstarted
+    - paragraph: Play Pass
+  - link "Play Points":
+    - /url: /store/points/enroll
+    - paragraph: Play Points
+  - link "സമ്മാന കാർഡുകൾ":
+    - /url: https://play.google.com/about/giftcards
+    - paragraph: സമ്മാന കാർഡുകൾ
+  - link "റിഡീം ചെയ്യുക":
+    - /url: /redeem
+    - paragraph: റിഡീം ചെയ്യുക
+  - link "റീഫണ്ട് നയം":
+    - /url: https://support.google.com/googleplay/answer/134336
+    - paragraph: റീഫണ്ട് നയം
+  - text: കുട്ടികളും കുടുംബവും
+  - link "രക്ഷാകർതൃ ഗൈഡ്":
+    - /url: https://support.google.com/googleplay?p=pff_parentguide
+    - paragraph: രക്ഷാകർതൃ ഗൈഡ്
+  - link "കുടുംബവുമായി പങ്കിടൽ":
+    - /url: https://support.google.com/googleplay/answer/7007852
+    - paragraph: കുടുംബവുമായി പങ്കിടൽ
+  - link "സേവന നിബന്ധനകൾ":
+    - /url: https://play.google.com/intl/ml_in/about/play-terms.html
+    - paragraph: സേവന നിബന്ധനകൾ
+  - link "സ്വകാര്യത":
+    - /url: https://policies.google.com/privacy
+    - paragraph: സ്വകാര്യത
+  - link "Google Play-യെ കുറിച്ച്":
+    - /url: https://support.google.com/googleplay/?p=about_play
+    - paragraph: Google Play-യെ കുറിച്ച്
+  - link "ഡെവലപ്പർമാർ":
+    - /url: http://developer.android.com/index.html
+    - paragraph: ഡെവലപ്പർമാർ
+  - link "Google Store":
+    - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+    - paragraph: Google Store
+  - generic: എല്ലാ നിരക്കുകളും GST ഉൾപ്പെടെ.
+  - generic: ഇന്ത്യ (മലയാളം)
