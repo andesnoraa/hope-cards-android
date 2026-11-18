@@ -10,7 +10,6 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.net.Uri
 import android.os.Build
-import android.os.SystemClock
 import android.provider.DocumentsContract
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalActivity
@@ -86,6 +85,7 @@ import com.aaronsedna.hopecards.notifications.ReminderScheduler
 import com.aaronsedna.hopecards.notifications.DailyHopeRequest
 import com.aaronsedna.hopecards.BuildConfig
 import com.aaronsedna.hopecards.ads.AdPlacementPolicy
+import com.aaronsedna.hopecards.ads.ShareChooser
 import com.aaronsedna.hopecards.ads.BannerAd
 import com.aaronsedna.hopecards.model.QuizLanguage
 import com.aaronsedna.hopecards.ui.screens.BibleQuizRoute
@@ -127,7 +127,6 @@ private data class DrawerEntry(
 )
 
 private const val SHARE_ATTRIBUTION = "Shared from Hope Cards ❤️"
-private const val DAILY_HOPE_MIN_READ_TIME_MS = 30_000L
 private const val PLAY_STORE_URL =
     "https://play.google.com/store/apps/details?id=com.aaronsedna.hopecards"
 
@@ -194,41 +193,11 @@ fun HopeCardsApp(
     val quizStateHolder = rememberSaveableStateHolder()
     var quizExitHandler by remember { mutableStateOf<((() -> Unit) -> Unit)?>(null) }
     val registerQuizExitHandler = remember { { handler: ((() -> Unit) -> Unit)? -> quizExitHandler = handler } }
-    var dailyHopeReadStartedAt by remember { mutableLongStateOf(0L) }
-    var dailyHopeExitPending by remember { mutableStateOf(false) }
     var dailySharePresentation by remember { mutableStateOf<Verse?>(null) }
     val adsSuppressed = billing.isAdFree || BuildConfig.SCREENSHOT_MODE
-    LaunchedEffect(state.destination, state.dailyVerse?.id, drawerState.isOpen, dailySharePresentation) {
-        dailyHopeReadStartedAt = if (
-            state.destination == Destination.DAILY && state.dailyVerse != null &&
-            !drawerState.isOpen && dailySharePresentation == null
-        ) {
-            SystemClock.elapsedRealtime()
-        } else 0L
-    }
     val navigate: (Destination) -> Unit = { destination ->
-        val proceed = {
-            dailyHopeExitPending = false
-            viewModel.navigate(destination)
-        }
+        val proceed = { viewModel.navigate(destination) }
         when {
-            state.destination == Destination.DAILY && destination != Destination.DAILY -> {
-                if (!dailyHopeExitPending) {
-                    val stayedToRead = dailyHopeReadStartedAt > 0L &&
-                        SystemClock.elapsedRealtime() - dailyHopeReadStartedAt >= DAILY_HOPE_MIN_READ_TIME_MS
-                    if (stayedToRead && !adsSuppressed) {
-                        dailyHopeExitPending = true
-                        viewModel.completedDailyHope(
-                            activity,
-                            isCurrentDailyHope = {
-                                dailyHopeExitPending &&
-                                    viewModel.uiState.value.destination == Destination.DAILY && !activity.isDestroyed
-                            },
-                            continueNavigation = proceed,
-                        )
-                    } else proceed()
-                }
-            }
             AdPlacementPolicy.handlesQuizExit(state.destination, destination) ->
                 quizExitHandler?.invoke(proceed) ?: proceed()
             else -> proceed()
@@ -348,17 +317,14 @@ fun HopeCardsApp(
                 Lifecycle.Event.ON_RESUME -> {
                     viewModel.billing.refresh()
                     viewModel.ads.onResume()
-                    if (
-                        viewModel.uiState.value.destination == Destination.DAILY &&
-                        viewModel.uiState.value.dailyVerse != null && !drawerState.isOpen &&
-                        dailySharePresentation == null
-                    ) {
-                        dailyHopeReadStartedAt = SystemClock.elapsedRealtime()
+                    val sharePreferences = activity.getSharedPreferences(ShareChooser.PREFERENCES, android.content.Context.MODE_PRIVATE)
+                    if (sharePreferences.getBoolean(ShareChooser.PENDING_SHARE_AD, false)) {
+                        sharePreferences.edit().remove(ShareChooser.PENDING_SHARE_AD).apply()
+                        viewModel.completedShare(activity)
                     }
                 }
                 Lifecycle.Event.ON_PAUSE -> {
                     viewModel.ads.onPause()
-                    dailyHopeReadStartedAt = 0L
                 }
                 else -> Unit
             }
@@ -941,7 +907,8 @@ internal fun dailyHopeImageShareText(attribution: String = SHARE_ATTRIBUTION): S
 private fun shareVerse(activity: Activity, verse: Verse) {
     val localized = activity.forTranslation(verse.edition)
     activity.startActivity(
-        Intent.createChooser(
+        ShareChooser.create(
+            activity,
             Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)
@@ -994,7 +961,8 @@ private suspend fun shareDailyHopeImage(activity: Activity, verse: Verse) {
     }
     withContext(Dispatchers.Main.immediate) {
         activity.startActivity(
-            Intent.createChooser(
+            ShareChooser.create(
+                activity,
                 Intent(Intent.ACTION_SEND).apply {
                     type = "image/png"
                     putExtra(Intent.EXTRA_SUBJECT, verse.displayReference)

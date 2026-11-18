@@ -32,7 +32,7 @@ class InterstitialPresentationPolicyTest {
 
     @Test fun dailyHopeBlocksOtherwiseEligibleInterstitials() = assertBlocked(destination = Destination.DAILY)
 
-    @Test fun dailyHopeAllowsInterstitialOnlyForAnExitAfterTheVerse() {
+    @Test fun dailyHopeIsNeverEligibleForInterstitials() {
         assertFalse(
             InterstitialPresentationPolicy.canPresent(
                 adsEnabled = true,
@@ -41,17 +41,6 @@ class InterstitialPresentationPolicyTest {
                 activityResumed = true,
                 alreadyShowing = false,
                 destination = Destination.DAILY,
-            ),
-        )
-        assertTrue(
-            InterstitialPresentationPolicy.canPresent(
-                adsEnabled = true,
-                foreground = true,
-                consentAllowsAds = true,
-                activityResumed = true,
-                alreadyShowing = false,
-                destination = Destination.DAILY,
-                afterDailyHope = true,
             ),
         )
     }

@@ -69,6 +69,9 @@
             android:name=".notifications.DailyHopeReceiver"
             android:exported="false" />
         <receiver
+            android:name=".ads.ShareTargetChosenReceiver"
+            android:exported="false" />
+        <receiver
             android:name=".notifications.BootReceiver"
             android:enabled="true"
             android:exported="true">

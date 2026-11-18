@@ -216,8 +216,8 @@ class HopeCardsViewModel(application: Application) : AndroidViewModel(applicatio
         ads.completeQuiz(activity, billing.state.value.isAdFree, isCurrentQuiz, continueNavigation)
     }
 
-    fun completedDailyHope(activity: Activity, isCurrentDailyHope: () -> Boolean, continueNavigation: () -> Unit) {
-        ads.completeDailyHope(activity, billing.state.value.isAdFree, isCurrentDailyHope, continueNavigation)
+    fun completedShare(activity: Activity) {
+        ads.completeShare(activity, billing.state.value.isAdFree)
     }
 
     fun purchaseRemoveAds(activity: Activity) {

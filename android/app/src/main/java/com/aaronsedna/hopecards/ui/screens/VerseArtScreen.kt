@@ -40,6 +40,7 @@ import com.aaronsedna.hopecards.data.VerseArtFiles
 import com.aaronsedna.hopecards.data.VerseArtImages
 import com.aaronsedna.hopecards.model.Translation
 import com.aaronsedna.hopecards.model.Verse
+import com.aaronsedna.hopecards.ads.ShareChooser
 import com.aaronsedna.hopecards.ui.LocalAppTranslation
 import com.aaronsedna.hopecards.model.VerseArtCatalog
 import com.aaronsedna.hopecards.model.VerseArtwork
@@ -245,7 +246,7 @@ private fun VerseArtDetail(artwork: VerseArtwork, favorite: Boolean, onFavorite:
             Button(enabled = !busy, onClick = {
                 performFileAction {
                     val intent = withContext(Dispatchers.IO) { VerseArtFiles.shareIntent(context, artwork, edition, rotation) }
-                    context.startActivity(Intent.createChooser(intent, shareTitle))
+                    context.startActivity(ShareChooser.create(context, intent, shareTitle))
                 }
             }, modifier = Modifier.heightIn(min = 48.dp).testTag("art-share"),
                 colors = ButtonDefaults.buttonColors(containerColor = colors.buttonBackground, contentColor = colors.buttonText)) {

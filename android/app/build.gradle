@@ -33,8 +33,8 @@ android {
         applicationId "com.aaronsedna.hopecards"
         minSdk 24
         targetSdk 36
-        versionCode 48
-        versionName "1.0.15"
+        versionCode 49
+        versionName "1.0.16"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -129,10 +129,10 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview"
     implementation "androidx.lifecycle:lifecycle-runtime-compose:2.10.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.10.0"
-    implementation "androidx.datastore:datastore-preferences:1.2.1"
+    implementation "androidx.datastore:datastore-preferences:1.3.0"
     implementation "androidx.documentfile:documentfile:1.1.0"
-    implementation("androidx.work:work-runtime:2.11.2") {
-        because "Replace Ads' outdated WorkManager while retaining Android 6 support; 2.12 requires API 24"
+    implementation("androidx.work:work-runtime:2.12.0") {
+        because "Use the current stable WorkManager; minSdk 24 meets its minimum API"
     }
 
     implementation "com.android.billingclient:billing-ktx:9.1.0"

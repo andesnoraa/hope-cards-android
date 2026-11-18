@@ -223,14 +223,14 @@
     <string name="remove_ads_body">Todos os recursos permanecem gratuitos. Remova os anúncios uma vez para uma leitura e reflexão mais tranquilas.</string>
     <string name="remove_ads_benefit_one">Sem anúncios de banner ou em tela cheia</string>
     <string name="remove_ads_benefit_two">Mais espaço para cada versículo</string>
-    <string name="remove_ads_benefit_three">Uma compra · Sem assinatura</string>
+    <string name="remove_ads_benefit_three">Uma compra, sem assinatura</string>
     <string name="restore_purchase">Restaurar compra</string>
     <string name="ad_privacy_choices">Opções de privacidade de anúncios</string>
     <string name="checking_google_play">Verificando Google Play…</string>
     <string name="ad_free_active">Você está aproveitando o Hope Cards sem anúncios</string>
     <string name="remove_ads_forever">Remover anúncios para sempre</string>
-    <string name="remove_ads_price">Remover anúncios para sempre · %1$s</string>
-    <string name="one_time_no_subscription">Compra única · Sem assinatura</string>
+    <string name="remove_ads_price">Remover anúncios para sempre: %1$s</string>
+    <string name="one_time_no_subscription">Compra única, sem assinatura</string>
     <string name="google_play_local_price">O Google Play mostrará seu preço local único</string>
     <string name="privacy_title">Sua privacidade é importante</string>
     <string name="privacy_intro">O Hope Cards mantém seus versículos, favoritos e diário no seu dispositivo. Nenhuma conta é necessária.</string>
@@ -259,7 +259,7 @@
     <string name="privacy_updates">Atualizações da Política</string>
     <string name="privacy_updates_1">Podemos atualizar esta política quando o aplicativo ou seus serviços mudarem. A data de vigência acima mostra quando foi revisada pela última vez.</string>
     <string name="about_tagline">Encontre encorajamento oportuno nas Escrituras, salve versículos significativos e compartilhe esperança com os outros.</string>
-    <string name="about_features">Recursos</string>
+    <string name="about_features">Recursos</string><string name="about_backup_restore">Backup e restauração</string><string name="about_themes">Temas</string><string name="about_bible_quiz">Quiz Bíblico</string><string name="about_image_verses">Versículos em imagens</string>
     <string name="about_why">Por que Hope Cards</string>
     <string name="about_story_1">O Hope Cards foi criado durante uma época difícil em que as Escrituras trouxeram força.</string>
     <string name="about_story_2">Seu propósito é simples: ajudar alguém que enfrenta um momento difícil a encontrar um versículo oportuno, um lembrete silencioso e uma esperança renovada.</string>

@@ -42,11 +42,9 @@ internal object InterstitialPresentationPolicy {
         activityResumed: Boolean,
         alreadyShowing: Boolean,
         destination: Destination,
-        afterDailyHope: Boolean = false,
     ): Boolean =
         adsEnabled && foreground && consentAllowsAds && activityResumed && !alreadyShowing &&
-            (AdPlacementPolicy.allowsInterstitial(destination) ||
-                (afterDailyHope && destination == Destination.DAILY))
+            AdPlacementPolicy.allowsInterstitial(destination)
 }
 
 class AdsManager(
@@ -175,19 +173,22 @@ class AdsManager(
         repository.recordCompletedQuiz(System.currentTimeMillis())
     }
 
-    fun completeDailyHope(
-        activity: Activity,
-        isAdFree: Boolean,
-        isCurrentDailyHope: () -> Boolean,
-        continueNavigation: () -> Unit,
-    ) = completeActivity(
-        activity,
-        isAdFree,
-        isCurrentDailyHope,
-        continueNavigation,
-        allowDailyHopeExit = true,
-    ) {
-        repository.recordCompletedCard(System.currentTimeMillis())
+    fun completeShare(activity: Activity, isAdFree: Boolean) {
+        if (isAdFree || closed || !AdPlacementPolicy.allowsInterstitial(currentDestination())) return
+        initialize(activity, isAdFree = false)
+        val requestGeneration = ++presentationGeneration
+        val cachedAd = interstitial
+        val readyAtStart = _ready.value && cachedAd != null &&
+            SystemClock.elapsedRealtime() - interstitialLoadedAt < INTERSTITIAL_EXPIRATION_MS
+        scope.launch {
+            if (repository.recordCompletedShare(System.currentTimeMillis()) && readyAtStart &&
+                requestGeneration == presentationGeneration && interstitial === cachedAd &&
+                isForeground && activity.hasWindowFocus()
+            ) {
+                awaitFullScreenContent { onFinished -> showInterstitial(activity, onFinished) }
+            }
+            if (_ready.value) loadInterstitial()
+        }
     }
 
     private fun completeActivity(
@@ -195,13 +196,10 @@ class AdsManager(
         isAdFree: Boolean,
         isCurrentContent: () -> Boolean,
         continueNavigation: () -> Unit,
-        allowDailyHopeExit: Boolean = false,
         recordCompletion: suspend () -> Boolean,
     ) {
         val destination = currentDestination()
-        val eligibleDestination = AdPlacementPolicy.allowsInterstitial(destination) ||
-            (allowDailyHopeExit && destination == Destination.DAILY)
-        if (isAdFree || closed || !eligibleDestination) {
+        if (isAdFree || closed || !AdPlacementPolicy.allowsInterstitial(destination)) {
             continueNavigation()
             return
         }
@@ -222,7 +220,7 @@ class AdsManager(
                     },
                     showAd = {
                         awaitFullScreenContent { onFinished ->
-                            showInterstitial(activity, onFinished, afterDailyHope = allowDailyHopeExit)
+                            showInterstitial(activity, onFinished)
                         }
                     },
                     continueNavigation = continueNavigation,
@@ -376,7 +374,6 @@ class AdsManager(
     private fun showInterstitial(
         activity: Activity,
         onFinished: () -> Unit = {},
-        afterDailyHope: Boolean = false,
     ) {
         val activityResumed =
             (activity as? LifecycleOwner)?.lifecycle?.currentState?.isAtLeast(Lifecycle.State.RESUMED)
@@ -390,7 +387,6 @@ class AdsManager(
                 activityResumed = activityResumed,
                 alreadyShowing = interstitialShowing,
                 destination = currentDestination(),
-                afterDailyHope = afterDailyHope,
             )
         ) {
             onFinished()

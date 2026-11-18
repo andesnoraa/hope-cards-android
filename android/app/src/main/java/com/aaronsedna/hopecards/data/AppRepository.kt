@@ -40,6 +40,10 @@ internal object QuizInterstitialPolicy {
         completedQuizzes >= COMPLETED_QUIZZES_BETWEEN_ADS && elapsedMs >= InterstitialPolicy.MIN_INTERVAL_MS
 }
 
+internal object ShareInterstitialPolicy {
+    fun shouldShow(elapsedMs: Long): Boolean = elapsedMs >= InterstitialPolicy.MIN_INTERVAL_MS
+}
+
 class AppRepository(context: Context) {
     private val appContext = context.applicationContext
     private val dataStore = appContext.hopeCardsDataStore
@@ -265,6 +269,9 @@ class AppRepository(context: Context) {
         }
         return shouldShow
     }
+
+    suspend fun recordCompletedShare(now: Long): Boolean =
+        ShareInterstitialPolicy.shouldShow(now - (dataStore.data.first()[Keys.lastAdTime] ?: 0L))
 
     suspend fun recordInterstitialShown(now: Long) {
         dataStore.edit { preferences ->
