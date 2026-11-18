@@ -35,4 +35,6 @@ The AAB contains three arm64 native libraries. Their ELF `PT_LOAD` segments were
 
 ## Play submission
 
-Pending Console upload and submission; record the submission status and identifier after the Play Console workflow completes.
+On November 19, 2026, version 49 (1.0.16) was uploaded to the existing Production track and submitted through Google Play Console. The Publishing overview confirmed **Changes in review** and stated that the changes are now in review. Managed publishing is off, so Play controls publication after approval. The release is not yet publicly available as of this check. No submission identifier was displayed in the Publishing overview.
+
+The Console pre-review check completed and allowed submission. Play showed one non-blocking warning: the app bundle contains native code but no native debug symbols were uploaded; Play recommends symbols to improve crash and ANR diagnosis. The warning did not block submission. The configured release is a 100% rollout to all currently targeted countries (178 regions). Play says reviews are typically completed within seven days, but may take longer.
